@@ -1,0 +1,55 @@
+{
+  "id": "CR_DN_DECREE_43619_2026",
+  "country": "Costa Rica",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Executive Decree 43619",
+  "authority": "Direccion General de Migracion y Extranjeria",
+  "last_verified": "2026-01-12",
+  "sources": [
+    {
+      "source_id": "CR_DECREE_43619_2026",
+      "url": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=97374&nValor3=131405",
+      "retrieved_at": "2026-01-12T00:00:00Z",
+      "sha256": "cdd9951eab3b18839fde2282203098c611f59671533d24ec90e298850f0917b0",
+      "local_path": "sources/CR_Decreto_43619_2026-01-12.md"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CR_DECREE_43619_2026",
+          "locator": "Article 9 (Articulo 9)",
+          "excerpt": "Article 9 establishes health insurance specifications for remote workers and service providers with required coverage duration and minimum amounts"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CR_DECREE_43619_2026",
+          "locator": "Article 9 - Coverage Duration",
+          "excerpt": "La vigencia de la póliza deberá cubrir totalmente la permanencia legal autorizada - the policy must cover the entire authorized legal stay period"
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 50000,
+      "evidence": [
+        {
+          "source_id": "CR_DECREE_43619_2026",
+          "locator": "Article 9 - Minimum Coverage Amount",
+          "excerpt": "gastos médicos en casos de enfermedades en Costa Rica por al menos US $50 000,00 - at least US$50,000 for medical expenses related to illness in Costa Rica"
+        }
+      ]
+    }
+  ]
+}
