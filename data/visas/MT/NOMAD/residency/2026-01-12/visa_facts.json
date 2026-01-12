@@ -1,0 +1,43 @@
+{
+  "id": "MT_NOMAD_RESIDENCY_2026",
+  "country": "Malta",
+  "visa_name": "Nomad Residence Permit",
+  "route": "Residency Malta Agency",
+  "authority": "Residency Malta Agency",
+  "last_verified": "2026-01-12",
+  "sources": [
+    {
+      "source_id": "MT_RESIDENCY_FAQ_2026",
+      "url": "https://nomad.residencymalta.gov.mt/new-faqs/",
+      "retrieved_at": "2026-01-12T00:00:00Z",
+      "sha256": "0f18ac432310a6af5e29ff42cfc7d5ebeb4eba69c02f1bc29a63c69545f4336f",
+      "local_path": "sources/MT_NOMAD_RESIDENCY_FAQ_2026-01-12.md"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "MT_RESIDENCY_FAQ_2026",
+          "locator": "FAQ - Health Insurance Requirements",
+          "excerpt": "Official FAQ addresses health insurance policy requirements and payment structure"
+        }
+      ]
+    },
+    {
+      "key": "insurance.monthly_payments_accepted",
+      "op": "==",
+      "value": false,
+      "evidence": [
+        {
+          "source_id": "MT_RESIDENCY_FAQ_2026",
+          "locator": "FAQ - Are health insurance policies with monthly payments considered acceptable?",
+          "excerpt": "No, they are not acceptable. Eligible policies are those with premiums covering a full year, paid in advance. A receipt for this payment may be requested."
+        }
+      ]
+    }
+  ]
+}
