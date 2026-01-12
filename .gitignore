@@ -25,3 +25,9 @@ Thumbs.db
 # Build
 dist/
 build/
+
+# Office documents (user working files)
+*.docx
+*.xlsx
+*.pptx
+~$*
