@@ -33,8 +33,8 @@ validate_files(DATA / "visas", visa_schema, "VisaFacts")
 validate_files(DATA / "products", product_schema, "ProductFacts")
 
 if errors > 0:
-    print(f"\n❌ {errors} error(s) found")
+    print(f"\n[FAIL] {errors} error(s) found")
     sys.exit(1)
 else:
-    print("\n✅ All files valid")
+    print("\nAll data files valid.")
     sys.exit(0)
