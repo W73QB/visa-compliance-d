@@ -1,0 +1,140 @@
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).parent.parent
+VISAS = ROOT / "data" / "visas"
+PRODUCTS = ROOT / "data" / "products"
+MAPPINGS = ROOT / "data" / "mappings"
+
+MAPPINGS.mkdir(exist_ok=True)
+
+def load_all(folder):
+    files = []
+    for p in folder.rglob("*.json"):
+        files.append(json.loads(p.read_text(encoding="utf-8")))
+    return files
+
+visas = load_all(VISAS)
+products = load_all(PRODUCTS)
+
+def get_req(visa, key):
+    for r in visa["requirements"]:
+        if r["key"] == key:
+            return r
+    return None
+
+def product_spec(product, path):
+    cur = product["specs"]
+    for p in path.split("."):
+        if cur is None or p not in cur:
+            return None
+        cur = cur[p]
+    return cur
+
+def evaluate(visa, product):
+    reasons = []
+    missing = []
+
+    # Thai DTV - insurance not required
+    req = get_req(visa, "insurance.mandatory")
+    if req and req["value"] == False:
+        return {
+            "visa_id": visa["id"],
+            "product_id": product["id"],
+            "status": "NOT_REQUIRED",
+            "reasons": [
+                {
+                    "text": "Visa does not require insurance",
+                    "evidence": req["evidence"]
+                }
+            ],
+            "missing": []
+        }
+
+    status = "GREEN"
+
+    # Travel insurance not accepted
+    req = get_req(visa, "insurance.travel_insurance_accepted")
+    if req and req["value"] == False:
+        ptype = product_spec(product, "type")
+        if ptype is None:
+            status = "UNKNOWN"
+            missing.append("specs.type")
+        elif "travel" in ptype:
+            status = "RED"
+            reasons.append({
+                "text": "Travel insurance is not accepted for this visa",
+                "evidence": req["evidence"]
+            })
+
+    # No deductible
+    req = get_req(visa, "insurance.no_deductible")
+    if req and req["value"] == True:
+        ded = product_spec(product, "deductible.amount")
+        if ded is None:
+            status = "UNKNOWN"
+            missing.append("specs.deductible.amount")
+        elif ded > 0:
+            status = "RED"
+            reasons.append({
+                "text": f"Visa requires zero deductible but product has {ded}",
+                "evidence": req["evidence"]
+            })
+
+    # Minimum coverage
+    req = get_req(visa, "insurance.min_coverage")
+    if req:
+        limit = product_spec(product, "overall_limit")
+        if limit is None:
+            status = "UNKNOWN"
+            missing.append("specs.overall_limit")
+        elif limit < req["value"]:
+            status = "RED"
+            reasons.append({
+                "text": f"Minimum coverage {req['value']} required, product has {limit}",
+                "evidence": req["evidence"]
+            })
+
+    # Malta: no monthly payments
+    req = get_req(visa, "insurance.monthly_payments_accepted")
+    if req and req["value"] == False:
+        cadence = product_spec(product, "payment_cadence")
+        if cadence is None:
+            status = "UNKNOWN"
+            missing.append("specs.payment_cadence")
+        elif cadence in ["monthly", "every_4_weeks"]:
+            status = "RED"
+            reasons.append({
+                "text": "Monthly payments not accepted by visa authority",
+                "evidence": req["evidence"]
+            })
+
+    # Costa Rica full period rule -> YELLOW if monthly
+    req = get_req(visa, "insurance.must_cover_full_period")
+    if req and req["value"] == True:
+        cadence = product_spec(product, "payment_cadence")
+        if cadence in ["monthly", "every_4_weeks"]:
+            if status == "GREEN":
+                status = "YELLOW"
+            reasons.append({
+                "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+                "evidence": req["evidence"]
+            })
+
+    if status == "GREEN" and missing:
+        status = "UNKNOWN"
+
+    return {
+        "visa_id": visa["id"],
+        "product_id": product["id"],
+        "status": status,
+        "reasons": reasons,
+        "missing": missing
+    }
+
+for visa in visas:
+    for product in products:
+        result = evaluate(visa, product)
+        out = MAPPINGS / f"{visa['id']}__{product['id']}.json"
+        out.write_text(json.dumps(result, indent=2), encoding="utf-8")
+        print("Built", out)
