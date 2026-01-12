@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VisaFacts",
+  "type": "object",
+  "required": [
+    "id",
+    "country",
+    "visa_name",
+    "route",
+    "authority",
+    "last_verified",
+    "sources",
+    "requirements"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "country": { "type": "string" },
+    "visa_name": { "type": "string" },
+    "route": { "type": "string" },
+    "authority": { "type": "string" },
+    "last_verified": { "type": "string", "format": "date" },
+
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "url", "retrieved_at", "sha256", "local_path"],
+        "properties": {
+          "source_id": { "type": "string" },
+          "url": { "type": "string" },
+          "retrieved_at": { "type": "string", "format": "date-time" },
+          "sha256": { "type": "string" },
+          "local_path": { "type": "string" }
+        }
+      }
+    },
+
+    "requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["key", "op", "value", "evidence"],
+        "properties": {
+          "key": { "type": "string" },
+          "op": { "type": "string", "enum": ["==", "!=", ">=", "<=", "in", "not_in"] },
+          "value": {},
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["source_id", "locator", "excerpt"],
+              "properties": {
+                "source_id": { "type": "string" },
+                "locator": { "type": "string" },
+                "excerpt": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
