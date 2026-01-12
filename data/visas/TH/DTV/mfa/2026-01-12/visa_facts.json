@@ -1,0 +1,31 @@
+{
+  "id": "TH_DTV_MFA_2026",
+  "country": "Thailand",
+  "visa_name": "Digital Nomad Visa (DTV)",
+  "route": "Thai E-Visa",
+  "authority": "Ministry of Foreign Affairs Thailand",
+  "last_verified": "2026-01-12",
+  "sources": [
+    {
+      "source_id": "TH_MFA_DTV_2026",
+      "url": "https://www.thaievisa.go.th/visa/dtv-visa",
+      "retrieved_at": "2026-01-12T00:00:00Z",
+      "sha256": "fb2bcd6f0c5140c16e371cbfcbe5c24e2eed52aa6d12fc06dd48c5c3978a90a7",
+      "local_path": "sources/TH_DTV_MFA_requirements_2026-01-12.md"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": false,
+      "evidence": [
+        {
+          "source_id": "TH_MFA_DTV_2026",
+          "locator": "Complete requirements list for all DTV categories",
+          "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+        }
+      ]
+    }
+  ]
+}
