@@ -1,0 +1,18 @@
+{
+  "visa_id": "TH_DTV_MFA_2026",
+  "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+  "status": "NOT_REQUIRED",
+  "reasons": [
+    {
+      "text": "Visa does not require insurance",
+      "evidence": [
+        {
+          "source_id": "TH_MFA_DTV_2026",
+          "locator": "Complete requirements list for all DTV categories",
+          "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

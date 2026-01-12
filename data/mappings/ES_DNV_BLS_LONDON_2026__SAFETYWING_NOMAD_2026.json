@@ -1,0 +1,18 @@
+{
+  "visa_id": "ES_DNV_BLS_LONDON_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Visa requires zero deductible but product has 250",
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "with no excess or co-payments, nor moratorium"
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "SAFETYWING_NOMAD_2026",
+  "provider": "SafetyWing",
+  "product_name": "Nomad Insurance",
+  "effective_date": "2026-01-12",
+  "policy_version": "2026",
+  "specs": {
+    "type": "travel insurance",
+    "overall_limit": 250000,
+    "currency": "USD",
+    "deductible": {
+      "amount": 250,
+      "currency": "USD"
+    },
+    "copay": false,
+    "payment_cadence": "monthly",
+    "contract_commitment_months": null,
+    "jurisdiction_facts": {
+      "ES": {
+        "authorized": false,
+        "evidence": [
+          {
+            "source_id": "SAFETYWING_WEBSITE_2026",
+            "locator": "Product page",
+            "excerpt": "SafetyWing is a US-based travel insurance provider, not specifically authorized to operate in Spain"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "source_id": "SAFETYWING_WEBSITE_2026",
+      "locator": "Product specifications - Nomad Insurance",
+      "excerpt": "Travel insurance for digital nomads with $250 deductible, $250,000 coverage limit, monthly subscription at $45.08/month"
+    }
+  ]
+}

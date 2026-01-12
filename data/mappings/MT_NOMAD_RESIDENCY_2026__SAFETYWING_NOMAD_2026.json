@@ -1,0 +1,18 @@
+{
+  "visa_id": "MT_NOMAD_RESIDENCY_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Monthly payments not accepted by visa authority",
+      "evidence": [
+        {
+          "source_id": "MT_RESIDENCY_FAQ_2026",
+          "locator": "FAQ - Are health insurance policies with monthly payments considered acceptable?",
+          "excerpt": "No, they are not acceptable. Eligible policies are those with premiums covering a full year, paid in advance. A receipt for this payment may be requested."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
