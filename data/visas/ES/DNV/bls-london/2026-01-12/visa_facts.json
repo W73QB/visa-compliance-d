@@ -1,0 +1,115 @@
+{
+  "id": "ES_DNV_BLS_LONDON_2026",
+  "country": "Spain",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Consulate via BLS London",
+  "authority": "BLS International London",
+  "last_verified": "2026-01-12",
+  "sources": [
+    {
+      "source_id": "BLS_ES_DNV_LONDON_2026",
+      "url": "https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf",
+      "retrieved_at": "2026-01-12T00:00:00Z",
+      "sha256": "ee5687380016789b5a74f8fdd3aca35f4a03df5afe227dd1e248a21ac00f4c1c",
+      "local_path": "sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "Public or private health insurance. Original and a copy of the certificate of a public or private health insurance contracted with an insurance company authorized to operate in Spain."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_spain",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "health insurance contracted with an insurance company authorized to operate in Spain"
+        }
+      ]
+    },
+    {
+      "key": "insurance.covers_public_health_system_risks",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "The insurance policy must cover all the risks insured by Spain's public health system"
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+        }
+      ]
+    },
+    {
+      "key": "insurance.unlimited_coverage",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+        }
+      ]
+    },
+    {
+      "key": "insurance.no_deductible",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "with no excess or co-payments, nor moratorium"
+        }
+      ]
+    },
+    {
+      "key": "insurance.no_copayment",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "with no excess or co-payments, nor moratorium"
+        }
+      ]
+    },
+    {
+      "key": "insurance.no_moratorium",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "with no excess or co-payments, nor moratorium"
+        }
+      ]
+    }
+  ]
+}
