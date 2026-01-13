@@ -3,6 +3,12 @@ name: Deploy Hugo site
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      release_id:
+        description: "Release snapshot id (e.g., 2026-01-12)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -36,6 +42,12 @@ jobs:
           python tools/build_mappings.py
           python tools/build_index.py
           python tools/build_snapshot.py
+          python tools/sync_hugo_static.py
+
+      - name: Build release snapshot (optional)
+        if: ${{ inputs.release_id != '' }}
+        run: |
+          python tools/build_release_snapshot.py --release-id "${{ inputs.release_id }}"
           python tools/sync_hugo_static.py
 
       - name: Setup Hugo

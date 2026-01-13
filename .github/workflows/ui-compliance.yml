@@ -36,5 +36,9 @@ jobs:
         run: powershell -NoProfile -File tools/tests/validate_product_sources_tests.ps1
       - name: Run snapshot tests
         run: powershell -NoProfile -File tools/tests/snapshot_tests.ps1
+      - name: Run release snapshot tests
+        run: powershell -NoProfile -File tools/tests/release_snapshot_tests.ps1
+      - name: Run manifest verify tests
+        run: powershell -NoProfile -File tools/tests/verify_snapshot_manifest_tests.ps1
       - name: Run Hugo integration tests
         run: powershell -NoProfile -File tools/tests/hugo_integration_tests.ps1

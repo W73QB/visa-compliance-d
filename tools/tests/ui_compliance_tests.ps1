@@ -74,6 +74,14 @@ if (Test-Path $workflowPath) {
   Assert-True ($workflow -like "*ui_compliance_tests.ps1*") "CI workflow runs ui compliance tests"
 }
 
+$pagesPath = ".github/workflows/pages.yml"
+Assert-True (Test-Path $pagesPath) "Pages workflow file exists"
+if (Test-Path $pagesPath) {
+  $pages = Get-Content -Raw -Path $pagesPath
+  Assert-True ($pages -like "*workflow_dispatch*") "pages workflow supports manual release builds"
+  Assert-True ($pages -like "*build_release_snapshot.py*") "pages workflow runs release snapshot when requested"
+}
+
 if ($failed) {
   Write-Error "One or more checks failed."
   exit 1
