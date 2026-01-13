@@ -300,14 +300,28 @@
   Resolve the data URL based on the page location:
   - /ui/index.html -> "../data/ui_index.json"
   - /index.html -> "data/ui_index.json"
+  With snapshot param:
+  - /ui/?snapshot=foo -> "../snapshots/foo/ui_index.json"
 */
-const DATA_URL = (() => {
-  const path = location.pathname.replace(/\\/g, "/");
+const SNAPSHOT_PARAM = new URLSearchParams(location.search).get("snapshot");
+
+function resolveDataUrl(pathname, snapshot) {
+  const path = String(pathname || "").replace(/\/g, "/");
+  const safeSnapshot = snapshot ? snapshot.replace(/^\/+/, "") : "";
+  if (safeSnapshot) {
+    if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
+      return "../snapshots/" + safeSnapshot + "/ui_index.json";
+    }
+    return "snapshots/" + safeSnapshot + "/ui_index.json";
+  }
   if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
     return "../data/ui_index.json";
   }
   return "data/ui_index.json";
-})();
+}
+
+const DATA_URL = resolveDataUrl(location.pathname, SNAPSHOT_PARAM);
+
 
 // Used by "Notify me of changes" to create a GitHub issue
 const GITHUB_OWNER = "W73QB";
@@ -654,7 +668,7 @@ function renderResult(){
   $("lastVerified").textContent = visa.last_verified || "-";
   $("authorityText").textContent = visa.authority || "-";
   $("scopeText").textContent = visa.id || "-";
-  $("snapshotId").textContent = INDEX.snapshot_id || "-";
+  $("snapshotId").textContent = SNAPSHOT_PARAM || INDEX.snapshot_id || "-";
 
   // requirements + reasons
   renderRequirements(visa);
@@ -690,6 +704,7 @@ function renderResult(){
   const url = new URL(location.href);
   url.searchParams.set("visa", visaId);
   url.searchParams.set("product", productId);
+  if (SNAPSHOT_PARAM) url.searchParams.set("snapshot", SNAPSHOT_PARAM);
   history.replaceState(null, "", url.toString());
 }
 
