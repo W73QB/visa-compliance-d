@@ -27,6 +27,7 @@ dist/
 build/
 public/
 .hugo_build.lock
+.worktrees/
 
 # Hugo local binaries/logs
 hugo.exe
