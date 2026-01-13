@@ -21,9 +21,21 @@ $fixtureDir = Join-Path $fixtures "fixtures"
 $out1 = Join-Path $fixtures "out1.json"
 $out2 = Join-Path $fixtures "out2.json"
 $fixturePath = Join-Path $fixtureDir "TEST_SOURCE.txt"
-$original = Get-Content -Raw -Path $fixturePath
+$metaPath = Join-Path $sourcesDir "TEST_SOURCE.meta.json"
+$originalFixture = Get-Content -Raw -Path $fixturePath
+$originalMeta = Get-Content -Raw -Path $metaPath
 
 try {
+  Set-Content -Path $fixturePath -Value $originalFixture
+  $hash = (Get-FileHash -Algorithm SHA256 -Path $fixturePath).Hash.ToLower()
+  @"
+{
+  "source_id": "TEST_SOURCE",
+  "url": "https://example.com",
+  "sha256": "$hash"
+}
+"@ | Set-Content -Path $metaPath
+
   $proc = Start-Process -FilePath "py" -ArgumentList @("tools/check_source_changes.py", "--sources-dir", $sourcesDir, "--fixture-dir", $fixtureDir, "--output", $out1) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "source check runs"
   $report1 = Get-Content -Raw -Path $out1 | ConvertFrom-Json
@@ -35,7 +47,8 @@ try {
   $report2 = Get-Content -Raw -Path $out2 | ConvertFrom-Json
   Assert-True ($report2.changed.Count -eq 1) "change detected"
 } finally {
-  Set-Content -Path $fixturePath -Value $original
+  Set-Content -Path $fixturePath -Value $originalFixture
+  Set-Content -Path $metaPath -Value $originalMeta
   Remove-Item -LiteralPath $out1, $out2 -Force -ErrorAction SilentlyContinue
 }
 
