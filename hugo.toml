@@ -1,0 +1,38 @@
+baseURL = "https://w73qb.github.io/visa-compliance-d/"
+languageCode = "en-us"
+title = "VisaCheck"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+canonifyURLs = true
+
+[params]
+  env = "production"
+  description = "Evidence-based visa insurance compliance checker."
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  defaultTheme = "auto"
+
+[menu]
+  [[menu.main]]
+    name = "Checker"
+    url = "/ui/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Methodology"
+    url = "/methodology/"
+    weight = 3
+  [[menu.main]]
+    name = "Disclaimer"
+    url = "/disclaimer/"
+    weight = 4
+  [[menu.main]]
+    name = "Affiliate"
+    url = "/affiliate-disclosure/"
+    weight = 5

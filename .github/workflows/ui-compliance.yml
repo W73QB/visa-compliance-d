@@ -1,0 +1,34 @@
+name: ui-compliance
+
+on:
+  push:
+    paths:
+      - "ui/**"
+      - "tools/**"
+      - "data/**"
+      - "sources/**"
+      - ".github/workflows/ui-compliance.yml"
+  pull_request:
+    paths:
+      - "ui/**"
+      - "tools/**"
+      - "data/**"
+      - "sources/**"
+      - ".github/workflows/ui-compliance.yml"
+
+jobs:
+  ui-compliance:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build UI index
+        run: py tools/build_index.py
+      - name: Run UI compliance tests
+        run: powershell -NoProfile -File tools/tests/ui_compliance_tests.ps1
+      - name: Run Hugo integration tests
+        run: powershell -NoProfile -File tools/tests/hugo_integration_tests.ps1

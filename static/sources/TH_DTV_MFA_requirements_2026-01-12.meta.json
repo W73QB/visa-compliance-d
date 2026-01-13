@@ -1,0 +1,8 @@
+{
+  "source_id": "TH_MFA_DTV_2026",
+  "url": "https://www.thaievisa.go.th/visa/dtv-visa",
+  "retrieved_at": "2026-01-12T00:00:00Z",
+  "sha256": "fb2bcd6f0c5140c16e371cbfcbe5c24e2eed52aa6d12fc06dd48c5c3978a90a7",
+  "local_path": "sources/TH_DTV_MFA_requirements_2026-01-12.md",
+  "note": "Captured from Thai E-Visa official website using browser automation. Insurance is NOT mentioned anywhere in the requirements."
+}
