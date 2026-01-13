@@ -59,10 +59,14 @@ try {
   $proc = Start-Process -FilePath "py" -ArgumentList "tools/validate.py" -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "validate passes when sha256 matches"
 } finally {
-  if (Test-Path $productPath) { Remove-Item -Force $productPath }
-  if (Test-Path $productDir) { Remove-Item -Force -Recurse $productDir }
-  if (Test-Path $metaPath) { Remove-Item -Force $metaPath }
-  if (Test-Path $localPath) { Remove-Item -Force $localPath }
+  try {
+    if (Test-Path $productPath) { Remove-Item -LiteralPath $productPath -Force }
+    if (Test-Path $productDir) { Remove-Item -LiteralPath $productDir -Force -Recurse }
+    if (Test-Path $metaPath) { Remove-Item -LiteralPath $metaPath -Force }
+    if (Test-Path $localPath) { Remove-Item -LiteralPath $localPath -Force }
+  } catch {
+    Write-Host "WARN: Failed to clean test artifacts." -ForegroundColor Yellow
+  }
 }
 
 if ($failed) {
