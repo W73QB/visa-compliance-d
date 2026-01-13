@@ -25,6 +25,12 @@ Thumbs.db
 # Build
 dist/
 build/
+public/
+.hugo_build.lock
+
+# Hugo local binaries/logs
+hugo.exe
+tools/logs/
 
 # Office documents (user working files)
 *.docx

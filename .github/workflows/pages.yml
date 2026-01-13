@@ -41,13 +41,23 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - name: Build Hugo
-        run: hugo --minify
+      - name: Build Hugo (with log)
+        run: pwsh -File tools/build_hugo.ps1
+
+      - name: Verify Hugo build log
+        run: pwsh -File tools/tests/hugo_build_log_tests.ps1
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
+      - name: Upload Hugo build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugo-build-log
+          path: tools/logs/hugo-build.log
 
   deploy:
     runs-on: ubuntu-latest
