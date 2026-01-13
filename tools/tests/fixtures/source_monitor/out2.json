@@ -1,9 +1,0 @@
-{
-  "changed": [
-    {
-      "source_id": "TEST_SOURCE",
-      "url": "https://example.com",
-      "sha256": "1bcbda7b5fec848283e893431a11b7b64f0f967dbbea7ff5877f7d18711740d1"
-    }
-  ]
-}

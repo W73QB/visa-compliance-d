@@ -36,6 +36,7 @@ try {
   Assert-True ($report2.changed.Count -eq 1) "change detected"
 } finally {
   Set-Content -Path $fixturePath -Value $original
+  Remove-Item -LiteralPath $out1, $out2 -Force -ErrorAction SilentlyContinue
 }
 
 if ($failed) {
