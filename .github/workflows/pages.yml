@@ -28,11 +28,14 @@ jobs:
       - name: Install python deps
         run: pip install jsonschema
 
-      - name: Validate + build mappings + build index + sync static
+      - name: Validate + build mappings + build index + snapshot + sync static
         run: |
+          SNAPSHOT_ID=$(date -u +%F)
+          export SNAPSHOT_ID
           python tools/validate.py
           python tools/build_mappings.py
           python tools/build_index.py
+          python tools/build_snapshot.py
           python tools/sync_hugo_static.py
 
       - name: Setup Hugo

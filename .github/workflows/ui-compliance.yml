@@ -30,5 +30,9 @@ jobs:
         run: py tools/build_index.py
       - name: Run UI compliance tests
         run: powershell -NoProfile -File tools/tests/ui_compliance_tests.ps1
+      - name: Run product source validation tests
+        run: powershell -NoProfile -File tools/tests/validate_product_sources_tests.ps1
+      - name: Run snapshot tests
+        run: powershell -NoProfile -File tools/tests/snapshot_tests.ps1
       - name: Run Hugo integration tests
         run: powershell -NoProfile -File tools/tests/hugo_integration_tests.ps1
