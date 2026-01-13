@@ -91,27 +91,27 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
       <div class="flex flex-col gap-3 group">
-        <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying for</label>
+        <label for="visaSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying for</label>
         <div class="relative">
-          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors" aria-hidden="true">gavel</span>
           <select id="visaSelect"
             class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
             <option value="">Select visa route (authority)</option>
           </select>
-          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true">expand_more</span>
         </div>
         <p id="visaHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a visa record (route + authority). Each record is evidence-based.</p>
       </div>
 
       <div class="flex flex-col gap-3 group">
-        <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to use</label>
+        <label for="productSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to use</label>
         <div class="relative">
-          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors" aria-hidden="true">health_and_safety</span>
           <select id="productSelect"
             class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
             <option value="">Select an insurance product</option>
           </select>
-          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true">expand_more</span>
         </div>
         <p id="productHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a product record (policy version + evidence).</p>
       </div>
@@ -121,7 +121,7 @@
     <div class="mt-10 flex justify-center">
       <button id="checkBtn" disabled
         class="group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed">
-        <span class="material-symbols-outlined group-hover:scale-110 transition-transform">check_circle</span>
+        <span class="material-symbols-outlined group-hover:scale-110 transition-transform" aria-hidden="true">check_circle</span>
         Check Compliance
       </button>
     </div>
@@ -263,10 +263,10 @@
   </div>
 
   <!-- Modal evidence -->
-  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
       <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-        <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+        <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
         <button id="closeModal"
           class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
           Close
