@@ -1,7 +1,7 @@
 import json
 import os
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 
 ROOT = Path(__file__).parent.parent
 VISAS = ROOT / "data" / "visas"
@@ -35,14 +35,46 @@ sources_by_id = load_sources(SOURCES)
 
 print(f"Loaded {len(visas)} visas, {len(products)} products, {len(mappings)} mappings.")
 
+# Pre-compute maps to save client CPU
+visas_by_id = {v["id"]: v for v in visas}
+products_by_id = {p["id"]: p for p in products}
+mappings_by_key = {f"{m['visa_id']}__{m['product_id']}": m for m in mappings}
+
+# Pre-compute lightweight lists for dropdowns
+visa_list = [{
+    "id": v["id"],
+    "country": v.get("country"),
+    "visa_name": v.get("visa_name"),
+    "route": v.get("route")
+} for v in visas]
+
+product_list = [{
+    "id": p["id"],
+    "provider": p.get("provider"),
+    "product_name": p.get("product_name")
+} for p in products]
+
 data = {
-    "built_at": datetime.utcnow().isoformat() + "Z",
-    "snapshot_id": os.environ.get("SNAPSHOT_ID") or datetime.utcnow().date().isoformat(),
-    "visas": visas,
-    "products": products,
-    "mappings": mappings,
+    # Fix deprecation warning and use UTC
+    "built_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+    "snapshot_id": os.environ.get("SNAPSHOT_ID") or datetime.now(timezone.utc).date().isoformat(),
+
+    # Pre-computed indices
+    "visas_by_id": visas_by_id,
+    "products_by_id": products_by_id,
+    "mappings_by_key": mappings_by_key,
+
+    # Pre-computed lists
+    "visa_list": visa_list,
+    "product_list": product_list,
+
     "sources_by_id": sources_by_id
+
+    # Raw lists (visas, products, mappings) removed to reduce payload size
+    # ui/index.html supports this optimized shape
 }
 
-OUT.write_text(json.dumps(data, indent=2), encoding="utf-8")
+# Dump minified JSON to save bandwidth
+# separators=(',', ':') removes whitespace around separators
+OUT.write_text(json.dumps(data, separators=(',', ':')), encoding="utf-8")
 print(f"Index written to {OUT}")

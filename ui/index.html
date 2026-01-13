@@ -694,7 +694,7 @@ function renderResult(){
 }
 
 async function init(){
-  const res = await fetch(DATA_URL, { cache: "no-store" });
+  const res = await fetch(DATA_URL, { cache: "no-cache" });
   const raw = await res.json();
   INDEX = normalizeIndex(raw);
 
