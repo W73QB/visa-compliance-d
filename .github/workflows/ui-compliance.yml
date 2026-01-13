@@ -30,6 +30,8 @@ jobs:
         run: pip install jsonschema
       - name: Build UI index
         run: py tools/build_index.py
+      - name: Lint content
+        run: py tools/lint_content.py
       - name: Run UI compliance tests
         run: powershell -NoProfile -File tools/tests/ui_compliance_tests.ps1
       - name: Run product source validation tests

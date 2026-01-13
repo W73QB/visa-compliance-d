@@ -50,6 +50,9 @@ jobs:
           python tools/build_release_snapshot.py --release-id "${{ inputs.release_id }}"
           python tools/sync_hugo_static.py
 
+      - name: Lint content
+        run: python tools/lint_content.py
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
