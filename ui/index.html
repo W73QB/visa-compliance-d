@@ -365,15 +365,18 @@ function escapeHtml(value){
 function sanitizeUrl(url) {
   if (!url) return "";
   const s = String(url).trim();
+  if (!s) return "";
+  if (/[ -]/.test(s)) return "#";
+  if (s.startsWith("//") || s.startsWith("\\")) return "#";
   // Allow http://, https://, mailto:, tel:
   if (/^(?:https?|mailto|tel):/i.test(s)) return s;
-  // Allow relative paths (starting with / or . or just alphanumeric)
-  // BUT we must be careful not to allow "javascript:" which can be relative if base tag is manipulated,
-  // though in this context it's safer.
-  // We explicitly verify it doesn't start with javascript: or vbscript: or data:
-  if (/^(?:javascript|vbscript|data):/i.test(s)) return "#";
+  // Block dangerous or unsupported schemes explicitly: javascript:, vbscript:, data:, file:, blob:
+  if (/^(?:javascript|vbscript|data|file|blob):/i.test(s)) return "#";
+  if (/^[a-z][a-z0-9+.-]*:/i.test(s)) return "#";
+  // Relative paths are allowed
   return s;
 }
+
 
 let INDEX = null;
 
@@ -499,8 +502,8 @@ function openModal(evidenceItems){
     const src = INDEX.sources_by_id[sid] || {};
     const official = sanitizeUrl(src.url || ev.url || "");
     const snapshot = src.local_path
-      ? ("../" + src.local_path.replaceAll("\\","/"))
-      : (ev.local_path ? ("../" + ev.local_path.replaceAll("\\","/")) : "");
+      ? sanitizeUrl("../" + src.local_path.replaceAll("\\","/"))
+      : (ev.local_path ? sanitizeUrl("../" + ev.local_path.replaceAll("\\","/")) : "");
 
     // snapshot is relative path constructed by us, but we should be safe.
     // However, if local_path is malicious, we should sanitize it too if possible,
@@ -664,7 +667,7 @@ function renderOffer(mapping, productId){
   if (!offer) return;
 
   link.textContent = offer.label || "Get quote";
-  link.href = offer.affiliate_url;
+  link.href = sanitizeUrl(offer.affiliate_url || "#");
   disclosure.textContent = offer.disclosure || "Affiliate link. Results are evidence-based.";
 
   if (status === "YELLOW") {
@@ -756,7 +759,7 @@ function renderResult(){
   // action links
   const firstSource = (visa.sources && visa.sources.length) ? visa.sources[0] : null;
   $("officialBtn").href = sanitizeUrl(firstSource?.url || "#");
-  $("snapshotBtn").href = firstSource?.local_path ? ("../" + firstSource.local_path.replaceAll("\\","/")) : "#";
+  $("snapshotBtn").href = firstSource?.local_path ? sanitizeUrl("../" + firstSource.local_path.replaceAll("\\","/")) : "#";
 
   // notify issue
   const issueTitle = encodeURIComponent(`Source change - ${visa.id}`);
