@@ -10,6 +10,7 @@ Summary:
 - Copay: none
 - Payment: annual premium
 - Note: authorized to operate in Spain.
+- Synthetic source: yes (summary, not an official snapshot)
 
 Excerpt:
 Comprehensive health insurance with unlimited coverage, zero deductible, no copayments, annual premium payment.

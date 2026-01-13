@@ -34,6 +34,11 @@ Assert-True (-not ($ui -match '\$\{ev\.locator')) "openModal does not inject loc
 Assert-True (-not ($ui -match '\$\{ev\.excerpt')) "openModal does not inject excerpt without escaping"
 Assert-True (-not ($ui -match '\$\{r\.text')) "renderReasons does not inject reason text without escaping"
 Assert-True (-not ($ui -match '\$\{meta\.title')) "renderRequirements does not inject title without escaping"
+Assert-True ($ui -like "*snapshotId*") "UI includes snapshotId field"
+Assert-True ($ui -like "*Synthetic source*") "UI labels synthetic sources"
+Assert-True ($ui -like '*href="../methodology/"*') "UI footer links to methodology"
+Assert-True ($ui -like '*href="../disclaimer/"*') "UI footer links to disclaimer"
+Assert-True ($ui -like '*href="../affiliate-disclosure/"*') "UI footer links to affiliate disclosure"
 
 $bytes = Get-Content -Encoding Byte -Path "ui/index.html"
 $nonAsciiBytes = @($bytes | Where-Object { $_ -gt 127 })
@@ -49,7 +54,12 @@ if ($hasSourcesById) {
   Assert-True ($sourceKeys -contains "CR_DECREE_43619_2026") "sources_by_id includes known source metadata"
   Assert-True ($sourceKeys -contains "SAFETYWING_WEBSITE_2026") "sources_by_id includes SafetyWing product source"
   Assert-True ($sourceKeys -contains "GENERIC_WEBSITE_2026") "sources_by_id includes GenericInsurer product source"
+  Assert-True (-not [string]::IsNullOrEmpty($index.sources_by_id.SAFETYWING_WEBSITE_2026.sha256)) "SafetyWing source has SHA256"
+  Assert-True (-not [string]::IsNullOrEmpty($index.sources_by_id.GENERIC_WEBSITE_2026.sha256)) "GenericInsurer source has SHA256"
+  Assert-True ($index.sources_by_id.SAFETYWING_WEBSITE_2026.synthetic -eq $true) "SafetyWing source marked synthetic"
+  Assert-True ($index.sources_by_id.GENERIC_WEBSITE_2026.synthetic -eq $true) "GenericInsurer source marked synthetic"
 }
+Assert-True ($index.PSObject.Properties.Name -contains "snapshot_id") "ui_index.json includes snapshot_id"
 
 $visaIds = @($index.visas | ForEach-Object { $_.id })
 $productIds = @($index.products | ForEach-Object { $_.id })

@@ -2,6 +2,8 @@
   "source_id": "SAFETYWING_WEBSITE_2026",
   "url": "https://safetywing.com/nomad-insurance/",
   "retrieved_at": "2026-01-12T00:00:00Z",
-  "sha256": "0AFB034B268B2D76FFFB866B98EE8EFDA6BDD2A2749F87720DD170527E258551",
-  "local_path": "sources/SAFETYWING_WEBSITE_2026-01-12.md"
+  "sha256": "0EA262CDE6ED9097BB918ACB42C26ABE6D0506B378A2BCC812836867D72A37CB",
+  "local_path": "sources/SAFETYWING_WEBSITE_2026-01-12.md",
+  "synthetic": true,
+  "note": "Synthetic summary; not an official snapshot."
 }

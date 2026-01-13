@@ -1,5 +1,6 @@
 {
-  "built_at": "2026-01-13T02:50:43.029327Z",
+  "built_at": "2026-01-13T04:34:28.461549Z",
+  "snapshot_id": "2026-01-13",
   "visas": [
     {
       "id": "CR_DN_DECREE_43619_2026",
@@ -459,8 +460,10 @@
       "source_id": "GENERIC_WEBSITE_2026",
       "url": "https://example.com/generic-insurer",
       "retrieved_at": "2026-01-12T00:00:00Z",
-      "sha256": "1F7AB800F7B1A4BA8DECF9FD899D358670F184FBB6D577409A9B3D3BF25F5A1C",
-      "local_path": "sources/GENERIC_WEBSITE_2026-01-12.md"
+      "sha256": "1583B967BC24EBA861467E95B10AEBB67D6CF1BF03706492FC4DDB8472ACE530",
+      "local_path": "sources/GENERIC_WEBSITE_2026-01-12.md",
+      "synthetic": true,
+      "note": "Synthetic summary; not an official snapshot."
     },
     "MT_RESIDENCY_FAQ_2026": {
       "source_id": "MT_RESIDENCY_FAQ_2026",
@@ -474,8 +477,10 @@
       "source_id": "SAFETYWING_WEBSITE_2026",
       "url": "https://safetywing.com/nomad-insurance/",
       "retrieved_at": "2026-01-12T00:00:00Z",
-      "sha256": "0AFB034B268B2D76FFFB866B98EE8EFDA6BDD2A2749F87720DD170527E258551",
-      "local_path": "sources/SAFETYWING_WEBSITE_2026-01-12.md"
+      "sha256": "0EA262CDE6ED9097BB918ACB42C26ABE6D0506B378A2BCC812836867D72A37CB",
+      "local_path": "sources/SAFETYWING_WEBSITE_2026-01-12.md",
+      "synthetic": true,
+      "note": "Synthetic summary; not an official snapshot."
     },
     "TH_MFA_DTV_2026": {
       "source_id": "TH_MFA_DTV_2026",

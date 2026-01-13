@@ -9,6 +9,7 @@ Summary:
 - Deductible: 250 USD
 - Payment: monthly subscription, 45.08 USD per month
 - Note: US-based provider; not specifically authorized to operate in Spain.
+- Synthetic source: yes (summary, not an official snapshot)
 
 Excerpt:
 Travel insurance for digital nomads with $250 deductible, $250,000 coverage limit, monthly subscription at $45.08/month.

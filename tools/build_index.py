@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 from datetime import datetime
 
@@ -36,6 +37,7 @@ print(f"Loaded {len(visas)} visas, {len(products)} products, {len(mappings)} map
 
 data = {
     "built_at": datetime.utcnow().isoformat() + "Z",
+    "snapshot_id": os.environ.get("SNAPSHOT_ID") or datetime.utcnow().date().isoformat(),
     "visas": visas,
     "products": products,
     "mappings": mappings,

@@ -2,6 +2,8 @@
   "source_id": "GENERIC_WEBSITE_2026",
   "url": "https://example.com/generic-insurer",
   "retrieved_at": "2026-01-12T00:00:00Z",
-  "sha256": "1F7AB800F7B1A4BA8DECF9FD899D358670F184FBB6D577409A9B3D3BF25F5A1C",
-  "local_path": "sources/GENERIC_WEBSITE_2026-01-12.md"
+  "sha256": "1583B967BC24EBA861467E95B10AEBB67D6CF1BF03706492FC4DDB8472ACE530",
+  "local_path": "sources/GENERIC_WEBSITE_2026-01-12.md",
+  "synthetic": true,
+  "note": "Synthetic summary; not an official snapshot."
 }
