@@ -248,6 +248,15 @@
           </button>
         </div>
 
+
+        <div id="offerCta" class="mt-6 hidden">
+          <div class="p-4 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800">
+            <div id="offerMessage" class="text-sm text-text-primary dark:text-white font-semibold"></div>
+            <a id="offerLink" class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg" target="_blank" rel="noopener" href="#">Get quote</a>
+            <div id="offerDisclosure" class="mt-2 text-xs text-text-secondary dark:text-gray-400">Affiliate link.</div>
+          </div>
+        </div>
+
         <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 flex justify-between text-xs text-gray-400">
           <div class="flex items-center gap-1">
             <span class="material-symbols-outlined text-sm">update</span>
@@ -362,6 +371,7 @@ function normalizeIndex(raw){
   const visas = raw.visas || [];
   const products = raw.products || [];
   const mappings = raw.mappings || [];
+  const offers = raw.offers || [];
 
   const visa_list = raw.visa_list || visas.map(v => ({ id:v.id, country:v.country, visa_name:v.visa_name, route:v.route }));
   const product_list = raw.product_list || products.map(p => ({ id:p.id, provider:p.provider, product_name:p.product_name }));
@@ -372,6 +382,12 @@ function normalizeIndex(raw){
   const sources_by_id = raw.sources_by_id || (() => {
     const m = {};
     visas.forEach(v => (v.sources || []).forEach(s => m[s.source_id] = s));
+    return m;
+  })();
+
+  const offers_by_product = raw.offers_by_product || (() => {
+    const m = {};
+    offers.forEach(o => { if (o.product_id) m[o.product_id] = o; });
     return m;
   })();
 
@@ -386,7 +402,8 @@ function normalizeIndex(raw){
     snapshot_id: raw.snapshot_id || null,
     visa_list, product_list,
     visas_by_id, products_by_id,
-    sources_by_id, mappings_by_key
+    sources_by_id, mappings_by_key,
+    offers_by_product
   };
 }
 
@@ -605,6 +622,42 @@ function renderReasons(mapping){
   });
 }
 
+function renderOffer(mapping, productId){
+  const status = (mapping?.status || "UNKNOWN").toUpperCase();
+  const offer = INDEX.offers_by_product ? INDEX.offers_by_product[productId] : null;
+
+  const box = $("offerCta");
+  const message = $("offerMessage");
+  const link = $("offerLink");
+  const disclosure = $("offerDisclosure");
+
+  box.classList.add("hidden");
+  link.href = "#";
+  link.classList.remove("hidden");
+
+  if (status === "RED" || status === "UNKNOWN") return;
+  if (status === "NOT_REQUIRED") {
+    message.textContent = "Insurance is optional for this visa.";
+    disclosure.textContent = "No affiliate link shown.";
+    link.classList.add("hidden");
+    box.classList.remove("hidden");
+    return;
+  }
+  if (!offer) return;
+
+  link.textContent = offer.label || "Get quote";
+  link.href = offer.affiliate_url;
+  disclosure.textContent = offer.disclosure || "Affiliate link. Results are evidence-based.";
+
+  if (status === "YELLOW") {
+    message.textContent = "Caution: operational risk. Affiliate link shown for convenience.";
+  } else {
+    message.textContent = "Meets listed requirements based on evidence.";
+  }
+
+  box.classList.remove("hidden");
+}
+
 function renderMissing(mapping){
   const missing = mapping?.missing || mapping?.missing_evidence || [];
   if (missing.length) {
@@ -673,6 +726,7 @@ function renderResult(){
   // requirements + reasons
   renderRequirements(visa);
   renderReasons(mapping);
+  renderOffer(mapping, productId);
 
   // missing box only meaningful for UNKNOWN
   if (status === "UNKNOWN") renderMissing(mapping);

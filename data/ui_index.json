@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-01-13T04:34:28.461549Z",
+  "built_at": "2026-01-13T08:26:09.995317Z",
   "snapshot_id": "2026-01-13",
   "visas": [
     {
@@ -440,6 +440,22 @@
       "missing": []
     }
   ],
+  "offers": [
+    {
+      "product_id": "SW_TRAVEL_2026",
+      "affiliate_url": "https://example.com/quote",
+      "label": "Get quote",
+      "disclosure": "Affiliate link. Results are evidence-based."
+    }
+  ],
+  "offers_by_product": {
+    "SW_TRAVEL_2026": {
+      "product_id": "SW_TRAVEL_2026",
+      "affiliate_url": "https://example.com/quote",
+      "label": "Get quote",
+      "disclosure": "Affiliate link. Results are evidence-based."
+    }
+  },
   "sources_by_id": {
     "CR_DECREE_43619_2026": {
       "source_id": "CR_DECREE_43619_2026",

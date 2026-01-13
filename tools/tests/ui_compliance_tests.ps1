@@ -61,6 +61,13 @@ if ($hasSourcesById) {
 }
 Assert-True ($index.PSObject.Properties.Name -contains "snapshot_id") "ui_index.json includes snapshot_id"
 
+Assert-True ($ui -like "*offerCta*") "UI has offer CTA container"
+Assert-True ($ui -like "*Affiliate*") "UI renders affiliate disclosure"
+Assert-True ($ui -like '*status === "RED"*') "UI hides CTA for RED"
+
+$hasOffers = $index.PSObject.Properties.Name -contains "offers_by_product"
+Assert-True $hasOffers "ui_index.json contains offers_by_product"
+
 $visaIds = @($index.visas | ForEach-Object { $_.id })
 $productIds = @($index.products | ForEach-Object { $_.id })
 Assert-True (Is-Sorted $visaIds) "visas are sorted by id"
