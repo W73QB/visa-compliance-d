@@ -54,6 +54,43 @@ Assert-True ($proc.ExitCode -ne 0) "lint fails for missing blocks"
 $proc2 = Start-Process -FilePath "py" -ArgumentList @("tools/lint_content.py", "--path", $goodPath) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc2.ExitCode -eq 0) "lint passes for valid post"
 
+$scopedRoot = Join-Path $tempDir "scoped"
+$postsDir = Join-Path $scopedRoot "posts"
+$legalDir = Join-Path $scopedRoot "disclaimer"
+New-Item -ItemType Directory -Path $postsDir | Out-Null
+New-Item -ItemType Directory -Path $legalDir | Out-Null
+
+@"
+---
+title: "Scoped"
+---
+
+## What the authority requires
+
+Text.
+
+## How we evaluate
+
+/methodology/
+
+## Check in the engine
+
+/ui/?visa=xx&product=yy&snapshot=releases/2026-01-12
+
+## Disclaimer
+
+Not legal advice.
+
+## Affiliate disclosure
+
+Disclosure text.
+"@ | Set-Content -Path (Join-Path $postsDir "ok.md")
+
+Set-Content -Path (Join-Path $legalDir "_index.md") -Value "This page includes a guarantee."
+
+$proc3 = Start-Process -FilePath "py" -ArgumentList @("tools/lint_content.py", "--root", $scopedRoot) -WorkingDirectory $root -Wait -PassThru
+Assert-True ($proc3.ExitCode -eq 0) "lint ignores legal pages under root"
+
 Remove-Item -LiteralPath $tempDir -Recurse -Force
 
 if ($failed) {

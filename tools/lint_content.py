@@ -22,6 +22,8 @@ BANNED_WORDS = [
     "surely",
 ]
 
+DEFAULT_SECTIONS = {"posts", "visas", "guides", "traps"}
+
 
 def lint_text(text: str) -> list[str]:
     errors = []
@@ -49,6 +51,15 @@ def lint_file(path: Path) -> int:
     return 0
 
 
+def should_lint(path: Path, root: Path) -> bool:
+    try:
+        rel = path.relative_to(root)
+    except ValueError:
+        return False
+    parts = {p.lower() for p in rel.parts}
+    return bool(parts & DEFAULT_SECTIONS)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--path", type=str, help="Single markdown file to lint")
@@ -61,7 +72,8 @@ def main() -> None:
     root = Path(args.root)
     failures = 0
     for path in root.rglob("*.md"):
-        failures += lint_file(path)
+        if should_lint(path, root):
+            failures += lint_file(path)
     sys.exit(1 if failures else 0)
 
 
