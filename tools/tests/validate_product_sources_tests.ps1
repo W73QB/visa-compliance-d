@@ -15,6 +15,17 @@ function Assert-True {
 }
 
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$pythonCmd = $null
+$pyCmd = Get-Command python -ErrorAction SilentlyContinue
+if ($pyCmd) { $pythonCmd = $pyCmd.Source }
+if (-not $pythonCmd) {
+  $pyLauncher = Get-Command py -ErrorAction SilentlyContinue
+  if ($pyLauncher) { $pythonCmd = $pyLauncher.Source }
+}
+if (-not $pythonCmd) {
+  Write-Error "Python executable not found."
+  exit 1
+}
 $productDir = Join-Path $root "data/products/ZZ_TEST/Invalid/2026-01-13"
 $productPath = Join-Path $productDir "product_facts.json"
 $metaPath = Join-Path $root "sources/ZZ_TEST_SOURCE_2026-01-13.meta.json"
@@ -41,17 +52,23 @@ try {
   }
   $meta | ConvertTo-Json -Depth 5 | Set-Content -Path $metaPath -Encoding ASCII
 
-  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
-  Assert-True ($proc.ExitCode -ne 0) "validate fails when local_path missing"
+  $output = & $pythonCmd "tools/validate.py" "--product" $productPath 2>&1
+  $exit = $LASTEXITCODE
+  Write-Host $output
+  Assert-True ($exit -ne 0) "validate fails when local_path missing"
 
   Set-Content -Path $localPath -Value "test content" -Encoding ASCII
-  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
-  Assert-True ($proc.ExitCode -ne 0) "validate fails when sha256 mismatches"
+  $output = & $pythonCmd "tools/validate.py" "--product" $productPath 2>&1
+  $exit = $LASTEXITCODE
+  Write-Host $output
+  Assert-True ($exit -ne 0) "validate fails when sha256 mismatches"
 
   $meta.sha256 = ""
   $meta | ConvertTo-Json -Depth 5 | Set-Content -Path $metaPath -Encoding ASCII
-  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
-  Assert-True ($proc.ExitCode -ne 0) "validate fails when sha256 missing"
+  $output = & $pythonCmd "tools/validate.py" "--product" $productPath 2>&1
+  $exit = $LASTEXITCODE
+  Write-Host $output
+  Assert-True ($exit -ne 0) "validate fails when sha256 missing"
 
   $text = Get-Content -Raw -Path $localPath
   $norm = $text -replace "`r`n", "`n" -replace "`r", "`n"
@@ -59,8 +76,10 @@ try {
   $sha = ([System.Security.Cryptography.SHA256]::Create().ComputeHash($bytes) | ForEach-Object { $_.ToString('x2') }) -join ''
   $meta.sha256 = $sha
   $meta | ConvertTo-Json -Depth 5 | Set-Content -Path $metaPath -Encoding ASCII
-  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
-  Assert-True ($proc.ExitCode -eq 0) "validate passes when sha256 matches"
+  $output = & $pythonCmd "tools/validate.py" "--product" $productPath 2>&1
+  $exit = $LASTEXITCODE
+  Write-Host $output
+  Assert-True ($exit -eq 0) "validate passes when sha256 matches"
 } finally {
   try {
     if (Test-Path $productPath) { Remove-Item -LiteralPath $productPath -Force }
