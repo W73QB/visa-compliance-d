@@ -339,6 +339,19 @@ function escapeHtml(value){
     .replace(/'/g, "&#39;");
 }
 
+function sanitizeUrl(url) {
+  if (!url) return "";
+  const s = String(url).trim();
+  // Allow http://, https://, mailto:, tel:
+  if (/^(?:https?|mailto|tel):/i.test(s)) return s;
+  // Allow relative paths (starting with / or . or just alphanumeric)
+  // BUT we must be careful not to allow "javascript:" which can be relative if base tag is manipulated,
+  // though in this context it's safer.
+  // We explicitly verify it doesn't start with javascript: or vbscript: or data:
+  if (/^(?:javascript|vbscript|data):/i.test(s)) return "#";
+  return s;
+}
+
 let INDEX = null;
 
 // Supports both ui_index.json shapes:
@@ -453,10 +466,15 @@ function openModal(evidenceItems){
   (evidenceItems || []).forEach(ev => {
     const sid = ev.source_id;
     const src = INDEX.sources_by_id[sid] || {};
-    const official = src.url || ev.url || "";
+    const official = sanitizeUrl(src.url || ev.url || "");
     const snapshot = src.local_path
       ? ("../" + src.local_path.replaceAll("\\","/"))
       : (ev.local_path ? ("../" + ev.local_path.replaceAll("\\","/")) : "");
+
+    // snapshot is relative path constructed by us, but we should be safe.
+    // However, if local_path is malicious, we should sanitize it too if possible,
+    // but the prefix "../" makes it relative.
+
     const sidText = escapeHtml(sid || "source");
     const locatorText = escapeHtml(ev.locator || "");
     const excerptText = escapeHtml(ev.excerpt || "");
@@ -471,8 +489,8 @@ function openModal(evidenceItems){
       </div>
       <pre class="text-sm text-text-secondary dark:text-gray-200 whitespace-pre-wrap break-words">${excerptText}</pre>
       <div class="mt-3 text-xs text-text-secondary dark:text-gray-400 flex gap-4">
-        ${official ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${official}">official</a>` : ""}
-        ${snapshot ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${snapshot}">snapshot</a>` : ""}
+        ${official ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${escapeHtml(official)}">official</a>` : ""}
+        ${snapshot ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${escapeHtml(snapshot)}">snapshot</a>` : ""}
       </div>
     `;
     body.appendChild(card);
@@ -669,7 +687,7 @@ function renderResult(){
 
   // action links
   const firstSource = (visa.sources && visa.sources.length) ? visa.sources[0] : null;
-  $("officialBtn").href = firstSource?.url || "#";
+  $("officialBtn").href = sanitizeUrl(firstSource?.url || "#");
   $("snapshotBtn").href = firstSource?.local_path ? ("../" + firstSource.local_path.replaceAll("\\","/")) : "#";
 
   // notify issue
