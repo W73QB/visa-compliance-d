@@ -41,22 +41,25 @@ try {
   }
   $meta | ConvertTo-Json -Depth 5 | Set-Content -Path $metaPath -Encoding ASCII
 
-  $proc = Start-Process -FilePath "py" -ArgumentList "tools/validate.py" -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -ne 0) "validate fails when local_path missing"
 
   Set-Content -Path $localPath -Value "test content" -Encoding ASCII
-  $proc = Start-Process -FilePath "py" -ArgumentList "tools/validate.py" -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -ne 0) "validate fails when sha256 mismatches"
 
   $meta.sha256 = ""
   $meta | ConvertTo-Json -Depth 5 | Set-Content -Path $metaPath -Encoding ASCII
-  $proc = Start-Process -FilePath "py" -ArgumentList "tools/validate.py" -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -ne 0) "validate fails when sha256 missing"
 
-  $sha = (Get-FileHash -Algorithm SHA256 $localPath).Hash.ToLower()
+  $text = Get-Content -Raw -Path $localPath
+  $norm = $text -replace "`r`n", "`n" -replace "`r", "`n"
+  $bytes = [System.Text.Encoding]::UTF8.GetBytes($norm)
+  $sha = ([System.Security.Cryptography.SHA256]::Create().ComputeHash($bytes) | ForEach-Object { $_.ToString('x2') }) -join ''
   $meta.sha256 = $sha
   $meta | ConvertTo-Json -Depth 5 | Set-Content -Path $metaPath -Encoding ASCII
-  $proc = Start-Process -FilePath "py" -ArgumentList "tools/validate.py" -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--product", $productPath) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "validate passes when sha256 matches"
 } finally {
   try {

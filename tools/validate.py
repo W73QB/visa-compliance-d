@@ -1,6 +1,7 @@
+import argparse
+import hashlib
 import json
 import sys
-import hashlib
 from pathlib import Path
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
@@ -26,6 +27,14 @@ def load_sources():
         except Exception:
             continue
     return sources_by_id
+
+def sha256_for_path(path: Path) -> str:
+    suffix = path.suffix.lower()
+    if suffix in {".md", ".txt", ".json"}:
+        text = path.read_text(encoding="utf-8", errors="replace")
+        normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+        return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def check_product_sources(data, path, sources_by_id):
     global errors
@@ -67,7 +76,7 @@ def check_product_sources(data, path, sources_by_id):
             errors += 1
             continue
         try:
-            digest = hashlib.sha256(full_path.read_bytes()).hexdigest()
+            digest = sha256_for_path(full_path)
         except Exception as e:
             print(f"[ERROR] ProductFacts: {path}")
             print("  ", f"Failed to read local source file for source_id: {source_id} ({e})")
@@ -78,27 +87,40 @@ def check_product_sources(data, path, sources_by_id):
             print("  ", f"SHA256 mismatch for source_id: {source_id}")
             errors += 1
 
-def validate_files(folder, schema, label, sources_by_id=None):
+def validate_file(path, schema, label, sources_by_id=None):
     global errors
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        validate(instance=data, schema=schema)
+        print(f"[OK] {label}: {path}")
+        if label == "ProductFacts" and sources_by_id is not None:
+            check_product_sources(data, path, sources_by_id)
+    except ValidationError as e:
+        print(f"[ERROR] {label}: {path}")
+        print("  ", e.message)
+        errors += 1
+    except Exception as e:
+        print(f"[ERROR] {label}: {path}")
+        print("  ", str(e))
+        errors += 1
+
+def validate_files(folder, schema, label, sources_by_id=None):
     for path in folder.rglob("*.json"):
-        try:
-            data = json.loads(path.read_text(encoding="utf-8"))
-            validate(instance=data, schema=schema)
-            print(f"[OK] {label}: {path}")
-            if label == "ProductFacts" and sources_by_id is not None:
-                check_product_sources(data, path, sources_by_id)
-        except ValidationError as e:
-            print(f"[ERROR] {label}: {path}")
-            print("  ", e.message)
-            errors += 1
-        except Exception as e:
-            print(f"[ERROR] {label}: {path}")
-            print("  ", str(e))
-            errors += 1
+        validate_file(path, schema, label, sources_by_id)
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--visa", type=str, help="Path to a single VisaFacts JSON to validate")
+parser.add_argument("--product", type=str, help="Path to a single ProductFacts JSON to validate")
+args = parser.parse_args()
 
 sources_by_id = load_sources()
-validate_files(DATA / "visas", visa_schema, "VisaFacts")
-validate_files(DATA / "products", product_schema, "ProductFacts", sources_by_id)
+if args.visa:
+    validate_file(Path(args.visa), visa_schema, "VisaFacts")
+elif args.product:
+    validate_file(Path(args.product), product_schema, "ProductFacts", sources_by_id)
+else:
+    validate_files(DATA / "visas", visa_schema, "VisaFacts")
+    validate_files(DATA / "products", product_schema, "ProductFacts", sources_by_id)
 
 if errors > 0:
     print(f"\n[FAIL] {errors} error(s) found")
