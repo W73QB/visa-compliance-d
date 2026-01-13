@@ -1,6 +1,7 @@
 import argparse
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 from jsonschema import validate
@@ -13,6 +14,7 @@ SOURCES = ROOT / "sources"
 
 visa_schema = json.loads((SCHEMAS / "visa_facts.schema.json").read_text(encoding="utf-8"))
 product_schema = json.loads((SCHEMAS / "product_facts.schema.json").read_text(encoding="utf-8"))
+offers_schema = json.loads((SCHEMAS / "offers.schema.json").read_text(encoding="utf-8"))
 
 errors = 0
 
@@ -35,6 +37,29 @@ def sha256_for_path(path: Path) -> str:
         normalized = text.replace("\r\n", "\n").replace("\r", "\n")
         return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+BANNED_OFFER_WORDS = [
+    "best",
+    "recommend",
+    "recommended",
+    "guarantee",
+    "guaranteed",
+    "100%",
+    "approved",
+    "surely",
+]
+
+
+def check_offer_language(data, path):
+    global errors
+    for offer in data.get("offers", []):
+        text = (offer.get("label", "") + " " + offer.get("disclosure", "")).lower()
+        for word in BANNED_OFFER_WORDS:
+            if re.search(rf"\b{re.escape(word)}\b", text):
+                print(f"[ERROR] Offers: {path}")
+                print("  ", f"Banned word in offer: {word}")
+                errors += 1
+                break
 
 def check_product_sources(data, path, sources_by_id):
     global errors
@@ -95,6 +120,8 @@ def validate_file(path, schema, label, sources_by_id=None):
         print(f"[OK] {label}: {path}")
         if label == "ProductFacts" and sources_by_id is not None:
             check_product_sources(data, path, sources_by_id)
+        if label == "Offers":
+            check_offer_language(data, path)
     except ValidationError as e:
         print(f"[ERROR] {label}: {path}")
         print("  ", e.message)
@@ -111,6 +138,7 @@ def validate_files(folder, schema, label, sources_by_id=None):
 parser = argparse.ArgumentParser()
 parser.add_argument("--visa", type=str, help="Path to a single VisaFacts JSON to validate")
 parser.add_argument("--product", type=str, help="Path to a single ProductFacts JSON to validate")
+parser.add_argument("--offers", type=str, help="Path to a single Offers JSON to validate")
 args = parser.parse_args()
 
 sources_by_id = load_sources()
@@ -118,9 +146,13 @@ if args.visa:
     validate_file(Path(args.visa), visa_schema, "VisaFacts")
 elif args.product:
     validate_file(Path(args.product), product_schema, "ProductFacts", sources_by_id)
+elif args.offers:
+    validate_file(Path(args.offers), offers_schema, "Offers")
 else:
     validate_files(DATA / "visas", visa_schema, "VisaFacts")
     validate_files(DATA / "products", product_schema, "ProductFacts", sources_by_id)
+    if (DATA / "offers").exists():
+        validate_files(DATA / "offers", offers_schema, "Offers")
 
 if errors > 0:
     print(f"\n[FAIL] {errors} error(s) found")
