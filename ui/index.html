@@ -160,6 +160,14 @@
     </div>
   </div>
 
+  <!-- Loading skeleton -->
+  <div id="loadingState" class="max-w-4xl mx-auto mb-12 hidden">
+    <div class="flex items-center justify-center gap-3 py-8">
+      <div class="animate-spin rounded-full h-8 w-8 border-2 border-primary border-t-transparent"></div>
+      <span class="text-text-secondary font-medium">Loading compliance data...</span>
+    </div>
+  </div>
+
   <!-- RESULT AREA -->
   <div id="resultArea" class="max-w-5xl mx-auto space-y-8 hidden">
     <div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-soft dark:border-border-dark overflow-hidden shadow-sm">
@@ -817,61 +825,75 @@ function renderResult(){
 }
 
 async function init(){
-  const res = await fetch(DATA_URL, { cache: "no-store" });
-  const raw = await res.json();
-  INDEX = normalizeIndex(raw);
+  $("loadingState").classList.remove("hidden");
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    const raw = await res.json();
+    INDEX = normalizeIndex(raw);
 
-  // populate selects
-  const vs = $("visaSelect");
-  INDEX.visa_list.forEach(v => {
-    const opt = document.createElement("option");
-    opt.value = v.id;
-    opt.textContent = `${v.country} - ${v.visa_name} (${v.route})`;
-    vs.appendChild(opt);
-  });
+    // populate selects
+    const vs = $("visaSelect");
+    INDEX.visa_list.forEach(v => {
+      const opt = document.createElement("option");
+      opt.value = v.id;
+      opt.textContent = `${v.country} - ${v.visa_name} (${v.route})`;
+      vs.appendChild(opt);
+    });
 
-  const ps = $("productSelect");
-  INDEX.product_list.forEach(p => {
-    const opt = document.createElement("option");
-    opt.value = p.id;
-    opt.textContent = `${p.provider} - ${p.product_name}`;
-    ps.appendChild(opt);
-  });
+    const ps = $("productSelect");
+    INDEX.product_list.forEach(p => {
+      const opt = document.createElement("option");
+      opt.value = p.id;
+      opt.textContent = `${p.provider} - ${p.product_name}`;
+      ps.appendChild(opt);
+    });
 
-  // restore from query
-  const q = new URLSearchParams(location.search);
-  const v0 = q.get("visa");
-  const p0 = q.get("product");
-  if (v0 && INDEX.visas_by_id[v0]) vs.value = v0;
-  if (p0 && INDEX.products_by_id[p0]) ps.value = p0;
+    // restore from query
+    const q = new URLSearchParams(location.search);
+    const v0 = q.get("visa");
+    const p0 = q.get("product");
+    if (v0 && INDEX.visas_by_id[v0]) vs.value = v0;
+    if (p0 && INDEX.products_by_id[p0]) ps.value = p0;
 
-  // listeners
-  vs.addEventListener("change", updateHints);
-  ps.addEventListener("change", updateHints);
+    // listeners
+    vs.addEventListener("change", updateHints);
+    ps.addEventListener("change", updateHints);
 
-  $("checkBtn").addEventListener("click", (e) => {
-    e.preventDefault();
-    renderResult();
-  });
+    $("checkBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      renderResult();
+    });
 
-  $("copyLinkBtn").addEventListener("click", async () => {
-    await navigator.clipboard.writeText(location.href);
-    $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
-    setTimeout(() => {
-      $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
-    }, 900);
-  });
+    $("copyLinkBtn").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(location.href);
+      $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
+      setTimeout(() => {
+        $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
+      }, 900);
+    });
 
-  $("closeModal").addEventListener("click", closeModal);
-  $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    $("closeModal").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
 
-  updateHints();
+    updateHints();
 
-  // auto-run if query has both
-  if (vs.value && ps.value) {
-    setCheckBtnEnabled();
-    renderResult();
+    // auto-run if query has both
+    if (vs.value && ps.value) {
+      setCheckBtnEnabled();
+      renderResult();
+    }
+  } catch (err) {
+    console.error(err);
+    $("loadingState").innerHTML = `
+      <div class="text-center py-8">
+        <span class="material-symbols-outlined text-error-red text-4xl mb-2">error</span>
+        <p class="text-error-red font-medium">Failed to load data</p>
+        <p class="text-text-secondary text-sm mt-1">Please refresh the page or check your connection.</p>
+      </div>
+    `;
+    return;
   }
+  $("loadingState").classList.add("hidden");
 }
 
 // Mobile menu toggle
