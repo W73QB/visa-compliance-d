@@ -1,9 +1,9 @@
-{{- if site.GoogleAnalytics }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.GoogleAnalytics }}"></script>
+{{- if .Site.GoogleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ site.GoogleAnalytics }}');
+  gtag('config', '{{ .Site.GoogleAnalytics }}');
 </script>
 {{- end -}}
