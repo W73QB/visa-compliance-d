@@ -101,3 +101,40 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
 
+  post_deploy_smoke:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Read baseURL from hugo.toml
+        id: baseurl
+        run: |
+          BASE_URL=$(python - <<'PY'
+          import tomllib
+          from pathlib import Path
+          data = tomllib.loads(Path("hugo.toml").read_text())
+          print(data["baseURL"].rstrip("/"))
+          PY
+          )
+          echo "base_url=$BASE_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Smoke HTTP (retry)
+        shell: pwsh
+        run: |
+          $baseUrl = '${{ steps.baseurl.outputs.base_url }}'
+          $maxAttempts = 3
+          $delaySec = 20
+          $ok = $false
+          for ($i = 1; $i -le $maxAttempts; $i++) {
+            Write-Host "Smoke attempt $i/$maxAttempts..."
+            & ./tools/smoke_http.ps1 -BaseUrl $baseUrl
+            if ($LASTEXITCODE -eq 0) { $ok = $true; break }
+            if ($i -lt $maxAttempts) { Start-Sleep -Seconds $delaySec }
+          }
+          if (-not $ok) { exit 1 }
+
