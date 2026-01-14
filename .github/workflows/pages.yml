@@ -1,4 +1,4 @@
-name: Deploy Hugo site
+﻿name: Deploy Hugo site
 
 on:
   push:
@@ -56,7 +56,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: "0.121.1"
           extended: true
 
       - name: Build Hugo (with log)
@@ -84,3 +84,4 @@ jobs:
       name: github-pages
     steps:
       - uses: actions/deploy-pages@v4
+
