@@ -44,7 +44,7 @@ Assert-True ($ui -like '*href="../methodology/"*') "UI footer links to methodolo
 Assert-True ($ui -like '*href="../disclaimer/"*') "UI footer links to disclaimer"
 Assert-True ($ui -like '*href="../affiliate-disclosure/"*') "UI footer links to affiliate disclosure"
 
-$bytes = Get-Content -Encoding Byte -Path "ui/index.html"
+$bytes = Get-Content -AsByteStream -Path "ui/index.html"
 $nonAsciiBytes = @($bytes | Where-Object { $_ -gt 127 })
 Assert-True ($nonAsciiBytes.Count -eq 0) "ui/index.html contains only ASCII characters"
 
