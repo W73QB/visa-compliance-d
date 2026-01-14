@@ -78,12 +78,23 @@
       <span class="material-symbols-outlined text-primary text-3xl icon-filled">verified_user</span>
       <span class="text-text-primary dark:text-white text-xl font-bold tracking-tight">VisaFact</span>
     </div>
+    <button id="mobileMenuBtn" class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" aria-label="Toggle menu">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
     <nav class="hidden md:flex items-center gap-8">
       <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../">Home</a>
       <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../visas/">Visas</a>
       <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../methodology/">Methodology</a>
       <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../disclaimer/">Disclaimer</a>
     </nav>
+    <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-surface-light dark:bg-surface-dark border-b border-border-soft dark:border-border-dark shadow-lg">
+      <div class="flex flex-col p-4 gap-2">
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../">Home</a>
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../visas/">Visas</a>
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../methodology/">Methodology</a>
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../disclaimer/">Disclaimer</a>
+      </div>
+    </div>
     <button class="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm flex items-center gap-2">
       <span class="material-symbols-outlined text-sm">support_agent</span>
       Support
@@ -862,6 +873,15 @@ async function init(){
     renderResult();
   }
 }
+
+// Mobile menu toggle
+$("mobileMenuBtn")?.addEventListener("click", () => {
+  const menu = $("mobileMenu");
+  const btn = $("mobileMenuBtn");
+  const isOpen = !menu.classList.contains("hidden");
+  menu.classList.toggle("hidden");
+  btn.querySelector("span").textContent = isOpen ? "menu" : "close";
+});
 
 init().catch(err => {
   console.error(err);
