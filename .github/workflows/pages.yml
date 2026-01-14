@@ -139,7 +139,7 @@ jobs:
           for ($i = 1; $i -le $maxAttempts; $i++) {
             Write-Host "Smoke attempt $i/$maxAttempts..."
             & ./tools/smoke_http.ps1 -BaseUrl $baseUrl
-            if ($LASTEXITCODE -eq 0) { $ok = $true; break }
+            if ($?) { $ok = $true; break }
             if ($i -lt $maxAttempts) { Start-Sleep -Seconds $delaySec }
           }
           if (-not $ok) { exit 1 }
