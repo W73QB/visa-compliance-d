@@ -50,6 +50,22 @@ jobs:
           python tools/build_release_snapshot.py --release-id "${{ inputs.release_id }}"
           python tools/sync_hugo_static.py
 
+      - name: Run tests
+        run: |
+          pwsh -File tools/tests/ui_compliance_tests.ps1
+          pwsh -File tools/tests/validate_product_sources_tests.ps1
+          pwsh -File tools/tests/snapshot_tests.ps1
+          pwsh -File tools/tests/snapshot_routing_tests.ps1
+          pwsh -File tools/tests/release_snapshot_tests.ps1
+          pwsh -File tools/tests/verify_snapshot_manifest_tests.ps1
+          pwsh -File tools/tests/offers_tests.ps1
+          pwsh -File tools/tests/content_lint_tests.ps1
+          pwsh -File tools/tests/source_monitor_tests.ps1
+          pwsh -File tools/tests/hugo_integration_tests.ps1
+          pwsh -File tools/tests/sync_hugo_static_tests.ps1
+          pwsh -File tools/tests/verify_static_bundle_tests.ps1
+          pwsh -File tools/tests/smoke_tests.ps1
+
       - name: Lint content
         run: python tools/lint_content.py
 
