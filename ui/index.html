@@ -67,6 +67,29 @@
     outline-offset: 2px;
     box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
   }
+  /* Page load animations */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fadeSlideUp 0.6s ease-out both; }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+
+  /* Result reveal animation */
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .animate-reveal { animation: revealUp 0.5s ease-out both; }
+
+  /* Status pulse for GREEN */
+  @keyframes trustPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+  }
+  .pulse-success { animation: trustPulse 2s ease-in-out infinite; }
 </style>
 </head>
 
@@ -103,7 +126,7 @@
 </header>
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-  <div class="text-center mb-12">
+  <div class="text-center mb-12 animate-fade-up">
     <h1 class="font-display text-3xl md:text-5xl font-normal tracking-tight mb-4 text-text-primary dark:text-white">
       VisaFact Compliance Checker
     </h1>
@@ -120,7 +143,7 @@
   </div>
 
   <!-- INPUT CARD -->
-  <div class="max-w-4xl mx-auto bg-surface-light dark:bg-surface-dark rounded-xl border border-border-soft dark:border-border-dark p-6 md:p-10 mb-12 shadow-sm">
+  <div class="max-w-4xl mx-auto bg-surface-light dark:bg-surface-dark rounded-xl border border-border-soft dark:border-border-dark p-6 md:p-10 mb-12 shadow-sm animate-fade-up delay-100">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
       <div class="flex flex-col gap-3 group">
@@ -771,6 +794,7 @@ function renderResult(){
 
   // show container
   $("resultArea").classList.remove("hidden");
+  $("resultArea").classList.add("animate-reveal");
 
   // chip + title/subtitle
   $("statusChip").className = `inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${pres.chipClass}`;
