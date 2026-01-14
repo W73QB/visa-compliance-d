@@ -104,6 +104,25 @@
     z-index: -1;
   }
   .dark body::before { opacity: 0.02; }
+  /* Stamp-style status badges */
+  .stamp-badge {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 3px solid currentColor;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: rotate(-2deg);
+  }
+  .stamp-badge::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border: 1px dashed currentColor;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+  }
 </style>
 </head>
 
@@ -811,7 +830,10 @@ function renderResult(){
   $("resultArea").classList.add("animate-reveal");
 
   // chip + title/subtitle
-  $("statusChip").className = `inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${pres.chipClass}`;
+  $("statusChip").className = `stamp-badge ${pres.chipClass}`;
+  if (status === "GREEN") {
+    $("statusChip").classList.add("pulse-success");
+  }
   $("statusIcon").textContent = pres.icon;
   $("statusChipText").textContent = pres.chipText;
   $("resultTitle").textContent = pres.title;
