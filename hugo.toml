@@ -1,6 +1,6 @@
 baseURL = "https://w73qb.github.io/visa-compliance-d/"
 languageCode = "en-us"
-title = "VisaCheck"
+title = "VisaFact"
 theme = "PaperMod"
 
 enableRobotsTXT = true
