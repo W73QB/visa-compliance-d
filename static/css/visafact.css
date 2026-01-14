@@ -101,3 +101,108 @@ html[data-theme="dark"] .vf-header {
 .vf-trust:focus-within {
   box-shadow: 0 0 0 2px var(--vf-accent);
 }
+
+/* Home hero layout */
+.vf-hero {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 900px) {
+  .vf-hero {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+.vf-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--vf-accent);
+  margin-bottom: 0.5rem;
+}
+.vf-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+.vf-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+.vf-cta-secondary {
+  background: transparent;
+  color: var(--vf-primary);
+  border: 2px solid var(--vf-primary);
+}
+.vf-cta-secondary:hover {
+  background: rgba(30, 58, 95, 0.08);
+}
+
+.vf-hero-card {
+  background: var(--vf-surface);
+  border: 1px solid var(--vf-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+.vf-card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--vf-primary);
+  margin-bottom: 1rem;
+}
+.vf-stat-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+.vf-stat {
+  padding: 0.75rem 0.9rem;
+  border: 1px dashed var(--vf-border);
+  border-radius: 10px;
+}
+.vf-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--vf-text);
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+}
+.vf-stat-value {
+  font-weight: 700;
+  color: var(--vf-text);
+}
+.vf-evidence {
+  margin-top: 1.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(201,162,39,0.12);
+  border: 1px solid rgba(201,162,39,0.5);
+  font-weight: 600;
+}
+
+.vf-pillars {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 900px) {
+  .vf-pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.vf-pill {
+  padding: 1.1rem 1.2rem;
+  border-radius: 14px;
+  background: var(--vf-surface);
+  border: 1px solid var(--vf-border);
+}
+.vf-pill h3 {
+  margin-top: 0;
+}
