@@ -1,4 +1,9 @@
- Affiliate Disclosure (Transparency)
+﻿ Affiliate Disclosure (Transparency)
+
+{{< vf-trust >}}
+All results are evidence-based. Missing evidence -> UNKNOWN.
+{{< /vf-trust >}}
+
 
 Some links on this website may be affiliate links.
 
@@ -28,7 +33,7 @@ Products may be presented as options only when they satisfy criteria derived fro
 
 ## 3) How to interpret suggestions
 
-If the site displays products that meet requirements, this is a **filtering outcome** based on rules and evidence—not a personal recommendation.
+If the site displays products that meet requirements, this is a **filtering outcome** based on rules and evidenceâ€”not a personal recommendation.
 
 You should always:
 
@@ -39,3 +44,6 @@ You should always:
 ## 4) Questions
 
 If you have concerns about affiliate links or potential conflicts of interest, you can contact us or open a report using the "Notify me of changes" function.
+
+{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}
+

@@ -1,4 +1,9 @@
- Methodology (How this checker works)
+﻿ Methodology (How this checker works)
+
+{{< vf-trust >}}
+All results are evidence-based. Missing evidence -> UNKNOWN.
+{{< /vf-trust >}}
+
 
 This site is an evidence-based compliance checker for visa insurance requirements.
 
@@ -62,3 +67,6 @@ If you believe a source has changed or a requirement is outdated:
 - Provide the updated official link or document if possible.
 
 We will review and update the relevant VisaFacts/ProductFacts record with evidence.
+
+{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}
+
