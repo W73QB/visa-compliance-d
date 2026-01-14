@@ -1,7 +1,9 @@
+﻿import os
 import shutil
+import sys
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(os.environ.get("SYNC_ROOT", Path(__file__).parent.parent))
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -15,21 +17,31 @@ def copy_file(src: Path, dst: Path) -> None:
     shutil.copy2(src, dst)
 
 
+def fail(message: str) -> None:
+    print(f"ERROR: {message}", file=sys.stderr)
+    raise SystemExit(1)
+
+
 def main() -> None:
     static = ROOT / "static"
     static.mkdir(exist_ok=True)
 
     ui_src = ROOT / "ui"
-    if ui_src.exists():
-        copy_tree(ui_src, static / "ui")
+    if not ui_src.exists():
+        fail("Missing ui/ directory")
+    copy_tree(ui_src, static / "ui")
 
     index_src = ROOT / "data" / "ui_index.json"
-    if index_src.exists():
-        copy_file(index_src, static / "data" / "ui_index.json")
+    if not index_src.exists():
+        fail("Missing data/ui_index.json")
+    copy_file(index_src, static / "data" / "ui_index.json")
 
     sources_src = ROOT / "sources"
+    release = os.environ.get("RELEASE_BUILD", "").lower() in {"1", "true", "yes"}
     if sources_src.exists():
         copy_tree(sources_src, static / "sources")
+    elif release:
+        fail("Missing sources/ directory in release mode")
 
     snapshots_src = ROOT / "data" / "snapshots"
     if snapshots_src.exists():
