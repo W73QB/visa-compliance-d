@@ -1,0 +1,103 @@
+﻿:root {
+  --primary: #1e3a5f;
+  --secondary: #c9a227;
+  --theme: #faf8f5;
+  --entry: #ffffff;
+  --content: #1a1a1a;
+  --vf-primary: #1e3a5f;
+  --vf-accent: #c9a227;
+  --vf-bg: #faf8f5;
+  --vf-text: #1a1a1a;
+  --vf-surface: #ffffff;
+  --vf-border: #e8e4df;
+}
+
+html[data-theme="dark"] {
+  --theme: #0f1419;
+  --entry: #1a232e;
+  --content: #f5f5f5;
+  --vf-bg: #0f1419;
+  --vf-text: #f5f5f5;
+  --vf-surface: #1a232e;
+  --vf-border: #2d3748;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background: var(--vf-bg);
+  color: var(--vf-text);
+}
+
+h1, h2, h3, h4 {
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--vf-primary);
+}
+
+a:hover {
+  color: var(--vf-accent);
+}
+
+/* PaperMod cards */
+.post-entry, .post-single, .entry-content {
+  border-radius: 14px;
+  background: var(--vf-surface);
+  border: 1px solid var(--vf-border);
+}
+
+/* Header / footer alignment */
+.vf-header {
+  border-bottom: 1px solid var(--vf-border);
+  background: rgba(250, 248, 245, 0.9);
+  backdrop-filter: blur(8px);
+}
+html[data-theme="dark"] .vf-header {
+  background: rgba(15, 20, 25, 0.9);
+}
+.vf-header .logo a {
+  font-family: "DM Serif Display", Georgia, serif;
+  color: var(--vf-text);
+}
+.vf-menu a span {
+  font-weight: 600;
+}
+.vf-footer {
+  border-top: 1px solid var(--vf-border);
+  background: var(--vf-surface);
+}
+
+/* CTA button style */
+.vf-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--vf-primary);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vf-cta:hover { background: #152a45; }
+
+/* CTA focus states */
+.vf-cta:focus-visible {
+  outline: 2px solid var(--vf-accent);
+  outline-offset: 2px;
+}
+
+/* Trust callout */
+.vf-trust {
+  border: 2px solid var(--vf-accent);
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(201,162,39,0.08);
+  font-weight: 600;
+}
+.vf-trust:focus-within {
+  box-shadow: 0 0 0 2px var(--vf-accent);
+}
