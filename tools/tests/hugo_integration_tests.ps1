@@ -21,7 +21,11 @@ if (Test-Path "hugo.toml") {
   Assert-True ($hugo -like "*https://w73qb.github.io/visa-compliance-d/*") "baseURL is set for GitHub Pages"
   Assert-True ($hugo -like '*theme = "PaperMod"*') "theme is PaperMod"
   Assert-True ($hugo -like '*name = "Checker"*') "menu includes Checker"
-  Assert-True ($hugo -like '*url = "/ui/"*') "menu links to /ui/"
+  Assert-True ($hugo -like '*url = "ui/"*') "checker menu uses relative url"
+  Assert-True ($hugo -like '*pageRef = "posts"*') "menu uses pageRef for posts"
+  Assert-True ($hugo -like '*pageRef = "methodology"*') "menu uses pageRef for methodology"
+  Assert-True ($hugo -like '*pageRef = "disclaimer"*') "menu uses pageRef for disclaimer"
+  Assert-True ($hugo -like '*pageRef = "affiliate-disclosure"*') "menu uses pageRef for affiliate disclosure"
 }
 
 Write-Host "Content checks..." -ForegroundColor Cyan

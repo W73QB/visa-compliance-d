@@ -18,21 +18,21 @@ canonifyURLs = true
 [menu]
   [[menu.main]]
     name = "Checker"
-    url = "/ui/"
+    url = "ui/"
     weight = 1
   [[menu.main]]
     name = "Blog"
-    url = "/posts/"
+    pageRef = "posts"
     weight = 2
   [[menu.main]]
     name = "Methodology"
-    url = "/methodology/"
+    pageRef = "methodology"
     weight = 3
   [[menu.main]]
     name = "Disclaimer"
-    url = "/disclaimer/"
+    pageRef = "disclaimer"
     weight = 4
   [[menu.main]]
     name = "Affiliate"
-    url = "/affiliate-disclosure/"
+    pageRef = "affiliate-disclosure"
     weight = 5
