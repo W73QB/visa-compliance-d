@@ -50,6 +50,12 @@ jobs:
           python tools/build_release_snapshot.py --release-id "${{ inputs.release_id }}"
           python tools/sync_hugo_static.py
 
+      - name: Ensure py alias on Linux
+        run: |
+          mkdir -p .bin
+          ln -s "$(command -v python)" .bin/py
+          echo "$PWD/.bin" >> "$GITHUB_PATH"
+
       - name: Run tests
         run: |
           pwsh -File tools/tests/ui_compliance_tests.ps1
