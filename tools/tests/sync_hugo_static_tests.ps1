@@ -12,7 +12,11 @@ function Assert-True {
 }
 
 function New-TempRoot {
-  $root = Join-Path $env:TEMP ([System.Guid]::NewGuid().ToString())
+  $temp = $env:TEMP
+  if (-not $temp) {
+    $temp = [System.IO.Path]::GetTempPath()
+  }
+  $root = Join-Path $temp ([System.Guid]::NewGuid().ToString())
   New-Item -ItemType Directory -Path $root | Out-Null
   return $root
 }
@@ -64,7 +68,9 @@ try {
   Assert-True ($proc4.ExitCode -eq 0) "sync succeeds when required inputs exist"
 }
 finally {
-  Remove-Item -Recurse -Force $root1, $root2, $root3, $root4 -ErrorAction SilentlyContinue
+  @($root1, $root2, $root3, $root4) |
+    Where-Object { $_ -and $_.Trim() -ne "" } |
+    ForEach-Object { Remove-Item -Recurse -Force $_ -ErrorAction SilentlyContinue }
 }
 
 if ($failed) {
