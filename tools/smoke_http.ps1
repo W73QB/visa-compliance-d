@@ -37,7 +37,8 @@ $index = Get-Ok "$base/data/ui_index.json"
 if ($index) {
   Assert-True ($index.StatusCode -eq 200) "/data/ui_index.json returns 200"
   $json = $index.Content | ConvertFrom-Json
-  $first = $json.sources_by_id.PSObject.Properties[0].Value
+  $firstProp = $json.sources_by_id.PSObject.Properties | Select-Object -First 1
+  $first = if ($firstProp) { $firstProp.Value } else { $null }
   if ($null -ne $first -and $first.local_path) {
     $src = Get-Ok ("$base/" + $first.local_path.TrimStart("/"))
     if ($src) { Assert-True ($src.StatusCode -eq 200) "source file returns 200" }
