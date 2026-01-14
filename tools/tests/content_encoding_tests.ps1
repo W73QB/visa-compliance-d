@@ -17,9 +17,11 @@ $paths = @(
 
 foreach ($p in $paths) {
   $raw = Get-Content -Raw -Path $p
+  $bytes = [System.IO.File]::ReadAllBytes($p)
+  $hasBom = ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF)
   Assert-True (-not ($raw -match "\u0192\?")) "$p has no broken encoding sequence '\u0192?'"
   Assert-True (-not ($raw -match "\uFFFD")) "$p has no replacement character"
-  Assert-True (-not ($raw.StartsWith([char]0xFEFF))) "$p has no BOM"
+  Assert-True (-not $hasBom) "$p has no BOM"
 }
 
 if ($failed) { Write-Error "Encoding checks failed."; exit 1 }
