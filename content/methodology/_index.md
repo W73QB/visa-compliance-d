@@ -1,4 +1,4 @@
-# Methodology (How this checker works)
+ Methodology (How this checker works)
 
 This site is an evidence-based compliance checker for visa insurance requirements.
 
@@ -16,7 +16,7 @@ For each visa route (country + visa type + authority/route), we capture:
 For each insurance product, we capture:
 
 - Product facts that can be verified (policy type, payment cadence, deductible, coverage limit, etc.).
-- Evidence excerpts and a locator from the product’s official documents or pages.
+- Evidence excerpts and a locator from the product's official documents or pages.
 - A version/date so the record is tied to a specific policy snapshot.
 
 ## 2) Data model
@@ -43,9 +43,9 @@ Every source is stored as a snapshot and hashed with SHA256 to preserve integrit
 
 - **GREEN (PASS)**: No rule violations detected based on available evidence.
 - **YELLOW (CAUTION)**: Meets hard requirements, but there is an edge case or operational risk (e.g., cancellation risk for monthly subscriptions when a full-period policy is expected).
-- **RED (FAIL)**: Violates at least one explicit requirement (e.g., deductible > 0 when “no excess/deductible” is required).
+- **RED (FAIL)**: Violates at least one explicit requirement (e.g., deductible > 0 when "no excess/deductible" is required).
 - **UNKNOWN**: Insufficient evidence to conclude (missing product facts or unclear authorization/terms).
-- **NOT_REQUIRED**: The authority’s requirement list does not include insurance as a mandatory document.
+- **NOT_REQUIRED**: The authority's requirement list does not include insurance as a mandatory document.
 
 ## 5) Scope and limitations
 
@@ -58,7 +58,7 @@ Every source is stored as a snapshot and hashed with SHA256 to preserve integrit
 
 If you believe a source has changed or a requirement is outdated:
 
-- Use “Notify me of changes” (opens a report/issue).
+- Use "Notify me of changes" (opens a report/issue).
 - Provide the updated official link or document if possible.
 
 We will review and update the relevant VisaFacts/ProductFacts record with evidence.

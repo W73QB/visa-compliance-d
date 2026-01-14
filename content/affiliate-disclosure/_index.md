@@ -1,4 +1,4 @@
-# Affiliate Disclosure (Transparency)
+ Affiliate Disclosure (Transparency)
 
 Some links on this website may be affiliate links.
 
@@ -38,4 +38,4 @@ You should always:
 
 ## 4) Questions
 
-If you have concerns about affiliate links or potential conflicts of interest, you can contact us or open a report using the “Notify me of changes” function.
+If you have concerns about affiliate links or potential conflicts of interest, you can contact us or open a report using the "Notify me of changes" function.

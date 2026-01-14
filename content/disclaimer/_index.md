@@ -1,4 +1,4 @@
-# Disclaimer (Not legal advice)
+ Disclaimer (Not legal advice)
 
 The information on this website is provided for general informational purposes only.
 
@@ -7,7 +7,7 @@ The information on this website is provided for general informational purposes o
 This website and its compliance checker do **not** provide legal advice.  
 We are not your lawyers, and using this site does not create a lawyer–client relationship.
 
-Visa decisions are made by government authorities and can depend on your personal circumstances and the reviewing officer’s discretion.
+Visa decisions are made by government authorities and can depend on your personal circumstances and the reviewing officer's discretion.
 
 ## 2) No guarantee
 
@@ -35,6 +35,6 @@ You are responsible for verifying requirements and choosing an insurance product
 
 ## 5) Medical and insurance decisions
 
-Insurance coverage, exclusions, and claim outcomes depend on the insurer’s policy terms and your circumstances.
+Insurance coverage, exclusions, and claim outcomes depend on the insurer's policy terms and your circumstances.
 
 Before purchasing, you should read the full policy wording and consult a qualified professional if needed.
