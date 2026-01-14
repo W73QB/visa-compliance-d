@@ -90,7 +90,7 @@ Assert-True (Test-Path $pagesPath) "Pages workflow file exists"
 if (Test-Path $pagesPath) {
   $pages = Get-Content -Raw -Path $pagesPath
   Assert-True ($pages -notlike '*hugo-version: "latest"*') "pages workflow does not use Hugo latest"
-  Assert-True ($pages -like '*hugo-version: "0.121.1"*') "pages workflow pins Hugo version"
+  Assert-True ($pages -like '*hugo-version: "0.146.0"*') "pages workflow pins Hugo version"
 
   Assert-True ($pages -like "*workflow_dispatch*") "pages workflow supports manual release builds"
   Assert-True ($pages -like "*build_release_snapshot.py*") "pages workflow runs release snapshot when requested"
