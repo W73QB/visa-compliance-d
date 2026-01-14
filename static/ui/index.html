@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Modern Compliance Checker</title>
+  <title>VisaFact - Evidence-Based Visa Insurance Compliance Checker</title>
+  <meta name="description" content="Check if your insurance meets official visa requirements. Evidence-backed results verified against primary sources. No source = UNKNOWN.">
+  <meta name="keywords" content="visa insurance, compliance checker, Spain DNV, evidence-based">
+  <meta property="og:title" content="VisaFact - Visa Insurance Compliance Checker">
+  <meta property="og:description" content="Evidence-backed compliance checking against official visa requirements.">
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
   <script id="tailwind-config">
@@ -15,23 +19,28 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#137fec",
-            "primary-hover": "#0f6bd0",
-            "background-light": "#f6f7f8",
-            "background-dark": "#101922",
+            "primary": "#1e3a5f",
+            "primary-hover": "#152a45",
+            "accent": "#c9a227",
+            "accent-hover": "#b8921f",
+            "background-light": "#faf8f5",
+            "background-dark": "#0f1419",
             "surface-light": "#ffffff",
             "surface-dark": "#1a232e",
-            "border-soft": "#e6e6e6",
+            "border-soft": "#e8e4df",
             "border-dark": "#2d3748",
-            "success-green": "#22c55e",
-            "warning-yellow": "#eab308",
-            "error-red": "#ef4444",
+            "success-green": "#059669",
+            "warning-yellow": "#d97706",
+            "error-red": "#dc2626",
             "unknown-gray": "#6b7280",
-            "info-blue": "#3b82f6",
-            "text-primary": "#111418",
-            "text-secondary": "#617589"
+            "info-blue": "#0369a1",
+            "text-primary": "#1a1a1a",
+            "text-secondary": "#525252"
           },
-          fontFamily: { "display": ["Inter", "sans-serif"] },
+          fontFamily: {
+            "display": ["'DM Serif Display'", "Georgia", "serif"],
+            "body": ["'Plus Jakarta Sans'", "system-ui", "sans-serif"]
+          },
           borderRadius: {
             "DEFAULT": "0.5rem",
             "lg": "1rem",
@@ -43,15 +52,25 @@
   </script>
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
-    }
-    .icon-filled { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
-  </style>
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+  }
+  .icon-filled { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+  /* Accessibility: Focus states */
+  :focus-visible {
+    outline: 2px solid #1e3a5f;
+    outline-offset: 2px;
+  }
+  button:focus-visible, a:focus-visible, select:focus-visible {
+    outline: 2px solid #c9a227;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
+  }
+</style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark min-h-screen font-display text-text-primary dark:text-white transition-colors duration-200">
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-body text-text-primary dark:text-white transition-colors duration-200">
 
 <header class="sticky top-0 z-50 w-full bg-surface-light dark:bg-[#111418] border-b border-border-soft dark:border-border-dark backdrop-blur-md bg-opacity-95 dark:bg-opacity-95">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -59,13 +78,23 @@
       <span class="material-symbols-outlined text-primary text-3xl icon-filled">verified_user</span>
       <span class="text-text-primary dark:text-white text-xl font-bold tracking-tight">VisaFact</span>
     </div>
+    <button id="mobileMenuBtn" class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" aria-label="Toggle menu">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
     <nav class="hidden md:flex items-center gap-8">
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Visas</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Products</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Official Sources</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
+      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../">Home</a>
+      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../visas/">Visas</a>
+      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../methodology/">Methodology</a>
+      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../disclaimer/">Disclaimer</a>
     </nav>
+    <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-surface-light dark:bg-surface-dark border-b border-border-soft dark:border-border-dark shadow-lg">
+      <div class="flex flex-col p-4 gap-2">
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../">Home</a>
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../visas/">Visas</a>
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../methodology/">Methodology</a>
+        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../disclaimer/">Disclaimer</a>
+      </div>
+    </div>
     <button class="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm flex items-center gap-2">
       <span class="material-symbols-outlined text-sm">support_agent</span>
       Support
@@ -75,9 +104,13 @@
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
   <div class="text-center mb-12">
-    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-text-primary dark:text-white">
-      Insurance Compliance Checker
+    <h1 class="font-display text-3xl md:text-5xl font-normal tracking-tight mb-4 text-text-primary dark:text-white">
+      VisaFact Compliance Checker
     </h1>
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-4">
+      <span class="material-symbols-outlined text-accent text-lg icon-filled">verified</span>
+      <span class="text-sm font-semibold text-accent">Evidence-Backed Decisions</span>
+    </div>
     <p class="text-text-secondary dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
       Ensure your insurance meets strict visa requirements with evidence-based results verified against official sources.
       <span class="block mt-2 text-sm">
@@ -124,6 +157,14 @@
         <span class="material-symbols-outlined group-hover:scale-110 transition-transform">check_circle</span>
         Check Compliance
       </button>
+    </div>
+  </div>
+
+  <!-- Loading skeleton -->
+  <div id="loadingState" class="max-w-4xl mx-auto mb-12 hidden">
+    <div class="flex items-center justify-center gap-3 py-8">
+      <div class="animate-spin rounded-full h-8 w-8 border-2 border-primary border-t-transparent"></div>
+      <span class="text-text-secondary font-medium">Loading compliance data...</span>
     </div>
   </div>
 
@@ -248,6 +289,15 @@
           </button>
         </div>
 
+
+        <div id="offerCta" class="mt-6 hidden">
+          <div class="p-4 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800">
+            <div id="offerMessage" class="text-sm text-text-primary dark:text-white font-semibold"></div>
+            <a id="offerLink" class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg" target="_blank" rel="noopener" href="#">Get quote</a>
+            <div id="offerDisclosure" class="mt-2 text-xs text-text-secondary dark:text-gray-400">Affiliate link.</div>
+          </div>
+        </div>
+
         <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 flex justify-between text-xs text-gray-400">
           <div class="flex items-center gap-1">
             <span class="material-symbols-outlined text-sm">update</span>
@@ -290,7 +340,7 @@
         <a class="hover:text-primary transition-colors" href="../disclaimer/">Disclaimer</a>
         <a class="hover:text-primary transition-colors" href="../affiliate-disclosure/">Affiliate Disclosure</a>
       </div>
-      <p class="text-xs text-text-secondary dark:text-gray-600">(c) 2024 VisaFact Inc. All rights reserved.</p>
+      <p class="text-xs text-text-secondary dark:text-gray-600">&copy; <script>document.write(new Date().getFullYear())</script> VisaFact. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -300,14 +350,28 @@
   Resolve the data URL based on the page location:
   - /ui/index.html -> "../data/ui_index.json"
   - /index.html -> "data/ui_index.json"
+  With snapshot param:
+  - /ui/?snapshot=foo -> "../snapshots/foo/ui_index.json"
 */
-const DATA_URL = (() => {
-  const path = location.pathname.replace(/\\/g, "/");
+const SNAPSHOT_PARAM = new URLSearchParams(location.search).get("snapshot");
+
+function resolveDataUrl(pathname, snapshot) {
+  const path = String(pathname || "").replace(/\/g, "/");
+  const safeSnapshot = snapshot ? snapshot.replace(/^\/+/, "") : "";
+  if (safeSnapshot) {
+    if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
+      return "../snapshots/" + safeSnapshot + "/ui_index.json";
+    }
+    return "snapshots/" + safeSnapshot + "/ui_index.json";
+  }
   if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
     return "../data/ui_index.json";
   }
   return "data/ui_index.json";
-})();
+}
+
+const DATA_URL = resolveDataUrl(location.pathname, SNAPSHOT_PARAM);
+
 
 // Used by "Notify me of changes" to create a GitHub issue
 const GITHUB_OWNER = "W73QB";
@@ -339,6 +403,22 @@ function escapeHtml(value){
     .replace(/'/g, "&#39;");
 }
 
+function sanitizeUrl(url) {
+  if (!url) return "";
+  const s = String(url).trim();
+  if (!s) return "";
+  if (/[ -]/.test(s)) return "#";
+  if (s.startsWith("//") || s.startsWith("\\")) return "#";
+  // Allow http://, https://, mailto:, tel:
+  if (/^(?:https?|mailto|tel):/i.test(s)) return s;
+  // Block dangerous or unsupported schemes explicitly: javascript:, vbscript:, data:, file:, blob:
+  if (/^(?:javascript|vbscript|data|file|blob):/i.test(s)) return "#";
+  if (/^[a-z][a-z0-9+.-]*:/i.test(s)) return "#";
+  // Relative paths are allowed
+  return s;
+}
+
+
 let INDEX = null;
 
 // Supports both ui_index.json shapes:
@@ -348,6 +428,7 @@ function normalizeIndex(raw){
   const visas = raw.visas || [];
   const products = raw.products || [];
   const mappings = raw.mappings || [];
+  const offers = raw.offers || [];
 
   const visa_list = raw.visa_list || visas.map(v => ({ id:v.id, country:v.country, visa_name:v.visa_name, route:v.route }));
   const product_list = raw.product_list || products.map(p => ({ id:p.id, provider:p.provider, product_name:p.product_name }));
@@ -358,6 +439,12 @@ function normalizeIndex(raw){
   const sources_by_id = raw.sources_by_id || (() => {
     const m = {};
     visas.forEach(v => (v.sources || []).forEach(s => m[s.source_id] = s));
+    return m;
+  })();
+
+  const offers_by_product = raw.offers_by_product || (() => {
+    const m = {};
+    offers.forEach(o => { if (o.product_id) m[o.product_id] = o; });
     return m;
   })();
 
@@ -372,7 +459,8 @@ function normalizeIndex(raw){
     snapshot_id: raw.snapshot_id || null,
     visa_list, product_list,
     visas_by_id, products_by_id,
-    sources_by_id, mappings_by_key
+    sources_by_id, mappings_by_key,
+    offers_by_product
   };
 }
 
@@ -453,10 +541,15 @@ function openModal(evidenceItems){
   (evidenceItems || []).forEach(ev => {
     const sid = ev.source_id;
     const src = INDEX.sources_by_id[sid] || {};
-    const official = src.url || ev.url || "";
+    const official = sanitizeUrl(src.url || ev.url || "");
     const snapshot = src.local_path
-      ? ("../" + src.local_path.replaceAll("\\","/"))
-      : (ev.local_path ? ("../" + ev.local_path.replaceAll("\\","/")) : "");
+      ? sanitizeUrl("../" + src.local_path.replaceAll("\\","/"))
+      : (ev.local_path ? sanitizeUrl("../" + ev.local_path.replaceAll("\\","/")) : "");
+
+    // snapshot is relative path constructed by us, but we should be safe.
+    // However, if local_path is malicious, we should sanitize it too if possible,
+    // but the prefix "../" makes it relative.
+
     const sidText = escapeHtml(sid || "source");
     const locatorText = escapeHtml(ev.locator || "");
     const excerptText = escapeHtml(ev.excerpt || "");
@@ -471,8 +564,8 @@ function openModal(evidenceItems){
       </div>
       <pre class="text-sm text-text-secondary dark:text-gray-200 whitespace-pre-wrap break-words">${excerptText}</pre>
       <div class="mt-3 text-xs text-text-secondary dark:text-gray-400 flex gap-4">
-        ${official ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${official}">official</a>` : ""}
-        ${snapshot ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${snapshot}">snapshot</a>` : ""}
+        ${official ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${escapeHtml(official)}">official</a>` : ""}
+        ${snapshot ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${escapeHtml(snapshot)}">snapshot</a>` : ""}
       </div>
     `;
     body.appendChild(card);
@@ -591,6 +684,42 @@ function renderReasons(mapping){
   });
 }
 
+function renderOffer(mapping, productId){
+  const status = (mapping?.status || "UNKNOWN").toUpperCase();
+  const offer = INDEX.offers_by_product ? INDEX.offers_by_product[productId] : null;
+
+  const box = $("offerCta");
+  const message = $("offerMessage");
+  const link = $("offerLink");
+  const disclosure = $("offerDisclosure");
+
+  box.classList.add("hidden");
+  link.href = "#";
+  link.classList.remove("hidden");
+
+  if (status === "RED" || status === "UNKNOWN") return;
+  if (status === "NOT_REQUIRED") {
+    message.textContent = "Insurance is optional for this visa.";
+    disclosure.textContent = "No affiliate link shown.";
+    link.classList.add("hidden");
+    box.classList.remove("hidden");
+    return;
+  }
+  if (!offer) return;
+
+  link.textContent = offer.label || "Get quote";
+  link.href = sanitizeUrl(offer.affiliate_url || "#");
+  disclosure.textContent = offer.disclosure || "Affiliate link. Results are evidence-based.";
+
+  if (status === "YELLOW") {
+    message.textContent = "Caution: operational risk. Affiliate link shown for convenience.";
+  } else {
+    message.textContent = "Meets listed requirements based on evidence.";
+  }
+
+  box.classList.remove("hidden");
+}
+
 function renderMissing(mapping){
   const missing = mapping?.missing || mapping?.missing_evidence || [];
   if (missing.length) {
@@ -654,11 +783,12 @@ function renderResult(){
   $("lastVerified").textContent = visa.last_verified || "-";
   $("authorityText").textContent = visa.authority || "-";
   $("scopeText").textContent = visa.id || "-";
-  $("snapshotId").textContent = INDEX.snapshot_id || "-";
+  $("snapshotId").textContent = SNAPSHOT_PARAM || INDEX.snapshot_id || "-";
 
   // requirements + reasons
   renderRequirements(visa);
   renderReasons(mapping);
+  renderOffer(mapping, productId);
 
   // missing box only meaningful for UNKNOWN
   if (status === "UNKNOWN") renderMissing(mapping);
@@ -669,8 +799,8 @@ function renderResult(){
 
   // action links
   const firstSource = (visa.sources && visa.sources.length) ? visa.sources[0] : null;
-  $("officialBtn").href = firstSource?.url || "#";
-  $("snapshotBtn").href = firstSource?.local_path ? ("../" + firstSource.local_path.replaceAll("\\","/")) : "#";
+  $("officialBtn").href = sanitizeUrl(firstSource?.url || "#");
+  $("snapshotBtn").href = firstSource?.local_path ? sanitizeUrl("../" + firstSource.local_path.replaceAll("\\","/")) : "#";
 
   // notify issue
   const issueTitle = encodeURIComponent(`Source change - ${visa.id}`);
@@ -690,66 +820,90 @@ function renderResult(){
   const url = new URL(location.href);
   url.searchParams.set("visa", visaId);
   url.searchParams.set("product", productId);
+  if (SNAPSHOT_PARAM) url.searchParams.set("snapshot", SNAPSHOT_PARAM);
   history.replaceState(null, "", url.toString());
 }
 
 async function init(){
-  const res = await fetch(DATA_URL, { cache: "no-store" });
-  const raw = await res.json();
-  INDEX = normalizeIndex(raw);
+  $("loadingState").classList.remove("hidden");
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    const raw = await res.json();
+    INDEX = normalizeIndex(raw);
 
-  // populate selects
-  const vs = $("visaSelect");
-  INDEX.visa_list.forEach(v => {
-    const opt = document.createElement("option");
-    opt.value = v.id;
-    opt.textContent = `${v.country} - ${v.visa_name} (${v.route})`;
-    vs.appendChild(opt);
-  });
+    // populate selects
+    const vs = $("visaSelect");
+    INDEX.visa_list.forEach(v => {
+      const opt = document.createElement("option");
+      opt.value = v.id;
+      opt.textContent = `${v.country} - ${v.visa_name} (${v.route})`;
+      vs.appendChild(opt);
+    });
 
-  const ps = $("productSelect");
-  INDEX.product_list.forEach(p => {
-    const opt = document.createElement("option");
-    opt.value = p.id;
-    opt.textContent = `${p.provider} - ${p.product_name}`;
-    ps.appendChild(opt);
-  });
+    const ps = $("productSelect");
+    INDEX.product_list.forEach(p => {
+      const opt = document.createElement("option");
+      opt.value = p.id;
+      opt.textContent = `${p.provider} - ${p.product_name}`;
+      ps.appendChild(opt);
+    });
 
-  // restore from query
-  const q = new URLSearchParams(location.search);
-  const v0 = q.get("visa");
-  const p0 = q.get("product");
-  if (v0 && INDEX.visas_by_id[v0]) vs.value = v0;
-  if (p0 && INDEX.products_by_id[p0]) ps.value = p0;
+    // restore from query
+    const q = new URLSearchParams(location.search);
+    const v0 = q.get("visa");
+    const p0 = q.get("product");
+    if (v0 && INDEX.visas_by_id[v0]) vs.value = v0;
+    if (p0 && INDEX.products_by_id[p0]) ps.value = p0;
 
-  // listeners
-  vs.addEventListener("change", updateHints);
-  ps.addEventListener("change", updateHints);
+    // listeners
+    vs.addEventListener("change", updateHints);
+    ps.addEventListener("change", updateHints);
 
-  $("checkBtn").addEventListener("click", (e) => {
-    e.preventDefault();
-    renderResult();
-  });
+    $("checkBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      renderResult();
+    });
 
-  $("copyLinkBtn").addEventListener("click", async () => {
-    await navigator.clipboard.writeText(location.href);
-    $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
-    setTimeout(() => {
-      $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
-    }, 900);
-  });
+    $("copyLinkBtn").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(location.href);
+      $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
+      setTimeout(() => {
+        $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
+      }, 900);
+    });
 
-  $("closeModal").addEventListener("click", closeModal);
-  $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    $("closeModal").addEventListener("click", closeModal);
+    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
 
-  updateHints();
+    updateHints();
 
-  // auto-run if query has both
-  if (vs.value && ps.value) {
-    setCheckBtnEnabled();
-    renderResult();
+    // auto-run if query has both
+    if (vs.value && ps.value) {
+      setCheckBtnEnabled();
+      renderResult();
+    }
+  } catch (err) {
+    console.error(err);
+    $("loadingState").innerHTML = `
+      <div class="text-center py-8">
+        <span class="material-symbols-outlined text-error-red text-4xl mb-2">error</span>
+        <p class="text-error-red font-medium">Failed to load data</p>
+        <p class="text-text-secondary text-sm mt-1">Please refresh the page or check your connection.</p>
+      </div>
+    `;
+    return;
   }
+  $("loadingState").classList.add("hidden");
 }
+
+// Mobile menu toggle
+$("mobileMenuBtn")?.addEventListener("click", () => {
+  const menu = $("mobileMenu");
+  const btn = $("mobileMenuBtn");
+  const isOpen = !menu.classList.contains("hidden");
+  menu.classList.toggle("hidden");
+  btn.querySelector("span").textContent = isOpen ? "menu" : "close";
+});
 
 init().catch(err => {
   console.error(err);
