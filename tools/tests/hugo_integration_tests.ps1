@@ -18,7 +18,7 @@ Write-Host "Hugo config checks..." -ForegroundColor Cyan
 Assert-True (Test-Path "hugo.toml") "hugo.toml exists"
 if (Test-Path "hugo.toml") {
   $hugo = Get-Content -Raw -Path "hugo.toml"
-  Assert-True ($hugo -like "*https://w73qb.github.io/visa-compliance-d/*") "baseURL is set for GitHub Pages"
+  Assert-True ($hugo -like "*https://visafact.org/*") "baseURL is set to visafact.org"
   Assert-True ($hugo -like '*theme = "PaperMod"*') "theme is PaperMod"
   Assert-True ($hugo -like '*name = "Checker"*') "menu includes Checker"
   Assert-True ($hugo -like '*url = "ui/"*') "checker menu uses relative url"
