@@ -91,12 +91,12 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
       <div class="flex flex-col gap-3 group">
-        <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying for</label>
+        <label for="visaSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying for</label>
         <div class="relative">
           <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
           <select id="visaSelect"
             class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
-            <option value="">Select visa route (authority)</option>
+            <option value="">Loading...</option>
           </select>
           <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
         </div>
@@ -104,12 +104,12 @@
       </div>
 
       <div class="flex flex-col gap-3 group">
-        <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to use</label>
+        <label for="productSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to use</label>
         <div class="relative">
           <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
           <select id="productSelect"
             class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
-            <option value="">Select an insurance product</option>
+            <option value="">Loading...</option>
           </select>
           <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
         </div>
@@ -272,11 +272,11 @@
   </div>
 
   <!-- Modal evidence -->
-  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
     <div class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
       <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-        <div class="font-bold text-text-primary dark:text-white">Evidence</div>
-        <button id="closeModal"
+        <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
+        <button id="closeModal" aria-label="Close"
           class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
           Close
         </button>
@@ -366,7 +366,7 @@ function sanitizeUrl(url) {
   if (!url) return "";
   const s = String(url).trim();
   if (!s) return "";
-  if (/[ -]/.test(s)) return "#";
+  if (/[ -  ]/.test(s)) return "#";
   if (s.startsWith("//") || s.startsWith("\\")) return "#";
   // Allow http://, https://, mailto:, tel:
   if (/^(?:https?|mailto|tel):/i.test(s)) return s;
@@ -379,6 +379,7 @@ function sanitizeUrl(url) {
 
 
 let INDEX = null;
+let lastFocusedElement = null;
 
 // Supports both ui_index.json shapes:
 // 1) denormalized: visas_by_id/products_by_id/mappings_by_key/sources_by_id
@@ -494,6 +495,7 @@ function statusPresentation(status){
 }
 
 function openModal(evidenceItems){
+  lastFocusedElement = document.activeElement;
   const body = $("modalBody");
   body.innerHTML = "";
 
@@ -532,11 +534,16 @@ function openModal(evidenceItems){
 
   $("modal").classList.remove("hidden");
   $("modal").classList.add("flex");
+  $("closeModal").focus();
 }
 
 function closeModal(){
   $("modal").classList.add("hidden");
   $("modal").classList.remove("flex");
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+    lastFocusedElement = null;
+  }
 }
 
 function renderRequirements(visa){
@@ -790,6 +797,12 @@ async function init(){
 
   // populate selects
   const vs = $("visaSelect");
+  vs.innerHTML = "";
+  const defV = document.createElement("option");
+  defV.value = "";
+  defV.textContent = "Select visa route (authority)";
+  vs.appendChild(defV);
+
   INDEX.visa_list.forEach(v => {
     const opt = document.createElement("option");
     opt.value = v.id;
@@ -798,6 +811,12 @@ async function init(){
   });
 
   const ps = $("productSelect");
+  ps.innerHTML = "";
+  const defP = document.createElement("option");
+  defP.value = "";
+  defP.textContent = "Select an insurance product";
+  ps.appendChild(defP);
+
   INDEX.product_list.forEach(p => {
     const opt = document.createElement("option");
     opt.value = p.id;
