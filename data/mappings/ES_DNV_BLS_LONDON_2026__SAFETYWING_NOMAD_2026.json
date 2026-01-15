@@ -4,6 +4,16 @@
   "status": "RED",
   "reasons": [
     {
+      "text": "Insurer not authorized to operate in Spain",
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "health insurance contracted with an insurance company authorized to operate in Spain"
+        }
+      ]
+    },
+    {
       "text": "Visa requires zero deductible but product has 250",
       "evidence": [
         {
@@ -12,7 +22,21 @@
           "excerpt": "with no excess or co-payments, nor moratorium"
         }
       ]
+    },
+    {
+      "text": "Unlimited coverage required, product has limit of 250000",
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+        }
+      ]
     }
   ],
-  "missing": []
+  "missing": [
+    "specs.comprehensive",
+    "specs.covers_public_health_system_risks",
+    "specs.moratorium_days"
+  ]
 }

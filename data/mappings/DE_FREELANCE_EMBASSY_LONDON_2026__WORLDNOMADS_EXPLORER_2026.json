@@ -1,0 +1,18 @@
+{
+  "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+  "product_id": "WORLDNOMADS_EXPLORER_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Travel insurance is not accepted for this visa",
+      "evidence": [
+        {
+          "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",
+          "locator": "Health insurance requirements for national (category D) visas",
+          "excerpt": "Travel insurance is not sufficient for any D visa application."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

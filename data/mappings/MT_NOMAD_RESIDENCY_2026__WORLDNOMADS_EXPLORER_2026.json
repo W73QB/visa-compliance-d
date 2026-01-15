@@ -1,0 +1,9 @@
+{
+  "visa_id": "MT_NOMAD_RESIDENCY_2026",
+  "product_id": "WORLDNOMADS_EXPLORER_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.payment_cadence"
+  ]
+}
