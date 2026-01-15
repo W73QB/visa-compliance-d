@@ -71,6 +71,7 @@ jobs:
           pwsh -File tools/tests/sync_hugo_static_tests.ps1
           pwsh -File tools/tests/verify_static_bundle_tests.ps1
           pwsh -File tools/tests/smoke_tests.ps1
+          pwsh -File tools/tests/performance_tests.ps1
 
       - name: Lint content
         run: python tools/lint_content.py
