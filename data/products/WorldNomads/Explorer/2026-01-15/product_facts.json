@@ -1,0 +1,24 @@
+{
+  "id": "WORLDNOMADS_EXPLORER_2026",
+  "provider": "World Nomads",
+  "product_name": "Explorer Plan",
+  "effective_date": "2026-01-15",
+  "policy_version": "2026",
+  "specs": {
+    "type": "travel insurance",
+    "overall_limit": 150000,
+    "currency": "USD",
+    "deductible": null,
+    "copay": null,
+    "payment_cadence": null,
+    "contract_commitment_months": null,
+    "jurisdiction_facts": {}
+  },
+  "evidence": [
+    {
+      "source_id": "WORLDNOMADS_COMPARE_2026",
+      "locator": "Emergency Medical Insurance (plan comparison)",
+      "excerpt": "Explorer Plan: $150,000"
+    }
+  ]
+}
