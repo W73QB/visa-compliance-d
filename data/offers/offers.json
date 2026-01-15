@@ -1,10 +1,10 @@
 {
   "offers": [
     {
-      "product_id": "SW_TRAVEL_2026",
-      "affiliate_url": "https://example.com/quote",
-      "label": "Get quote",
-      "disclosure": "Affiliate link. Results are evidence-based."
+      "product_id": "GENKI_TRAVELER_2026",
+      "affiliate_url": "https://genki.world/products/traveler",
+      "label": "View Genki Traveler",
+      "disclosure": "Link to provider. Results are evidence-based."
     }
   ]
 }
