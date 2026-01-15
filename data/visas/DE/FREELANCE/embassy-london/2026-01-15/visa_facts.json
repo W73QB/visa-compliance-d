@@ -1,0 +1,43 @@
+{
+  "id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+  "country": "Germany",
+  "visa_name": "Freelance Visa (National D)",
+  "route": "Embassy London",
+  "authority": "German Federal Foreign Office (UK)",
+  "last_verified": "2026-01-15",
+  "sources": [
+    {
+      "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",
+      "url": "https://uk.diplo.de/uk-en/02/visa/health-insurance-requirements-2616300",
+      "retrieved_at": "2026-01-15T00:00:00Z",
+      "sha256": "03b06f2fabde9d86be97376145809589bfcb291ada1f2abe50f83249c13de758",
+      "local_path": "sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",
+          "locator": "Health insurance requirements for national (category D) visas",
+          "excerpt": "Applicants for any category D visa must have health insurance cover commensurate with the minimum level of the German statutory health insurance system."
+        }
+      ]
+    },
+    {
+      "key": "insurance.travel_insurance_accepted",
+      "op": "==",
+      "value": false,
+      "evidence": [
+        {
+          "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",
+          "locator": "Health insurance requirements for national (category D) visas",
+          "excerpt": "Travel insurance is not sufficient for any D visa application."
+        }
+      ]
+    }
+  ]
+}
