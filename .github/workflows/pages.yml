@@ -1,4 +1,4 @@
-﻿name: Deploy Hugo site
+name: Deploy Hugo site
 
 on:
   push:
@@ -89,7 +89,7 @@ jobs:
         run: pwsh -File tools/tests/hugo_build_log_tests.ps1
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
 
