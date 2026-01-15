@@ -1,0 +1,28 @@
+---
+title: "Malta Nomad Residence: Monthly Payment Policies"
+date: 2026-01-15
+description: "Evidence-based note on Malta Nomad Residence insurance payment requirements."
+tags: ["malta", "nomad", "insurance", "compliance", "traps"]
+---
+
+## What the authority requires
+
+The Residency Malta Agency FAQ states that **policies with monthly payments are not acceptable**, and that eligible policies have premiums covering a full year, paid in advance. Evidence is recorded in `sources/MT_NOMAD_RESIDENCY_FAQ_2026-01-12.md`.
+
+## How we evaluate
+
+We check whether the product payment cadence matches the annual pre-paid requirement. If payment cadence is missing, the result becomes UNKNOWN.
+
+## Check in the engine
+
+Use the checker with a snapshot:
+
+`/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=releases/2026-01-15`
+
+## Disclaimer
+
+Not legal advice. Compliance results are evidence-based snapshots.
+
+## Affiliate disclosure
+
+If a link is shown after results, it does not influence the evidence-based outcome.
