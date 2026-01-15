@@ -161,6 +161,21 @@ def evaluate(visa, product):
                 "evidence": req["evidence"]
             })
 
+    # No moratorium/waiting period
+    req = get_req(visa, "insurance.no_moratorium")
+    if req and req["value"] == True:
+        moratorium = product_spec(product, "moratorium_days")
+        if moratorium is None:
+            if status == "GREEN":
+                status = "UNKNOWN"
+            missing.append("specs.moratorium_days")
+        elif moratorium > 0:
+            status = "RED"
+            reasons.append({
+                "text": f"No moratorium required, product has {moratorium} day waiting period",
+                "evidence": req["evidence"]
+            })
+
 
     # Minimum coverage
     req = get_req(visa, "insurance.min_coverage")
