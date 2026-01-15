@@ -26,6 +26,10 @@ Write-Host "UI compliance checks..." -ForegroundColor Cyan
 $ui = Get-Content -Raw -Path "ui/index.html"
 $ui = $ui.TrimStart([char]0xFEFF)
 
+Assert-True ($ui -like "*application/ld+json*") "UI includes JSON-LD structured data"
+Assert-True ($ui -like "*aria-live*") "UI has aria-live region"
+Assert-True ($ui -like "*Skip to main content*") "UI has skip link"
+
 Assert-True ($ui -like "*const DATA_URL*") "DATA_URL is computed dynamically"
 Assert-True ($ui -like "*location.pathname*") "DATA_URL uses location.pathname"
 

@@ -9,6 +9,22 @@
   <meta property="og:title" content="VisaFact - Visa Insurance Compliance Checker">
   <meta property="og:description" content="Evidence-backed compliance checking against official visa requirements.">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "VisaFact Compliance Checker",
+    "description": "Evidence-based visa insurance compliance verification",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -127,6 +143,7 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark min-h-screen font-body text-text-primary dark:text-white transition-colors duration-200">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">Skip to main content</a>
 
 <header class="sticky top-0 z-50 w-full bg-surface-light dark:bg-[#111418] border-b border-border-soft dark:border-border-dark backdrop-blur-md bg-opacity-95 dark:bg-opacity-95">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -158,7 +175,7 @@
   </div>
 </header>
 
-<main class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
   <div class="text-center mb-12 animate-fade-up">
     <h1 class="font-display text-3xl md:text-5xl font-normal tracking-tight mb-4 text-text-primary dark:text-white">
       VisaFact Compliance Checker
@@ -225,7 +242,7 @@
   </div>
 
   <!-- RESULT AREA -->
-  <div id="resultArea" class="max-w-5xl mx-auto space-y-8 hidden">
+  <div id="resultArea" class="max-w-5xl mx-auto space-y-8 hidden" aria-live="polite">
     <div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-soft dark:border-border-dark overflow-hidden shadow-xl shadow-black/5 dark:shadow-black/20">
 
       <!-- Header -->
