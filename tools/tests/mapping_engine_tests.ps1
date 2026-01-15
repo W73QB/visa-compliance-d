@@ -35,3 +35,7 @@ Write-Host "All checks passed." -ForegroundColor Green
 $mapping = Get-Content "data/mappings/ES_DNV_BLS_LONDON_2026__GENERIC_EXPAT_COMPLETE_2026.json" | ConvertFrom-Json
 $hasCompMissing = $mapping.missing | Where-Object { $_ -eq "specs.comprehensive" }
 Assert-True ($null -ne $hasCompMissing) "Missing comprehensive spec is tracked"
+# Test public health system risks coverage requirement (missing should be tracked)
+$mapping = Get-Content "data/mappings/ES_DNV_BLS_LONDON_2026__GENERIC_EXPAT_COMPLETE_2026.json" | ConvertFrom-Json
+$hasPublicRisk = $mapping.missing | Where-Object { $_ -eq "specs.covers_public_health_system_risks" }
+Assert-True ($null -ne $hasPublicRisk) "Missing public health system risks coverage is tracked"

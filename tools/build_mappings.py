@@ -113,6 +113,21 @@ def evaluate(visa, product):
                 "evidence": req["evidence"]
             })
 
+    # Covers risks insured by public health system
+    req = get_req(visa, "insurance.covers_public_health_system_risks")
+    if req and req["value"] == True:
+        covers = product_spec(product, "covers_public_health_system_risks")
+        if covers is None:
+            if status == "GREEN":
+                status = "UNKNOWN"
+            missing.append("specs.covers_public_health_system_risks")
+        elif covers == False:
+            status = "RED"
+            reasons.append({
+                "text": "Visa requires coverage of public health system risks",
+                "evidence": req["evidence"]
+            })
+
     # Minimum coverage
     req = get_req(visa, "insurance.min_coverage")
     if req:
