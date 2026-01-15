@@ -128,6 +128,25 @@ def evaluate(visa, product):
                 "evidence": req["evidence"]
             })
 
+    # Unlimited coverage
+    req = get_req(visa, "insurance.unlimited_coverage")
+    if req and req["value"] == True:
+        limit = product_spec(product, "overall_limit")
+        unlimited = product_spec(product, "unlimited")
+        if unlimited == True:
+            pass
+        elif limit is None and unlimited is None:
+            if status == "GREEN":
+                status = "UNKNOWN"
+            missing.append("specs.overall_limit or specs.unlimited")
+        elif unlimited == False or (limit is not None and limit < 10000000):
+            status = "RED"
+            reasons.append({
+                "text": f"Unlimited coverage required, product has limit of {limit}",
+                "evidence": req["evidence"]
+            })
+
+
     # Minimum coverage
     req = get_req(visa, "insurance.min_coverage")
     if req:
