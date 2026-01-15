@@ -1,0 +1,9 @@
+{
+  "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+  "product_id": "GENKI_TRAVELER_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.type"
+  ]
+}

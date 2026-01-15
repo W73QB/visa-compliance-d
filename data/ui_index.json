@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-01-15T07:11:15.179664Z",
+  "built_at": "2026-01-15T09:25:00.739247Z",
   "snapshot_id": "2026-01-15",
   "visas": [
     {
@@ -361,6 +361,38 @@
       ]
     },
     {
+      "id": "GENKI_TRAVELER_2026",
+      "provider": "Genki",
+      "product_name": "Genki Traveler",
+      "effective_date": "2026-01-15",
+      "policy_version": "2026",
+      "specs": {
+        "type": null,
+        "overall_limit": 1000000,
+        "currency": "EUR",
+        "deductible": {
+          "amount": 50,
+          "currency": "EUR"
+        },
+        "copay": null,
+        "payment_cadence": null,
+        "contract_commitment_months": null,
+        "jurisdiction_facts": {}
+      },
+      "evidence": [
+        {
+          "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+          "locator": "What is covered by Genki Traveler?",
+          "excerpt": "\u20ac50 Deductible"
+        },
+        {
+          "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+          "locator": "Maximum Coverage Limit",
+          "excerpt": "\u20ac1,000,000"
+        }
+      ]
+    },
+    {
       "id": "SAFETYWING_NOMAD_2026",
       "provider": "SafetyWing",
       "product_name": "Nomad Insurance",
@@ -435,6 +467,13 @@
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "SAFETYWING_NOMAD_2026",
       "status": "YELLOW",
       "reasons": [
@@ -464,6 +503,15 @@
       "status": "GREEN",
       "reasons": [],
       "missing": []
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.type"
+      ]
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
@@ -510,6 +558,40 @@
         "specs.comprehensive",
         "specs.covers_public_health_system_risks",
         "specs.overall_limit or specs.unlimited",
+        "specs.moratorium_days"
+      ]
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Visa requires zero deductible but product has 50",
+          "evidence": [
+            {
+              "source_id": "BLS_ES_DNV_LONDON_2026",
+              "locator": "page 2, item 9",
+              "excerpt": "with no excess or co-payments, nor moratorium"
+            }
+          ]
+        },
+        {
+          "text": "Unlimited coverage required, product has limit of 1000000",
+          "evidence": [
+            {
+              "source_id": "BLS_ES_DNV_LONDON_2026",
+              "locator": "page 2, item 9",
+              "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.ES.authorized",
+        "specs.comprehensive",
+        "specs.covers_public_health_system_risks",
+        "specs.copay",
         "specs.moratorium_days"
       ]
     },
@@ -589,6 +671,15 @@
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.payment_cadence"
+      ]
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
       "product_id": "SAFETYWING_NOMAD_2026",
       "status": "RED",
       "reasons": [
@@ -623,6 +714,13 @@
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "SAFETYWING_NOMAD_2026",
       "status": "GREEN",
       "reasons": [],
@@ -638,6 +736,24 @@
     {
       "visa_id": "TH_DTV_MFA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
+      "missing": []
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
       "status": "NOT_REQUIRED",
       "reasons": [
         {
@@ -692,18 +808,18 @@
   ],
   "offers": [
     {
-      "product_id": "SW_TRAVEL_2026",
-      "affiliate_url": "https://example.com/quote",
-      "label": "Get quote",
-      "disclosure": "Affiliate link. Results are evidence-based."
+      "product_id": "GENKI_TRAVELER_2026",
+      "affiliate_url": "https://genki.world/products/traveler",
+      "label": "View Genki Traveler",
+      "disclosure": "Link to provider. Results are evidence-based."
     }
   ],
   "offers_by_product": {
-    "SW_TRAVEL_2026": {
-      "product_id": "SW_TRAVEL_2026",
-      "affiliate_url": "https://example.com/quote",
-      "label": "Get quote",
-      "disclosure": "Affiliate link. Results are evidence-based."
+    "GENKI_TRAVELER_2026": {
+      "product_id": "GENKI_TRAVELER_2026",
+      "affiliate_url": "https://genki.world/products/traveler",
+      "label": "View Genki Traveler",
+      "disclosure": "Link to provider. Results are evidence-based."
     }
   },
   "sources_by_id": {
@@ -729,6 +845,13 @@
       "sha256": "ee5687380016789b5a74f8fdd3aca35f4a03df5afe227dd1e248a21ac00f4c1c",
       "local_path": "sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf"
     },
+    "EU_VISA_CODE_ARTICLE_15_2026": {
+      "source_id": "EU_VISA_CODE_ARTICLE_15_2026",
+      "url": "https://www.legislation.gov.uk/eur/2009/810/article/15/data.html",
+      "retrieved_at": "2026-01-15T00:00:00Z",
+      "sha256": "534fc72ab060d94b98959ae5b246d2bdb16fb72aa493ca3938491289770c5062",
+      "local_path": "sources/EU_VISA_CODE_ARTICLE_15_2026-01-15.html"
+    },
     "GENERIC_WEBSITE_2026": {
       "source_id": "GENERIC_WEBSITE_2026",
       "url": "https://example.com/generic-insurer",
@@ -737,6 +860,13 @@
       "local_path": "sources/GENERIC_WEBSITE_2026-01-12.md",
       "synthetic": true,
       "note": "Synthetic summary; not an official snapshot."
+    },
+    "GENKI_TRAVELER_COVERAGE_2026": {
+      "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+      "url": "https://help.genki.world/en/articles/10769959-what-is-covered-by-genki-traveler",
+      "retrieved_at": "2026-01-15T00:00:00Z",
+      "sha256": "8160cdbe0996621dc0091be0e858b56fb956df38cf51e3b943d905f38d2d98fa",
+      "local_path": "sources/GENKI_TRAVELER_COVERAGE_2026-01-15.html"
     },
     "MT_RESIDENCY_FAQ_2026": {
       "source_id": "MT_RESIDENCY_FAQ_2026",

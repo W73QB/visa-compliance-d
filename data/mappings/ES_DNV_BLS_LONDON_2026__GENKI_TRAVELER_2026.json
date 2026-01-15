@@ -1,0 +1,34 @@
+{
+  "visa_id": "ES_DNV_BLS_LONDON_2026",
+  "product_id": "GENKI_TRAVELER_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Visa requires zero deductible but product has 50",
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "with no excess or co-payments, nor moratorium"
+        }
+      ]
+    },
+    {
+      "text": "Unlimited coverage required, product has limit of 1000000",
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.ES.authorized",
+    "specs.comprehensive",
+    "specs.covers_public_health_system_risks",
+    "specs.copay",
+    "specs.moratorium_days"
+  ]
+}
