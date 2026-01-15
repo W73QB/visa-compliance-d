@@ -1,0 +1,32 @@
+{
+  "id": "GENKI_TRAVELER_2026",
+  "provider": "Genki",
+  "product_name": "Genki Traveler",
+  "effective_date": "2026-01-15",
+  "policy_version": "2026",
+  "specs": {
+    "type": null,
+    "overall_limit": 1000000,
+    "currency": "EUR",
+    "deductible": {
+      "amount": 50,
+      "currency": "EUR"
+    },
+    "copay": null,
+    "payment_cadence": null,
+    "contract_commitment_months": null,
+    "jurisdiction_facts": {}
+  },
+  "evidence": [
+    {
+      "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+      "locator": "What is covered by Genki Traveler?",
+      "excerpt": "€50 Deductible"
+    },
+    {
+      "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+      "locator": "Maximum Coverage Limit",
+      "excerpt": "€1,000,000"
+    }
+  ]
+}
