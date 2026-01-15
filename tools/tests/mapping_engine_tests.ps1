@@ -31,3 +31,7 @@ if ($failed) {
 }
 
 Write-Host "All checks passed." -ForegroundColor Green
+# Test comprehensive requirement (missing should be tracked)
+$mapping = Get-Content "data/mappings/ES_DNV_BLS_LONDON_2026__GENERIC_EXPAT_COMPLETE_2026.json" | ConvertFrom-Json
+$hasCompMissing = $mapping.missing | Where-Object { $_ -eq "specs.comprehensive" }
+Assert-True ($null -ne $hasCompMissing) "Missing comprehensive spec is tracked"

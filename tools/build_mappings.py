@@ -98,6 +98,21 @@ def evaluate(visa, product):
                 "evidence": req["evidence"]
             })
 
+    # Comprehensive coverage
+    req = get_req(visa, "insurance.comprehensive")
+    if req and req["value"] == True:
+        comprehensive = product_spec(product, "comprehensive")
+        if comprehensive is None:
+            if status == "GREEN":
+                status = "UNKNOWN"
+            missing.append("specs.comprehensive")
+        elif comprehensive == False:
+            status = "RED"
+            reasons.append({
+                "text": "Comprehensive coverage required",
+                "evidence": req["evidence"]
+            })
+
     # Minimum coverage
     req = get_req(visa, "insurance.min_coverage")
     if req:
