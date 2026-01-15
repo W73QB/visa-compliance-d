@@ -67,6 +67,23 @@ def evaluate(visa, product):
                 "evidence": req["evidence"]
             })
 
+    # Authorized to operate in jurisdiction
+    req = get_req(visa, "insurance.authorized_in_spain")
+    if req and req["value"] == True:
+        country = visa.get("id", "").upper()[:2]
+        if country == "ES":
+            jf = product_spec(product, f"jurisdiction_facts.{country}.authorized")
+            if jf is None:
+                if status == "GREEN":
+                    status = "UNKNOWN"
+                missing.append(f"specs.jurisdiction_facts.{country}.authorized")
+            elif jf == False:
+                status = "RED"
+                reasons.append({
+                    "text": f"Insurer not authorized to operate in {visa.get('country', 'jurisdiction')}",
+                    "evidence": req["evidence"]
+                })
+
     # No deductible
     req = get_req(visa, "insurance.no_deductible")
     if req and req["value"] == True:
