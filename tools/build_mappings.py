@@ -146,6 +146,21 @@ def evaluate(visa, product):
                 "evidence": req["evidence"]
             })
 
+    # No co-payment
+    req = get_req(visa, "insurance.no_copayment")
+    if req and req["value"] == True:
+        copay = product_spec(product, "copay")
+        if copay is None:
+            if status == "GREEN":
+                status = "UNKNOWN"
+            missing.append("specs.copay")
+        elif copay == True:
+            status = "RED"
+            reasons.append({
+                "text": "No co-payments required, product has co-payments",
+                "evidence": req["evidence"]
+            })
+
 
     # Minimum coverage
     req = get_req(visa, "insurance.min_coverage")
