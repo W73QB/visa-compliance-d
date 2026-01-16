@@ -15,6 +15,7 @@ SOURCES = ROOT / "sources"
 visa_schema = json.loads((SCHEMAS / "visa_facts.schema.json").read_text(encoding="utf-8"))
 product_schema = json.loads((SCHEMAS / "product_facts.schema.json").read_text(encoding="utf-8"))
 offers_schema = json.loads((SCHEMAS / "offers.schema.json").read_text(encoding="utf-8"))
+payments_schema = json.loads((SCHEMAS / "payments.schema.json").read_text(encoding="utf-8"))
 
 errors = 0
 
@@ -139,6 +140,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--visa", type=str, help="Path to a single VisaFacts JSON to validate")
 parser.add_argument("--product", type=str, help="Path to a single ProductFacts JSON to validate")
 parser.add_argument("--offers", type=str, help="Path to a single Offers JSON to validate")
+parser.add_argument("--payments", type=str, help="Path to a single Payments JSON to validate")
 args = parser.parse_args()
 
 sources_by_id = load_sources()
@@ -148,11 +150,15 @@ elif args.product:
     validate_file(Path(args.product), product_schema, "ProductFacts", sources_by_id)
 elif args.offers:
     validate_file(Path(args.offers), offers_schema, "Offers")
+elif args.payments:
+    validate_file(Path(args.payments), payments_schema, "Payments")
 else:
     validate_files(DATA / "visas", visa_schema, "VisaFacts")
     validate_files(DATA / "products", product_schema, "ProductFacts", sources_by_id)
     if (DATA / "offers").exists():
         validate_files(DATA / "offers", offers_schema, "Offers")
+    if (DATA / "payments").exists():
+        validate_files(DATA / "payments", payments_schema, "Payments")
 
 if errors > 0:
     print(f"\n[FAIL] {errors} error(s) found")

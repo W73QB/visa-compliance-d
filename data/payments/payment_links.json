@@ -1,0 +1,20 @@
+{
+  "payment_links": {
+    "us": {
+      "label": "Buy premium report (US)",
+      "payment_link": "https://example.com/us"
+    },
+    "eu-uk": {
+      "label": "Buy premium report (EU/UK)",
+      "payment_link": "https://example.com/eu-uk"
+    },
+    "ca": {
+      "label": "Buy premium report (Canada)",
+      "payment_link": "https://example.com/ca"
+    },
+    "apac": {
+      "label": "Buy premium report (APAC)",
+      "payment_link": "https://example.com/apac"
+    }
+  }
+}

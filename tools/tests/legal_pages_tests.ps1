@@ -35,7 +35,9 @@ $paths = @(
   "content/legal/ca/refund.md",
   "content/legal/apac/refund.md",
   "content/terms/_index.md",
-  "content/refund/_index.md"
+  "content/refund/_index.md",
+  "content/reports/premium/_index.md",
+  "data/payments/payment_links.json"
 )
 
 foreach ($p in $paths) {
