@@ -194,6 +194,19 @@
     </p>
   </div>
 
+  <div class="max-w-3xl mx-auto mb-8 animate-fade-up delay-100">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+      <label for="vf-region-select" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">Region</label>
+      <select id="vf-region-select" class="h-10 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white px-3 text-sm font-medium">
+        <option value="us">United States</option>
+        <option value="eu-uk">EU + UK</option>
+        <option value="ca">Canada</option>
+        <option value="apac">AU/JP/SG/KR</option>
+      </select>
+      <span class="text-xs text-text-secondary dark:text-gray-500">Used for legal disclosures.</span>
+    </div>
+  </div>
+
   <!-- INPUT CARD -->
   <div class="max-w-4xl mx-auto bg-surface-light dark:bg-surface-dark rounded-xl border border-border-soft dark:border-border-dark p-6 md:p-10 mb-12 shadow-lg shadow-black/5 dark:shadow-black/20 hover:shadow-xl transition-shadow duration-300 animate-fade-up delay-100">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -394,7 +407,10 @@
           <div class="p-4 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800">
             <div id="offerMessage" class="text-sm text-text-primary dark:text-white font-semibold"></div>
             <a id="offerLink" class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg" target="_blank" rel="noopener" href="#">Get quote</a>
-            <div id="offerDisclosure" class="mt-2 text-xs text-text-secondary dark:text-gray-400">Affiliate link.</div>
+            <div id="offerDisclosure" data-cta-disclosure class="mt-2 text-xs text-text-secondary dark:text-gray-400 flex items-center gap-2">
+              <span class="vf-ad-label inline-flex items-center px-2 py-0.5 rounded border border-border-soft dark:border-border-dark text-[10px] font-semibold uppercase tracking-wider">Ad label</span>
+              <span class="vf-disclosure-text">Affiliate link.</span>
+            </div>
           </div>
         </div>
 
@@ -454,6 +470,36 @@
   - /ui/?snapshot=foo -> "../snapshots/foo/ui_index.json"
 */
 const SNAPSHOT_PARAM = new URLSearchParams(location.search).get("snapshot");
+const REGION_KEY = "vf_region";
+const DEFAULT_REGION = "us";
+const DISCLOSURE_BY_REGION = {
+  "us": "Paid link. We may earn a commission if you purchase through this link.",
+  "eu-uk": "Paid link. We may earn a commission if you purchase through this link.",
+  "ca": "Paid link. We may earn a commission if you purchase through this link.",
+  "apac": "Paid link. We may earn a commission if you purchase through this link."
+};
+
+function getRegion() {
+  return localStorage.getItem(REGION_KEY) || DEFAULT_REGION;
+}
+
+function setRegion(value) {
+  const next = value || DEFAULT_REGION;
+  localStorage.setItem(REGION_KEY, next);
+  return next;
+}
+
+function initRegionSelector() {
+  const sel = $("vf-region-select");
+  if (!sel) return;
+  sel.value = getRegion();
+  sel.addEventListener("change", () => {
+    setRegion(sel.value);
+    if (!$("resultArea").classList.contains("hidden")) {
+      renderResult();
+    }
+  });
+}
 
 function resolveDataUrl(pathname, snapshot) {
   const path = String(pathname || "").replace(/\/g, "/");
@@ -791,7 +837,10 @@ function renderOffer(mapping, productId){
   const box = $("offerCta");
   const message = $("offerMessage");
   const link = $("offerLink");
-  const disclosure = $("offerDisclosure");
+  const disclosureBox = $("offerDisclosure");
+  const disclosureText = disclosureBox ? disclosureBox.querySelector(".vf-disclosure-text") : null;
+  const region = getRegion();
+  const defaultDisclosure = DISCLOSURE_BY_REGION[region] || DISCLOSURE_BY_REGION[DEFAULT_REGION];
 
   box.classList.add("hidden");
   link.href = "#";
@@ -800,7 +849,7 @@ function renderOffer(mapping, productId){
   if (status === "RED" || status === "UNKNOWN") return;
   if (status === "NOT_REQUIRED") {
     message.textContent = "Insurance is optional for this visa.";
-    disclosure.textContent = "No affiliate link shown.";
+    if (disclosureText) disclosureText.textContent = "No affiliate link shown.";
     link.classList.add("hidden");
     box.classList.remove("hidden");
     return;
@@ -809,7 +858,7 @@ function renderOffer(mapping, productId){
 
   link.textContent = offer.label || "Get quote";
   link.href = sanitizeUrl(offer.affiliate_url || "#");
-  disclosure.textContent = offer.disclosure || "Affiliate link. Results are evidence-based.";
+  if (disclosureText) disclosureText.textContent = offer.disclosure || defaultDisclosure;
 
   if (status === "YELLOW") {
     message.textContent = "Caution: operational risk. Affiliate link shown for convenience.";
@@ -941,6 +990,7 @@ async function init(){
     const res = await fetch(DATA_URL, { cache: "no-store" });
     const raw = await res.json();
     INDEX = normalizeIndex(raw);
+    initRegionSelector();
 
     // populate selects
     const vs = $("visaSelect");
