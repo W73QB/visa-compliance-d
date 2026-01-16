@@ -1,20 +1,20 @@
 {
   "payment_links": {
     "us": {
-      "label": "Buy premium report (US)",
-      "payment_link": "https://example.com/us"
+      "label": "Pay with PayPal",
+      "payment_link": "https://paypal.me/visafact"
     },
     "eu-uk": {
-      "label": "Buy premium report (EU/UK)",
-      "payment_link": "https://example.com/eu-uk"
+      "label": "Pay with PayPal",
+      "payment_link": "https://paypal.me/visafact"
     },
     "ca": {
-      "label": "Buy premium report (Canada)",
-      "payment_link": "https://example.com/ca"
+      "label": "Pay with PayPal",
+      "payment_link": "https://paypal.me/visafact"
     },
     "apac": {
-      "label": "Buy premium report (APAC)",
-      "payment_link": "https://example.com/apac"
+      "label": "Pay with PayPal",
+      "payment_link": "https://paypal.me/visafact"
     }
   }
 }
