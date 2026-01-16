@@ -15,6 +15,18 @@
     }
   })();
 
+  function vf_analytics_allowed() {
+    try {
+      var region = localStorage.getItem("vf_region");
+      if (region === "eu-uk") {
+        return localStorage.getItem("vf_cookie_consent") === "1";
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   window.addEventListener("load", function () {
     try {
       var region = localStorage.getItem("vf_region");

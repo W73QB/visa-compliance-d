@@ -46,6 +46,12 @@ foreach ($p in $paths) {
   Assert-True (Test-Path $full) "$p exists"
 }
 
+$headPath = Join-Path $root "layouts/partials/extend_head.html"
+if (Test-Path $headPath) {
+  $head = Get-Content -Raw -Path $headPath
+  Assert-True ($head -like "*vf_analytics_allowed*") "analytics gating script exists"
+}
+
 if ($failed) {
   Write-Error "One or more checks failed."
   exit 1
