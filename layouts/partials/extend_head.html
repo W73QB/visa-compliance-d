@@ -1,2 +1,17 @@
-﻿<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="{{ "css/visafact.css" | relURL }}" />
+<script>
+  (function () {
+    try {
+      var region = localStorage.getItem("vf_region");
+      var path = location.pathname || "";
+      var isAffiliateHub = /\/affiliate-disclosure\/?$/.test(path);
+      if (region && isAffiliateHub) {
+        var prefix = path.replace(/affiliate-disclosure\/?$/, "");
+        location.replace(prefix + "legal/" + region + "/affiliate-disclosure/");
+      }
+    } catch (e) {
+      // no-op
+    }
+  })();
+</script>
