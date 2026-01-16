@@ -20,7 +20,12 @@ $paths = @(
   "content/legal/us/affiliate-disclosure.md",
   "content/legal/eu-uk/affiliate-disclosure.md",
   "content/legal/ca/affiliate-disclosure.md",
-  "content/legal/apac/affiliate-disclosure.md"
+  "content/legal/apac/affiliate-disclosure.md",
+  "content/legal/us/privacy.md",
+  "content/legal/eu-uk/privacy.md",
+  "content/legal/ca/privacy.md",
+  "content/legal/apac/privacy.md",
+  "content/privacy/_index.md"
 )
 
 foreach ($p in $paths) {
