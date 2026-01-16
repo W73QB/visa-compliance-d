@@ -14,4 +14,22 @@
       // no-op
     }
   })();
+
+  window.addEventListener("load", function () {
+    try {
+      var region = localStorage.getItem("vf_region");
+      var banner = document.getElementById("vf-cookie-banner");
+      var accept = document.getElementById("vf-cookie-accept");
+      if (!banner || !accept) return;
+      if (region === "eu-uk" && localStorage.getItem("vf_cookie_consent") !== "1") {
+        banner.style.display = "block";
+      }
+      accept.addEventListener("click", function () {
+        localStorage.setItem("vf_cookie_consent", "1");
+        banner.style.display = "none";
+      });
+    } catch (e) {
+      // no-op
+    }
+  });
 </script>
