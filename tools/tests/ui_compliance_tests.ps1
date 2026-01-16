@@ -72,6 +72,9 @@ Assert-True ($index.PSObject.Properties.Name -contains "snapshot_id") "ui_index.
 Assert-True ($ui -like "*offerCta*") "UI has offer CTA container"
 Assert-True ($ui -like "*Affiliate*") "UI renders affiliate disclosure"
 Assert-True ($ui -like '*status === "RED"*') "UI hides CTA for RED"
+Assert-True ($ui -like "*data-cta-disclosure*") "CTA disclosure container exists"
+Assert-True ($ui -like "*Ad label*") "UI renders Ad label near CTA"
+Assert-True ($ui -like "*vf-region-select*") "UI has region selector"
 
 $hasOffers = $index.PSObject.Properties.Name -contains "offers_by_product"
 Assert-True $hasOffers "ui_index.json contains offers_by_product"
