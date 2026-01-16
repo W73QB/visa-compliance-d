@@ -414,19 +414,6 @@
           </div>
         </div>
 
-        <div id="leadFormContainer" class="mt-6 hidden">
-          <form id="lead-form" class="vf-lead-form p-4 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800" data-lead-form>
-            <div class="text-sm text-text-primary dark:text-white font-semibold">Need help finding a compliant option?</div>
-            <p class="text-xs text-text-secondary dark:text-gray-400 mt-1">We will review your case and reply by email.</p>
-            <label class="mt-3 block text-xs font-semibold text-text-secondary dark:text-gray-400">Email</label>
-            <input id="lead-email" name="email" type="email" required class="mt-1 w-full h-10 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-900 text-text-primary dark:text-white px-3 text-sm" />
-            <label class="mt-3 flex items-center gap-2 text-xs text-text-secondary dark:text-gray-400">
-              <input id="lead-consent" class="consent-checkbox" type="checkbox" required />
-              I agree to be contacted about this request.
-            </label>
-            <button id="lead-submit" type="submit" class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg disabled:opacity-50" disabled>Request review</button>
-          </form>
-        </div>
 
         <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 flex justify-between text-xs text-gray-400">
           <div class="flex items-center gap-1">
@@ -883,12 +870,6 @@ function renderOffer(mapping, productId){
   box.classList.remove("hidden");
 }
 
-function renderLeadForm(status) {
-  const box = $("leadFormContainer");
-  if (!box) return;
-  const show = status === "RED" || status === "UNKNOWN";
-  box.classList.toggle("hidden", !show);
-}
 
 function renderMissing(mapping){
   const missing = mapping?.missing || mapping?.missing_evidence || [];
@@ -970,7 +951,6 @@ function renderResult(){
   renderRequirements(visa);
   renderReasons(mapping);
   renderOffer(mapping, productId);
-  renderLeadForm(status);
 
   // missing box only meaningful for UNKNOWN
   if (status === "UNKNOWN") renderMissing(mapping);
@@ -1054,23 +1034,6 @@ async function init(){
         $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
       }, 900);
     });
-
-    const consent = $("lead-consent");
-    const leadSubmit = $("lead-submit");
-    const leadForm = $("lead-form");
-    if (consent && leadSubmit) {
-      leadSubmit.disabled = !consent.checked;
-      consent.addEventListener("change", () => {
-        leadSubmit.disabled = !consent.checked;
-      });
-    }
-    if (leadForm && leadSubmit) {
-      leadForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        leadSubmit.disabled = true;
-        leadSubmit.textContent = "Request sent";
-      });
-    }
 
     $("closeModal").addEventListener("click", closeModal);
     $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });

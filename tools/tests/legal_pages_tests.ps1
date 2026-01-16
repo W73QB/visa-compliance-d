@@ -26,18 +26,6 @@ $paths = @(
   "content/legal/ca/privacy.md",
   "content/legal/apac/privacy.md",
   "content/privacy/_index.md",
-  "content/legal/us/terms.md",
-  "content/legal/eu-uk/terms.md",
-  "content/legal/ca/terms.md",
-  "content/legal/apac/terms.md",
-  "content/legal/us/refund.md",
-  "content/legal/eu-uk/refund.md",
-  "content/legal/ca/refund.md",
-  "content/legal/apac/refund.md",
-  "content/terms/_index.md",
-  "content/refund/_index.md",
-  "content/reports/premium/_index.md",
-  "data/payments/payment_links.json",
   "layouts/partials/cookie_banner.html"
 )
 
