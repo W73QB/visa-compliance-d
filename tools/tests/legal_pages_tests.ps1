@@ -25,7 +25,17 @@ $paths = @(
   "content/legal/eu-uk/privacy.md",
   "content/legal/ca/privacy.md",
   "content/legal/apac/privacy.md",
-  "content/privacy/_index.md"
+  "content/privacy/_index.md",
+  "content/legal/us/terms.md",
+  "content/legal/eu-uk/terms.md",
+  "content/legal/ca/terms.md",
+  "content/legal/apac/terms.md",
+  "content/legal/us/refund.md",
+  "content/legal/eu-uk/refund.md",
+  "content/legal/ca/refund.md",
+  "content/legal/apac/refund.md",
+  "content/terms/_index.md",
+  "content/refund/_index.md"
 )
 
 foreach ($p in $paths) {
