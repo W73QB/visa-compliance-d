@@ -245,6 +245,22 @@
 
   <!-- RESULT AREA -->
   <div id="resultArea" class="max-w-5xl mx-auto space-y-8 hidden" aria-live="polite">
+    <div id="esDnvBanner" class="hidden rounded-xl border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-5">
+      <div class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-warning-yellow text-2xl">warning</span>
+        <div class="space-y-2">
+          <p class="font-semibold text-warning-yellow">Spain DNV: no GREEN products yet</p>
+          <p class="text-sm text-text-secondary dark:text-gray-300">
+            As of 2026-01-16, no product is GREEN because official evidence for no moratorium, no deductible,
+            unlimited coverage, and public system risk coverage is missing. We only mark GREEN with official sources.
+          </p>
+          <div class="flex flex-wrap gap-3 text-sm">
+            <a class="font-semibold text-primary hover:text-primary-hover underline" href="../posts/spain-dnv-insurance/">See requirement summary</a>
+            <a class="font-semibold text-primary hover:text-primary-hover underline" href="../methodology/">Evidence rules</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-soft dark:border-border-dark overflow-hidden shadow-xl shadow-black/5 dark:shadow-black/20">
 
       <!-- Header -->
@@ -319,6 +335,15 @@
           <ul id="reasonsList" class="space-y-4 relative">
             <div id="timelineLine" class="absolute left-[21px] top-6 bottom-6 w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
           </ul>
+          <div id="esDnvResultNotice" class="hidden mt-6 rounded-lg border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-4">
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-warning-yellow text-lg">info</span>
+              <div class="text-sm text-text-secondary dark:text-gray-300">
+                Spain DNV requires no moratorium. If you have an official certificate or conditions showing no waiting
+                periods, send it to support so we can re-evaluate.
+              </div>
+            </div>
+          </div>
 
           <!-- Missing evidence box (only when UNKNOWN) -->
           <div id="missingBox" class="mt-6 hidden">
@@ -812,6 +837,12 @@ function renderMissing(mapping){
   }
 }
 
+function toggleEsDnvNotice(visaId){
+  const isEsDnv = visaId === "ES_DNV_BLS_LONDON_2026";
+  $("esDnvBanner")?.classList.toggle("hidden", !isEsDnv);
+  $("esDnvResultNotice")?.classList.toggle("hidden", !isEsDnv);
+}
+
 function updateHints(){
   const visaId = $("visaSelect").value;
   const productId = $("productSelect").value;
@@ -843,6 +874,7 @@ function renderResult(){
   const status = (mapping?.status || "UNKNOWN").toUpperCase();
 
   const pres = statusPresentation(status);
+  toggleEsDnvNotice(visaId);
 
   // show container
   $("resultArea").classList.remove("hidden");

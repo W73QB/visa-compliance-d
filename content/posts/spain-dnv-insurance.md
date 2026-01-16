@@ -13,6 +13,12 @@ Spain Digital Nomad Visa (BLS London) requires health insurance contracted with 
 
 We compare visa requirements against product specs and evidence in the rule engine. See `/methodology/` for full logic.
 
+## Current status in the checker
+
+As of 2026-01-16, no product is marked GREEN because official evidence for no moratorium, no deductible, unlimited coverage,
+and public system risk coverage is missing. If you have an official certificate or conditions, send them to support so we can
+re-evaluate.
+
 ## Check in the engine
 
 Use the checker with a snapshot: `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-12`

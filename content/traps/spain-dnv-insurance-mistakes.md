@@ -19,6 +19,12 @@ Evidence is recorded in `sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf`.
 
 We check each requirement against ProductFacts. If any required fact is missing, the result becomes UNKNOWN; if a requirement is violated, the result becomes RED.
 
+## Current status in the checker
+
+As of 2026-01-16, we do not list any GREEN products for Spain DNV because official evidence for no moratorium, no deductible,
+unlimited coverage, and public system risk coverage is missing. If you have an official certificate or conditions, share them
+so we can verify.
+
 ## Check in the engine
 
 Use the checker with a snapshot:
