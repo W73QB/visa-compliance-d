@@ -75,6 +75,8 @@ Assert-True ($ui -like '*status === "RED"*') "UI hides CTA for RED"
 Assert-True ($ui -like "*data-cta-disclosure*") "CTA disclosure container exists"
 Assert-True ($ui -like "*Ad label*") "UI renders Ad label near CTA"
 Assert-True ($ui -like "*vf-region-select*") "UI has region selector"
+Assert-True ($ui -like "*lead-form*") "lead form exists"
+Assert-True ($ui -like "*consent-checkbox*") "consent checkbox exists"
 
 $hasOffers = $index.PSObject.Properties.Name -contains "offers_by_product"
 Assert-True $hasOffers "ui_index.json contains offers_by_product"
