@@ -1,0 +1,49 @@
+{
+  "id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+  "provider": "Sanitas",
+  "product_name": "Mas Salud (Sin Copago)",
+  "effective_date": "2026-01-16",
+  "policy_version": "2026",
+  "specs": {
+    "type": "health insurance",
+    "overall_limit": null,
+    "currency": "EUR",
+    "deductible": null,
+    "copay": false,
+    "payment_cadence": null,
+    "contract_commitment_months": null,
+    "comprehensive": true,
+    "covers_public_health_system_risks": null,
+    "unlimited": null,
+    "moratorium_days": 90,
+    "jurisdiction_facts": {
+      "ES": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+            "locator": "page 1",
+            "excerpt": "Aseguradora registrada en Espana"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+      "locator": "page 1",
+      "excerpt": "Producto de asistencia sanitaria completa"
+    },
+    {
+      "source_id": "SANITAS_MAS_SALUD_NOTA_PREVIA_2026",
+      "locator": "page 3",
+      "excerpt": "Sanitas Mas Salud es un producto sin copagos."
+    },
+    {
+      "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+      "locator": "page 2",
+      "excerpt": "Este producto tiene plazos de carencia"
+    }
+  ]
+}

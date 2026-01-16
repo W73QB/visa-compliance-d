@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-01-15T09:25:00.739247Z",
-  "snapshot_id": "2026-01-15",
+  "built_at": "2026-01-16T01:31:26.796358Z",
+  "snapshot_id": "2026-01-16",
   "visas": [
     {
       "id": "CR_DN_DECREE_43619_2026",
@@ -431,6 +431,55 @@
       ]
     },
     {
+      "id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "provider": "Sanitas",
+      "product_name": "Mas Salud (Sin Copago)",
+      "effective_date": "2026-01-16",
+      "policy_version": "2026",
+      "specs": {
+        "type": "health insurance",
+        "overall_limit": null,
+        "currency": "EUR",
+        "deductible": null,
+        "copay": false,
+        "payment_cadence": null,
+        "contract_commitment_months": null,
+        "comprehensive": true,
+        "covers_public_health_system_risks": null,
+        "unlimited": null,
+        "moratorium_days": 90,
+        "jurisdiction_facts": {
+          "ES": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+                "locator": "page 1",
+                "excerpt": "Aseguradora registrada en Espana"
+              }
+            ]
+          }
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+          "locator": "page 1",
+          "excerpt": "Producto de asistencia sanitaria completa"
+        },
+        {
+          "source_id": "SANITAS_MAS_SALUD_NOTA_PREVIA_2026",
+          "locator": "page 3",
+          "excerpt": "Sanitas Mas Salud es un producto sin copagos."
+        },
+        {
+          "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+          "locator": "page 2",
+          "excerpt": "Este producto tiene plazos de carencia"
+        }
+      ]
+    },
+    {
       "id": "WORLDNOMADS_EXPLORER_2026",
       "provider": "World Nomads",
       "product_name": "Explorer Plan",
@@ -492,6 +541,15 @@
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ]
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "WORLDNOMADS_EXPLORER_2026",
       "status": "GREEN",
       "reasons": [],
@@ -529,6 +587,13 @@
           ]
         }
       ],
+      "missing": []
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
       "missing": []
     },
     {
@@ -639,6 +704,28 @@
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "No moratorium required, product has 90 day waiting period",
+          "evidence": [
+            {
+              "source_id": "BLS_ES_DNV_LONDON_2026",
+              "locator": "page 2, item 9",
+              "excerpt": "with no excess or co-payments, nor moratorium"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.deductible.amount",
+        "specs.covers_public_health_system_risks",
+        "specs.overall_limit or specs.unlimited"
+      ]
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
       "product_id": "WORLDNOMADS_EXPLORER_2026",
       "status": "RED",
       "reasons": [
@@ -698,6 +785,15 @@
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.payment_cadence"
+      ]
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
       "product_id": "WORLDNOMADS_EXPLORER_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -728,6 +824,13 @@
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "WORLDNOMADS_EXPLORER_2026",
       "status": "GREEN",
       "reasons": [],
@@ -772,6 +875,24 @@
     {
       "visa_id": "TH_DTV_MFA_2026",
       "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
+      "missing": []
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
       "status": "NOT_REQUIRED",
       "reasons": [
         {
@@ -891,6 +1012,41 @@
       "local_path": "sources/SAFETYWING_WEBSITE_2026-01-12.md",
       "synthetic": true,
       "note": "Synthetic summary; not an official snapshot."
+    },
+    "SANITAS_MAS_SALUD_CG_2026": {
+      "source_id": "SANITAS_MAS_SALUD_CG_2026",
+      "url": "https://www.sanitas.es/media/sanp/documento/cg-mas-salud-id937/cg_937-mas-salud.pdf",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "4f308a4b985ef134d8d61c2d2bd41ae720e1d4b17cd0101ce03dec24bcb6bb9b",
+      "local_path": "sources/SANITAS_MAS_SALUD_CG_2026-01-16.pdf"
+    },
+    "SANITAS_MAS_SALUD_IPID_2026": {
+      "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+      "url": "https://api.sanitas.es/is-digital-sales-public/api/v3/download/informativeNote/937/3?apikey=KoctmKuVyPggOxTW7Gkqpb52GOuLKGrE",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "16d1b62aca0192402f35cb0f200f22761e13f323c4d2b0d16a9710302e4b0302",
+      "local_path": "sources/SANITAS_MAS_SALUD_IPID_2026-01-16.pdf"
+    },
+    "SANITAS_MAS_SALUD_NOTA_PREVIA_2026": {
+      "source_id": "SANITAS_MAS_SALUD_NOTA_PREVIA_2026",
+      "url": "https://www.sanitas.es/media/documento/archivo/notapreviainformativamassalud/sanitas-mas-salud.pdf",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "2d0159da0ad180fc1084591dd87ece98f6eda197469f0711207408dceefe418d",
+      "local_path": "sources/SANITAS_MAS_SALUD_NOTA_PREVIA_2026-01-16.pdf"
+    },
+    "SANITAS_MAS_SALUD_PAGE_2026": {
+      "source_id": "SANITAS_MAS_SALUD_PAGE_2026",
+      "url": "https://www.sanitas.es/portales/eci/eci_mas_salud.html",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "ecf7eb13e43a1f89e6364f8d9f2ab1b8a5de9bb5213c89d99e50bcdc156ee16f",
+      "local_path": "sources/SANITAS_MAS_SALUD_PAGE_2026-01-16.html"
+    },
+    "SANITAS_MAS_SALUD_SIN_COPAGO_2026": {
+      "source_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "url": "https://www.sanitas.es/media/documento/archivo/doc_sanitasmassalud_condicionesgenerales/cg-mas-salud-sin-copago.pdf",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "bd34f6a771b46e02b33c046e24205c667ef36227cfa982c890d37b56d6c1dc6a",
+      "local_path": "sources/SANITAS_MAS_SALUD_SIN_COPAGO_2026-01-16.pdf"
     },
     "TH_MFA_DTV_2026": {
       "source_id": "TH_MFA_DTV_2026",

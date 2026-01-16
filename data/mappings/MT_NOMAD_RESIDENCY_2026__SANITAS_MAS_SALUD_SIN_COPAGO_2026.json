@@ -1,0 +1,9 @@
+{
+  "visa_id": "MT_NOMAD_RESIDENCY_2026",
+  "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.payment_cadence"
+  ]
+}

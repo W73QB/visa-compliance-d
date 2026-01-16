@@ -1,0 +1,7 @@
+{
+  "source_id": "SANITAS_MAS_SALUD_IPID_2026",
+  "url": "https://api.sanitas.es/is-digital-sales-public/api/v3/download/informativeNote/937/3?apikey=KoctmKuVyPggOxTW7Gkqpb52GOuLKGrE",
+  "retrieved_at": "2026-01-16T00:00:00Z",
+  "sha256": "16d1b62aca0192402f35cb0f200f22761e13f323c4d2b0d16a9710302e4b0302",
+  "local_path": "sources/SANITAS_MAS_SALUD_IPID_2026-01-16.pdf"
+}

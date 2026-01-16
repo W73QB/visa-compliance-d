@@ -1,0 +1,22 @@
+{
+  "visa_id": "ES_DNV_BLS_LONDON_2026",
+  "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "No moratorium required, product has 90 day waiting period",
+      "evidence": [
+        {
+          "source_id": "BLS_ES_DNV_LONDON_2026",
+          "locator": "page 2, item 9",
+          "excerpt": "with no excess or co-payments, nor moratorium"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.deductible.amount",
+    "specs.covers_public_health_system_risks",
+    "specs.overall_limit or specs.unlimited"
+  ]
+}
