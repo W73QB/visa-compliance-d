@@ -1,7 +1,7 @@
 {
-  "source_id": "DKV_AVISO_LEGAL_2026",
-  "url": "https://dkv.es/aviso-legal/condiciones-uso",
-  "retrieved_at": "2026-01-16T00:00:00Z",
-  "sha256": "e41352031374c764056eee696b8aba44500254d20742467ae272c85ee0cb446b",
-  "local_path": "sources/DKV_AVISO_LEGAL_2026-01-16.html"
+    "source_id":  "DKV_AVISO_LEGAL_2026",
+    "url":  "https://dkv.es/aviso-legal/condiciones-uso",
+    "retrieved_at":  "2026-01-16T00:00:00Z",
+    "sha256":  "95db084722abd841f459b540e41e3cb6676373525c2e63317f48a2722a619afb",
+    "local_path":  "sources/DKV_AVISO_LEGAL_2026-01-16.html"
 }
