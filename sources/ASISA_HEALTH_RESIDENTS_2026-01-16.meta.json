@@ -1,7 +1,7 @@
 {
-  "source_id": "ASISA_HEALTH_RESIDENTS_2026",
-  "url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
-  "retrieved_at": "2026-01-16T00:00:00Z",
-  "sha256": "e7e68d17dcb360eed75df9a49208afd1e403233debc225c7e73584355f4690e3",
-  "local_path": "sources/ASISA_HEALTH_RESIDENTS_2026-01-16.html"
+    "source_id":  "ASISA_HEALTH_RESIDENTS_2026",
+    "url":  "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
+    "retrieved_at":  "2026-01-16T00:00:00Z",
+    "sha256":  "4a1c4e1c4f74fc8ded05482ea171df962320632d846c70bf287ceebc235f36f1",
+    "local_path":  "sources/ASISA_HEALTH_RESIDENTS_2026-01-16.html"
 }
