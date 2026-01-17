@@ -1,6 +1,6 @@
 ﻿---
 title: "Spain DNV insurance requirements (evidence-based)"
-date: 2026-01-14
+date: 2026-01-16
 description: "Evidence-based compliance summary for Spain Digital Nomad Visa insurance requirements."
 tags: ["spain", "dnv", "compliance"]
 ---
@@ -15,13 +15,12 @@ We compare visa requirements against product specs and evidence in the rule engi
 
 ## Current status in the checker
 
-As of 2026-01-16, no product is marked GREEN because official evidence for no moratorium, no deductible, unlimited coverage,
-and public system risk coverage is missing. If you have an official certificate or conditions, send them to support so we can
-re-evaluate.
+As of 2026-01-16, ASISA Health Residents is marked GREEN based on official evidence. Other products can still be RED or
+UNKNOWN if any requirement lacks official proof.
 
 ## Check in the engine
 
-Use the checker with a snapshot: `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-12`
+Use the checker with a snapshot: `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=ASISA_HEALTH_RESIDENTS_2026&snapshot=releases/2026-01-16`
 
 ## Disclaimer
 

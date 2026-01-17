@@ -262,10 +262,10 @@
       <div class="flex items-start gap-3">
         <span class="material-symbols-outlined text-warning-yellow text-2xl">warning</span>
         <div class="space-y-2">
-          <p class="font-semibold text-warning-yellow">Spain DNV: no GREEN products yet</p>
+          <p class="font-semibold text-warning-yellow">Spain DNV: GREEN available</p>
           <p class="text-sm text-text-secondary dark:text-gray-300">
-            As of 2026-01-16, no product is GREEN because official evidence for no moratorium, no deductible,
-            unlimited coverage, and public system risk coverage is missing. We only mark GREEN with official sources.
+            As of 2026-01-16, ASISA Health Residents is GREEN based on official evidence. Other products can still be RED
+            or UNKNOWN if any requirement lacks official proof. We only mark GREEN with official sources.
           </p>
           <div class="flex flex-wrap gap-3 text-sm">
             <a class="font-semibold text-primary hover:text-primary-hover underline" href="../posts/spain-dnv-insurance/">See requirement summary</a>
@@ -352,8 +352,8 @@
             <div class="flex items-start gap-2">
               <span class="material-symbols-outlined text-warning-yellow text-lg">info</span>
               <div class="text-sm text-text-secondary dark:text-gray-300">
-                Spain DNV requires no moratorium. If you have an official certificate or conditions showing no waiting
-                periods, send it to support so we can re-evaluate.
+                Spain DNV requires no moratorium, no deductible, unlimited coverage, and public system risk coverage.
+                If your product has official evidence for all requirements, send it to support for review.
               </div>
             </div>
           </div>
@@ -840,6 +840,7 @@ function renderOffer(mapping, productId){
   const link = $("offerLink");
   const disclosureBox = $("offerDisclosure");
   const disclosureText = disclosureBox ? disclosureBox.querySelector(".vf-disclosure-text") : null;
+  const disclosureLabel = disclosureBox ? disclosureBox.querySelector(".vf-ad-label") : null;
   const region = getRegion();
   const defaultDisclosure = DISCLOSURE_BY_REGION[region] || DISCLOSURE_BY_REGION[DEFAULT_REGION];
 
@@ -851,6 +852,7 @@ function renderOffer(mapping, productId){
   if (status === "NOT_REQUIRED") {
     message.textContent = "Insurance is optional for this visa.";
     if (disclosureText) disclosureText.textContent = "No affiliate link shown.";
+    if (disclosureLabel) disclosureLabel.textContent = "Info";
     link.classList.add("hidden");
     box.classList.remove("hidden");
     return;
@@ -859,7 +861,11 @@ function renderOffer(mapping, productId){
 
   link.textContent = offer.label || "Get quote";
   link.href = sanitizeUrl(offer.affiliate_url || "#");
-  if (disclosureText) disclosureText.textContent = offer.disclosure || defaultDisclosure;
+  const disclosure = offer.disclosure || defaultDisclosure;
+  if (disclosureText) disclosureText.textContent = disclosure;
+  if (disclosureLabel) {
+    disclosureLabel.textContent = disclosure.toLowerCase().includes("paid link") ? "Ad label" : "Info";
+  }
 
   if (status === "YELLOW") {
     message.textContent = "Caution: operational risk. Affiliate link shown for convenience.";
