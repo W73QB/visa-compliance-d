@@ -1,0 +1,57 @@
+{
+  "id": "ASISA_HEALTH_RESIDENTS_2026",
+  "provider": "ASISA",
+  "product_name": "ASISA Health Residents",
+  "effective_date": "2026-01-16",
+  "policy_version": "2026",
+  "specs": {
+    "type": "health insurance",
+    "overall_limit": null,
+    "currency": "EUR",
+    "deductible": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "copay": false,
+    "payment_cadence": null,
+    "contract_commitment_months": null,
+    "comprehensive": true,
+    "covers_public_health_system_risks": true,
+    "unlimited": true,
+    "moratorium_days": 0,
+    "jurisdiction_facts": {
+      "ES": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "ASISA_HEALTH_RESIDENTS_2026",
+            "locator": "Product description",
+            "excerpt": "ASISA Health Residents ... cumple con todos los requisitos exigidos por las autoridades migratorias españolas"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "source_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "locator": "Product description",
+      "excerpt": "ASISA Health Residents ... cobertura completa, sin copagos, sin carencias y con asistencia médica ilimitada."
+    },
+    {
+      "source_id": "ASISA_EXTRANJEROS_2026",
+      "locator": "FAQ: requisitos consulares",
+      "excerpt": "Garantías similares a las de la sanidad pública española."
+    },
+    {
+      "source_id": "ASISA_EXTRANJEROS_2026",
+      "locator": "FAQ: cobertura completa",
+      "excerpt": "No existe un tope máximo en el coste de tratamientos, hospitalización o intervenciones cubiertas por la póliza."
+    },
+    {
+      "source_id": "ASISA_EXTRANJEROS_2026",
+      "locator": "FAQ: copagos y franquicias",
+      "excerpt": "Sin copagos y sin franquicias: no tendrás que pagar nada por utilizar los servicios incluidos."
+    }
+  ]
+}

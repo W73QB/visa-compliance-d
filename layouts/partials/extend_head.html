@@ -1,2 +1,47 @@
-﻿<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="{{ "css/visafact.css" | relURL }}" />
+<script>
+  (function () {
+    try {
+      var region = localStorage.getItem("vf_region");
+      var path = location.pathname || "";
+      var isAffiliateHub = /\/affiliate-disclosure\/?$/.test(path);
+      if (region && isAffiliateHub) {
+        var prefix = path.replace(/affiliate-disclosure\/?$/, "");
+        location.replace(prefix + "legal/" + region + "/affiliate-disclosure/");
+      }
+    } catch (e) {
+      // no-op
+    }
+  })();
+
+  function vf_analytics_allowed() {
+    try {
+      var region = localStorage.getItem("vf_region");
+      if (region === "eu-uk") {
+        return localStorage.getItem("vf_cookie_consent") === "1";
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  window.addEventListener("load", function () {
+    try {
+      var region = localStorage.getItem("vf_region");
+      var banner = document.getElementById("vf-cookie-banner");
+      var accept = document.getElementById("vf-cookie-accept");
+      if (!banner || !accept) return;
+      if (region === "eu-uk" && localStorage.getItem("vf_cookie_consent") !== "1") {
+        banner.style.display = "block";
+      }
+      accept.addEventListener("click", function () {
+        localStorage.setItem("vf_cookie_consent", "1");
+        banner.style.display = "none";
+      });
+    } catch (e) {
+      // no-op
+    }
+  });
+</script>

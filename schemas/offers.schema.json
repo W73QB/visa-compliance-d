@@ -8,7 +8,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["product_id", "affiliate_url", "label"],
+        "required": ["product_id", "affiliate_url", "label", "disclosure"],
         "properties": {
           "product_id": { "type": "string" },
           "affiliate_url": { "type": "string" },

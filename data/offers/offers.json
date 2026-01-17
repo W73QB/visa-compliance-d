@@ -4,7 +4,14 @@
       "product_id": "GENKI_TRAVELER_2026",
       "affiliate_url": "https://genki.world/products/traveler",
       "label": "View Genki Traveler",
-      "disclosure": "Link to provider. Results are evidence-based."
+      "disclosure": "Paid link. We may earn a commission if you purchase through this link."
+    },
+    {
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "affiliate_url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
+      "label": "Visit ASISA Health Residents",
+      "disclosure": "Official link (non-affiliate). We do not earn a commission."
     }
   ]
 }
+

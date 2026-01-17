@@ -1,0 +1,69 @@
+{
+  "id": "DKV_VISADO_2026",
+  "provider": "DKV",
+  "product_name": "DKV Visado",
+  "effective_date": "2026-01-16",
+  "policy_version": "2026-01",
+  "specs": {
+    "type": "comprehensive health insurance",
+    "overall_limit": null,
+    "currency": "EUR",
+    "deductible": null,
+    "copay": false,
+    "payment_cadence": "annual",
+    "contract_commitment_months": null,
+    "comprehensive": true,
+    "covers_public_health_system_risks": null,
+    "unlimited": null,
+    "moratorium_days": 240,
+    "jurisdiction_facts": {
+      "ES": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "DKV_VISADO_CONDICIONES_2026",
+            "locator": "page 2",
+            "excerpt": "DKV Seguros y Reaseguros, S.A.E., inscrita en el Registro Especial de la Dirección General de Seguros y Fondos de Pensiones"
+          },
+          {
+            "source_id": "DKV_AVISO_LEGAL_2026",
+            "locator": "Condiciones de uso",
+            "excerpt": "DKV SEGUROS Y REASEGUROS ... inscrita en el Registro Especial de la Dirección General de Seguros y Fondos de Pensiones"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "source_id": "DKV_VISADO_CONDICIONES_2026",
+      "locator": "page 6",
+      "excerpt": "asistencia médica primaria, especialistas con medios de diagnóstico y tratamiento, hospitalización y cirugía, ambulancias y urgencias"
+    },
+    {
+      "source_id": "DKV_VISADO_CONDICIONES_2026",
+      "locator": "page 7",
+      "excerpt": "podrás acceder a las coberturas de asistencia sanitaria sin necesidad de abonar una cantidad adicional cada vez que utilices alguna de las garantías cubiertas por el contrato (copago)"
+    },
+    {
+      "source_id": "DKV_VISADO_CONDICIONES_2026",
+      "locator": "page 7",
+      "excerpt": "La prima del seguro deberás abonarla en su totalidad al inicio del contrato ... es única y anual"
+    },
+    {
+      "source_id": "DKV_VISADO_CONDICIONES_2026",
+      "locator": "page 43",
+      "excerpt": "Periodos de carencia ... parto (excepto parto prematuro) o cesárea: 8 meses."
+    },
+    {
+      "source_id": "DKV_SALUD_EXTRANJEROS_2026",
+      "locator": "FAQ: residencia",
+      "excerpt": "DKV Visado y DKV Mundisalud cumplen todos los requisitos legales y consulares necesarios para solicitar la residencia en España."
+    },
+    {
+      "source_id": "DKV_SALUD_EXTRANJEROS_2026",
+      "locator": "FAQ: duración",
+      "excerpt": "El seguro tiene una duración anual de 365 días, renovable anualmente"
+    }
+  ]
+}

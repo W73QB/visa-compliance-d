@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-01-16T01:31:26.796358Z",
-  "snapshot_id": "2026-01-16",
+  "built_at": "2026-01-17T01:54:54.090689Z",
+  "snapshot_id": "2026-01-17",
   "visas": [
     {
       "id": "CR_DN_DECREE_43619_2026",
@@ -323,6 +323,132 @@
   ],
   "products": [
     {
+      "id": "ASISA_HEALTH_RESIDENTS_2026",
+      "provider": "ASISA",
+      "product_name": "ASISA Health Residents",
+      "effective_date": "2026-01-16",
+      "policy_version": "2026",
+      "specs": {
+        "type": "health insurance",
+        "overall_limit": null,
+        "currency": "EUR",
+        "deductible": {
+          "amount": 0,
+          "currency": "EUR"
+        },
+        "copay": false,
+        "payment_cadence": null,
+        "contract_commitment_months": null,
+        "comprehensive": true,
+        "covers_public_health_system_risks": true,
+        "unlimited": true,
+        "moratorium_days": 0,
+        "jurisdiction_facts": {
+          "ES": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "ASISA_HEALTH_RESIDENTS_2026",
+                "locator": "Product description",
+                "excerpt": "ASISA Health Residents ... cumple con todos los requisitos exigidos por las autoridades migratorias espa\u00f1olas"
+              }
+            ]
+          }
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "ASISA_HEALTH_RESIDENTS_2026",
+          "locator": "Product description",
+          "excerpt": "ASISA Health Residents ... cobertura completa, sin copagos, sin carencias y con asistencia m\u00e9dica ilimitada."
+        },
+        {
+          "source_id": "ASISA_EXTRANJEROS_2026",
+          "locator": "FAQ: requisitos consulares",
+          "excerpt": "Garant\u00edas similares a las de la sanidad p\u00fablica espa\u00f1ola."
+        },
+        {
+          "source_id": "ASISA_EXTRANJEROS_2026",
+          "locator": "FAQ: cobertura completa",
+          "excerpt": "No existe un tope m\u00e1ximo en el coste de tratamientos, hospitalizaci\u00f3n o intervenciones cubiertas por la p\u00f3liza."
+        },
+        {
+          "source_id": "ASISA_EXTRANJEROS_2026",
+          "locator": "FAQ: copagos y franquicias",
+          "excerpt": "Sin copagos y sin franquicias: no tendr\u00e1s que pagar nada por utilizar los servicios incluidos."
+        }
+      ]
+    },
+    {
+      "id": "DKV_VISADO_2026",
+      "provider": "DKV",
+      "product_name": "DKV Visado",
+      "effective_date": "2026-01-16",
+      "policy_version": "2026-01",
+      "specs": {
+        "type": "comprehensive health insurance",
+        "overall_limit": null,
+        "currency": "EUR",
+        "deductible": null,
+        "copay": false,
+        "payment_cadence": "annual",
+        "contract_commitment_months": null,
+        "comprehensive": true,
+        "covers_public_health_system_risks": null,
+        "unlimited": null,
+        "moratorium_days": 240,
+        "jurisdiction_facts": {
+          "ES": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "DKV_VISADO_CONDICIONES_2026",
+                "locator": "page 2",
+                "excerpt": "DKV Seguros y Reaseguros, S.A.E., inscrita en el Registro Especial de la Direcci\u00f3n General de Seguros y Fondos de Pensiones"
+              },
+              {
+                "source_id": "DKV_AVISO_LEGAL_2026",
+                "locator": "Condiciones de uso",
+                "excerpt": "DKV SEGUROS Y REASEGUROS ... inscrita en el Registro Especial de la Direcci\u00f3n General de Seguros y Fondos de Pensiones"
+              }
+            ]
+          }
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "DKV_VISADO_CONDICIONES_2026",
+          "locator": "page 6",
+          "excerpt": "asistencia m\u00e9dica primaria, especialistas con medios de diagn\u00f3stico y tratamiento, hospitalizaci\u00f3n y cirug\u00eda, ambulancias y urgencias"
+        },
+        {
+          "source_id": "DKV_VISADO_CONDICIONES_2026",
+          "locator": "page 7",
+          "excerpt": "podr\u00e1s acceder a las coberturas de asistencia sanitaria sin necesidad de abonar una cantidad adicional cada vez que utilices alguna de las garant\u00edas cubiertas por el contrato (copago)"
+        },
+        {
+          "source_id": "DKV_VISADO_CONDICIONES_2026",
+          "locator": "page 7",
+          "excerpt": "La prima del seguro deber\u00e1s abonarla en su totalidad al inicio del contrato ... es \u00fanica y anual"
+        },
+        {
+          "source_id": "DKV_VISADO_CONDICIONES_2026",
+          "locator": "page 43",
+          "excerpt": "Periodos de carencia ... parto (excepto parto prematuro) o ces\u00e1rea: 8 meses."
+        },
+        {
+          "source_id": "DKV_SALUD_EXTRANJEROS_2026",
+          "locator": "FAQ: residencia",
+          "excerpt": "DKV Visado y DKV Mundisalud cumplen todos los requisitos legales y consulares necesarios para solicitar la residencia en Espa\u00f1a."
+        },
+        {
+          "source_id": "DKV_SALUD_EXTRANJEROS_2026",
+          "locator": "FAQ: duraci\u00f3n",
+          "excerpt": "El seguro tiene una duraci\u00f3n anual de 365 d\u00edas, renovable anualmente"
+        }
+      ]
+    },
+    {
       "id": "GENERIC_EXPAT_COMPLETE_2026",
       "provider": "GenericInsurer",
       "product_name": "Expat Complete Health",
@@ -507,6 +633,24 @@
   "mappings": [
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ]
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ]
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -551,6 +695,20 @@
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
       "missing": []
@@ -613,6 +771,35 @@
         }
       ],
       "missing": []
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "No moratorium required, product has 240 day waiting period",
+          "evidence": [
+            {
+              "source_id": "BLS_ES_DNV_LONDON_2026",
+              "locator": "page 2, item 9",
+              "excerpt": "with no excess or co-payments, nor moratorium"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.deductible.amount",
+        "specs.covers_public_health_system_risks",
+        "specs.overall_limit or specs.unlimited"
+      ]
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -751,6 +938,22 @@
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.payment_cadence"
+      ]
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -803,6 +1006,20 @@
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -834,6 +1051,42 @@
       "product_id": "WORLDNOMADS_EXPLORER_2026",
       "status": "GREEN",
       "reasons": [],
+      "missing": []
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
+      "missing": []
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
       "missing": []
     },
     {
@@ -932,7 +1185,13 @@
       "product_id": "GENKI_TRAVELER_2026",
       "affiliate_url": "https://genki.world/products/traveler",
       "label": "View Genki Traveler",
-      "disclosure": "Link to provider. Results are evidence-based."
+      "disclosure": "Paid link. We may earn a commission if you purchase through this link."
+    },
+    {
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "affiliate_url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
+      "label": "Visit ASISA Health Residents",
+      "disclosure": "Official link (non-affiliate). We do not earn a commission."
     }
   ],
   "offers_by_product": {
@@ -940,10 +1199,30 @@
       "product_id": "GENKI_TRAVELER_2026",
       "affiliate_url": "https://genki.world/products/traveler",
       "label": "View Genki Traveler",
-      "disclosure": "Link to provider. Results are evidence-based."
+      "disclosure": "Paid link. We may earn a commission if you purchase through this link."
+    },
+    "ASISA_HEALTH_RESIDENTS_2026": {
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "affiliate_url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
+      "label": "Visit ASISA Health Residents",
+      "disclosure": "Official link (non-affiliate). We do not earn a commission."
     }
   },
   "sources_by_id": {
+    "ASISA_EXTRANJEROS_2026": {
+      "source_id": "ASISA_EXTRANJEROS_2026",
+      "url": "https://www.asisa.es/seguros-medicos/extranjeros",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "720e248160aac8c8eeb2beb187444325660ecc39a87560944928a3ebb2cefd87",
+      "local_path": "sources/ASISA_EXTRANJEROS_2026-01-16.html"
+    },
+    "ASISA_HEALTH_RESIDENTS_2026": {
+      "source_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "e7e68d17dcb360eed75df9a49208afd1e403233debc225c7e73584355f4690e3",
+      "local_path": "sources/ASISA_HEALTH_RESIDENTS_2026-01-16.html"
+    },
     "CR_DECREE_43619_2026": {
       "source_id": "CR_DECREE_43619_2026",
       "url": "http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=97374&nValor3=131405",
@@ -958,6 +1237,27 @@
       "retrieved_at": "2026-01-15T00:00:00Z",
       "sha256": "03b06f2fabde9d86be97376145809589bfcb291ada1f2abe50f83249c13de758",
       "local_path": "sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html"
+    },
+    "DKV_AVISO_LEGAL_2026": {
+      "source_id": "DKV_AVISO_LEGAL_2026",
+      "url": "https://dkv.es/aviso-legal/condiciones-uso",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "e41352031374c764056eee696b8aba44500254d20742467ae272c85ee0cb446b",
+      "local_path": "sources/DKV_AVISO_LEGAL_2026-01-16.html"
+    },
+    "DKV_SALUD_EXTRANJEROS_2026": {
+      "source_id": "DKV_SALUD_EXTRANJEROS_2026",
+      "url": "https://dkv.es/particulares/seguros-salud-extranjeros",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "5186b7e62ea0f0a13cee98d58bbde678e695af1d279a4d774135e5f1bb533244",
+      "local_path": "sources/DKV_SALUD_EXTRANJEROS_2026-01-16.html"
+    },
+    "DKV_VISADO_CONDICIONES_2026": {
+      "source_id": "DKV_VISADO_CONDICIONES_2026",
+      "url": "https://docs.dkv.es/pdf-docs/Condicionados/CG.DKV-Visado.pdf",
+      "retrieved_at": "2026-01-16T00:00:00Z",
+      "sha256": "823c9d4c993824cdcf9e47b3b6bf9a45848e70dd0b9cd54b304ff8aa19116560",
+      "local_path": "sources/DKV_VISADO_CONDICIONES_2026-01-16.pdf"
     },
     "BLS_ES_DNV_LONDON_2026": {
       "source_id": "BLS_ES_DNV_LONDON_2026",
@@ -986,7 +1286,7 @@
       "source_id": "GENKI_TRAVELER_COVERAGE_2026",
       "url": "https://help.genki.world/en/articles/10769959-what-is-covered-by-genki-traveler",
       "retrieved_at": "2026-01-15T00:00:00Z",
-      "sha256": "8160cdbe0996621dc0091be0e858b56fb956df38cf51e3b943d905f38d2d98fa",
+      "sha256": "1768effb6ac6dec84ea7c8f9a7c8867aa3fe71f97bd13499e9ebe8eebc630d4c",
       "local_path": "sources/GENKI_TRAVELER_COVERAGE_2026-01-15.html"
     },
     "MT_RESIDENCY_FAQ_2026": {
@@ -1060,7 +1360,7 @@
       "source_id": "WORLDNOMADS_COMPARE_2026",
       "url": "https://www.worldnomads.com/usa/travel-insurance/compare-travel-insurance",
       "retrieved_at": "2026-01-15T00:00:00Z",
-      "sha256": "0b8b193c742a7c00014a409df14a29959196c702ed67b76cb3a9e6fbd7d1d27f",
+      "sha256": "2b9d97f5a5431ef522bf36b89361555d1640406c20eb5093ceab42f66e08ad76",
       "local_path": "sources/WORLDNOMADS_COMPARE_2026-01-15.html"
     }
   }

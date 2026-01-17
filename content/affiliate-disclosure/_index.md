@@ -1,13 +1,19 @@
-﻿ Affiliate Disclosure (Transparency)
+ Affiliate Disclosure (Transparency)
 
 {{< vf-trust >}}
 All results are evidence-based. Missing evidence -> UNKNOWN.
 {{< /vf-trust >}}
 
-
 Some links on this website may be affiliate links.
 
 This means that if you click a link and purchase a product, we may earn a commission at no extra cost to you.
+
+We provide region-specific disclosures. Use the region selector in the checker, or select your region below:
+
+- [United States](/legal/us/affiliate-disclosure/)
+- [EU + UK](/legal/eu-uk/affiliate-disclosure/)
+- [Canada](/legal/ca/affiliate-disclosure/)
+- [AU/JP/SG/KR](/legal/apac/affiliate-disclosure/)
 
 ## 1) Independence and integrity
 
@@ -33,7 +39,7 @@ Products may be presented as options only when they satisfy criteria derived fro
 
 ## 3) How to interpret suggestions
 
-If the site displays products that meet requirements, this is a **filtering outcome** based on rules and evidenceâ€”not a personal recommendation.
+If the site displays products that meet requirements, this is a **filtering outcome** based on rules and evidence - not a personal recommendation.
 
 You should always:
 
@@ -46,4 +52,3 @@ You should always:
 If you have concerns about affiliate links or potential conflicts of interest, you can contact us or open a report using the "Notify me of changes" function.
 
 {{< vf-cta href="/ui/" label="Open Compliance Checker" >}}
-
