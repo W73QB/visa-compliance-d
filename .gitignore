@@ -1,6 +1,5 @@
 # Temporary Claude Code files
 tmpclaude-*-cwd
-
 # Python
 __pycache__/
 *.py[cod]
@@ -10,31 +9,29 @@ __pycache__/
 env/
 venv/
 *.egg-info/
-
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-
 # OS
 .DS_Store
 Thumbs.db
-
 # Build
 dist/
 build/
 public/
 .hugo_build.lock
 .worktrees/
-
 # Hugo local binaries/logs
 hugo.exe
 tools/logs/
-
 # Office documents (user working files)
 *.docx
 *.xlsx
 *.pptx
 ~$*
+docs/drafts/
+nul
+Gemini.md
