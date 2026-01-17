@@ -430,10 +430,10 @@
   </div>
 
   <!-- Modal evidence -->
-  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+  <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
       <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-        <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+        <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
         <button id="closeModal"
           class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
           Close
@@ -503,7 +503,7 @@ function initRegionSelector() {
 }
 
 function resolveDataUrl(pathname, snapshot) {
-  const path = String(pathname || "").replace(/\/g, "/");
+  const path = String(pathname || "").replace(/\\/g, "/");
   const safeSnapshot = snapshot ? snapshot.replace(/^\/+/, "") : "";
   if (safeSnapshot) {
     if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
@@ -554,7 +554,7 @@ function sanitizeUrl(url) {
   if (!url) return "";
   const s = String(url).trim();
   if (!s) return "";
-  if (/[ -]/.test(s)) return "#";
+  if (/[ -  ]/.test(s)) return "#";
   if (s.startsWith("//") || s.startsWith("\\")) return "#";
   // Allow http://, https://, mailto:, tel:
   if (/^(?:https?|mailto|tel):/i.test(s)) return s;
@@ -681,7 +681,10 @@ function statusPresentation(status){
   };
 }
 
+let lastFocusedElement;
+
 function openModal(evidenceItems){
+  lastFocusedElement = document.activeElement;
   const body = $("modalBody");
   body.innerHTML = "";
 
@@ -720,11 +723,19 @@ function openModal(evidenceItems){
 
   $("modal").classList.remove("hidden");
   $("modal").classList.add("flex");
+
+  // UX/A11y: Focus management
+  $("closeModal").focus();
 }
 
 function closeModal(){
   $("modal").classList.add("hidden");
   $("modal").classList.remove("flex");
+
+  // UX/A11y: Restore focus
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
 }
 
 function renderRequirements(visa){
@@ -1043,6 +1054,11 @@ async function init(){
 
     $("closeModal").addEventListener("click", closeModal);
     $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !$("modal").classList.contains("hidden")) {
+        closeModal();
+      }
+    });
 
     updateHints();
 
