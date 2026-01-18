@@ -20,6 +20,8 @@ $sourcesDir = Join-Path $fixtures "sources"
 $fixtureDir = Join-Path $fixtures "fixtures"
 $out1 = Join-Path $fixtures "out1.json"
 $out2 = Join-Path $fixtures "out2.json"
+$statusPath = Join-Path $fixtures "source_status.json"
+$reportPath = Join-Path $fixtures "report.md"
 $fixturePath = Join-Path $fixtureDir "TEST_SOURCE.txt"
 $metaPath = Join-Path $sourcesDir "TEST_SOURCE.meta.json"
 $originalFixture = Get-Content -Raw -Path $fixturePath
@@ -46,10 +48,24 @@ try {
   Assert-True ($proc2.ExitCode -eq 0) "source check runs after mutation"
   $report2 = Get-Content -Raw -Path $out2 | ConvertFrom-Json
   Assert-True ($report2.changed.Count -eq 1) "change detected"
+
+  $proc3 = Start-Process -FilePath "py" -ArgumentList @(
+    "tools/check_source_changes.py",
+    "--sources-dir", $sourcesDir,
+    "--fixture-dir", $fixtureDir,
+    "--output", $out2,
+    "--write-status", $statusPath,
+    "--report-md", $reportPath
+  ) -WorkingDirectory $root -Wait -PassThru
+  Assert-True ($proc3.ExitCode -eq 0) "source check runs with status/report"
+  $status = Get-Content -Raw -Path $statusPath | ConvertFrom-Json
+  Assert-True ($status.needs_review_source_ids.Count -eq 1) "needs_review_source_ids populated"
+  $report = Get-Content -Raw -Path $reportPath
+  Assert-True ($report -match "TEST_SOURCE") "report includes source id"
 } finally {
   Set-Content -Path $fixturePath -Value $originalFixture
   Set-Content -Path $metaPath -Value $originalMeta
-  Remove-Item -LiteralPath $out1, $out2 -Force -ErrorAction SilentlyContinue
+  Remove-Item -LiteralPath $out1, $out2, $statusPath, $reportPath -Force -ErrorAction SilentlyContinue
 }
 
 if ($failed) {
