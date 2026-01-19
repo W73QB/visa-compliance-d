@@ -3,6 +3,7 @@ import hashlib
 import json
 import sys
 import urllib.request
+from datetime import datetime
 from pathlib import Path
 
 
@@ -37,6 +38,8 @@ def main() -> None:
     parser.add_argument("--sources-dir", default="sources")
     parser.add_argument("--fixture-dir", default="")
     parser.add_argument("--output", default="")
+    parser.add_argument("--write-status", default="")
+    parser.add_argument("--report-md", default="")
     args = parser.parse_args()
 
     sources_dir = Path(args.sources_dir)
@@ -57,12 +60,48 @@ def main() -> None:
         except Exception as exc:
             print(f"[WARN] {source_id}: {exc}")
 
-    report = {"changed": changed}
+    checked_at = datetime.utcnow().isoformat() + "Z"
+    report = {"checked_at": checked_at, "changed": changed}
     output = json.dumps(report, indent=2)
     if args.output:
-        Path(args.output).write_text(output, encoding="utf-8")
+        out_path = Path(args.output)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(output, encoding="utf-8")
     else:
         print(output)
+
+    if args.write_status:
+        status_path = Path(args.write_status)
+        status_path.parent.mkdir(parents=True, exist_ok=True)
+        status = {
+            "checked_at": checked_at,
+            "needs_review_source_ids": [item["source_id"] for item in changed]
+        }
+        status_path.write_text(json.dumps(status, indent=2), encoding="utf-8")
+
+    if args.report_md:
+        report_path = Path(args.report_md)
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        if changed:
+            lines_md = [
+                "# Source Monitor Report",
+                "",
+                f"Checked at: {checked_at}",
+                "",
+                "## Changed Sources",
+                "",
+            ]
+            for item in changed:
+                lines_md.append(f"- **{item['source_id']}** | {item['url']} | `{item['sha256']}`")
+        else:
+            lines_md = [
+                "# Source Monitor Report",
+                "",
+                f"Checked at: {checked_at}",
+                "",
+                "No changes detected.",
+            ]
+        report_path.write_text("\n".join(lines_md) + "\n", encoding="utf-8")
 
     sys.exit(0)
 

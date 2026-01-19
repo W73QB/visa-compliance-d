@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: '3.11'
       - name: Check sources
-        run: python tools/check_source_changes.py
+        run: python tools/check_source_changes.py --output tools/source_monitor_report.json --write-status data/source_status.json --report-md tools/source_monitor_report.md

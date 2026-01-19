@@ -281,9 +281,15 @@
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
 
           <div class="flex flex-col gap-4">
-            <div id="statusChip" class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border">
-              <span id="statusIcon" class="material-symbols-outlined text-sm icon-filled">help</span>
-              <span id="statusChipText">UNKNOWN</span>
+            <div class="flex flex-wrap items-center gap-2">
+              <div id="statusChip" class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border">
+                <span id="statusIcon" class="material-symbols-outlined text-sm icon-filled">help</span>
+                <span id="statusChipText">UNKNOWN</span>
+              </div>
+              <div id="needsReviewBadge" class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-warning-yellow/40 text-warning-yellow bg-warning-yellow/10">
+                <span class="material-symbols-outlined text-sm">warning</span>
+                Needs Review
+              </div>
             </div>
 
             <div>
@@ -299,7 +305,7 @@
           <div class="flex flex-col gap-2 text-sm text-text-secondary dark:text-gray-400 bg-white dark:bg-gray-800/50 p-4 rounded-lg border border-border-soft dark:border-border-dark">
             <div class="flex items-center gap-2">
               <span class="material-symbols-outlined text-gray-400 text-lg">history</span>
-              <span class="font-medium">Last verified:</span>
+              <span class="font-medium">Last Verified:</span>
               <span id="lastVerified">-</span>
             </div>
             <div class="flex items-center gap-2">
@@ -604,6 +610,7 @@ function normalizeIndex(raw){
   return {
     built_at: raw.built_at || null,
     snapshot_id: raw.snapshot_id || null,
+    source_status: raw.source_status || { checked_at: null, needs_review_source_ids: [] },
     visa_list, product_list,
     visas_by_id, products_by_id,
     sources_by_id, mappings_by_key,
@@ -679,6 +686,19 @@ function statusPresentation(status){
     title: "Result: UNKNOWN (Missing evidence)",
     subtitle: "Cannot conclude due to missing evidence."
   };
+}
+
+function mappingNeedsReview(mapping, needsReviewIds){
+  if (!mapping || !needsReviewIds || !needsReviewIds.length) return false;
+  const needSet = new Set(needsReviewIds);
+  const reasons = mapping.reasons || [];
+  for (const reason of reasons) {
+    const evidence = reason.evidence || [];
+    for (const ev of evidence) {
+      if (ev && needSet.has(ev.source_id)) return true;
+    }
+  }
+  return false;
 }
 
 function openModal(evidenceItems){
@@ -947,8 +967,11 @@ function renderResult(){
   $("resultTitle").textContent = pres.title;
   $("resultSubtitle").textContent = pres.subtitle;
 
+  const needsReview = mappingNeedsReview(mapping, INDEX.source_status?.needs_review_source_ids || []);
+  $("needsReviewBadge")?.classList.toggle("hidden", !needsReview);
+
   // meta
-  $("lastVerified").textContent = visa.last_verified || "-";
+  $("lastVerified").textContent = mapping?.last_verified || "-";
   $("authorityText").textContent = visa.authority || "-";
   $("scopeText").textContent = visa.id || "-";
   $("snapshotId").textContent = SNAPSHOT_PARAM || INDEX.snapshot_id || "-";

@@ -14,6 +14,15 @@ canonifyURLs = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   defaultTheme = "auto"
+  [params.analytics]
+    src = ""
+    id = ""
+  [params.giscus]
+    repo = ""
+    repo_id = ""
+    category = ""
+    category_id = ""
+    mapping = "pathname"
 
 [menu]
   [[menu.main]]

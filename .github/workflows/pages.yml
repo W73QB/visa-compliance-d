@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -82,8 +83,16 @@ jobs:
           hugo-version: "0.146.0"
           extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Build Hugo (with log)
         run: pwsh -File tools/build_hugo.ps1
+
+      - name: Build Pagefind
+        run: pwsh -File tools/build_pagefind.ps1
 
       - name: Verify Hugo build log
         run: pwsh -File tools/tests/hugo_build_log_tests.ps1
