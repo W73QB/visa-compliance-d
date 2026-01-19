@@ -1,0 +1,5 @@
+{{- $src := site.Params.analytics.src | default (getenv "HUGO_PARAMS_ANALYTICS_SRC") | default "" -}}
+{{- $id := site.Params.analytics.id | default (getenv "HUGO_PARAMS_ANALYTICS_ID") | default "" -}}
+{{- if and $src $id -}}
+  <script defer data-analytics-id="{{ $id }}" src="{{ $src }}"></script>
+{{- end -}}
