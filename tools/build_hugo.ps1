@@ -29,13 +29,30 @@ try {
   Add-Content -Path $logPath -Value "Build command: $hugoCmd --minify"
   Add-Content -Path $logPath -Value "--- Hugo build output ---"
 
+  $prevEap = $ErrorActionPreference
+  $prevNative = $null
+  if ($PSVersionTable.PSVersion.Major -ge 7) {
+    $prevNative = $PSNativeCommandUseErrorActionPreference
+    $PSNativeCommandUseErrorActionPreference = $false
+  }
+  $ErrorActionPreference = "Continue"
   & $hugoCmd --minify 2>&1 | Tee-Object -FilePath $logPath -Append
+  $ErrorActionPreference = $prevEap
+  if ($PSVersionTable.PSVersion.Major -ge 7 -and $null -ne $prevNative) {
+    $PSNativeCommandUseErrorActionPreference = $prevNative
+  }
   $exitCode = $LASTEXITCODE
   Add-Content -Path $logPath -Value "Exit code: $exitCode"
 
   if ($exitCode -ne 0) {
     Write-Error "Hugo build failed with exit code $exitCode"
     exit $exitCode
+  }
+
+  & (Join-Path $PSScriptRoot "build_pagefind.ps1")
+  if ($LASTEXITCODE -ne 0) {
+    Write-Error "Pagefind build failed with exit code $LASTEXITCODE"
+    exit $LASTEXITCODE
   }
   Write-Host "Log written to $logPath"
 } finally {
