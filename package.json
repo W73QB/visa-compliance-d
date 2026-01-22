@@ -1,0 +1,35 @@
+{
+  "name": "visa-compliance-d",
+  "version": "1.0.0",
+  "description": "This is a compliance-first visa insurance platform.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./ui/style.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./ui/style.css --watch",
+    "dev": "npm-run-all --parallel watch:css hugo:dev",
+    "hugo:dev": "hugo server -D",
+    "build": "npm run build:css && hugo --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W73QB/visa-compliance-d.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/W73QB/visa-compliance-d/issues"
+  },
+  "homepage": "https://github.com/W73QB/visa-compliance-d#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

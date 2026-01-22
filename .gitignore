@@ -24,6 +24,9 @@ build/
 public/
 .hugo_build.lock
 .worktrees/
+# Node.js / Tailwind
+node_modules/
+ui/style.css
 # Hugo local binaries/logs
 hugo.exe
 tools/logs/

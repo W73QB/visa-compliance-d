@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>VisaFact - Evidence-Based Visa Insurance Compliance Checker</title>
-  <meta name="description" content="Check if your insurance meets official visa requirements. Evidence-backed results verified against primary sources. No source = UNKNOWN.">
+  <meta name="description"
+    content="Check if your insurance meets official visa requirements. Evidence-backed results verified against primary sources. No source = UNKNOWN.">
   <meta name="keywords" content="visa insurance, compliance checker, Spain DNV, evidence-based">
   <meta property="og:title" content="VisaFact - Visa Insurance Compliance Checker">
   <meta property="og:description" content="Evidence-backed compliance checking against official visa requirements.">
@@ -27,705 +29,650 @@
   }
   </script>
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="./style.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
 
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#1e3a5f",
-            "primary-hover": "#152a45",
-            "accent": "#c9a227",
-            "accent-hover": "#b8921f",
-            "background-light": "#faf8f5",
-            "background-dark": "#0f1419",
-            "surface-light": "#ffffff",
-            "surface-dark": "#1a232e",
-            "border-soft": "#e8e4df",
-            "border-dark": "#2d3748",
-            "success-green": "#059669",
-            "warning-yellow": "#d97706",
-            "error-red": "#dc2626",
-            "unknown-gray": "#6b7280",
-            "info-blue": "#0369a1",
-            "text-primary": "#1a1a1a",
-            "text-secondary": "#525252"
-          },
-          fontFamily: {
-            "display": ["'DM Serif Display'", "Georgia", "serif"],
-            "body": ["'Plus Jakarta Sans'", "system-ui", "sans-serif"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.5rem",
-            "lg": "1rem",
-            "xl": "1.5rem",
-          },
-        },
-      },
-    }
-  </script>
 
-  <style>
-    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
-  }
-  .icon-filled { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
-  /* Accessibility: Focus states */
-  :focus-visible {
-    outline: 2px solid #1e3a5f;
-    outline-offset: 2px;
-  }
-  button:focus-visible, a:focus-visible, select:focus-visible {
-    outline: 2px solid #c9a227;
-    outline-offset: 2px;
-    box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
-  }
-  /* Page load animations */
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fade-up { animation: fadeSlideUp 0.6s ease-out both; }
-  .delay-100 { animation-delay: 0.1s; }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-300 { animation-delay: 0.3s; }
 
-  /* Result reveal animation */
-  @keyframes revealUp {
-    from { opacity: 0; transform: translateY(30px) scale(0.98); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-  }
-  .animate-reveal { animation: revealUp 0.5s ease-out both; }
 
-  /* Status pulse for GREEN */
-  @keyframes trustPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4); }
-    50% { box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
-  }
-  .pulse-success { animation: trustPulse 2s ease-in-out infinite; }
-  /* Subtle paper texture */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 0.03;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    z-index: -1;
-  }
-  .dark body::before { opacity: 0.02; }
-  /* Stamp-style status badges */
-  .stamp-badge {
-    position: relative;
-    padding: 0.5rem 1rem;
-    border: 3px solid currentColor;
-    border-radius: 0.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transform: rotate(-2deg);
-  }
-  .stamp-badge::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border: 1px dashed currentColor;
-    border-radius: 0.25rem;
-    opacity: 0.5;
-  }
-</style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark min-h-screen font-body text-text-primary dark:text-white transition-colors duration-200">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">Skip to main content</a>
+<body
+  class="bg-background-light dark:bg-background-dark min-h-screen font-body text-text-primary dark:text-white transition-colors duration-200">
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">Skip
+    to main content</a>
 
-<header class="sticky top-0 z-50 w-full bg-surface-light dark:bg-[#111418] border-b border-border-soft dark:border-border-dark backdrop-blur-md bg-opacity-95 dark:bg-opacity-95">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-    <div class="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer">
-      <span class="material-symbols-outlined text-primary text-3xl icon-filled">verified_user</span>
-      <span class="text-text-primary dark:text-white text-xl font-bold tracking-tight">VisaFact</span>
-    </div>
-    <button id="mobileMenuBtn" class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" aria-label="Toggle menu">
-      <span class="material-symbols-outlined text-2xl">menu</span>
-    </button>
-    <nav class="hidden md:flex items-center gap-8">
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../">Home</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../visas/">Visas</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../methodology/">Methodology</a>
-      <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="../disclaimer/">Disclaimer</a>
-    </nav>
-    <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-surface-light dark:bg-surface-dark border-b border-border-soft dark:border-border-dark shadow-lg">
-      <div class="flex flex-col p-4 gap-2">
-        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../">Home</a>
-        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../visas/">Visas</a>
-        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../methodology/">Methodology</a>
-        <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" href="../disclaimer/">Disclaimer</a>
+  <header
+    class="sticky top-0 z-50 w-full bg-surface-light dark:bg-[#111418] border-b border-border-soft dark:border-border-dark backdrop-blur-md bg-opacity-95 dark:bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-3xl icon-filled">verified_user</span>
+        <span class="text-text-primary dark:text-white text-xl font-bold tracking-tight">VisaFact</span>
       </div>
-    </div>
-    <button class="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm flex items-center gap-2">
-      <span class="material-symbols-outlined text-sm">support_agent</span>
-      Support
-    </button>
-  </div>
-</header>
-
-<main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-  <div class="text-center mb-12 animate-fade-up">
-    <h1 class="font-display text-3xl md:text-5xl font-normal tracking-tight mb-4 text-text-primary dark:text-white">
-      VisaFact Compliance Checker
-    </h1>
-    <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-4">
-      <span class="material-symbols-outlined text-accent text-lg icon-filled">verified</span>
-      <span class="text-sm font-semibold text-accent">Evidence-Backed Decisions</span>
-    </div>
-    <p class="text-text-secondary dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-      Ensure your insurance meets strict visa requirements with evidence-based results verified against official sources.
-      <span class="block mt-2 text-sm">
-        No source = UNKNOWN. Not legal advice.
-      </span>
-    </p>
-  </div>
-
-  <div class="max-w-3xl mx-auto mb-8 animate-fade-up delay-100">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-3">
-      <label for="vf-region-select" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">Region</label>
-      <select id="vf-region-select" class="h-10 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white px-3 text-sm font-medium">
-        <option value="us">United States</option>
-        <option value="eu-uk">EU + UK</option>
-        <option value="ca">Canada</option>
-        <option value="apac">AU/JP/SG/KR</option>
-      </select>
-      <span class="text-xs text-text-secondary dark:text-gray-500">Used for legal disclosures.</span>
-    </div>
-  </div>
-
-  <!-- INPUT CARD -->
-  <div class="max-w-4xl mx-auto bg-surface-light dark:bg-surface-dark rounded-xl border border-border-soft dark:border-border-dark p-6 md:p-10 mb-12 shadow-lg shadow-black/5 dark:shadow-black/20 hover:shadow-xl transition-shadow duration-300 animate-fade-up delay-100">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-
-      <div class="flex flex-col gap-3 group">
-        <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying for</label>
-        <div class="relative">
-          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
-          <select id="visaSelect"
-            class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
-            <option value="">Select visa route (authority)</option>
-          </select>
-          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+      <button id="mobileMenuBtn"
+        class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+        aria-label="Toggle menu">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          href="../">Home</a>
+        <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          href="../visas/">Visas</a>
+        <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          href="../methodology/">Methodology</a>
+        <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+          href="../disclaimer/">Disclaimer</a>
+      </nav>
+      <div id="mobileMenu"
+        class="hidden md:hidden absolute top-16 left-0 right-0 bg-surface-light dark:bg-surface-dark border-b border-border-soft dark:border-border-dark shadow-lg">
+        <div class="flex flex-col p-4 gap-2">
+          <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            href="../">Home</a>
+          <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            href="../visas/">Visas</a>
+          <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            href="../methodology/">Methodology</a>
+          <a class="px-4 py-3 text-sm font-medium text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            href="../disclaimer/">Disclaimer</a>
         </div>
-        <p id="visaHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a visa record (route + authority). Each record is evidence-based.</p>
       </div>
-
-      <div class="flex flex-col gap-3 group">
-        <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to use</label>
-        <div class="relative">
-          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
-          <select id="productSelect"
-            class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
-            <option value="">Select an insurance product</option>
-          </select>
-          <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
-        </div>
-        <p id="productHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a product record (policy version + evidence).</p>
-      </div>
-
-    </div>
-
-    <div class="mt-10 flex justify-center">
-      <button id="checkBtn" disabled
-        class="group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed">
-        <span class="material-symbols-outlined group-hover:scale-110 transition-transform">check_circle</span>
-        Check Compliance
+      <button
+        class="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm flex items-center gap-2">
+        <span class="material-symbols-outlined text-sm">support_agent</span>
+        Support
       </button>
     </div>
-  </div>
+  </header>
 
-  <!-- Loading skeleton -->
-  <div id="loadingState" class="max-w-4xl mx-auto mb-12 hidden">
-    <div class="flex items-center justify-center gap-3 py-8">
-      <div class="animate-spin rounded-full h-8 w-8 border-2 border-primary border-t-transparent"></div>
-      <span class="text-text-secondary font-medium">Loading compliance data...</span>
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-12 animate-fade-up">
+      <h1 class="font-display text-3xl md:text-5xl font-normal tracking-tight mb-4 text-text-primary dark:text-white">
+        VisaFact Compliance Checker
+      </h1>
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-4">
+        <span class="material-symbols-outlined text-accent text-lg icon-filled">verified</span>
+        <span class="text-sm font-semibold text-accent">Evidence-Backed Decisions</span>
+      </div>
+      <p class="text-text-secondary dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        Ensure your insurance meets strict visa requirements with evidence-based results verified against official
+        sources.
+        <span class="block mt-2 text-sm">
+          No source = UNKNOWN. Not legal advice.
+        </span>
+      </p>
     </div>
-  </div>
 
-  <!-- RESULT AREA -->
-  <div id="resultArea" class="max-w-5xl mx-auto space-y-8 hidden" aria-live="polite">
-    <div id="esDnvBanner" class="hidden rounded-xl border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-5">
-      <div class="flex items-start gap-3">
-        <span class="material-symbols-outlined text-warning-yellow text-2xl">warning</span>
-        <div class="space-y-2">
-          <p class="font-semibold text-warning-yellow">Spain DNV: GREEN available</p>
-          <p class="text-sm text-text-secondary dark:text-gray-300">
-            As of 2026-01-16, ASISA Health Residents is GREEN based on official evidence. Other products can still be RED
-            or UNKNOWN if any requirement lacks official proof. We only mark GREEN with official sources.
-          </p>
-          <div class="flex flex-wrap gap-3 text-sm">
-            <a class="font-semibold text-primary hover:text-primary-hover underline" href="../posts/spain-dnv-insurance/">See requirement summary</a>
-            <a class="font-semibold text-primary hover:text-primary-hover underline" href="../methodology/">Evidence rules</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-soft dark:border-border-dark overflow-hidden shadow-xl shadow-black/5 dark:shadow-black/20">
-
-      <!-- Header -->
-      <div class="p-8 border-b border-border-soft dark:border-border-dark bg-gradient-to-b from-transparent to-gray-50/50 dark:to-gray-900/30">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-wrap items-center gap-2">
-              <div id="statusChip" class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border">
-                <span id="statusIcon" class="material-symbols-outlined text-sm icon-filled">help</span>
-                <span id="statusChipText">UNKNOWN</span>
-              </div>
-              <div id="needsReviewBadge" class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-warning-yellow/40 text-warning-yellow bg-warning-yellow/10">
-                <span class="material-symbols-outlined text-sm">warning</span>
-                Needs Review
-              </div>
-            </div>
-
-            <div>
-              <h2 id="resultTitle" class="text-3xl font-bold text-text-primary dark:text-white mb-2 flex items-center gap-3">
-                Result: UNKNOWN
-              </h2>
-              <p id="resultSubtitle" class="text-text-secondary dark:text-gray-400">
-                Cannot conclude due to missing evidence.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-2 text-sm text-text-secondary dark:text-gray-400 bg-white dark:bg-gray-800/50 p-4 rounded-lg border border-border-soft dark:border-border-dark">
-            <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-gray-400 text-lg">history</span>
-              <span class="font-medium">Last Verified:</span>
-              <span id="lastVerified">-</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-gray-400 text-lg">account_balance</span>
-              <span class="font-medium">Authority:</span>
-              <span id="authorityText">-</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-gray-400 text-lg">fingerprint</span>
-              <span class="font-medium">Scope:</span>
-              <span id="scopeText">-</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-gray-400 text-lg">inventory_2</span>
-              <span class="font-medium">Snapshot:</span>
-              <span id="snapshotId">-</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-border-soft dark:divide-border-dark">
-        <!-- Visa Requirements (FACTS) -->
-        <div class="p-6 md:p-8">
-          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-soft dark:border-border-dark">
-            <div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-              <span class="material-symbols-outlined text-primary text-xl">rule</span>
-            </div>
-            <h3 class="font-bold text-lg text-text-primary dark:text-white">Visa Requirements (Facts)</h3>
-          </div>
-
-          <ul id="requirementsList" class="space-y-4"></ul>
-        </div>
-
-        <!-- Compliance Reasons (ENGINE) -->
-        <div class="p-6 md:p-8 bg-gray-50/30 dark:bg-black/10">
-          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-soft dark:border-border-dark">
-            <div class="p-2 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-              <span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-xl">fact_check</span>
-            </div>
-            <h3 class="font-bold text-lg text-text-primary dark:text-white">Compliance Reasons (Engine)</h3>
-          </div>
-
-          <ul id="reasonsList" class="space-y-4 relative">
-            <div id="timelineLine" class="absolute left-[21px] top-6 bottom-6 w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
-          </ul>
-          <div id="esDnvResultNotice" class="hidden mt-6 rounded-lg border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-4">
-            <div class="flex items-start gap-2">
-              <span class="material-symbols-outlined text-warning-yellow text-lg">info</span>
-              <div class="text-sm text-text-secondary dark:text-gray-300">
-                Spain DNV requires no moratorium, no deductible, unlimited coverage, and public system risk coverage.
-                If your product has official evidence for all requirements, send it to support for review.
-              </div>
-            </div>
-          </div>
-
-          <!-- Missing evidence box (only when UNKNOWN) -->
-          <div id="missingBox" class="mt-6 hidden">
-            <div class="flex items-center gap-2 mb-2 text-text-primary dark:text-white">
-              <span class="material-symbols-outlined text-warning-yellow">warning</span>
-              <h4 class="font-bold">Missing evidence (why UNKNOWN)</h4>
-            </div>
-            <ul id="missingList" class="list-disc pl-6 text-sm text-text-secondary dark:text-gray-300"></ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer actions -->
-      <div class="bg-gray-50 dark:bg-[#151c24] p-6 border-t border-border-soft dark:border-border-dark">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div class="flex flex-wrap gap-3 w-full md:w-auto justify-center md:justify-start">
-            <a id="officialBtn" target="_blank" rel="noopener"
-              class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-border-soft dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-text-primary dark:text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
-              href="#">
-              <span class="material-symbols-outlined text-sm">open_in_new</span>
-              Official Portal
-            </a>
-
-            <a id="snapshotBtn" target="_blank" rel="noopener"
-              class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-border-soft dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-text-primary dark:text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
-              href="#">
-              <span class="material-symbols-outlined text-sm">visibility</span>
-              Open Snapshot
-            </a>
-
-            <a id="notifyBtn" target="_blank" rel="noopener"
-              class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
-              href="#">
-              <span class="material-symbols-outlined text-sm">notifications_active</span>
-              Notify me of changes
-            </a>
-          </div>
-
-          <button id="copyLinkBtn"
-            class="flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-white text-sm font-medium transition-colors">
-            <span class="material-symbols-outlined text-lg">link</span>
-            Copy link
-          </button>
-        </div>
-
-
-        <div id="offerCta" class="mt-6 hidden">
-          <div class="p-4 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800">
-            <div id="offerMessage" class="text-sm text-text-primary dark:text-white font-semibold"></div>
-            <a id="offerLink" class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg" target="_blank" rel="noopener" href="#">Get quote</a>
-            <div id="offerDisclosure" data-cta-disclosure class="mt-2 text-xs text-text-secondary dark:text-gray-400 flex items-center gap-2">
-              <span class="vf-ad-label inline-flex items-center px-2 py-0.5 rounded border border-border-soft dark:border-border-dark text-[10px] font-semibold uppercase tracking-wider">Ad label</span>
-              <span class="vf-disclosure-text">Affiliate link.</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 flex justify-between text-xs text-gray-400">
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm">update</span>
-            <span id="lastUpdated">Last updated: -</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm">code</span>
-            <span id="builtAt">Built at: -</span>
-          </div>
-        </div>
+    <div class="max-w-3xl mx-auto mb-8 animate-fade-up delay-100">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+        <label for="vf-region-select"
+          class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">Region</label>
+        <select id="vf-region-select"
+          class="h-10 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white px-3 text-sm font-medium">
+          <option value="us">United States</option>
+          <option value="eu-uk">EU + UK</option>
+          <option value="ca">Canada</option>
+          <option value="apac">AU/JP/SG/KR</option>
+        </select>
+        <span class="text-xs text-text-secondary dark:text-gray-500">Used for legal disclosures.</span>
       </div>
     </div>
-  </div>
 
-  <!-- Modal evidence -->
-  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
-    <div class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
-      <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-        <div class="font-bold text-text-primary dark:text-white">Evidence</div>
-        <button id="closeModal"
-          class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-          Close
+    <!-- INPUT CARD -->
+    <div
+      class="max-w-4xl mx-auto bg-surface-light dark:bg-surface-dark rounded-xl border border-border-soft dark:border-border-dark p-6 md:p-10 mb-12 shadow-lg shadow-black/5 dark:shadow-black/20 hover:shadow-xl transition-shadow duration-300 animate-fade-up delay-100">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+
+        <div class="flex flex-col gap-3 group">
+          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying
+            for</label>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
+            <select id="visaSelect"
+              class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
+              <option value="">Select visa route (authority)</option>
+            </select>
+            <span
+              class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+          </div>
+          <p id="visaHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a visa record (route +
+            authority). Each record is evidence-based.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 group">
+          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to
+            use</label>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
+            <select id="productSelect"
+              class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
+              <option value="">Select an insurance product</option>
+            </select>
+            <span
+              class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+          </div>
+          <p id="productHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a product record
+            (policy version + evidence).</p>
+        </div>
+
+      </div>
+
+      <div class="mt-10 flex justify-center">
+        <button id="checkBtn" disabled
+          class="group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed">
+          <span class="material-symbols-outlined group-hover:scale-110 transition-transform">check_circle</span>
+          Check Compliance
         </button>
       </div>
-      <div id="modalBody" class="p-4 space-y-4 max-h-[70vh] overflow-auto"></div>
     </div>
-  </div>
 
-</main>
-
-<footer class="bg-surface-light dark:bg-[#0d1117] border-t border-border-soft dark:border-border-dark mt-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-      <div class="flex items-center gap-2 opacity-80">
-        <span class="material-symbols-outlined text-2xl text-primary icon-filled">verified_user</span>
-        <span class="font-bold text-lg text-text-primary dark:text-white">VisaFact</span>
+    <!-- Loading skeleton -->
+    <div id="loadingState" class="max-w-4xl mx-auto mb-12 hidden">
+      <div class="flex items-center justify-center gap-3 py-8">
+        <div class="animate-spin rounded-full h-8 w-8 border-2 border-primary border-t-transparent"></div>
+        <span class="text-text-secondary font-medium">Loading compliance data...</span>
       </div>
-      <div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-text-secondary dark:text-gray-400">
-        <a class="hover:text-primary transition-colors" href="../methodology/">Methodology</a>
-        <a class="hover:text-primary transition-colors" href="../disclaimer/">Disclaimer</a>
-        <a class="hover:text-primary transition-colors" href="../affiliate-disclosure/">Affiliate Disclosure</a>
-      </div>
-      <p class="text-xs text-text-secondary dark:text-gray-600">&copy; <script>document.write(new Date().getFullYear())</script> VisaFact. All rights reserved.</p>
     </div>
-  </div>
-</footer>
 
-<script>
-/*
-  Resolve the data URL based on the page location:
-  - /ui/index.html -> "../data/ui_index.json"
-  - /index.html -> "data/ui_index.json"
-  With snapshot param:
-  - /ui/?snapshot=foo -> "../snapshots/foo/ui_index.json"
-*/
-const SNAPSHOT_PARAM = new URLSearchParams(location.search).get("snapshot");
-const REGION_KEY = "vf_region";
-const DEFAULT_REGION = "us";
-const DISCLOSURE_BY_REGION = {
-  "us": "Paid link. We may earn a commission if you purchase through this link.",
-  "eu-uk": "Paid link. We may earn a commission if you purchase through this link.",
-  "ca": "Paid link. We may earn a commission if you purchase through this link.",
-  "apac": "Paid link. We may earn a commission if you purchase through this link."
-};
+    <!-- RESULT AREA -->
+    <div id="resultArea" class="max-w-5xl mx-auto space-y-8 hidden" aria-live="polite">
+      <div id="esDnvBanner"
+        class="hidden rounded-xl border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-5">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-warning-yellow text-2xl">warning</span>
+          <div class="space-y-2">
+            <p class="font-semibold text-warning-yellow">Spain DNV: GREEN available</p>
+            <p class="text-sm text-text-secondary dark:text-gray-300">
+              As of 2026-01-16, ASISA Health Residents is GREEN based on official evidence. Other products can still be
+              RED
+              or UNKNOWN if any requirement lacks official proof. We only mark GREEN with official sources.
+            </p>
+            <div class="flex flex-wrap gap-3 text-sm">
+              <a class="font-semibold text-primary hover:text-primary-hover underline"
+                href="../posts/spain-dnv-insurance/">See requirement summary</a>
+              <a class="font-semibold text-primary hover:text-primary-hover underline" href="../methodology/">Evidence
+                rules</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-soft dark:border-border-dark overflow-hidden shadow-xl shadow-black/5 dark:shadow-black/20">
 
-function getRegion() {
-  return localStorage.getItem(REGION_KEY) || DEFAULT_REGION;
-}
+        <!-- Header -->
+        <div
+          class="p-8 border-b border-border-soft dark:border-border-dark bg-gradient-to-b from-transparent to-gray-50/50 dark:to-gray-900/30">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
 
-function setRegion(value) {
-  const next = value || DEFAULT_REGION;
-  localStorage.setItem(REGION_KEY, next);
-  return next;
-}
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <div id="statusChip"
+                  class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border">
+                  <span id="statusIcon" class="material-symbols-outlined text-sm icon-filled">help</span>
+                  <span id="statusChipText">UNKNOWN</span>
+                </div>
+                <div id="needsReviewBadge"
+                  class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-warning-yellow/40 text-warning-yellow bg-warning-yellow/10">
+                  <span class="material-symbols-outlined text-sm">warning</span>
+                  Needs Review
+                </div>
+              </div>
 
-function initRegionSelector() {
-  const sel = $("vf-region-select");
-  if (!sel) return;
-  sel.value = getRegion();
-  sel.addEventListener("change", () => {
-    setRegion(sel.value);
-    if (!$("resultArea").classList.contains("hidden")) {
-      renderResult();
+              <div>
+                <h2 id="resultTitle"
+                  class="text-3xl font-bold text-text-primary dark:text-white mb-2 flex items-center gap-3">
+                  Result: UNKNOWN
+                </h2>
+                <p id="resultSubtitle" class="text-text-secondary dark:text-gray-400">
+                  Cannot conclude due to missing evidence.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 text-sm text-text-secondary dark:text-gray-400 bg-white dark:bg-gray-800/50 p-4 rounded-lg border border-border-soft dark:border-border-dark">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gray-400 text-lg">history</span>
+                <span class="font-medium">Last Verified:</span>
+                <span id="lastVerified">-</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gray-400 text-lg">account_balance</span>
+                <span class="font-medium">Authority:</span>
+                <span id="authorityText">-</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gray-400 text-lg">fingerprint</span>
+                <span class="font-medium">Scope:</span>
+                <span id="scopeText">-</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gray-400 text-lg">inventory_2</span>
+                <span class="font-medium">Snapshot:</span>
+                <span id="snapshotId">-</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-border-soft dark:divide-border-dark">
+          <!-- Visa Requirements (FACTS) -->
+          <div class="p-6 md:p-8">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-soft dark:border-border-dark">
+              <div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <span class="material-symbols-outlined text-primary text-xl">rule</span>
+              </div>
+              <h3 class="font-bold text-lg text-text-primary dark:text-white">Visa Requirements (Facts)</h3>
+            </div>
+
+            <ul id="requirementsList" class="space-y-4"></ul>
+          </div>
+
+          <!-- Compliance Reasons (ENGINE) -->
+          <div class="p-6 md:p-8 bg-gray-50/30 dark:bg-black/10">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-soft dark:border-border-dark">
+              <div class="p-2 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+                <span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-xl">fact_check</span>
+              </div>
+              <h3 class="font-bold text-lg text-text-primary dark:text-white">Compliance Reasons (Engine)</h3>
+            </div>
+
+            <ul id="reasonsList" class="space-y-4 relative">
+              <div id="timelineLine"
+                class="absolute left-[21px] top-6 bottom-6 w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
+            </ul>
+            <div id="esDnvResultNotice"
+              class="hidden mt-6 rounded-lg border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-4">
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-warning-yellow text-lg">info</span>
+                <div class="text-sm text-text-secondary dark:text-gray-300">
+                  Spain DNV requires no moratorium, no deductible, unlimited coverage, and public system risk coverage.
+                  If your product has official evidence for all requirements, send it to support for review.
+                </div>
+              </div>
+            </div>
+
+            <!-- Missing evidence box (only when UNKNOWN) -->
+            <div id="missingBox" class="mt-6 hidden">
+              <div class="flex items-center gap-2 mb-2 text-text-primary dark:text-white">
+                <span class="material-symbols-outlined text-warning-yellow">warning</span>
+                <h4 class="font-bold">Missing evidence (why UNKNOWN)</h4>
+              </div>
+              <ul id="missingList" class="list-disc pl-6 text-sm text-text-secondary dark:text-gray-300"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer actions -->
+        <div class="bg-gray-50 dark:bg-[#151c24] p-6 border-t border-border-soft dark:border-border-dark">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex flex-wrap gap-3 w-full md:w-auto justify-center md:justify-start">
+              <a id="officialBtn" target="_blank" rel="noopener"
+                class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-border-soft dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-text-primary dark:text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
+                href="#">
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                Official Portal
+              </a>
+
+              <a id="snapshotBtn" target="_blank" rel="noopener"
+                class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-border-soft dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-text-primary dark:text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
+                href="#">
+                <span class="material-symbols-outlined text-sm">visibility</span>
+                Open Snapshot
+              </a>
+
+              <a id="notifyBtn" target="_blank" rel="noopener"
+                class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
+                href="#">
+                <span class="material-symbols-outlined text-sm">notifications_active</span>
+                Notify me of changes
+              </a>
+            </div>
+
+            <button id="copyLinkBtn"
+              class="flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-white text-sm font-medium transition-colors">
+              <span class="material-symbols-outlined text-lg">link</span>
+              Copy link
+            </button>
+          </div>
+
+
+          <div id="offerCta" class="mt-6 hidden">
+            <div class="p-4 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800">
+              <div id="offerMessage" class="text-sm text-text-primary dark:text-white font-semibold"></div>
+              <a id="offerLink"
+                class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg"
+                target="_blank" rel="noopener" href="#">Get quote</a>
+              <div id="offerDisclosure" data-cta-disclosure
+                class="mt-2 text-xs text-text-secondary dark:text-gray-400 flex items-center gap-2">
+                <span
+                  class="vf-ad-label inline-flex items-center px-2 py-0.5 rounded border border-border-soft dark:border-border-dark text-[10px] font-semibold uppercase tracking-wider">Ad
+                  label</span>
+                <span class="vf-disclosure-text">Affiliate link.</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div
+            class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 flex justify-between text-xs text-gray-400">
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm">update</span>
+              <span id="lastUpdated">Last updated: -</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm">code</span>
+              <span id="builtAt">Built at: -</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal evidence -->
+    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+      <div
+        class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
+          <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+          <button id="closeModal"
+            class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+            Close
+          </button>
+        </div>
+        <div id="modalBody" class="p-4 space-y-4 max-h-[70vh] overflow-auto"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-surface-light dark:bg-[#0d1117] border-t border-border-soft dark:border-border-dark mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-2 opacity-80">
+          <span class="material-symbols-outlined text-2xl text-primary icon-filled">verified_user</span>
+          <span class="font-bold text-lg text-text-primary dark:text-white">VisaFact</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-text-secondary dark:text-gray-400">
+          <a class="hover:text-primary transition-colors" href="../methodology/">Methodology</a>
+          <a class="hover:text-primary transition-colors" href="../disclaimer/">Disclaimer</a>
+          <a class="hover:text-primary transition-colors" href="../affiliate-disclosure/">Affiliate Disclosure</a>
+        </div>
+        <p class="text-xs text-text-secondary dark:text-gray-600">&copy;
+          <script>document.write(new Date().getFullYear())</script> VisaFact. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      Resolve the data URL based on the page location:
+      - /ui/index.html -> "../data/ui_index.json"
+      - /index.html -> "data/ui_index.json"
+      With snapshot param:
+      - /ui/?snapshot=foo -> "../snapshots/foo/ui_index.json"
+    */
+    const SNAPSHOT_PARAM = new URLSearchParams(location.search).get("snapshot");
+    const REGION_KEY = "vf_region";
+    const DEFAULT_REGION = "us";
+    const DISCLOSURE_BY_REGION = {
+      "us": "Paid link. We may earn a commission if you purchase through this link.",
+      "eu-uk": "Paid link. We may earn a commission if you purchase through this link.",
+      "ca": "Paid link. We may earn a commission if you purchase through this link.",
+      "apac": "Paid link. We may earn a commission if you purchase through this link."
+    };
+
+    function getRegion() {
+      return localStorage.getItem(REGION_KEY) || DEFAULT_REGION;
     }
-  });
-}
 
-function resolveDataUrl(pathname, snapshot) {
-  const path = String(pathname || "").replace(/\/g, "/");
+    function setRegion(value) {
+      const next = value || DEFAULT_REGION;
+      localStorage.setItem(REGION_KEY, next);
+      return next;
+    }
+
+    function initRegionSelector() {
+      const sel = $("vf-region-select");
+      if (!sel) return;
+      sel.value = getRegion();
+      sel.addEventListener("change", () => {
+        setRegion(sel.value);
+        if (!$("resultArea").classList.contains("hidden")) {
+          renderResult();
+        }
+      });
+    }
+
+    function resolveDataUrl(pathname, snapshot) {
+      const path = String(pathname || "").replace(/\/g, "/");
   const safeSnapshot = snapshot ? snapshot.replace(/^\/+/, "") : "";
-  if (safeSnapshot) {
-    if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
-      return "../snapshots/" + safeSnapshot + "/ui_index.json";
+      if (safeSnapshot) {
+        if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
+          return "../snapshots/" + safeSnapshot + "/ui_index.json";
+        }
+        return "snapshots/" + safeSnapshot + "/ui_index.json";
+      }
+      if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
+        return "../data/ui_index.json";
+      }
+      return "data/ui_index.json";
     }
-    return "snapshots/" + safeSnapshot + "/ui_index.json";
-  }
-  if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
-    return "../data/ui_index.json";
-  }
-  return "data/ui_index.json";
-}
 
-const DATA_URL = resolveDataUrl(location.pathname, SNAPSHOT_PARAM);
+    const DATA_URL = resolveDataUrl(location.pathname, SNAPSHOT_PARAM);
 
 
-// Used by "Notify me of changes" to create a GitHub issue
-const GITHUB_OWNER = "W73QB";
-const GITHUB_REPO  = "visa-compliance-d";
+    // Used by "Notify me of changes" to create a GitHub issue
+    const GITHUB_OWNER = "W73QB";
+    const GITHUB_REPO = "visa-compliance-d";
 
-// Optional display labels for requirement keys (fallback to raw key if missing)
-const REQ_LABELS = {
-  "insurance.mandatory": { title: "Insurance required", desc: "Insurance must be provided." },
-  "insurance.authorized_in_spain": { title: "Authorized to operate in Spain", desc: "Insurer must be authorized to operate in Spain." },
-  "insurance.covers_public_health_system_risks": { title: "Equivalent to public system", desc: "Must cover risks insured by Spain's public health system." },
-  "insurance.comprehensive": { title: "Comprehensive coverage", desc: "Coverage must be comprehensive as required by authority." },
-  "insurance.unlimited_coverage": { title: "Unlimited coverage", desc: "Unlimited coverage required." },
-  "insurance.no_deductible": { title: "No deductible / excess", desc: "Must have zero deductible / no excess." },
-  "insurance.no_copayment": { title: "No co-payments", desc: "Must not require co-payments." },
-  "insurance.no_moratorium": { title: "No moratorium / waiting period", desc: "No waiting period or moratorium." },
-  "insurance.travel_insurance_accepted": { title: "Travel insurance accepted", desc: "Whether travel insurance is accepted." },
-  "insurance.min_coverage": { title: "Minimum coverage", desc: "Minimum required medical coverage." },
-  "insurance.must_cover_full_period": { title: "Must cover full legal stay", desc: "Policy duration must cover the entire authorized stay." },
-  "insurance.monthly_payments_accepted": { title: "Monthly payments accepted", desc: "Whether monthly payment policies are acceptable." }
-};
-
-function $(id){ return document.getElementById(id); }
-function escapeHtml(value){
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/\"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function sanitizeUrl(url) {
-  if (!url) return "";
-  const s = String(url).trim();
-  if (!s) return "";
-  if (/[ -]/.test(s)) return "#";
-  if (s.startsWith("//") || s.startsWith("\\")) return "#";
-  // Allow http://, https://, mailto:, tel:
-  if (/^(?:https?|mailto|tel):/i.test(s)) return s;
-  // Block dangerous or unsupported schemes explicitly: javascript:, vbscript:, data:, file:, blob:
-  if (/^(?:javascript|vbscript|data|file|blob):/i.test(s)) return "#";
-  if (/^[a-z][a-z0-9+.-]*:/i.test(s)) return "#";
-  // Relative paths are allowed
-  return s;
-}
-
-
-let INDEX = null;
-
-// Supports both ui_index.json shapes:
-// 1) denormalized: visas_by_id/products_by_id/mappings_by_key/sources_by_id
-// 2) arrays: visas/products/mappings
-function normalizeIndex(raw){
-  const visas = raw.visas || [];
-  const products = raw.products || [];
-  const mappings = raw.mappings || [];
-  const offers = raw.offers || [];
-
-  const visa_list = raw.visa_list || visas.map(v => ({ id:v.id, country:v.country, visa_name:v.visa_name, route:v.route }));
-  const product_list = raw.product_list || products.map(p => ({ id:p.id, provider:p.provider, product_name:p.product_name }));
-
-  const visas_by_id = raw.visas_by_id || Object.fromEntries(visas.map(v => [v.id, v]));
-  const products_by_id = raw.products_by_id || Object.fromEntries(products.map(p => [p.id, p]));
-
-  const sources_by_id = raw.sources_by_id || (() => {
-    const m = {};
-    visas.forEach(v => (v.sources || []).forEach(s => m[s.source_id] = s));
-    return m;
-  })();
-
-  const offers_by_product = raw.offers_by_product || (() => {
-    const m = {};
-    offers.forEach(o => { if (o.product_id) m[o.product_id] = o; });
-    return m;
-  })();
-
-  const mappings_by_key = raw.mappings_by_key || (() => {
-    const m = {};
-    mappings.forEach(x => m[`${x.visa_id}__${x.product_id}`] = x);
-    return m;
-  })();
-
-  return {
-    built_at: raw.built_at || null,
-    snapshot_id: raw.snapshot_id || null,
-    source_status: raw.source_status || { checked_at: null, needs_review_source_ids: [] },
-    visa_list, product_list,
-    visas_by_id, products_by_id,
-    sources_by_id, mappings_by_key,
-    offers_by_product
-  };
-}
-
-function setCheckBtnEnabled(){
-  const ok = $("visaSelect").value && $("productSelect").value;
-  const btn = $("checkBtn");
-  btn.disabled = !ok;
-  btn.className = ok
-    ? "group flex items-center gap-3 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white text-lg font-bold rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
-    : "group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed";
-}
-
-function relativeTime(iso){
-  if (!iso) return "-";
-  const t = Date.parse(iso);
-  if (Number.isNaN(t)) return iso;
-  const diff = Date.now() - t;
-  const mins = Math.floor(diff/60000);
-  if (mins < 1) return "just now";
-  if (mins < 60) return `${mins} minutes ago`;
-  const hrs = Math.floor(mins/60);
-  if (hrs < 48) return `${hrs} hours ago`;
-  const days = Math.floor(hrs/24);
-  return `${days} days ago`;
-}
-
-function statusPresentation(status){
-  const s = (status || "UNKNOWN").toUpperCase();
-  if (s === "GREEN") {
-    return {
-      chipText: "PASSED",
-      chipClass: "bg-success-green/10 border-success-green/20 text-success-green",
-      icon: "verified",
-      title: "Result: PASS (Status: GREEN)",
-      subtitle: "Meets the listed requirements based on available evidence."
+    // Optional display labels for requirement keys (fallback to raw key if missing)
+    const REQ_LABELS = {
+      "insurance.mandatory": { title: "Insurance required", desc: "Insurance must be provided." },
+      "insurance.authorized_in_spain": { title: "Authorized to operate in Spain", desc: "Insurer must be authorized to operate in Spain." },
+      "insurance.covers_public_health_system_risks": { title: "Equivalent to public system", desc: "Must cover risks insured by Spain's public health system." },
+      "insurance.comprehensive": { title: "Comprehensive coverage", desc: "Coverage must be comprehensive as required by authority." },
+      "insurance.unlimited_coverage": { title: "Unlimited coverage", desc: "Unlimited coverage required." },
+      "insurance.no_deductible": { title: "No deductible / excess", desc: "Must have zero deductible / no excess." },
+      "insurance.no_copayment": { title: "No co-payments", desc: "Must not require co-payments." },
+      "insurance.no_moratorium": { title: "No moratorium / waiting period", desc: "No waiting period or moratorium." },
+      "insurance.travel_insurance_accepted": { title: "Travel insurance accepted", desc: "Whether travel insurance is accepted." },
+      "insurance.min_coverage": { title: "Minimum coverage", desc: "Minimum required medical coverage." },
+      "insurance.must_cover_full_period": { title: "Must cover full legal stay", desc: "Policy duration must cover the entire authorized stay." },
+      "insurance.monthly_payments_accepted": { title: "Monthly payments accepted", desc: "Whether monthly payment policies are acceptable." }
     };
-  }
-  if (s === "YELLOW") {
-    return {
-      chipText: "CAUTION",
-      chipClass: "bg-warning-yellow/10 border-warning-yellow/20 text-warning-yellow",
-      icon: "warning",
-      title: "Result: CAUTION (Status: YELLOW)",
-      subtitle: "Meets hard requirements, but there is an edge-case / operational risk."
-    };
-  }
-  if (s === "RED") {
-    return {
-      chipText: "FAILED",
-      chipClass: "bg-error-red/10 border-error-red/20 text-error-red",
-      icon: "cancel",
-      title: "Result: FAIL (Status: RED)",
-      subtitle: "Violates at least one explicit requirement."
-    };
-  }
-  if (s === "NOT_REQUIRED") {
-    return {
-      chipText: "NOT REQUIRED",
-      chipClass: "bg-info-blue/10 border-info-blue/20 text-info-blue",
-      icon: "info",
-      title: "Result: NOT REQUIRED (Status: NOT_REQUIRED)",
-      subtitle: "Insurance is not listed as a requirement by the authority."
-    };
-  }
-  return {
-    chipText: "UNKNOWN",
-    chipClass: "bg-gray-200/40 border-gray-300 text-unknown-gray dark:bg-gray-700/30 dark:border-gray-600",
-    icon: "help",
-    title: "Result: UNKNOWN (Missing evidence)",
-    subtitle: "Cannot conclude due to missing evidence."
-  };
-}
 
-function mappingNeedsReview(mapping, needsReviewIds){
-  if (!mapping || !needsReviewIds || !needsReviewIds.length) return false;
-  const needSet = new Set(needsReviewIds);
-  const reasons = mapping.reasons || [];
-  for (const reason of reasons) {
-    const evidence = reason.evidence || [];
-    for (const ev of evidence) {
-      if (ev && needSet.has(ev.source_id)) return true;
+    function $(id) { return document.getElementById(id); }
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#39;");
     }
-  }
-  return false;
-}
 
-function openModal(evidenceItems){
-  const body = $("modalBody");
-  body.innerHTML = "";
+    function sanitizeUrl(url) {
+      if (!url) return "";
+      const s = String(url).trim();
+      if (!s) return "";
+      if (/[ -]/.test(s)) return "#";
+      if (s.startsWith("//") || s.startsWith("\\")) return "#";
+      // Allow http://, https://, mailto:, tel:
+      if (/^(?:https?|mailto|tel):/i.test(s)) return s;
+      // Block dangerous or unsupported schemes explicitly: javascript:, vbscript:, data:, file:, blob:
+      if (/^(?:javascript|vbscript|data|file|blob):/i.test(s)) return "#";
+      if (/^[a-z][a-z0-9+.-]*:/i.test(s)) return "#";
+      // Relative paths are allowed
+      return s;
+    }
 
-  (evidenceItems || []).forEach(ev => {
-    const sid = ev.source_id;
-    const src = INDEX.sources_by_id[sid] || {};
-    const official = sanitizeUrl(src.url || ev.url || "");
-    const snapshot = src.local_path
-      ? sanitizeUrl("../" + src.local_path.replaceAll("\\","/"))
-      : (ev.local_path ? sanitizeUrl("../" + ev.local_path.replaceAll("\\","/")) : "");
 
-    // snapshot is relative path constructed by us, but we should be safe.
-    // However, if local_path is malicious, we should sanitize it too if possible,
-    // but the prefix "../" makes it relative.
+    let INDEX = null;
 
-    const sidText = escapeHtml(sid || "source");
-    const locatorText = escapeHtml(ev.locator || "");
-    const excerptText = escapeHtml(ev.excerpt || "");
-    const syntheticLabel = src.synthetic ? "<span class=\"ml-2 text-xs font-semibold text-warning-yellow\">Synthetic source</span>" : "";
+    // Supports both ui_index.json shapes:
+    // 1) denormalized: visas_by_id/products_by_id/mappings_by_key/sources_by_id
+    // 2) arrays: visas/products/mappings
+    function normalizeIndex(raw) {
+      const visas = raw.visas || [];
+      const products = raw.products || [];
+      const mappings = raw.mappings || [];
+      const offers = raw.offers || [];
 
-    const card = document.createElement("div");
-    card.className = "border border-border-soft dark:border-border-dark rounded-lg p-4 bg-white dark:bg-surface-dark";
+      const visa_list = raw.visa_list || visas.map(v => ({ id: v.id, country: v.country, visa_name: v.visa_name, route: v.route }));
+      const product_list = raw.product_list || products.map(p => ({ id: p.id, provider: p.provider, product_name: p.product_name }));
 
-    card.innerHTML = `
+      const visas_by_id = raw.visas_by_id || Object.fromEntries(visas.map(v => [v.id, v]));
+      const products_by_id = raw.products_by_id || Object.fromEntries(products.map(p => [p.id, p]));
+
+      const sources_by_id = raw.sources_by_id || (() => {
+        const m = {};
+        visas.forEach(v => (v.sources || []).forEach(s => m[s.source_id] = s));
+        return m;
+      })();
+
+      const offers_by_product = raw.offers_by_product || (() => {
+        const m = {};
+        offers.forEach(o => { if (o.product_id) m[o.product_id] = o; });
+        return m;
+      })();
+
+      const mappings_by_key = raw.mappings_by_key || (() => {
+        const m = {};
+        mappings.forEach(x => m[`${x.visa_id}__${x.product_id}`] = x);
+        return m;
+      })();
+
+      return {
+        built_at: raw.built_at || null,
+        snapshot_id: raw.snapshot_id || null,
+        source_status: raw.source_status || { checked_at: null, needs_review_source_ids: [] },
+        visa_list, product_list,
+        visas_by_id, products_by_id,
+        sources_by_id, mappings_by_key,
+        offers_by_product
+      };
+    }
+
+    function setCheckBtnEnabled() {
+      const ok = $("visaSelect").value && $("productSelect").value;
+      const btn = $("checkBtn");
+      btn.disabled = !ok;
+      btn.className = ok
+        ? "group flex items-center gap-3 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white text-lg font-bold rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+        : "group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed";
+    }
+
+    function relativeTime(iso) {
+      if (!iso) return "-";
+      const t = Date.parse(iso);
+      if (Number.isNaN(t)) return iso;
+      const diff = Date.now() - t;
+      const mins = Math.floor(diff / 60000);
+      if (mins < 1) return "just now";
+      if (mins < 60) return `${mins} minutes ago`;
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 48) return `${hrs} hours ago`;
+      const days = Math.floor(hrs / 24);
+      return `${days} days ago`;
+    }
+
+    function statusPresentation(status) {
+      const s = (status || "UNKNOWN").toUpperCase();
+      if (s === "GREEN") {
+        return {
+          chipText: "PASSED",
+          chipClass: "bg-success-green/10 border-success-green/20 text-success-green",
+          icon: "verified",
+          title: "Result: PASS (Status: GREEN)",
+          subtitle: "Meets the listed requirements based on available evidence."
+        };
+      }
+      if (s === "YELLOW") {
+        return {
+          chipText: "CAUTION",
+          chipClass: "bg-warning-yellow/10 border-warning-yellow/20 text-warning-yellow",
+          icon: "warning",
+          title: "Result: CAUTION (Status: YELLOW)",
+          subtitle: "Meets hard requirements, but there is an edge-case / operational risk."
+        };
+      }
+      if (s === "RED") {
+        return {
+          chipText: "FAILED",
+          chipClass: "bg-error-red/10 border-error-red/20 text-error-red",
+          icon: "cancel",
+          title: "Result: FAIL (Status: RED)",
+          subtitle: "Violates at least one explicit requirement."
+        };
+      }
+      if (s === "NOT_REQUIRED") {
+        return {
+          chipText: "NOT REQUIRED",
+          chipClass: "bg-info-blue/10 border-info-blue/20 text-info-blue",
+          icon: "info",
+          title: "Result: NOT REQUIRED (Status: NOT_REQUIRED)",
+          subtitle: "Insurance is not listed as a requirement by the authority."
+        };
+      }
+      return {
+        chipText: "UNKNOWN",
+        chipClass: "bg-gray-200/40 border-gray-300 text-unknown-gray dark:bg-gray-700/30 dark:border-gray-600",
+        icon: "help",
+        title: "Result: UNKNOWN (Missing evidence)",
+        subtitle: "Cannot conclude due to missing evidence."
+      };
+    }
+
+    function mappingNeedsReview(mapping, needsReviewIds) {
+      if (!mapping || !needsReviewIds || !needsReviewIds.length) return false;
+      const needSet = new Set(needsReviewIds);
+      const reasons = mapping.reasons || [];
+      for (const reason of reasons) {
+        const evidence = reason.evidence || [];
+        for (const ev of evidence) {
+          if (ev && needSet.has(ev.source_id)) return true;
+        }
+      }
+      return false;
+    }
+
+    function openModal(evidenceItems) {
+      const body = $("modalBody");
+      body.innerHTML = "";
+
+      (evidenceItems || []).forEach(ev => {
+        const sid = ev.source_id;
+        const src = INDEX.sources_by_id[sid] || {};
+        const official = sanitizeUrl(src.url || ev.url || "");
+        const snapshot = src.local_path
+          ? sanitizeUrl("../" + src.local_path.replaceAll("\\", "/"))
+          : (ev.local_path ? sanitizeUrl("../" + ev.local_path.replaceAll("\\", "/")) : "");
+
+        // snapshot is relative path constructed by us, but we should be safe.
+        // However, if local_path is malicious, we should sanitize it too if possible,
+        // but the prefix "../" makes it relative.
+
+        const sidText = escapeHtml(sid || "source");
+        const locatorText = escapeHtml(ev.locator || "");
+        const excerptText = escapeHtml(ev.excerpt || "");
+        const syntheticLabel = src.synthetic ? "<span class=\"ml-2 text-xs font-semibold text-warning-yellow\">Synthetic source</span>" : "";
+
+        const card = document.createElement("div");
+        card.className = "border border-border-soft dark:border-border-dark rounded-lg p-4 bg-white dark:bg-surface-dark";
+
+        card.innerHTML = `
       <div class="text-sm font-semibold text-text-primary dark:text-white mb-1">
         ${sidText} - ${locatorText} ${syntheticLabel}
       </div>
@@ -735,39 +682,39 @@ function openModal(evidenceItems){
         ${snapshot ? `<a class="hover:text-primary underline" target="_blank" rel="noopener" href="${escapeHtml(snapshot)}">snapshot</a>` : ""}
       </div>
     `;
-    body.appendChild(card);
-  });
+        body.appendChild(card);
+      });
 
-  $("modal").classList.remove("hidden");
-  $("modal").classList.add("flex");
-}
+      $("modal").classList.remove("hidden");
+      $("modal").classList.add("flex");
+    }
 
-function closeModal(){
-  $("modal").classList.add("hidden");
-  $("modal").classList.remove("flex");
-}
+    function closeModal() {
+      $("modal").classList.add("hidden");
+      $("modal").classList.remove("flex");
+    }
 
-function renderRequirements(visa){
-  const ul = $("requirementsList");
-  ul.innerHTML = "";
+    function renderRequirements(visa) {
+      const ul = $("requirementsList");
+      ul.innerHTML = "";
 
-  const reqs = visa?.requirements || [];
-  if (!reqs.length){
-    ul.innerHTML = `<li class="text-sm text-text-secondary dark:text-gray-400">No requirements loaded.</li>`;
-    return;
-  }
+      const reqs = visa?.requirements || [];
+      if (!reqs.length) {
+        ul.innerHTML = `<li class="text-sm text-text-secondary dark:text-gray-400">No requirements loaded.</li>`;
+        return;
+      }
 
-  reqs.forEach(r => {
-    const meta = REQ_LABELS[r.key] || { title: r.key, desc: "" };
-    const title = escapeHtml(meta.title);
-    const desc = escapeHtml(meta.desc || "");
-    const valueText = escapeHtml(String(r.value));
+      reqs.forEach(r => {
+        const meta = REQ_LABELS[r.key] || { title: r.key, desc: "" };
+        const title = escapeHtml(meta.title);
+        const desc = escapeHtml(meta.desc || "");
+        const valueText = escapeHtml(String(r.value));
 
-    const li = document.createElement("li");
-    li.className = "p-4 rounded-xl border border-transparent hover:border-border-soft dark:hover:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group";
+        const li = document.createElement("li");
+        li.className = "p-4 rounded-xl border border-transparent hover:border-border-soft dark:hover:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group";
 
-    // SEMANTICS: Requirements are FACTS, not "passed".
-    li.innerHTML = `
+        // SEMANTICS: Requirements are FACTS, not "passed".
+        li.innerHTML = `
       <div class="flex items-start justify-between gap-4">
         <div class="flex items-start gap-3">
           <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">rule</span>
@@ -786,52 +733,52 @@ function renderRequirements(visa){
       </div>
     `;
 
-    li.querySelector(".evBtn").addEventListener("click", () => openModal(r.evidence || []));
-    ul.appendChild(li);
-  });
-}
+        li.querySelector(".evBtn").addEventListener("click", () => openModal(r.evidence || []));
+        ul.appendChild(li);
+      });
+    }
 
-function renderReasons(mapping){
-  const ul = $("reasonsList");
-  // Keep the timeline line (absolute div) at the top
-  ul.innerHTML = `<div id="timelineLine" class="absolute left-[21px] top-6 bottom-6 w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>`;
+    function renderReasons(mapping) {
+      const ul = $("reasonsList");
+      // Keep the timeline line (absolute div) at the top
+      ul.innerHTML = `<div id="timelineLine" class="absolute left-[21px] top-6 bottom-6 w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>`;
 
-  if (!mapping){
-    const li = document.createElement("li");
-    li.className = "text-sm text-text-secondary dark:text-gray-300";
-    li.textContent = "No mapping found for this visa/product. Run tools/build_mappings.py and rebuild ui_index.json.";
-    ul.appendChild(li);
-    return;
-  }
+      if (!mapping) {
+        const li = document.createElement("li");
+        li.className = "text-sm text-text-secondary dark:text-gray-300";
+        li.textContent = "No mapping found for this visa/product. Run tools/build_mappings.py and rebuild ui_index.json.";
+        ul.appendChild(li);
+        return;
+      }
 
-  const status = (mapping.status || "UNKNOWN").toUpperCase();
-  const dotColor =
-    status === "GREEN" ? "bg-success-green" :
-    status === "YELLOW" ? "bg-warning-yellow" :
-    status === "RED" ? "bg-error-red" :
-    status === "NOT_REQUIRED" ? "bg-info-blue" :
-    "bg-gray-400";
+      const status = (mapping.status || "UNKNOWN").toUpperCase();
+      const dotColor =
+        status === "GREEN" ? "bg-success-green" :
+          status === "YELLOW" ? "bg-warning-yellow" :
+            status === "RED" ? "bg-error-red" :
+              status === "NOT_REQUIRED" ? "bg-info-blue" :
+                "bg-gray-400";
 
-  const reasons = mapping.reasons || [];
-  if (!reasons.length){
-    const li = document.createElement("li");
-    li.className = "text-sm text-text-secondary dark:text-gray-300";
-    li.textContent =
-      status === "NOT_REQUIRED" ? "Insurance is not listed as a requirement by the authority." :
-      status === "UNKNOWN" ? "Engine cannot conclude due to missing evidence." :
-      status === "GREEN" ? "Engine found no rule violations based on available evidence." :
-      status === "YELLOW" ? "Engine found an edge-case / operational risk." :
-      "Engine found explicit rule violation(s).";
-    ul.appendChild(li);
-    return;
-  }
+      const reasons = mapping.reasons || [];
+      if (!reasons.length) {
+        const li = document.createElement("li");
+        li.className = "text-sm text-text-secondary dark:text-gray-300";
+        li.textContent =
+          status === "NOT_REQUIRED" ? "Insurance is not listed as a requirement by the authority." :
+            status === "UNKNOWN" ? "Engine cannot conclude due to missing evidence." :
+              status === "GREEN" ? "Engine found no rule violations based on available evidence." :
+                status === "YELLOW" ? "Engine found an edge-case / operational risk." :
+                  "Engine found explicit rule violation(s).";
+        ul.appendChild(li);
+        return;
+      }
 
-  reasons.forEach(r => {
-    const reasonText = escapeHtml(r.text || "");
-    const li = document.createElement("li");
-    li.className = "flex gap-4";
+      reasons.forEach(r => {
+        const reasonText = escapeHtml(r.text || "");
+        const li = document.createElement("li");
+        li.className = "flex gap-4";
 
-    li.innerHTML = `
+        li.innerHTML = `
       <div class="mt-1 size-3 rounded-full ${dotColor} ring-4 ring-white dark:ring-[#1a232e]"></div>
       <div class="flex-1 pb-4">
         <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border border-border-soft dark:border-border-dark shadow-sm">
@@ -846,237 +793,237 @@ function renderReasons(mapping){
       </div>
     `;
 
-    li.querySelector(".evBtn").addEventListener("click", () => openModal(r.evidence || []));
-    ul.appendChild(li);
-  });
-}
-
-function renderOffer(mapping, productId){
-  const status = (mapping?.status || "UNKNOWN").toUpperCase();
-  const offer = INDEX.offers_by_product ? INDEX.offers_by_product[productId] : null;
-
-  const box = $("offerCta");
-  const message = $("offerMessage");
-  const link = $("offerLink");
-  const disclosureBox = $("offerDisclosure");
-  const disclosureText = disclosureBox ? disclosureBox.querySelector(".vf-disclosure-text") : null;
-  const disclosureLabel = disclosureBox ? disclosureBox.querySelector(".vf-ad-label") : null;
-  const region = getRegion();
-  const defaultDisclosure = DISCLOSURE_BY_REGION[region] || DISCLOSURE_BY_REGION[DEFAULT_REGION];
-
-  box.classList.add("hidden");
-  link.href = "#";
-  link.classList.remove("hidden");
-
-  if (status === "RED" || status === "UNKNOWN") return;
-  if (status === "NOT_REQUIRED") {
-    message.textContent = "Insurance is optional for this visa.";
-    if (disclosureText) disclosureText.textContent = "No affiliate link shown.";
-    if (disclosureLabel) disclosureLabel.textContent = "Info";
-    link.classList.add("hidden");
-    box.classList.remove("hidden");
-    return;
-  }
-  if (!offer) return;
-
-  link.textContent = offer.label || "Get quote";
-  link.href = sanitizeUrl(offer.affiliate_url || "#");
-  const disclosure = offer.disclosure || defaultDisclosure;
-  if (disclosureText) disclosureText.textContent = disclosure;
-  if (disclosureLabel) {
-    disclosureLabel.textContent = disclosure.toLowerCase().includes("paid link") ? "Ad label" : "Info";
-  }
-
-  if (status === "YELLOW") {
-    message.textContent = "Caution: operational risk. Affiliate link shown for convenience.";
-  } else {
-    message.textContent = "Meets listed requirements based on evidence.";
-  }
-
-  box.classList.remove("hidden");
-}
-
-
-function renderMissing(mapping){
-  const missing = mapping?.missing || mapping?.missing_evidence || [];
-  if (missing.length) {
-    $("missingBox").classList.remove("hidden");
-    const ul = $("missingList");
-    ul.innerHTML = "";
-    missing.forEach(m => {
-      const li = document.createElement("li");
-      li.textContent = m;
-      ul.appendChild(li);
-    });
-  } else {
-    $("missingBox").classList.add("hidden");
-    $("missingList").innerHTML = "";
-  }
-}
-
-function toggleEsDnvNotice(visaId){
-  const isEsDnv = visaId === "ES_DNV_BLS_LONDON_2026";
-  $("esDnvBanner")?.classList.toggle("hidden", !isEsDnv);
-  $("esDnvResultNotice")?.classList.toggle("hidden", !isEsDnv);
-}
-
-function updateHints(){
-  const visaId = $("visaSelect").value;
-  const productId = $("productSelect").value;
-
-  const visa = INDEX.visas_by_id[visaId];
-  const prod = INDEX.products_by_id[productId];
-
-  $("visaHint").textContent = visa
-    ? `${visa.authority} - ${visa.route} - last_verified: ${visa.last_verified}`
-    : "Choose a visa record (route + authority). Each record is evidence-based.";
-
-  $("productHint").textContent = prod
-    ? `${prod.provider} - policy_version: ${prod.policy_version} - effective: ${prod.effective_date}`
-    : "Choose a product record (policy version + evidence).";
-
-  setCheckBtnEnabled();
-}
-
-function renderResult(){
-  const visaId = $("visaSelect").value;
-  const productId = $("productSelect").value;
-
-  const visa = INDEX.visas_by_id[visaId];
-  const prod = INDEX.products_by_id[productId];
-  if (!visa || !prod) return;
-
-  const key = `${visaId}__${productId}`;
-  const mapping = INDEX.mappings_by_key[key] || null;
-  const status = (mapping?.status || "UNKNOWN").toUpperCase();
-
-  const pres = statusPresentation(status);
-  toggleEsDnvNotice(visaId);
-
-  // show container
-  $("resultArea").classList.remove("hidden");
-  $("resultArea").classList.add("animate-reveal");
-
-  // chip + title/subtitle
-  $("statusChip").className = `stamp-badge ${pres.chipClass}`;
-  if (status === "GREEN") {
-    $("statusChip").classList.add("pulse-success");
-  }
-  $("statusIcon").textContent = pres.icon;
-  $("statusChipText").textContent = pres.chipText;
-  $("resultTitle").textContent = pres.title;
-  $("resultSubtitle").textContent = pres.subtitle;
-
-  const needsReview = mappingNeedsReview(mapping, INDEX.source_status?.needs_review_source_ids || []);
-  $("needsReviewBadge")?.classList.toggle("hidden", !needsReview);
-
-  // meta
-  $("lastVerified").textContent = mapping?.last_verified || "-";
-  $("authorityText").textContent = visa.authority || "-";
-  $("scopeText").textContent = visa.id || "-";
-  $("snapshotId").textContent = SNAPSHOT_PARAM || INDEX.snapshot_id || "-";
-
-  // requirements + reasons
-  renderRequirements(visa);
-  renderReasons(mapping);
-  renderOffer(mapping, productId);
-
-  // missing box only meaningful for UNKNOWN
-  if (status === "UNKNOWN") renderMissing(mapping);
-  else {
-    $("missingBox").classList.add("hidden");
-    $("missingList").innerHTML = "";
-  }
-
-  // action links
-  const firstSource = (visa.sources && visa.sources.length) ? visa.sources[0] : null;
-  $("officialBtn").href = sanitizeUrl(firstSource?.url || "#");
-  $("snapshotBtn").href = firstSource?.local_path ? sanitizeUrl("../" + firstSource.local_path.replaceAll("\\","/")) : "#";
-
-  // notify issue
-  const issueTitle = encodeURIComponent(`Source change - ${visa.id}`);
-  const issueBody = encodeURIComponent(
-    `Please review sources for ${visa.id}\n\n` +
-    `source_id(s): ${(visa.sources||[]).map(s=>s.source_id).join(", ")}\n\n` +
-    `What changed:\n- \n`
-  );
-  $("notifyBtn").href = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/issues/new?title=${issueTitle}&body=${issueBody}`;
-
-  // built timestamps
-  const builtAt = INDEX.built_at || "";
-  $("builtAt").textContent = builtAt ? `Built at: ${builtAt}` : "Built at: -";
-  $("lastUpdated").textContent = builtAt ? `Last updated: ${relativeTime(builtAt)}` : "Last updated: -";
-
-  // deep link
-  const url = new URL(location.href);
-  url.searchParams.set("visa", visaId);
-  url.searchParams.set("product", productId);
-  if (SNAPSHOT_PARAM) url.searchParams.set("snapshot", SNAPSHOT_PARAM);
-  history.replaceState(null, "", url.toString());
-}
-
-async function init(){
-  $("loadingState").classList.remove("hidden");
-  try {
-    const res = await fetch(DATA_URL, { cache: "no-store" });
-    const raw = await res.json();
-    INDEX = normalizeIndex(raw);
-    initRegionSelector();
-
-    // populate selects
-    const vs = $("visaSelect");
-    INDEX.visa_list.forEach(v => {
-      const opt = document.createElement("option");
-      opt.value = v.id;
-      opt.textContent = `${v.country} - ${v.visa_name} (${v.route})`;
-      vs.appendChild(opt);
-    });
-
-    const ps = $("productSelect");
-    INDEX.product_list.forEach(p => {
-      const opt = document.createElement("option");
-      opt.value = p.id;
-      opt.textContent = `${p.provider} - ${p.product_name}`;
-      ps.appendChild(opt);
-    });
-
-    // restore from query
-    const q = new URLSearchParams(location.search);
-    const v0 = q.get("visa");
-    const p0 = q.get("product");
-    if (v0 && INDEX.visas_by_id[v0]) vs.value = v0;
-    if (p0 && INDEX.products_by_id[p0]) ps.value = p0;
-
-    // listeners
-    vs.addEventListener("change", updateHints);
-    ps.addEventListener("change", updateHints);
-
-    $("checkBtn").addEventListener("click", (e) => {
-      e.preventDefault();
-      renderResult();
-    });
-
-    $("copyLinkBtn").addEventListener("click", async () => {
-      await navigator.clipboard.writeText(location.href);
-      $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
-      setTimeout(() => {
-        $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
-      }, 900);
-    });
-
-    $("closeModal").addEventListener("click", closeModal);
-    $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
-
-    updateHints();
-
-    // auto-run if query has both
-    if (vs.value && ps.value) {
-      setCheckBtnEnabled();
-      renderResult();
+        li.querySelector(".evBtn").addEventListener("click", () => openModal(r.evidence || []));
+        ul.appendChild(li);
+      });
     }
-  } catch (err) {
-    console.error(err);
-    $("loadingState").innerHTML = `
+
+    function renderOffer(mapping, productId) {
+      const status = (mapping?.status || "UNKNOWN").toUpperCase();
+      const offer = INDEX.offers_by_product ? INDEX.offers_by_product[productId] : null;
+
+      const box = $("offerCta");
+      const message = $("offerMessage");
+      const link = $("offerLink");
+      const disclosureBox = $("offerDisclosure");
+      const disclosureText = disclosureBox ? disclosureBox.querySelector(".vf-disclosure-text") : null;
+      const disclosureLabel = disclosureBox ? disclosureBox.querySelector(".vf-ad-label") : null;
+      const region = getRegion();
+      const defaultDisclosure = DISCLOSURE_BY_REGION[region] || DISCLOSURE_BY_REGION[DEFAULT_REGION];
+
+      box.classList.add("hidden");
+      link.href = "#";
+      link.classList.remove("hidden");
+
+      if (status === "RED" || status === "UNKNOWN") return;
+      if (status === "NOT_REQUIRED") {
+        message.textContent = "Insurance is optional for this visa.";
+        if (disclosureText) disclosureText.textContent = "No affiliate link shown.";
+        if (disclosureLabel) disclosureLabel.textContent = "Info";
+        link.classList.add("hidden");
+        box.classList.remove("hidden");
+        return;
+      }
+      if (!offer) return;
+
+      link.textContent = offer.label || "Get quote";
+      link.href = sanitizeUrl(offer.affiliate_url || "#");
+      const disclosure = offer.disclosure || defaultDisclosure;
+      if (disclosureText) disclosureText.textContent = disclosure;
+      if (disclosureLabel) {
+        disclosureLabel.textContent = disclosure.toLowerCase().includes("paid link") ? "Ad label" : "Info";
+      }
+
+      if (status === "YELLOW") {
+        message.textContent = "Caution: operational risk. Affiliate link shown for convenience.";
+      } else {
+        message.textContent = "Meets listed requirements based on evidence.";
+      }
+
+      box.classList.remove("hidden");
+    }
+
+
+    function renderMissing(mapping) {
+      const missing = mapping?.missing || mapping?.missing_evidence || [];
+      if (missing.length) {
+        $("missingBox").classList.remove("hidden");
+        const ul = $("missingList");
+        ul.innerHTML = "";
+        missing.forEach(m => {
+          const li = document.createElement("li");
+          li.textContent = m;
+          ul.appendChild(li);
+        });
+      } else {
+        $("missingBox").classList.add("hidden");
+        $("missingList").innerHTML = "";
+      }
+    }
+
+    function toggleEsDnvNotice(visaId) {
+      const isEsDnv = visaId === "ES_DNV_BLS_LONDON_2026";
+      $("esDnvBanner")?.classList.toggle("hidden", !isEsDnv);
+      $("esDnvResultNotice")?.classList.toggle("hidden", !isEsDnv);
+    }
+
+    function updateHints() {
+      const visaId = $("visaSelect").value;
+      const productId = $("productSelect").value;
+
+      const visa = INDEX.visas_by_id[visaId];
+      const prod = INDEX.products_by_id[productId];
+
+      $("visaHint").textContent = visa
+        ? `${visa.authority} - ${visa.route} - last_verified: ${visa.last_verified}`
+        : "Choose a visa record (route + authority). Each record is evidence-based.";
+
+      $("productHint").textContent = prod
+        ? `${prod.provider} - policy_version: ${prod.policy_version} - effective: ${prod.effective_date}`
+        : "Choose a product record (policy version + evidence).";
+
+      setCheckBtnEnabled();
+    }
+
+    function renderResult() {
+      const visaId = $("visaSelect").value;
+      const productId = $("productSelect").value;
+
+      const visa = INDEX.visas_by_id[visaId];
+      const prod = INDEX.products_by_id[productId];
+      if (!visa || !prod) return;
+
+      const key = `${visaId}__${productId}`;
+      const mapping = INDEX.mappings_by_key[key] || null;
+      const status = (mapping?.status || "UNKNOWN").toUpperCase();
+
+      const pres = statusPresentation(status);
+      toggleEsDnvNotice(visaId);
+
+      // show container
+      $("resultArea").classList.remove("hidden");
+      $("resultArea").classList.add("animate-reveal");
+
+      // chip + title/subtitle
+      $("statusChip").className = `stamp-badge ${pres.chipClass}`;
+      if (status === "GREEN") {
+        $("statusChip").classList.add("pulse-success");
+      }
+      $("statusIcon").textContent = pres.icon;
+      $("statusChipText").textContent = pres.chipText;
+      $("resultTitle").textContent = pres.title;
+      $("resultSubtitle").textContent = pres.subtitle;
+
+      const needsReview = mappingNeedsReview(mapping, INDEX.source_status?.needs_review_source_ids || []);
+      $("needsReviewBadge")?.classList.toggle("hidden", !needsReview);
+
+      // meta
+      $("lastVerified").textContent = mapping?.last_verified || "-";
+      $("authorityText").textContent = visa.authority || "-";
+      $("scopeText").textContent = visa.id || "-";
+      $("snapshotId").textContent = SNAPSHOT_PARAM || INDEX.snapshot_id || "-";
+
+      // requirements + reasons
+      renderRequirements(visa);
+      renderReasons(mapping);
+      renderOffer(mapping, productId);
+
+      // missing box only meaningful for UNKNOWN
+      if (status === "UNKNOWN") renderMissing(mapping);
+      else {
+        $("missingBox").classList.add("hidden");
+        $("missingList").innerHTML = "";
+      }
+
+      // action links
+      const firstSource = (visa.sources && visa.sources.length) ? visa.sources[0] : null;
+      $("officialBtn").href = sanitizeUrl(firstSource?.url || "#");
+      $("snapshotBtn").href = firstSource?.local_path ? sanitizeUrl("../" + firstSource.local_path.replaceAll("\\", "/")) : "#";
+
+      // notify issue
+      const issueTitle = encodeURIComponent(`Source change - ${visa.id}`);
+      const issueBody = encodeURIComponent(
+        `Please review sources for ${visa.id}\n\n` +
+        `source_id(s): ${(visa.sources || []).map(s => s.source_id).join(", ")}\n\n` +
+        `What changed:\n- \n`
+      );
+      $("notifyBtn").href = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/issues/new?title=${issueTitle}&body=${issueBody}`;
+
+      // built timestamps
+      const builtAt = INDEX.built_at || "";
+      $("builtAt").textContent = builtAt ? `Built at: ${builtAt}` : "Built at: -";
+      $("lastUpdated").textContent = builtAt ? `Last updated: ${relativeTime(builtAt)}` : "Last updated: -";
+
+      // deep link
+      const url = new URL(location.href);
+      url.searchParams.set("visa", visaId);
+      url.searchParams.set("product", productId);
+      if (SNAPSHOT_PARAM) url.searchParams.set("snapshot", SNAPSHOT_PARAM);
+      history.replaceState(null, "", url.toString());
+    }
+
+    async function init() {
+      $("loadingState").classList.remove("hidden");
+      try {
+        const res = await fetch(DATA_URL, { cache: "no-store" });
+        const raw = await res.json();
+        INDEX = normalizeIndex(raw);
+        initRegionSelector();
+
+        // populate selects
+        const vs = $("visaSelect");
+        INDEX.visa_list.forEach(v => {
+          const opt = document.createElement("option");
+          opt.value = v.id;
+          opt.textContent = `${v.country} - ${v.visa_name} (${v.route})`;
+          vs.appendChild(opt);
+        });
+
+        const ps = $("productSelect");
+        INDEX.product_list.forEach(p => {
+          const opt = document.createElement("option");
+          opt.value = p.id;
+          opt.textContent = `${p.provider} - ${p.product_name}`;
+          ps.appendChild(opt);
+        });
+
+        // restore from query
+        const q = new URLSearchParams(location.search);
+        const v0 = q.get("visa");
+        const p0 = q.get("product");
+        if (v0 && INDEX.visas_by_id[v0]) vs.value = v0;
+        if (p0 && INDEX.products_by_id[p0]) ps.value = p0;
+
+        // listeners
+        vs.addEventListener("change", updateHints);
+        ps.addEventListener("change", updateHints);
+
+        $("checkBtn").addEventListener("click", (e) => {
+          e.preventDefault();
+          renderResult();
+        });
+
+        $("copyLinkBtn").addEventListener("click", async () => {
+          await navigator.clipboard.writeText(location.href);
+          $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
+          setTimeout(() => {
+            $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
+          }, 900);
+        });
+
+        $("closeModal").addEventListener("click", closeModal);
+        $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+
+        updateHints();
+
+        // auto-run if query has both
+        if (vs.value && ps.value) {
+          setCheckBtnEnabled();
+          renderResult();
+        }
+      } catch (err) {
+        console.error(err);
+        $("loadingState").innerHTML = `
       <div class="text-center py-8">
         <span class="material-symbols-outlined text-error-red text-4xl mb-2">error</span>
         <p class="text-error-red font-medium">Failed to load data</p>
@@ -1084,25 +1031,26 @@ async function init(){
         <button type="button" onclick="location.reload()" class="mt-4 px-4 py-2 bg-primary text-white rounded">Retry</button>
       </div>
     `;
-    return;
-  }
-  $("loadingState").classList.add("hidden");
-}
+        return;
+      }
+      $("loadingState").classList.add("hidden");
+    }
 
-// Mobile menu toggle
-$("mobileMenuBtn")?.addEventListener("click", () => {
-  const menu = $("mobileMenu");
-  const btn = $("mobileMenuBtn");
-  const isOpen = !menu.classList.contains("hidden");
-  menu.classList.toggle("hidden");
-  btn.querySelector("span").textContent = isOpen ? "menu" : "close";
-});
+    // Mobile menu toggle
+    $("mobileMenuBtn")?.addEventListener("click", () => {
+      const menu = $("mobileMenu");
+      const btn = $("mobileMenuBtn");
+      const isOpen = !menu.classList.contains("hidden");
+      menu.classList.toggle("hidden");
+      btn.querySelector("span").textContent = isOpen ? "menu" : "close";
+    });
 
-init().catch(err => {
-  console.error(err);
-  alert("Failed to load data/ui_index.json. Check DATA_URL and ensure ui_index.json exists.");
-});
-</script>
+    init().catch(err => {
+      console.error(err);
+      alert("Failed to load data/ui_index.json. Check DATA_URL and ensure ui_index.json exists.");
+    });
+  </script>
 
 </body>
+
 </html>
