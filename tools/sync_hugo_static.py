@@ -29,6 +29,9 @@ def main() -> None:
     ui_src = ROOT / "ui"
     if not ui_src.exists():
         fail("Missing ui/ directory")
+    css_src = ui_src / "style.css"
+    if not css_src.exists():
+        fail("Missing ui/style.css. Run npm run build:css before sync.")
     copy_tree(ui_src, static / "ui")
 
     index_src = ROOT / "data" / "ui_index.json"

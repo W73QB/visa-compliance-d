@@ -22,9 +22,15 @@ function New-TempRoot {
 }
 
 function Write-MinimalFiles {
-  param([string]$Root)
+  param(
+    [string]$Root,
+    [switch]$IncludeCss
+  )
   New-Item -ItemType Directory -Path (Join-Path $Root "ui") | Out-Null
   Set-Content -Path (Join-Path $Root "ui/index.html") -Value "<html></html>"
+  if ($IncludeCss) {
+    Set-Content -Path (Join-Path $Root "ui/style.css") -Value "body{}"
+  }
   New-Item -ItemType Directory -Path (Join-Path $Root "data") | Out-Null
   Set-Content -Path (Join-Path $Root "data/ui_index.json") -Value "{}"
   New-Item -ItemType Directory -Path (Join-Path $Root "sources") | Out-Null
@@ -50,9 +56,17 @@ try {
   $proc2 = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($proc2.ExitCode -ne 0) "sync fails when data/ui_index.json is missing"
 
+  # Missing ui/style.css should fail
+  $rootCss = New-TempRoot
+  Write-MinimalFiles -Root $rootCss -IncludeCss
+  Remove-Item -Path (Join-Path $rootCss "ui/style.css")
+  $env:SYNC_ROOT = $rootCss
+  $procCss = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  Assert-True ($procCss.ExitCode -ne 0) "sync fails when ui/style.css is missing"
+
   # RELEASE_BUILD requires sources
   $root3 = New-TempRoot
-  Write-MinimalFiles -Root $root3
+  Write-MinimalFiles -Root $root3 -IncludeCss
   Remove-Item -Recurse -Force (Join-Path $root3 "sources")
   $env:SYNC_ROOT = $root3
   $env:RELEASE_BUILD = "1"
@@ -62,13 +76,13 @@ try {
 
   # Happy path
   $root4 = New-TempRoot
-  Write-MinimalFiles -Root $root4
+  Write-MinimalFiles -Root $root4 -IncludeCss
   $env:SYNC_ROOT = $root4
   $proc4 = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($proc4.ExitCode -eq 0) "sync succeeds when required inputs exist"
 }
 finally {
-  @($root1, $root2, $root3, $root4) |
+  @($root1, $root2, $root3, $root4, $rootCss) |
     Where-Object { $_ -and $_.Trim() -ne "" } |
     ForEach-Object { Remove-Item -Recurse -Force $_ -ErrorAction SilentlyContinue }
 }

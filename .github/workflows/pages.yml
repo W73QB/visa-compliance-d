@@ -35,6 +35,16 @@ jobs:
       - name: Install python deps
         run: pip install jsonschema
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build CSS (Tailwind)
+        run: |
+          npm ci
+          npm run build:css
+
       - name: Validate + build mappings + build index + snapshot + sync static
         run: |
           SNAPSHOT_ID=$(date -u +%F)
@@ -82,17 +92,6 @@ jobs:
         with:
           hugo-version: "0.146.0"
           extended: true
-
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Build CSS (Tailwind)
-        run: |
-          npm ci
-          npm run build:css
 
       - name: Build Hugo (with log)
         run: pwsh -File tools/build_hugo.ps1
@@ -159,4 +158,3 @@ jobs:
             if ($i -lt $maxAttempts) { Start-Sleep -Seconds $delaySec }
           }
           if (-not $ok) { exit 1 }
-
