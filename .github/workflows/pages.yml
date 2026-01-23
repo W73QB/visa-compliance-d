@@ -83,10 +83,16 @@ jobs:
           hugo-version: "0.146.0"
           extended: true
 
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Build CSS (Tailwind)
+        run: |
+          npm ci
+          npm run build:css
 
       - name: Build Hugo (with log)
         run: pwsh -File tools/build_hugo.ps1
