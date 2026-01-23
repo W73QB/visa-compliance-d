@@ -1,4 +1,4 @@
-﻿ Disclaimer (Not legal advice)
+Disclaimer (Not legal advice)
 
 {{< vf-trust >}}
 All results are evidence-based. Missing evidence -> UNKNOWN.
@@ -10,7 +10,7 @@ The information on this website is provided for general informational purposes o
 ## 1) Not legal advice
 
 This website and its compliance checker do **not** provide legal advice.  
-We are not your lawyers, and using this site does not create a lawyerâ€“client relationship.
+We are not your lawyers, and using this site does not create a lawyer-client relationship.
 
 Visa decisions are made by government authorities and can depend on your personal circumstances and the reviewing officer's discretion.
 
