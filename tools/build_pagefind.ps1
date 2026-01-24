@@ -16,7 +16,8 @@ if (-not $cmd) {
 
 Push-Location $root
 try {
-  & $cmd.Source -y pagefind --source $publicDir
+  # Exclude evidence copies from index by ignoring their DOM via selectors
+  & $cmd.Source -y pagefind --site $publicDir --exclude-selectors "#evidence-sources,.vf-evidence"
   if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 } finally {
   Pop-Location

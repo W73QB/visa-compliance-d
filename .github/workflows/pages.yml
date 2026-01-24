@@ -40,6 +40,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Update Browserslist DB
+        run: npx update-browserslist-db@latest
+
       - name: Build CSS (Tailwind)
         run: |
           npm ci
