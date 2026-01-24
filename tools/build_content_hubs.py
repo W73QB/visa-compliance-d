@@ -59,6 +59,31 @@ If affiliate links appear, they are shown only after compliance results and do n
 """
 
 
+def get_root_lint_blocks(snapshot_id: str) -> str:
+    """Return the required content blocks for root index (no specific visa)."""
+    return f"""
+## What the authority requires
+
+See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
+
+## How we evaluate
+
+We compare these official requirements against insurance product specifications using our automated rule engine. Each requirement is matched to a product fact with evidence.
+
+## Check in the engine
+
+Try the compliance checker: [Open Checker](/ui/?snapshot={snapshot_id})
+
+## Disclaimer
+
+This is not legal advice. VisaFact provides evidence-based compliance checking only. Final visa decisions are made by government authorities. A GREEN result does not ensure visa approval.
+
+## Affiliate disclosure
+
+If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
+"""
+
+
 def render_overview(country_slug: str, visa_slug: str, visa_name: str,
                     country_name: str, routes: list, snapshot_id: str) -> str:
     """Render the overview _index.md for a visa type."""
@@ -116,8 +141,8 @@ def render_root_index(groups: dict, snapshot_id: str) -> str:
         visa_name = routes[0]["visa_name"]
         lines.append(f"- [{country_name} {visa_name}](/visas/{country_slug}/{visa_slug}/)")
 
-    # Add required lint blocks
-    lines.append(get_lint_required_blocks("VISAS_INDEX", "Visa Requirements", snapshot_id))
+    # Add required lint blocks (no visa= param for root index)
+    lines.append(get_root_lint_blocks(snapshot_id))
 
     lines.append("")
     lines.append('{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}')
