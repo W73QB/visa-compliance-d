@@ -30,18 +30,22 @@ canonifyURLs = true
     url = "ui/"
     weight = 1
   [[menu.main]]
+    name = "Visas"
+    pageRef = "visas"
+    weight = 2
+  [[menu.main]]
     name = "Blog"
     pageRef = "posts"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "Methodology"
     pageRef = "methodology"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Disclaimer"
     pageRef = "disclaimer"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "Affiliate"
     pageRef = "affiliate-disclosure"
-    weight = 5
+    weight = 6
