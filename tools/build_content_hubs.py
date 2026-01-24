@@ -51,7 +51,7 @@ Try the compliance checker: [Open Checker](/ui/?visa={visa_id}&snapshot={snapsho
 
 ## Disclaimer
 
-This is not legal advice. VisaFact provides evidence-based compliance checking only. Final visa decisions are made by government authorities. A GREEN result does not guarantee visa approval.
+This is not legal advice. VisaFact provides evidence-based compliance checking only. Final visa decisions are made by government authorities. A GREEN result does not ensure visa approval.
 
 ## Affiliate disclosure
 

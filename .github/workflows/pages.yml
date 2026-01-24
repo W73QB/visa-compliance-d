@@ -50,6 +50,7 @@ jobs:
           SNAPSHOT_ID=$(date -u +%F)
           export SNAPSHOT_ID
           python tools/validate.py
+          python tools/build_content_hubs.py
           python tools/build_mappings.py
           python tools/build_index.py
           python tools/build_snapshot.py
