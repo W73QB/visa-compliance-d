@@ -3,6 +3,13 @@ title: "Portugal DNV (E11) Insurance Requirements"
 date: 2026-01-15
 description: "Evidence-based summary of Portugal E11 remote work visa insurance requirement."
 tags: ["portugal", "dnv", "insurance", "compliance"]
+faq:
+  - question: "What coverage is required for Portugal E11 remote work visa?"
+    answer: "At least €30,000 medical coverage including urgent assistance and repatriation, with no deductible or copay, per VFS checklist."
+  - question: "Can I use monthly payment plans?"
+    answer: "Visa centers often expect prepaid coverage for the visa period; monthly billing can be rejected—confirm with your VFS office."
+  - question: "Which insurers are accepted?"
+    answer: "Use insurers recognized in Portugal/EU; evidence-based products in the checker list those with documented acceptance."
 ---
 
 ## What the authority requires

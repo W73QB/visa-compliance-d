@@ -3,6 +3,13 @@ title: "Spain DNV insurance requirements (evidence-based)"
 date: 2026-01-16
 description: "Evidence-based compliance summary for Spain Digital Nomad Visa insurance requirements."
 tags: ["spain", "dnv", "compliance"]
+faq:
+  - question: "What insurance coverage is required for Spain DNV?"
+    answer: "Comprehensive health insurance authorized in Spain with unlimited coverage, no deductibles or co-payments, and no moratorium."
+  - question: "Can I pay monthly for Spain DNV insurance?"
+    answer: "Consulates typically expect prepaid annual coverage; monthly payments are often rejected—confirm with your consulate."
+  - question: "Is repatriation coverage needed?"
+    answer: "Yes. Policies should include medical repatriation as part of comprehensive coverage per consulate checklist."
 ---
 
 ## What the authority requires

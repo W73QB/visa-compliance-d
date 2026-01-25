@@ -8,6 +8,7 @@
   <meta name="description"
     content="Check if your insurance meets official visa requirements. Evidence-backed results verified against primary sources. No source = UNKNOWN.">
   <meta name="keywords" content="visa insurance, compliance checker, Spain DNV, evidence-based">
+  <meta name="gtm-id" content="">
   <meta property="og:title" content="VisaFact - Visa Insurance Compliance Checker">
   <meta property="og:description" content="Evidence-backed compliance checking against official visa requirements.">
   <!-- Privacy-first analytics: add Plausible/Fathom/SimpleAnalytics here if needed -->
@@ -27,6 +28,30 @@
       "priceCurrency": "USD"
     }
   }
+  </script>
+  <script>
+    // Lightweight GTM bootstrap with opt-in ID (set via window.GTM_ID or <meta name="gtm-id">).
+    (function () {
+      const meta = document.querySelector('meta[name="gtm-id"]');
+      const gtmId = (window.GTM_ID || (meta ? meta.content : "") || "").trim();
+      window.GTM_ID = gtmId;
+      window.dataLayer = window.dataLayer || [];
+      window.trackEvent = function (eventName, params) {
+        if (!window.GTM_ID) return;
+        window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+      };
+      if (!gtmId) return;
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        const f = d.getElementsByTagName(s)[0];
+        const j = d.createElement(s);
+        const dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", gtmId);
+    })();
   </script>
 
   <link href="./style.css" rel="stylesheet">
@@ -732,7 +757,11 @@
       </div>
     `;
 
-        li.querySelector(".evBtn").addEventListener("click", () => openModal(r.evidence || []));
+        li.querySelector(".evBtn").addEventListener("click", () => {
+          const sid = r.evidence?.[0]?.source_id || "unknown";
+          if (typeof trackEvent === "function") trackEvent("open_evidence", { source_id: sid });
+          openModal(r.evidence || []);
+        });
         ul.appendChild(li);
       });
     }
@@ -792,7 +821,11 @@
       </div>
     `;
 
-        li.querySelector(".evBtn").addEventListener("click", () => openModal(r.evidence || []));
+        li.querySelector(".evBtn").addEventListener("click", () => {
+          const sid = r.evidence?.[0]?.source_id || "unknown";
+          if (typeof trackEvent === "function") trackEvent("open_evidence", { source_id: sid });
+          openModal(r.evidence || []);
+        });
         ul.appendChild(li);
       });
     }
@@ -840,6 +873,9 @@
       }
 
       box.classList.remove("hidden");
+      link.onclick = () => {
+        if (typeof trackEvent === "function") trackEvent("click_affiliate", { product_id: productId, url: link.href });
+      };
     }
 
 
@@ -938,6 +974,9 @@
       const firstSource = (visa.sources && visa.sources.length) ? visa.sources[0] : null;
       $("officialBtn").href = sanitizeUrl(firstSource?.url || "#");
       $("snapshotBtn").href = firstSource?.local_path ? sanitizeUrl("../" + firstSource.local_path.replaceAll("\\", "/")) : "#";
+      $("snapshotBtn").onclick = () => {
+        if (typeof trackEvent === "function") trackEvent("open_snapshot", { snapshot_id: SNAPSHOT_PARAM || "latest" });
+      };
 
       // notify issue
       const issueTitle = encodeURIComponent(`Source change - ${visa.id}`);
@@ -959,6 +998,9 @@
       url.searchParams.set("product", productId);
       if (SNAPSHOT_PARAM) url.searchParams.set("snapshot", SNAPSHOT_PARAM);
       history.replaceState(null, "", url.toString());
+      if (typeof trackEvent === "function") {
+        trackEvent("run_check", { visa_id: visaId, product_id: productId, status });
+      }
     }
 
     async function init() {
@@ -996,6 +1038,8 @@
         // listeners
         vs.addEventListener("change", updateHints);
         ps.addEventListener("change", updateHints);
+        vs.addEventListener("change", () => { if (typeof trackEvent === "function") trackEvent("select_visa", { visa_id: vs.value }); });
+        ps.addEventListener("change", () => { if (typeof trackEvent === "function") trackEvent("select_product", { product_id: ps.value }); });
 
         $("checkBtn").addEventListener("click", (e) => {
           e.preventDefault();
@@ -1008,6 +1052,7 @@
           setTimeout(() => {
             $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
           }, 900);
+          if (typeof trackEvent === "function") trackEvent("copy_link", { url: location.href });
         });
 
         $("closeModal").addEventListener("click", closeModal);

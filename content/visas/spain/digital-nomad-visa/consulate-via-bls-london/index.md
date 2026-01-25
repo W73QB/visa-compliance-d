@@ -4,6 +4,13 @@ visa_id: "ES_DNV_BLS_LONDON_2026"
 last_verified: "2026-01-12"
 source_ids: ["BLS_ES_DNV_LONDON_2026"]
 description: "Official insurance requirements for Spain Digital Nomad Visa via Consulate via BLS London"
+faq:
+  - question: "Is annual payment required for Spain DNV insurance?"
+    answer: "Yes. BLS London expects comprehensive, prepaid coverage; policies with monthly payments risk rejection."
+  - question: "Do I need an insurer authorized in Spain?"
+    answer: "Yes. The policy must be from an insurer authorized to operate in Spain."
+  - question: "Are deductibles or copayments allowed?"
+    answer: "No. The checklist requires no excess, no co-payments, and no moratorium."
 ---
 
 # Spain Digital Nomad Visa

@@ -4,6 +4,13 @@ visa_id: "DE_FREELANCE_EMBASSY_LONDON_2026"
 last_verified: "2026-01-15"
 source_ids: ["DE_D_VISA_HEALTH_INSURANCE_2026"]
 description: "Official insurance requirements for Germany Freelance Visa (National D) via Embassy London"
+faq:
+  - question: "Is travel insurance sufficient for Germany D visa?"
+    answer: "No. Embassy guidance says travel insurance is not sufficient; coverage must match German statutory health insurance."
+  - question: "Do I need German-language confirmation?"
+    answer: "Provide confirmation that the policy meets statutory equivalence in German to reduce refusal risk."
+  - question: "Are deductibles allowed?"
+    answer: "Avoid deductibles; comprehensive statutory-equivalent coverage is expected without excess."
 ---
 
 # Germany Freelance Visa (National D)
