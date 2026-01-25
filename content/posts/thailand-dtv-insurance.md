@@ -3,6 +3,13 @@ title: "Thailand DTV insurance requirement status (evidence-based)"
 date: 2026-01-14
 description: "Evidence-based compliance summary for Thailand DTV visa insurance requirements."
 tags: ["thailand", "dtv", "compliance"]
+faq:
+  - question: "Is insurance required for Thailand DTV?"
+    answer: "Current MFA checklist shows no insurance requirement; engine marks NOT_REQUIRED. Requirements may change—always confirm latest list."
+  - question: "Should I still buy insurance?"
+    answer: "Prudent to buy for medical costs; not mandated but sensible for travel/health risks."
+  - question: "How does the checker handle missing evidence?"
+    answer: "If no official source confirms a requirement, status stays UNKNOWN/NOT_REQUIRED rather than guessing."
 ---
 
 ## What the authority requires

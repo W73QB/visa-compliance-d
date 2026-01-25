@@ -3,6 +3,13 @@ title: "Malta Nomad Residence Insurance Requirements"
 date: 2026-01-15
 description: "Evidence-based summary of Malta Nomad Residence insurance rules."
 tags: ["malta", "nomad-residence", "compliance"]
+faq:
+  - question: "Is insurance mandatory for Malta Nomad Residence Permit?"
+    answer: "Yes. Health insurance is required and must be paid for the full period—monthly plans are rejected by the authority."
+  - question: "What coverage level is expected?"
+    answer: "Comprehensive medical coverage including emergencies and repatriation; align with Maltese health system expectations."
+  - question: "Which products are accepted?"
+    answer: "Use evidence-backed products in the checker; acceptance depends on proof of coverage and prepayment."
 ---
 
 ## What the authority requires

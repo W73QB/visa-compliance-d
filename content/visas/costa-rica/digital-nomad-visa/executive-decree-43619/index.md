@@ -4,6 +4,13 @@ visa_id: "CR_DN_DECREE_43619_2026"
 last_verified: "2026-01-12"
 source_ids: ["CR_DECREE_43619_2026"]
 description: "Official insurance requirements for Costa Rica Digital Nomad Visa via Executive Decree 43619"
+faq:
+  - question: "Is insurance mandatory for Costa Rica Digital Nomad Visa?"
+    answer: "Yes. Article 9 requires health insurance that covers the full authorized stay."
+  - question: "What must the policy cover?"
+    answer: "Medical expenses and full-period validity; ensure coverage equals authorized legal stay."
+  - question: "Are monthly payments accepted?"
+    answer: "Decree expects coverage for the full stay; prepaid policies align closely with the requirement."
 ---
 
 # Costa Rica Digital Nomad Visa

@@ -3,6 +3,13 @@ title: "Germany Freelance Visa: Health Insurance Requirement"
 date: 2026-01-15
 description: "Evidence-based summary of health insurance requirements for German national D visas (freelance)."
 tags: ["germany", "freelance", "insurance", "compliance"]
+faq:
+  - question: "Is travel insurance accepted for Germany freelance visa?"
+    answer: "No. Authorities require coverage equivalent to German statutory health insurance; travel insurance is explicitly insufficient."
+  - question: "Do I need unlimited coverage?"
+    answer: "Policies should match statutory coverage levels, including outpatient, inpatient, and repatriation; no deductibles is safest."
+  - question: "Can I use international insurers?"
+    answer: "Yes if they meet statutory equivalence and provide German-language confirmation; evidence-backed products in the checker list those."
 ---
 
 ## What the authority requires

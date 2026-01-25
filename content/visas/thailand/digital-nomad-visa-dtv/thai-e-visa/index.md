@@ -4,6 +4,13 @@ visa_id: "TH_DTV_MFA_2026"
 last_verified: "2026-01-12"
 source_ids: ["TH_MFA_DTV_2026"]
 description: "Official insurance requirements for Thailand Digital Nomad Visa (DTV) via Thai E-Visa"
+faq:
+  - question: "Is insurance required for Thailand DTV?"
+    answer: "Current MFA list shows no insurance requirement; checker marks NOT_REQUIRED."
+  - question: "Should I still buy insurance?"
+    answer: "Sensible for medical and travel risks even if not mandated."
+  - question: "How does the checker treat missing evidence?"
+    answer: "If no official source confirms a requirement, status stays UNKNOWN/NOT_REQUIRED rather than guessing."
 ---
 
 # Thailand Digital Nomad Visa (DTV)
