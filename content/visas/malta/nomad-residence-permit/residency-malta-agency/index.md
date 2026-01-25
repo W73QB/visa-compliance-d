@@ -44,4 +44,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}
+{{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="2026-01-25" >}}
