@@ -17,6 +17,8 @@ canonifyURLs = true
   [params.analytics]
     src = ""
     id = ""
+  [params.gtm]
+    id = "GTM-N4JLPLC2"
   [params.giscus]
     repo = ""
     repo_id = ""
