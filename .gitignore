@@ -27,6 +27,11 @@ public/
 # Node.js / Tailwind
 node_modules/
 ui/style.css
+static/_headers
+static/sources/
+static/ui/
+static/data/
+static/snapshots/
 # Hugo local binaries/logs
 hugo.exe
 tools/logs/

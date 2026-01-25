@@ -1,0 +1,115 @@
+{{- /* Custom schema override: adds WebSite/SearchAction + FAQPage, keeps Org/Breadcrumb/Article. Uses @graph and jsonify for safety. */ -}}
+{{- $graph := slice -}}
+
+{{/* WebSite + Sitelinks SearchAction */}}
+{{- $website := dict
+    "@type" "WebSite"
+    "url"  (site.BaseURL | default site.Home.Permalink)
+    "name" site.Title
+    "description" (site.Params.description | default site.Title)
+    "potentialAction" (dict
+      "@type" "SearchAction"
+      "target" (printf "%ssearch/?q={query}" (site.BaseURL | default site.Home.Permalink))
+      "query-input" "required name=query")
+}}
+{{- $graph = $graph | append $website -}}
+
+{{/* Organization / Person (publisher) */}}
+{{- $publisherType := ( site.Params.schema.publisherType | default "Organization") | title -}}
+{{- $org := dict
+    "@type" $publisherType
+    "name" site.Title
+    "url" site.Home.Permalink
+    "description" (site.Params.description | default site.Title)
+    "logo" (dict "@type" "ImageObject" "url" ( (site.Params.assets.favicon | default "favicon.ico") | absURL))
+}}
+{{- if site.Params.schema.sameAs }}
+  {{- $org = merge $org (dict "sameAs" site.Params.schema.sameAs ) -}}
+{{- else if site.Params.SocialIcons }}
+  {{- $same := slice -}}
+  {{- range site.Params.SocialIcons }}{{ $same = $same | append .url }}{{ end -}}
+  {{- $org = merge $org (dict "sameAs" $same ) -}}
+{{- end -}}
+{{- $graph = $graph | append $org -}}
+
+{{/* BreadcrumbList for pages/sections */}}
+{{- if (or .IsPage .IsSection) -}}
+  {{- $crumbs := slice -}}
+  {{- $segments := (split (trim (replace (.RelPermalink) (site.LanguagePrefix) "" ) "/") "/") -}}
+  {{- $path := "" -}}
+  {{- range $i, $s := $segments -}}
+    {{- if gt (len $s) 0 -}}
+      {{- $path = printf "%s/%s" $path $s -}}
+      {{- $pg := site.GetPage $path -}}
+      {{- if $pg -}}
+        {{- $crumb := dict
+            "@type" "ListItem"
+            "position" (add $i 1)
+            "name" $pg.Title
+            "item" $pg.Permalink
+        -}}
+        {{- $crumbs = $crumbs | append $crumb -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt (len $crumbs) 0 -}}
+    {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "itemListElement" $crumbs ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Article / BlogPosting for pages with content */}}
+{{- if .IsPage -}}
+  {{- $authors := slice -}}
+  {{- $authParam := .Params.author | default site.Params.author -}}
+  {{- if $authParam -}}
+    {{- if (or (eq (printf "%T" $authParam) "[]string") (eq (printf "%T" $authParam) "[]interface {}")) -}}
+      {{- range $authParam }}{{ $authors = $authors | append (dict "@type" "Person" "name" .) }}{{ end -}}
+    {{- else -}}
+      {{- $authors = slice (dict "@type" "Person" "name" $authParam) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $article := dict
+      "@type" "Article"
+      "headline" (.Title | plainify)
+      "name" (.Title | plainify)
+      "description" ((.Description | default .Summary) | plainify)
+      "inLanguage" (.Language.Lang | default "en")
+      "url" .Permalink
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+      "datePublished" .PublishDate
+      "dateModified" .Lastmod
+      "author" $authors
+      "publisher" $org
+  -}}
+  {{- /* Image if available */ -}}
+  {{- if .Params.cover.image -}}
+    {{- $img := .Params.cover.image -}}
+    {{- if not .Params.cover.relative }}{{ $img = ($img | absURL) }}{{ else }}{{ $img = (path.Join .RelPermalink .Params.cover.image ) | absURL }}{{ end -}}
+    {{- $article = merge $article (dict "image" $img) -}}
+  {{- end -}}
+  {{- $graph = $graph | append $article -}}
+{{- end -}}
+
+{{/* FAQPage from front matter faq: [{question, answer}] */}}
+{{- with .Params.faq -}}
+  {{- $faqs := slice -}}
+  {{- range . -}}
+    {{- if and .question .answer -}}
+      {{- $faqs = $faqs | append (dict
+        "@type" "Question"
+        "name" .question
+        "acceptedAnswer" (dict "@type" "Answer" "text" .answer)
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if gt (len $faqs) 0 -}}
+    {{- $graph = $graph | append (dict "@type" "FAQPage" "mainEntity" $faqs) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Output @graph if any */}}
+{{- if gt (len $graph) 0 -}}
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify }}
+</script>
+{{- end -}}

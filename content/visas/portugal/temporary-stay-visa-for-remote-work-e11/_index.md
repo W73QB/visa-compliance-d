@@ -24,7 +24,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=2026-01-24)
+Try the compliance checker: [Open Checker](/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=2026-01-25)
 
 ## Disclaimer
 
@@ -35,4 +35,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}
+{{< checker_cta visa="PT_DNV_VFS_CHINA_2026" snapshot="2026-01-25" >}}

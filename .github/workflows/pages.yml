@@ -40,12 +40,10 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Update Browserslist DB
-        run: npx update-browserslist-db@latest
-
       - name: Build CSS (Tailwind)
         run: |
           npm ci
+          npx update-browserslist-db@latest
           npm run build:css
 
       - name: Validate + build mappings + build index + snapshot + sync static
@@ -99,9 +97,6 @@ jobs:
 
       - name: Build Hugo (with log)
         run: pwsh -File tools/build_hugo.ps1
-
-      - name: Build Pagefind
-        run: pwsh -File tools/build_pagefind.ps1
 
       - name: Verify Hugo build log
         run: pwsh -File tools/tests/hugo_build_log_tests.ps1

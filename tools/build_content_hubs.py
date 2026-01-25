@@ -115,7 +115,7 @@ def render_overview(country_slug: str, visa_slug: str, visa_name: str,
     lines.append(get_lint_required_blocks(first_visa_id, visa_name, snapshot_id))
 
     lines.append("")
-    lines.append('{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}')
+    lines.append(f'{{{{< checker_cta visa="{first_visa_id}" snapshot="{snapshot_id}" >}}}}')
     lines.append("")
 
     return "\n".join(lines)
@@ -145,7 +145,7 @@ def render_root_index(groups: dict, snapshot_id: str) -> str:
     lines.append(get_root_lint_blocks(snapshot_id))
 
     lines.append("")
-    lines.append('{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}')
+    lines.append(f'{{{{< checker_cta snapshot="{snapshot_id}" >}}}}')
     lines.append("")
     return "\n".join(lines)
 
@@ -181,6 +181,8 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
         "| --- | --- | --- | --- |",
     ]
 
+    evidence_count = 0
+
     for req in visa.get("requirements", []):
         key = req.get("key", "")
         op = req.get("op", "")
@@ -208,6 +210,7 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
                 evidence_items.append(f'*{locator}*: "{excerpt[:80]}..." ([source](/{local_path}))')
             else:
                 evidence_items.append(f'*{locator}*: "{excerpt[:80]}..." (source_id: {sid})')
+            evidence_count += 1
 
         evidence = " ".join(evidence_items) if evidence_items else "*No evidence recorded*"
         lines.append(f"| `{key}` | `{op}` | {value_str} | {evidence} |")
@@ -228,11 +231,17 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
         else:
             lines.append(f"- **{sid}**: [Original]({url}) | Retrieved: {retrieved}")
 
+    # Evidence gate: if no evidence, mark noindex and show UNKNOWN notice
+    if evidence_count == 0:
+        lines.insert(6, "robotsNoIndex: true")
+        req_idx = lines.index("## Requirements")
+        lines.insert(req_idx, "> **UNKNOWN** — no evidence found. This page is not indexed until evidence is added.")
+
     # Add required lint blocks
     lines.append(get_lint_required_blocks(visa_id, visa["visa_name"], snapshot_id))
 
     lines.append("")
-    lines.append('{{< vf-cta href="/ui/" label="Open Compliance Checker" >}}')
+    lines.append(f'{{{{< checker_cta visa="{visa_id}" snapshot="{snapshot_id}" >}}}}')
     lines.append("")
 
     # Write file

@@ -50,6 +50,10 @@ def main() -> None:
     if snapshots_src.exists():
         copy_tree(snapshots_src, static / "snapshots")
 
+    headers_src = ROOT / "ops" / "headers" / "_headers"
+    if headers_src.exists():
+        copy_file(headers_src, static / "_headers")
+
     print("Synced UI/data/sources into static/ for Hugo")
 
 
