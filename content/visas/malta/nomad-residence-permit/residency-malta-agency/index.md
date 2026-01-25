@@ -33,7 +33,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=2026-01-24)
+Try the compliance checker: [Open Checker](/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=2026-01-25)
 
 ## Disclaimer
 

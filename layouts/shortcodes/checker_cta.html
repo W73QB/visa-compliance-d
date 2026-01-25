@@ -1,0 +1,15 @@
+{{- $visa := .Get "visa" -}}
+{{- $product := .Get "product" -}}
+{{- $snapshot := .Get "snapshot" | default "latest" -}}
+{{- $label := .Get "label" | default "Open Compliance Checker" -}}
+{{- $href := (relURL "ui/") | printf "%s?%s" | printf "%s" -}}
+{{- /* build query */ -}}
+{{- $qs := slice -}}
+{{- if $visa }}{{ $qs = $qs | append (printf "visa=%s" (urlquery $visa)) }}{{ end -}}
+{{- if $product }}{{ $qs = $qs | append (printf "product=%s" (urlquery $product)) }}{{ end -}}
+{{- if $snapshot }}{{ $qs = $qs | append (printf "snapshot=%s" (urlquery $snapshot)) }}{{ end -}}
+{{- $href = printf "%s?%s" (relURL "ui/") (delimit $qs "&") -}}
+<a class="vf-cta" href="{{ $href | safeURL }}">
+  {{ $label }}
+  <span class="vf-cta-meta">Evidence-based · No source = UNKNOWN</span>
+</a>
