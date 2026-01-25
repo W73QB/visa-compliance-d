@@ -83,6 +83,8 @@ jobs:
           pwsh -File tools/tests/hugo_integration_tests.ps1
           pwsh -File tools/tests/sync_hugo_static_tests.ps1
           pwsh -File tools/tests/verify_static_bundle_tests.ps1
+          pwsh -File tools/tests/headers_tests.ps1
+          pwsh -File tools/tests/analytics_tests.ps1
           pwsh -File tools/tests/smoke_tests.ps1
           pwsh -File tools/tests/performance_tests.ps1
 
