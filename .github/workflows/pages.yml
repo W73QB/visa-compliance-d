@@ -69,6 +69,12 @@ jobs:
           ln -s "$(command -v python)" .bin/py
           echo "$PWD/.bin" >> "$GITHUB_PATH"
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.146.0"
+          extended: true
+
       - name: Run tests
         run: |
           pwsh -File tools/tests/ui_compliance_tests.ps1
@@ -90,12 +96,6 @@ jobs:
 
       - name: Lint content
         run: python tools/lint_content.py
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "0.146.0"
-          extended: true
 
       - name: Build Hugo (with log)
         run: pwsh -File tools/build_hugo.ps1
