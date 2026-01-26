@@ -29,6 +29,28 @@ UNKNOWN if any requirement lacks official proof.
 
 Use the checker with a snapshot: `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=ASISA_HEALTH_RESIDENTS_2026&snapshot=releases/2026-01-16`
 
+## Plain-English summary
+
+Spain DNV authorities ask for **comprehensive, Spain-authorized health insurance** that mirrors the public system. If any requirement lacks official evidence, the checker returns **UNKNOWN** instead of guessing. This matters because a policy can look fine on paper but still fail a specific route’s checklist.
+
+## Common pitfalls
+
+- Buying travel-only policies when a full health policy is required.
+- Accepting deductibles or co-payments when the route requires zero.
+- Paying monthly when a full annual policy is expected.
+
+## What to prepare
+
+- A policy document showing the insurer is authorized to operate in Spain.
+- Evidence that coverage is comprehensive, with no deductibles or co-payments.
+- Proof of coverage period matching your intended stay (often annual prepaid).
+
+## Related reading
+
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
+- [Spain DNV insurance mistakes](/traps/spain-dnv-insurance-mistakes/)
+- [Why SafetyWing is rejected for Spain DNV](/posts/safetywing-spain-dnv-rejected/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

@@ -26,6 +26,30 @@ Use the checker with a snapshot:
 
 `/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=releases/2026-01-15`
 
+## Plain-English summary
+
+Portugal E11 routes can differ by authority. This page summarizes the verified insurance requirements and points to the official evidence so you can avoid assumptions.
+
+When in doubt, use the checker with your specific route to validate coverage against evidence snapshots.
+
+If a requirement lacks evidence, the checker will show UNKNOWN so you can request clarification from the authority.
+
+## Common pitfalls
+
+- Relying on generic travel insurance advice instead of route-specific requirements.
+- Submitting a policy with missing evidence for required coverage features.
+
+## What to prepare
+
+- A policy summary showing medical coverage and repatriation benefits.
+- Proof of coverage amount matching the checklist requirement (often €30,000).
+- A coverage period aligned with the visa duration.
+
+## Related reading
+
+- [Portugal DNV requirements (route page)](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
+- [Schengen 30,000 EUR insurance rule](/guides/schengen-30000-insurance/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

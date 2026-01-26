@@ -25,6 +25,20 @@ We compare each requirement to product facts with evidence. See /methodology/.
 
 Example link: /ui/?visa=MT_NOMAD_RESIDENCY_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15
 
+## Plain-English summary
+
+Malta’s Nomad Residence Permit requires **prepaid health insurance** for the full period. Monthly plans are often rejected because they do not prove coverage for the entire stay. Use evidence-backed policies and confirm the payment term before applying.
+
+## Common pitfalls
+
+- Submitting monthly policies when the authority expects full-period payment.
+- Using a policy without clear documentation of coverage scope.
+
+## Related reading
+
+- [Malta nomad residence requirements (route page)](/visas/malta/nomad-residence-permit/residency-malta-agency/)
+- [Monthly payment pitfalls for Malta nomad visa](/traps/malta-nomad-monthly-payments/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
