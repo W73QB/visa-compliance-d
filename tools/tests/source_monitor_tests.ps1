@@ -28,7 +28,7 @@ $originalFixture = Get-Content -Raw -Path $fixturePath
 $originalMeta = Get-Content -Raw -Path $metaPath
 
 try {
-  Set-Content -Path $fixturePath -Value $originalFixture
+  Set-Content -Path $fixturePath -Value $originalFixture -NoNewline
   $hash = (Get-FileHash -Algorithm SHA256 -Path $fixturePath).Hash.ToLower()
   @"
 {
@@ -36,7 +36,7 @@ try {
   "url": "https://example.com",
   "sha256": "$hash"
 }
-"@ | Set-Content -Path $metaPath
+"@ | Set-Content -Path $metaPath -NoNewline
 
   $proc = Start-Process -FilePath "py" -ArgumentList @("tools/check_source_changes.py", "--sources-dir", $sourcesDir, "--fixture-dir", $fixtureDir, "--output", $out1) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "source check runs"
@@ -63,8 +63,8 @@ try {
   $report = Get-Content -Raw -Path $reportPath
   Assert-True ($report -match "TEST_SOURCE") "report includes source id"
 } finally {
-  Set-Content -Path $fixturePath -Value $originalFixture
-  Set-Content -Path $metaPath -Value $originalMeta
+  Set-Content -Path $fixturePath -Value $originalFixture -NoNewline
+  Set-Content -Path $metaPath -Value $originalMeta -NoNewline
   Remove-Item -LiteralPath $out1, $out2, $statusPath, $reportPath -Force -ErrorAction SilentlyContinue
 }
 
