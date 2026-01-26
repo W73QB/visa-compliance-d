@@ -480,8 +480,8 @@
     }
 
     function resolveDataUrl(pathname, snapshot) {
-      const path = String(pathname || "").replace(/\/g, "/");
-  const safeSnapshot = snapshot ? snapshot.replace(/^\/+/, "") : "";
+      const path = String(pathname || "");
+      const safeSnapshot = snapshot ? snapshot.replace(/^\/+/, "") : "";
       if (safeSnapshot) {
         if (path.endsWith("/ui/index.html") || path.endsWith("/ui/")) {
           return "../snapshots/" + safeSnapshot + "/ui_index.json";
