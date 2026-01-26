@@ -4,13 +4,6 @@ visa_id: "ES_DNV_BLS_LONDON_2026"
 last_verified: "2026-01-12"
 source_ids: ["BLS_ES_DNV_LONDON_2026"]
 description: "Official insurance requirements for Spain Digital Nomad Visa via Consulate via BLS London"
-faq:
-  - question: "Is annual payment required for Spain DNV insurance?"
-    answer: "Yes. BLS London expects comprehensive, prepaid coverage; policies with monthly payments risk rejection."
-  - question: "Do I need an insurer authorized in Spain?"
-    answer: "Yes. The policy must be from an insurer authorized to operate in Spain."
-  - question: "Are deductibles or copayments allowed?"
-    answer: "No. The checklist requires no excess, no co-payments, and no moratorium."
 ---
 
 # Spain Digital Nomad Visa
@@ -36,6 +29,12 @@ faq:
 
 - **BLS_ES_DNV_LONDON_2026**: [Local copy](/sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf) | [Original](https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf) | Retrieved: 2026-01-12
 
+## Related reading
+
+- [Spain DNV insurance requirements](/posts/spain-dnv-insurance/)
+- [Why SafetyWing gets rejected for Spain DNV](/posts/safetywing-spain-dnv-rejected/)
+- [Spain DNV insurance mistakes to avoid](/traps/spain-dnv-insurance-mistakes/)
+
 ## What the authority requires
 
 See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
@@ -46,7 +45,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=ES_DNV_BLS_LONDON_2026&snapshot=2026-01-25)
+Try the compliance checker: [Open Checker](/ui/?visa=ES_DNV_BLS_LONDON_2026&snapshot=2026-01-26)
 
 ## Disclaimer
 
@@ -57,4 +56,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-01-25" >}}
+{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-01-26" >}}

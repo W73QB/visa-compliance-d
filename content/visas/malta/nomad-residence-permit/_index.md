@@ -24,7 +24,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=2026-01-25)
+Try the compliance checker: [Open Checker](/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=2026-01-26)
 
 ## Disclaimer
 
@@ -35,4 +35,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="2026-01-25" >}}
+{{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="2026-01-26" >}}

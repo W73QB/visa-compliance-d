@@ -12,6 +12,34 @@ VISAS = ROOT / "data" / "visas"
 SOURCES = ROOT / "sources"
 OUT = ROOT / "content" / "visas"
 
+RELATED_POSTS = {
+    "ES_DNV_BLS_LONDON_2026": [
+        ("/posts/spain-dnv-insurance/", "Spain DNV insurance requirements"),
+        ("/posts/safetywing-spain-dnv-rejected/", "Why SafetyWing gets rejected for Spain DNV"),
+        ("/traps/spain-dnv-insurance-mistakes/", "Spain DNV insurance mistakes to avoid"),
+    ],
+    "DE_FREELANCE_EMBASSY_LONDON_2026": [
+        ("/posts/germany-freelance-insurance/", "Germany freelance visa insurance guide"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "PT_DNV_VFS_CHINA_2026": [
+        ("/posts/portugal-dnv-insurance/", "Portugal DNV insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+    ],
+    "CR_DN_DECREE_43619_2026": [
+        ("/posts/costa-rica-dn-insurance/", "Costa Rica DN insurance requirements"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "TH_DTV_MFA_2026": [
+        ("/posts/thailand-dtv-insurance/", "Thailand DTV insurance overview"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+    ],
+    "MT_NOMAD_RESIDENCY_2026": [
+        ("/posts/malta-nomad-insurance/", "Malta nomad insurance requirements"),
+        ("/traps/malta-nomad-monthly-payments/", "Monthly payment pitfalls for Malta nomad visa"),
+    ],
+}
+
 
 def slugify(value: str) -> str:
     """Convert string to URL-safe slug."""
@@ -236,6 +264,14 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
         lines.insert(6, "robotsNoIndex: true")
         req_idx = lines.index("## Requirements")
         lines.insert(req_idx, "> **UNKNOWN** — no evidence found. This page is not indexed until evidence is added.")
+
+    related = RELATED_POSTS.get(visa_id, [])
+    if related:
+        lines.append("")
+        lines.append("## Related reading")
+        lines.append("")
+        for url, label in related:
+            lines.append(f"- [{label}]({url})")
 
     # Add required lint blocks
     lines.append(get_lint_required_blocks(visa_id, visa["visa_name"], snapshot_id))
