@@ -34,6 +34,7 @@ Assert-True ($ui -like "*Last Verified*") "UI includes last verified label"
 
 Assert-True ($ui -like "*const DATA_URL*") "DATA_URL is computed dynamically"
 Assert-True ($ui -like "*location.pathname*") "DATA_URL uses location.pathname"
+Assert-True ($ui -like "*dataLayer.push*") "UI defines dataLayer tracking"
 
 Assert-True ($ui -like "*function escapeHtml*") "escapeHtml helper exists"
 Assert-True ($ui -like "*function sanitizeUrl*") "sanitizeUrl helper exists"
@@ -53,6 +54,41 @@ Assert-True ($ui -like '*href="../affiliate-disclosure/"*') "UI footer links to 
 $bytes = [System.IO.File]::ReadAllBytes("ui/index.html")
 $nonAsciiBytes = @($bytes | Where-Object { $_ -gt 127 })
 Assert-True ($nonAsciiBytes.Count -eq 0) "ui/index.html contains only ASCII characters"
+
+$node = Get-Command node -ErrorAction SilentlyContinue
+if ($node) {
+  $tmp = New-TemporaryFile
+  $nodeScript = @'
+const fs = require("fs");
+const html = fs.readFileSync("ui/index.html", "utf8");
+const parts = html.split("<script>");
+let parsed = 0;
+for (let i = 1; i < parts.length; i += 1) {
+  const part = parts[i];
+  const end = part.indexOf("</script>");
+  if (end === -1) continue;
+  const code = part.slice(0, end).trim();
+  if (!code) continue;
+  parsed += 1;
+  try {
+    new Function(code);
+  } catch (err) {
+    console.error("SCRIPT_PARSE_ERROR", err && err.message ? err.message : err);
+    process.exit(1);
+  }
+}
+if (parsed === 0) {
+  console.error("NO_INLINE_SCRIPT");
+  process.exit(1);
+}
+'@
+  Set-Content -Path $tmp -Value $nodeScript -Encoding UTF8
+  $proc = Start-Process node -ArgumentList $tmp -Wait -PassThru -NoNewWindow
+  Remove-Item $tmp -ErrorAction SilentlyContinue
+  Assert-True ($proc.ExitCode -eq 0) "UI inline scripts parse without syntax errors"
+} else {
+  Write-Host "SKIP: node not available for UI script parse check" -ForegroundColor Yellow
+}
 
 Write-Host "Index build checks..." -ForegroundColor Cyan
 $index = Get-Content -Raw -Path "data/ui_index.json" | ConvertFrom-Json
