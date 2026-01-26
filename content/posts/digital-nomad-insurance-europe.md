@@ -26,6 +26,17 @@ We compare VisaFacts against ProductFacts using a rule engine. Details: /methodo
 
 Example link: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15
 
+## Countries covered in this hub
+
+- [Spain DNV requirements](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
+- [Portugal DNV requirements](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
+- [Germany freelance visa requirements](/visas/germany/freelance-visa-national-d/embassy-london/)
+- [Malta nomad residence permit requirements](/visas/malta/nomad-residence-permit/residency-malta-agency/)
+
+## Use the compliance checker
+
+Try the evidence-based checker for your route: /ui/
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
