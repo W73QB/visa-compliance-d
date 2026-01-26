@@ -6,8 +6,8 @@ tags: ["guide", "compliance"]
 faq:
   - question: "What does UNKNOWN mean?"
     answer: "UNKNOWN means we found no official evidence for a requirement."
-  - question: "Is GREEN a guarantee?"
-    answer: "No. GREEN means evidence matches requirements, not a visa approval guarantee."
+  - question: "Is GREEN an approval?"
+    answer: "No. GREEN means evidence matches requirements, not a visa approval."
 ---
 
 ## What the authority requires
