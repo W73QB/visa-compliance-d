@@ -24,6 +24,10 @@ build/
 public/
 .hugo_build.lock
 .worktrees/
+.bin/
+.trae/
+context.db*
+data/snapshots/
 # Node.js / Tailwind
 node_modules/
 ui/style.css
