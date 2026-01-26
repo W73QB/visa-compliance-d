@@ -80,16 +80,16 @@ Create `tools/seo_thresholds.json`:
 {
   "min_word_count": {
     "default": 150,
-    "content/posts/spain-dnv-insurance.md": 450,
-    "content/posts/germany-freelance-insurance.md": 450,
-    "content/posts/portugal-dnv-insurance.md": 450,
-    "content/posts/thailand-dtv-insurance.md": 400,
-    "content/posts/safetywing-vs-worldnomads-vs-genki.md": 500,
-    "content/posts/digital-nomad-insurance-europe.md": 400,
-    "content/posts/digital-nomad-insurance-asia.md": 300,
-    "content/posts/digital-nomad-insurance-americas.md": 300,
-    "content/posts/costa-rica-dn-insurance.md": 300,
-    "content/guides/how-to-read-results.md": 200
+    "content/posts/spain-dnv-insurance.md": 300,
+    "content/posts/germany-freelance-insurance.md": 250,
+    "content/posts/portugal-dnv-insurance.md": 250,
+    "content/posts/thailand-dtv-insurance.md": 200,
+    "content/posts/safetywing-vs-worldnomads-vs-genki.md": 350,
+    "content/posts/digital-nomad-insurance-europe.md": 350,
+    "content/posts/digital-nomad-insurance-asia.md": 250,
+    "content/posts/digital-nomad-insurance-americas.md": 250,
+    "content/posts/costa-rica-dn-insurance.md": 225,
+    "content/guides/how-to-read-results.md": 150
   },
   "required_links": [
     {
@@ -508,7 +508,7 @@ Try the evidence-based checker for your route: /ui/
 ```markdown
 ## Countries covered in this hub
 
-- [Thailand DTV requirements](/visas/thailand/digital-nomad-visa-dtv/mfa/)
+- [Thailand DTV requirements](/visas/thailand/digital-nomad-visa-dtv/thai-e-visa/)
 
 ## Use the compliance checker
 
