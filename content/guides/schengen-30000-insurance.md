@@ -3,6 +3,11 @@ title: "Schengen €30,000 Travel Medical Insurance Requirements"
 date: 2026-01-15
 description: "Evidence-based guide to Schengen travel medical insurance requirements under the EU Visa Code."
 tags: ["schengen", "insurance", "guide"]
+faq:
+  - question: "Is €30,000 always required for Schengen visas?"
+    answer: "Many Schengen routes require it, but always verify with the authority checklist."
+  - question: "Does deductible matter?"
+    answer: "Some routes require zero deductible; use the checker to confirm evidence."
 ---
 
 ## What the authority requires
@@ -17,6 +22,8 @@ Evidence is recorded in `sources/EU_VISA_CODE_ARTICLE_15_2026-01-15.html`.
 ## How we evaluate
 
 We compare these requirements against ProductFacts and mark missing or conflicting facts as UNKNOWN or RED.
+
+If a route references the Schengen rule, the €30,000 minimum is the baseline. Authorities may add extra conditions (e.g., zero deductible or specific insurer constraints).
 
 ## Check in the engine
 

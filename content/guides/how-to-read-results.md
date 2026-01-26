@@ -3,6 +3,11 @@ title: "How to Read VisaFact Results"
 date: 2026-01-15
 description: "A quick guide to interpreting evidence-based compliance results."
 tags: ["guide", "compliance"]
+faq:
+  - question: "What does UNKNOWN mean?"
+    answer: "UNKNOWN means we found no official evidence for a requirement."
+  - question: "Is GREEN a guarantee?"
+    answer: "No. GREEN means evidence matches requirements, not a visa approval guarantee."
 ---
 
 ## What the authority requires
@@ -18,6 +23,16 @@ Example note: As of 2026-01-16, Spain DNV has a GREEN product (ASISA Health Resi
 ## Check in the engine
 
 Example link: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=ASISA_HEALTH_RESIDENTS_2026&snapshot=releases/2026-01-16
+
+## Status meanings (plain English)
+
+- **GREEN**: Evidence shows the product meets the stated requirement.
+- **YELLOW**: Partially meets requirements or evidence is mixed.
+- **RED**: Evidence conflicts with a requirement.
+- **UNKNOWN**: No official evidence found for the requirement.
+- **NOT_REQUIRED**: The authority does not require that feature.
+
+Use the snapshot date to see when the evidence was last verified.
 
 ## Disclaimer
 
