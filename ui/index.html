@@ -404,11 +404,11 @@
     </div>
 
     <!-- Modal evidence -->
-    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div
         class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
         <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-          <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+          <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
           <button id="closeModal"
             class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
             Close
@@ -672,7 +672,39 @@
       return false;
     }
 
+        let lastFocusedElement = null;
+
+    function handleModalKeydown(e) {
+      if (e.key === "Escape") {
+        closeModal();
+        e.preventDefault();
+        return;
+      }
+
+      if (e.key === "Tab") {
+        const modal = $("modal");
+        const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            last.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === last) {
+            first.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    }
+
     function openModal(evidenceItems) {
+      lastFocusedElement = document.activeElement;
       const body = $("modalBody");
       body.innerHTML = "";
 
@@ -709,13 +741,26 @@
         body.appendChild(card);
       });
 
-      $("modal").classList.remove("hidden");
-      $("modal").classList.add("flex");
+      const modal = $("modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      modal.addEventListener("keydown", handleModalKeydown);
+
+      // Focus close button initially
+      const closeBtn = $("closeModal");
+      if (closeBtn) closeBtn.focus();
     }
 
     function closeModal() {
-      $("modal").classList.add("hidden");
-      $("modal").classList.remove("flex");
+      const modal = $("modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modal.removeEventListener("keydown", handleModalKeydown);
+
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+        lastFocusedElement = null;
+      }
     }
 
     function renderRequirements(visa) {
