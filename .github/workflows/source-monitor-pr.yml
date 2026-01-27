@@ -24,8 +24,7 @@ jobs:
               data = json.load(f)
           changed = len(data.get('changed', [])) > 0
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
-              out.write(f"changed={str(changed).lower()}
-")
+              out.write(f"changed={str(changed).lower()}\\n")
           PY
       - name: Create issue
         if: steps.detect.outputs.changed == 'true'
