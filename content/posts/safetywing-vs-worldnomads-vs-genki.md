@@ -52,6 +52,8 @@ This comparison focuses on **evidence-based compliance**, not marketing claims. 
 
 Some product facts are based on official documents, while others rely on limited public summaries. VisaFact labels missing evidence as UNKNOWN to avoid over-claiming compliance. When possible, prefer products with explicit policy documents that match visa checklist language.
 
+If a product’s evidence is incomplete, treat the result as a starting point and verify with the authority checklist.
+
 ## Related reading
 
 - [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)

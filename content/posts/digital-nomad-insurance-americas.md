@@ -36,6 +36,8 @@ Example link: /ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snap
 - Proof that coverage is active for the full intended stay.
 - Any authority checklist items that mention insurance explicitly.
 
+Keep a copy of the policy wording in case the authority requests proof after submission.
+
 ## Use the compliance checker
 
 Try the evidence-based checker for your route: /ui/

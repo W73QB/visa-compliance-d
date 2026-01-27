@@ -28,6 +28,7 @@ Use the checker with a snapshot:
 
 - Submitting a monthly subscription plan without proof of annual prepayment.
 - Assuming “monthly” is acceptable because the insurer is reputable.
+
 Always confirm the payment term in writing.
 
 ## Related reading

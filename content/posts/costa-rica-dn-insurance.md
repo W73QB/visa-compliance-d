@@ -30,6 +30,8 @@ Costa Rica’s digital nomad program requires proof of health insurance for the 
 
 If the authority updates its checklist, use the latest snapshot in the checker and avoid relying on outdated summaries.
 
+Ask your insurer for a certificate that explicitly states the coverage amount.
+
 ## Common pitfalls
 
 - Policies that do not show the minimum medical coverage in writing.

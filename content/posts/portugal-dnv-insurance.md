@@ -38,6 +38,7 @@ If a requirement lacks evidence, the checker will show UNKNOWN so you can reques
 
 - Relying on generic travel insurance advice instead of route-specific requirements.
 - Submitting a policy with missing evidence for required coverage features.
+- Missing proof of coverage duration aligned with the visa period.
 
 ## What to prepare
 

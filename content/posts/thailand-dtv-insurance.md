@@ -39,6 +39,7 @@ If your route changes, update your snapshot and re-check before submitting.
 
 - A policy summary that clearly states coverage limits and regions.
 - Proof of active coverage for your intended stay period.
+- Any official document showing your policy details in English.
 
 ## Related reading
 

@@ -32,6 +32,8 @@ Germany’s freelance visa routes often expect health coverage equivalent to the
 
 If your policy documentation cannot demonstrate statutory equivalence, the application is at higher risk of rejection even if the insurer is reputable.
 
+When possible, request written confirmation from the insurer that maps coverage to statutory benefits.
+
 ## Common pitfalls
 
 - Submitting travel insurance when long-stay health coverage is required.

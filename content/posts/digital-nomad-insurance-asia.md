@@ -17,6 +17,8 @@ If a route does not list insurance, that is **not** the same as “insurance nev
 
 VisaFact links to evidence snapshots so you can see exactly what was verified.
 
+Always compare the checklist date to your planned application date.
+
 ## How we evaluate
 
 We compare VisaFacts against ProductFacts using a rule engine. Details: /methodology/

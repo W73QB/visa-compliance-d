@@ -34,6 +34,11 @@ Example link: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=ASISA_HEALTH_RESIDENTS_20
 
 Use the snapshot date to see when the evidence was last verified.
 
+## Related reading
+
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
+- [Portugal DNV requirements (route page)](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

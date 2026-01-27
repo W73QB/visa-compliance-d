@@ -25,6 +25,11 @@ We compare these requirements against ProductFacts and mark missing or conflicti
 
 If a route references the Schengen rule, the €30,000 minimum is the baseline. Authorities may add extra conditions (e.g., zero deductible or specific insurer constraints).
 
+## Related reading
+
+- [Portugal DNV requirements (route page)](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
+
 ## Check in the engine
 
 Use a snapshot link:
