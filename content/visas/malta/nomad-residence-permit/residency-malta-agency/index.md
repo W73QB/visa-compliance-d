@@ -4,6 +4,13 @@ visa_id: "MT_NOMAD_RESIDENCY_2026"
 last_verified: "2026-01-12"
 source_ids: ["MT_RESIDENCY_FAQ_2026"]
 description: "Official insurance requirements for Malta Nomad Residence Permit via Residency Malta Agency"
+faq:
+  - question: "Are monthly payment policies accepted for Malta Nomad Residence Permit?"
+    answer: "No. Residency Malta states monthly payments are not acceptable; premiums must cover the entire period."
+  - question: "What coverage is required?"
+    answer: "Health insurance covering the full permitted stay, including medical expenses and repatriation."
+  - question: "Which insurers can I use?"
+    answer: "Use insurers providing proof of full-period coverage; evidence-backed products in the checker are prioritized."
 ---
 
 # Malta Nomad Residence Permit
@@ -38,7 +45,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=2026-01-26)
+Try the compliance checker: [Open Checker](/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=2026-01-27)
 
 ## Disclaimer
 
@@ -49,4 +56,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="2026-01-26" >}}
+{{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="2026-01-27" >}}
