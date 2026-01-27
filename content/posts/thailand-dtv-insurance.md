@@ -14,7 +14,7 @@ faq:
 
 ## What the authority requires
 
-The official DTV required documents list does not list insurance. Evidence: Thai MFA DTV requirements captured in `sources/TH_DTV_MFA_requirements_2026-01-12.md`.
+The official DTV required documents list does not list insurance. Evidence: Thai MFA DTV requirements captured in `sources/TH_DTV_MFA_requirements_2026-01-12.md`. Consulate requirements can vary, so verify the current checklist for your filing location.
 
 ## How we evaluate
 
@@ -30,10 +30,21 @@ Thailand DTV routes may not mandate insurance today, but requirements can change
 
 If your route changes, update your snapshot and re-check before submitting.
 
+## Why NOT_REQUIRED matters
+
+When the checker returns NOT_REQUIRED, it means:
+
+- The official documents list does not mention insurance.
+- No product can be GREEN or RED because there is no requirement to evaluate against.
+- Buying insurance is a personal risk decision, not a compliance requirement.
+
+This is different from UNKNOWN (where a requirement exists but evidence is missing).
+
 ## Common pitfalls
 
 - Assuming “not required” means no proof will ever be requested.
 - Using a policy with unclear coverage or missing evidence.
+- Confusing NOT_REQUIRED with "insurance is unnecessary." The visa does not require it, but medical costs can still be significant without coverage.
 
 ## What to prepare (if you choose coverage)
 
