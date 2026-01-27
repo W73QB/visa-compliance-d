@@ -404,11 +404,11 @@
     </div>
 
     <!-- Modal evidence -->
-    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
       <div
         class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
         <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-          <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+          <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
           <button id="closeModal"
             class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
             Close
@@ -544,6 +544,7 @@
 
 
     let INDEX = null;
+    let previousActiveElement = null;
 
     // Supports both ui_index.json shapes:
     // 1) denormalized: visas_by_id/products_by_id/mappings_by_key/sources_by_id
@@ -709,13 +710,16 @@
         body.appendChild(card);
       });
 
+      previousActiveElement = document.activeElement;
       $("modal").classList.remove("hidden");
       $("modal").classList.add("flex");
+      setTimeout(() => $("closeModal").focus(), 50);
     }
 
     function closeModal() {
       $("modal").classList.add("hidden");
       $("modal").classList.remove("flex");
+      if (previousActiveElement) { previousActiveElement.focus(); previousActiveElement = null; }
     }
 
     function renderRequirements(visa) {
@@ -1057,6 +1061,7 @@
 
         $("closeModal").addEventListener("click", closeModal);
         $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("modal").classList.contains("hidden")) closeModal(); });
 
         updateHints();
 
