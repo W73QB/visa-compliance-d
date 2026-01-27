@@ -14,7 +14,18 @@ faq:
 
 ## What the authority requires
 
-Spain Digital Nomad Visa (BLS London) requires health insurance contracted with an insurer authorized to operate in Spain and covering risks insured by the Spanish public health system. The policy must be comprehensive with unlimited coverage, no deductibles or co-payments, and no moratorium. Evidence: BLS checklist (page 2, item 9) stored under `sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf`.
+Spain Digital Nomad Visa (BLS London route) requires health insurance meeting all of the following conditions, based on the BLS checklist (page 2, item 9) stored under `sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf`:
+
+- **Mandatory:** Insurance is required for all applicants.
+- **Authorized in Spain:** The insurer must be authorized to operate in Spain.
+- **Covers public health system risks:** The policy must cover risks insured by the Spanish public health system.
+- **Comprehensive:** Full coverage, not travel-only or emergency-only.
+- **Unlimited coverage:** No annual or per-incident cap.
+- **No deductible:** Zero deductible (excess) allowed.
+- **No co-payment:** Zero co-payment allowed.
+- **No moratorium:** No waiting period before coverage begins.
+
+Failing any single requirement produces a RED status in the checker.
 
 ## How we evaluate
 
@@ -24,6 +35,18 @@ We compare visa requirements against product specs and evidence in the rule engi
 
 As of 2026-01-16, ASISA Health Residents is marked GREEN based on official evidence. Other products can still be RED or
 UNKNOWN if any requirement lacks official proof.
+
+## Mapping results summary
+
+As of snapshot `releases/2026-01-16`, the checker evaluated 7 products against Spain DNV requirements:
+
+| Status | Count | What it means |
+|---|---|---|
+| GREEN | 1 | All requirements verified by evidence |
+| RED | 5 | At least one requirement fails based on evidence |
+| UNKNOWN | 1 | Evidence missing for one or more requirements |
+
+Only ASISA Health Residents achieves GREEN. Five products are marked RED due to at least one verified requirement mismatch (for example: deductible, co-payment, coverage limit, or authorization). One product lacks sufficient evidence and is marked UNKNOWN.
 
 ## Check in the engine
 
@@ -38,6 +61,8 @@ Spain DNV authorities ask for **comprehensive, Spain-authorized health insurance
 - Buying travel-only policies when a full health policy is required.
 - Accepting deductibles or co-payments when the route requires zero.
 - Paying monthly when a full annual policy is expected.
+- Assuming coverage is "unlimited" when the policy document states a cap (for example, $250,000). Spain DNV requires truly unlimited coverage.
+- Using policies that do not show authorization to operate in Spain, which conflicts with the route's authorization requirement.
 
 ## What to prepare
 
