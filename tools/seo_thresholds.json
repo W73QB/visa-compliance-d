@@ -1,7 +1,6 @@
 {
   "min_word_count": {
     "default": 150,
-    "content/posts/spain-dnv-insurance.md": 425,
     "content/posts/germany-freelance-insurance.md": 300,
     "content/posts/portugal-dnv-insurance.md": 255,
     "content/posts/thailand-dtv-insurance.md": 240,
@@ -10,11 +9,21 @@
     "content/posts/digital-nomad-insurance-asia.md": 250,
     "content/posts/digital-nomad-insurance-americas.md": 250,
     "content/posts/costa-rica-dn-insurance.md": 225,
-    "content/guides/how-to-read-results.md": 150
+    "content/guides/how-to-read-results.md": 150,
+    "content/posts/spain-dnv-insurance/index.md": 425
   },
   "required_links": [
     {
       "glob": "content/posts/*.md",
+      "must_include": [
+        "/ui/"
+      ],
+      "at_least_one_of": [
+        "/visas/"
+      ]
+    },
+    {
+      "glob": "content/posts/**/index.md",
       "must_include": [
         "/ui/"
       ],
@@ -33,22 +42,23 @@
     }
   ],
   "require_faq": [
-    "content/posts/spain-dnv-insurance.md",
+    "content/guides/how-to-read-results.md",
+    "content/guides/schengen-30000-insurance.md",
+    "content/posts/costa-rica-dn-insurance.md",
     "content/posts/germany-freelance-insurance.md",
     "content/posts/portugal-dnv-insurance.md",
-    "content/posts/thailand-dtv-insurance.md",
     "content/posts/safetywing-vs-worldnomads-vs-genki.md",
-    "content/guides/schengen-30000-insurance.md",
-    "content/guides/how-to-read-results.md",
-    "content/traps/spain-dnv-insurance-mistakes.md",
+    "content/posts/spain-dnv-insurance/index.md",
+    "content/posts/thailand-dtv-insurance.md",
     "content/traps/malta-nomad-monthly-payments.md",
-    "content/posts/costa-rica-dn-insurance.md"
+    "content/traps/spain-dnv-insurance-mistakes.md"
   ],
   "include_globs": [
     "content/posts/*.md",
     "content/guides/*.md",
     "content/traps/*.md",
-    "content/visas/**/index.md"
+    "content/visas/**/index.md",
+    "content/posts/**/index.md"
   ],
   "exclude_globs": [
     "content/posts/_index.md",
