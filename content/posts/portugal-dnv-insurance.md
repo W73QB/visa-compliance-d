@@ -26,6 +26,18 @@ Use the checker with a snapshot:
 
 `/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=releases/2026-01-15`
 
+## Mapping results summary
+
+As of snapshot `releases/2026-01-15`, the checker evaluated 7 products — all are GREEN:
+
+| Status | Count |
+|---|---|
+| GREEN | 7 |
+
+The structured requirement currently encoded in the checker is that insurance is mandatory. Because no other constraints are represented as requirements for this route, all products pass the automated check.
+
+This does not mean there are no other checklist details in the source document. If additional requirements are encoded in future snapshots, some products may shift to RED or UNKNOWN.
+
 ## Plain-English summary
 
 Portugal E11 routes can differ by authority. This page summarizes the verified insurance requirements and points to the official evidence so you can avoid assumptions.
@@ -39,6 +51,7 @@ If a requirement lacks evidence, the checker will show UNKNOWN so you can reques
 - Relying on generic travel insurance advice instead of route-specific requirements.
 - Submitting a policy with missing evidence for required coverage features.
 - Missing proof of coverage duration aligned with the visa period.
+- Not having documentation that shows active coverage for your intended dates.
 
 ## What to prepare
 
