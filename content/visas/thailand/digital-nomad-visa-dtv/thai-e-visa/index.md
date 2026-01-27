@@ -13,7 +13,7 @@ faq:
     answer: "If no official source confirms a requirement, status stays UNKNOWN/NOT_REQUIRED rather than guessing."
 ---
 
-# Thailand Digital Nomad Visa (DTV)
+## Thailand Digital Nomad Visa (DTV)
 
 **Route:** Thai E-Visa  
 **Authority:** Ministry of Foreign Affairs Thailand  
@@ -29,6 +29,11 @@ faq:
 
 - **TH_MFA_DTV_2026**: [Local copy](/sources/TH_DTV_MFA_requirements_2026-01-12.md) | [Original](https://www.thaievisa.go.th/visa/dtv-visa) | Retrieved: 2026-01-12
 
+## Related reading
+
+- [Thailand DTV insurance overview](/posts/thailand-dtv-insurance/)
+- [Digital nomad insurance in Asia](/posts/digital-nomad-insurance-asia/)
+
 ## What the authority requires
 
 See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
@@ -39,7 +44,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=TH_DTV_MFA_2026&snapshot=2026-01-25)
+Try the compliance checker: [Open Checker](/ui/?visa=TH_DTV_MFA_2026&snapshot=2026-01-27)
 
 ## Disclaimer
 
@@ -50,4 +55,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta visa="TH_DTV_MFA_2026" snapshot="2026-01-25" >}}
+{{< checker_cta visa="TH_DTV_MFA_2026" snapshot="2026-01-27" >}}

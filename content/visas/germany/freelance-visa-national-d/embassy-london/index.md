@@ -13,7 +13,7 @@ faq:
     answer: "Avoid deductibles; comprehensive statutory-equivalent coverage is expected without excess."
 ---
 
-# Germany Freelance Visa (National D)
+## Germany Freelance Visa (National D)
 
 **Route:** Embassy London  
 **Authority:** German Federal Foreign Office (UK)  
@@ -30,6 +30,11 @@ faq:
 
 - **DE_D_VISA_HEALTH_INSURANCE_2026**: [Local copy](/sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html) | [Original](https://uk.diplo.de/uk-en/02/visa/health-insurance-requirements-2616300) | Retrieved: 2026-01-15
 
+## Related reading
+
+- [Germany freelance visa insurance guide](/posts/germany-freelance-insurance/)
+- [How to read compliance results](/guides/how-to-read-results/)
+
 ## What the authority requires
 
 See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
@@ -40,7 +45,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=DE_FREELANCE_EMBASSY_LONDON_2026&snapshot=2026-01-25)
+Try the compliance checker: [Open Checker](/ui/?visa=DE_FREELANCE_EMBASSY_LONDON_2026&snapshot=2026-01-27)
 
 ## Disclaimer
 
@@ -51,4 +56,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta visa="DE_FREELANCE_EMBASSY_LONDON_2026" snapshot="2026-01-25" >}}
+{{< checker_cta visa="DE_FREELANCE_EMBASSY_LONDON_2026" snapshot="2026-01-27" >}}

@@ -24,6 +24,29 @@ If the authority does not require insurance, the engine returns NOT_REQUIRED. Se
 
 Use the checker with a snapshot: `/ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15`
 
+## Plain-English summary
+
+Thailand DTV routes may not mandate insurance today, but requirements can change. VisaFact highlights evidence so you can see what is verified vs UNKNOWN.
+
+If your route changes, update your snapshot and re-check before submitting.
+
+## Common pitfalls
+
+- Assuming “not required” means no proof will ever be requested.
+- Using a policy with unclear coverage or missing evidence.
+
+## What to prepare (if you choose coverage)
+
+- A policy summary that clearly states coverage limits and regions.
+- Proof of active coverage for your intended stay period.
+- Any official document showing your policy details in English.
+Keep the insurer’s contact details available in case officials request verification.
+
+## Related reading
+
+- [Thailand DTV requirements (route page)](/visas/thailand/digital-nomad-visa-dtv/thai-e-visa/)
+- [Digital nomad insurance in Asia](/posts/digital-nomad-insurance-asia/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

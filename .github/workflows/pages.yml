@@ -85,6 +85,7 @@ jobs:
           pwsh -File tools/tests/verify_snapshot_manifest_tests.ps1
           pwsh -File tools/tests/offers_tests.ps1
           pwsh -File tools/tests/content_lint_tests.ps1
+          pwsh -File tools/tests/seo_audit_tests.ps1
           pwsh -File tools/tests/source_monitor_tests.ps1
           pwsh -File tools/tests/hugo_integration_tests.ps1
           pwsh -File tools/tests/sync_hugo_static_tests.ps1

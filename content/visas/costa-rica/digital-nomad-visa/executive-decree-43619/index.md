@@ -13,7 +13,7 @@ faq:
     answer: "Decree expects coverage for the full stay; prepaid policies align closely with the requirement."
 ---
 
-# Costa Rica Digital Nomad Visa
+## Costa Rica Digital Nomad Visa
 
 **Route:** Executive Decree 43619  
 **Authority:** Direccion General de Migracion y Extranjeria  
@@ -31,6 +31,11 @@ faq:
 
 - **CR_DECREE_43619_2026**: [Local copy](/sources/CR_Decreto_43619_2026-01-12.md) | [Original](http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=97374&nValor3=131405) | Retrieved: 2026-01-12
 
+## Related reading
+
+- [Costa Rica DN insurance requirements](/posts/costa-rica-dn-insurance/)
+- [How to read compliance results](/guides/how-to-read-results/)
+
 ## What the authority requires
 
 See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
@@ -41,7 +46,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=CR_DN_DECREE_43619_2026&snapshot=2026-01-25)
+Try the compliance checker: [Open Checker](/ui/?visa=CR_DN_DECREE_43619_2026&snapshot=2026-01-27)
 
 ## Disclaimer
 
@@ -52,4 +57,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta visa="CR_DN_DECREE_43619_2026" snapshot="2026-01-25" >}}
+{{< checker_cta visa="CR_DN_DECREE_43619_2026" snapshot="2026-01-27" >}}

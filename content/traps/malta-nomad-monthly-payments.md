@@ -3,6 +3,11 @@ title: "Malta Nomad Residence: Monthly Payment Policies"
 date: 2026-01-15
 description: "Evidence-based note on Malta Nomad Residence insurance payment requirements."
 tags: ["malta", "nomad", "insurance", "compliance", "traps"]
+faq:
+  - question: "Are monthly plans accepted for Malta nomad permit?"
+    answer: "Evidence indicates monthly payments are not accepted for some routes."
+  - question: "How can I verify acceptance?"
+    answer: "Use the checker and review evidence excerpts."
 ---
 
 ## What the authority requires
@@ -18,6 +23,18 @@ We check whether the product payment cadence matches the annual pre-paid require
 Use the checker with a snapshot:
 
 `/ui/?visa=MT_NOMAD_RESIDENCY_2026&snapshot=releases/2026-01-15`
+
+## Common pitfalls
+
+- Submitting a monthly subscription plan without proof of annual prepayment.
+- Assuming "monthly" is acceptable because the insurer is reputable.
+- Providing a certificate that shows coverage dates but omits payment frequency details.
+
+Always confirm the payment term in writing. If your insurer issues a certificate of insurance, verify that it explicitly states the premium was paid annually or in a single lump sum. Some applicants have had submissions questioned when the payment cadence was ambiguous on the certificate.
+
+## Related reading
+
+- [Malta nomad residence requirements (route page)](/visas/malta/nomad-residence-permit/residency-malta-agency/)
 
 ## Disclaimer
 

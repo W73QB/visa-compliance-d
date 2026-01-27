@@ -12,6 +12,126 @@ VISAS = ROOT / "data" / "visas"
 SOURCES = ROOT / "sources"
 OUT = ROOT / "content" / "visas"
 
+VISA_FAQS = {
+    "ES_DNV_BLS_LONDON_2026": [
+        {
+            "question": "Is annual payment required for Spain DNV insurance?",
+            "answer": "Yes. BLS London expects comprehensive, prepaid coverage; policies with monthly payments risk rejection.",
+        },
+        {
+            "question": "Do I need an insurer authorized in Spain?",
+            "answer": "Yes. The policy must be from an insurer authorized to operate in Spain.",
+        },
+        {
+            "question": "Are deductibles or copayments allowed?",
+            "answer": "No. The checklist requires no excess, no co-payments, and no moratorium.",
+        },
+    ],
+    "DE_FREELANCE_EMBASSY_LONDON_2026": [
+        {
+            "question": "Is travel insurance sufficient for Germany D visa?",
+            "answer": "No. Embassy guidance says travel insurance is not sufficient; coverage must match German statutory health insurance.",
+        },
+        {
+            "question": "Do I need German-language confirmation?",
+            "answer": "Provide confirmation that the policy meets statutory equivalence in German to reduce refusal risk.",
+        },
+        {
+            "question": "Are deductibles allowed?",
+            "answer": "Avoid deductibles; comprehensive statutory-equivalent coverage is expected without excess.",
+        },
+    ],
+    "MT_NOMAD_RESIDENCY_2026": [
+        {
+            "question": "Are monthly payment policies accepted for Malta Nomad Residence Permit?",
+            "answer": "No. Residency Malta states monthly payments are not acceptable; premiums must cover the entire period.",
+        },
+        {
+            "question": "What coverage is required?",
+            "answer": "Health insurance covering the full permitted stay, including medical expenses and repatriation.",
+        },
+        {
+            "question": "Which insurers can I use?",
+            "answer": "Use insurers providing proof of full-period coverage; evidence-backed products in the checker are prioritized.",
+        },
+    ],
+    "TH_DTV_MFA_2026": [
+        {
+            "question": "Is insurance required for Thailand DTV?",
+            "answer": "Current MFA list shows no insurance requirement; checker marks NOT_REQUIRED.",
+        },
+        {
+            "question": "Should I still buy insurance?",
+            "answer": "Sensible for medical and travel risks even if not mandated.",
+        },
+        {
+            "question": "How does the checker treat missing evidence?",
+            "answer": "If no official source confirms a requirement, status stays UNKNOWN/NOT_REQUIRED rather than guessing.",
+        },
+    ],
+    "PT_DNV_VFS_CHINA_2026": [
+        {
+            "question": "What insurance is required for Portugal E11?",
+            "answer": "Valid travel/medical insurance covering medical expenses and repatriation, no deductible or copay, per VFS China checklist.",
+        },
+        {
+            "question": "Can I pay monthly?",
+            "answer": "VFS centers often expect prepaid coverage for the visa period; monthly billing can be refused—confirm locally.",
+        },
+        {
+            "question": "Which insurers are acceptable?",
+            "answer": "Use insurers recognized in Portugal/EU; evidence-backed products in the checker list those with documented acceptance.",
+        },
+    ],
+    "CR_DN_DECREE_43619_2026": [
+        {
+            "question": "Is insurance mandatory for Costa Rica Digital Nomad Visa?",
+            "answer": "Yes. Article 9 requires health insurance that covers the full authorized stay.",
+        },
+        {
+            "question": "What must the policy cover?",
+            "answer": "Medical expenses and full-period validity; ensure coverage equals authorized legal stay.",
+        },
+        {
+            "question": "Are monthly payments accepted?",
+            "answer": "Decree expects coverage for the full stay; prepaid policies align closely with the requirement.",
+        },
+    ],
+}
+
+RELATED_POSTS = {
+    "ES_DNV_BLS_LONDON_2026": [
+        ("/posts/spain-dnv-insurance/", "Spain DNV insurance requirements"),
+        ("/posts/safetywing-spain-dnv-rejected/", "Why SafetyWing gets rejected for Spain DNV"),
+        ("/traps/spain-dnv-insurance-mistakes/", "Spain DNV insurance mistakes to avoid"),
+    ],
+    "DE_FREELANCE_EMBASSY_LONDON_2026": [
+        ("/posts/germany-freelance-insurance/", "Germany freelance visa insurance guide"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "PT_DNV_VFS_CHINA_2026": [
+        ("/posts/portugal-dnv-insurance/", "Portugal DNV insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+    ],
+    "CR_DN_DECREE_43619_2026": [
+        ("/posts/costa-rica-dn-insurance/", "Costa Rica DN insurance requirements"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "TH_DTV_MFA_2026": [
+        ("/posts/thailand-dtv-insurance/", "Thailand DTV insurance overview"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+    ],
+    "MT_NOMAD_RESIDENCY_2026": [
+        ("/posts/malta-nomad-insurance/", "Malta nomad insurance requirements"),
+        ("/traps/malta-nomad-monthly-payments/", "Monthly payment pitfalls for Malta nomad visa"),
+    ],
+}
+
+
+def yaml_escape(value: str) -> str:
+    """Escape double quotes for YAML inline strings."""
+    return value.replace('"', '\\"')
+
 
 def slugify(value: str) -> str:
     """Convert string to URL-safe slug."""
@@ -94,7 +214,7 @@ def render_overview(country_slug: str, visa_slug: str, visa_name: str,
         f'description: "Insurance requirements for {country_name} {visa_name} - evidence-based compliance checker"',
         "---",
         "",
-        f"# {country_name} {visa_name} Requirements",
+        f"## {country_name} {visa_name} Requirements",
         "",
         "All requirements below are derived from official sources. Missing evidence means UNKNOWN.",
         "",
@@ -129,7 +249,7 @@ def render_root_index(groups: dict, snapshot_id: str) -> str:
         'description: "Evidence-based visa insurance requirements by country and visa type"',
         "---",
         "",
-        "# Visa Requirements by Country",
+        "## Visa Requirements by Country",
         "",
         "Browse requirements by country and visa type. All requirements are sourced from official evidence.",
         "",
@@ -160,16 +280,27 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
     # Get source IDs from visa sources array
     source_ids = [s["source_id"] for s in visa.get("sources", [])]
 
-    lines = [
+    frontmatter = [
         "---",
         f'title: "{visa["country"]} {visa["visa_name"]} - {visa["route"]}"',
         f'visa_id: "{visa_id}"',
         f'last_verified: "{visa.get("last_verified", "")}"',
         f'source_ids: {json.dumps(source_ids)}',
         f'description: "Official insurance requirements for {visa["country"]} {visa["visa_name"]} via {visa["route"]}"',
-        "---",
+    ]
+
+    faqs = VISA_FAQS.get(visa_id, [])
+    if faqs:
+        frontmatter.append("faq:")
+        for item in faqs:
+            frontmatter.append(f'  - question: "{yaml_escape(item["question"])}"')
+            frontmatter.append(f'    answer: "{yaml_escape(item["answer"])}"')
+
+    frontmatter.append("---")
+
+    lines = frontmatter + [
         "",
-        f"# {visa['country']} {visa['visa_name']}",
+        f"## {visa['country']} {visa['visa_name']}",
         "",
         f"**Route:** {visa['route']}  ",
         f"**Authority:** {visa.get('authority', visa['route'])}  ",
@@ -233,9 +364,17 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
 
     # Evidence gate: if no evidence, mark noindex and show UNKNOWN notice
     if evidence_count == 0:
-        lines.insert(6, "robotsNoIndex: true")
+        lines.insert(len(frontmatter) - 1, "robotsNoIndex: true")
         req_idx = lines.index("## Requirements")
         lines.insert(req_idx, "> **UNKNOWN** — no evidence found. This page is not indexed until evidence is added.")
+
+    related = RELATED_POSTS.get(visa_id, [])
+    if related:
+        lines.append("")
+        lines.append("## Related reading")
+        lines.append("")
+        for url, label in related:
+            lines.append(f"- [{label}]({url})")
 
     # Add required lint blocks
     lines.append(get_lint_required_blocks(visa_id, visa["visa_name"], snapshot_id))

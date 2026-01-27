@@ -26,6 +26,15 @@ Check the current result in the engine:
 
 `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15`
 
+## Quick takeaway
+
+SafetyWing commonly fails Spain DNV checks because the route demands **Spain-authorized comprehensive health coverage** with **no deductibles or co-payments**. If any evidence is missing, the checker returns UNKNOWN rather than assuming compliance.
+
+## Related reading
+
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
+- [Spain DNV insurance requirements summary](/posts/spain-dnv-insurance/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

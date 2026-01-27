@@ -3,6 +3,11 @@ title: "Spain DNV Insurance: Common Compliance Mistakes"
 date: 2026-01-15
 description: "Evidence-based list of Spain DNV insurance requirements that are often missed."
 tags: ["spain", "dnv", "compliance", "traps"]
+faq:
+  - question: "What is the most common rejection reason?"
+    answer: "Submitting travel insurance instead of comprehensive health coverage."
+  - question: "Can monthly plans be rejected?"
+    answer: "Some routes expect annual prepaid coverage; check your authority."
 ---
 
 ## What the authority requires
@@ -30,6 +35,16 @@ so we can verify.
 Use the checker with a snapshot:
 
 `/ui/?visa=ES_DNV_BLS_LONDON_2026&snapshot=releases/2026-01-15`
+
+## Common pitfalls
+
+- Policies that lack explicit proof of Spain authorization.
+- Deductibles or co-payments when the checklist requires zero.
+- Monthly payment plans where annual prepayment is expected.
+
+## Related reading
+
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 
 ## Disclaimer
 

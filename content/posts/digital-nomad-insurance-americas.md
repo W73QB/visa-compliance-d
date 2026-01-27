@@ -14,13 +14,33 @@ Verified subset as of 2026-01-16. Each item links to an official authority page 
 - Curacao (@HOME in Curacao): international travel insurance required; medical insurance is a prerequisite. Source: https://athomeincuracao.com/faq/
 - Belize (Work Where You Vacation): travel insurance minimum 50,000 USD. Source: https://www.travelbelize.org/work-where-you-vacation/
 
+Requirements in the Americas range from travel medical insurance to full health coverage. Always check the program’s official checklist and compare against evidence-backed product facts.
+
+If evidence is missing, the checker will show UNKNOWN so you can follow up with the authority.
+
 ## How we evaluate
 
 We compare VisaFacts against ProductFacts using a rule engine. Details: /methodology/
 
 ## Check in the engine
 
-Example link: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15
+Example link: /ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snapshot=releases/2026-01-15
+
+## Countries covered in this hub
+
+- [Costa Rica digital nomad visa requirements](/visas/costa-rica/digital-nomad-visa/executive-decree-43619/)
+
+## What to prepare
+
+- A policy summary showing medical coverage limits.
+- Proof that coverage is active for the full intended stay.
+- Any authority checklist items that mention insurance explicitly.
+
+Keep a copy of the policy wording in case the authority requests proof after submission.
+
+## Use the compliance checker
+
+Try the evidence-based checker for your route: /ui/
 
 ## Disclaimer
 
