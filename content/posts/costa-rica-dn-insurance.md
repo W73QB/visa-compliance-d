@@ -43,6 +43,7 @@ Ask your insurer for a certificate that explicitly states the coverage amount.
 - A policy summary showing the medical coverage amount.
 - Proof of coverage that spans the full visa validity.
 - Any official checklist or authority note that confirms the requirement.
+Keep the insurer’s contact information handy for verification requests.
 
 ## Related reading
 

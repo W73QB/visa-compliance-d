@@ -4,7 +4,7 @@ visa_group: "malta-nomad-residence-permit"
 description: "Insurance requirements for Malta Nomad Residence Permit - evidence-based compliance checker"
 ---
 
-# Malta Nomad Residence Permit Requirements
+## Malta Nomad Residence Permit Requirements
 
 All requirements below are derived from official sources. Missing evidence means UNKNOWN.
 

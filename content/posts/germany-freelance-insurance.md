@@ -44,6 +44,7 @@ When possible, request written confirmation from the insurer that maps coverage 
 - A policy document describing benefits comparable to statutory coverage.
 - Confirmation of coverage for inpatient/outpatient care and repatriation.
 - Any authority-specific checklist items from the embassy route.
+Keep a short, written confirmation from the insurer in case the consulate asks for proof.
 
 ## Related reading
 

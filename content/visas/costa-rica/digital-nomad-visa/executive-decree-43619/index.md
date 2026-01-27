@@ -13,7 +13,7 @@ faq:
     answer: "Decree expects coverage for the full stay; prepaid policies align closely with the requirement."
 ---
 
-# Costa Rica Digital Nomad Visa
+## Costa Rica Digital Nomad Visa
 
 **Route:** Executive Decree 43619  
 **Authority:** Direccion General de Migracion y Extranjeria  

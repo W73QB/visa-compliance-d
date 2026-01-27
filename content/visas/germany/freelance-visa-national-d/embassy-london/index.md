@@ -13,7 +13,7 @@ faq:
     answer: "Avoid deductibles; comprehensive statutory-equivalent coverage is expected without excess."
 ---
 
-# Germany Freelance Visa (National D)
+## Germany Freelance Visa (National D)
 
 **Route:** Embassy London  
 **Authority:** German Federal Foreign Office (UK)  

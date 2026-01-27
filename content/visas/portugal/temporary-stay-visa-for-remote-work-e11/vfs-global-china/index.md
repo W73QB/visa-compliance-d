@@ -13,7 +13,7 @@ faq:
     answer: "Use insurers recognized in Portugal/EU; evidence-backed products in the checker list those with documented acceptance."
 ---
 
-# Portugal Temporary Stay Visa for Remote Work (E11)
+## Portugal Temporary Stay Visa for Remote Work (E11)
 
 **Route:** VFS Global China  
 **Authority:** VFS Global China  

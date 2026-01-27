@@ -13,7 +13,7 @@ faq:
     answer: "Use insurers providing proof of full-period coverage; evidence-backed products in the checker are prioritized."
 ---
 
-# Malta Nomad Residence Permit
+## Malta Nomad Residence Permit
 
 **Route:** Residency Malta Agency  
 **Authority:** Residency Malta Agency  

@@ -214,7 +214,7 @@ def render_overview(country_slug: str, visa_slug: str, visa_name: str,
         f'description: "Insurance requirements for {country_name} {visa_name} - evidence-based compliance checker"',
         "---",
         "",
-        f"# {country_name} {visa_name} Requirements",
+        f"## {country_name} {visa_name} Requirements",
         "",
         "All requirements below are derived from official sources. Missing evidence means UNKNOWN.",
         "",
@@ -249,7 +249,7 @@ def render_root_index(groups: dict, snapshot_id: str) -> str:
         'description: "Evidence-based visa insurance requirements by country and visa type"',
         "---",
         "",
-        "# Visa Requirements by Country",
+        "## Visa Requirements by Country",
         "",
         "Browse requirements by country and visa type. All requirements are sourced from official evidence.",
         "",
@@ -300,7 +300,7 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
 
     lines = frontmatter + [
         "",
-        f"# {visa['country']} {visa['visa_name']}",
+        f"## {visa['country']} {visa['visa_name']}",
         "",
         f"**Route:** {visa['route']}  ",
         f"**Authority:** {visa.get('authority', visa['route'])}  ",
@@ -364,7 +364,7 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
 
     # Evidence gate: if no evidence, mark noindex and show UNKNOWN notice
     if evidence_count == 0:
-        frontmatter.insert(-1, "robotsNoIndex: true")
+        lines.insert(len(frontmatter) - 1, "robotsNoIndex: true")
         req_idx = lines.index("## Requirements")
         lines.insert(req_idx, "> **UNKNOWN** — no evidence found. This page is not indexed until evidence is added.")
 

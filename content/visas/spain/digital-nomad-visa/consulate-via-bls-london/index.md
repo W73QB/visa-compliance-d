@@ -13,7 +13,7 @@ faq:
     answer: "No. The checklist requires no excess, no co-payments, and no moratorium."
 ---
 
-# Spain Digital Nomad Visa
+## Spain Digital Nomad Visa
 
 **Route:** Consulate via BLS London  
 **Authority:** BLS International London  

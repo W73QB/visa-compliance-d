@@ -4,7 +4,7 @@ visa_group: "costa-rica-digital-nomad-visa"
 description: "Insurance requirements for Costa Rica Digital Nomad Visa - evidence-based compliance checker"
 ---
 
-# Costa Rica Digital Nomad Visa Requirements
+## Costa Rica Digital Nomad Visa Requirements
 
 All requirements below are derived from official sources. Missing evidence means UNKNOWN.
 

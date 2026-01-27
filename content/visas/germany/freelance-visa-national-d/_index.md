@@ -4,7 +4,7 @@ visa_group: "germany-freelance-visa-national-d"
 description: "Insurance requirements for Germany Freelance Visa (National D) - evidence-based compliance checker"
 ---
 
-# Germany Freelance Visa (National D) Requirements
+## Germany Freelance Visa (National D) Requirements
 
 All requirements below are derived from official sources. Missing evidence means UNKNOWN.
 

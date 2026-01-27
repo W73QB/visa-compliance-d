@@ -27,9 +27,10 @@ Use the checker with a snapshot:
 ## Common pitfalls
 
 - Submitting a monthly subscription plan without proof of annual prepayment.
-- Assuming “monthly” is acceptable because the insurer is reputable.
+- Assuming "monthly" is acceptable because the insurer is reputable.
+- Providing a certificate that shows coverage dates but omits payment frequency details.
 
-Always confirm the payment term in writing.
+Always confirm the payment term in writing. If your insurer issues a certificate of insurance, verify that it explicitly states the premium was paid annually or in a single lump sum. Some applicants have had submissions questioned when the payment cadence was ambiguous on the certificate.
 
 ## Related reading
 

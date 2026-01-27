@@ -4,7 +4,7 @@ visa_group: "portugal-temporary-stay-visa-for-remote-work-e11"
 description: "Insurance requirements for Portugal Temporary Stay Visa for Remote Work (E11) - evidence-based compliance checker"
 ---
 
-# Portugal Temporary Stay Visa for Remote Work (E11) Requirements
+## Portugal Temporary Stay Visa for Remote Work (E11) Requirements
 
 All requirements below are derived from official sources. Missing evidence means UNKNOWN.
 

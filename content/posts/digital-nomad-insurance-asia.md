@@ -36,6 +36,7 @@ Example link: /ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=r
 - A policy summary showing coverage limits and regions.
 - Proof of active coverage for the intended stay period.
 - Any authority checklist items that mention insurance explicitly.
+Save a copy of the insurer certificate in case the authority requests evidence after submission.
 
 ## Use the compliance checker
 

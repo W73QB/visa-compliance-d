@@ -3,7 +3,7 @@ title: "Visa Requirements"
 description: "Evidence-based visa insurance requirements by country and visa type"
 ---
 
-# Visa Requirements by Country
+## Visa Requirements by Country
 
 Browse requirements by country and visa type. All requirements are sourced from official evidence.
 

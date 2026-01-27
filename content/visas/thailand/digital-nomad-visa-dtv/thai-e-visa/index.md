@@ -13,7 +13,7 @@ faq:
     answer: "If no official source confirms a requirement, status stays UNKNOWN/NOT_REQUIRED rather than guessing."
 ---
 
-# Thailand Digital Nomad Visa (DTV)
+## Thailand Digital Nomad Visa (DTV)
 
 **Route:** Thai E-Visa  
 **Authority:** Ministry of Foreign Affairs Thailand  

@@ -45,6 +45,7 @@ If a requirement lacks evidence, the checker will show UNKNOWN so you can reques
 - A policy summary showing medical coverage and repatriation benefits.
 - Proof of coverage amount matching the checklist requirement (often €30,000).
 - A coverage period aligned with the visa duration.
+Keep a PDF of the policy terms so you can attach it if requested.
 
 ## Related reading
 

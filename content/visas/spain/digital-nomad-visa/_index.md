@@ -4,7 +4,7 @@ visa_group: "spain-digital-nomad-visa"
 description: "Insurance requirements for Spain Digital Nomad Visa - evidence-based compliance checker"
 ---
 
-# Spain Digital Nomad Visa Requirements
+## Spain Digital Nomad Visa Requirements
 
 All requirements below are derived from official sources. Missing evidence means UNKNOWN.
 
