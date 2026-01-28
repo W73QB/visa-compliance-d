@@ -54,7 +54,7 @@ Only ASISA Health Residents achieves GREEN. Five products are marked RED due to 
 
 ## Check in the engine
 
-Use the checker with a snapshot: `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=ASISA_HEALTH_RESIDENTS_2026&snapshot=releases/2026-01-16`
+{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" product="ASISA_HEALTH_RESIDENTS_2026" snapshot="releases/2026-01-16" >}}
 
 ## Plain-English summary
 
