@@ -33,7 +33,17 @@
     // Lightweight GTM bootstrap with opt-in ID (set via window.GTM_ID or <meta name="gtm-id">).
     (function () {
       const meta = document.querySelector('meta[name="gtm-id"]');
-      const gtmId = (window.GTM_ID || (meta ? meta.content : "") || "").trim();
+      function vfAnalyticsAllowed() {
+        try {
+          const region = localStorage.getItem("vf_region") || "us";
+          if (region === "eu-uk") return localStorage.getItem("vf_cookie_consent") === "1";
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+      let gtmId = (window.GTM_ID || (meta ? meta.content : "") || "").trim();
+      if (!vfAnalyticsAllowed()) gtmId = "";
       window.GTM_ID = gtmId;
       window.dataLayer = window.dataLayer || [];
       window.trackEvent = function (eventName, params) {
@@ -439,6 +449,14 @@
     </div>
   </footer>
 
+  <div id="vf-cookie-banner" class="hidden fixed bottom-4 left-4 right-4 z-50">
+    <div class="max-w-3xl mx-auto bg-surface-light dark:bg-[#111418] border border-border-soft dark:border-border-dark shadow-lg rounded-lg p-4 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <p class="text-sm text-text-primary dark:text-white">We use analytics cookies in the EU/UK only with consent.</p>
+      <button id="vf-cookie-accept" type="button"
+        class="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all">Accept</button>
+    </div>
+  </div>
+
   <script>
     /*
       Resolve the data URL based on the page location:
@@ -449,6 +467,7 @@
     */
     const SNAPSHOT_PARAM = new URLSearchParams(location.search).get("snapshot");
     const REGION_KEY = "vf_region";
+    const CONSENT_KEY = "vf_cookie_consent";
     const DEFAULT_REGION = "us";
     const DISCLOSURE_BY_REGION = {
       "us": "Paid link. We may earn a commission if you purchase through this link.",
@@ -467,12 +486,40 @@
       return next;
     }
 
+    function analyticsAllowed() {
+      try {
+        const region = getRegion();
+        if (region === "eu-uk") return localStorage.getItem(CONSENT_KEY) === "1";
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function initCookieBanner() {
+      const banner = $("vf-cookie-banner");
+      const accept = $("vf-cookie-accept");
+      if (!banner || !accept) return;
+      if (!analyticsAllowed()) {
+        banner.classList.remove("hidden");
+        if (typeof window.GTM_ID === "string") window.GTM_ID = "";
+      } else {
+        banner.classList.add("hidden");
+      }
+      accept.addEventListener("click", () => {
+        localStorage.setItem(CONSENT_KEY, "1");
+        banner.classList.add("hidden");
+        location.reload();
+      });
+    }
+
     function initRegionSelector() {
       const sel = $("vf-region-select");
       if (!sel) return;
       sel.value = getRegion();
       sel.addEventListener("change", () => {
         setRegion(sel.value);
+        initCookieBanner();
         if (!$("resultArea").classList.contains("hidden")) {
           renderResult();
         }
@@ -1010,6 +1057,7 @@
         const raw = await res.json();
         INDEX = normalizeIndex(raw);
         initRegionSelector();
+        initCookieBanner();
 
         // populate selects
         const vs = $("visaSelect");

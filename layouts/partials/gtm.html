@@ -2,7 +2,11 @@
 {{- if $gtmId -}}
 <script>
 (function(){
-  var gtmId = {{ $gtmId }};
+  function allowed() {
+    try { return (typeof vf_analytics_allowed === "function") ? vf_analytics_allowed() : true; } catch (e) { return false; }
+  }
+  if (!allowed()) return;
+  var gtmId = {{ $gtmId | jsonify }};
   window.GTM_ID = gtmId;
   window.dataLayer = window.dataLayer || [];
   window.trackEvent = function(eventName, params) {

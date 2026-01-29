@@ -1,5 +1,17 @@
 {{- $src := site.Params.analytics.src | default (getenv "HUGO_PARAMS_ANALYTICS_SRC") | default "" -}}
 {{- $id := site.Params.analytics.id | default (getenv "HUGO_PARAMS_ANALYTICS_ID") | default "" -}}
 {{- if and $src $id -}}
-  <script defer data-analytics-id="{{ $id }}" src="{{ $src }}"></script>
+  <script>
+  (function(){
+    function allowed() {
+      try { return (typeof vf_analytics_allowed === "function") ? vf_analytics_allowed() : true; } catch (e) { return false; }
+    }
+    if (!allowed()) return;
+    var s = document.createElement("script");
+    s.defer = true;
+    s.setAttribute("data-analytics-id", {{ $id | jsonify }});
+    s.src = {{ $src | jsonify }};
+    document.head.appendChild(s);
+  })();
+  </script>
 {{- end -}}
