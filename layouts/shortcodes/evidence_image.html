@@ -1,0 +1,11 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Evidence snippet" -}}
+{{- $width := .Get "width" | default "1200" -}}
+{{- $height := .Get "height" | default "800" -}}
+{{- $src = relURL $src -}}
+<figure class="evidence-figure">
+  <img src="{{ $src }}" alt="{{ $alt }}" width="{{ $width }}" height="{{ $height }}" loading="lazy" decoding="async">
+  {{- with .Get "caption" -}}
+  <figcaption>{{ . }}</figcaption>
+  {{- end -}}
+</figure>
