@@ -38,6 +38,8 @@ The structured requirement currently encoded in the checker is that insurance is
 
 This does not mean there are no other checklist details in the source document. If additional requirements are encoded in future snapshots, some products may shift to RED or UNKNOWN.
 
+In other words, this snapshot is confirming “insurance is required” (backed by `sources/PT_E11_VFS_CHINA_2025-07.pdf`), but it is not yet validating every checklist attribute (for example, minimum coverage amount, repatriation wording, or proof format). Treat GREEN here as “meets the currently encoded rule set,” not as confirmation that every checklist line item has been modeled.
+
 ## Plain-English summary
 
 Portugal E11 routes can differ by authority. This page summarizes the verified insurance requirements and points to the official evidence so you can avoid assumptions.
@@ -53,11 +55,14 @@ If a requirement lacks evidence, the checker will show UNKNOWN so you can reques
 - Missing proof of coverage duration aligned with the visa period.
 - Not having documentation that shows active coverage for your intended dates.
 
+Because E11 routes can vary by authority, two applicants can show different checklists even for the same visa type. Keep your deep link snapshot (`/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=...`) tied to the exact authority route and evidence file so you can explain what the checker is evaluating and what is still outside the encoded rule set.
+
 ## What to prepare
 
 - A policy summary showing medical coverage and repatriation benefits.
 - Proof of coverage amount matching the checklist requirement (often €30,000).
 - A coverage period aligned with the visa duration.
+If your policy is a multi-page booklet, extract or highlight the clauses that explicitly mention urgent medical assistance and repatriation, since those terms are typically what the checklist asks you to demonstrate.
 Keep a PDF of the policy terms so you can attach it if requested.
 
 ## Related reading

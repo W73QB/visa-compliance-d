@@ -42,6 +42,8 @@ As of snapshot `releases/2026-01-15`, the checker evaluated 7 products:
 
 The key differentiator is `travel_insurance_accepted = False`. Mapping results show SafetyWing Nomad and World Nomads Explorer as RED because they are classified as travel insurance.
 
+The UNKNOWN outcome here is not a “maybe yes” — it means the product documents we recorded do not contain enough evidence to classify the insurance type as health vs travel for this visa route. In an evidence-first workflow, missing proof is treated as unknown rather than inferred from branding or marketing.
+
 ## Plain-English summary
 
 Germany’s freelance visa routes often expect health coverage equivalent to the statutory system, not travel-only coverage. VisaFact highlights verified evidence so you can see which requirements are confirmed and which remain UNKNOWN.
@@ -55,11 +57,14 @@ When possible, request written confirmation from the insurer that maps coverage 
 - Submitting travel insurance when long-stay health coverage is required. Mapping results show 2 out of 7 evaluated products are RED because they are classified as travel insurance.
 - Assuming a provider is accepted without route-specific evidence.
 
+For Germany’s national D visa routes, the rejection risk is often about category mismatch (travel vs health) rather than just coverage limit. That’s why this page anchors the rule to the authority statement in `sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html` and prioritizes documents that explicitly describe long-stay health coverage.
+
 ## What to prepare
 
 - A policy document describing benefits comparable to statutory coverage.
 - Confirmation of coverage for inpatient/outpatient care and repatriation.
 - Any authority-specific checklist items from the embassy route.
+If your insurer provides a one-page confirmation letter, include language that clearly distinguishes health insurance from travel insurance (and references long-stay/national visa coverage where applicable). This helps align what you submit with what the authority describes for D visa applicants.
 Keep a short, written confirmation from the insurer in case the consulate asks for proof.
 
 ## Related reading

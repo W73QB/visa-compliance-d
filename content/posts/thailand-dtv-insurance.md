@@ -40,11 +40,15 @@ When the checker returns NOT_REQUIRED, it means:
 
 This is different from UNKNOWN (where a requirement exists but evidence is missing).
 
+For this page, NOT_REQUIRED is anchored to what the MFA document list does (and does not) include, as captured in `sources/TH_DTV_MFA_requirements_2026-01-12.md`. If a future snapshot adds an insurance line item (or if your filing authority publishes a different checklist), the status can change from NOT_REQUIRED to GREEN/RED/UNKNOWN depending on what is actually required and what product evidence exists.
+
 ## Common pitfalls
 
 - Assuming “not required” means no proof will ever be requested.
 - Using a policy with unclear coverage or missing evidence.
 - Confusing NOT_REQUIRED with "insurance is unnecessary." The visa does not require it, but medical costs can still be significant without coverage.
+
+The most common risk scenario is relying on an outdated or different authority checklist. If you hear “insurance is required” from an agent or forum, treat that as an input to re-check the latest official list for your filing location and then re-run the checker with the newest snapshot, rather than assuming the requirement applies universally.
 
 ## What to prepare (if you choose coverage)
 

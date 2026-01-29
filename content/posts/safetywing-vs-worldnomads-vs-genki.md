@@ -46,6 +46,8 @@ This comparison focuses on **evidence-based compliance**, not marketing claims. 
 
 Use this as a starting point — always verify with the checker.
 
+Treat each bullet below as a route-specific hypothesis that you can validate in two clicks: open the route page under `/visas/` to see what the authority requires, then open `/ui/` with the matching `visa=` and `snapshot=` to see how that requirement set evaluates against each product’s evidence. This avoids “general comparison” conclusions that don’t hold across different consulates or snapshots.
+
 - **Spain DNV route:** None of the three products above achieves GREEN. Consider a Spain-authorized insurer instead; check the engine for current GREEN options.
 - **Portugal DNV route:** All three products achieve GREEN — Portugal's single requirement (mandatory insurance) is easily met.
 - **Germany Freelance route:** SafetyWing and World Nomads are RED because Germany does not accept travel insurance. Look for health insurance (not travel insurance) and verify in the checker.
@@ -55,6 +57,8 @@ Use this as a starting point — always verify with the checker.
 ## Evidence coverage notes
 
 Some product facts are based on official documents, while others rely on limited public summaries. VisaFact labels missing evidence as UNKNOWN to avoid over-claiming compliance. When possible, prefer products with explicit policy documents that match visa checklist language.
+
+One practical implication: if a product’s recorded evidence is a synthetic or partial summary (rather than a primary policy document), the checker may still produce a result, but you should treat that as lower-confidence and verify the missing clauses yourself. In this repo, that “confidence gap” is represented explicitly as UNKNOWN instead of being papered over with assumptions.
 
 If a product’s evidence is incomplete, treat the result as a starting point and verify with the authority checklist.
 
