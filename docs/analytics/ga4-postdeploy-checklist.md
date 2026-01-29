@@ -12,6 +12,7 @@
   - page_view (home + /ui/)
   - run_check (after user clicks "Check Compliance")
   - select_visa / select_product (when dropdowns change)
+  - open_evidence / open_snapshot / copy_link / click_affiliate (as applicable)
 
 ## Manual steps
 1. Open Chrome Incognito.
@@ -20,3 +21,8 @@
 4. Confirm request to `https://www.googletagmanager.com/gtm.js?id=GTM-N4JLPLC2`.
 5. Tag Assistant Preview should detect container.
 6. GA4 Realtime should show page_view within 1–2 minutes.
+
+## EU/UK consent gating
+1. In `/ui/`, set region to EU/UK in the region selector.
+2. Confirm cookie banner is visible and GTM does not load until Accept is clicked.
+3. Click Accept, reload happens, then confirm `gtm.js` loads and events appear in GA4 Realtime.

@@ -19,4 +19,9 @@
   Channel:
   URL posted:
   Target page:
+  Target page (with UTM):
   Notes:
+  Outcome:
+    Sessions:
+    Check runs:
+    Affiliate clicks:
