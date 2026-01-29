@@ -14,6 +14,9 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 Write-Host "Hugo config checks..." -ForegroundColor Cyan
 Assert-True (Test-Path "hugo.toml") "hugo.toml exists"
 if (Test-Path "hugo.toml") {
@@ -36,7 +39,7 @@ Assert-True (Test-Path "content/posts/hello.md") "hello post exists"
 
 Write-Host "Static sync checks..." -ForegroundColor Cyan
 if (Test-Path "tools/sync_hugo_static.py") {
-  $sync = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  $sync = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($sync.ExitCode -eq 0) "sync_hugo_static.py runs successfully"
 } else {
   Assert-True $false "sync_hugo_static.py exists"

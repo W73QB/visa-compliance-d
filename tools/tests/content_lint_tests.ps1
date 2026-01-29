@@ -14,9 +14,12 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $tempDir = Join-Path $root "data/.content_lint_test"
-New-Item -ItemType Directory -Path $tempDir | Out-Null
+New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
 
 $badPath = Join-Path $tempDir "bad.md"
 Set-Content -Path $badPath -Value "# Missing sections and says best"
@@ -48,10 +51,10 @@ Not legal advice.
 Disclosure text.
 "@ | Set-Content -Path $goodPath
 
-$proc = Start-Process -FilePath "py" -ArgumentList @("tools/lint_content.py", "--path", $badPath) -WorkingDirectory $root -Wait -PassThru
+$proc = Start-Process -FilePath $python -ArgumentList @("tools/lint_content.py", "--path", $badPath) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc.ExitCode -ne 0) "lint fails for missing blocks"
 
-$proc2 = Start-Process -FilePath "py" -ArgumentList @("tools/lint_content.py", "--path", $goodPath) -WorkingDirectory $root -Wait -PassThru
+$proc2 = Start-Process -FilePath $python -ArgumentList @("tools/lint_content.py", "--path", $goodPath) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc2.ExitCode -eq 0) "lint passes for valid post"
 
 $scopedRoot = Join-Path $tempDir "scoped"
@@ -88,7 +91,7 @@ Disclosure text.
 
 Set-Content -Path (Join-Path $legalDir "_index.md") -Value "This page includes a guarantee."
 
-$proc3 = Start-Process -FilePath "py" -ArgumentList @("tools/lint_content.py", "--root", $scopedRoot) -WorkingDirectory $root -Wait -PassThru
+$proc3 = Start-Process -FilePath $python -ArgumentList @("tools/lint_content.py", "--root", $scopedRoot) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc3.ExitCode -eq 0) "lint ignores legal pages under root"
 
 Remove-Item -LiteralPath $tempDir -Recurse -Force

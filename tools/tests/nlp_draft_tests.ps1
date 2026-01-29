@@ -14,12 +14,15 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $fixture = Join-Path $root "tools/tests/fixtures/nlp_draft/sample.pdf"
 $outPath = Join-Path $root "tools/tests/fixtures/nlp_draft/output.json"
 
 try {
-  $proc = Start-Process -FilePath "py" -ArgumentList @(
+  $proc = Start-Process -FilePath $python -ArgumentList @(
     "tools/nlp_draft_mappings.py",
     "--input", $fixture,
     "--output", $outPath,

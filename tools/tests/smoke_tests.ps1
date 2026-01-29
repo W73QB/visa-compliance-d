@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 $failed = $false
 
 function Assert-True {
@@ -10,6 +10,9 @@ function Assert-True {
     Write-Host "PASS: $Message" -ForegroundColor Green
   }
 }
+
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
 
 function New-TempRoot {
   $temp = $env:TEMP
@@ -45,12 +48,12 @@ try {
 "@ | Set-Content -Path (Join-Path $root "data/ui_index.json")
   $env:SMOKE_ROOT = $root
   $env:SMOKE_INDEX_PATH = (Join-Path $root "data/ui_index.json")
-  $proc1 = Start-Process -FilePath "py" -ArgumentList "tools/smoke.py" -Wait -PassThru
+  $proc1 = Start-Process -FilePath $python -ArgumentList "tools/smoke.py" -Wait -PassThru
   Assert-True ($proc1.ExitCode -eq 0) "smoke passes when evidence path exists"
 
   # Failure when evidence missing
   Remove-Item -Force (Join-Path $root "sources/source.txt")
-  $proc2 = Start-Process -FilePath "py" -ArgumentList "tools/smoke.py" -Wait -PassThru
+  $proc2 = Start-Process -FilePath $python -ArgumentList "tools/smoke.py" -Wait -PassThru
   Assert-True ($proc2.ExitCode -ne 0) "smoke fails when evidence file missing"
   $env:SMOKE_ROOT = ""
   $env:SMOKE_INDEX_PATH = ""

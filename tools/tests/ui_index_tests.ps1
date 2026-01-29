@@ -14,10 +14,13 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $uiIndex = Join-Path $root "data/ui_index.json"
 
-$proc = Start-Process -FilePath "py" -ArgumentList @("tools/build_index.py") -WorkingDirectory $root -Wait -PassThru
+$proc = Start-Process -FilePath $python -ArgumentList @("tools/build_index.py") -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc.ExitCode -eq 0) "build_index runs"
 
 Assert-True (Test-Path $uiIndex) "ui_index.json exists"

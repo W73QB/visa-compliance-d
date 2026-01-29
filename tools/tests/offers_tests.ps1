@@ -14,9 +14,12 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $tempDir = Join-Path $root "data/.offers_test"
-New-Item -ItemType Directory -Path $tempDir | Out-Null
+New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
 
 $bad = Join-Path $tempDir "bad.json"
 @"
@@ -27,7 +30,7 @@ $bad = Join-Path $tempDir "bad.json"
 }
 "@ | Set-Content -Path $bad
 
-$proc = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--offers", $bad) -WorkingDirectory $root -Wait -PassThru
+$proc = Start-Process -FilePath $python -ArgumentList @("tools/validate.py", "--offers", $bad) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc.ExitCode -ne 0) "validate fails for banned words"
 
 $missing = Join-Path $tempDir "missing_disclosure.json"
@@ -39,7 +42,7 @@ $missing = Join-Path $tempDir "missing_disclosure.json"
 }
 "@ | Set-Content -Path $missing
 
-$procMissing = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--offers", $missing) -WorkingDirectory $root -Wait -PassThru
+$procMissing = Start-Process -FilePath $python -ArgumentList @("tools/validate.py", "--offers", $missing) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($procMissing.ExitCode -ne 0) "validate fails when disclosure missing"
 
 $good = Join-Path $tempDir "good.json"
@@ -51,7 +54,7 @@ $good = Join-Path $tempDir "good.json"
 }
 "@ | Set-Content -Path $good
 
-$proc2 = Start-Process -FilePath "py" -ArgumentList @("tools/validate.py", "--offers", $good) -WorkingDirectory $root -Wait -PassThru
+$proc2 = Start-Process -FilePath $python -ArgumentList @("tools/validate.py", "--offers", $good) -WorkingDirectory $root -Wait -PassThru
 Assert-True ($proc2.ExitCode -eq 0) "validate passes for good offer"
 
 $goodJson = Get-Content -Raw -Path $good | ConvertFrom-Json

@@ -14,6 +14,9 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $fixtures = Join-Path $root "tools/tests/fixtures/source_monitor"
 $sourcesDir = Join-Path $fixtures "sources"
@@ -38,18 +41,18 @@ try {
 }
 "@ | Set-Content -Path $metaPath -NoNewline
 
-  $proc = Start-Process -FilePath "py" -ArgumentList @("tools/check_source_changes.py", "--sources-dir", $sourcesDir, "--fixture-dir", $fixtureDir, "--output", $out1) -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath $python -ArgumentList @("tools/check_source_changes.py", "--sources-dir", $sourcesDir, "--fixture-dir", $fixtureDir, "--output", $out1) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "source check runs"
   $report1 = Get-Content -Raw -Path $out1 | ConvertFrom-Json
   Assert-True ($report1.changed.Count -eq 0) "no changes when fixture matches"
 
   Add-Content -Path $fixturePath -Value "x"
-  $proc2 = Start-Process -FilePath "py" -ArgumentList @("tools/check_source_changes.py", "--sources-dir", $sourcesDir, "--fixture-dir", $fixtureDir, "--output", $out2) -WorkingDirectory $root -Wait -PassThru
+  $proc2 = Start-Process -FilePath $python -ArgumentList @("tools/check_source_changes.py", "--sources-dir", $sourcesDir, "--fixture-dir", $fixtureDir, "--output", $out2) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc2.ExitCode -eq 0) "source check runs after mutation"
   $report2 = Get-Content -Raw -Path $out2 | ConvertFrom-Json
   Assert-True ($report2.changed.Count -eq 1) "change detected"
 
-  $proc3 = Start-Process -FilePath "py" -ArgumentList @(
+  $proc3 = Start-Process -FilePath $python -ArgumentList @(
     "tools/check_source_changes.py",
     "--sources-dir", $sourcesDir,
     "--fixture-dir", $fixtureDir,

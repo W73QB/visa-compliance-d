@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 $failed = $false
 
 function Assert-True {
@@ -11,10 +11,13 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 Write-Host "Mapping engine rule tests..." -ForegroundColor Cyan
 
 # Run build_mappings and check output
-$proc = Start-Process -FilePath "py" -ArgumentList "tools/build_mappings.py" -Wait -PassThru -NoNewWindow
+$proc = Start-Process -FilePath $python -ArgumentList "tools/build_mappings.py" -Wait -PassThru -NoNewWindow
 Assert-True ($proc.ExitCode -eq 0) "build_mappings.py runs successfully"
 
 # Check Spain DNV vs SafetyWing mapping has RED status (unauthorized)

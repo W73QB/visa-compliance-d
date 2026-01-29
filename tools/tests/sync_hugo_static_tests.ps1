@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 $failed = $false
 
 function Assert-True {
@@ -10,6 +10,9 @@ function Assert-True {
     Write-Host "PASS: $Message" -ForegroundColor Green
   }
 }
+
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
 
 function New-TempRoot {
   $temp = $env:TEMP
@@ -45,7 +48,7 @@ try {
   New-Item -ItemType Directory -Path (Join-Path $root1 "data") | Out-Null
   Set-Content -Path (Join-Path $root1 "data/ui_index.json") -Value "{}"
   $env:SYNC_ROOT = $root1
-  $proc1 = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  $proc1 = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($proc1.ExitCode -ne 0) "sync fails when ui/ is missing"
 
   # Missing ui_index.json should fail
@@ -53,7 +56,7 @@ try {
   New-Item -ItemType Directory -Path (Join-Path $root2 "ui") | Out-Null
   Set-Content -Path (Join-Path $root2 "ui/index.html") -Value "<html></html>"
   $env:SYNC_ROOT = $root2
-  $proc2 = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  $proc2 = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($proc2.ExitCode -ne 0) "sync fails when data/ui_index.json is missing"
 
   # Missing ui/style.css should fail
@@ -61,7 +64,7 @@ try {
   Write-MinimalFiles -Root $rootCss -IncludeCss
   Remove-Item -Path (Join-Path $rootCss "ui/style.css")
   $env:SYNC_ROOT = $rootCss
-  $procCss = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  $procCss = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($procCss.ExitCode -ne 0) "sync fails when ui/style.css is missing"
 
   # RELEASE_BUILD requires sources
@@ -70,7 +73,7 @@ try {
   Remove-Item -Recurse -Force (Join-Path $root3 "sources")
   $env:SYNC_ROOT = $root3
   $env:RELEASE_BUILD = "1"
-  $proc3 = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  $proc3 = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($proc3.ExitCode -ne 0) "sync fails in release mode when sources/ missing"
   $env:RELEASE_BUILD = ""
 
@@ -78,7 +81,7 @@ try {
   $root4 = New-TempRoot
   Write-MinimalFiles -Root $root4 -IncludeCss
   $env:SYNC_ROOT = $root4
-  $proc4 = Start-Process -FilePath "py" -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
+  $proc4 = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru
   Assert-True ($proc4.ExitCode -eq 0) "sync succeeds when required inputs exist"
 }
 finally {

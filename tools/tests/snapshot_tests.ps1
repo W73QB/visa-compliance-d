@@ -14,6 +14,9 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $snapshotId = "ZZ_SNAPSHOT_TEST_" + (Get-Random -Minimum 10000 -Maximum 99999)
 $env:SNAPSHOT_ID = $snapshotId
@@ -31,7 +34,7 @@ function Remove-SnapshotDir {
 }
 
 try {
-  $proc = Start-Process -FilePath "py" -ArgumentList "tools/build_snapshot.py" -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath $python -ArgumentList "tools/build_snapshot.py" -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "build_snapshot.py runs successfully"
 
   Assert-True (Test-Path $snapshotDir) "snapshot directory exists"

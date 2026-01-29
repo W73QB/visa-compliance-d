@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 $failed = $false
 
 function Assert-True {
@@ -10,6 +10,9 @@ function Assert-True {
     Write-Host "PASS: $Message" -ForegroundColor Green
   }
 }
+
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
 
 function New-TempRoot {
   $temp = $env:TEMP
@@ -25,7 +28,7 @@ Write-Host "verify_static_bundle checks..." -ForegroundColor Cyan
 
 try {
   # Happy path on repo
-  $proc1 = Start-Process -FilePath "py" -ArgumentList "tools/verify_static_bundle.py" -Wait -PassThru
+  $proc1 = Start-Process -FilePath $python -ArgumentList "tools/verify_static_bundle.py" -Wait -PassThru
   Assert-True ($proc1.ExitCode -eq 0) "verify passes on current repo"
 
   # Failure on empty sources and empty files
@@ -36,7 +39,7 @@ try {
   Set-Content -Path (Join-Path $root "static/ui/index.html") -Value ""
   Set-Content -Path (Join-Path $root "static/data/ui_index.json") -Value "{}"
   $env:VERIFY_ROOT = $root
-  $proc2 = Start-Process -FilePath "py" -ArgumentList "tools/verify_static_bundle.py" -Wait -PassThru
+  $proc2 = Start-Process -FilePath $python -ArgumentList "tools/verify_static_bundle.py" -Wait -PassThru
   Assert-True ($proc2.ExitCode -ne 0) "verify fails on empty bundle"
   $env:VERIFY_ROOT = ""
 }

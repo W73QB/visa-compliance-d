@@ -14,6 +14,9 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $snapshotId = "ZZ_VERIFY_TEST_" + (Get-Random -Minimum 10000 -Maximum 99999)
 $env:SNAPSHOT_ID = $snapshotId
@@ -32,14 +35,14 @@ function Cleanup {
 }
 
 try {
-  $proc = Start-Process -FilePath "py" -ArgumentList "tools/build_snapshot.py" -WorkingDirectory $root -Wait -PassThru
+  $proc = Start-Process -FilePath $python -ArgumentList "tools/build_snapshot.py" -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "build_snapshot.py runs"
 
-  $proc2 = Start-Process -FilePath "py" -ArgumentList @("tools/verify_snapshot_manifest.py", "--snapshot-dir", $snapshotDir) -WorkingDirectory $root -Wait -PassThru
+  $proc2 = Start-Process -FilePath $python -ArgumentList @("tools/verify_snapshot_manifest.py", "--snapshot-dir", $snapshotDir) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc2.ExitCode -eq 0) "verify_snapshot_manifest.py passes on fresh snapshot"
 
   Add-Content -Path (Join-Path $snapshotDir "ui_index.json") -Value " "
-  $proc3 = Start-Process -FilePath "py" -ArgumentList @("tools/verify_snapshot_manifest.py", "--snapshot-dir", $snapshotDir) -WorkingDirectory $root -Wait -PassThru
+  $proc3 = Start-Process -FilePath $python -ArgumentList @("tools/verify_snapshot_manifest.py", "--snapshot-dir", $snapshotDir) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc3.ExitCode -ne 0) "verify_snapshot_manifest.py fails on mismatch"
 } finally {
   Cleanup

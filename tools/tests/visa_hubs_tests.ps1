@@ -14,6 +14,9 @@ function Assert-True {
   }
 }
 
+. "$PSScriptRoot/_python.ps1"
+$python = Get-PythonLauncher
+
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 
 # Phase 1: Script exists
@@ -57,7 +60,7 @@ foreach ($file in $visaFacts) {
 }
 
 # Phase 3: Verify lint passes
-$lintProc = Start-Process -FilePath "py" -ArgumentList "tools/lint_content.py" -WorkingDirectory $root -Wait -PassThru
+$lintProc = Start-Process -FilePath $python -ArgumentList "tools/lint_content.py" -WorkingDirectory $root -Wait -PassThru
 Assert-True ($lintProc.ExitCode -eq 0) "lint_content.py passes for all content including generated hubs"
 
 # Phase 4: Verify CI includes hub generation
