@@ -31,6 +31,20 @@ Example link: /ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=r
 
 - [Thailand DTV requirements](/visas/thailand/digital-nomad-visa-dtv/thai-e-visa/)
 
+## Route-specific hub posts
+
+- [Thailand DTV insurance hub](/posts/thailand-dtv-insurance/)
+
+## Mapping results summary
+
+As of snapshot `releases/2026-01-15`, the mapping results for selected products are:
+
+| Route | ASISA Health Residents | DKV Visado | Genki Traveler |
+|---|---|---|---|
+| Thailand DTV (TH_DTV_MFA_2026) | NOT_REQUIRED | NOT_REQUIRED | NOT_REQUIRED |
+
+NOT_REQUIRED indicates the official checklist does not require insurance for this route (Source: `TH_MFA_DTV_2026`).
+
 ## What to prepare
 
 - A policy summary showing coverage limits and regions.

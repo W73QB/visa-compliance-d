@@ -30,6 +30,20 @@ Example link: /ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snap
 
 - [Costa Rica digital nomad visa requirements](/visas/costa-rica/digital-nomad-visa/executive-decree-43619/)
 
+## Route-specific hub posts
+
+- [Costa Rica digital nomad insurance hub](/posts/costa-rica-dn-insurance/)
+
+## Mapping results summary
+
+As of snapshot `releases/2026-01-15`, the mapping results for selected products are:
+
+| Route | ASISA Health Residents | DKV Visado | Genki Traveler |
+|---|---|---|---|
+| Costa Rica DN (CR_DN_DECREE_43619_2026) | UNKNOWN | UNKNOWN | GREEN |
+
+UNKNOWN indicates missing product evidence for some Costa Rica requirements in the current snapshot.
+
 ## What to prepare
 
 - A policy summary showing medical coverage limits.

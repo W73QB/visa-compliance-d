@@ -33,6 +33,26 @@ Example link: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&sna
 - [Germany freelance visa requirements](/visas/germany/freelance-visa-national-d/embassy-london/)
 - [Malta nomad residence permit requirements](/visas/malta/nomad-residence-permit/residency-malta-agency/)
 
+## Route-specific hub posts
+
+- [Spain DNV insurance hub](/posts/spain-dnv-insurance/)
+- [Portugal DNV insurance hub](/posts/portugal-dnv-insurance/) (currently only one insurance requirement in evidence)
+- [Germany freelance insurance hub](/posts/germany-freelance-insurance/)
+- [Malta nomad residence insurance hub](/posts/malta-nomad-insurance/)
+
+## Mapping results summary
+
+As of snapshot `releases/2026-01-15`, the mapping results for selected products are:
+
+| Route | ASISA Health Residents | DKV Visado | Genki Traveler |
+|---|---|---|---|
+| Spain (ES_DNV_BLS_LONDON_2026) | GREEN | RED | RED |
+| Portugal (PT_DNV_VFS_CHINA_2026) | GREEN | GREEN | GREEN |
+| Germany (DE_FREELANCE_EMBASSY_LONDON_2026) | GREEN | GREEN | UNKNOWN |
+| Malta (MT_NOMAD_RESIDENCY_2026) | UNKNOWN | GREEN | UNKNOWN |
+
+Portugal currently has only one insurance requirement in the evidence set, so mapping results there are less informative until more requirements are added.
+
 ## Use the compliance checker
 
 Try the evidence-based checker for your route: /ui/
