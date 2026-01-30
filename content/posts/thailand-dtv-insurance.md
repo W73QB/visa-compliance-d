@@ -12,15 +12,17 @@ faq:
     answer: "If no official source confirms a requirement, status stays UNKNOWN/NOT_REQUIRED rather than guessing."
 ---
 
-## What the authority requires
+## What the authority requires — Thailand DTV insurance?
+
+Short answer: the official DTV checklist does not list insurance as a requirement (Source: `TH_MFA_DTV_2026`).
 
 The official DTV required documents list does not list insurance. Evidence: Thai MFA DTV requirements captured in `sources/TH_DTV_MFA_requirements_2026-01-12.md`. Consulate requirements can vary, so verify the current checklist for your filing location.
 
-## How we evaluate
+## How we evaluate — NOT_REQUIRED logic
 
 If the authority does not require insurance, the engine returns NOT_REQUIRED. See `/methodology/` for evaluation details.
 
-## Check in the engine
+## Check in the engine — verify with a snapshot
 
 Use the checker with a snapshot: `/ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15`
 

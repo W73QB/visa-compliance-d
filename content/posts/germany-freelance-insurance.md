@@ -12,7 +12,9 @@ faq:
     answer: "Yes if they meet statutory equivalence and provide German-language confirmation; evidence-backed products in the checker list those."
 ---
 
-## What the authority requires
+## What the authority requires — Germany freelance visa insurance?
+
+Short answer: health insurance is mandatory and travel insurance is explicitly not sufficient for national D visas (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`).
 
 The German Federal Foreign Office (UK) requires health insurance for national D visas, and explicitly states that **travel insurance is not sufficient**. Evidence is recorded in `sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html`.
 
@@ -20,11 +22,11 @@ Verified requirements for this route:
 1. **Mandatory:** Health insurance is required for all applicants.
 2. **Travel insurance not accepted:** Travel insurance policies are explicitly rejected; applicants need health insurance coverage.
 
-## How we evaluate
+## How we evaluate — travel vs health insurance
 
 We check whether the product is travel insurance and flag travel policies as non-compliant when the authority rejects travel insurance for D visas.
 
-## Check in the engine
+## Check in the engine — verify with a snapshot
 
 Use the checker with a snapshot:
 

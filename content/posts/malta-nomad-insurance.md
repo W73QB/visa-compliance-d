@@ -12,16 +12,18 @@ faq:
     answer: "Use evidence-backed products in the checker; acceptance depends on proof of coverage and prepayment."
 ---
 
-## What the authority requires
+## What the authority requires — Malta Nomad Residence insurance?
+
+Short answer: health insurance is mandatory and must be prepaid for the full period (Source: `MT_RESIDENCY_FAQ_2026`).
 
 - Health insurance is mandatory for the Nomad Residence Permit.
 - Monthly payment policies are not accepted; coverage must be paid for a full period.
 
-## How we evaluate
+## How we evaluate — evidence vs product facts
 
 We compare each requirement to product facts with evidence. See /methodology/.
 
-## Check in the engine
+## Check in the engine — verify with a snapshot
 
 Example link: /ui/?visa=MT_NOMAD_RESIDENCY_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15
 

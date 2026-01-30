@@ -10,17 +10,19 @@ faq:
     answer: "Use the checker to compare evidence-backed requirements against product facts."
 ---
 
-## What the authority requires
+## What the authority requires — Costa Rica digital nomad insurance?
+
+Short answer: insurance is mandatory with a minimum coverage requirement for medical expenses (Source: `CR_DECREE_43619_2026`).
 
 - Health insurance is mandatory for the digital nomad visa.
 - Minimum coverage is required for medical expenses.
 - Coverage must span the full authorized stay.
 
-## How we evaluate
+## How we evaluate — requirement vs product evidence
 
 We extract requirements from official sources and compare them to product facts. See /methodology/.
 
-## Check in the engine
+## Check in the engine — verify with a snapshot
 
 Example link: /ui/?visa=CR_DN_DECREE_43619_2026&product=GENERIC_EXPAT_COMPLETE_2026&snapshot=releases/2026-01-15
 
