@@ -10,6 +10,8 @@ faq:
     answer: "UNKNOWN means we found no official evidence for a requirement."
 ---
 
+> **Affiliate disclosure:** Some links on this page are affiliate links. We may earn a commission if you purchase through these links. This does not affect our compliance evaluation, which is automated and evidence-based. See our [methodology](/guides/how-to-read-results/).
+
 ## What the authority requires
 
 Visa requirements differ by route. The checker uses official sources for each visa (for example, Spain DNV requirements are captured in `sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf`).
@@ -25,9 +27,9 @@ We compare VisaFacts against ProductFacts. The product facts below are tied to e
 
 | Product | Evidence-backed facts |
 |---|---|
-| SafetyWing Nomad | Deductible $250; coverage limit $250,000; monthly subscription (synthetic summary) |
-| World Nomads Explorer | Emergency medical coverage $150,000 |
-| Genki Traveler | €50 deductible; €1,000,000 coverage limit; max coverage period 1 year |
+| SafetyWing Nomad | Deductible $250; coverage limit $250,000; monthly subscription (Source: `SAFETYWING_WEBSITE_2026`, synthetic summary) |
+| World Nomads Explorer | Emergency medical coverage $150,000 (Source: `WORLDNOMADS_COMPARE_2026`) |
+| Genki Traveler | €50 deductible; €1,000,000 coverage limit; max coverage period 1 year (Source: `GENKI_TRAVELER_COVERAGE_2026`) |
 
 Use the checker to see how each product evaluates against a specific visa route.
 
@@ -98,4 +100,4 @@ Not legal advice. Compliance results are evidence-based snapshots.
 
 ## Affiliate disclosure
 
-If a link is shown after results, it does not influence the evidence-based outcome.
+See the disclosure at the top of this page.
