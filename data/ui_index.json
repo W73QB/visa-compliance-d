@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-01-30T23:28:52.101601+00:00",
-  "snapshot_id": "2026-01-30",
+  "built_at": "2026-01-27T04:47:03.511790+00:00",
+  "snapshot_id": "2026-01-27",
   "visas": [
     {
       "id": "CR_DN_DECREE_43619_2026",
@@ -1234,30 +1234,6 @@
       "affiliate_url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
       "label": "Visit ASISA Health Residents",
       "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    {
-      "product_id": "SAFETYWING_NOMAD_2026",
-      "affiliate_url": "https://safetywing.com/nomad-insurance/",
-      "label": "Visit SafetyWing Nomad Insurance",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    {
-      "product_id": "WORLDNOMADS_EXPLORER_2026",
-      "affiliate_url": "https://www.worldnomads.com/usa/travel-insurance/compare-travel-insurance",
-      "label": "Visit World Nomads Explorer",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    {
-      "product_id": "DKV_VISADO_2026",
-      "affiliate_url": "https://dkv.es/particulares/seguros-salud-extranjeros",
-      "label": "Visit DKV Visado",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    {
-      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
-      "affiliate_url": "https://www.sanitas.es/portales/eci/eci_mas_salud.html",
-      "label": "Visit Sanitas Mas Salud",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
     }
   ],
   "offers_by_product": {
@@ -1271,30 +1247,6 @@
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "affiliate_url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
       "label": "Visit ASISA Health Residents",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    "SAFETYWING_NOMAD_2026": {
-      "product_id": "SAFETYWING_NOMAD_2026",
-      "affiliate_url": "https://safetywing.com/nomad-insurance/",
-      "label": "Visit SafetyWing Nomad Insurance",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    "WORLDNOMADS_EXPLORER_2026": {
-      "product_id": "WORLDNOMADS_EXPLORER_2026",
-      "affiliate_url": "https://www.worldnomads.com/usa/travel-insurance/compare-travel-insurance",
-      "label": "Visit World Nomads Explorer",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    "DKV_VISADO_2026": {
-      "product_id": "DKV_VISADO_2026",
-      "affiliate_url": "https://dkv.es/particulares/seguros-salud-extranjeros",
-      "label": "Visit DKV Visado",
-      "disclosure": "Official link (non-affiliate). We do not earn a commission."
-    },
-    "SANITAS_MAS_SALUD_SIN_COPAGO_2026": {
-      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
-      "affiliate_url": "https://www.sanitas.es/portales/eci/eci_mas_salud.html",
-      "label": "Visit Sanitas Mas Salud",
       "disclosure": "Official link (non-affiliate). We do not earn a commission."
     }
   },
