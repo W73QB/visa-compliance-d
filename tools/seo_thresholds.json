@@ -10,7 +10,11 @@
     "content/posts/digital-nomad-insurance-americas.md": 250,
     "content/posts/costa-rica-dn-insurance.md": 225,
     "content/guides/how-to-read-results.md": 150,
-    "content/posts/spain-dnv-insurance/index.md": 425
+    "content/posts/spain-dnv-insurance/index.md": 425,
+    "content/traps/germany-travel-insurance-rejected.md": 200,
+    "content/traps/spain-dnv-coverage-cap-trap.md": 225,
+    "content/guides/how-to-choose-dnv-insurance.md": 300,
+    "content/guides/compliance-status-meaning.md": 300
   },
   "required_links": [
     {
@@ -42,6 +46,8 @@
     }
   ],
   "require_faq": [
+    "content/guides/compliance-status-meaning.md",
+    "content/guides/how-to-choose-dnv-insurance.md",
     "content/guides/how-to-read-results.md",
     "content/guides/schengen-30000-insurance.md",
     "content/posts/costa-rica-dn-insurance.md",
@@ -50,7 +56,9 @@
     "content/posts/safetywing-vs-worldnomads-vs-genki.md",
     "content/posts/spain-dnv-insurance/index.md",
     "content/posts/thailand-dtv-insurance.md",
+    "content/traps/germany-travel-insurance-rejected.md",
     "content/traps/malta-nomad-monthly-payments.md",
+    "content/traps/spain-dnv-coverage-cap-trap.md",
     "content/traps/spain-dnv-insurance-mistakes.md"
   ],
   "include_globs": [
