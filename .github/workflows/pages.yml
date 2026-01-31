@@ -133,7 +133,11 @@ jobs:
             -H "Authorization: Bearer ${CF_API_TOKEN}" \
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}')
-          echo "$response" | python -c "import json,sys; data=json.load(sys.stdin); (print('Purge OK') if data.get('success') else (_ for _ in ()).throw(SystemExit(f'Purge failed: {data}')))"
+          if echo "$response" | grep -q '"success":true'; then
+            echo "Purge OK"
+          else
+            echo "Purge failed: $response" && exit 1
+          fi
 
   post_deploy_smoke:
     runs-on: ubuntu-latest
