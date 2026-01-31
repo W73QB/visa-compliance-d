@@ -54,6 +54,13 @@ def main() -> None:
     if headers_src.exists():
         copy_file(headers_src, static / "_headers")
 
+    # Sync favicons
+    favicons_src = ROOT / "assets" / "favicons"
+    if favicons_src.exists():
+        for item in favicons_src.iterdir():
+            if item.is_file():
+                copy_file(item, static / item.name)
+
     print("Synced UI/data/sources into static/ for Hugo")
 
 
