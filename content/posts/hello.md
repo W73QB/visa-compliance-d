@@ -3,6 +3,7 @@ title: "Hello VisaFact"
 date: 2026-01-13
 description: "First SEO post and a link to the compliance checker."
 tags: ["update"]
+draft: true
 ---
 
 This blog is powered by Hugo.
