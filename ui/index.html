@@ -414,7 +414,7 @@
     </div>
 
     <!-- Modal evidence -->
-    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true">
       <div
         class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
         <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
@@ -591,6 +591,7 @@
 
 
     let INDEX = null;
+    let lastFocusedElement = null;
 
     // Supports both ui_index.json shapes:
     // 1) denormalized: visas_by_id/products_by_id/mappings_by_key/sources_by_id
@@ -720,6 +721,7 @@
     }
 
     function openModal(evidenceItems) {
+      lastFocusedElement = document.activeElement;
       const body = $("modalBody");
       body.innerHTML = "";
 
@@ -758,11 +760,13 @@
 
       $("modal").classList.remove("hidden");
       $("modal").classList.add("flex");
+      const cb = $("closeModal"); if(cb) cb.focus();
     }
 
     function closeModal() {
       $("modal").classList.add("hidden");
       $("modal").classList.remove("flex");
+      if(lastFocusedElement) { lastFocusedElement.focus(); lastFocusedElement = null; }
     }
 
     function renderRequirements(visa) {
@@ -1136,6 +1140,8 @@
       menu.classList.toggle("hidden");
       btn.querySelector("span").textContent = isOpen ? "menu" : "close";
     });
+
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("modal").classList.contains("hidden")) closeModal(); });
 
     init().catch(err => {
       console.error(err);
