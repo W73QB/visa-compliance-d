@@ -20,6 +20,8 @@ $python = Get-PythonLauncher
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $releaseId = "REL_TEST_" + (Get-Random -Minimum 10000 -Maximum 99999)
 $releaseDir = Join-Path $root ("data/snapshots/releases/" + $releaseId)
+$uiIndex = Join-Path $root "data/ui_index.json"
+$uiIndexBackup = Join-Path $root "data/ui_index.json.bak"
 
 function Remove-ReleaseDir {
   param([string]$Path)
@@ -37,6 +39,7 @@ function Remove-ReleaseDir {
 }
 
 try {
+  if (Test-Path $uiIndex) { Copy-Item $uiIndex $uiIndexBackup -Force }
   $proc = Start-Process -FilePath $python -ArgumentList @("tools/build_release_snapshot.py", "--release-id", $releaseId) -WorkingDirectory $root -Wait -PassThru
   Assert-True ($proc.ExitCode -eq 0) "build_release_snapshot.py runs"
   Assert-True (Test-Path $releaseDir) "release snapshot directory exists"
@@ -46,6 +49,10 @@ try {
   Assert-True ($proc2.ExitCode -eq 0) "release manifest verifies"
 } finally {
   Remove-ReleaseDir -Path $releaseDir
+  if (Test-Path $uiIndexBackup) {
+    Copy-Item $uiIndexBackup $uiIndex -Force
+    Remove-Item $uiIndexBackup -Force
+  }
 }
 
 if ($failed) {
