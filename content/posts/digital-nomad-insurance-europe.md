@@ -3,6 +3,11 @@ title: "Digital nomad insurance requirements (Europe - verified subset)"
 date: 2026-01-16
 description: "Verified official insurance requirements for digital nomad or remote-work programs in Europe."
 tags: ["digital-nomad", "insurance", "europe", "compliance"]
+faq:
+  - question: "Do all European digital nomad visas require insurance?"
+    answer: "No. Requirements vary by route. This hub links to each route page and the evidence cited for that authority."
+  - question: "Why do some products show UNKNOWN in Europe?"
+    answer: "UNKNOWN means a requirement cannot be verified from primary sources in the current snapshot. See the linked route pages for evidence."
 ---
 
 ## What the authority requires

@@ -3,6 +3,11 @@ title: "Spain DNV Insurance: SafetyWing Compliance Check"
 date: 2026-01-15
 description: "Evidence-based compliance check for SafetyWing vs Spain Digital Nomad Visa requirements."
 tags: ["spain", "dnv", "safetywing", "compliance"]
+faq:
+  - question: "Why do some SafetyWing policies fail Spain DNV checks?"
+    answer: "Spain DNV requires comprehensive health coverage with no deductible and no co-pay. Policies that include a deductible or limited benefits do not match those requirements. See the evidence section in this post."
+  - question: "Is travel insurance accepted for Spain DNV?"
+    answer: "The Spain DNV checklist cited here calls for comprehensive health insurance from an authorized insurer. Travel insurance is not presented as sufficient in the official checklist."
 ---
 
 ## What the authority requires

@@ -3,6 +3,11 @@ title: "Digital nomad insurance requirements (Americas - verified subset)"
 date: 2026-01-16
 description: "Verified official insurance requirements for digital nomad or remote-work programs in the Americas."
 tags: ["digital-nomad", "insurance", "americas", "compliance"]
+faq:
+  - question: "What is the minimum coverage in the Americas routes listed?"
+    answer: "Minimum coverage depends on the specific route. The hub links to each route page with the authoritative evidence."
+  - question: "Why are some product matches RED in the Americas?"
+    answer: "RED means a product fails at least one required criterion based on evidence in the current snapshot."
 ---
 
 ## What the authority requires
