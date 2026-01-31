@@ -7,10 +7,8 @@
     try {
       var region = localStorage.getItem("vf_region");
       var path = location.pathname || "";
-      var isAffiliateHub = /\/affiliate-disclosure\/?$/.test(path);
-      if (region && isAffiliateHub) {
-        var prefix = path.replace(/affiliate-disclosure\/?$/, "");
-        location.replace(prefix + "legal/" + region + "/affiliate-disclosure/");
+      if (region && (path === "/affiliate-disclosure/" || path === "/affiliate-disclosure")) {
+        location.replace("/legal/" + region + "/affiliate-disclosure/");
       }
     } catch (e) {
       // no-op

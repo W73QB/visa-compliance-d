@@ -1,4 +1,7 @@
- Affiliate Disclosure (Transparency)
+---
+title: "Affiliate Disclosure (Transparency)"
+description: "How affiliate links work on VisaFact.org and our commitment to evidence-based compliance results."
+---
 
 {{< vf-trust >}}
 All results are evidence-based. Missing evidence -> UNKNOWN.
