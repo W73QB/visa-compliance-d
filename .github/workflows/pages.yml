@@ -123,6 +123,21 @@ jobs:
       name: github-pages
     steps:
       - uses: actions/deploy-pages@v4
+      - name: Purge Cloudflare cache
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        run: |
+          set -euo pipefail
+          response=$(curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+          if echo "$response" | grep -q '"success":true'; then
+            echo "Purge OK"
+          else
+            echo "Purge failed: $response" && exit 1
+          fi
 
   post_deploy_smoke:
     runs-on: ubuntu-latest
