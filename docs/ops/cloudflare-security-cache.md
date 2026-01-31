@@ -19,21 +19,23 @@ Notes:
 - If inline scripts are moved to external files, remove 'unsafe-inline' and tighten CSP.
 
 ## Cache rules (Rules > Cache Rules)
-Order matters. Put bypass rules above cache rules.
+Remove legacy cache rules before enabling Cache Everything.
 
-1) Bypass HTML
-- If URI Path ends with `.html` -> Bypass cache
+1) Remove legacy rules (if present)
+- Bypass HTML
+- Bypass ui_index.json
+- Asset-only caching rules
 
-2) Bypass ui_index.json
-- If URI Path ends with `/ui_index.json` -> Bypass cache
+2) Cache Everything (hostname-wide)
+- If Hostname equals `visafact.org` -> Cache Everything
+- Edge TTL: 24 hours
+- Browser TTL: 1 hour
 
-3) Cache assets
-- If URI Path ends with `.css` -> Cache 4 hours
-- If URI Path ends with `.js` -> Cache 4 hours
-- If URI Path ends with `.woff2` -> Cache 1 year
-- If URI Path ends with `.png` or `.jpg` or `.svg` -> Cache 1 year
+3) Purge on deploy
+- GitHub Actions runs a Cloudflare purge after deploy (see `.github/workflows/pages.yml`).
+  This prevents stale HTML after each release.
 
 ## Manual verification
 - `curl -I https://visafact.org/ui/` includes the security headers above.
-- `curl -I https://visafact.org/data/ui_index.json` shows `cf-cache-status: BYPASS`.
-- `curl -I https://visafact.org/ui/style.css` shows `cf-cache-status: HIT` or `MISS` with a cache TTL.
+- `curl -I https://visafact.org/` shows `cf-cache-status: HIT` on the second request.
+- `curl -I https://visafact.org/posts/digital-nomad-insurance-europe/` shows `cf-cache-status: HIT` on the second request.
