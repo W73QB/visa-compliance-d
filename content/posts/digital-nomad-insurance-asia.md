@@ -3,6 +3,11 @@ title: "Digital nomad insurance requirements (Asia - verified subset)"
 date: 2026-01-16
 description: "Verified official insurance requirements for digital nomad or remote-work programs in Asia."
 tags: ["digital-nomad", "insurance", "asia", "compliance"]
+faq:
+  - question: "What does NOT_REQUIRED mean in Asia routes?"
+    answer: "NOT_REQUIRED means the authority states insurance is not mandatory for that route in the cited evidence."
+  - question: "Can I still buy insurance if it is not required?"
+    answer: "Yes. Some routes do not require insurance, but you may still choose coverage for personal risk management."
 ---
 
 ## What the authority requires

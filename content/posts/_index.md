@@ -1,5 +1,7 @@
 ﻿---
 title: "Blog"
+description: "Evidence-based visa insurance updates and compliance guides."
+tags: ["updates", "compliance", "visafact"]
 ---
 
 {{< vf-trust >}}
