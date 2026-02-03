@@ -39,6 +39,12 @@ Use the snapshot date to see when the evidence was last verified.
 - [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 - [Portugal DNV requirements (route page)](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+- Source: VFS_PT_E11_CHINA_2025
+- Source: ASISA_HEALTH_RESIDENTS_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

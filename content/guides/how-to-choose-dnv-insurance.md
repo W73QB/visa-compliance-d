@@ -42,6 +42,12 @@ Example link with snapshot:
 - [Germany freelance visa requirements](/visas/germany/freelance-visa-national-d/embassy-london/)
 - [Thailand DTV requirements](/visas/thailand/digital-nomad-visa-dtv/thai-e-visa/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+- Source: DE_D_VISA_HEALTH_INSURANCE_2026
+- Source: TH_MFA_DTV_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

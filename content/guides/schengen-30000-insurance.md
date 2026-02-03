@@ -36,6 +36,10 @@ Use a snapshot link:
 
 `/ui/?snapshot=releases/2026-01-15`
 
+## Evidence log
+
+- Source: EU_VISA_CODE_ARTICLE_15_2026 (Article 15)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

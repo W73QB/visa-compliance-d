@@ -42,6 +42,14 @@ Example link with snapshot:
 - [How to read compliance results](/guides/how-to-read-results/)
 - [Spain DNV requirements](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+- Source: DE_D_VISA_HEALTH_INSURANCE_2026
+- Source: TH_MFA_DTV_2026
+- Source: VFS_PT_E11_CHINA_2025
+- Source: CR_DECREE_43619_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
