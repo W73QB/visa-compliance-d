@@ -47,6 +47,10 @@ Use the checker with a snapshot:
 - [Methodology](/methodology/)
 - [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

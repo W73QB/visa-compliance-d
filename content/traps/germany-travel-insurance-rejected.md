@@ -37,6 +37,11 @@ Example link with snapshot:
 - [Methodology](/methodology/)
 - [Germany freelance visa requirements (route page)](/visas/germany/freelance-visa-national-d/embassy-london/)
 
+## Evidence log
+
+- Source: DE_D_VISA_HEALTH_INSURANCE_2026
+- Source: SAFETYWING_WEBSITE_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

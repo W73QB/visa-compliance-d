@@ -37,6 +37,10 @@ Always confirm the payment term in writing. If your insurer issues a certificate
 - [Methodology](/methodology/)
 - [Malta nomad residence requirements (route page)](/visas/malta/nomad-residence-permit/residency-malta-agency/)
 
+## Evidence log
+
+- Source: MT_RESIDENCY_FAQ_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
