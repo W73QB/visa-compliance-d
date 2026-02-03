@@ -20,6 +20,10 @@ This blog is powered by Hugo.
 
 - /ui/?visa=ES_DNV_2026&product=SW_TRAVEL_2026&snapshot=releases/2026-01-13
 
+## Evidence log
+
+- Source: N/A (no external claims)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

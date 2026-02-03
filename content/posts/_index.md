@@ -22,6 +22,10 @@ We compare authority requirements with product facts and evidence.
 
 Use the checker with a snapshot: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-12
 
+## Evidence log
+
+- Source: N/A (hub page; no external claims)
+
 ## Disclaimer
 
 Not legal advice. Results are evidence-based snapshots.
