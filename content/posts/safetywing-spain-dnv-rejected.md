@@ -40,6 +40,11 @@ SafetyWing commonly fails Spain DNV checks because the route demands **Spain-aut
 - [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 - [Spain DNV insurance requirements summary](/posts/spain-dnv-insurance/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+- Source: SAFETYWING_WEBSITE_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

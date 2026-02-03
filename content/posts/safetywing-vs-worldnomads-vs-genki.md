@@ -94,6 +94,13 @@ No product in this comparison is GREEN for Spain DNV. Mapping results show ASISA
 - [Portugal DNV insurance](/posts/portugal-dnv-insurance/)
 - [Malta nomad insurance](/posts/malta-nomad-insurance/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+- Source: SAFETYWING_WEBSITE_2026
+- Source: WORLDNOMADS_COMPARE_2026
+- Source: GENKI_TRAVELER_COVERAGE_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
