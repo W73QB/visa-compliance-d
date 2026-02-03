@@ -61,6 +61,10 @@ Keep a copy of the policy wording in case the authority requests proof after sub
 
 Try the evidence-based checker for your route: /ui/
 
+## Evidence log
+
+- Source: N/A (regional hub overview; no single authoritative requirement claim asserted)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

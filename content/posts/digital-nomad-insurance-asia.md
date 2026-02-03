@@ -61,6 +61,10 @@ Save a copy of the insurer certificate in case the authority requests evidence a
 
 Try the evidence-based checker for your route: /ui/
 
+## Evidence log
+
+- Source: N/A (regional hub overview; no single authoritative requirement claim asserted)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

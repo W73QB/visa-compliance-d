@@ -62,6 +62,10 @@ Portugal currently has only one insurance requirement in the evidence set, so ma
 
 Try the evidence-based checker for your route: /ui/
 
+## Evidence log
+
+- Source: N/A (regional hub overview; no single authoritative requirement claim asserted)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
