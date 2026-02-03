@@ -84,6 +84,10 @@ Spain DNV authorities ask for **comprehensive, Spain-authorized health insurance
 - [Spain DNV insurance mistakes](/traps/spain-dnv-insurance-mistakes/)
 - [Why SafetyWing is rejected for Spain DNV](/posts/safetywing-spain-dnv-rejected/)
 
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

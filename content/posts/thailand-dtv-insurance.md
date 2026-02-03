@@ -64,6 +64,10 @@ Keep the insurer’s contact details available in case officials request verific
 - [Thailand DTV requirements (route page)](/visas/thailand/digital-nomad-visa-dtv/thai-e-visa/)
 - [Digital nomad insurance in Asia](/posts/digital-nomad-insurance-asia/)
 
+## Evidence log
+
+- Source: TH_MFA_DTV_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

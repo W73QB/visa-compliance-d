@@ -51,6 +51,10 @@ Keep the insurer’s contact information handy for verification requests.
 
 - [Costa Rica DN requirements (route page)](/visas/costa-rica/digital-nomad-visa/executive-decree-43619/)
 
+## Evidence log
+
+- Source: CR_DECREE_43619_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

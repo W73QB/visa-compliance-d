@@ -70,6 +70,10 @@ Keep a PDF of the policy terms so you can attach it if requested.
 - [Portugal DNV requirements (route page)](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
 - [Schengen 30,000 EUR insurance rule](/guides/schengen-30000-insurance/)
 
+## Evidence log
+
+- Source: VFS_PT_E11_CHINA_2025
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

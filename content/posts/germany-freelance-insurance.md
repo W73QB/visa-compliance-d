@@ -74,6 +74,10 @@ Keep a short, written confirmation from the insurer in case the consulate asks f
 - [Germany freelance visa requirements (route page)](/visas/germany/freelance-visa-national-d/embassy-london/)
 - [How to read compliance results](/guides/how-to-read-results/)
 
+## Evidence log
+
+- Source: DE_D_VISA_HEALTH_INSURANCE_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

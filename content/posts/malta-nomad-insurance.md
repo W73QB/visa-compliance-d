@@ -41,6 +41,10 @@ Malta’s Nomad Residence Permit requires **prepaid health insurance** for the f
 - [Malta nomad residence requirements (route page)](/visas/malta/nomad-residence-permit/residency-malta-agency/)
 - [Monthly payment pitfalls for Malta nomad visa](/traps/malta-nomad-monthly-payments/)
 
+## Evidence log
+
+- Source: MT_RESIDENCY_FAQ_2026
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
