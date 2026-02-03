@@ -46,6 +46,10 @@ We compare these official requirements against insurance product specifications 
 
 Try the compliance checker: [Open Checker](/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=2026-01-27)
 
+## Evidence log
+
+- Source: VFS_PT_E11_CHINA_2025
+
 ## Disclaimer
 
 This is not legal advice. VisaFact provides evidence-based compliance checking only. Final visa decisions are made by government authorities. A GREEN result does not ensure visa approval.

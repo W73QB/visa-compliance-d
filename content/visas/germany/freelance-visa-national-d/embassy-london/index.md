@@ -47,6 +47,10 @@ We compare these official requirements against insurance product specifications 
 
 Try the compliance checker: [Open Checker](/ui/?visa=DE_FREELANCE_EMBASSY_LONDON_2026&snapshot=2026-01-27)
 
+## Evidence log
+
+- Source: DE_D_VISA_HEALTH_INSURANCE_2026
+
 ## Disclaimer
 
 This is not legal advice. VisaFact provides evidence-based compliance checking only. Final visa decisions are made by government authorities. A GREEN result does not ensure visa approval.
