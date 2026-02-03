@@ -9,6 +9,7 @@ REQUIRED_BLOCKS = [
     "check in the engine",
     "disclaimer",
     "affiliate disclosure",
+    "evidence log",
 ]
 
 BANNED_WORDS = [
@@ -25,10 +26,12 @@ BANNED_WORDS = [
 DEFAULT_SECTIONS = {"posts", "visas", "guides", "traps"}
 
 
-def lint_text(text: str) -> list[str]:
+def lint_text(text: str, *, require_evidence_log: bool = True) -> list[str]:
     errors = []
     lower = text.lower()
     for block in REQUIRED_BLOCKS:
+        if block == "evidence log" and not require_evidence_log:
+            continue
         if block not in lower:
             errors.append(f"missing block: {block}")
     if "snapshot=" not in lower:
@@ -41,7 +44,8 @@ def lint_text(text: str) -> list[str]:
 
 def lint_file(path: Path) -> int:
     text = path.read_text(encoding="utf-8", errors="replace")
-    errors = lint_text(text)
+    require_evidence_log = path.name != "_index.md"
+    errors = lint_text(text, require_evidence_log=require_evidence_log)
     if errors:
         print(f"[ERROR] {path}")
         for err in errors:
@@ -63,7 +67,9 @@ def should_lint(path: Path, root: Path) -> bool:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--path", type=str, help="Single markdown file to lint")
-    parser.add_argument("--root", type=str, default="content", help="Root content directory")
+    parser.add_argument(
+        "--root", type=str, default="content", help="Root content directory"
+    )
     args = parser.parse_args()
 
     if args.path:
