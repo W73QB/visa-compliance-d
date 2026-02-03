@@ -12,6 +12,7 @@
     "dev": "npm-run-all --parallel watch:css hugo:dev",
     "hugo:dev": "hugo server -D",
     "build": "npm run build:css && hugo --minify",
+    "audit:seo": "python3 tools/seo_audit.py --config tools/seo_thresholds.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,6 +1,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="{{ "css/visafact.css" | relURL }}" />
+{{- $vfcss := resources.Get "css/visafact.css" | resources.Minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $vfcss.RelPermalink }}" integrity="{{ $vfcss.Data.Integrity }}" crossorigin="anonymous" />
 <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}" />
 <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
 <script>

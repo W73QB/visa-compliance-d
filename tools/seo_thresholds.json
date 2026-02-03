@@ -43,6 +43,26 @@
       "at_least_one_of": [
         "/posts/"
       ]
+    },
+    {
+      "glob": "content/guides/*.md",
+      "must_include": [
+        "/ui/"
+      ],
+      "at_least_one_of": [
+        "/posts/",
+        "/visas/"
+      ]
+    },
+    {
+      "glob": "content/traps/*.md",
+      "must_include": [
+        "/methodology"
+      ],
+      "at_least_one_of": [
+        "/posts/",
+        "/visas/"
+      ]
     }
   ],
   "require_faq": [

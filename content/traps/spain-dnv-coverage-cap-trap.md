@@ -37,6 +37,11 @@ Example link with snapshot:
 
 `/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-16`
 
+## Related reading
+
+- [Methodology](/methodology/)
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.

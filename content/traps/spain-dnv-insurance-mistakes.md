@@ -44,6 +44,7 @@ Use the checker with a snapshot:
 
 ## Related reading
 
+- [Methodology](/methodology/)
 - [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 
 ## Disclaimer

@@ -32,6 +32,11 @@ Example link with snapshot:
 
 `/ui/?visa=DE_FREELANCE_EMBASSY_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15`
 
+## Related reading
+
+- [Methodology](/methodology/)
+- [Germany freelance visa requirements (route page)](/visas/germany/freelance-visa-national-d/embassy-london/)
+
 ## Disclaimer
 
 Not legal advice. Compliance results are evidence-based snapshots.
