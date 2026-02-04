@@ -176,6 +176,10 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 ## Affiliate disclosure
 
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
+
+## Evidence log
+
+See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
 """
 
 
