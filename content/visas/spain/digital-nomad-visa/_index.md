@@ -24,11 +24,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?visa=ES_DNV_BLS_LONDON_2026&snapshot=2026-01-27)
-
-## Evidence log
-
-- Source: N/A (hub page; no external claims)
+Try the compliance checker: [Open Checker](/ui/?visa=ES_DNV_BLS_LONDON_2026&snapshot=2026-02-04)
 
 ## Disclaimer
 
@@ -38,5 +34,9 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
+## Evidence log
 
-{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-01-27" >}}
+See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
+
+
+{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-02-04" >}}
