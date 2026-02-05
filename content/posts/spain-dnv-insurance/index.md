@@ -1,97 +1,125 @@
-﻿---
+---
 title: "Spain DNV insurance requirements (evidence-based)"
 date: 2026-01-16
 description: "Evidence-based compliance summary for Spain Digital Nomad Visa insurance requirements."
 tags: ["spain", "dnv", "compliance"]
 faq:
-  - question: "What insurance coverage is required for Spain DNV?"
-    answer: "Comprehensive health insurance authorized in Spain with unlimited coverage, no deductibles or co-payments, and no moratorium."
-  - question: "Can I pay monthly for Spain DNV insurance?"
-    answer: "Consulates typically expect prepaid annual coverage; monthly payments are often rejected—confirm with your consulate."
-  - question: "Is repatriation coverage needed?"
-    answer: "Yes. Policies should include medical repatriation as part of comprehensive coverage per consulate checklist."
+  - question: "Is health insurance mandatory for Spain DNV (BLS London route)?"
+    answer: "Yes. The BLS checklist lists health insurance as a required document for this route."
+  - question: "Must the insurer be authorized to operate in Spain?"
+    answer: "Yes. The checklist requires insurance contracted with an insurer authorized in Spain."
+  - question: "Are deductibles, co-payments, or waiting periods allowed?"
+    answer: "No. The checklist requires no excess (deductible), no co-payments, and no moratorium."
+  - question: "Is unlimited coverage required?"
+    answer: "Yes. The checklist calls for comprehensive, full, unlimited coverage."
+  - question: "Does the policy need to cover public health system risks?"
+    answer: "Yes. The checklist requires coverage of risks insured by Spain's public health system."
 ---
 
-## What the authority requires — Spain DNV insurance
+## Short answer
+
+Spain's Digital Nomad Visa (BLS London route) requires comprehensive health insurance from an insurer authorized to operate in Spain, with unlimited coverage and no deductibles, co-payments, or waiting period. The checklist also requires coverage of risks insured by Spain's public health system (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+## Key findings at a glance
+
+| Item | Value |
+|---|---|
+| Route | Spain DNV (Consulate via BLS London) |
+| Evidence verified | 2026-01-12 |
+| Snapshot | releases/2026-01-16 |
+| GREEN / RED / UNKNOWN | 1 / 5 / 1 |
+
+## What the authority requires
+
 ![Official BLS Spain DNV checklist item 9 insurance requirement](evidence-es-bls-item9.png)
 
-*Source: ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf (Item 9)*
+*Source: ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf (page 2, item 9)*
 
+- Insurance is mandatory for all applicants. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- The insurer must be authorized to operate in Spain. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- The policy must cover risks insured by Spain's public health system. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- Coverage must be comprehensive, full, and unlimited. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- No deductible (excess) is allowed. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- No co-payments are allowed. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- No moratorium (waiting period) is allowed. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
 
-Short answer: Spain’s BLS London checklist requires comprehensive health insurance with zero deductibles/co-payments and no moratorium (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9).
+Normalized requirements table:
 
-Spain Digital Nomad Visa (BLS London route) requires health insurance meeting all of the following conditions, based on the BLS checklist (page 2, item 9) stored under `sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf`:
+| Requirement | Source URL | Locator | Verified date |
+|---|---|---|---|
+| Insurance is mandatory | https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf | page 2, item 9 | 2026-01-12 |
+| Insurer authorized in Spain | https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf | page 2, item 9 | 2026-01-12 |
+| Covers public health system risks | https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf | page 2, item 9 | 2026-01-12 |
+| Comprehensive, full, unlimited coverage | https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf | page 2, item 9 | 2026-01-12 |
+| No deductible / no co-payments / no moratorium | https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf | page 2, item 9 | 2026-01-12 |
 
-- **Mandatory:** Insurance is required for all applicants.
-- **Authorized in Spain:** The insurer must be authorized to operate in Spain.
-- **Covers public health system risks:** The policy must cover risks insured by the Spanish public health system.
-- **Comprehensive:** Full coverage, not travel-only or emergency-only.
-- **Unlimited coverage:** No annual or per-incident cap.
-- **No deductible:** Zero deductible (excess) allowed.
-- **No co-payment:** Zero co-payment allowed.
-- **No moratorium:** No waiting period before coverage begins.
+## Verified requirements (PASS/FAIL/UNKNOWN)
 
-Failing any single requirement produces a RED status in the checker (evidence tied to `BLS_ES_DNV_LONDON_2026`).
-
-## How we evaluate — compliance logic
-
-We compare visa requirements against product specs and evidence in the rule engine. See `/methodology/` for full logic.
-
-## What is the current checker status?
-
-As of 2026-01-16, ASISA Health Residents is marked GREEN based on official evidence. Other products can still be RED or
-UNKNOWN if any requirement lacks official proof.
-
-## What do the mapping results show?
-
-As of snapshot `releases/2026-01-16`, the checker evaluated 7 products against Spain DNV requirements:
-
-| Status | Count | What it means |
+| Requirement | Status | Evidence |
 |---|---|---|
-| GREEN | 1 | All requirements verified by evidence |
-| RED | 5 | At least one requirement fails based on evidence |
-| UNKNOWN | 1 | Evidence missing for one or more requirements |
+| Insurance is mandatory | PASS | BLS checklist, page 2, item 9 |
+| Insurer authorized in Spain | PASS | BLS checklist, page 2, item 9 |
+| Covers public health system risks | PASS | BLS checklist, page 2, item 9 |
+| Comprehensive, full, unlimited coverage | PASS | BLS checklist, page 2, item 9 |
+| No deductible | PASS | BLS checklist, page 2, item 9 |
+| No co-payment | PASS | BLS checklist, page 2, item 9 |
+| No moratorium | PASS | BLS checklist, page 2, item 9 |
 
-Only ASISA Health Residents achieves GREEN. Five products are marked RED due to at least one verified requirement mismatch (for example: deductible, co-payment, coverage limit, or authorization). One product lacks sufficient evidence and is marked UNKNOWN.
+## How we evaluate
 
-## How do I check in the engine?
+We compare the authority requirements above against product evidence in the rule engine. If any requirement is missing explicit proof, the checker marks it UNKNOWN rather than guessing. See /methodology/ for the full evaluation logic and the UNKNOWN > Wrong principle.
 
-Use the checker at /ui/ (see CTA below).
+## Proof package checklist
+
+- Original and copy of the insurance certificate from an insurer authorized to operate in Spain (BLS checklist, page 2, item 9).
+- Policy or certificate text that explicitly states unlimited, comprehensive coverage with no deductibles, no co-payments, and no moratorium (the checklist requires these features).
+
+## Common rejection traps
+
+- Using an insurer that is not authorized to operate in Spain (directly conflicts with the checklist).
+- Submitting a policy with a coverage cap when the checklist requires unlimited coverage.
+- Policies that include a deductible or co-payments (the checklist requires none).
+- Policies with any waiting period (moratorium) before benefits start.
+- A certificate that does not explicitly state the required coverage features (inference: the checklist is specific, so proof should be explicit).
+
+## FAQ
+
+**Q: Is insurance mandatory for Spain DNV (BLS London route)?**
+**A:** Yes. The BLS checklist lists health insurance as a required document (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+**Q: Does the insurer need to be authorized in Spain?**
+**A:** Yes. The checklist requires the insurance be contracted with an insurer authorized to operate in Spain (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+**Q: Are deductibles, co-payments, or moratoriums allowed?**
+**A:** No. The checklist says no excess or co-payments, nor moratorium (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+**Q: Is unlimited coverage required?**
+**A:** Yes. The checklist requires comprehensive, full, unlimited coverage (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+**Q: Must the policy cover public health system risks?**
+**A:** Yes. The checklist requires coverage of all risks insured by Spain's public health system (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+## Check in the engine
+
+Use [the compliance checker](/ui/) to check the current snapshot for this route, or use the CTA below:
 
 {{< checker_cta visa="ES_DNV_BLS_LONDON_2026" product="ASISA_HEALTH_RESIDENTS_2026" snapshot="releases/2026-01-16" >}}
 
-## What does this mean in plain English?
-
-Spain DNV authorities ask for **comprehensive, Spain-authorized health insurance** that mirrors the public system. If any requirement lacks official evidence, the checker returns **UNKNOWN** instead of guessing. This matters because a policy can look fine on paper but still fail a specific route’s checklist.
-
-## What are the common pitfalls?
-
-- Buying travel-only policies when a full health policy is required.
-- Accepting deductibles or co-payments when the route requires zero.
-- Paying monthly when a full annual policy is expected.
-- Assuming coverage is "unlimited" when the policy document states a cap (for example, $250,000). Spain DNV requires truly unlimited coverage.
-- Using policies that do not show authorization to operate in Spain, which conflicts with the route's authorization requirement.
-
-## What should you prepare?
-
-- A policy document showing the insurer is authorized to operate in Spain.
-- Evidence that coverage is comprehensive, with no deductibles or co-payments.
-- Proof of coverage period matching your intended stay (often annual prepaid).
-
-## What else should you read?
+## Related reading
 
 - [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 - [Spain DNV insurance mistakes](/traps/spain-dnv-insurance-mistakes/)
-- [Why SafetyWing is rejected for Spain DNV](/posts/safetywing-spain-dnv-rejected/)
+- [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
+- [How to read compliance results](/guides/how-to-read-results/)
+
+## Disclaimer + Affiliate disclosure
+
+Not legal advice. Compliance results are evidence-based snapshots.
+
+If an affiliate link is present, it appears only after results and does not change the compliance outcome.
+
+Last updated: 2026-02-05
 
 ## Evidence log
 
 - Source: BLS_ES_DNV_LONDON_2026
-
-## Disclaimer
-
-Not legal advice. Compliance results are evidence-based snapshots.
-
-## Affiliate disclosure
-
-If an affiliate link is present, it appears only after results and does not change the compliance outcome.

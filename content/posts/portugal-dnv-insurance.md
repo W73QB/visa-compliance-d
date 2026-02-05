@@ -4,80 +4,98 @@ date: 2026-01-15
 description: "Evidence-based summary of Portugal E11 remote work visa insurance requirement."
 tags: ["portugal", "dnv", "insurance", "compliance"]
 faq:
-  - question: "What coverage is required for Portugal E11 remote work visa?"
-    answer: "At least €30,000 medical coverage including urgent assistance and repatriation, with no deductible or copay, per VFS checklist."
-  - question: "Can I use monthly payment plans?"
-    answer: "Visa centers often expect prepaid coverage for the visa period; monthly billing can be rejected—confirm with your VFS office."
-  - question: "Which insurers are accepted?"
-    answer: "Use insurers recognized in Portugal/EU; evidence-based products in the checker list those with documented acceptance."
+  - question: "Is travel insurance required for the Portugal E11 remote work visa?"
+    answer: "Yes. The VFS checklist requires valid travel insurance for this route."
+  - question: "What coverage must the policy include?"
+    answer: "The checklist requires coverage for necessary medical expenses, urgent medical assistance, and possible repatriation."
+  - question: "Does the checklist specify a minimum coverage amount?"
+    answer: "Not in this route's VFS checklist. Only the coverage types are specified."
+  - question: "Why are all products GREEN in this snapshot?"
+    answer: "The checker currently encodes the insurance-required rule for this route; other checklist details are not yet modeled."
 ---
+
+## Short answer
+
+For the Portugal E11 Temporary Stay Visa (VFS China route), the checklist requires valid travel insurance covering necessary medical expenses, urgent medical assistance, and possible repatriation (Source: `VFS_PT_E11_CHINA_2025`, page 1, General Requirements; verified 2026-01-15).
+
+## Key findings at a glance
+
+| Item | Value |
+|---|---|
+| Route | Portugal E11 (VFS Global China) |
+| Evidence verified | 2026-01-15 |
+| Snapshot | releases/2026-01-15 |
+| GREEN / RED / UNKNOWN | 7 / 0 / 0 |
 
 ## What the authority requires
 
-The VFS Global checklist for the E11 Temporary Stay Visa for Remote Work requires **valid travel insurance covering necessary medical expenses**, including urgent medical assistance and possible repatriation. Evidence is recorded in `sources/PT_E11_VFS_CHINA_2025-07.pdf`.
+- Valid travel insurance is required. (Source: `VFS_PT_E11_CHINA_2025`, locator: page 1, General Requirements; verified 2026-01-15)
+- Coverage must include necessary medical expenses, urgent medical assistance, and possible repatriation. (Source: `VFS_PT_E11_CHINA_2025`, locator: page 1, General Requirements; verified 2026-01-15)
+
+Normalized requirements table:
+
+| Requirement | Source URL | Locator | Verified date |
+|---|---|---|---|
+| Valid travel insurance required | https://www.vfsglobal.com/one-pager/portugal/china/english/pdf/E11-july-2025.pdf | page 1, General Requirements | 2026-01-15 |
+| Covers medical expenses, urgent assistance, possible repatriation | https://www.vfsglobal.com/one-pager/portugal/china/english/pdf/E11-july-2025.pdf | page 1, General Requirements | 2026-01-15 |
+
+## Verified requirements (PASS/FAIL/UNKNOWN)
+
+| Requirement | Status | Evidence |
+|---|---|---|
+| Travel insurance is mandatory | PASS | VFS checklist, page 1 |
+| Coverage includes medical expenses, urgent assistance, repatriation | PASS | VFS checklist, page 1 |
+| Minimum coverage amount specified | UNKNOWN | Not stated in VFS checklist |
+| Insurer authorization requirements specified | UNKNOWN | Not stated in VFS checklist |
 
 ## How we evaluate
 
-We check whether a product includes travel medical coverage that meets the requirement. Missing facts result in UNKNOWN.
+The checker currently encodes the mandatory insurance rule for this route. If a requirement is not explicitly stated in the source, it is treated as UNKNOWN rather than inferred. This keeps the results aligned with evidence-first rules. See /methodology/ for full logic.
+
+## Proof package checklist
+
+- A valid travel insurance policy or certificate that explicitly states coverage for medical expenses, urgent medical assistance, and possible repatriation (VFS checklist, page 1).
+
+## Common rejection traps
+
+- Submitting a policy document that does not explicitly mention urgent medical assistance or repatriation (inference: the checklist is specific about coverage types).
+- Assuming a minimum coverage amount that is not stated in this route's checklist.
+
+## FAQ
+
+**Q: Is travel insurance required for Portugal E11 (VFS China route)?**
+**A:** Yes. The checklist requires valid travel insurance (Source: `VFS_PT_E11_CHINA_2025`, page 1, General Requirements; verified 2026-01-15).
+
+**Q: What coverage must the policy include?**
+**A:** The checklist requires coverage for necessary medical expenses, urgent medical assistance, and possible repatriation (Source: `VFS_PT_E11_CHINA_2025`, page 1; verified 2026-01-15).
+
+**Q: Does the checklist specify a minimum coverage amount?**
+**A:** Not in this route's checklist. If a coverage amount is required, it must be explicitly stated in the authority source to be encoded in the checker.
+
+**Q: Why are all products GREEN in this snapshot?**
+**A:** This snapshot encodes the insurance-required rule only. Other checklist attributes are not yet modeled, so they cannot produce RED or UNKNOWN outcomes.
 
 ## Check in the engine
 
-Use the checker with a snapshot:
+Use [the compliance checker](/ui/) with the current snapshot for this route:
 
-`/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=releases/2026-01-15`
-
-## Mapping results summary
-
-As of snapshot `releases/2026-01-15`, the checker evaluated 7 products — all are GREEN:
-
-| Status | Count |
-|---|---|
-| GREEN | 7 |
-
-The structured requirement currently encoded in the checker is that insurance is mandatory. Because no other constraints are represented as requirements for this route, all products pass the automated check.
-
-This does not mean there are no other checklist details in the source document. If additional requirements are encoded in future snapshots, some products may shift to RED or UNKNOWN.
-
-In other words, this snapshot is confirming “insurance is required” (backed by `sources/PT_E11_VFS_CHINA_2025-07.pdf`), but it is not yet validating every checklist attribute (for example, minimum coverage amount, repatriation wording, or proof format). Treat GREEN here as “meets the currently encoded rule set,” not as confirmation that every checklist line item has been modeled.
-
-## Plain-English summary
-
-Portugal E11 routes can differ by authority. This page summarizes the verified insurance requirements and points to the official evidence so you can avoid assumptions.
-
-When in doubt, use the checker with your specific route to validate coverage against evidence snapshots.
-
-If a requirement lacks evidence, the checker will show UNKNOWN so you can request clarification from the authority.
-
-## Common pitfalls
-
-- Relying on generic travel insurance advice instead of route-specific requirements.
-- Submitting a policy with missing evidence for required coverage features.
-- Missing proof of coverage duration aligned with the visa period.
-- Not having documentation that shows active coverage for your intended dates.
-
-Because E11 routes can vary by authority, two applicants can show different checklists even for the same visa type. Keep your deep link snapshot (`/ui/?visa=PT_DNV_VFS_CHINA_2026&snapshot=...`) tied to the exact authority route and evidence file so you can explain what the checker is evaluating and what is still outside the encoded rule set.
-
-## What to prepare
-
-- A policy summary showing medical coverage and repatriation benefits.
-- Proof of coverage amount matching the checklist requirement (often €30,000).
-- A coverage period aligned with the visa duration.
-If your policy is a multi-page booklet, extract or highlight the clauses that explicitly mention urgent medical assistance and repatriation, since those terms are typically what the checklist asks you to demonstrate.
-Keep a PDF of the policy terms so you can attach it if requested.
+{{< checker_cta visa="PT_DNV_VFS_CHINA_2026" snapshot="releases/2026-01-15" >}}
 
 ## Related reading
 
 - [Portugal DNV requirements (route page)](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
+- [Germany travel insurance rejected](/traps/germany-travel-insurance-rejected/)
+- [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 - [Schengen 30,000 EUR insurance rule](/guides/schengen-30000-insurance/)
+
+## Disclaimer + Affiliate disclosure
+
+Not legal advice. Compliance results are evidence-based snapshots.
+
+If a link is shown after results, it does not influence the evidence-based outcome.
+
+Last updated: 2026-02-05
 
 ## Evidence log
 
 - Source: VFS_PT_E11_CHINA_2025
-
-## Disclaimer
-
-Not legal advice. Compliance results are evidence-based snapshots.
-
-## Affiliate disclosure
-
-If a link is shown after results, it does not influence the evidence-based outcome.
