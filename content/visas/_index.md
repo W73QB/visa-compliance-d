@@ -26,11 +26,7 @@ We compare these official requirements against insurance product specifications 
 
 ## Check in the engine
 
-Try the compliance checker: [Open Checker](/ui/?snapshot=2026-01-27)
-
-## Evidence log
-
-- Source: N/A (hub page; no external claims)
+Try the compliance checker: [Open Checker](/ui/?snapshot=2026-02-04)
 
 ## Disclaimer
 
@@ -41,4 +37,4 @@ This is not legal advice. VisaFact provides evidence-based compliance checking o
 If affiliate links appear, they are shown only after compliance results and do not influence the compliance evaluation in any way.
 
 
-{{< checker_cta snapshot="2026-01-27" >}}
+{{< checker_cta snapshot="2026-02-04" >}}
