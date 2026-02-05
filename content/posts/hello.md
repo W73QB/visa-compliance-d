@@ -18,7 +18,7 @@ This blog is powered by Hugo.
 
 ## Check in the engine
 
-- /ui/?visa=ES_DNV_2026&product=SW_TRAVEL_2026&snapshot=releases/2026-01-13
+- [/ui/?visa=ES_DNV_2026&product=SW_TRAVEL_2026&snapshot=releases/2026-01-13](/ui/?visa=ES_DNV_2026&product=SW_TRAVEL_2026&snapshot=releases/2026-01-13)
 
 ## Evidence log
 

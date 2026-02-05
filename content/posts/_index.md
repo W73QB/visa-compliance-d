@@ -20,7 +20,7 @@ We compare authority requirements with product facts and evidence.
 
 ## Check in the engine
 
-Use the checker with a snapshot: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-12
+Use the checker with a snapshot: [/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-12](/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-12)
 
 ## Evidence log
 
