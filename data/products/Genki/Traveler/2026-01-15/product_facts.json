@@ -14,7 +14,7 @@
     },
     "copay": null,
     "payment_cadence": null,
-    "contract_commitment_months": null,
+    "contract_commitment_months": 12,
     "jurisdiction_facts": {}
   },
   "evidence": [
@@ -27,6 +27,11 @@
       "source_id": "GENKI_TRAVELER_COVERAGE_2026",
       "locator": "Maximum Coverage Limit",
       "excerpt": "€1,000,000"
+    },
+    {
+      "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+      "locator": "Maximum Insurance Period",
+      "excerpt": "Maximum Insurance Period: The coverage is valid for up to 1 year."
     }
   ]
 }
