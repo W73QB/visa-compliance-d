@@ -1,75 +1,127 @@
 ---
 title: "Digital nomad insurance requirements (Europe - verified subset)"
 date: 2026-01-16
-description: "Verified official insurance requirements for digital nomad or remote-work programs in Europe."
+description: "Evidence-based summary of verified insurance requirements for Europe routes in this dataset."
 tags: ["digital-nomad", "insurance", "europe", "compliance"]
 faq:
   - question: "Do all European digital nomad visas require insurance?"
-    answer: "No. Requirements vary by route. This hub links to each route page and the evidence cited for that authority."
+    answer: "No. Requirements vary by route. This hub summarizes only the verified routes in our dataset."
   - question: "Why do some products show UNKNOWN in Europe?"
-    answer: "UNKNOWN means a requirement cannot be verified from primary sources in the current snapshot. See the linked route pages for evidence."
+    answer: "UNKNOWN means a requirement could not be verified from product evidence in the current snapshot."
+  - question: "Why is Spain DNV so strict compared to other routes?"
+    answer: "The Spain DNV checklist requires unlimited coverage, no deductible, no co-payments, and Spain authorization."
+  - question: "Can I rely on a general comparison instead of route checks?"
+    answer: "No. Europe routes differ by authority and evidence. Use the checker with the exact route." 
 ---
+
+## Short answer
+
+Europe does not have a single insurance standard for digital nomad routes. This hub summarizes the verified subset in this dataset: Spain DNV, Portugal E11, Germany Freelance (national D), and Malta Nomad Residence Permit. Each route has distinct authority language and evidence dates (Sources: `BLS_ES_DNV_LONDON_2026`, `VFS_PT_E11_CHINA_2025`, `DE_D_VISA_HEALTH_INSURANCE_2026`, `MT_RESIDENCY_FAQ_2026`).
+
+## Key findings at a glance
+
+| Item | Value |
+|---|---|
+| Routes covered | Spain DNV, Portugal E11, Germany Freelance, Malta Nomad |
+| Evidence verified | 2026-01-12 to 2026-01-15 |
+| Snapshot | releases/2026-01-15 |
+| Spain DNV highlights | Unlimited coverage, no deductibles, insurer authorized in Spain |
+| Germany Freelance highlights | Health insurance commensurate with statutory coverage; travel insurance not sufficient |
+| Malta highlights | Insurance mandatory; monthly payment policies not accepted |
 
 ## What the authority requires
 
-Verified subset as of 2026-01-16. Each item links to an official authority page or checklist.
+- Spain DNV (BLS London): insurer authorized in Spain, comprehensive and unlimited coverage, no deductible, no co-payments, no moratorium, and coverage of public health system risks. (Source: `BLS_ES_DNV_LONDON_2026`, locator: page 2, item 9; verified 2026-01-12)
+- Portugal E11 (VFS China): valid travel insurance covering medical expenses, urgent medical assistance, and possible repatriation. (Source: `VFS_PT_E11_CHINA_2025`, locator: page 1, General Requirements; verified 2026-01-15)
+- Germany Freelance (national D): health insurance commensurate with German statutory minimum; travel insurance not sufficient. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15)
+- Malta Nomad Residence: health insurance mandatory; monthly payment policies are not acceptable and full-year prepayment may be required. (Source: `MT_RESIDENCY_FAQ_2026`, locator: FAQ - Health Insurance Requirements; verified 2026-01-12)
 
-- Spain (Digital Nomad Visa, BLS London route): insurer authorized in Spain, comprehensive and unlimited coverage, no deductibles or co-payments, and no moratorium. Evidence recorded in `sources/ES_DNV_BLS_LONDON_checklist_2026-01-12.pdf`.
-- Italy (Digital Nomad / Remote Worker Visa): travel medical insurance covering medical care, hospitalization, and repatriation; minimum 30,000 EUR. Source: https://consnewyork.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/visas-to-enter-italy/digital-nomad-remote-worker-visa/
-- Croatia (Temporary stay of digital nomads): proof of health insurance. Source: https://mup.gov.hr/aliens-281621/temporary-stay-of-digital-nomads-286853/286853
-- Hungary (White Card): access to comprehensive health insurance services or proof of ability to cover healthcare costs. Source: https://oif.gov.hu/factsheets/white-card-residency-for-digital-nomads
-- Cyprus (Digital Nomad): certificate of health insurance for inpatient + outpatient care and transportation of corpse (Plan A). Source: https://www.moi.gov.cy/dmmip/md.nsf/All/AAEAEA2695E7E270C2258921002C2FB4/$file/Accompanying%20Documents_VIS%20Digital%20Nomad_19032025.pdf?OpenElement=
-- Iceland (Remote work FAQ): minimum 2,000,000 ISK per person, valid in Iceland and Schengen, for full stay. Source: https://work.iceland.is/working/remote-work-visa-faq/
-- Estonia (Schengen insurance requirement): travel medical insurance valid across Schengen, covering full stay, minimum 30,000 EUR. Source: https://newdelhi.mfa.ee/esileht/travel-medical-insurance-information/
-- Portugal (D9 checklist - Goa): travel insurance minimum 30,000 EUR, includes repatriation/medical emergency/hospitalization, covers full stay. Source: https://www.vfsglobal.com/one-pager/portugal/india/english/pdf/dr-checklist-goa.pdf
+Normalized requirements table:
+
+| Route | Requirement | Source URL | Locator | Verified date |
+|---|---|---|---|---|
+| Spain DNV | Unlimited coverage, no deductible/co-pay/moratorium; insurer authorized in Spain | https://uk.blsspainvisa.com/london/assets/images/pdf/checklists/checklist-DIGITAL-NOMAD-VISA-TEL.pdf | page 2, item 9 | 2026-01-12 |
+| Portugal E11 | Medical expenses, urgent assistance, repatriation | https://www.vfsglobal.com/one-pager/portugal/china/english/pdf/E11-july-2025.pdf | page 1, General Requirements | 2026-01-15 |
+| Germany Freelance | Statutory-level health insurance; travel insurance not sufficient | https://uk.diplo.de/uk-en/02/visa/health-insurance-requirements-2616300 | Health insurance requirements for national (category D) visas | 2026-01-15 |
+| Malta Nomad | Insurance mandatory; monthly policies not accepted | https://nomad.residencymalta.gov.mt/new-faqs/ | Health Insurance Requirements / monthly payment FAQ | 2026-01-12 |
+
+## Verified requirements (PASS/FAIL/UNKNOWN)
+
+| Route | Requirement | Status | Evidence |
+|---|---|---|---|
+| Spain DNV | Unlimited coverage, no deductible/co-pay/moratorium | PASS | BLS checklist, page 2, item 9 |
+| Portugal E11 | Travel insurance covers medical, urgent assistance, repatriation | PASS | VFS checklist, page 1 |
+| Germany Freelance | Travel insurance is not sufficient | PASS | Federal Foreign Office (UK) |
+| Malta Nomad | Monthly payment policies not accepted | PASS | Residency Malta FAQ |
 
 ## How we evaluate
 
-We compare VisaFacts against ProductFacts using a rule engine. Details: /methodology/
+We evaluate each route independently using the evidence linked above. Product facts are compared to the exact requirement language. If a requirement is missing from product evidence, the result is UNKNOWN rather than inferred. If a requirement is contradicted (for example, a deductible where none is allowed), the result is RED. See /methodology/ for full rule logic and the UNKNOWN > Wrong principle.
+
+## Proof package checklist
+
+- Spain DNV: policy certificate showing unlimited coverage, no deductibles, no co-payments, and insurer authorization in Spain. (Source: `BLS_ES_DNV_LONDON_2026`)
+- Portugal E11: travel insurance certificate listing medical expenses, urgent assistance, and repatriation. (Source: `VFS_PT_E11_CHINA_2025`)
+- Germany Freelance: health insurance document confirming statutory-level coverage and non-travel classification. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`)
+- Malta Nomad: evidence of annual prepayment and, if requested, payment receipt. (Source: `MT_RESIDENCY_FAQ_2026`)
+
+## Common rejection traps
+
+- Spain DNV: deductibles or coverage caps (Spain requires unlimited coverage).
+- Germany Freelance: submitting travel insurance for a national D visa.
+- Malta Nomad: monthly payment policies that do not show full-year prepayment.
+- INFERENCE: Product summaries without explicit clauses often lead to UNKNOWN outcomes and follow-up requests.
+
+## FAQ
+
+**Q: Do all European digital nomad visas require insurance?**
+**A:** No. Requirements vary by route and authority. This hub summarizes only the verified routes in our dataset (Sources: `BLS_ES_DNV_LONDON_2026`, `VFS_PT_E11_CHINA_2025`, `DE_D_VISA_HEALTH_INSURANCE_2026`, `MT_RESIDENCY_FAQ_2026`).
+
+**Q: Why do some products show UNKNOWN in Europe?**
+**A:** UNKNOWN means the product evidence does not confirm a specific requirement. The checker will not infer compliance without explicit proof.
+
+**Q: Why is Spain DNV so strict compared to other routes?**
+**A:** Spain DNV requires unlimited coverage, no deductible or co-payments, no moratorium, and authorization in Spain (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+**Q: Can I rely on a general comparison instead of route checks?**
+**A:** No. Europe routes differ by authority and evidence. Use the route page and the checker for your specific consulate.
 
 ## Check in the engine
 
-Example link: /ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15
+Use [the compliance checker](/ui/) for route-specific results. Example link:
 
-## Countries covered in this hub
-
-- [Spain DNV requirements](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
-- [Portugal DNV requirements](/visas/portugal/temporary-stay-visa-for-remote-work-e11/vfs-global-china/)
-- [Germany freelance visa requirements](/visas/germany/freelance-visa-national-d/embassy-london/)
-- [Malta nomad residence permit requirements](/visas/malta/nomad-residence-permit/residency-malta-agency/)
-
-## Route-specific hub posts
-
-- [Spain DNV insurance hub](/posts/spain-dnv-insurance/)
-- [Portugal DNV insurance hub](/posts/portugal-dnv-insurance/) (currently only one insurance requirement in evidence)
-- [Germany freelance insurance hub](/posts/germany-freelance-insurance/)
-- [Malta nomad residence insurance hub](/posts/malta-nomad-insurance/)
+- [/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15](/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15)
 
 ## Mapping results summary
 
-As of snapshot `releases/2026-01-15`, the mapping results for selected products are:
+As of snapshot `releases/2026-01-15`, example product outcomes across the verified Europe routes are:
 
-| Route | ASISA Health Residents | DKV Visado | Genki Traveler |
+| Route | SafetyWing | World Nomads | Genki |
 |---|---|---|---|
-| Spain (ES_DNV_BLS_LONDON_2026) | GREEN | RED | RED |
-| Portugal (PT_DNV_VFS_CHINA_2026) | GREEN | GREEN | GREEN |
-| Germany (DE_FREELANCE_EMBASSY_LONDON_2026) | GREEN | GREEN | UNKNOWN |
-| Malta (MT_NOMAD_RESIDENCY_2026) | UNKNOWN | GREEN | UNKNOWN |
+| Spain DNV | RED | RED | RED |
+| Portugal DNV | GREEN | GREEN | GREEN |
+| Germany Freelance | RED | RED | UNKNOWN |
+| Malta Nomad | RED | UNKNOWN | UNKNOWN |
 
-Portugal currently has only one insurance requirement in the evidence set, so mapping results there are less informative until more requirements are added.
+## Related reading
 
-## Use the compliance checker
+- [Spain DNV insurance hub](/posts/spain-dnv-insurance/)
+- [Portugal DNV insurance hub](/posts/portugal-dnv-insurance/)
+- [Germany freelance insurance hub](/posts/germany-freelance-insurance/)
+- [Malta nomad residence insurance hub](/posts/malta-nomad-insurance/)
+- [Spain DNV visa hub](/visas/spain/digital-nomad-visa/)
 
-Try the evidence-based checker for your route: /ui/
-
-## Evidence log
-
-- Source: N/A (regional hub overview; no single authoritative requirement claim asserted)
-
-## Disclaimer
+## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
 
-## Affiliate disclosure
-
 If an affiliate link is present, it appears only after results and does not change the compliance outcome.
+
+Last updated: 2026-02-05
+
+## Evidence log
+
+- Source: BLS_ES_DNV_LONDON_2026
+- Source: VFS_PT_E11_CHINA_2025
+- Source: DE_D_VISA_HEALTH_INSURANCE_2026
+- Source: MT_RESIDENCY_FAQ_2026
