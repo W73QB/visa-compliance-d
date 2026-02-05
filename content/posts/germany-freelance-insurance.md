@@ -4,84 +4,112 @@ date: 2026-01-15
 description: "Evidence-based summary of health insurance requirements for German national D visas (freelance)."
 tags: ["germany", "freelance", "insurance", "compliance"]
 faq:
-  - question: "Is travel insurance accepted for Germany freelance visa?"
-    answer: "No. Authorities require coverage equivalent to German statutory health insurance; travel insurance is explicitly insufficient."
-  - question: "Do I need unlimited coverage?"
-    answer: "Policies should match statutory coverage levels, including outpatient, inpatient, and repatriation; no deductibles is safest."
-  - question: "Can I use international insurers?"
-    answer: "Yes if they meet statutory equivalence and provide German-language confirmation; evidence-backed products in the checker list those."
+  - question: "Is health insurance mandatory for Germany freelance (national D) visas?"
+    answer: "Yes. The authority requires health insurance cover commensurate with the minimum level of German statutory health insurance."
+  - question: "Is travel insurance accepted for Germany national D visas?"
+    answer: "No. The authority states that travel insurance is not sufficient for any D visa application."
+  - question: 'What does "commensurate with statutory health insurance" mean in practice?'
+    answer: "The authority uses that wording as the requirement. If the policy does not explicitly show statutory-level coverage, the checker marks UNKNOWN rather than assuming it matches."
+  - question: "Why can a product show UNKNOWN in the checker?"
+    answer: "UNKNOWN means the evidence does not confirm whether the policy meets the statutory-level standard or is health (not travel) coverage."
 ---
 
-## What the authority requires — Germany freelance visa insurance?
+## Short answer
 
-Short answer: health insurance is mandatory and travel insurance is explicitly not sufficient for national D visas (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`).
+Germany's Federal Foreign Office (UK) states that applicants for any category D visa must have health insurance cover commensurate with the minimum level of German statutory health insurance, and that travel insurance is not sufficient for any D visa application (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15). This page summarizes the evidence for the Embassy London freelance route and shows how the checker evaluates products against those requirements.
 
-The German Federal Foreign Office (UK) requires health insurance for national D visas, and explicitly states that **travel insurance is not sufficient**. Evidence is recorded in `sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html`.
+## Key findings at a glance
 
-Verified requirements for this route:
-1. **Mandatory:** Health insurance is required for all applicants.
-2. **Travel insurance not accepted:** Travel insurance policies are explicitly rejected; applicants need health insurance coverage.
+| Item | Value |
+|---|---|
+| Route | Germany Freelance Visa (Embassy London) |
+| Evidence verified | 2026-01-15 |
+| Snapshot | releases/2026-01-15 |
+| GREEN / RED / UNKNOWN | 4 / 2 / 1 |
 
-## How we evaluate — travel vs health insurance
+## What the authority requires
 
-We check whether the product is travel insurance and flag travel policies as non-compliant when the authority rejects travel insurance for D visas.
+- Health insurance is mandatory for category D visa applicants. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15)
+- Coverage must be commensurate with the minimum level of the German statutory health insurance system. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15)
+- Travel insurance is not sufficient for any D visa application. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15)
 
-## Check in the engine — verify with a snapshot
+Normalized requirements table:
 
-Use the checker with a snapshot:
+| Requirement | Source URL | Locator | Verified date |
+|---|---|---|---|
+| Health insurance is mandatory for category D visas | https://uk.diplo.de/uk-en/02/visa/health-insurance-requirements-2616300 | Health insurance requirements for national (category D) visas | 2026-01-15 |
+| Coverage commensurate with statutory health insurance | https://uk.diplo.de/uk-en/02/visa/health-insurance-requirements-2616300 | Health insurance requirements for national (category D) visas | 2026-01-15 |
+| Travel insurance is not sufficient | https://uk.diplo.de/uk-en/02/visa/health-insurance-requirements-2616300 | Health insurance requirements for national (category D) visas | 2026-01-15 |
 
-`/ui/?visa=DE_FREELANCE_EMBASSY_LONDON_2026&snapshot=releases/2026-01-15`
+## Verified requirements (PASS/FAIL/UNKNOWN)
+
+| Requirement | Status | Evidence |
+|---|---|---|
+| Health insurance is mandatory | PASS | Federal Foreign Office (UK) D visa health insurance requirements |
+| Coverage commensurate with statutory minimum | PASS | Federal Foreign Office (UK) D visa health insurance requirements |
+| Travel insurance accepted | FAIL | Federal Foreign Office (UK) D visa health insurance requirements |
+
+## How we evaluate
+
+The checker compares the authority requirements above against product evidence. If the product documents do not explicitly show statutory-level health coverage, the result is UNKNOWN rather than inferred. If a policy is classified as travel insurance, the result is RED because the authority states travel insurance is not sufficient for any D visa application. If documents only describe travel coverage or omit statutory-level language entirely, the checker will not upgrade the status based on reputation or marketing claims. See /methodology/ for the rule logic and the UNKNOWN > Wrong principle.
+
+## Proof package checklist
+
+- A health insurance policy or certificate showing coverage commensurate with the minimum level of German statutory health insurance. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`)
+- Documentation that makes it explicit the policy is health insurance (not travel insurance), since travel insurance is not sufficient for D visas. (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`)
+
+## Common rejection traps
+
+- Submitting travel insurance for a national D visa (directly contradicts the authority statement).
+- INFERENCE: Submitting a policy that does not explicitly state statutory-level coverage may lead to UNKNOWN outcomes and additional requests for proof.
+
+## FAQ
+
+**Q: Is health insurance mandatory for Germany freelance (national D) visas?**
+**A:** Yes. The authority requires health insurance cover commensurate with the minimum level of German statutory health insurance (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15).
+
+**Q: Is travel insurance accepted for Germany national D visas?**
+**A:** No. The authority explicitly states that travel insurance is not sufficient for any D visa application (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`, locator: Health insurance requirements for national (category D) visas; verified 2026-01-15).
+
+**Q: What does "commensurate with statutory health insurance" mean in practice?**
+**A:** The authority uses that exact standard. If policy documents do not show statutory-level coverage explicitly, the checker marks UNKNOWN rather than assuming equivalence.
+
+**Q: Why can a product show UNKNOWN in the checker?**
+**A:** UNKNOWN means the evidence does not confirm statutory-level coverage or clear classification as health insurance. The checker does not infer compliance without explicit proof.
+
+## Check in the engine
+
+Use [the compliance checker](/ui/) with the current snapshot for this route:
+
+{{< checker_cta visa="DE_FREELANCE_EMBASSY_LONDON_2026" snapshot="releases/2026-01-15" >}}
 
 ## Mapping results summary
 
 As of snapshot `releases/2026-01-15`, the checker evaluated 7 products:
 
-| Status | Count | Implication |
+| Status | Count | What it means |
 |---|---|---|
-| GREEN | 4 | Insurance type confirmed as health (not travel) |
-| RED | 2 | Product classified as travel insurance |
-| UNKNOWN | 1 | Insurance type not confirmed by evidence |
+| GREEN | 4 | Evidence confirms health insurance (not travel) and statutory-level coverage |
+| RED | 2 | Evidence indicates travel insurance | 
+| UNKNOWN | 1 | Evidence does not confirm statutory-level coverage or insurance type |
 
-The key differentiator is `travel_insurance_accepted = False`. Mapping results show SafetyWing Nomad and World Nomads Explorer as RED because they are classified as travel insurance.
-
-The UNKNOWN outcome here is not a “maybe yes” — it means the product documents we recorded do not contain enough evidence to classify the insurance type as health vs travel for this visa route. In an evidence-first workflow, missing proof is treated as unknown rather than inferred from branding or marketing.
-
-## Plain-English summary
-
-Germany’s freelance visa routes often expect health coverage equivalent to the statutory system, not travel-only coverage. VisaFact highlights verified evidence so you can see which requirements are confirmed and which remain UNKNOWN.
-
-If your policy documentation cannot demonstrate statutory equivalence, the application is at higher risk of rejection even if the insurer is reputable.
-
-When possible, request written confirmation from the insurer that maps coverage to statutory benefits.
-
-## Common pitfalls
-
-- Submitting travel insurance when long-stay health coverage is required. Mapping results show 2 out of 7 evaluated products are RED because they are classified as travel insurance.
-- Assuming a provider is accepted without route-specific evidence.
-
-For Germany’s national D visa routes, the rejection risk is often about category mismatch (travel vs health) rather than just coverage limit. That’s why this page anchors the rule to the authority statement in `sources/DE_HEALTH_INSURANCE_REQUIREMENTS_2026-01-15.html` and prioritizes documents that explicitly describe long-stay health coverage.
-
-## What to prepare
-
-- A policy document describing benefits comparable to statutory coverage.
-- Confirmation of coverage for inpatient/outpatient care and repatriation.
-- Any authority-specific checklist items from the embassy route.
-If your insurer provides a one-page confirmation letter, include language that clearly distinguishes health insurance from travel insurance (and references long-stay/national visa coverage where applicable). This helps align what you submit with what the authority describes for D visa applicants.
-Keep a short, written confirmation from the insurer in case the consulate asks for proof.
+UNKNOWN is a signal to request clearer documentation, not a hint that the policy will be accepted. The goal is to keep the result tied to the authority wording and the evidence we can actually verify.
 
 ## Related reading
 
 - [Germany freelance visa requirements (route page)](/visas/germany/freelance-visa-national-d/embassy-london/)
-- [How to read compliance results](/guides/how-to-read-results/)
+- [Germany travel insurance rejected](/traps/germany-travel-insurance-rejected/)
+- [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
+- [How to choose DNV insurance](/guides/how-to-choose-dnv-insurance/)
+
+## Disclaimer + Affiliate disclosure
+
+Not legal advice. Compliance results are evidence-based snapshots.
+
+If an affiliate link is present, it appears only after results and does not change the compliance outcome.
+
+Last updated: 2026-02-05
 
 ## Evidence log
 
 - Source: DE_D_VISA_HEALTH_INSURANCE_2026
-
-## Disclaimer
-
-Not legal advice. Compliance results are evidence-based snapshots.
-
-## Affiliate disclosure
-
-If a link is shown after results, it does not influence the evidence-based outcome.
