@@ -315,7 +315,9 @@ def compute_freshness(raw_item: Dict[str, Any], run_date: str) -> int:
     return 10
 
 
-def build_search_query(config: Dict[str, Any], run_date: str) -> str:
+def build_search_query(
+    config: Dict[str, Any], run_date: str, template_offset: int = 0
+) -> str:
     templates = config.get("query_templates", [])
     if not templates:
         return "visa insurance requirements"
@@ -325,7 +327,7 @@ def build_search_query(config: Dict[str, Any], run_date: str) -> str:
         run_dt = datetime.now(timezone.utc)
     weekday_key = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"][run_dt.weekday()]
     topic_hint = str(config.get("rotation", {}).get(weekday_key, "insurance"))
-    template = templates[run_dt.toordinal() % len(templates)]
+    template = templates[(run_dt.toordinal() + int(template_offset)) % len(templates)]
     values = {
         "country": "spain",
         "visa_type": topic_hint.replace("_", " "),
@@ -471,6 +473,57 @@ def sort_candidates(items: List[Dict[str, Any]], config: Dict[str, Any]) -> None
         return tuple(key_parts)
 
     items.sort(key=key_for)
+
+
+def normalize_content_post_path(post_path: Path) -> str:
+    repo_root = Path(__file__).resolve().parent.parent
+    post_posix = post_path.as_posix()
+    if post_path.is_absolute():
+        try:
+            rel = post_path.resolve().relative_to(repo_root.resolve())
+            rel_posix = rel.as_posix()
+            if rel_posix.startswith("content/posts/"):
+                return rel_posix
+        except Exception:
+            pass
+    if post_posix.startswith("content/posts/"):
+        return post_posix
+    marker = "content/posts/"
+    idx = post_posix.find(marker)
+    if idx >= 0:
+        return post_posix[idx:]
+    return ""
+
+
+def upsert_editorial_target(
+    post_path: Path, config: Dict[str, Any], targets_path: Path
+) -> Tuple[bool, str]:
+    rel_path = normalize_content_post_path(post_path)
+    if not rel_path:
+        return (True, "skipped_non_content_post")
+
+    exclusions = config.get("post", {}).get("editorial_target_exclusions", [])
+    if rel_path in exclusions:
+        return (True, "skipped_excluded")
+
+    targets = read_json(targets_path, {})
+    if not isinstance(targets, dict):
+        return (False, "invalid_editorial_targets_format")
+
+    wc_range = config.get("post", {}).get("word_count_range", [900, 1200])
+    if not isinstance(wc_range, list) or len(wc_range) < 2:
+        return (False, "invalid_word_count_range")
+    min_wc = int(wc_range[0])
+    max_wc = int(wc_range[1])
+
+    current = targets.get(rel_path)
+    if isinstance(current, list) and len(current) >= 2:
+        if int(current[0]) == min_wc and int(current[1]) == max_wc:
+            return (True, "already_present")
+
+    targets[rel_path] = [min_wc, max_wc]
+    atomic_json_write(targets_path, targets)
+    return (True, "updated")
 
 
 def resolve_llm_runtime(config: Dict[str, Any]) -> Dict[str, str]:
@@ -658,17 +711,25 @@ def cmd_select(args: argparse.Namespace) -> int:
         existing_tokens |= set(item.get("intent_tokens", []))
 
     selected = None
+    counters = {
+        "below_threshold": 0,
+        "already_seen": 0,
+        "low_novelty": 0,
+    }
     for cand in candidates:
         if int(cand.get("credibility_score", 0)) < threshold:
+            counters["below_threshold"] += 1
             continue
         key = compute_topic_key(cand)
         if key in seen_keys:
+            counters["already_seen"] += 1
             continue
         score = jaccard(
             tokenize(cand.get("title", "") + " " + cand.get("link", "")),
             existing_tokens,
         )
         if score >= dedup_threshold:
+            counters["low_novelty"] += 1
             continue
         cand["topic_key"] = key
         selected = cand
@@ -676,11 +737,25 @@ def cmd_select(args: argparse.Namespace) -> int:
 
     if not selected:
         atomic_json_write(
-            Path(args.output), {"status": "SKIP_NO_CANDIDATE", "selected": None}
+            Path(args.output),
+            {
+                "status": "SKIP_NO_CANDIDATE",
+                "selected": None,
+                "reason": "no_viable_candidate",
+                "stats": counters,
+            },
         )
         return 0
 
-    atomic_json_write(Path(args.output), {"status": "PASS", "selected": selected})
+    atomic_json_write(
+        Path(args.output),
+        {
+            "status": "PASS",
+            "selected": selected,
+            "reason": "primary",
+            "stats": counters,
+        },
+    )
     return 0
 
 
@@ -896,7 +971,9 @@ def cmd_run(args: argparse.Namespace) -> int:
 
     index_out = run_dir / "index.json"
     candidates_out = run_dir / "candidates.json"
+    candidates_fallback_out = run_dir / "candidates_fallback.json"
     selected_out = run_dir / "selected.json"
+    selected_fallback_out = run_dir / "selected_fallback.json"
     evidence_out = run_dir / "evidence.md"
     claim_map_out = run_dir / "claim_map.json"
     if args.output_post:
@@ -966,18 +1043,52 @@ def cmd_run(args: argparse.Namespace) -> int:
     manifest["steps"].append({"step": "select", "rc": rc})
     selected_json = read_json(selected_out, {"status": "FAIL"})
     if selected_json.get("status") != "PASS":
-        status = selected_json.get("status", "SKIP_NO_CANDIDATE")
-        manifest["status"] = status
-        atomic_json_write(manifest_path, manifest)
-        cmd_update_status(
+        fallback_search_rc = cmd_search(
             argparse.Namespace(
-                state_file=str(state_dir / "run-status.json"),
+                input_json=(
+                    args.search_fallback_input_json
+                    if args.search_fallback_input_json
+                    else args.search_input_json
+                ),
+                output=str(candidates_fallback_out),
+                query=build_search_query(config, args.date, template_offset=1),
                 date=args.date,
-                status=status,
-                reason="select",
+                state_dir=str(state_dir),
+                config=args.config,
             )
         )
-        return 0
+        manifest["steps"].append({"step": "search_fallback", "rc": fallback_search_rc})
+        fallback_select_rc = cmd_select(
+            argparse.Namespace(
+                index=str(index_out),
+                candidates=str(candidates_fallback_out),
+                output=str(selected_fallback_out),
+                state_dir=str(state_dir),
+                config=args.config,
+            )
+        )
+        manifest["steps"].append({"step": "select_fallback", "rc": fallback_select_rc})
+        fallback_selected_json = read_json(selected_fallback_out, {"status": "FAIL"})
+        if fallback_selected_json.get("status") == "PASS":
+            fallback_selected_json["selection_mode"] = "fallback_query"
+            atomic_json_write(selected_out, fallback_selected_json)
+            selected_json = fallback_selected_json
+        else:
+            status = "SKIP_NO_CANDIDATE_FALLBACK"
+            manifest["status"] = status
+            manifest["select_reason"] = fallback_selected_json.get(
+                "reason", "fallback_unavailable"
+            )
+            atomic_json_write(manifest_path, manifest)
+            cmd_update_status(
+                argparse.Namespace(
+                    state_file=str(state_dir / "run-status.json"),
+                    date=args.date,
+                    status=status,
+                    reason="select_fallback",
+                )
+            )
+            return 0
 
     if not args.output_post:
         post_out = build_post_path(args.date, selected_json.get("selected", {}), config)
@@ -1023,23 +1134,34 @@ def cmd_run(args: argparse.Namespace) -> int:
         )
         return 1
 
-    rc = cmd_write(
-        argparse.Namespace(
-            evidence=str(evidence_out),
-            claim_map=str(claim_map_out),
-            output=str(post_out),
-            date=args.date,
-            config=args.config,
-            dry_run=effective_dry_run,
-            fixture=args.draft_fixture,
-            allow_existing_output=True,
-            budget_file=str(run_dir / "llm_usage.json"),
-            front_matter_schema="tools/schemas/daily_front_matter.schema.json",
+    write_retries = int(config.get("llm", {}).get("write_retries", 2))
+    rc = 1
+    write_attempts = 0
+    for attempt in range(1, write_retries + 2):
+        write_attempts = attempt
+        rc = cmd_write(
+            argparse.Namespace(
+                evidence=str(evidence_out),
+                claim_map=str(claim_map_out),
+                output=str(post_out),
+                date=args.date,
+                config=args.config,
+                dry_run=effective_dry_run,
+                fixture=args.draft_fixture,
+                allow_existing_output=True,
+                budget_file=str(run_dir / "llm_usage.json"),
+                front_matter_schema="tools/schemas/daily_front_matter.schema.json",
+            )
         )
-    )
-    manifest["steps"].append({"step": "write", "rc": rc})
+        manifest["steps"].append({"step": "write", "rc": rc, "attempt": attempt})
+        if rc == 0:
+            break
+        if rc not in {4, 5, 6, 7, 8, 11, 12}:
+            break
+    manifest["write_attempts"] = write_attempts
     if rc != 0:
         manifest["status"] = "FAIL"
+        manifest["write_failure_rc"] = rc
         atomic_json_write(manifest_path, manifest)
         cmd_update_status(
             argparse.Namespace(
@@ -1047,6 +1169,29 @@ def cmd_run(args: argparse.Namespace) -> int:
                 date=args.date,
                 status="FAIL",
                 reason="write",
+            )
+        )
+        return 1
+
+    ok_target, target_reason = upsert_editorial_target(
+        post_out, config, Path(args.editorial_targets_path)
+    )
+    manifest["steps"].append(
+        {
+            "step": "editorial_target",
+            "rc": 0 if ok_target else 1,
+            "reason": target_reason,
+        }
+    )
+    if not ok_target:
+        manifest["status"] = "FAIL"
+        atomic_json_write(manifest_path, manifest)
+        cmd_update_status(
+            argparse.Namespace(
+                state_file=str(state_dir / "run-status.json"),
+                date=args.date,
+                status="FAIL",
+                reason="editorial_target",
             )
         )
         return 1
@@ -1163,9 +1308,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--runs-dir", default="docs/ops/daily-auto-blog/runs")
     p.add_argument("--sitemap", required=True)
     p.add_argument("--search-input-json")
+    p.add_argument("--search-fallback-input-json")
     p.add_argument("--draft-fixture")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--output-post")
+    p.add_argument("--editorial-targets-path", default="tools/editorial_targets.json")
     p.set_defaults(func=cmd_run)
     return parser
 

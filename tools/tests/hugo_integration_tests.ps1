@@ -37,6 +37,24 @@ Assert-True (Test-Path "content/disclaimer/_index.md") "disclaimer section exist
 Assert-True (Test-Path "content/affiliate-disclosure/_index.md") "affiliate disclosure section exists"
 Assert-True (Test-Path "content/posts/hello.md") "hello post exists"
 
+Write-Host "Structured data checks..." -ForegroundColor Cyan
+$schemaTemplate = "layouts/partials/templates/schema_json.html"
+Assert-True (Test-Path $schemaTemplate) "schema_json template exists"
+if (Test-Path $schemaTemplate) {
+  $schemaText = Get-Content -Raw -Path $schemaTemplate
+  Assert-True ($schemaText -match '"@type"\s*"FAQPage"') "FAQPage schema is defined"
+  Assert-True ($schemaText -match '\.Params\.faq') "FAQ schema reads front matter faq"
+  Assert-True ($schemaText -match 'if and \.question \.answer') "FAQ schema validates question and answer"
+}
+
+$faqPost = "content/posts/portugal-dnv-insurance.md"
+Assert-True (Test-Path $faqPost) "reference FAQ post exists"
+if (Test-Path $faqPost) {
+  $faqText = Get-Content -Raw -Path $faqPost
+  Assert-True ($faqText -match '(?m)^faq:' ) "reference post has faq front matter"
+  Assert-True ($faqText -match '## FAQ') "reference post has visible FAQ section"
+}
+
 Write-Host "Static sync checks..." -ForegroundColor Cyan
 if (Test-Path "tools/sync_hugo_static.py") {
   $sync = Start-Process -FilePath $python -ArgumentList "tools/sync_hugo_static.py" -Wait -PassThru

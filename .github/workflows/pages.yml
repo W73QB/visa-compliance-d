@@ -86,6 +86,7 @@ jobs:
           pwsh -File tools/tests/offers_tests.ps1
           pwsh -File tools/tests/content_lint_tests.ps1
           pwsh -File tools/tests/seo_audit_tests.ps1
+          pwsh -File tools/tests/internal_link_integrity_tests.ps1
           pwsh -File tools/tests/source_monitor_tests.ps1
           pwsh -File tools/tests/hugo_integration_tests.ps1
           pwsh -File tools/tests/sync_hugo_static_tests.ps1
@@ -100,6 +101,15 @@ jobs:
 
       - name: Lint content
         run: python tools/lint_content.py
+
+      - name: Check editorial targets
+        run: python tools/check_editorial_targets.py
+
+      - name: Run SEO audit gate
+        run: python tools/seo_audit.py --config tools/seo_thresholds.json
+
+      - name: Check internal links
+        run: python tools/check_internal_links.py
 
       - name: Build Hugo (with log)
         run: pwsh -File tools/build_hugo.ps1

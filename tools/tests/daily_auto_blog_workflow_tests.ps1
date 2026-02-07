@@ -36,6 +36,10 @@ if (Test-Path $wfPath) {
   Assert-True ($wf -match "--runs-dir docs/ops/daily-auto-blog/runs") "run command uses explicit runs-dir"
   Assert-True ($wf -match "continue-on-error:\s*true") "pipeline step continues on error"
   Assert-True ($wf -match "daily_auto_blog.py update-status") "workflow persists status explicitly"
+  Assert-True ($wf -match "Detect stale snapshot links") "workflow checks stale snapshots"
+  Assert-True ($wf -match "stale_snapshots") "workflow exports stale snapshot metric"
+  Assert-True ($wf -match "Detect aging draft PRs") "workflow checks aging draft PRs"
+  Assert-True ($wf -match "aged_prs") "workflow exports draft PR aging metric"
 }
 
 if ($failed) {

@@ -205,6 +205,53 @@ $manifestUnknownObj = Get-Content -Raw -Path $manifestUnknown | ConvertFrom-Json
 Assert-True ($manifestUnknownObj.status -eq "SKIP_NO_VERIFIED_EVIDENCE") "run skips when no verified evidence"
 Assert-True (-not (Test-Path $runUnknownPost)) "run skip does not write post"
 
+# --- Fallback search path ---
+$searchPrimaryLow = Join-Path $tmp "search-primary-low.json"
+Set-Content -Path $searchPrimaryLow -Encoding UTF8 -Value '{"items":[{"title":"Low trust","link":"https://example.com","snippet":"x","source_host":"example.com","credibility_score":10,"freshness":0}]}'
+$searchFallbackGood = Join-Path $tmp "search-fallback-good.json"
+Set-Content -Path $searchFallbackGood -Encoding UTF8 -Value '{"items":[{"title":"Spain DNV insurance checklist","link":"https://www.vfsglobal.com","snippet":"x","source_host":"www.vfsglobal.com","credibility_score":100,"freshness":80}]}'
+$runFallbackPost = Join-Path $tmp "fallback-post.md"
+$runFallbackProc = Start-Process -FilePath $python -ArgumentList @("tools/daily_auto_blog.py", "run", "--date", "2026-02-09", "--config", $configPath, "--state-dir", $tmp, "--runs-dir", $runsDir, "--sitemap", $sitemap, "--search-input-json", $searchPrimaryLow, "--search-fallback-input-json", $searchFallbackGood, "--dry-run", "--draft-fixture", $draftFixture, "--output-post", $runFallbackPost) -WorkingDirectory $root -Wait -PassThru
+Assert-True ($runFallbackProc.ExitCode -eq 0) "run fallback query exits 0"
+$manifestFallback = Join-Path $runsDir "2026-02-09/run_manifest.json"
+$manifestFallbackObj = Get-Content -Raw -Path $manifestFallback | ConvertFrom-Json
+Assert-True ($manifestFallbackObj.status -eq "PASS") "fallback run status PASS"
+$selectedFallbackPath = Join-Path $runsDir "2026-02-09/selected.json"
+$selectedFallbackObj = Get-Content -Raw -Path $selectedFallbackPath | ConvertFrom-Json
+Assert-True ($selectedFallbackObj.selection_mode -eq "fallback_query") "fallback selection mode is recorded"
+
+# --- Write retry loop diagnostics ---
+$retryState = Join-Path $tmp "retry-state"
+$retryRuns = Join-Path $tmp "retry-runs"
+New-Item -ItemType Directory -Path $retryState -Force | Out-Null
+$searchRetry = Join-Path $tmp "search-retry.json"
+Set-Content -Path $searchRetry -Encoding UTF8 -Value '{"items":[{"title":"Retry specific topic","link":"https://www.vfsglobal.com/retry","snippet":"x","source_host":"www.vfsglobal.com","credibility_score":100,"freshness":80}]}'
+$badWriteFixture = Join-Path $tmp "draft-bad-write.md"
+Set-Content -Path $badWriteFixture -Encoding UTF8 -Value "---`ntitle: bad`ndate: '2026-02-10'`ndescription: bad`ntags: [x]`nfaq:`n  - question: q`n    answer: a`n---`nno required blocks"
+$runRetryPost = Join-Path $tmp "retry-fail-post.md"
+$runRetryProc = Start-Process -FilePath $python -ArgumentList @("tools/daily_auto_blog.py", "run", "--date", "2026-02-10", "--config", $configPath, "--state-dir", $retryState, "--runs-dir", $retryRuns, "--sitemap", $sitemap, "--search-input-json", $searchRetry, "--dry-run", "--draft-fixture", $badWriteFixture, "--output-post", $runRetryPost) -WorkingDirectory $root -Wait -PassThru
+Assert-True ($runRetryProc.ExitCode -ne 0) "run fails when write output is invalid"
+$manifestRetry = Join-Path $retryRuns "2026-02-10/run_manifest.json"
+$manifestRetryObj = Get-Content -Raw -Path $manifestRetry | ConvertFrom-Json
+Assert-True ($manifestRetryObj.status -eq "FAIL") "retry run status FAIL"
+Assert-True ($manifestRetryObj.write_attempts -ge 2) "retry loop records multiple attempts"
+Assert-True ($null -ne $manifestRetryObj.write_failure_rc) "retry loop stores failure rc"
+
+# --- Editorial target auto-registration ---
+$editorialState = Join-Path $tmp "editorial-state"
+$editorialRuns = Join-Path $tmp "editorial-runs"
+New-Item -ItemType Directory -Path $editorialState -Force | Out-Null
+$searchEditorial = Join-Path $tmp "search-editorial.json"
+Set-Content -Path $searchEditorial -Encoding UTF8 -Value '{"items":[{"title":"Editorial target topic","link":"https://www.vfsglobal.com/editorial","snippet":"x","source_host":"www.vfsglobal.com","credibility_score":100,"freshness":80}]}'
+$editorialTargetsTmp = Join-Path $tmp "editorial_targets.json"
+Set-Content -Path $editorialTargetsTmp -Encoding UTF8 -Value '{}'
+$runEditorialPost = Join-Path $tmp "content/posts/editorial-auto-test.md"
+New-Item -ItemType Directory -Path (Join-Path $tmp "content/posts") -Force | Out-Null
+$runEditorialProc = Start-Process -FilePath $python -ArgumentList @("tools/daily_auto_blog.py", "run", "--date", "2026-02-11", "--config", $configPath, "--state-dir", $editorialState, "--runs-dir", $editorialRuns, "--sitemap", $sitemap, "--search-input-json", $searchEditorial, "--dry-run", "--draft-fixture", $draftFixture, "--output-post", $runEditorialPost, "--editorial-targets-path", $editorialTargetsTmp) -WorkingDirectory $root -Wait -PassThru
+Assert-True ($runEditorialProc.ExitCode -eq 0) "run with editorial target registration exits 0"
+$editorialTargetsObj = Get-Content -Raw -Path $editorialTargetsTmp | ConvertFrom-Json
+Assert-True ($null -ne $editorialTargetsObj."content/posts/editorial-auto-test.md") "editorial target entry auto-registered"
+
 if (Test-Path $tmp) { Remove-Item -LiteralPath $tmp -Recurse -Force }
 
 if ($failed) {

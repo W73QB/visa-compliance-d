@@ -52,6 +52,7 @@
     "provider": "nvidia",
     "base_url": "https://integrate.api.nvidia.com/v1/chat/completions",
     "model": "meta/llama-3.1-70b-instruct",
+    "write_retries": 2,
     "max_tokens": 1800,
     "per_run_budget": 6000
   }

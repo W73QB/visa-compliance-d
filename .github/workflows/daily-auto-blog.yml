@@ -104,8 +104,73 @@ jobs:
             out.write(f'alert={str(non_pass).lower()}\n')
           PY
 
+      - name: Detect stale snapshot links
+        id: stale
+        run: |
+          python - <<'PY'
+          import datetime
+          import os
+          import re
+          from pathlib import Path
+
+          today = datetime.datetime.utcnow().date()
+          stale = 0
+          for path in Path('content/posts').glob('*.md'):
+              text = path.read_text(encoding='utf-8')
+              for token in re.findall(r"snapshot=releases/(\d{4}-\d{2}-\d{2})", text):
+                  try:
+                      snap = datetime.datetime.strptime(token, '%Y-%m-%d').date()
+                  except Exception:
+                      continue
+                  if (today - snap).days > 30:
+                      stale += 1
+                      break
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write(f'stale_snapshots={stale}\n')
+          PY
+
+      - name: Detect aging draft PRs
+        id: pr_aging
+        run: |
+          python - <<'PY'
+          import datetime
+          import json
+          import os
+          import subprocess
+
+          cmd = [
+              'gh', 'api', f"repos/{os.environ['GITHUB_REPOSITORY']}/pulls",
+              '--jq', '[.[] | select(.state=="open" and (.head.ref|startswith("auto/daily-blog/"))) | {created_at: .created_at}]'
+          ]
+          aged = 0
+          now = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc)
+          try:
+              proc = subprocess.run(cmd, check=True, capture_output=True, text=True)
+              items = json.loads(proc.stdout or '[]')
+              for item in items:
+                  created = datetime.datetime.strptime(item.get('created_at', ''), '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=datetime.timezone.utc)
+                  if (now - created).days >= 3:
+                      aged += 1
+          except Exception:
+              aged = 0
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write(f'aged_prs={aged}\n')
+          PY
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Append monitoring summary
+        run: |
+          python - <<'PY'
+          stale = '${{ steps.stale.outputs.stale_snapshots }}'
+          aged = '${{ steps.pr_aging.outputs.aged_prs }}'
+          with open('tools/daily_auto_blog_issue.md', 'a', encoding='utf-8') as out:
+              out.write(f"\nStale snapshot posts (>30d): **{stale}**\n")
+              out.write(f"Aging auto-blog draft PRs (>=3d): **{aged}**\n")
+          PY
+
       - name: Open issue on consecutive non-pass
-        if: steps.streak.outputs.alert == 'true'
+        if: steps.streak.outputs.alert == 'true' || steps.stale.outputs.stale_snapshots != '0' || steps.pr_aging.outputs.aged_prs != '0'
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: "Daily auto blog non-pass run"
