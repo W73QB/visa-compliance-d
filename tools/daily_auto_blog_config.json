@@ -1,0 +1,58 @@
+{
+  "sitemap_url": "https://visafact.org/sitemap.xml",
+  "rotation": {
+    "mon": "route_update",
+    "tue": "trap",
+    "wed": "product_fact",
+    "thu": "comparison",
+    "fri": "proof_wording",
+    "sat": "faq_hub",
+    "sun": "update_digest"
+  },
+  "query_templates": [
+    "{country} digital nomad visa insurance requirements",
+    "{country} visa insurance proof wording",
+    "{country} visa insurance checklist pdf",
+    "{country} visa insurance deductible co-payment"
+  ],
+  "cse_quota": {
+    "daily_query_cap": 100,
+    "cross_day_cache": true
+  },
+  "source_scoring": {
+    "allow_suffixes": [
+      ".gov",
+      ".gov.uk",
+      ".europa.eu",
+      ".gob.es",
+      ".admin.ch"
+    ],
+    "allow_hosts": [
+      "www.vfsglobal.com",
+      "www.blsspainvisa.com"
+    ],
+    "threshold": 50
+  },
+  "dedup": {
+    "jaccard_threshold": 0.55,
+    "min_novelty_score": 0.45
+  },
+  "selection_ranking": "credibility_score,freshness,title",
+  "publish_mode": "pr",
+  "timezone": "UTC",
+  "post": {
+    "format": "flat",
+    "slug_template": "{country}-{visa_type}-{topic_slug}",
+    "word_count_range": [
+      900,
+      1200
+    ]
+  },
+  "llm": {
+    "provider": "nvidia",
+    "base_url": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "model": "meta/llama-3.1-70b-instruct",
+    "max_tokens": 1800,
+    "per_run_budget": 6000
+  }
+}

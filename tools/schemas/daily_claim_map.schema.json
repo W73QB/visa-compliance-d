@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "date",
+    "claims"
+  ],
+  "properties": {
+    "date": {
+      "type": "string"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_text",
+          "requirement_id",
+          "source_id",
+          "source_url",
+          "locator",
+          "verification_status",
+          "verification_date",
+          "authority_level"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "claim_text": {
+            "type": "string"
+          },
+          "requirement_id": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "verification_status": {
+            "type": "string",
+            "enum": [
+              "VERIFIED",
+              "UNKNOWN"
+            ]
+          },
+          "verification_date": {
+            "type": "string"
+          },
+          "authority_level": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
