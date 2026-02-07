@@ -33,7 +33,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install python deps
-        run: pip install jsonschema
+        run: pip install jsonschema pyyaml
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -94,6 +94,9 @@ jobs:
           pwsh -File tools/tests/analytics_tests.ps1
           pwsh -File tools/tests/smoke_tests.ps1
           pwsh -File tools/tests/performance_tests.ps1
+          pwsh -File tools/tests/daily_auto_blog_tests.ps1
+          pwsh -File tools/tests/daily_auto_blog_workflow_tests.ps1
+          pwsh -File tools/tests/daily_auto_blog_e2e_tests.ps1
 
       - name: Lint content
         run: python tools/lint_content.py
