@@ -1,0 +1,193 @@
+name: Daily Auto Blog
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-auto-blog
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install python deps
+        run: pip install jsonschema pyyaml
+
+      - name: Compute UTC date
+        id: day
+        run: echo "value=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore quota cache
+        uses: actions/cache@v4
+        with:
+          path: docs/ops/daily-auto-blog/state/quota_usage.json
+          key: daily-auto-blog-quota-${{ steps.day.outputs.value }}
+          restore-keys: |
+            daily-auto-blog-quota-
+
+      - name: Restore run status cache
+        uses: actions/cache@v4
+        with:
+          path: docs/ops/daily-auto-blog/state/run-status.json
+          key: daily-auto-blog-status
+          restore-keys: |
+            daily-auto-blog-status
+
+      - name: Build pending topics from open PRs
+        run: |
+          mkdir -p docs/ops/daily-auto-blog/state
+          gh api repos/${{ github.repository }}/pulls --jq '[.[] | select(.state=="open" and (.head.ref|startswith("auto/daily-blog/"))) | .head.ref] | {topics: .}' > docs/ops/daily-auto-blog/state/pending_topics.json || echo '{"topics":[]}' > docs/ops/daily-auto-blog/state/pending_topics.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Run daily pipeline
+        continue-on-error: true
+        run: |
+          python tools/daily_auto_blog.py run \
+            --date ${{ steps.day.outputs.value }} \
+            --config tools/daily_auto_blog_config.json \
+            --state-dir docs/ops/daily-auto-blog/state \
+            --runs-dir docs/ops/daily-auto-blog/runs \
+            --sitemap https://visafact.org/sitemap.xml \
+            --draft-fixture tools/tests/fixtures/daily_auto_blog/draft.md
+
+      - name: Determine run status
+        id: status
+        run: |
+          python - <<'PY'
+          import json, os, datetime
+          d = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+          path = f'docs/ops/daily-auto-blog/runs/{d}/run_manifest.json'
+          status = 'FAIL'
+          if os.path.exists(path):
+              with open(path, 'r', encoding='utf-8') as f:
+                  status = json.load(f).get('status', 'FAIL')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write(f'status={status}\n')
+          with open('tools/daily_auto_blog_issue.md', 'w', encoding='utf-8') as out:
+              out.write(f'# Daily auto blog status\n\nLatest status: **{status}**\n')
+          PY
+
+      - name: Persist run status
+        run: |
+          python tools/daily_auto_blog.py update-status \
+            --state-file docs/ops/daily-auto-blog/state/run-status.json \
+            --date ${{ steps.day.outputs.value }} \
+            --status ${{ steps.status.outputs.status }} \
+            --reason workflow
+
+      - name: Detect consecutive non-pass
+        id: streak
+        run: |
+          python - <<'PY'
+          import json, os
+          path = 'docs/ops/daily-auto-blog/state/run-status.json'
+          data = []
+          if os.path.exists(path):
+            with open(path, 'r', encoding='utf-8') as f:
+              data = json.load(f)
+          tail = data[-2:] if len(data) >= 2 else data
+          non_pass = len(tail) >= 2 and all(x.get('status') != 'PASS' for x in tail)
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+            out.write(f'alert={str(non_pass).lower()}\n')
+          PY
+
+      - name: Detect stale snapshot links
+        id: stale
+        run: |
+          python - <<'PY'
+          import datetime
+          import os
+          import re
+          from pathlib import Path
+
+          today = datetime.datetime.utcnow().date()
+          stale = 0
+          for path in Path('content/posts').glob('*.md'):
+              text = path.read_text(encoding='utf-8')
+              for token in re.findall(r"snapshot=releases/(\d{4}-\d{2}-\d{2})", text):
+                  try:
+                      snap = datetime.datetime.strptime(token, '%Y-%m-%d').date()
+                  except Exception:
+                      continue
+                  if (today - snap).days > 30:
+                      stale += 1
+                      break
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write(f'stale_snapshots={stale}\n')
+          PY
+
+      - name: Detect aging draft PRs
+        id: pr_aging
+        run: |
+          python - <<'PY'
+          import datetime
+          import json
+          import os
+          import subprocess
+
+          cmd = [
+              'gh', 'api', f"repos/{os.environ['GITHUB_REPOSITORY']}/pulls",
+              '--jq', '[.[] | select(.state=="open" and (.head.ref|startswith("auto/daily-blog/"))) | {created_at: .created_at}]'
+          ]
+          aged = 0
+          now = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc)
+          try:
+              proc = subprocess.run(cmd, check=True, capture_output=True, text=True)
+              items = json.loads(proc.stdout or '[]')
+              for item in items:
+                  created = datetime.datetime.strptime(item.get('created_at', ''), '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=datetime.timezone.utc)
+                  if (now - created).days >= 3:
+                      aged += 1
+          except Exception:
+              aged = 0
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write(f'aged_prs={aged}\n')
+          PY
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Append monitoring summary
+        run: |
+          python - <<'PY'
+          stale = '${{ steps.stale.outputs.stale_snapshots }}'
+          aged = '${{ steps.pr_aging.outputs.aged_prs }}'
+          with open('tools/daily_auto_blog_issue.md', 'a', encoding='utf-8') as out:
+              out.write(f"\nStale snapshot posts (>30d): **{stale}**\n")
+              out.write(f"Aging auto-blog draft PRs (>=3d): **{aged}**\n")
+          PY
+
+      - name: Open issue on consecutive non-pass
+        if: steps.streak.outputs.alert == 'true' || steps.stale.outputs.stale_snapshots != '0' || steps.pr_aging.outputs.aged_prs != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Daily auto blog non-pass run"
+          content-filepath: tools/daily_auto_blog_issue.md
+          labels: needs-review
+
+      - name: Open draft PR on pass
+        if: steps.status.outputs.status == 'PASS'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: daily auto blog draft"
+          title: "chore: daily auto blog draft"
+          body: "Automated daily auto blog draft."
+          branch: auto/daily-blog/${{ steps.day.outputs.value }}
+          draft: true
+          add-paths: |
+            content/posts/**
+            docs/ops/daily-auto-blog/state/seen_topics.json
+            docs/ops/daily-auto-blog/state/run-status.json
+            docs/ops/daily-auto-blog/runs/**
