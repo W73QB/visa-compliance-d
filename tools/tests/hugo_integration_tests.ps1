@@ -23,6 +23,8 @@ if (Test-Path "hugo.toml") {
   $hugo = Get-Content -Raw -Path "hugo.toml"
   Assert-True ($hugo -like "*https://visafact.org/*") "baseURL is set to visafact.org"
   Assert-True ($hugo -like '*theme = "PaperMod"*') "theme is PaperMod"
+  Assert-True ($hugo -like '*enableRobotsTXT = true*') "robots.txt generation enabled"
+  Assert-True ($hugo -like '*canonifyURLs = true*') "canonical URLs enabled"
   Assert-True ($hugo -like '*name = "Checker"*') "menu includes Checker"
   Assert-True ($hugo -like '*url = "ui/"*') "checker menu uses relative url"
   Assert-True ($hugo -like '*pageRef = "posts"*') "menu uses pageRef for posts"
@@ -36,6 +38,21 @@ Assert-True (Test-Path "content/methodology/_index.md") "methodology section exi
 Assert-True (Test-Path "content/disclaimer/_index.md") "disclaimer section exists"
 Assert-True (Test-Path "content/affiliate-disclosure/_index.md") "affiliate disclosure section exists"
 Assert-True (Test-Path "content/posts/hello.md") "hello post exists"
+
+Write-Host "Indexability checks..." -ForegroundColor Cyan
+$keyContent = @(
+  "content/posts/spain-dnv-insurance/index.md",
+  "content/posts/germany-freelance-insurance.md",
+  "content/posts/thailand-dtv-insurance.md",
+  "content/visas/spain/digital-nomad-visa/consulate-via-bls-london/index.md"
+)
+foreach ($p in $keyContent) {
+  Assert-True (Test-Path $p) "$p exists"
+  if (Test-Path $p) {
+    $raw = Get-Content -Raw -Path $p
+    Assert-True (-not ($raw -match '(?m)^robots:\s*noindex')) "$p is not marked noindex"
+  }
+}
 
 Write-Host "Structured data checks..." -ForegroundColor Cyan
 $schemaTemplate = "layouts/partials/templates/schema_json.html"

@@ -7,6 +7,7 @@
 - Confirm https://visafact.org/robots.txt is reachable and does not block key paths.
 - Confirm sitemap is reachable and submitted in GSC.
 - In GSC, check "Pages" report for spikes in Not indexed / Crawled - currently not indexed.
+- In GSC, check "Enhancements" for breadcrumb or unparsable structured data issues; treat these as rich-result blockers first, then validate indexing separately via URL Inspection.
 
 ## URL inspection (per key page)
 Run for each:
