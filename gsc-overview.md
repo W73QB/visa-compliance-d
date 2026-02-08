@@ -1,0 +1,281 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - button "Trình đơn chính" [ref=e7] [cursor=pointer]:
+          - img [ref=e8]
+        - link "Google Search Console" [ref=e12] [cursor=pointer]:
+          - /url: ./search-console?resource_id=sc-domain%3Avisafact.org
+          - img [ref=e13]
+      - generic [ref=e14]:
+        - search [ref=e16]:
+          - generic [ref=e22]:
+            - textbox [disabled] [ref=e23]: Kiểm tra mọi URL trong "visafact.org"
+            - combobox "Kiểm tra mọi URL trong visafact.org" [ref=e24]
+          - button "Tìm kiếm" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+        - generic [ref=e29]:
+          - generic [ref=e31]:
+            - button "Trợ giúp" [ref=e33] [cursor=pointer]:
+              - generic [ref=e36]: 
+            - button "Cài đặt người dùng" [ref=e38] [cursor=pointer]:
+              - img [ref=e41]
+          - button "Thông báo" [ref=e45] [cursor=pointer]:
+            - generic [ref=e48]: 
+      - generic [ref=e50]:
+        - button "Các ứng dụng của Google" [ref=e54] [cursor=pointer]:
+          - img [ref=e55]
+        - 'button "Tài khoản Google: Hoang Giang (hoanggiangwqb@gmail.com)" [ref=e60] [cursor=pointer]':
+          - img [ref=e62]
+  - dialog "navigational drawer" [ref=e66]:
+    - navigation "Chính" [ref=e69]:
+      - button "Tìm kiếm sản phẩm" [ref=e73] [cursor=pointer]:
+        - img [ref=e75]
+        - combobox "visafact.org" [ref=e82]
+        - generic [ref=e83]: 
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - link "Tổng quan" [ref=e88] [cursor=pointer]:
+              - /url: ./search-console?resource_id=sc-domain%3Avisafact.org
+              - generic [ref=e90]: 
+              - generic [ref=e92]: Tổng quan
+            - link "Thông tin chi tiết" [ref=e95] [cursor=pointer]:
+              - /url: ./search-console/performance/insights?resource_id=sc-domain%3Avisafact.org
+              - generic [ref=e98]: lightbulb_2
+              - generic [ref=e100]: Thông tin chi tiết
+            - link "Hiệu suất" [ref=e103] [cursor=pointer]:
+              - /url: ./search-console/performance/search-analytics?resource_id=sc-domain%3Avisafact.org
+              - generic [ref=e105]: 
+              - generic [ref=e107]: Hiệu suất
+            - button "Kiểm tra URL" [ref=e110] [cursor=pointer]:
+              - generic [ref=e112]: 
+              - generic [ref=e114]: Kiểm tra URL
+          - generic [ref=e118]:
+            - button "Phần báo cáo về Lập chỉ mục" [expanded] [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]:
+                - generic [ref=e123]: Lập chỉ mục
+                - img [ref=e127]
+            - generic [ref=e132]:
+              - link "Trang" [ref=e134] [cursor=pointer]:
+                - /url: ./search-console/index?resource_id=sc-domain%3Avisafact.org
+                - img [ref=e137]
+                - generic [ref=e147]: Trang
+              - link "Sơ đồ trang web" [ref=e150] [cursor=pointer]:
+                - /url: ./search-console/sitemaps?resource_id=sc-domain%3Avisafact.org
+                - img [ref=e153]
+                - generic [ref=e159]: Sơ đồ trang web
+              - link "Xóa URL" [ref=e162] [cursor=pointer]:
+                - /url: ./search-console/removals?resource_id=sc-domain%3Avisafact.org
+                - generic [ref=e164]: 
+                - generic [ref=e166]: Xóa URL
+          - generic [ref=e170]:
+            - button "Phần báo cáo về Trải nghiệm" [expanded] [ref=e171] [cursor=pointer]:
+              - generic [ref=e172]:
+                - generic [ref=e175]: Trải nghiệm
+                - img [ref=e179]
+            - generic [ref=e184]:
+              - link "Chỉ số quan trọng chính của trang web" [ref=e186] [cursor=pointer]:
+                - /url: ./search-console/core-web-vitals?resource_id=sc-domain%3Avisafact.org
+                - generic [ref=e188]: 
+                - generic [ref=e190]: Chỉ số quan trọng chính của trang web
+              - link "HTTPS" [ref=e193] [cursor=pointer]:
+                - /url: ./search-console/https?resource_id=sc-domain%3Avisafact.org
+                - img [ref=e196]
+                - generic [ref=e199]: HTTPS
+          - generic [ref=e203]:
+            - button "Phần báo cáo về Các tính năng nâng cao" [expanded] [ref=e204] [cursor=pointer]:
+              - generic [ref=e205]:
+                - generic [ref=e208]: Các tính năng nâng cao
+                - img [ref=e212]
+            - generic [ref=e217]:
+              - link "Đường dẫn" [ref=e219] [cursor=pointer]:
+                - /url: ./search-console/r/breadcrumbs?resource_id=sc-domain%3Avisafact.org
+                - img [ref=e222]
+                - generic [ref=e232]: Đường dẫn
+              - link "Không thể phân tích cú pháp dữ liệu có cấu trúc" [ref=e235] [cursor=pointer]:
+                - /url: ./search-console/r/unknown-type?resource_id=sc-domain%3Avisafact.org
+                - img [ref=e238]
+                - generic [ref=e248]: Không thể phân tích cú pháp dữ liệu có cấu trúc
+          - button "Phần báo cáo về Bảo mật và hình phạt thủ công" [ref=e253] [cursor=pointer]:
+            - generic [ref=e254]:
+              - generic [ref=e257]: Bảo mật và hình phạt thủ công
+              - img [ref=e261]
+          - generic [ref=e263]:
+            - link "Báo cáo đường liên kết" [ref=e265] [cursor=pointer]:
+              - /url: ./search-console/links?resource_id=sc-domain%3Avisafact.org
+              - img [ref=e268]
+              - generic [ref=e274]: Liên kết
+            - link "Thành tích" [ref=e277] [cursor=pointer]:
+              - /url: ./search-console/achievements?resource_id=sc-domain%3Avisafact.org
+              - generic [ref=e280]: trophy
+              - generic [ref=e282]: Thành tích
+            - link "Cài đặt" [ref=e285] [cursor=pointer]:
+              - /url: ./search-console/settings?resource_id=sc-domain%3Avisafact.org
+              - img [ref=e288]
+              - generic [ref=e296]: Cài đặt
+        - generic [ref=e298]:
+          - generic [ref=e300]:
+            - button "Gửi ý kiến phản hồi" [ref=e302] [cursor=pointer]:
+              - generic [ref=e304]: 
+              - generic [ref=e306]: Gửi ý kiến phản hồi
+            - button "Giới thiệu về Search Console" [ref=e309] [cursor=pointer]:
+              - generic [ref=e311]: 
+              - generic [ref=e313]: Giới thiệu về Search Console
+          - generic [ref=e317]:
+            - link "Bảo mật" [ref=e318] [cursor=pointer]:
+              - /url: https://myaccount.google.com/privacypolicy?hl=vi
+            - link "Điều khoản" [ref=e319] [cursor=pointer]:
+              - /url: https://myaccount.google.com/termsofservice?hl=vi
+  - generic [ref=e321]:
+    - navigation "Đường dẫn" [ref=e326]:
+      - heading "Tổng quan" [level=1] [ref=e329]
+    - main [ref=e333]:
+      - generic [ref=e334]:
+        - generic [ref=e339]:
+          - generic [ref=e340]:
+            - generic [ref=e341]: lightbulb_outline
+            - generic [ref=e342]: Xem thông tin chi tiết về hiệu suất của trang web trên Tìm kiếm
+          - generic [ref=e345]:
+            - generic [ref=e347]: chevron_right
+            - generic [ref=e348]: Khám phá thông tin chi tiết dành cho bạn
+            - link "Khám phá thông tin chi tiết dành cho bạn" [ref=e349] [cursor=pointer]:
+              - /url: ./search-console/performance/insights?resource_id=sc-domain%3Avisafact.org
+        - generic [ref=e351]:
+          - generic [ref=e352]:
+            - generic [ref=e353]: Hiệu suất
+            - generic [ref=e356]:
+              - generic [ref=e358]: chevron_right
+              - generic [ref=e359]: Báo cáo đầy đủ
+              - link "Báo cáo đầy đủ" [ref=e360] [cursor=pointer]:
+                - /url: ./search-console/performance/search-analytics?resource_id=sc-domain%3Avisafact.org
+          - generic [ref=e363]:
+            - generic [ref=e368]: Tổng 0 lần nhấp vào kết quả tìm kiếm trên web
+            - img [ref=e372]:
+              - generic [ref=e373]:
+                - generic [ref=e374]:
+                  - generic [ref=e376]: 30/1/26
+                  - generic [ref=e378]: 31/1/26
+                  - generic [ref=e380]: 1/2/26
+                  - generic [ref=e382]: 2/2/26
+                - generic [ref=e383]:
+                  - generic [ref=e385]: "3"
+                  - generic [ref=e387]: "2"
+                  - generic [ref=e389]: "1"
+                  - generic [ref=e391]: "0"
+        - generic [ref=e395]:
+          - generic [ref=e396]:
+            - generic [ref=e397]: Lập chỉ mục
+            - generic [ref=e400]:
+              - generic [ref=e402]: chevron_right
+              - generic [ref=e403]: Báo cáo đầy đủ
+              - link "Báo cáo đầy đủ" [ref=e404] [cursor=pointer]:
+                - /url: ./search-console/index?resource_id=sc-domain%3Avisafact.org
+          - generic [ref=e407]:
+            - generic [ref=e409]:
+              - generic [ref=e412]: 5 trang chưa được lập chỉ mục
+              - generic [ref=e415]: 2 trang được lập chỉ mục
+            - img [ref=e419]:
+              - generic [ref=e420]:
+                - generic [ref=e421]:
+                  - generic [ref=e423]: 6/11/25
+                  - generic [ref=e425]: 19/11/25
+                  - generic [ref=e427]: 2/12/25
+                  - generic [ref=e429]: 15/12/25
+                  - generic [ref=e431]: 28/12/25
+                  - generic [ref=e433]: 10/1/26
+                  - generic [ref=e435]: 23/1/26
+                - generic [ref=e436]:
+                  - generic [ref=e438]: "6"
+                  - generic [ref=e440]: "4"
+                  - generic [ref=e442]: "2"
+                  - generic [ref=e444]: "0"
+        - generic [ref=e459]:
+          - generic [ref=e461]: Trải nghiệm
+          - table [ref=e465]:
+            - rowgroup [ref=e466]:
+              - row "Loại Tốt Cần cải thiện Kém Xu hướng" [ref=e467]:
+                - columnheader "Loại" [ref=e468]
+                - columnheader [ref=e469]
+                - columnheader "Tốt" [ref=e470]
+                - columnheader "Cần cải thiện" [ref=e471]
+                - columnheader "Kém" [ref=e472]
+                - columnheader "Xu hướng" [ref=e473]
+                - columnheader [ref=e474]
+            - rowgroup [ref=e475]:
+              - row "Chỉ số quan trọng chính của trang web Sơ đồ trang web dành cho điện thoại di động Máy tính Không có dữ liệu Không có dữ liệu Không có dữ liệu Không có dữ liệu Không có dữ liệu Không có dữ liệu" [ref=e476]:
+                - cell "Chỉ số quan trọng chính của trang web" [ref=e477]:
+                  - generic [ref=e479]: Chỉ số quan trọng chính của trang web
+                - cell "Sơ đồ trang web dành cho điện thoại di động Máy tính" [ref=e480]:
+                  - generic [ref=e482]:
+                    - generic [ref=e483]: Sơ đồ trang web dành cho điện thoại di động
+                    - generic [ref=e484]: Máy tính
+                - cell "Không có dữ liệu Không có dữ liệu" [ref=e485]:
+                  - generic [ref=e486]:
+                    - generic [ref=e487]: Không có dữ liệu
+                    - generic [ref=e488]: Không có dữ liệu
+                - cell "Không có dữ liệu Không có dữ liệu" [ref=e489]:
+                  - generic [ref=e490]:
+                    - generic [ref=e491]: Không có dữ liệu
+                    - generic [ref=e492]: Không có dữ liệu
+                - cell "Không có dữ liệu Không có dữ liệu" [ref=e493]:
+                  - generic [ref=e494]:
+                    - generic [ref=e495]: Không có dữ liệu
+                    - generic [ref=e496]: Không có dữ liệu
+                - cell [ref=e497]
+              - row "HTTPS Không phải HTTPS" [ref=e498]:
+                - columnheader [ref=e499]
+                - columnheader [ref=e500]
+                - columnheader "HTTPS" [ref=e501]
+                - columnheader [ref=e502]
+                - columnheader "Không phải HTTPS" [ref=e503]
+                - columnheader [ref=e504]
+                - columnheader [ref=e505]
+              - row "HTTPS 2 0 Mở báo cáo" [ref=e506]:
+                - cell "HTTPS" [ref=e507]:
+                  - generic [ref=e509]: HTTPS
+                - cell [ref=e510]
+                - cell "2" [ref=e511]:
+                  - generic [ref=e513]: "2"
+                - cell [ref=e514]
+                - cell "0" [ref=e515]:
+                  - generic [ref=e517]: "0"
+                - cell [ref=e518]:
+                  - img [ref=e521]
+                - cell "Mở báo cáo" [ref=e522]:
+                  - button "Mở báo cáo" [ref=e525] [cursor=pointer]:
+                    - generic [ref=e526]: chevron_right
+        - generic [ref=e528]:
+          - generic [ref=e530]: Các tính năng nâng cao
+          - table [ref=e534]:
+            - rowgroup [ref=e535]:
+              - row "Loại Hợp lệ Không hợp lệ Xu hướng" [ref=e536]:
+                - columnheader "Loại" [ref=e537]
+                - columnheader "Hợp lệ" [ref=e538]
+                - columnheader "Không hợp lệ" [ref=e539]
+                - columnheader "Xu hướng" [ref=e540]
+                - columnheader [ref=e541]
+            - rowgroup [ref=e542]:
+              - row "Đường dẫn 0 1 Mở báo cáo" [ref=e543]:
+                - cell "Đường dẫn" [ref=e544]:
+                  - generic [ref=e546]: Đường dẫn
+                - cell "0" [ref=e547]:
+                  - generic [ref=e549]: "0"
+                - cell "1" [ref=e550]:
+                  - generic [ref=e552]: "1"
+                - cell [ref=e553]:
+                  - img [ref=e556]
+                - cell "Mở báo cáo" [ref=e557]:
+                  - button "Mở báo cáo" [ref=e560] [cursor=pointer]:
+                    - generic [ref=e561]: chevron_right
+              - row "Không thể phân tích cú pháp dữ liệu có cấu trúc 1 Mở báo cáo" [ref=e562]:
+                - cell "Không thể phân tích cú pháp dữ liệu có cấu trúc" [ref=e563]:
+                  - generic [ref=e565]: Không thể phân tích cú pháp dữ liệu có cấu trúc
+                - cell [ref=e566]
+                - cell "1" [ref=e567]:
+                  - generic [ref=e569]: "1"
+                - cell [ref=e570]:
+                  - img [ref=e573]
+                - cell "Mở báo cáo" [ref=e574]:
+                  - button "Mở báo cáo" [ref=e577] [cursor=pointer]:
+                    - generic [ref=e578]: chevron_right
