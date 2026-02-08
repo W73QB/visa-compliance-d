@@ -40,6 +40,8 @@ if (Test-Path $wfPath) {
   Assert-True ($wf -match "stale_snapshots") "workflow exports stale snapshot metric"
   Assert-True ($wf -match "Detect aging draft PRs") "workflow checks aging draft PRs"
   Assert-True ($wf -match "aged_prs") "workflow exports draft PR aging metric"
+  Assert-True ($wf -match "Append monitoring summary") "workflow appends monitoring summary"
+  Assert-True ($wf -match "steps\.streak\.outputs\.alert == 'true'\s*\|\|\s*steps\.stale\.outputs\.stale_snapshots != '0'\s*\|\|\s*steps\.pr_aging\.outputs\.aged_prs != '0'") "issue trigger includes stale and aging signals"
 }
 
 if ($failed) {

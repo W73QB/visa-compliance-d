@@ -102,6 +102,7 @@ As of snapshot `releases/2026-01-15`, the checker evaluated 7 products and retur
 - [Digital nomad insurance in Asia](/posts/digital-nomad-insurance-asia/)
 - [Compliance status meaning](/guides/compliance-status-meaning/)
 - [How to read compliance results](/guides/how-to-read-results/)
+- [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 
 ## Disclaimer + Affiliate disclosure
 

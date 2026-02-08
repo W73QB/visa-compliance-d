@@ -107,6 +107,7 @@ UNKNOWN results are most common when product documents do not explicitly state a
 - [Monthly payment pitfalls for Malta nomad visa](/traps/malta-nomad-monthly-payments/)
 - [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 - [How to read compliance results](/guides/how-to-read-results/)
+- [Compliance status meaning](/guides/compliance-status-meaning/)
 
 ## Disclaimer + Affiliate disclosure
 
