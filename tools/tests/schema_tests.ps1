@@ -18,12 +18,17 @@ try {
 
   $htmlFiles = @()
   $htmlFiles += (Join-Path $root "public/index.html")
-  $htmlFiles += (Join-Path $root "public/posts/hello/index.html")
+  $samplePosts = Get-ChildItem -Path (Join-Path $root "public/posts") -Directory |
+    Where-Object { $_.Name -ne "page" }
+  foreach ($samplePost in $samplePosts) {
+    $htmlFiles += (Join-Path $samplePost.FullName "index.html")
+  }
   $htmlFiles = $htmlFiles | Where-Object { Test-Path $_ }
 
   Assert-True ($htmlFiles.Count -gt 0) "Sample HTML files exist"
 
   $types = @{}
+  $breadcrumbItems = @()
   foreach ($file in $htmlFiles) {
     $raw = Get-Content -Raw -Path $file
     $matches = Select-String -InputObject $raw -Pattern '(?s)<script type=["'']?application/ld\+json["'']?>(.*?)</script>' -AllMatches
@@ -47,17 +52,51 @@ try {
           if ($item.'@type') {
             foreach ($t in @($item.'@type')) { $types[$t] = $true }
           }
+          if ($item.'@type' -eq "BreadcrumbList" -and $item.itemListElement) {
+            $breadcrumbItems += @($item.itemListElement)
+          }
         }
       } elseif ($data.'@type') {
         foreach ($t in @($data.'@type')) { $types[$t] = $true }
+        if ($data.'@type' -eq "BreadcrumbList" -and $data.itemListElement) {
+          $breadcrumbItems += @($data.itemListElement)
+        }
       }
     }
   }
 
   Assert-True ($types.ContainsKey("WebSite")) "WebSite schema present"
   Assert-True ($types.ContainsKey("BreadcrumbList")) "BreadcrumbList schema present"
-  Assert-True ($types.ContainsKey("Article") -or $types.ContainsKey("BlogPosting")) "Article/BlogPosting schema present"
+  $hasArticleType = ($types.ContainsKey("Article") -or $types.ContainsKey("BlogPosting"))
+  if (-not $hasArticleType) {
+    foreach ($file in $htmlFiles) {
+      $raw = Get-Content -Raw -Path $file
+      if ($raw -match '"@type"\s*:\s*"(Article|BlogPosting)"') {
+        $hasArticleType = $true
+        break
+      }
+    }
+  }
+  Assert-True $hasArticleType "Article/BlogPosting schema present"
   Assert-True ($types.ContainsKey("Organization") -or $types.ContainsKey("Person")) "Publisher schema present"
+  Assert-True ($breadcrumbItems.Count -gt 0) "Breadcrumb schema has itemListElement entries"
+
+  if ($breadcrumbItems.Count -gt 0) {
+    $homeCrumb = $breadcrumbItems | Where-Object {
+      $_.item -like "https://visafact.org/"
+    }
+    Assert-True ($null -ne $homeCrumb -and $homeCrumb.Count -ge 1) "Breadcrumb includes Home item"
+
+    $positions = @($breadcrumbItems | ForEach-Object { [int]$_.position } | Sort-Object -Unique)
+    $isSequential = $true
+    for ($i = 0; $i -lt $positions.Count; $i++) {
+      if ($positions[$i] -ne ($i + 1)) {
+        $isSequential = $false
+        break
+      }
+    }
+    Assert-True $isSequential "Breadcrumb positions are sequential"
+  }
   # FAQ only if page has faq; optional, so not asserted strictly
 
 } finally {

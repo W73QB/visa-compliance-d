@@ -37,15 +37,15 @@
 
 {{- /* Pages/Sections: BreadcrumbList */ -}}
 {{- if (or .IsPage .IsSection) -}}
-{{- $crumbs := slice -}}
+{{- $crumbs := slice (dict "position" 1 "name" site.Title "item" site.Home.Permalink) -}}
 {{- $segments := (split (trim (replace (.RelPermalink) (site.LanguagePrefix) "" ) "/") "/") -}}
 {{- $path := "" -}}
-{{- range $i, $s := $segments -}}
+{{- range $s := $segments -}}
   {{- if gt (len $s) 0 -}}
     {{- $path = printf "%s/%s" $path $s -}}
     {{- $pg := site.GetPage $path -}}
     {{- if $pg -}}
-      {{- $crumbs = $crumbs | append (dict "position" (add $i 1) "name" $pg.Title "item" $pg.Permalink) -}}
+      {{- $crumbs = $crumbs | append (dict "position" (add (len $crumbs) 1) "name" $pg.Title "item" $pg.Permalink) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

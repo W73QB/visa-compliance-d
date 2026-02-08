@@ -101,6 +101,7 @@ UNKNOWN is a signal to request clearer documentation, not a hint that the policy
 - [Germany travel insurance rejected](/traps/germany-travel-insurance-rejected/)
 - [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 - [How to choose DNV insurance](/guides/how-to-choose-dnv-insurance/)
+- [Compliance status meaning](/guides/compliance-status-meaning/)
 
 ## Disclaimer + Affiliate disclosure
 

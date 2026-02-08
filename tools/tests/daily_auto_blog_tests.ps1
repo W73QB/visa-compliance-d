@@ -33,6 +33,52 @@ Assert-True (Test-Path $claimSchemaPath) "claim schema exists"
 Assert-True (Test-Path $fmSchemaPath) "front matter schema exists"
 Assert-True (Test-Path $promptPath) "prompt exists"
 
+# --- Query generation + retry behavior ---
+$queryCheck = Join-Path $tmp "query_check.py"
+Set-Content -Path $queryCheck -Encoding UTF8 -Value @'
+import json
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path("tools").resolve()))
+import daily_auto_blog as dab
+
+cfg = json.loads(pathlib.Path("tools/daily_auto_blog_config.json").read_text(encoding="utf-8"))
+dates = ["2026-02-01", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06"]
+queries = [dab.build_search_query(cfg, d).lower() for d in dates]
+assert not all("spain" in q for q in queries), "build_search_query appears hardcoded to spain"
+'@
+$queryCheckProc = Start-Process -FilePath $python -ArgumentList $queryCheck -WorkingDirectory $root -Wait -PassThru
+Assert-True ($queryCheckProc.ExitCode -eq 0) "build_search_query is not hardcoded to Spain"
+
+$timeoutCheck = Join-Path $tmp "timeout_retry_check.py"
+Set-Content -Path $timeoutCheck -Encoding UTF8 -Value @'
+import pathlib
+import socket
+import sys
+
+sys.path.insert(0, str(pathlib.Path("tools").resolve()))
+import daily_auto_blog as dab
+
+calls = {"n": 0}
+
+def fake_urlopen(_req_or_url, timeout=0):
+    calls["n"] += 1
+    raise socket.timeout("timeout")
+
+dab.urlopen = fake_urlopen
+try:
+    dab.http_json_with_retry("https://example.com", timeout=1, retries=2)
+except socket.timeout:
+    pass
+else:
+    raise AssertionError("expected socket.timeout")
+
+assert calls["n"] == 3, f"expected 3 attempts, got {calls['n']}"
+'@
+$timeoutCheckProc = Start-Process -FilePath $python -ArgumentList $timeoutCheck -WorkingDirectory $root -Wait -PassThru
+Assert-True ($timeoutCheckProc.ExitCode -eq 0) "http retry retries on socket.timeout"
+
 # --- Sitemap parsing ---
 $sitemap = Join-Path $root "tools/tests/fixtures/daily_auto_blog/sitemap_urlset.xml"
 $sitemapOut = Join-Path $tmp "index.json"

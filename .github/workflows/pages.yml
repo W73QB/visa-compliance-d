@@ -83,6 +83,7 @@ jobs:
           pwsh -File tools/tests/snapshot_routing_tests.ps1
           pwsh -File tools/tests/release_snapshot_tests.ps1
           pwsh -File tools/tests/verify_snapshot_manifest_tests.ps1
+          pwsh -File tools/tests/mapping_status_distribution_tests.ps1
           pwsh -File tools/tests/offers_tests.ps1
           pwsh -File tools/tests/content_lint_tests.ps1
           pwsh -File tools/tests/seo_audit_tests.ps1
@@ -98,6 +99,7 @@ jobs:
           pwsh -File tools/tests/daily_auto_blog_tests.ps1
           pwsh -File tools/tests/daily_auto_blog_workflow_tests.ps1
           pwsh -File tools/tests/daily_auto_blog_e2e_tests.ps1
+          pwsh -File tools/tests/pages_workflow_gates_tests.ps1
 
       - name: Lint content
         run: python tools/lint_content.py

@@ -111,6 +111,7 @@ Use [the compliance checker](/ui/) to check the current snapshot for this route,
 - [Spain DNV insurance mistakes](/traps/spain-dnv-insurance-mistakes/)
 - [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 - [How to read compliance results](/guides/how-to-read-results/)
+- [Compliance status meaning](/guides/compliance-status-meaning/)
 
 ## Disclaimer + Affiliate disclosure
 
