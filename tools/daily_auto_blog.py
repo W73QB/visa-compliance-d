@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import re
+import socket
 import subprocess
 import sys
 import tempfile
@@ -262,6 +263,11 @@ def http_json_with_retry(
                 time.sleep(min(30, 2**attempt))
                 continue
             raise
+        except socket.timeout:
+            if attempt < retries:
+                time.sleep(min(30, 2**attempt))
+                continue
+            raise
     raise RuntimeError("request failed after retries")
 
 
@@ -325,11 +331,18 @@ def build_search_query(
         run_dt = datetime.strptime(run_date, "%Y-%m-%d")
     except Exception:
         run_dt = datetime.now(timezone.utc)
+    countries = config.get(
+        "query_countries",
+        ["spain", "portugal", "germany", "thailand", "malta", "costa rica"],
+    )
+    if not isinstance(countries, list) or len(countries) == 0:
+        countries = ["spain"]
     weekday_key = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"][run_dt.weekday()]
     topic_hint = str(config.get("rotation", {}).get(weekday_key, "insurance"))
     template = templates[(run_dt.toordinal() + int(template_offset)) % len(templates)]
+    country = str(countries[run_dt.toordinal() % len(countries)]).strip() or "spain"
     values = {
-        "country": "spain",
+        "country": country,
         "visa_type": topic_hint.replace("_", " "),
         "topic_slug": topic_hint,
     }
