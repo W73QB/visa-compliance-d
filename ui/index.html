@@ -414,11 +414,11 @@
     </div>
 
     <!-- Modal evidence -->
-    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
       <div
         class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
         <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-          <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+          <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
           <button id="closeModal"
             class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
             Close
@@ -720,6 +720,7 @@
     }
 
     function openModal(evidenceItems) {
+      window.lastFocusedElement = document.activeElement;
       const body = $("modalBody");
       body.innerHTML = "";
 
@@ -758,11 +759,13 @@
 
       $("modal").classList.remove("hidden");
       $("modal").classList.add("flex");
+      setTimeout(() => $("closeModal").focus(), 50);
     }
 
     function closeModal() {
       $("modal").classList.add("hidden");
       $("modal").classList.remove("flex");
+      if (window.lastFocusedElement) window.lastFocusedElement.focus();
     }
 
     function renderRequirements(visa) {
@@ -1127,6 +1130,13 @@
       }
       $("loadingState").classList.add("hidden");
     }
+
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !$("modal").classList.contains("hidden")) {
+        closeModal();
+      }
+    });
 
     // Mobile menu toggle
     $("mobileMenuBtn")?.addEventListener("click", () => {
