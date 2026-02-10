@@ -163,12 +163,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
         <div class="flex flex-col gap-3 group">
-          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying
+          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider" for="visaSelect">I am applying
             for</label>
           <div class="relative">
             <span
               class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
-            <select id="visaSelect"
+            <select id="visaSelect" aria-describedby="visaHint"
               class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
               <option value="">Select visa route (authority)</option>
             </select>
@@ -180,12 +180,12 @@
         </div>
 
         <div class="flex flex-col gap-3 group">
-          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to
+          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider" for="productSelect">I want to
             use</label>
           <div class="relative">
             <span
               class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
-            <select id="productSelect"
+            <select id="productSelect" aria-describedby="productHint"
               class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
               <option value="">Select an insurance product</option>
             </select>
@@ -414,11 +414,11 @@
     </div>
 
     <!-- Modal evidence -->
-    <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
       <div
         class="w-full max-w-3xl bg-white dark:bg-[#111418] rounded-xl border border-border-soft dark:border-border-dark shadow-lg">
         <div class="flex items-center justify-between p-4 border-b border-border-soft dark:border-border-dark">
-          <div class="font-bold text-text-primary dark:text-white">Evidence</div>
+          <div id="modalTitle" class="font-bold text-text-primary dark:text-white">Evidence</div>
           <button id="closeModal"
             class="px-3 py-2 text-sm font-semibold border border-border-soft dark:border-border-dark rounded-lg bg-white dark:bg-gray-800 text-text-primary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition">
             Close
@@ -590,6 +590,7 @@
     }
 
 
+    let lastFocusedElement = null;
     let INDEX = null;
 
     // Supports both ui_index.json shapes:
@@ -720,6 +721,7 @@
     }
 
     function openModal(evidenceItems) {
+      lastFocusedElement = document.activeElement;
       const body = $("modalBody");
       body.innerHTML = "";
 
@@ -758,11 +760,13 @@
 
       $("modal").classList.remove("hidden");
       $("modal").classList.add("flex");
+      $("closeModal").focus();
     }
 
     function closeModal() {
       $("modal").classList.add("hidden");
       $("modal").classList.remove("flex");
+      if (lastFocusedElement) lastFocusedElement.focus();
     }
 
     function renderRequirements(visa) {
@@ -1105,6 +1109,7 @@
 
         $("closeModal").addEventListener("click", closeModal);
         $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("modal").classList.contains("hidden")) closeModal(); });
 
         updateHints();
 
