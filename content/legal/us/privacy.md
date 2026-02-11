@@ -1,5 +1,8 @@
 ---
 title: Privacy Policy (United States)
+description: "Privacy policy for visitors in the United States."
+date: 2026-01-15
+lastmod: 2026-02-11
 ---
 
 This page applies to visitors in the United States.

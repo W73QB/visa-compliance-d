@@ -1,5 +1,8 @@
 ---
 title: Affiliate Disclosure (United States)
+description: "US affiliate disclosure for VisaFact. We may earn commissions from eligible links, but compliance results remain evidence-based and independent."
+date: 2026-01-15
+lastmod: 2026-02-11
 ---
 
 This page applies to visitors in the United States.

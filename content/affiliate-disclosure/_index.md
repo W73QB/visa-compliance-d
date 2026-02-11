@@ -1,6 +1,8 @@
 ---
 title: "Affiliate Disclosure (Transparency)"
 description: "How affiliate links work on VisaFact.org and our commitment to evidence-based compliance results."
+date: 2026-01-15
+lastmod: 2026-02-11
 ---
 
 {{< vf-trust >}}

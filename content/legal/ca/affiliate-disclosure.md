@@ -1,5 +1,8 @@
 ---
 title: Affiliate Disclosure (Canada)
+description: "Affiliate disclosure for visitors in Canada."
+date: 2026-01-15
+lastmod: 2026-02-11
 ---
 
 This page applies to visitors in Canada.

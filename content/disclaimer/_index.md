@@ -1,3 +1,10 @@
+---
+title: "Disclaimer (Not legal advice)"
+description: "Legal disclaimer for VisaFact. Results are evidence-based informational outputs and do not constitute legal advice."
+date: 2026-01-15
+lastmod: 2026-02-11
+---
+
 Disclaimer (Not legal advice)
 
 {{< vf-trust >}}
@@ -45,4 +52,3 @@ Insurance coverage, exclusions, and claim outcomes depend on the insurer's polic
 Before purchasing, you should read the full policy wording and consult a qualified professional if needed.
 
 {{< vf-cta href="/ui/" label="Open Compliance Checker" >}}
-

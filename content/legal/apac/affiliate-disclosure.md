@@ -1,5 +1,8 @@
 ---
 title: Affiliate Disclosure (AU/JP/SG/KR)
+description: "Affiliate disclosure for visitors in AU/JP/SG/KR regions."
+date: 2026-01-15
+lastmod: 2026-02-11
 ---
 
 This page applies to visitors in AU/JP/SG/KR.

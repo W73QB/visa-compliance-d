@@ -1,5 +1,8 @@
 ---
 title: Privacy Policy (EU + UK)
+description: "Privacy policy for visitors in the EU and UK."
+date: 2026-01-15
+lastmod: 2026-02-11
 ---
 
 This page applies to visitors in the EU and UK.
