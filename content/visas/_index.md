@@ -16,6 +16,8 @@ Browse requirements by country and visa type. All requirements are sourced from 
 - [Spain Digital Nomad Visa](/visas/spain/digital-nomad-visa/)
 - [Thailand Digital Nomad Visa (DTV)](/visas/thailand/digital-nomad-visa-dtv/)
 
+> Maintenance note: when a new route is added under `content/visas/**`, update this hub list in the same PR so discoverability stays current.
+
 ## What the authority requires
 
 See the requirements table above. All requirements are extracted directly from official sources with evidence excerpts.
@@ -27,6 +29,12 @@ We compare these official requirements against insurance product specifications 
 ## Check in the engine
 
 Try the compliance checker: [Open Checker](/ui/?snapshot=2026-02-04)
+
+## Related resources
+
+- [Guides](/guides/)
+- [Common traps](/traps/)
+- [Blog updates](/posts/)
 
 ## Disclaimer
 
