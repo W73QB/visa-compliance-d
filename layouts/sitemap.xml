@@ -1,0 +1,27 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{- $scratch := newScratch -}}
+  {{- $scratch.Set "hasUI" false -}}
+  {{- range site.AllPages -}}
+    {{- $rel := .RelPermalink -}}
+    {{- $isTaxonomy := or (eq .Kind "taxonomy") (eq .Kind "term") -}}
+    {{- $isTemplate := strings.HasPrefix $rel "/templates/" -}}
+    {{- $isTag := strings.HasPrefix $rel "/tags/" -}}
+    {{- $isCategory := strings.HasPrefix $rel "/categories/" -}}
+    {{- if and (not $isTaxonomy) (not $isTemplate) (not $isTag) (not $isCategory) -}}
+      {{- if eq $rel "/ui/" }}{{- $scratch.Set "hasUI" true -}}{{- end }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- with .Lastmod }}
+    <lastmod>{{ .Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    {{- end }}
+  </url>
+    {{- end -}}
+  {{- end -}}
+  {{- if not ($scratch.Get "hasUI") }}
+  <url>
+    <loc>{{ "ui/" | absURL }}</loc>
+    <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+  </url>
+  {{- end }}
+</urlset>

@@ -3,6 +3,14 @@ title: "[Visa] Compliance Update"
 date: 2026-01-13
 description: "Evidence-based compliance verification summary."
 tags: ["compliance", "visa"]
+draft: true
+robotsNoIndex: true
+sitemap:
+  disable: true
+build:
+  render: never
+  list: never
+  publishResources: false
 ---
 
 ## What the authority requires
