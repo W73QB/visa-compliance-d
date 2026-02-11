@@ -8,6 +8,8 @@ canonifyURLs = true
 
 [params]
   env = "production"
+  author = "VisaFact Team"
+  images = ["/images/og-default-1200x630.png"]
   description = "Evidence-based visa insurance compliance checker."
   ShowReadingTime = true
   ShowShareButtons = true
@@ -46,14 +48,22 @@ canonifyURLs = true
     pageRef = "posts"
     weight = 3
   [[menu.main]]
+    name = "Guides"
+    pageRef = "guides"
+    weight = 4
+  [[menu.main]]
+    name = "Traps"
+    pageRef = "traps"
+    weight = 5
+  [[menu.main]]
     name = "Methodology"
     pageRef = "methodology"
-    weight = 4
+    weight = 6
   [[menu.main]]
     name = "Disclaimer"
     pageRef = "disclaimer"
-    weight = 5
+    weight = 7
   [[menu.main]]
     name = "Affiliate"
     pageRef = "affiliate-disclosure"
-    weight = 6
+    weight = 8
