@@ -84,6 +84,39 @@ Assert-True (Test-Path "static/ui/index.html") "static/ui/index.html exists"
 Assert-True (Test-Path "static/data/ui_index.json") "static/data/ui_index.json exists"
 Assert-True (Test-Path "static/sources/CR_Decreto_43619_2026-01-12.md") "static/sources contains snapshots"
 
+Write-Host "SEO regression checks..." -ForegroundColor Cyan
+Assert-True (Test-Path "content/templates/_index.md") "templates section control file exists"
+if (Test-Path "content/templates/_index.md") {
+  $templatesIndex = Get-Content -Raw -Path "content/templates/_index.md"
+  Assert-True ($templatesIndex -match '(?m)^robotsNoIndex:\s*true') "templates section sets robotsNoIndex true"
+  Assert-True ($templatesIndex -match '(?m)^sitemap:\s*$') "templates section declares sitemap block"
+  Assert-True ($templatesIndex -match '(?m)^\s*disable:\s*true') "templates section disables sitemap"
+  Assert-True ($templatesIndex -match '(?m)^build:\s*$') "templates section declares build block"
+  Assert-True ($templatesIndex -match '(?m)^\s*render:\s*never') "templates section sets build.render never"
+  Assert-True ($templatesIndex -match '(?m)^\s*list:\s*never') "templates section sets build.list never"
+}
+
+$hugoCmd = Get-Command hugo -ErrorAction SilentlyContinue
+if ($hugoCmd) {
+  $hugoBuild = Start-Process -FilePath $hugoCmd.Source -ArgumentList "--minify", "--cleanDestinationDir" -Wait -PassThru -NoNewWindow
+  Assert-True ($hugoBuild.ExitCode -eq 0) "hugo clean build succeeds for SEO regression checks"
+
+  Assert-True (-not (Test-Path "public/templates/index.html")) "templates section index is not rendered"
+  Assert-True (-not (Test-Path "public/templates/page/1/index.html")) "templates pagination is not rendered"
+  Assert-True (-not (Test-Path "public/templates/compliance-post-template/index.html")) "template detail page is not rendered"
+
+  Assert-True (Test-Path "public/sitemap.xml") "public sitemap exists after clean build"
+  if (Test-Path "public/sitemap.xml") {
+    $sitemapRaw = Get-Content -Raw -Path "public/sitemap.xml"
+    Assert-True ($sitemapRaw -notlike "*/templates/*") "sitemap excludes templates"
+    Assert-True ($sitemapRaw -notlike "*/tags/*") "sitemap excludes tags"
+    Assert-True ($sitemapRaw -notlike "*/categories/*") "sitemap excludes categories"
+    Assert-True ($sitemapRaw -like "*https://visafact.org/ui/*") "sitemap includes /ui/"
+  }
+} else {
+  Write-Host "SKIP: hugo command not available for rendered output regression checks" -ForegroundColor Yellow
+}
+
 if ($failed) {
   Write-Error "One or more checks failed."
   exit 1
