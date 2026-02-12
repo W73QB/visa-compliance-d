@@ -1,7 +1,7 @@
 {
-    "source_id":  "WORLDNOMADS_COMPARE_2026",
-    "url":  "https://www.worldnomads.com/usa/travel-insurance/compare-travel-insurance",
-    "retrieved_at":  "2026-01-15T00:00:00Z",
-    "sha256":  "34a0985c4530630c3737187c3c43e020e7f83f36b5e2ace7e571510b6afdec92",
-    "local_path":  "sources/WORLDNOMADS_COMPARE_2026-01-15.html"
+    "source_id": "WORLDNOMADS_COMPARE_2026",
+    "url": "https://www.worldnomads.com/usa/travel-insurance/compare-travel-insurance",
+    "retrieved_at": "2026-01-15T00:00:00Z",
+    "sha256": "d3fe44a947c7cb614a4a0a1142d358c248c9ac07ec0ca26ac58be6521a4c8a30",
+    "local_path": "sources/WORLDNOMADS_COMPARE_2026-01-15.html"
 }
