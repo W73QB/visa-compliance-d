@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-01-30T23:42:01.520471+00:00",
-  "snapshot_id": "2026-01-31",
+  "built_at": "2026-02-12T22:36:14.911354+00:00",
+  "snapshot_id": "2026-02-12",
   "visas": [
     {
       "id": "CR_DN_DECREE_43619_2026",
@@ -502,7 +502,7 @@
         },
         "copay": null,
         "payment_cadence": null,
-        "contract_commitment_months": null,
+        "contract_commitment_months": 12,
         "jurisdiction_facts": {}
       },
       "evidence": [
@@ -515,6 +515,11 @@
           "source_id": "GENKI_TRAVELER_COVERAGE_2026",
           "locator": "Maximum Coverage Limit",
           "excerpt": "\u20ac1,000,000"
+        },
+        {
+          "source_id": "GENKI_TRAVELER_COVERAGE_2026",
+          "locator": "Maximum Insurance Period",
+          "excerpt": "Maximum Insurance Period: The coverage is valid for up to 1 year."
         }
       ]
     },
@@ -1450,7 +1455,7 @@
       "source_id": "WORLDNOMADS_COMPARE_2026",
       "url": "https://www.worldnomads.com/usa/travel-insurance/compare-travel-insurance",
       "retrieved_at": "2026-01-15T00:00:00Z",
-      "sha256": "34a0985c4530630c3737187c3c43e020e7f83f36b5e2ace7e571510b6afdec92",
+      "sha256": "d3fe44a947c7cb614a4a0a1142d358c248c9ac07ec0ca26ac58be6521a4c8a30",
       "local_path": "sources/WORLDNOMADS_COMPARE_2026-01-15.html"
     }
   },
