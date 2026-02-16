@@ -55,10 +55,22 @@ BANNED_WORDS = [
     "surely",
 ]
 
+DEFAULT_HTTP_USER_AGENT = (
+    "Mozilla/5.0 (compatible; DailyAutoBlog/1.0; +https://visafact.org)"
+)
+
 
 def read_text(path_or_url: str) -> str:
     if path_or_url.startswith("http://") or path_or_url.startswith("https://"):
-        with urlopen(path_or_url, timeout=30) as resp:
+        user_agent = os.environ.get("DAILY_AUTO_BLOG_USER_AGENT", "").strip()
+        req = Request(
+            path_or_url,
+            headers={
+                "User-Agent": user_agent or DEFAULT_HTTP_USER_AGENT,
+                "Accept": "application/xml,text/xml;q=0.9,*/*;q=0.8",
+            },
+        )
+        with urlopen(req, timeout=30) as resp:
             return resp.read().decode("utf-8", errors="replace")
     return Path(path_or_url).read_text(encoding="utf-8")
 

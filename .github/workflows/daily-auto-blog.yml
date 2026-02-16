@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: daily-auto-blog
@@ -62,6 +63,27 @@ jobs:
             --runs-dir docs/ops/daily-auto-blog/runs \
             --sitemap https://visafact.org/sitemap.xml \
             --draft-fixture tools/tests/fixtures/daily_auto_blog/draft.md
+
+      - name: Print run manifest summary
+        run: |
+          python - <<'PY'
+          import datetime
+          import json
+          from pathlib import Path
+
+          run_date = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+          path = Path(f'docs/ops/daily-auto-blog/runs/{run_date}/run_manifest.json')
+          if not path.exists():
+              print('[daily-auto-blog] run_manifest not found')
+          else:
+              manifest = json.loads(path.read_text(encoding='utf-8'))
+              print(f"[daily-auto-blog] status={manifest.get('status', 'FAIL')}")
+              print(f"[daily-auto-blog] select_reason={manifest.get('select_reason', '')}")
+              print(f"[daily-auto-blog] write_failure_rc={manifest.get('write_failure_rc', '')}")
+              steps = manifest.get('steps', [])
+              if steps:
+                  print(f"[daily-auto-blog] last_step={steps[-1]}")
+          PY
 
       - name: Determine run status
         id: status
@@ -170,6 +192,7 @@ jobs:
           PY
 
       - name: Open issue on consecutive non-pass
+        continue-on-error: true
         if: steps.streak.outputs.alert == 'true' || steps.stale.outputs.stale_snapshots != '0' || steps.pr_aging.outputs.aged_prs != '0'
         uses: peter-evans/create-issue-from-file@v5
         with:
