@@ -1,0 +1,3 @@
+## 2026-02-25 - Implicit vs Explicit Form Labels and Decorative Icons
+**Learning:** While wrapping inputs in labels is technically valid, explicit `for`/`id` association is more robust for assistive technologies, especially when complex styling or layout (like `flex-col`) separates the visual label from the input. Also, decorative icons inside form controls must be hidden from screen readers to prevent confusing announcements like "gavel listbox".
+**Action:** Always verify form label associations using code inspection or accessibility tools, and ensure decorative elements are explicitly hidden with `aria-hidden="true"`.
