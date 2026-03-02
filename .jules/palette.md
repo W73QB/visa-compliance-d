@@ -1,0 +1,3 @@
+## 2026-03-02 - [Form Accessibility Improvements]
+**Learning:** Found an accessibility issue pattern specific to this app's main form components: `<select>` inputs lacked explicit label associations (`for` attributes pointing to IDs) despite having labels, and complex helper text wasn't programmatically linked to the inputs. Furthermore, Google Material Symbols (implemented as ligatures in `<span>` tags) were being read aloud by screen readers because they lacked `aria-hidden="true"`.
+**Action:** Always ensure `for` attributes connect labels to input IDs. Use `aria-describedby` to link inputs to their helper text. Always add `aria-hidden="true"` to decorative Google Material Symbols ligatures to prevent them from confusing screen readers.
