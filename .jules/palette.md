@@ -1,0 +1,3 @@
+## 2024-03-08 - Added aria-hidden to decorative Material Symbols
+**Learning:** Google Material Symbols use ligatures within `<span>` tags (e.g., `<span class="material-symbols-outlined">verified_user</span>`). Without `aria-hidden="true"`, screen readers announce the literal text inside the span (e.g., "verified user"), which can be confusing, especially if the icon is purely decorative or if there's already adjacent visible text conveying the same meaning.
+**Action:** Always add `aria-hidden="true"` to ligature-based icon components unless they are the sole content of an interactive element without an `aria-label`.
