@@ -1,0 +1,3 @@
+## 2026-01-20 - Form Inputs Accessibility with Flex Layout
+**Learning:** In Tailwind interfaces using `flex-col` layout, input labels and the inputs themselves are visually grouped but separated structurally. This makes explicit `for` attributes on labels absolutely critical, otherwise screen readers and pointer devices cannot associate the label with the input. Similarly, hint/helper text placed alongside inputs requires `aria-describedby` on the input to be programmatically associated for assistive tech.
+**Action:** Always add explicit `for="id"` and `aria-describedby="hintId"` attributes to form fields, particularly when structural separation (like `div` wrappers or flex layouts) exists between labels, inputs, and hints.
