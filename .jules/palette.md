@@ -1,0 +1,3 @@
+## 2026-01-20 - Missing Label Associations in Flex-Col Layouts
+**Learning:** Dynamic form inputs like `<select>` elements within a `flex-col` layout often visually separate the label from the input without providing native accessibility bindings. When creating custom modals, explicit DOM logic is required to restore focus to `lastFocusedElement` for seamless keyboard navigation back to the trigger element.
+**Action:** Always ensure explicitly defined `for` and `aria-describedby` attributes bind labels and hints to their inputs. Implement `Escape` key listeners and activeElement focus restorations in all custom modal designs.
