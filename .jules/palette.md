@@ -1,0 +1,3 @@
+## 2026-03-22 - Form & Modal Accessibility Improvements
+**Learning:** The VisaFact application relied on implicit or purely visual label associations for its main form selects and lacked basic ARIA properties on its core Evidence modal, failing screen readers and keyboard navigation (missing Escape to close).
+**Action:** When working on UI components, ensure that `<label>` tags explicitly use the `for` attribute corresponding to input `id`s, form inputs use `aria-describedby` for helper text, and custom modals implement ARIA dialog patterns (`role="dialog"`, `aria-modal="true"`) alongside robust keyboard support (focus management on open/close and Escape key dismissal).
