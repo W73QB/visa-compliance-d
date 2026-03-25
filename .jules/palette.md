@@ -1,0 +1,3 @@
+## 2024-03-25 - Explicit Label Associations in Flex Layouts
+**Learning:** In the visa-compliance-d app, labels and select inputs are often visually separated by nested `div` elements for flex/grid layouts. This layout pattern makes it crucial to use explicit `for` attributes on `<label>` elements and `aria-describedby` on `<select>` elements to properly associate them with helper text, ensuring screen readers can announce the correct context.
+**Action:** When adding new forms or fields using similar flex layouts, proactively add `for` and `aria-describedby` attributes to maintain accessibility standards.
