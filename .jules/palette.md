@@ -1,0 +1,3 @@
+## 2026-03-28 - ARIA fixes for Material Symbols and Form Selects
+**Learning:** Google Material Symbols implemented as text inside `<span>` tags (ligatures) are read aloud by screen readers (e.g., "gavel", "health_and_safety") if not explicitly hidden. Additionally, `flex-col` layouts often separate form labels from inputs, making the `for` attribute and `id` linking critical for screen readers, as they won't implicitly group them.
+**Action:** Always add `aria-hidden="true"` to Google Material Symbol ligatures. Ensure `for` on `<label>` matches the `id` on the corresponding `<select>` or `<input>`, and use `aria-describedby` to link hints or helper text below inputs.
