@@ -1,0 +1,3 @@
+## 2024-03-29 - [Accessibility Enhancements for VisaFact]
+**Learning:** Material icons used without `aria-hidden="true"` disrupt screen readers, as they read the ligature text. Dynamic form elements like `select` can benefit from `aria-describedby` to associate them with hint texts, making the interface more accessible. A modal missing a proper focus trap and an easy way to close it with the `Escape` key causes a poor keyboard navigation experience.
+**Action:** Implemented `aria-hidden="true"` on all material icon spans to avoid screen readers announcing icon text. Associated hints using `aria-describedby`. Re-structured modal logic to trap and restore focus and handle the `Escape` key.
