@@ -1,0 +1,3 @@
+## 2024-03-24 - explicit label-to-select association for a11y
+**Learning:** In the VisaFact app, form layouts utilizing Tailwind `flex-col` decouple labels visually from input fields. Screen readers fail to connect native `<select>` dropdowns to their helper texts or headers unless `for` and `aria-describedby` are explicitly added. The layout hides this broken association from sighted users.
+**Action:** When adding any new form input, especially dropdowns nested inside `relative` wrappers with trailing helper paragraphs, always explicitly assign `id`s to the inputs, match them to `for` attributes on labels, and use `aria-describedby` pointing to the helper paragraph's `id`.
