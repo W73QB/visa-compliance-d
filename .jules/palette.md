@@ -1,0 +1,3 @@
+## 2025-04-04 - Form Labels and Hints Accessibility
+**Learning:** In the VisaFact app, complex layout using `flex-col` separated native `<label>` elements from their corresponding input elements visually, making programmatic association crucial. The inputs were missing explicit `for` attributes on labels and `aria-describedby` for their hints (`#visaHint` and `#productHint`). This structure fails accessibility audits without proper manual linking.
+**Action:** When designing or refactoring forms in this application, explicitly associate labels using the `for` attribute (e.g., `for="visaSelect"`) and provide context via `aria-describedby` pointing to the helper text IDs (e.g., `aria-describedby="visaHint"`), even if they appear adjacent in the layout.
