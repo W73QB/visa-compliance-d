@@ -28,6 +28,8 @@ $ui = $ui.TrimStart([char]0xFEFF)
 
 Assert-True ($ui -like "*application/ld+json*") "UI includes JSON-LD structured data"
 Assert-True ($ui -like "*aria-live*") "UI has aria-live region"
+Assert-True ($ui -like "*role=`"dialog`"*") "UI modal has role dialog"
+Assert-True ($ui -like "*aria-modal=`"true`"*") "UI modal has aria-modal true"
 Assert-True ($ui -like "*Skip to main content*") "UI has skip link"
 Assert-True ($ui -like "*Needs Review*") "UI includes needs review badge"
 Assert-True ($ui -like "*Last Verified*") "UI includes last verified label"
