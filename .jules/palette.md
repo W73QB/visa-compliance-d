@@ -1,0 +1,4 @@
+## 2026-04-06 - Explicit Input Labels in Flex-Col Layouts & ARIA DescribedBy
+
+**Learning:** When inputs are grouped with their text labels inside a `flex-col` container (meaning they are not physically wrapped by the `<label>` tag), explicit `for` attributes on the `<label>` matched to the input's `id` are strictly necessary for accessibility. Without this, screen readers may not associate the text with the input, and clicking the label will not focus the input. Additionally, providing supplementary helper text (like hints) below form inputs is common, but screen readers may skip this text unless explicitly associated using `aria-describedby` on the input element pointing to the hint's `id`.
+**Action:** Always use explicit `for="id"` attributes on `<label>` elements when separating label text and inputs via layout containers. Consistently use `aria-describedby="hintId"` on input elements to ensure helper text is announced by screen readers.
