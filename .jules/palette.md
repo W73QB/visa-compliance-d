@@ -1,0 +1,3 @@
+## 2024-04-08 - Explicit ARIA Description for Select Inputs
+**Learning:** In responsive forms with flex layouts where labels are separated from inputs, explicit `aria-describedby` attributes are needed on native `<select>` elements to properly associate them with helper/hint text. Additionally, disabled buttons must have `aria-disabled="true"` correctly synced alongside the native `disabled` attribute to communicate status cleanly to screen readers.
+**Action:** Ensure all form controls actively reference their corresponding descriptive text using ARIA attributes, and dynamic states (like disabled buttons) are mirrored in the accessibility tree via ARIA.
