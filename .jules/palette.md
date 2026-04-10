@@ -1,0 +1,3 @@
+## 2025-04-10 - Form Labels & Disabled State Accessibility
+**Learning:** In `ui/index.html`, inputs like `<select>` elements and `<button>` elements had missing or misconfigured accessibility attributes. The visual labels for `<select>` lacked `for` attributes connecting them to the inputs, and the select inputs themselves lacked `aria-describedby` connecting them to their helper hints. The disabled "Check Compliance" button lacked `aria-disabled="true"`.
+**Action:** Always ensure `for` attributes are set on labels mapping to input `id`s, attach `aria-describedby` to inputs referring to their hint elements, and maintain `aria-disabled="true"` in sync with the `disabled` property via JS to improve screen reader communication for inactive states.
