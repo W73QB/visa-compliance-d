@@ -1,0 +1,3 @@
+## 2024-04-11 - Modal & Form Accessibility Enhancements
+**Learning:** This app uses native Tailwind-styled `<select>` elements which visually separate labels from inputs using flexbox, requiring explicit `for` and `aria-describedby` attributes to associate them properly for screen readers. Modals here are custom DOM elements, not native `<dialog>`, so they lack built-in focus restoration and Escape key support, which must be added manually for full accessibility.
+**Action:** Ensure all custom modal implementations manage focus restoration (`lastFocusedElement`), support the `Escape` key, and explicitly add `role="dialog"` and `aria-modal="true"`. Use `for` attributes on all separated labels.
