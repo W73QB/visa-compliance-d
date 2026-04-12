@@ -1,0 +1,3 @@
+## 2026-04-12 - [Accessible Form Inputs in flex-col Layouts]
+**Learning:** Due to the visual separation caused by `flex-col` and nested div structures in the form UI, screen readers and pointer devices struggle to associate labels with `<select>` or `<input>` elements unless explicit `for` attributes (on the label) matching the input's `id` are used. Similarly, helper text must be explicitly linked via `aria-describedby` to provide full context to assistive tech.
+**Action:** Always ensure that form labels utilize the `for` attribute and that hint/helper text elements are programmatically associated using `aria-describedby` across all forms in this application.
