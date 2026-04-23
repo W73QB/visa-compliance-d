@@ -1,0 +1,3 @@
+## 2024-05-24 - Explicit Label and Hint Associations for Screen Readers
+**Learning:** In Tailwind UI layouts using flex-col where labels and inputs are visually separated, implicit wrapping (<label><input/></label>) is often impractical. Using explicit `for` and `id` mapping ensures screen readers maintain context. Similarly, associating helper text with inputs using `aria-describedby` provides critical context to assistive technologies.
+**Action:** Always map separated labels to their inputs using `for="inputId"` and link helper text (like hints) to the input using `aria-describedby="hintId"`.
