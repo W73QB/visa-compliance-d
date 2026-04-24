@@ -1,0 +1,3 @@
+## 2023-10-27 - Form Select Accessibility
+**Learning:** In the VisaFact UI, form `<select>` elements (`#visaSelect`, `#productSelect`) were missing proper associations with their labels (using `for` attributes on `<label>`) and with their hint text (using `aria-describedby` on `<select>`). The `#checkBtn` was also missing the `aria-disabled` property reflecting its disabled state.
+**Action:** Added `for` attributes to the labels, `aria-describedby` to the `<select>` elements linking to the hint text IDs, and `aria-disabled` toggling on the `checkBtn` when its disabled state changes to ensure full accessibility for screen readers.
