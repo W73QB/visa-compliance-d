@@ -1,0 +1,3 @@
+## 2026-04-28 - Adding accessible labels and descriptive hints for Flex-Col inputs
+**Learning:** In responsive layouts using `flex-col`, visual proximity between a label, input, and hint text is often broken for screen readers. Explicitly linking `<label for="[id]">` and using `aria-describedby` to associate helper text with the input (`<select id="[id]" aria-describedby="[hint-id]">`) is critical to ensure screen readers announce the input correctly along with its helpful context.
+**Action:** Always include explicit `for` and `aria-describedby` attributes when designing custom forms, particularly when relying on structural Tailwind layout classes like `flex-col` which visually detach elements.
