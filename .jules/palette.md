@@ -1,0 +1,3 @@
+## 2024-05-03 - Form Labels in Flex Layouts
+**Learning:** In Tailwind flex-col layouts (or any CSS layout where labels and inputs are visually separated or ordered non-sequentially), standard visual association breaks down for screen readers. Form inputs (like `visaSelect` and `productSelect`) must explicitly use `for` attributes on labels and `aria-describedby` for helper text (`#visaHint`, `#productHint`) to ensure reliable accessibility.
+**Action:** Always ensure `for` attributes point correctly to input IDs and bind helper text with `aria-describedby` when building or reviewing forms, especially those with custom flex layouts.
