@@ -1,0 +1,3 @@
+## 2025-05-18 - Missing explicit `for` and `aria-describedby` in dropdown labels
+**Learning:** Found an accessibility issue pattern specific to this app's input components where `<label>` elements were visually grouped with `<select>` elements using Tailwind `flex-col` and relative positioning, but lacked the explicit `for` attribute and `aria-describedby` attributes to structurally bind them and their hint text.
+**Action:** Always ensure that `for` attributes are added to labels mapping to the `id` of inputs, and `aria-describedby` added to inputs mapping to the `id` of hint text for structural integrity in screen readers.
