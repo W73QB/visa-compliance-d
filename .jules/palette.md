@@ -1,0 +1,3 @@
+## 2026-05-09 - Accessible Form Selects
+**Learning:** In the flex-col layout used for form groups (where labels visually precede `<select>` elements but are not wrapping them), explicit `for` attributes on the `<label>` elements are required to trigger focus. Furthermore, dynamic native `<select>` dropdowns must use `aria-describedby` to programmatically associate themselves with their helper/hint text elements for full screen reader accessibility.
+**Action:** Always verify that layout-separated labels have `for` attributes pointing to input `id`s, and ensure descriptive helper text is linked using `aria-describedby`.
