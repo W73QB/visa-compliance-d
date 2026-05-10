@@ -1,0 +1,3 @@
+## 2026-05-10 - Label-Input Association in Flex-Col Layouts
+**Learning:** In the app's visually separated `flex-col` layout, implicit label-input association fails or is insufficient. Explicit `for` attributes in `<label>` elements are strictly necessary to bind them properly to their corresponding input IDs (like `<select id="visaSelect">`), ensuring correct programmatic association for accessibility tools despite the visual separation.
+**Action:** Always ensure explicit `for` attributes and matching `id`s are used for form controls in this project, particularly within tailwind layout containers like `flex-col` where DOM structure might drift from visual proximity.
