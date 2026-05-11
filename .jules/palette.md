@@ -1,0 +1,3 @@
+## 2026-05-11 - Semantic Forms and Disabled States
+**Learning:** Found an accessibility issue pattern where inputs using Tailwind's layout properties (e.g. `flex-col`) visually separate labels from inputs, which makes it less obvious that `for` and `id` mapping is missing. Further, disabled buttons relying entirely on the native `disabled` property do not communicate their semantic "disabled" state fully to screen readers.
+**Action:** Ensure all form `<label>`s have explicit `for` attributes connecting them to the target `<input>`/`<select>`, and add `aria-disabled="true"` to natively disabled buttons (along with JavaScript logic to toggle it on/off).
