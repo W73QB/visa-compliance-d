@@ -1,0 +1,3 @@
+## 2024-05-15 - Explicit Form Labels in Complex Layouts
+**Learning:** In complex layouts (like flex-col or grid), where labels and inputs are visually disjointed but semantically related, implicit wrapping `<label><input/></label>` is often structurally difficult. Missing explicit `for` attributes on labels targeting input IDs severely breaks accessibility and usability, preventing users from clicking the label to focus the input.
+**Action:** Always verify that every independent `<label>` element has a `for` attribute precisely matching the `id` of its corresponding input, and use `aria-describedby` to associate helper text, regardless of visual proximity.
