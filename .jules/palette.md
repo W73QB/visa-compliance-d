@@ -1,0 +1,3 @@
+## 2024-05-17 - [Accessible ARIA and Labels in Compliance Checker]
+**Learning:** Adding ARIA attributes like `aria-expanded` and `aria-hidden` natively to dynamically generated elements while syncing component states creates a much better screen reader experience for users navigating interactive components.
+**Action:** When creating toggle buttons or inputs, make sure they have respective descriptive labels using `for` referencing `id` and descriptive helper elements via `aria-describedby`. For elements dynamically disabling/enabling via JS, keep ARIA attributes in sync manually with their DOM visual representations (like `disabled`).
