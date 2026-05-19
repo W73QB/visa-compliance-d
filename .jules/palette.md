@@ -1,0 +1,3 @@
+## 2024-05-19 - Synchronizing Visual State with ARIA
+**Learning:** In dynamically updating UIs, visual state changes (like `disabled` properties on buttons or `hidden` classes on menus) are often not automatically communicated to screen readers unless the corresponding ARIA attributes (e.g., `aria-disabled`, `aria-expanded`) are manually updated in tandem within JavaScript event listeners.
+**Action:** When implementing JavaScript that toggles visibility or disabled states, always check if there is an associated ARIA attribute that also needs to be updated. Ensure `String(!isOpen)` logic accurately reflects the newly applied state.
