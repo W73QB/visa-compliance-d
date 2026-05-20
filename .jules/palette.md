@@ -1,0 +1,3 @@
+## 2026-05-20 - Missing Explicit Label Associations in Flex Layouts
+**Learning:** In the `ui/index.html` file, form inputs and their visual labels were contained within `flex-col` layout groups but lacked explicit `for` attributes linking the `<label>` to the `<select>` input ID. Screen readers and users relying on clicking labels to focus inputs are disadvantaged when labels and inputs are visually grouped but programmatically detached.
+**Action:** Always ensure that visual labels in custom UI component layouts (like flex columns) contain an explicit `for="input_id"` attribute and inputs have `aria-describedby` when helper text is present, to maintain strict programmatic association regardless of visual layout.
