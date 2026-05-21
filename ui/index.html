@@ -95,13 +95,13 @@
     class="sticky top-0 z-50 w-full bg-surface-light dark:bg-[#111418] border-b border-border-soft dark:border-border-dark backdrop-blur-md bg-opacity-95 dark:bg-opacity-95">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer">
-        <span class="material-symbols-outlined text-primary text-3xl icon-filled">verified_user</span>
+        <span class="material-symbols-outlined text-primary text-3xl icon-filled" aria-hidden="true">verified_user</span>
         <span class="text-text-primary dark:text-white text-xl font-bold tracking-tight">VisaFact</span>
       </div>
       <button id="mobileMenuBtn"
         class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Toggle menu">
-        <span class="material-symbols-outlined text-2xl">menu</span>
+        aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="material-symbols-outlined text-2xl" aria-hidden="true">menu</span>
       </button>
       <nav class="hidden md:flex items-center gap-8">
         <a class="text-sm font-medium text-text-primary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
@@ -128,7 +128,7 @@
       </div>
       <button
         class="bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm flex items-center gap-2">
-        <span class="material-symbols-outlined text-sm">support_agent</span>
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">support_agent</span>
         Support
       </button>
     </div>
@@ -140,7 +140,7 @@
         VisaFact Compliance Checker
       </h1>
       <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-4">
-        <span class="material-symbols-outlined text-accent text-lg icon-filled">verified</span>
+        <span class="material-symbols-outlined text-accent text-lg icon-filled" aria-hidden="true">verified</span>
         <span class="text-sm font-semibold text-accent">Evidence-Backed Decisions</span>
       </div>
       <p class="text-text-secondary dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -173,34 +173,34 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
         <div class="flex flex-col gap-3 group">
-          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying
+          <label for="visaSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying
             for</label>
           <div class="relative">
             <span
-              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
-            <select id="visaSelect"
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors" aria-hidden="true">gavel</span>
+            <select id="visaSelect" aria-describedby="visaHint"
               class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
               <option value="">Select visa route (authority)</option>
             </select>
             <span
-              class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+              class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true">expand_more</span>
           </div>
           <p id="visaHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a visa record (route +
             authority). Each record is evidence-based.</p>
         </div>
 
         <div class="flex flex-col gap-3 group">
-          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to
+          <label for="productSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to
             use</label>
           <div class="relative">
             <span
-              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
-            <select id="productSelect"
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors" aria-hidden="true">health_and_safety</span>
+            <select id="productSelect" aria-describedby="productHint"
               class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
               <option value="">Select an insurance product</option>
             </select>
             <span
-              class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+              class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true">expand_more</span>
           </div>
           <p id="productHint" class="text-xs text-text-secondary dark:text-gray-500 pl-1">Choose a product record
             (policy version + evidence).</p>
@@ -211,7 +211,7 @@
       <div class="mt-10 flex justify-center">
         <button id="checkBtn" disabled
           class="group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed">
-          <span class="material-symbols-outlined group-hover:scale-110 transition-transform">check_circle</span>
+          <span class="material-symbols-outlined group-hover:scale-110 transition-transform" aria-hidden="true">check_circle</span>
           Check Compliance
         </button>
       </div>
@@ -230,7 +230,7 @@
       <div id="esDnvBanner"
         class="hidden rounded-xl border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-5">
         <div class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-warning-yellow text-2xl">warning</span>
+          <span class="material-symbols-outlined text-warning-yellow text-2xl" aria-hidden="true">warning</span>
           <div class="space-y-2">
             <p class="font-semibold text-warning-yellow">Spain DNV: GREEN available</p>
             <p class="text-sm text-text-secondary dark:text-gray-300">
@@ -259,12 +259,12 @@
               <div class="flex flex-wrap items-center gap-2">
                 <div id="statusChip"
                   class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border">
-                  <span id="statusIcon" class="material-symbols-outlined text-sm icon-filled">help</span>
+                  <span id="statusIcon" class="material-symbols-outlined text-sm icon-filled" aria-hidden="true">help</span>
                   <span id="statusChipText">UNKNOWN</span>
                 </div>
                 <div id="needsReviewBadge"
                   class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-warning-yellow/40 text-warning-yellow bg-warning-yellow/10">
-                  <span class="material-symbols-outlined text-sm">warning</span>
+                  <span class="material-symbols-outlined text-sm" aria-hidden="true">warning</span>
                   Needs Review
                 </div>
               </div>
@@ -283,22 +283,22 @@
             <div
               class="flex flex-col gap-2 text-sm text-text-secondary dark:text-gray-400 bg-white dark:bg-gray-800/50 p-4 rounded-lg border border-border-soft dark:border-border-dark">
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-gray-400 text-lg">history</span>
+                <span class="material-symbols-outlined text-gray-400 text-lg" aria-hidden="true">history</span>
                 <span class="font-medium">Last Verified:</span>
                 <span id="lastVerified">-</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-gray-400 text-lg">account_balance</span>
+                <span class="material-symbols-outlined text-gray-400 text-lg" aria-hidden="true">account_balance</span>
                 <span class="font-medium">Authority:</span>
                 <span id="authorityText">-</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-gray-400 text-lg">fingerprint</span>
+                <span class="material-symbols-outlined text-gray-400 text-lg" aria-hidden="true">fingerprint</span>
                 <span class="font-medium">Scope:</span>
                 <span id="scopeText">-</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-gray-400 text-lg">inventory_2</span>
+                <span class="material-symbols-outlined text-gray-400 text-lg" aria-hidden="true">inventory_2</span>
                 <span class="font-medium">Snapshot:</span>
                 <span id="snapshotId">-</span>
               </div>
@@ -314,7 +314,7 @@
           <div class="p-6 md:p-8">
             <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-soft dark:border-border-dark">
               <div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <span class="material-symbols-outlined text-primary text-xl">rule</span>
+                <span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">rule</span>
               </div>
               <h3 class="font-bold text-lg text-text-primary dark:text-white">Visa Requirements (Facts)</h3>
             </div>
@@ -326,7 +326,7 @@
           <div class="p-6 md:p-8 bg-gray-50/30 dark:bg-black/10">
             <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-soft dark:border-border-dark">
               <div class="p-2 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                <span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-xl">fact_check</span>
+                <span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-xl" aria-hidden="true">fact_check</span>
               </div>
               <h3 class="font-bold text-lg text-text-primary dark:text-white">Compliance Reasons (Engine)</h3>
             </div>
@@ -338,7 +338,7 @@
             <div id="esDnvResultNotice"
               class="hidden mt-6 rounded-lg border border-warning-yellow/40 bg-warning-yellow/10 dark:bg-warning-yellow/10 p-4">
               <div class="flex items-start gap-2">
-                <span class="material-symbols-outlined text-warning-yellow text-lg">info</span>
+                <span class="material-symbols-outlined text-warning-yellow text-lg" aria-hidden="true">info</span>
                 <div class="text-sm text-text-secondary dark:text-gray-300">
                   Spain DNV requires no moratorium, no deductible, unlimited coverage, and public system risk coverage.
                   If your product has official evidence for all requirements, send it to support for review.
@@ -349,7 +349,7 @@
             <!-- Missing evidence box (only when UNKNOWN) -->
             <div id="missingBox" class="mt-6 hidden">
               <div class="flex items-center gap-2 mb-2 text-text-primary dark:text-white">
-                <span class="material-symbols-outlined text-warning-yellow">warning</span>
+                <span class="material-symbols-outlined text-warning-yellow" aria-hidden="true">warning</span>
                 <h4 class="font-bold">Missing evidence (why UNKNOWN)</h4>
               </div>
               <ul id="missingList" class="list-disc pl-6 text-sm text-text-secondary dark:text-gray-300"></ul>
@@ -364,28 +364,28 @@
               <a id="officialBtn" target="_blank" rel="noopener"
                 class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-border-soft dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-text-primary dark:text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
                 href="#">
-                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
                 Official Portal
               </a>
 
               <a id="snapshotBtn" target="_blank" rel="noopener"
                 class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-border-soft dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-text-primary dark:text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
                 href="#">
-                <span class="material-symbols-outlined text-sm">visibility</span>
+                <span class="material-symbols-outlined text-sm" aria-hidden="true">visibility</span>
                 Open Snapshot
               </a>
 
               <a id="notifyBtn" target="_blank" rel="noopener"
                 class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
                 href="#">
-                <span class="material-symbols-outlined text-sm">notifications_active</span>
+                <span class="material-symbols-outlined text-sm" aria-hidden="true">notifications_active</span>
                 Notify me of changes
               </a>
             </div>
 
             <button id="copyLinkBtn"
               class="flex items-center gap-2 px-4 py-2 text-text-secondary hover:text-primary dark:text-gray-400 dark:hover:text-white text-sm font-medium transition-colors">
-              <span class="material-symbols-outlined text-lg">link</span>
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">link</span>
               Copy link
             </button>
           </div>
@@ -411,11 +411,11 @@
           <div
             class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 flex justify-between text-xs text-gray-400">
             <div class="flex items-center gap-1">
-              <span class="material-symbols-outlined text-sm">update</span>
+              <span class="material-symbols-outlined text-sm" aria-hidden="true">update</span>
               <span id="lastUpdated">Last updated: -</span>
             </div>
             <div class="flex items-center gap-1">
-              <span class="material-symbols-outlined text-sm">code</span>
+              <span class="material-symbols-outlined text-sm" aria-hidden="true">code</span>
               <span id="builtAt">Built at: -</span>
             </div>
           </div>
@@ -444,7 +444,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
       <div class="flex flex-col md:flex-row justify-between items-center gap-8">
         <div class="flex items-center gap-2 opacity-80">
-          <span class="material-symbols-outlined text-2xl text-primary icon-filled">verified_user</span>
+          <span class="material-symbols-outlined text-2xl text-primary icon-filled" aria-hidden="true">verified_user</span>
           <span class="font-bold text-lg text-text-primary dark:text-white">VisaFact</span>
         </div>
         <div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-text-secondary dark:text-gray-400">
@@ -798,7 +798,7 @@
         li.innerHTML = `
       <div class="flex items-start justify-between gap-4">
         <div class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">rule</span>
+          <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0" aria-hidden="true">rule</span>
           <div>
             <p class="text-sm font-semibold text-text-primary dark:text-white">${title}</p>
             <p class="text-xs text-text-secondary dark:text-gray-500 mt-1">${desc}</p>
@@ -809,7 +809,7 @@
         </div>
         <button class="evBtn opacity-0 group-hover:opacity-100 focus:opacity-100 flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary-hover transition-all">
           View Evidence
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
         </button>
       </div>
     `;
@@ -871,7 +871,7 @@
             ${reasonText}
           </p>
           <button class="evBtn text-xs font-medium text-text-secondary hover:text-primary flex items-center gap-1 transition-colors">
-            <span class="material-symbols-outlined text-sm">open_in_new</span>
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
             View Evidence
           </button>
         </div>
@@ -1106,9 +1106,9 @@
 
         $("copyLinkBtn").addEventListener("click", async () => {
           await navigator.clipboard.writeText(location.href);
-          $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">done</span> Copied`;
+          $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg" aria-hidden="true">done</span> Copied`;
           setTimeout(() => {
-            $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg">link</span> Copy link`;
+            $("copyLinkBtn").innerHTML = `<span class="material-symbols-outlined text-lg" aria-hidden="true">link</span> Copy link`;
           }, 900);
           if (typeof trackEvent === "function") trackEvent("copy_link", { url: location.href });
         });
@@ -1127,7 +1127,7 @@
         console.error(err);
         $("loadingState").innerHTML = `
       <div class="text-center py-8">
-        <span class="material-symbols-outlined text-error-red text-4xl mb-2">error</span>
+        <span class="material-symbols-outlined text-error-red text-4xl mb-2" aria-hidden="true">error</span>
         <p class="text-error-red font-medium">Failed to load data</p>
         <p class="text-text-secondary text-sm mt-1">Please refresh the page or check your connection.</p>
         <button type="button" onclick="location.reload()" class="mt-4 px-4 py-2 bg-primary text-white rounded">Retry</button>
@@ -1144,6 +1144,7 @@
       const btn = $("mobileMenuBtn");
       const isOpen = !menu.classList.contains("hidden");
       menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(!isOpen));
       btn.querySelector("span").textContent = isOpen ? "menu" : "close";
     });
 
