@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility Enhancements in VisaFact UI
+**Learning:** Found several common accessibility gaps in the primary form, including missing `for` attributes on visual labels for select elements due to flex-col layouts separating them. Icon-only elements and status icons lacked `aria-hidden="true"`, causing screen readers to announce ligature text (e.g. "verified_user"). The check button lacked `aria-disabled`, and the mobile menu lacked `aria-expanded` and `aria-controls`.
+**Action:** Always map visible labels to their inputs using `for` and `id` attributes. Use `aria-describedby` for hint text. Use `aria-hidden="true"` on material icon ligatures. Sync visual disabled state to `aria-disabled` and toggle menu visibility with `aria-expanded`.
