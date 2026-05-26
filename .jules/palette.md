@@ -1,0 +1,4 @@
+## 2026-05-26 - Improve Accessibility of Modal Evidence
+
+**Learning:** Modal dialogs need to have proper ARIA attributes to be fully accessible, specifically `role="dialog"`, `aria-modal="true"`, and `aria-labelledby` referencing the title element. Focus management is also critical—focus should be trapped within the modal, placed on an interactive element when opened, and restored to the element that triggered it when closed. Supporting the `Escape` key to close the modal is a fundamental keyboard accessibility requirement.
+**Action:** When implementing new custom modal dialogs or reviewing existing ones, ensure ARIA attributes (`role`, `aria-modal`, `aria-labelledby`) are set, focus is properly managed (moved to modal on open, returned to trigger on close), and keyboard interactions (like closing with `Escape`) are supported.
