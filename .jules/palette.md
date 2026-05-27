@@ -1,0 +1,3 @@
+## 2024-05-27 - Form Accessibility Label Association
+**Learning:** Using flex-col layouts often separates labels and inputs visually, causing them to lack implicit association for screen readers. Explicit `for` attributes on labels targeting input IDs are necessary to ensure screen reader accessibility, and complex form fields benefit from `aria-describedby` linking to hint text.
+**Action:** Always ensure that form labels use explicit `for` attributes associated with the corresponding input element's `id`, particularly when layouts separate them visually, and map helper text using `aria-describedby`.
