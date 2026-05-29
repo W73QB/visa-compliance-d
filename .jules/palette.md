@@ -1,0 +1,3 @@
+## 2023-10-25 - Dynamic ARIA Attributes for Visafact Interactions
+**Learning:** When toggling menu visibility and dynamically enabling/disabling elements like the check button in the single-page compliance checker, CSS class toggles (`hidden`, `cursor-not-allowed`) alone fail to inform screen reader users of the updated state.
+**Action:** Programmatically update ARIA states simultaneously with class changes: e.g., `btn.setAttribute("aria-expanded", String(!isOpen))` for menus, `aria-disabled="true"` for inactive buttons, and establish initial DOM linkages using `aria-controls` and `aria-describedby` for select hints.
