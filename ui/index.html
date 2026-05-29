@@ -100,7 +100,9 @@
       </div>
       <button id="mobileMenuBtn"
         class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Toggle menu">
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
       <nav class="hidden md:flex items-center gap-8">
@@ -178,7 +180,7 @@
           <div class="relative">
             <span
               class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
-            <select id="visaSelect"
+            <select id="visaSelect" aria-describedby="visaHint"
               class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
               <option value="">Select visa route (authority)</option>
             </select>
@@ -195,7 +197,7 @@
           <div class="relative">
             <span
               class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
-            <select id="productSelect"
+            <select id="productSelect" aria-describedby="productHint"
               class="w-full pl-12 pr-10 h-14 rounded-lg border border-border-soft dark:border-border-dark bg-white dark:bg-gray-800 text-text-primary dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-base font-medium shadow-sm hover:border-gray-300 dark:hover:border-gray-600">
               <option value="">Select an insurance product</option>
             </select>
@@ -650,6 +652,7 @@
       const ok = $("visaSelect").value && $("productSelect").value;
       const btn = $("checkBtn");
       btn.disabled = !ok;
+      btn.setAttribute("aria-disabled", String(!ok));
       btn.className = ok
         ? "group flex items-center gap-3 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white text-lg font-bold rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
         : "group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed";
@@ -1144,6 +1147,7 @@
       const btn = $("mobileMenuBtn");
       const isOpen = !menu.classList.contains("hidden");
       menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(!isOpen));
       btn.querySelector("span").textContent = isOpen ? "menu" : "close";
     });
 
