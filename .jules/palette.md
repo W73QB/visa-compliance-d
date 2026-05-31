@@ -1,0 +1,3 @@
+## 2024-05-31 - Mobile Menu ARIA States and Form Accessibility
+**Learning:** The mobile menu toggle button (`#mobileMenuBtn`) lacked explicit `aria-expanded` and `aria-controls` attributes, and `aria-expanded` was not dynamically updated when toggled. Additionally, form elements like `<select>` were missing programmatically associated `aria-describedby` hint text and `for` attributes on their adjacent `<label>` tags. The check compliance button also missed `aria-disabled` when disabled.
+**Action:** Always add explicit semantic ARIA associations like `aria-expanded`/`aria-controls` for toggles, `aria-disabled` for visually and mechanically disabled buttons, and use `aria-describedby`/explicit `for` attributes for input groups.
