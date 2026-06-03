@@ -100,7 +100,9 @@
       </div>
       <button id="mobileMenuBtn"
         class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Toggle menu">
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
       <nav class="hidden md:flex items-center gap-8">
@@ -209,7 +211,7 @@
       </div>
 
       <div class="mt-10 flex justify-center">
-        <button id="checkBtn" disabled
+        <button id="checkBtn" disabled aria-disabled="true"
           class="group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed">
           <span class="material-symbols-outlined group-hover:scale-110 transition-transform">check_circle</span>
           Check Compliance
@@ -650,6 +652,7 @@
       const ok = $("visaSelect").value && $("productSelect").value;
       const btn = $("checkBtn");
       btn.disabled = !ok;
+      btn.setAttribute("aria-disabled", String(!ok));
       btn.className = ok
         ? "group flex items-center gap-3 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white text-lg font-bold rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
         : "group flex items-center gap-3 px-8 py-3.5 bg-primary/50 text-white text-lg font-bold rounded-lg transition-all shadow-md cursor-not-allowed";
@@ -1145,6 +1148,7 @@
       const isOpen = !menu.classList.contains("hidden");
       menu.classList.toggle("hidden");
       btn.querySelector("span").textContent = isOpen ? "menu" : "close";
+      btn.setAttribute("aria-expanded", String(!isOpen));
     });
 
     init().catch(err => {
