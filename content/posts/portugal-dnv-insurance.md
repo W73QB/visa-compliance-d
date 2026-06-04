@@ -90,22 +90,27 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 ## Where to buy compliant insurance for Portugal Remote Work Visa
 
+Based on compliance check results for this route, the following products
+show GREEN for Portugal DNV / Remote Work Visa:
+
 [SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) —
-travel medical insurance for 175+ countries covering unexpected illness, injury,
-delays, lost luggage, and trip interruptions.
-Flexible plans: buy before you leave or while already abroad, cancel anytime.
+travel medical insurance covering unexpected illness, injury, delays, lost luggage,
+and trip interruptions in 175+ countries. Buy before you leave or while already abroad.
+Flexible plans: cancel anytime, auto-extends every 4 weeks.
 
 [SafetyWing Nomad Insurance Complete](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) —
 full health insurance with extra travel protections in 175+ countries.
-Includes routine checkups, mental health, and wellness coverage.
+Includes routine checkups, mental health support, wellness therapies, and cancer treatment.
+Can be used as your primary health insurance wherever you live, work, or travel.
 
-> Check the compliance checker for your specific Portugal consulate route.
-> Requirements can vary between VFS and other routes.
+> Always verify in the compliance checker for your specific consulate route.
+> Requirements can vary between VFS and other Portugal routes.
 
-{{< checker_cta visa="PT_DNV_2026" snapshot="releases/2026-01-15" label="Check insurance for Portugal Remote Work Visa" >}}
+{{< checker_cta visa="PT_DNV_2026" snapshot="releases/2026-01-15" label="Check your insurance for Portugal Remote Work Visa" >}}
 
 *Affiliate disclosure: Links above are affiliate links.
 We may earn a commission at no extra cost to you.
+Compliance results are generated independently.
 See [affiliate disclosure](/affiliate-disclosure/).*
 
 ## Disclaimer + Affiliate disclosure
