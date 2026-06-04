@@ -109,15 +109,15 @@ Not legal advice. Compliance results are evidence-based snapshots.
 
 **Why there is no affiliate link on this page:**
 The Germany Freelance Visa requires health insurance commensurate with
-German statutory minimum coverage. Travel insurance — including SafetyWing —
-does not meet this requirement and shows RED in the checker for this route.
+German statutory minimum coverage. Travel insurance — including SafetyWing
+and World Nomads — does not meet this requirement and shows RED in the checker.
 
-We only place affiliate links for products that show GREEN.
 Compliant products for this route (dedicated expat health insurance providers)
 will be added when our affiliate partnerships are confirmed.
+Feather Insurance and similar Germany-authorized providers are being evaluated.
 
 *Compliance results are never influenced by commercial relationships.
-See our [affiliate disclosure](/affiliate-disclosure/).*
+See [affiliate disclosure](/affiliate-disclosure/).*
 
 Last updated: 2026-06-05
 
