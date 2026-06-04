@@ -126,6 +126,26 @@ These two conflicts alone are enough to keep the route RED, even if other requir
 - [Spain DNV insurance mistakes](/traps/spain-dnv-insurance-mistakes/)
 - [How to read compliance results](/guides/how-to-read-results/)
 
+## Compliant insurance for Spain Digital Nomad Visa
+
+Spain DNV requires: insurer authorized in Spain, unlimited coverage,
+no deductibles, no co-payments, no moratorium.
+
+SafetyWing shows RED for this route. The checker confirmed this finding —
+see the article above for the detailed evidence.
+
+Compliant providers for Spain DNV (those showing GREEN in the checker)
+will be linked here when our affiliate partnerships are confirmed.
+AXA Schengen and similar Spain-authorized insurers are being evaluated.
+
+> Use the compliance checker to see current GREEN products for Spain DNV.
+
+{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="releases/2026-01-15" label="Check compliant insurance for Spain DNV" >}}
+
+*No affiliate links on this page at this time.
+We only recommend products that show GREEN in the checker.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
