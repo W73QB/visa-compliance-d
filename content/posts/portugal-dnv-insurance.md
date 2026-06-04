@@ -88,6 +88,26 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 - [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 - [Schengen 30,000 EUR insurance rule](/guides/schengen-30000-insurance/)
 
+## Where to buy compliant insurance for Portugal Remote Work Visa
+
+[SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) —
+travel medical insurance for 175+ countries covering unexpected illness, injury,
+delays, lost luggage, and trip interruptions.
+Flexible plans: buy before you leave or while already abroad, cancel anytime.
+
+[SafetyWing Nomad Insurance Complete](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) —
+full health insurance with extra travel protections in 175+ countries.
+Includes routine checkups, mental health, and wellness coverage.
+
+> Check the compliance checker for your specific Portugal consulate route.
+> Requirements can vary between VFS and other routes.
+
+{{< checker_cta visa="PT_DNV_2026" snapshot="releases/2026-01-15" label="Check insurance for Portugal Remote Work Visa" >}}
+
+*Affiliate disclosure: Links above are affiliate links.
+We may earn a commission at no extra cost to you.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.

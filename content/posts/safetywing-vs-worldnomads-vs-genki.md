@@ -136,6 +136,27 @@ Reading this table:
 - [Germany freelance visa insurance](/posts/germany-freelance-insurance/)
 - [How to choose DNV insurance](/guides/how-to-choose-dnv-insurance/)
 
+## Quick links
+
+If the compliance checker shows a product as GREEN for your visa route,
+you can purchase directly:
+
+- [SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=sw-comparison) —
+  travel medical, 175+ countries, flexible monthly subscription, cancel anytime
+- [SafetyWing Nomad Insurance Complete](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=sw-comparison) —
+  full health insurance with travel protections, 175+ countries,
+  includes routine checkups and mental health coverage
+
+*Check the compliance checker for your specific visa route before purchasing.
+A product GREEN for one route may show RED or UNKNOWN for another.*
+
+{{< checker_cta snapshot="releases/2026-01-15" label="Check compliance for your visa route" >}}
+
+*Affiliate disclosure: SafetyWing links are affiliate links.
+We may earn a commission at no extra cost to you.
+This does not affect compliance results or comparisons.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.

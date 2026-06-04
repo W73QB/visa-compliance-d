@@ -109,6 +109,25 @@ UNKNOWN results are most common when product documents do not explicitly state a
 - [How to read compliance results](/guides/how-to-read-results/)
 - [Compliance status meaning](/guides/compliance-status-meaning/)
 
+## Where to buy compliant insurance for Malta Nomad Residence Permit
+
+The Malta Nomad Residence Permit requires health insurance for the full permit period.
+
+[SafetyWing Nomad Insurance Complete](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=malta-post) —
+full health insurance with extra travel protections in 175+ countries.
+Includes routine checkups, mental health support, wellness therapies, and cancer treatment.
+Can be used as your primary health insurance for the duration of your permit.
+
+> Verify coverage duration requirements in the checker
+> before submitting your Malta application.
+
+{{< checker_cta visa="MT_NOMAD_RESIDENCE_2026" snapshot="releases/2026-01-15" label="Check insurance for Malta Nomad Permit" >}}
+
+*Affiliate disclosure: The link above is an affiliate link.
+We may earn a commission at no extra cost to you.
+Compliance results are independent of affiliate relationships.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
