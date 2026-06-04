@@ -111,6 +111,35 @@ As of snapshot `releases/2026-01-15`, example product outcomes across the verifi
 - [Malta nomad residence insurance hub](/posts/malta-nomad-insurance/)
 - [Spain DNV visa hub](/visas/spain/digital-nomad-visa/)
 
+## Recommended insurance for digital nomad visas in Europe
+
+Based on compliance check results for European digital nomad visa routes,
+two SafetyWing products cover most travelers:
+
+**For most routes (Spain DNV, Portugal E11, Malta Nomad):**
+
+[SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=europe-post) —
+travel medical insurance covering unexpected illness, injury, delays, lost luggage,
+and trip interruptions in 175+ countries. Buy before you leave or while already abroad.
+Flexible monthly plans: cancel anytime, auto-extends every 4 weeks.
+
+**For routes requiring full health insurance:**
+
+[SafetyWing Nomad Insurance Complete](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=europe-post) —
+full health insurance with extra travel protections in 175+ countries.
+Includes routine checkups, mental health support, wellness therapies, and cancer treatment.
+Can be used as your primary health insurance wherever you live, work, or travel.
+
+> Always check the compliance checker for your specific route and product.
+> A GREEN result confirms compliance based on current evidence.
+
+{{< checker_cta snapshot="releases/2026-01-15" label="Check your route and product" >}}
+
+*Affiliate disclosure: Links above are affiliate links.
+We may earn a commission at no extra cost to you.
+Compliance results are generated independently and are not influenced
+by affiliate relationships. See our [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
