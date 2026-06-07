@@ -1,208 +1,355 @@
+/* =========================================================
+   VisaFact Design Tokens — Phase 1
+   All --vf-* custom properties are the single source of
+   truth for color, space, radius, shadow, type, and motion.
+   Component classes below consume these tokens.
+   Do NOT edit bare hex values elsewhere in the codebase
+   without updating the token here first.
+   ========================================================= */
+
 :root {
-  --primary: #1e3a5f;
-  --secondary: #c9a227;
-  --theme: #faf8f5;
-  --entry: #ffffff;
-  --content: #1a1a1a;
-  --vf-primary: #1e3a5f;
-  --vf-accent: #c9a227;
-  --vf-bg: #faf8f5;
-  --vf-text: #1a1a1a;
-  --vf-surface: #ffffff;
-  --vf-border: #e8e4df;
+  /* --- Brand colors ---
+     Navy deepened ~10% from original #1e3a5f.
+     Gold saturation raised ~5% from original #c9a227.      */
+  --vf-color-primary:       #19335a;
+  --vf-color-primary-hover: #122645;
+  --vf-color-accent:        #d4a51e;
+  --vf-color-accent-hover:  #b89118;
+
+  /* --- Surface / ink --- */
+  --vf-color-paper:   #faf8f5;
+  --vf-color-surface: #ffffff;
+  --vf-color-ink:     #151515;
+  --vf-color-line:    #e8e4df;
+
+  /* --- Text aliases --- */
+  --vf-color-text:           var(--vf-color-ink);
+  --vf-color-text-secondary: #525252;
+
+  /* --- Status --- */
+  --vf-color-success: #059669;
+  --vf-color-warning: #d97706;
+  --vf-color-danger:  #dc2626;
+  --vf-color-info:    #0369a1;
+  --vf-color-unknown: #6b7280;
+
+  /* --- Radius scale --- */
+  --vf-radius-sm:   4px;
+  --vf-radius-md:   8px;
+  --vf-radius-lg:   12px;
+  --vf-radius-xl:   16px;
+  --vf-radius-full: 9999px;
+
+  /* --- Elevation (3 tiers, no runaway shadow-xl) --- */
+  --vf-shadow-0: none;
+  --vf-shadow-1: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+  --vf-shadow-2: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --vf-shadow-3: 0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+
+  /* --- Spacing (4px base scale) --- */
+  --vf-space-1:   4px;
+  --vf-space-2:   8px;
+  --vf-space-3:  12px;
+  --vf-space-4:  16px;
+  --vf-space-5:  20px;
+  --vf-space-6:  24px;
+  --vf-space-8:  32px;
+  --vf-space-10: 40px;
+  --vf-space-12: 48px;
+
+  /* --- Type scale --- */
+  --vf-type-display-size: 2.5rem;
+  --vf-type-display-lh:   1.15;
+  --vf-type-display-ls:  -0.02em;
+
+  --vf-type-lead-size: 1.125rem;
+  --vf-type-lead-lh:   1.55;
+
+  --vf-type-body-size: 1rem;
+  --vf-type-body-lh:   1.6;
+
+  --vf-type-small-size: 0.875rem;
+  --vf-type-small-lh:   1.5;
+
+  --vf-type-caps-size: 0.75rem;
+  --vf-type-caps-lh:   1.4;
+  --vf-type-caps-ls:   0.08em;
+
+  /* --- Motion --- */
+  --vf-motion-fast: 120ms;
+  --vf-motion-base: 200ms;
+  --vf-motion-slow: 350ms;
+  --vf-ease-standard:   cubic-bezier(0.2, 0.0, 0, 1);
+  --vf-ease-emphasized: cubic-bezier(0.3, 0.0, 0, 1);
+
+  /* --- Font stacks --- */
+  --vf-font-display: 'DM Serif Display', Georgia, serif;
+  --vf-font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* --- PaperMod variable aliases ---
+     Maps PaperMod's internal --theme / --entry / --content
+     to our token layer without touching themes/PaperMod/.   */
+  --primary:  var(--vf-color-primary);
+  --secondary: var(--vf-color-accent);
+  --theme:    var(--vf-color-paper);
+  --entry:    var(--vf-color-surface);
+  --content:  var(--vf-color-ink);
+
+  /* --- Legacy aliases (kept for backward compatibility) --- */
+  --vf-primary: var(--vf-color-primary);
+  --vf-accent:  var(--vf-color-accent);
+  --vf-bg:      var(--vf-color-paper);
+  --vf-text:    var(--vf-color-ink);
+  --vf-surface: var(--vf-color-surface);
+  --vf-border:  var(--vf-color-line);
 }
 
 html[data-theme="dark"] {
-  --theme: #0f1419;
-  --entry: #1a232e;
-  --content: #f5f5f5;
-  --vf-bg: #0f1419;
-  --vf-text: #f5f5f5;
-  --vf-surface: #1a232e;
-  --vf-border: #2d3748;
+  --vf-color-paper:          #0f1419;
+  --vf-color-surface:        #1a232e;
+  --vf-color-ink:            #f0f0ef;
+  --vf-color-line:           #2d3748;
+  --vf-color-text-secondary: #9ca3af;
+
+  /* PaperMod dark aliases */
+  --theme:   var(--vf-color-paper);
+  --entry:   var(--vf-color-surface);
+  --content: var(--vf-color-ink);
+
+  /* Legacy dark aliases */
+  --vf-bg:      var(--vf-color-paper);
+  --vf-text:    var(--vf-color-ink);
+  --vf-surface: var(--vf-color-surface);
+  --vf-border:  var(--vf-color-line);
 }
 
+/* =========================================================
+   Base typography
+   ========================================================= */
+
 body {
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  background: var(--vf-bg);
-  color: var(--vf-text);
+  font-family: var(--vf-font-body);
+  background: var(--vf-color-paper);
+  color: var(--vf-color-ink);
+  line-height: var(--vf-type-body-lh);
 }
 
 h1, h2, h3, h4 {
-  font-family: "DM Serif Display", Georgia, serif;
-  letter-spacing: 0.01em;
+  font-family: var(--vf-font-display);
+  letter-spacing: var(--vf-type-display-ls);
 }
 
 a {
-  color: var(--vf-primary);
+  color: var(--vf-color-primary);
 }
 
 a:hover {
-  color: var(--vf-accent);
+  color: var(--vf-color-accent);
 }
 
-/* PaperMod cards */
+/* =========================================================
+   PaperMod card overrides
+   ========================================================= */
+
 .post-entry, .post-single, .entry-content {
-  border-radius: 14px;
-  background: var(--vf-surface);
-  border: 1px solid var(--vf-border);
+  border-radius: var(--vf-radius-lg);
+  background: var(--vf-color-surface);
+  border: 1px solid var(--vf-color-line);
 }
 
-/* Header / footer alignment */
+/* =========================================================
+   Header / footer
+   ========================================================= */
+
 .vf-header {
-  border-bottom: 1px solid var(--vf-border);
-  background: rgba(250, 248, 245, 0.9);
+  border-bottom: 1px solid var(--vf-color-line);
+  background: rgba(250, 248, 245, 0.92);
   backdrop-filter: blur(8px);
 }
+
 html[data-theme="dark"] .vf-header {
-  background: rgba(15, 20, 25, 0.9);
+  background: rgba(15, 20, 25, 0.92);
 }
+
 .vf-header .logo a {
-  font-family: "DM Serif Display", Georgia, serif;
-  color: var(--vf-text);
+  font-family: var(--vf-font-display);
+  color: var(--vf-color-ink);
 }
+
 .vf-menu a span {
   font-weight: 600;
 }
+
 .vf-footer {
-  border-top: 1px solid var(--vf-border);
-  background: var(--vf-surface);
+  border-top: 1px solid var(--vf-color-line);
+  background: var(--vf-color-surface);
 }
 
-/* CTA button style */
+/* =========================================================
+   CTA button
+   ========================================================= */
+
 .vf-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--vf-space-2);
   padding: 0.6rem 1rem;
-  background: var(--vf-primary);
+  background: var(--vf-color-primary);
   color: #fff;
-  border-radius: 10px;
+  border-radius: var(--vf-radius-md);
   font-weight: 700;
   text-decoration: none;
+  transition: background-color var(--vf-motion-fast) var(--vf-ease-standard);
 }
 
-.vf-cta:hover { background: #152a45; }
+.vf-cta:hover {
+  background: var(--vf-color-primary-hover);
+  color: #fff;
+}
 
-/* CTA focus states */
 .vf-cta:focus-visible {
-  outline: 2px solid var(--vf-accent);
+  outline: 2px solid var(--vf-color-accent);
   outline-offset: 2px;
 }
 
-/* Trust callout */
+/* =========================================================
+   Trust callout
+   ========================================================= */
+
 .vf-trust {
-  border: 2px solid var(--vf-accent);
+  border: 2px solid var(--vf-color-accent);
   padding: 1rem;
-  border-radius: 12px;
-  background: rgba(201,162,39,0.08);
+  border-radius: var(--vf-radius-lg);
+  background: rgba(212, 165, 30, 0.08);
   font-weight: 600;
 }
+
 .vf-trust:focus-within {
-  box-shadow: 0 0 0 2px var(--vf-accent);
+  box-shadow: 0 0 0 2px var(--vf-color-accent);
 }
 
-/* Home hero layout */
+/* =========================================================
+   Home hero layout
+   ========================================================= */
+
 .vf-hero {
   display: grid;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
+  gap: var(--vf-space-8);
+  margin-bottom: var(--vf-space-10);
 }
+
 @media (min-width: 900px) {
   .vf-hero {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: start;
   }
 }
+
 .vf-kicker {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.72rem;
+  letter-spacing: var(--vf-type-caps-ls);
+  font-size: var(--vf-type-caps-size);
   font-weight: 700;
-  color: var(--vf-accent);
-  margin-bottom: 0.5rem;
+  color: var(--vf-color-accent);
+  margin-bottom: var(--vf-space-2);
 }
+
 .vf-lead {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
+  font-size: var(--vf-type-lead-size);
+  line-height: var(--vf-type-lead-lh);
+  margin-bottom: var(--vf-space-5);
 }
+
 .vf-cta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1rem 0 1.5rem;
+  gap: var(--vf-space-3);
+  margin: var(--vf-space-4) 0 var(--vf-space-6);
 }
+
 .vf-cta-secondary {
   background: transparent;
-  color: var(--vf-primary);
-  border: 2px solid var(--vf-primary);
+  color: var(--vf-color-primary);
+  border: 2px solid var(--vf-color-primary);
 }
+
 .vf-cta-secondary:hover {
-  background: rgba(30, 58, 95, 0.08);
+  background: rgba(25, 51, 90, 0.08);
+  color: var(--vf-color-primary);
 }
 
 .vf-hero-card {
-  background: var(--vf-surface);
-  border: 1px solid var(--vf-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  background: var(--vf-color-surface);
+  border: 1px solid var(--vf-color-line);
+  border-radius: var(--vf-radius-xl);
+  padding: var(--vf-space-6);
+  box-shadow: var(--vf-shadow-2);
 }
+
 .vf-card-label {
-  font-size: 0.8rem;
+  font-size: var(--vf-type-caps-size);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--vf-primary);
-  margin-bottom: 1rem;
+  letter-spacing: var(--vf-type-caps-ls);
+  color: var(--vf-color-primary);
+  margin-bottom: var(--vf-space-4);
 }
+
 .vf-stat-grid {
   display: grid;
-  gap: 0.9rem;
+  gap: var(--vf-space-3);
 }
+
 .vf-stat {
   padding: 0.75rem 0.9rem;
-  border: 1px dashed var(--vf-border);
-  border-radius: 10px;
+  border: 1px dashed var(--vf-color-line);
+  border-radius: var(--vf-radius-md);
 }
+
 .vf-stat-label {
-  font-size: 0.72rem;
+  font-size: var(--vf-type-caps-size);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--vf-text);
+  color: var(--vf-color-ink);
   opacity: 0.7;
   margin-bottom: 0.2rem;
 }
+
 .vf-stat-value {
   font-weight: 700;
-  color: var(--vf-text);
+  color: var(--vf-color-ink);
 }
+
 .vf-evidence {
-  margin-top: 1.2rem;
+  margin-top: var(--vf-space-5);
   padding: 0.85rem 1rem;
-  border-radius: 12px;
-  background: rgba(201,162,39,0.12);
-  border: 1px solid rgba(201,162,39,0.5);
+  border-radius: var(--vf-radius-lg);
+  background: rgba(212, 165, 30, 0.12);
+  border: 1px solid rgba(212, 165, 30, 0.5);
   font-weight: 600;
 }
 
 .vf-pillars {
   display: grid;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: var(--vf-space-4);
+  margin-bottom: var(--vf-space-8);
 }
+
 @media (min-width: 900px) {
   .vf-pillars {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Note: .vf-pill used here as the pillar tile class (not the badge pill).
+   The badge-pill component added in Phase 3 is .vf-pill--badge. */
 .vf-pill {
   padding: 1.1rem 1.2rem;
-  border-radius: 14px;
-  background: var(--vf-surface);
-  border: 1px solid var(--vf-border);
+  border-radius: var(--vf-radius-lg);
+  background: var(--vf-color-surface);
+  border: 1px solid var(--vf-color-line);
 }
+
 .vf-pill h3 {
   margin-top: 0;
 }
