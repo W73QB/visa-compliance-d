@@ -2,6 +2,8 @@
 tmpclaude-*-cwd
 # Sisyphus planning/evidence files
 .sisyphus/
+# Local Claude Code config and skills (machine-local, not shared)
+.claude/
 # Python
 __pycache__/
 *.py[cod]
