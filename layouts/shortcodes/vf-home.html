@@ -1,58 +1,67 @@
-﻿<div class="vf-hero">
-  <div>
+{{- /* vf-home.html — home page shortcode (Phase 4 restyle)
+     Copy avoids prohibited marketing claims per tools/lint_content.py BANNED_WORDS.
+     lint_content.py does not lint _index.md (not in posts/visas/guides/traps),
+     but copy is kept evidence-first for brand consistency.
+*/ -}}
+
+<div class="vf-home-hero">
+  <div class="vf-home-hero__text">
     <p class="vf-kicker">Evidence-based visa insurance compliance</p>
-    <h1>VisaFact: Digital Notary for Insurance Requirements</h1>
-    <p class="vf-lead">We translate official authority requirements into a clear compliance result, backed by sources and snapshots. No source = UNKNOWN.</p>
+    <h1>VisaFact: Evidence before opinions</h1>
+    <p class="vf-lead">We translate official authority checklists into a clear compliance status — backed by sources, locked to a snapshot date. No source = UNKNOWN, not a guess.</p>
     <div class="vf-cta-row">
-      <a class="vf-cta" href="/ui/">Open Compliance Checker</a>
-      <a class="vf-cta vf-cta-secondary" href="/methodology/">Read Methodology</a>
+      <a class="vf-cta" href="/ui/">Open compliance checker</a>
+      <a class="vf-cta vf-cta-secondary" href="/methodology/">How we evaluate</a>
     </div>
-    <div class="vf-trust">Every result links to evidence. Missing evidence is explicitly marked UNKNOWN.</div>
+    <div class="vf-trust">Every result links to the exact clause. Missing evidence is explicitly marked UNKNOWN.</div>
   </div>
-  <div class="vf-hero-card">
-    <div class="vf-card-label">Evidence Snapshot</div>
+
+  <aside class="vf-home-hero__card vf-hero-card" aria-label="Snapshot summary">
+    <div class="vf-card-label">Evidence snapshot</div>
     <div class="vf-stat-grid">
       <div class="vf-stat">
-        <div class="vf-stat-label">Sources</div>
-        <div class="vf-stat-value">Official</div>
+        <div class="vf-stat-label">Source type</div>
+        <div class="vf-stat-value">Official authority documents</div>
       </div>
       <div class="vf-stat">
-        <div class="vf-stat-label">Status Model</div>
-        <div class="vf-stat-value">GREEN / YELLOW / RED / UNKNOWN</div>
+        <div class="vf-stat-label">Result model</div>
+        <div class="vf-stat-value">GREEN / RED / UNKNOWN</div>
       </div>
       <div class="vf-stat">
-        <div class="vf-stat-label">Snapshot</div>
-        <div class="vf-stat-value">Versioned</div>
+        <div class="vf-stat-label">Verification</div>
+        <div class="vf-stat-value">Dated snapshot per result</div>
       </div>
     </div>
-    <div class="vf-evidence">No source = UNKNOWN. Evidence excerpts included.</div>
-  </div>
+    <div class="vf-evidence">No source = UNKNOWN. Evidence excerpts included per result.</div>
+  </aside>
 </div>
 
-<h2>How it works</h2>
+<section class="vf-home-why" aria-labelledby="why-heading">
+  <h2 id="why-heading">Why this is different</h2>
+  <div class="vf-why-grid">
 
-<div class="vf-pillars">
-  <div class="vf-pill">
-    <h3>Authority requirements</h3>
-    <p>We capture official rules with citations, locators, and verification dates.</p>
+    <div class="vf-why-item">
+      <div class="vf-why-icon" aria-hidden="true">&#9998;</div>
+      <div>
+        <h3>Evidence-first results</h3>
+        <p>Every status traces to a specific clause in an official authority document — page number, locator, and verified date. If the clause is absent, the status is UNKNOWN, not inferred.</p>
+      </div>
+    </div>
+
+    <div class="vf-why-item">
+      <div class="vf-why-icon" aria-hidden="true">&#128274;</div>
+      <div>
+        <h3>Snapshot-reproducible</h3>
+        <p>Results are tied to a named data snapshot. A deep link to a past result always returns the same verdict — even if requirements changed after the snapshot date.</p>
+      </div>
+    </div>
+
   </div>
-  <div class="vf-pill">
-    <h3>Product facts</h3>
-    <p>Policies are tied to versions and evidence snapshots for auditability.</p>
-  </div>
-  <div class="vf-pill">
-    <h3>Rules engine</h3>
-    <p>VisaFacts are compared to ProductFacts to produce the compliance status.</p>
-  </div>
-</div>
+</section>
 
-<h2>Start here</h2>
-
-<div class="vf-cta-row">
-  <a class="vf-cta" href="/ui/">Check a visa now</a>
-  <a class="vf-cta vf-cta-secondary" href="/posts/">Read updates</a>
-</div>
-
-<h2>Disclaimer</h2>
-
-<p>Not legal advice. Always confirm requirements with official sources.</p>
+<section class="vf-try-checker" aria-labelledby="try-heading">
+  <h2 id="try-heading">Check your insurance now</h2>
+  <p>Select a visa route and an insurance product. The engine compares product evidence against official authority requirements and returns GREEN, RED, or UNKNOWN.</p>
+  <a class="vf-cta" href="/ui/?snapshot=releases/2026-01-15">Open compliance checker</a>
+  <p class="vf-try-note">Not legal advice. Results are evidence-based, not legal determinations. Always confirm requirements with the issuing authority before submitting an application.</p>
+</section>
