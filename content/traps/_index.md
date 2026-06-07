@@ -10,6 +10,7 @@ These trap writeups highlight recurring failure patterns we observe in authority
 - Review [Spain DNV Insurance Mistakes](/traps/spain-dnv-insurance-mistakes/)
 - Review [Germany Travel Insurance Rejected](/traps/germany-travel-insurance-rejected/)
 - Run your policy through the [Compliance Checker](/ui/)
+- Cross-check the route requirements on the [visa pages](/visas/) and read how we evaluate evidence in the [methodology](/methodology/) before you submit
 
 ## What the authority requires
 
