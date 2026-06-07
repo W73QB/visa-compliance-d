@@ -14,6 +14,12 @@ def resolve_internal_target(target: str) -> bool:
     if target.startswith("/ui/") or target == "/ui":
         return (ROOT / "ui" / "index.html").exists()
 
+    # Evidence files are served as static assets (sources/ -> static/sources/).
+    # They are real downloadable links, not content pages, so resolve them
+    # against the source-of-truth sources/ directory.
+    if target.startswith("/sources/"):
+        return (ROOT / target.strip("/")).exists()
+
     target_path = target.strip("/")
     candidates = [
         CONTENT / f"{target_path}.md",
