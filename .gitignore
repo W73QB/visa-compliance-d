@@ -1,5 +1,7 @@
 # Temporary Claude Code files
 tmpclaude-*-cwd
+# Sisyphus planning/evidence files
+.sisyphus/
 # Python
 __pycache__/
 *.py[cod]
