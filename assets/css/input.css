@@ -19,7 +19,7 @@
     line-height: var(--vf-type-body-lh, 1.6);
     color: var(--vf-color-ink, #151515);
     background: var(--vf-color-paper, #faf8f5);
-    /* Removed: transition-colors duration-200 (body color flash on theme toggle) */
+    /* Phase 5: transition-colors removed from body (flash on theme toggle). */
   }
 
   h1 {
@@ -27,7 +27,7 @@
     font-size: clamp(1.75rem, 4vw, var(--vf-type-display-size, 2.5rem));
     line-height: var(--vf-type-display-lh, 1.15);
     letter-spacing: var(--vf-type-display-ls, -0.02em);
-    font-weight: 400; /* DM Serif Display is a display weight; synthesized bold looks off */
+    font-weight: 400;
   }
 
   h2 {
@@ -63,7 +63,6 @@
     color: var(--vf-color-ink);
   }
 
-  /* Link defaults (overridden by visafact.css) */
   a {
     color: var(--vf-color-primary, #19335a);
     text-underline-offset: 2px;
@@ -103,41 +102,58 @@ select:focus-visible {
 }
 
 /* =========================================================
-   Page load animations
-   (Phase 5 will consolidate to vf-rise; these names kept
-   so ui/index.html markup references remain valid.)
+   Motion — one coherent vocabulary (Phase 5)
+   All animations wrapped in (prefers-reduced-motion: no-preference)
+   so they short-circuit to no animation for users who prefer it.
+
+   Class names retained verbatim (.animate-fade-up, .animate-reveal,
+   .pulse-success) so ui/index.html markup references keep working.
+   Keyframes consolidated to vf-rise + vf-pulse.
    ========================================================= */
 
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0);    }
-}
-.animate-fade-up { animation: fadeSlideUp 0.6s ease-out both; }
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
+@media (prefers-reduced-motion: no-preference) {
 
-/* Result reveal animation */
-@keyframes revealUp {
-  from { opacity: 0; transform: translateY(30px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0)    scale(1);    }
-}
-.animate-reveal { animation: revealUp 0.5s ease-out both; }
+  /* --- One rise keyframe replaces fadeSlideUp + revealUp --- */
+  @keyframes vf-rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
 
-/* Status pulse for GREEN */
-@keyframes trustPulse {
-  0%,  100% { box-shadow: 0 0 0 0px rgba(5, 150, 105, 0.4); }
-  50%       { box-shadow: 0 0 0 8px rgba(5, 150, 105, 0);   }
-}
-.pulse-success { animation: trustPulse 2s ease-in-out infinite; }
+  /* --- Pulse keyframe (same as trustPulse, new name) --- */
+  @keyframes vf-pulse {
+    0%,  100% { box-shadow: 0 0 0 0px rgba(5, 150, 105, 0.4); }
+    50%       { box-shadow: 0 0 0 8px rgba(5, 150, 105, 0);   }
+  }
 
-/* Paper texture removed in Phase 5 (z-index -1, 0.03 opacity — not perceivable). */
+  /* Retained class names — all pointing to vf-rise */
+  .animate-fade-up {
+    animation: vf-rise var(--vf-motion-slow, 350ms) var(--vf-ease-standard, ease) both;
+  }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+
+  .animate-reveal {
+    animation: vf-rise var(--vf-motion-base, 200ms) var(--vf-ease-emphasized, ease) both;
+  }
+
+  .pulse-success {
+    animation: vf-pulse 2s var(--vf-ease-standard, ease) infinite;
+  }
+}
+
+/* =========================================================
+   Paper texture removed (Phase 5).
+   Was: body::before with SVG feTurbulence at 0.03 opacity,
+   z-index: -1. Imperceptible at that opacity; removed for
+   simplicity. Comment kept as change log.
+   ========================================================= */
 
 /* =========================================================
    Stamp-style status badges
-   Phase 3 reduces rotation from -2deg to -0.6deg.
-   Class name .stamp-badge is kept verbatim (JS sets it
-   at ui/index.html:1000-1002 via el.className =).
+   Phase 5: rotation override moves to #resultArea .stamp-badge
+   in visafact.css (Phase 3). Class name .stamp-badge kept
+   verbatim per plan A.5 (JS sets it at ui/index.html:1000-1002).
    ========================================================= */
 
 .stamp-badge {
@@ -148,7 +164,8 @@ select:focus-visible {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  transform: rotate(-2deg); /* Phase 3 will override to -0.6deg via #resultArea scoping */
+  /* Default rotation; #resultArea .stamp-badge in visafact.css overrides to -0.6deg */
+  transform: rotate(-2deg);
 }
 
 .stamp-badge::before {
@@ -162,7 +179,6 @@ select:focus-visible {
 
 /* =========================================================
    Monospaced figures for numeric result areas
-   (Phase 2 addition — tnum for amounts, dates, IDs)
    ========================================================= */
 
 #lastVerified,

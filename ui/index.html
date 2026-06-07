@@ -81,13 +81,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
 
-
-
+  <style>
+    /* Reduced-motion guard -- mirrors visafact.css @media block.
+       Applied here so the standalone UI respects prefers-reduced-motion
+       without relying on the Hugo-served visafact.css. */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration:        0.01ms !important;
+        animation-iteration-count: 1      !important;
+        transition-duration:       0.01ms !important;
+        scroll-behavior:           auto   !important;
+      }
+    }
+  </style>
 
 </head>
 
 <body
-  class="bg-background-light dark:bg-background-dark min-h-screen font-body text-text-primary dark:text-white transition-colors duration-200">
+  class="bg-background-light dark:bg-background-dark min-h-screen font-body text-text-primary dark:text-white">
   <a href="#main-content"
     class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">Skip to main content</a>
 

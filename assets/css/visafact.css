@@ -610,3 +610,38 @@ html[data-theme="dark"] #vf-cookie-banner > div,
   color: var(--vf-color-text-secondary) !important;
   max-width: 60ch;
 }
+
+/* =========================================================
+   Phase 5 — Motion vocabulary + accessibility guard
+   ========================================================= */
+
+/* --- Transition vocabulary (no transition-all) --- */
+.vf-link-hover {
+  transition:
+    color            var(--vf-motion-fast) var(--vf-ease-standard),
+    background-color var(--vf-motion-fast) var(--vf-ease-standard);
+}
+
+.vf-button-hover {
+  transition:
+    color            var(--vf-motion-fast) var(--vf-ease-standard),
+    background-color var(--vf-motion-fast) var(--vf-ease-standard),
+    border-color     var(--vf-motion-fast) var(--vf-ease-standard),
+    box-shadow       var(--vf-motion-fast) var(--vf-ease-standard);
+}
+
+/* --- Global reduced-motion guard ---
+   Overrides PaperMod and all site animations site-wide.
+   visafact.css is loaded globally by Hugo via extend_head.html,
+   so this cascades without touching themes/PaperMod/.
+   Mirrored in ui/index.html inline <style> for the standalone UI. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+    scroll-behavior:           auto   !important;
+  }
+}
