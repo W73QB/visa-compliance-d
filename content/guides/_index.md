@@ -10,6 +10,7 @@ Use these guides to understand how VisaFact evaluates requirements and how to pr
 - Start with [How to Read VisaFact Results](/guides/how-to-read-results/)
 - Learn [Compliance Status Meaning](/guides/compliance-status-meaning/)
 - Use the [Compliance Checker](/ui/)
+- Browse route-specific requirements on the [visa pages](/visas/)
 
 ## What the authority requires
 
