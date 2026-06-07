@@ -1068,12 +1068,38 @@
       }
     }
 
+    function showSnapshotFallbackNotice() {
+      const main = document.querySelector("main");
+      if (!main) return;
+      const note = document.createElement("div");
+      note.className = "max-w-3xl mx-auto mb-4 px-4 py-3 rounded-lg border border-border-soft bg-surface-light dark:bg-surface-dark text-sm text-text-secondary";
+      note.setAttribute("role", "status");
+      note.textContent = 'Snapshot "' + SNAPSHOT_PARAM + '" is not available; showing the latest evidence instead.';
+      main.insertBefore(note, main.firstChild);
+    }
+
     async function init() {
       $("loadingState").classList.remove("hidden");
       try {
-        const res = await fetch(DATA_URL, { cache: "no-store" });
-        const raw = await res.json();
+        let raw;
+        let usedSnapshotFallback = false;
+        try {
+          const res = await fetch(DATA_URL, { cache: "no-store" });
+          if (!res.ok) throw new Error("snapshot fetch failed: " + res.status);
+          raw = await res.json();
+        } catch (snapErr) {
+          const latestUrl = resolveDataUrl(location.pathname, "");
+          if (SNAPSHOT_PARAM && latestUrl !== DATA_URL) {
+            const resLatest = await fetch(latestUrl, { cache: "no-store" });
+            if (!resLatest.ok) throw snapErr;
+            raw = await resLatest.json();
+            usedSnapshotFallback = true;
+          } else {
+            throw snapErr;
+          }
+        }
         INDEX = normalizeIndex(raw);
+        if (usedSnapshotFallback) showSnapshotFallbackNotice();
         initRegionSelector();
         initCookieBanner();
 
