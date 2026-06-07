@@ -126,7 +126,7 @@ when our affiliate partnerships with annual-plan insurance providers are confirm
 {{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="releases/2026-01-15" label="Check compliant insurance for Malta Nomad Permit" >}}
 
 *No affiliate links on this page at this time.
-We only recommend products that show GREEN in the checker.
+We only link to products that show GREEN in the checker.
 See [affiliate disclosure](/affiliate-disclosure/).*
 
 ## Disclaimer + Affiliate disclosure

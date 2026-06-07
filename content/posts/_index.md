@@ -1,6 +1,6 @@
 ﻿---
 title: "Blog"
-description: "Evidence-based visa insurance updates and compliance guides."
+description: "Evidence-based visa insurance updates, requirement changes, and compliance guides for digital nomad and long-stay routes."
 tags: ["updates", "compliance", "visafact"]
 ---
 
