@@ -107,9 +107,19 @@ UNKNOWN is a signal to request clearer documentation, not a hint that the policy
 
 Not legal advice. Compliance results are evidence-based snapshots.
 
-If an affiliate link is present, it appears only after results and does not change the compliance outcome.
+**Why there is no affiliate link on this page:**
+The Germany Freelance Visa requires health insurance commensurate with
+German statutory minimum coverage. Travel insurance — including SafetyWing
+and World Nomads — does not meet this requirement and shows RED in the checker.
 
-Last updated: 2026-02-05
+Compliant products for this route (dedicated expat health insurance providers)
+will be added when our affiliate partnerships are confirmed.
+Feather Insurance and similar Germany-authorized providers are being evaluated.
+
+*Compliance results are never influenced by commercial relationships.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
+Last updated: 2026-06-05
 
 ## Evidence log
 

@@ -109,6 +109,26 @@ UNKNOWN results are common when product documents do not explicitly state the US
 - [Digital nomad insurance in the Americas](/posts/digital-nomad-insurance-americas/)
 - [How to read compliance results](/guides/how-to-read-results/)
 
+## Where to buy compliant insurance for Costa Rica Digital Nomad Visa
+
+The Costa Rica Digital Nomad Visa requires at least US $50,000 in medical coverage
+for the full authorized stay period (Executive Decree 43619, Article 9).
+
+[SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=costa-rica-post) —
+travel medical insurance for 175+ countries covering unexpected illness and injury.
+Flexible monthly subscription, cancel anytime, auto-extends every 4 weeks.
+
+> Verify coverage amount and duration in the compliance checker before purchasing.
+> The checker confirms whether SafetyWing's documented coverage meets the $50,000
+> minimum and full-stay duration requirement for this route.
+
+{{< checker_cta visa="CR_DN_DECREE_43619_2026" snapshot="releases/2026-01-15" label="Check SafetyWing for Costa Rica DN Visa" >}}
+
+*Affiliate disclosure: The link above is an affiliate link.
+We may earn a commission at no extra cost to you.
+Compliance results are generated independently.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.

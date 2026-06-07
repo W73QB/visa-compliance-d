@@ -1,3 +1,8 @@
+---
+title: "Methodology"
+description: "How the VisaFact compliance checker works — evidence-based approach, data model, and status definitions."
+---
+
 Methodology (How this checker works)
 
 {{< vf-trust >}}

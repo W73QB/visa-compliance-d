@@ -109,6 +109,26 @@ UNKNOWN results are most common when product documents do not explicitly state a
 - [How to read compliance results](/guides/how-to-read-results/)
 - [Compliance status meaning](/guides/compliance-status-meaning/)
 
+## Compliant insurance for Malta Nomad Residence Permit
+
+Malta requires health insurance with **full-year premiums paid in advance**.
+Monthly payment policies are not accepted.
+
+As of snapshot `releases/2026-01-15`, 2 products show GREEN for this route.
+SafetyWing shows RED because it uses a monthly subscription model.
+
+Compliant providers (those showing GREEN in the checker) will be linked here
+when our affiliate partnerships with annual-plan insurance providers are confirmed.
+
+> Use the compliance checker to see which products currently show GREEN
+> for the Malta Nomad Residence Permit route.
+
+{{< checker_cta visa="MT_NOMAD_RESIDENCY_2026" snapshot="releases/2026-01-15" label="Check compliant insurance for Malta Nomad Permit" >}}
+
+*No affiliate links on this page at this time.
+We only recommend products that show GREEN in the checker.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.

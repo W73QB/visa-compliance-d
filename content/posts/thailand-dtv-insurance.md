@@ -104,6 +104,25 @@ As of snapshot `releases/2026-01-15`, the checker evaluated 7 products and retur
 - [How to read compliance results](/guides/how-to-read-results/)
 - [Digital nomad insurance in Europe](/posts/digital-nomad-insurance-europe/)
 
+## Insurance is not required — but here's what smart travelers get anyway
+
+The Thailand Digital Nomad Visa (DTV) does **not** require health insurance.
+The compliance checker confirms: NOT_REQUIRED for this route.
+
+Many travelers choose voluntary coverage for peace of mind while living abroad:
+
+[SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=thailand-post) —
+optional travel medical coverage in Thailand and 175+ other countries.
+Covers unexpected illness, injury, and travel disruptions.
+Monthly subscription — cancel anytime.
+
+{{< checker_cta visa="TH_DTV_2026" snapshot="releases/2026-01-15" label="Verify Thailand DTV insurance requirements" >}}
+
+*Affiliate disclosure: The SafetyWing link above is an affiliate link.
+We may earn a commission at no extra cost to you.
+Note: insurance is optional for this route — this is not a compliance recommendation.
+See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
