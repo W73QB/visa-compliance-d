@@ -100,7 +100,7 @@
       </div>
       <button id="mobileMenuBtn"
         class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Toggle menu">
+        aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
       <nav class="hidden md:flex items-center gap-8">
@@ -1144,6 +1144,7 @@
       const btn = $("mobileMenuBtn");
       const isOpen = !menu.classList.contains("hidden");
       menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(!isOpen));
       btn.querySelector("span").textContent = isOpen ? "menu" : "close";
     });
 
