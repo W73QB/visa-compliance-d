@@ -143,7 +143,7 @@ AXA Schengen and similar Spain-authorized insurers are being evaluated.
 {{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="releases/2026-01-15" label="Check compliant insurance for Spain DNV" >}}
 
 *No affiliate links on this page at this time.
-We only recommend products that show GREEN in the checker.
+We only list products that show GREEN in the checker.
 See [affiliate disclosure](/affiliate-disclosure/).*
 
 ## Disclaimer + Affiliate disclosure
