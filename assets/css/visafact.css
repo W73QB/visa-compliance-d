@@ -508,3 +508,105 @@ html[data-theme="dark"] #vf-cookie-banner > div,
 .dark .vf-header--refined {
   background: rgba(15, 20, 25, 0.92);
 }
+
+/* =========================================================
+   Phase 4 — Home page styles
+   (clearly delimited; do not affect other pages)
+   ========================================================= */
+
+/* --- Hero layout --- */
+.vf-home-hero {
+  display: grid;
+  gap: var(--vf-space-8);
+  margin-bottom: var(--vf-space-12);
+}
+
+@media (min-width: 900px) {
+  .vf-home-hero {
+    grid-template-columns: 1fr 340px;
+    align-items: start;
+  }
+}
+
+/* --- Why section --- */
+.vf-home-why {
+  margin-bottom: var(--vf-space-10);
+}
+
+.vf-home-why h2 {
+  margin-bottom: var(--vf-space-6);
+}
+
+.vf-why-grid {
+  display: grid;
+  gap: var(--vf-space-5);
+}
+
+@media (min-width: 768px) {
+  .vf-why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.vf-why-item {
+  display: flex;
+  gap: var(--vf-space-4);
+  padding: var(--vf-space-5) var(--vf-space-6);
+  background: var(--vf-color-surface);
+  border: 1px solid var(--vf-color-line);
+  border-radius: var(--vf-radius-lg);
+  box-shadow: var(--vf-shadow-1);
+}
+
+.vf-why-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--vf-radius-md);
+  background: rgba(25, 51, 90, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vf-color-primary);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.vf-why-item h3 {
+  margin: 0 0 var(--vf-space-2);
+  font-size: 1.0625rem;
+}
+
+.vf-why-item p {
+  font-size: var(--vf-type-small-size);
+  color: var(--vf-color-text-secondary);
+  margin: 0;
+  max-width: none;
+}
+
+/* --- Try checker CTA panel --- */
+.vf-try-checker {
+  padding: var(--vf-space-8) var(--vf-space-6);
+  background: var(--vf-color-surface);
+  border: 1px solid var(--vf-color-line);
+  border-radius: var(--vf-radius-xl);
+  box-shadow: var(--vf-shadow-1);
+  margin-bottom: var(--vf-space-10);
+}
+
+.vf-try-checker h2 {
+  margin-top: 0;
+  margin-bottom: var(--vf-space-3);
+}
+
+.vf-try-checker > p:first-of-type {
+  color: var(--vf-color-text-secondary);
+  margin-bottom: var(--vf-space-5);
+}
+
+.vf-try-note {
+  margin-top: var(--vf-space-4) !important;
+  font-size: var(--vf-type-small-size) !important;
+  color: var(--vf-color-text-secondary) !important;
+  max-width: 60ch;
+}
