@@ -1,0 +1,43 @@
+{
+  "id": "IT_SELFEMP_SF_2026",
+  "country": "Italy",
+  "visa_name": "Self-Employment Visa",
+  "route": "Short-term (Schengen, San Francisco)",
+  "authority": "Consulate General of Italy in San Francisco",
+  "last_verified": "2026-06-08",
+  "sources": [
+    {
+      "source_id": "IT_SELFEMP_SF_INSURANCE_2026",
+      "url": "https://conssanfrancisco.esteri.it/wp-content/uploads/2023/06/Travel-Medical-Insurance.pdf",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "3a89d56d842bd67c5c91e279664e62f319762b759b34ed2cf0b4b07b56d8499d",
+      "local_path": "sources/IT_SELFEMP_SF_INSURANCE_2026-06-08.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "IT_SELFEMP_SF_INSURANCE_2026",
+          "locator": "Travel Medical Insurance notice (Schengen short-stay, applies to the short-term self-employment visa)",
+          "excerpt": "By law, the Schengen countries require visa applicants to show proof of 30,000 euro or $50,000 in medical expenses coverage for the duration of the applicant's trip."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 30000,
+      "evidence": [
+        {
+          "source_id": "IT_SELFEMP_SF_INSURANCE_2026",
+          "locator": "Travel Medical Insurance notice (Schengen short-stay, applies to the short-term self-employment visa)",
+          "excerpt": "proof of 30,000 euro or $50,000 in medical expenses coverage for the duration of the applicant's trip"
+        }
+      ]
+    }
+  ]
+}
