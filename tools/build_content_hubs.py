@@ -125,6 +125,20 @@ VISA_FAQS = {
             "answer": "No. The consulate requires coverage with no deductible, no copayment, no waiting period, and no coverage limit, covering the full cost of medical and hospital care.",
         },
     ],
+    "IT_SELFEMP_SF_2026": [
+        {
+            "question": "How much medical coverage does the Italy short-term self-employment (Schengen) visa require?",
+            "answer": "The Consulate General of Italy states the Schengen minimum: proof of 30,000 euro (or 50,000 US dollars) in medical expenses coverage for the duration of the trip.",
+        },
+        {
+            "question": "Is travel insurance accepted for this route?",
+            "answer": "Yes. The consulate notice lists travel medical insurers (including World Nomads) as acceptable, as long as the medical expenses coverage meets the minimum.",
+        },
+        {
+            "question": "Does trip cancellation or repatriation count toward the minimum?",
+            "answer": "No. The consulate states that non-medical services such as trip cancellation, lost baggage, or repatriation of remains do not count toward the 30,000 euro medical-expenses requirement.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -161,6 +175,11 @@ RELATED_POSTS = {
         ("/posts/spain-nlv-insurance/", "Spain Non-Lucrative Visa insurance requirements"),
         ("/posts/spain-dnv-insurance/", "Spain DNV insurance requirements"),
         ("/traps/spain-dnv-insurance-mistakes/", "Spain visa insurance mistakes to avoid"),
+    ],
+    "IT_SELFEMP_SF_2026": [
+        ("/posts/italy-selfemployment-insurance/", "Italy self-employment visa insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
     ],
 }
 
