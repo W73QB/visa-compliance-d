@@ -6,10 +6,10 @@ tags: ["colombia", "dnv", "digital-nomad-visa", "insurance", "compliance"]
 faq:
   - question: "What insurance does the Colombia Digital Nomad Visa require?"
     answer: "The Cancilleria requires a health policy with coverage in Colombian territory against all risks (accident, illness, maternity, disability, hospitalization, death, repatriation) for the duration of stay."
-  - question: "Why do the products in the checker show UNKNOWN for this route?"
-    answer: "The policy must cover Colombian territory specifically, and none of the catalogued products documents Colombia coverage, so the engine records UNKNOWN rather than assuming a foreign policy qualifies."
-  - question: "Does a worldwide policy automatically qualify?"
-    answer: "Not on the evidence here. Coverage in Colombian territory has to be documented before a product can move off UNKNOWN."
+  - question: "Which product shows GREEN for this route?"
+    answer: "Genki Native shows GREEN: its documentation states global coverage including Colombia plus comprehensive care (outpatient, inpatient, maternity), satisfying the Colombian-territory all-risk requirement."
+  - question: "Why do travel and Spanish health policies not qualify?"
+    answer: "They either do not document coverage in Colombian territory or omit part of the all-risk list (such as maternity), so the engine keeps them UNKNOWN rather than guessing."
 ---
 
 ## Short answer
@@ -45,12 +45,12 @@ Normalized requirements table:
 | Requirement | Status | Evidence |
 |---|---|---|
 | Insurance is mandatory | PASS | Cancilleria poliza de salud requirement |
-| Coverage in Colombian territory | UNKNOWN for all catalogued products | No product documents Colombia coverage |
-| Coverage against all risks | PASS where documented, otherwise UNKNOWN | Cancilleria poliza de salud requirement |
+| Coverage in Colombian territory | PASS for Genki Native; UNKNOWN for others | Genki Native documents global coverage incl. Colombia |
+| Coverage against all risks | PASS for Genki Native; UNKNOWN for others | Genki Native documents comprehensive care incl. maternity |
 
 ## How we evaluate
 
-The checker compares each modeled requirement against product evidence. Colombia's defining condition is that the policy covers Colombian territory; a product is only credited for it when its evidence documents coverage in Colombia (CO). None of the products currently in the checker documents that, so each one returns UNKNOWN for this route rather than a guess that a worldwide or foreign policy is valid in Colombia. This is the UNKNOWN > Wrong principle in action: an unproven territorial requirement holds the status at UNKNOWN. See /methodology/ for the full logic.
+The checker compares each modeled requirement against product evidence. Colombia's defining condition is that the policy covers Colombian territory; a product is only credited for it when its evidence documents coverage in Colombia (CO). Genki Native documents global coverage that includes Colombia and comprehensive care (outpatient, inpatient, maternity), so it shows GREEN. Travel-medical products and Spanish-authorized health policies either do not document Colombian-territory coverage or omit parts of the all-risk list (for example maternity), so they stay UNKNOWN rather than a guess that a foreign policy is valid in Colombia. This is the UNKNOWN > Wrong principle in action. See /methodology/ for the full logic.
 
 ## Proof package checklist
 
@@ -69,11 +69,11 @@ The checker compares each modeled requirement against product evidence. Colombia
 **Q: What insurance is required?**
 **A:** A health policy with coverage in Colombian territory against all risks for the duration of stay (Source: `CO_DNV_CANCILLERIA_2026`, poliza de salud; verified 2026-06-08).
 
-**Q: Why do products show UNKNOWN?**
-**A:** Because coverage in Colombian territory must be documented, and the catalogued products do not document it, so the engine does not guess.
+**Q: Which product shows GREEN?**
+**A:** Genki Native, whose documentation states global coverage including Colombia plus comprehensive care (outpatient, inpatient, maternity).
 
-**Q: Does a worldwide policy qualify?**
-**A:** Only if its evidence documents coverage in Colombia; otherwise the status stays UNKNOWN.
+**Q: Why do travel or Spanish health policies not qualify?**
+**A:** They either do not document coverage in Colombian territory or omit part of the all-risk list (such as maternity), so the status stays UNKNOWN.
 
 ## Check in the engine
 
@@ -89,11 +89,11 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 ## Where to find compliant insurance for the Colombia Digital Nomad Visa
 
-No product is singled out on this page yet. Colombia requires the policy to cover Colombian territory specifically, and none of the products currently in the checker documents that coverage, so each one shows UNKNOWN rather than GREEN. A product will be listed here once its evidence documents coverage in Colombia and it shows GREEN in the checker for this route.
+In the current snapshot, the product that shows GREEN for this route is Genki Native: its documentation states global coverage that includes Colombia and comprehensive care (outpatient, inpatient, accidents, emergency transport, and maternity after a waiting period), which satisfies the Colombian-territory all-risk requirement. Travel-medical products and Spanish-authorized health policies stay UNKNOWN because they do not document Colombian-territory coverage or omit part of the all-risk list.
 
-> Use the compliance checker to see the current status of each product for this route.
+- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
 
-*No affiliate links on this page at this time. We only link to products once their GREEN status rests on documented evidence for this route. See [affiliate disclosure](/affiliate-disclosure/).*
+> Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
 ## Disclaimer + Affiliate disclosure
 
