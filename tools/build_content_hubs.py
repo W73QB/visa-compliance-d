@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "CO_DNV_CANCILLERIA_2026": [
+        {
+            "question": "What insurance does the Colombia Digital Nomad Visa require?",
+            "answer": "The Cancilleria requires a health policy with coverage in Colombian territory against all risks (accident, illness, maternity, disability, hospitalization, death, repatriation) for the duration of stay.",
+        },
+        {
+            "question": "Why do all products show UNKNOWN for this route?",
+            "answer": "The policy must cover Colombian territory specifically, and none of the catalogued products documents Colombia coverage, so the engine records UNKNOWN rather than assuming a worldwide or foreign policy qualifies.",
+        },
+        {
+            "question": "Does a Spanish or worldwide policy automatically qualify?",
+            "answer": "Not on the evidence here. Coverage in Colombian territory has to be documented; until a product's evidence shows that, the result stays UNKNOWN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -198,6 +212,11 @@ RELATED_POSTS = {
     "JP_DNV_MOFA_2026": [
         ("/posts/japan-dnv-insurance/", "Japan Digital Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "CO_DNV_CANCILLERIA_2026": [
+        ("/posts/colombia-dnv-insurance/", "Colombia Digital Nomad Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

@@ -1,7 +1,7 @@
 """Compliance rules package."""
 from tools.rules.mandatory import MandatoryInsuranceRule
 from tools.rules.travel_insurance import TravelInsuranceAcceptedRule
-from tools.rules.jurisdiction import AuthorizedInSpainRule
+from tools.rules.jurisdiction import AuthorizedInSpainRule, AuthorizedInColombiaRule
 from tools.rules.deductible import NoDeductibleRule
 from tools.rules.copayment import NoCopaymentRule
 from tools.rules.moratorium import NoMoratoriumRule
@@ -17,6 +17,7 @@ __all__ = [
     "MandatoryInsuranceRule",
     "TravelInsuranceAcceptedRule",
     "AuthorizedInSpainRule",
+    "AuthorizedInColombiaRule",
     "NoDeductibleRule",
     "NoCopaymentRule",
     "NoMoratoriumRule",
