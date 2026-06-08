@@ -1,0 +1,55 @@
+{
+  "id": "CO_DNV_CANCILLERIA_2026",
+  "country": "Colombia",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Visa V Nomadas Digitales (Cancilleria)",
+  "authority": "Ministerio de Relaciones Exteriores de Colombia (Cancilleria)",
+  "last_verified": "2026-06-08",
+  "sources": [
+    {
+      "source_id": "CO_DNV_CANCILLERIA_2026",
+      "url": "https://www.cancilleria.gov.co/v/nomadadigital",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "e78ed43b65c2a030939c565ab95678f7955496959f324850125a521b7f595e90",
+      "local_path": "sources/CO_DNV_CANCILLERIA_2026-06-08.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CO_DNV_CANCILLERIA_2026",
+          "locator": "Requisitos especificos, item 5 (poliza de salud)",
+          "excerpt": "Poliza de salud con cobertura en el territorio nacional contra todo riesgo en caso de accidente, enfermedad, maternidad, invalidez, hospitalizacion, muerte o repatriacion, por el tiempo previsto para su permanencia en el pais."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_colombia",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CO_DNV_CANCILLERIA_2026",
+          "locator": "Requisitos especificos, item 5 (poliza de salud)",
+          "excerpt": "Poliza de salud con cobertura en el territorio nacional contra todo riesgo"
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CO_DNV_CANCILLERIA_2026",
+          "locator": "Requisitos especificos, item 5 (poliza de salud)",
+          "excerpt": "contra todo riesgo en caso de accidente, enfermedad, maternidad, invalidez, hospitalizacion, muerte o repatriacion"
+        }
+      ]
+    }
+  ]
+}

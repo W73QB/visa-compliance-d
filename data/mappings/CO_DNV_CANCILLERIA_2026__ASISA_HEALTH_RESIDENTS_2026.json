@@ -1,0 +1,9 @@
+{
+  "visa_id": "CO_DNV_CANCILLERIA_2026",
+  "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.CO.authorized"
+  ]
+}

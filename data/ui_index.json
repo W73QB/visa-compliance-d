@@ -1,7 +1,62 @@
 {
-  "built_at": "2026-06-08T13:21:11.887952+00:00",
+  "built_at": "2026-06-08T13:37:23.347187+00:00",
   "snapshot_id": "2026-06-08",
   "visas": [
+    {
+      "id": "CO_DNV_CANCILLERIA_2026",
+      "country": "Colombia",
+      "visa_name": "Digital Nomad Visa",
+      "route": "Visa V Nomadas Digitales (Cancilleria)",
+      "authority": "Ministerio de Relaciones Exteriores de Colombia (Cancilleria)",
+      "last_verified": "2026-06-08",
+      "sources": [
+        {
+          "source_id": "CO_DNV_CANCILLERIA_2026",
+          "url": "https://www.cancilleria.gov.co/v/nomadadigital",
+          "retrieved_at": "2026-06-08T00:00:00Z",
+          "sha256": "e78ed43b65c2a030939c565ab95678f7955496959f324850125a521b7f595e90",
+          "local_path": "sources/CO_DNV_CANCILLERIA_2026-06-08.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CO_DNV_CANCILLERIA_2026",
+              "locator": "Requisitos especificos, item 5 (poliza de salud)",
+              "excerpt": "Poliza de salud con cobertura en el territorio nacional contra todo riesgo en caso de accidente, enfermedad, maternidad, invalidez, hospitalizacion, muerte o repatriacion, por el tiempo previsto para su permanencia en el pais."
+            }
+          ]
+        },
+        {
+          "key": "insurance.authorized_in_colombia",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CO_DNV_CANCILLERIA_2026",
+              "locator": "Requisitos especificos, item 5 (poliza de salud)",
+              "excerpt": "Poliza de salud con cobertura en el territorio nacional contra todo riesgo"
+            }
+          ]
+        },
+        {
+          "key": "insurance.comprehensive",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CO_DNV_CANCILLERIA_2026",
+              "locator": "Requisitos especificos, item 5 (poliza de salud)",
+              "excerpt": "contra todo riesgo en caso de accidente, enfermedad, maternidad, invalidez, hospitalizacion, muerte o repatriacion"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "CR_DN_DECREE_43619_2026",
       "country": "Costa Rica",
@@ -882,6 +937,80 @@
   ],
   "mappings": [
     {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
       "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -1527,7 +1656,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1537,7 +1666,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1547,7 +1676,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1555,7 +1684,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1563,7 +1692,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1573,7 +1702,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1581,7 +1710,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -1938,6 +2067,13 @@
       "retrieved_at": "2026-01-16T00:00:00Z",
       "sha256": "4a1c4e1c4f74fc8ded05482ea171df962320632d846c70bf287ceebc235f36f1",
       "local_path": "sources/ASISA_HEALTH_RESIDENTS_2026-01-16.html"
+    },
+    "CO_DNV_CANCILLERIA_2026": {
+      "source_id": "CO_DNV_CANCILLERIA_2026",
+      "url": "https://www.cancilleria.gov.co/v/nomadadigital",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "e78ed43b65c2a030939c565ab95678f7955496959f324850125a521b7f595e90",
+      "local_path": "sources/CO_DNV_CANCILLERIA_2026-06-08.html"
     },
     "CR_DECREE_43619_2026": {
       "source_id": "CR_DECREE_43619_2026",

@@ -31,3 +31,40 @@ class AuthorizedInSpainRule(Rule):
                 }]
             )
         return None
+
+
+class AuthorizedInColombiaRule(Rule):
+    """Check if the policy provides coverage in Colombian territory.
+
+    Colombia's digital nomad visa requires a health policy with coverage in the
+    national territory. We only know a product satisfies this when its evidence
+    documents Colombia (CO) coverage; otherwise the status is UNKNOWN rather than
+    an assumption that a worldwide or foreign policy is valid in Colombia.
+    """
+
+    name = "AuthorizedInColombia"
+
+    def check(self, visa, product):
+        req = get_req(visa, "insurance.authorized_in_colombia")
+        if not req or req["value"] is not True:
+            return None
+
+        country = visa.get("id", "").upper()[:2]
+        if country != "CO":
+            return None
+
+        jf = product_spec(product, f"jurisdiction_facts.{country}.authorized")
+        if jf is None:
+            return RuleResult(
+                status="UNKNOWN",
+                missing=[f"specs.jurisdiction_facts.{country}.authorized"]
+            )
+        if jf is False:
+            return RuleResult(
+                status="RED",
+                reasons=[{
+                    "text": "Policy does not document coverage in Colombian territory",
+                    "evidence": req["evidence"]
+                }]
+            )
+        return None
