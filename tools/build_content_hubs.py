@@ -139,6 +139,20 @@ VISA_FAQS = {
             "answer": "No. The consulate states that non-medical services such as trip cancellation, lost baggage, or repatriation of remains do not count toward the 30,000 euro medical-expenses requirement.",
         },
     ],
+    "JP_DNV_MOFA_2026": [
+        {
+            "question": "How much insurance coverage does the Japan Digital Nomad Visa require?",
+            "answer": "The Ministry of Foreign Affairs requires insurance against death, injury or illness during the stay, with medical-treatment compensation of JPY 10 million or more.",
+        },
+        {
+            "question": "How does the checker compare a JPY threshold against a USD or EUR policy limit?",
+            "answer": "It converts both the threshold and the product limit to euro using fixed reference rates, so a large yen figure is compared like-for-like instead of as a raw number.",
+        },
+        {
+            "question": "Is national health insurance an option for this visa?",
+            "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -180,6 +194,11 @@ RELATED_POSTS = {
         ("/posts/italy-selfemployment-insurance/", "Italy self-employment visa insurance requirements"),
         ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+    ],
+    "JP_DNV_MOFA_2026": [
+        ("/posts/japan-dnv-insurance/", "Japan Digital Nomad Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 

@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-08T13:00:11.199881+00:00",
+  "built_at": "2026-06-08T13:21:11.887952+00:00",
   "snapshot_id": "2026-06-08",
   "visas": [
     {
@@ -411,6 +411,50 @@
               "source_id": "IT_SELFEMP_SF_INSURANCE_2026",
               "locator": "Travel Medical Insurance notice (Schengen short-stay, applies to the short-term self-employment visa)",
               "excerpt": "proof of 30,000 euro or $50,000 in medical expenses coverage for the duration of the applicant's trip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JP_DNV_MOFA_2026",
+      "country": "Japan",
+      "visa_name": "Digital Nomad Visa",
+      "route": "Designated Activities (MOFA)",
+      "authority": "Ministry of Foreign Affairs of Japan",
+      "last_verified": "2026-06-08",
+      "sources": [
+        {
+          "source_id": "JP_DNV_MOFA_2026",
+          "url": "https://www.mofa.go.jp/ca/fna/pagewe_000001_00046.html",
+          "retrieved_at": "2026-06-08T00:00:00Z",
+          "sha256": "4ef9d598abe8c7789dfffe8f2eeae83ab50d6056b404b1e9aa73a9363c0ccac5",
+          "local_path": "sources/JP_DNV_MOFA_2026-06-08.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "JP_DNV_MOFA_2026",
+              "locator": "Necessary documents, Digital Nomad, item (6)",
+              "excerpt": "Documents proving that the applicant has insurance against death, injury or illness during their stay in Japan (compensation for medical treatment for injury or illness must be JPY 10 million or more)."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 10000000,
+          "currency": "JPY",
+          "evidence": [
+            {
+              "source_id": "JP_DNV_MOFA_2026",
+              "locator": "Necessary documents, Digital Nomad, item (6)",
+              "excerpt": "compensation for medical treatment for injury or illness must be JPY 10 million or more"
             }
           ]
         }
@@ -1419,7 +1463,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -1429,7 +1473,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -1439,7 +1483,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -1447,7 +1491,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -1455,7 +1499,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -1465,10 +1509,74 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
       "product_id": "WORLDNOMADS_EXPLORER_2026",
       "status": "GREEN",
       "reasons": [],
@@ -1917,6 +2025,13 @@
       "retrieved_at": "2026-06-08T00:00:00Z",
       "sha256": "3a89d56d842bd67c5c91e279664e62f319762b759b34ed2cf0b4b07b56d8499d",
       "local_path": "sources/IT_SELFEMP_SF_INSURANCE_2026-06-08.pdf"
+    },
+    "JP_DNV_MOFA_2026": {
+      "source_id": "JP_DNV_MOFA_2026",
+      "url": "https://www.mofa.go.jp/ca/fna/pagewe_000001_00046.html",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "4ef9d598abe8c7789dfffe8f2eeae83ab50d6056b404b1e9aa73a9363c0ccac5",
+      "local_path": "sources/JP_DNV_MOFA_2026-06-08.html"
     },
     "MT_RESIDENCY_FAQ_2026": {
       "source_id": "MT_RESIDENCY_FAQ_2026",
