@@ -1,0 +1,44 @@
+{
+  "id": "JP_DNV_MOFA_2026",
+  "country": "Japan",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Designated Activities (MOFA)",
+  "authority": "Ministry of Foreign Affairs of Japan",
+  "last_verified": "2026-06-08",
+  "sources": [
+    {
+      "source_id": "JP_DNV_MOFA_2026",
+      "url": "https://www.mofa.go.jp/ca/fna/pagewe_000001_00046.html",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "4ef9d598abe8c7789dfffe8f2eeae83ab50d6056b404b1e9aa73a9363c0ccac5",
+      "local_path": "sources/JP_DNV_MOFA_2026-06-08.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "JP_DNV_MOFA_2026",
+          "locator": "Necessary documents, Digital Nomad, item (6)",
+          "excerpt": "Documents proving that the applicant has insurance against death, injury or illness during their stay in Japan (compensation for medical treatment for injury or illness must be JPY 10 million or more)."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 10000000,
+      "currency": "JPY",
+      "evidence": [
+        {
+          "source_id": "JP_DNV_MOFA_2026",
+          "locator": "Necessary documents, Digital Nomad, item (6)",
+          "excerpt": "compensation for medical treatment for injury or illness must be JPY 10 million or more"
+        }
+      ]
+    }
+  ]
+}
