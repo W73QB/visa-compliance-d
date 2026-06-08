@@ -97,6 +97,20 @@ VISA_FAQS = {
             "answer": "Decree expects coverage for the full stay; prepaid policies align closely with the requirement.",
         },
     ],
+    "GR_DNV_MFA_2026": [
+        {
+            "question": "Is insurance required for the Greece Digital Nomad Visa?",
+            "answer": "Yes. The Work From Greece portal that the Hellenic MFA designates for visa information lists travel insurance among the required documents.",
+        },
+        {
+            "question": "Does Greece state a coverage amount or require a Greek-authorized insurer?",
+            "answer": "The designated source does not state a coverage minimum or an insurer-authorization rule, so the engine records those as UNKNOWN rather than inferring them.",
+        },
+        {
+            "question": "Is travel insurance accepted for this route?",
+            "answer": "The designated required-documents list names travel insurance, so the current snapshot models only that insurance is mandatory.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -124,6 +138,10 @@ RELATED_POSTS = {
     "MT_NOMAD_RESIDENCY_2026": [
         ("/posts/malta-nomad-insurance/", "Malta nomad insurance requirements"),
         ("/traps/malta-nomad-monthly-payments/", "Monthly payment pitfalls for Malta nomad visa"),
+    ],
+    "GR_DNV_MFA_2026": [
+        ("/posts/greece-dnv-insurance/", "Greece Digital Nomad Visa insurance requirements"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 
