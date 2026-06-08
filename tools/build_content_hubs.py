@@ -111,6 +111,20 @@ VISA_FAQS = {
             "answer": "The designated required-documents list names travel insurance, so the current snapshot models only that insurance is mandatory.",
         },
     ],
+    "ES_NLV_LA_2026": [
+        {
+            "question": "Is health insurance mandatory for the Spain Non-Lucrative Visa?",
+            "answer": "Yes. The Consulate General of Spain page lists health insurance from an entity authorized to operate in Spain among the required documents.",
+        },
+        {
+            "question": "Is travel insurance accepted for the Non-Lucrative Visa?",
+            "answer": "No. The consulate states that travel insurances with medical assistance coverage will not be accepted, so the engine marks travel-type products RED.",
+        },
+        {
+            "question": "Are deductibles, co-payments, or waiting periods allowed?",
+            "answer": "No. The consulate requires coverage with no deductible, no copayment, no waiting period, and no coverage limit, covering the full cost of medical and hospital care.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -142,6 +156,11 @@ RELATED_POSTS = {
     "GR_DNV_MFA_2026": [
         ("/posts/greece-dnv-insurance/", "Greece Digital Nomad Visa insurance requirements"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "ES_NLV_LA_2026": [
+        ("/posts/spain-nlv-insurance/", "Spain Non-Lucrative Visa insurance requirements"),
+        ("/posts/spain-dnv-insurance/", "Spain DNV insurance requirements"),
+        ("/traps/spain-dnv-insurance-mistakes/", "Spain visa insurance mistakes to avoid"),
     ],
 }
 

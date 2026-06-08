@@ -1,0 +1,22 @@
+{
+  "visa_id": "ES_NLV_LA_2026",
+  "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "No moratorium required, product has 90 day waiting period",
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.deductible.amount",
+    "specs.covers_public_health_system_risks",
+    "specs.overall_limit or specs.unlimited"
+  ]
+}

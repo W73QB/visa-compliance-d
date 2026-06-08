@@ -1,0 +1,35 @@
+{
+  "visa_id": "ES_NLV_LA_2026",
+  "product_id": "WORLDNOMADS_EXPLORER_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Travel insurance is not accepted for this visa",
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8 (note)",
+          "excerpt": "No travel insurances with medical assistance coverage will be accepted."
+        }
+      ]
+    },
+    {
+      "text": "Unlimited coverage required, product has limit of 150000",
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.ES.authorized",
+    "specs.deductible.amount",
+    "specs.comprehensive",
+    "specs.covers_public_health_system_risks",
+    "specs.copay",
+    "specs.moratorium_days"
+  ]
+}

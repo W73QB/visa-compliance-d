@@ -1,0 +1,127 @@
+{
+  "id": "ES_NLV_LA_2026",
+  "country": "Spain",
+  "visa_name": "Non-Lucrative Visa",
+  "route": "Consulate (Los Angeles)",
+  "authority": "Consulate General of Spain in Los Angeles",
+  "last_verified": "2026-06-08",
+  "sources": [
+    {
+      "source_id": "ES_NLV_LA_EXTERIORES_2026",
+      "url": "https://www.exteriores.gob.es/Consulados/losangeles/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "adcd46c4a302249080b34f36450422bbb6f8d354562e996b9a2ee298e576cd6a",
+      "local_path": "sources/ES_NLV_LA_EXTERIORES_2026-06-08.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "Proof of public or private health insurance contracted with an insurance entity authorized to operate in Spain."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_spain",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "health insurance contracted with an insurance entity authorized to operate in Spain"
+        }
+      ]
+    },
+    {
+      "key": "insurance.covers_public_health_system_risks",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "must cover all the beneficiaries of the visa for the risks insured by Spain's public health system"
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "It must cover ... the medical, hospital and out of hospitals expenses."
+        }
+      ]
+    },
+    {
+      "key": "insurance.unlimited_coverage",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+        }
+      ]
+    },
+    {
+      "key": "insurance.no_deductible",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+        }
+      ]
+    },
+    {
+      "key": "insurance.no_copayment",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+        }
+      ]
+    },
+    {
+      "key": "insurance.no_moratorium",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8",
+          "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+        }
+      ]
+    },
+    {
+      "key": "insurance.travel_insurance_accepted",
+      "op": "==",
+      "value": false,
+      "evidence": [
+        {
+          "source_id": "ES_NLV_LA_EXTERIORES_2026",
+          "locator": "Required documents, item 8 (note)",
+          "excerpt": "No travel insurances with medical assistance coverage will be accepted."
+        }
+      ]
+    }
+  ]
+}
