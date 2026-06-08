@@ -100,15 +100,15 @@ VISA_FAQS = {
     "GR_DNV_MFA_2026": [
         {
             "question": "Is insurance required for the Greece Digital Nomad Visa?",
-            "answer": "Yes. The Work From Greece portal that the Hellenic MFA designates for visa information lists travel insurance among the required documents.",
+            "answer": "Yes. The official Work From Greece Digital Nomad Visa checklist lists travel insurance among the required documents, with a period of validity equal to the visa issued.",
         },
         {
             "question": "Does Greece state a coverage amount or require a Greek-authorized insurer?",
-            "answer": "The designated source does not state a coverage minimum or an insurer-authorization rule, so the engine records those as UNKNOWN rather than inferring them.",
+            "answer": "No. The official checklist states no coverage amount and no insurer-authorization rule (the 30,000 EUR figure is the separate Schengen short-stay rule, not this national visa), so the engine records those as UNKNOWN rather than inferring them.",
         },
         {
-            "question": "Is travel insurance accepted for this route?",
-            "answer": "The designated required-documents list names travel insurance, so the current snapshot models only that insurance is mandatory.",
+            "question": "Is travel insurance accepted, and must it cover the whole stay?",
+            "answer": "Travel insurance is accepted, but the checklist requires a validity period equal to the visa, covering emergency medical care, hospital care and repatriation. Monthly subscriptions that can lapse are marked YELLOW; a policy covering the full visa period is needed.",
         },
     ],
     "ES_NLV_LA_2026": [

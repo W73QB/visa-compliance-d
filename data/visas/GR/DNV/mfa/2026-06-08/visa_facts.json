@@ -12,6 +12,13 @@
       "retrieved_at": "2026-06-08T00:00:00Z",
       "sha256": "4264aae1c635faa665fb3afc374c535890890ed84cbaf2517ac1831f5682d1ea",
       "local_path": "sources/GR_WORKFROMGREECE_DNV_2026-06-08.html"
+    },
+    {
+      "source_id": "GR_WFG_CHECKLIST_2026",
+      "url": "https://workfromgreece.gr/wp-content/uploads/2023/05/WFG_VisaChecklistGreece.pdf",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "ae649671d2a87fdcc66936842ce0d71a8251581bd67452d519f0a129433c71a2",
+      "local_path": "sources/GR_WFG_CHECKLIST_2026-06-08.pdf"
     }
   ],
   "requirements": [
@@ -21,9 +28,21 @@
       "value": true,
       "evidence": [
         {
-          "source_id": "GR_WORKFROMGREECE_DNV_2026",
-          "locator": "Required documents list (Work From Greece, the portal the Hellenic MFA Digital Nomad Visa page designates for all relevant information)",
-          "excerpt": "Your travel insurance"
+          "source_id": "GR_WFG_CHECKLIST_2026",
+          "locator": "General Supporting Documents, Travel insurance (official Work From Greece Digital Nomad Visa checklist)",
+          "excerpt": "Travel insurance, with a period of validity equal to the visa issued, as a minimum, which covers the costs that may arise in the event of repatriation for medical reasons, for emergency medical care and/or emergency hospital care."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "GR_WFG_CHECKLIST_2026",
+          "locator": "General Supporting Documents, Travel insurance (official Work From Greece Digital Nomad Visa checklist)",
+          "excerpt": "Travel insurance, with a period of validity equal to the visa issued, as a minimum"
         }
       ]
     }
