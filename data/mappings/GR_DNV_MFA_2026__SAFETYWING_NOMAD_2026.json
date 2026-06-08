@@ -1,7 +1,18 @@
 {
   "visa_id": "GR_DNV_MFA_2026",
   "product_id": "SAFETYWING_NOMAD_2026",
-  "status": "GREEN",
-  "reasons": [],
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "GR_WFG_CHECKLIST_2026",
+          "locator": "General Supporting Documents, Travel insurance (official Work From Greece Digital Nomad Visa checklist)",
+          "excerpt": "Travel insurance, with a period of validity equal to the visa issued, as a minimum"
+        }
+      ]
+    }
+  ],
   "missing": []
 }

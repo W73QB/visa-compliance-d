@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-08T14:55:02.512276+00:00",
+  "built_at": "2026-06-08T23:47:06.448335+00:00",
   "snapshot_id": "2026-06-08",
   "visas": [
     {
@@ -411,6 +411,13 @@
           "retrieved_at": "2026-06-08T00:00:00Z",
           "sha256": "4264aae1c635faa665fb3afc374c535890890ed84cbaf2517ac1831f5682d1ea",
           "local_path": "sources/GR_WORKFROMGREECE_DNV_2026-06-08.html"
+        },
+        {
+          "source_id": "GR_WFG_CHECKLIST_2026",
+          "url": "https://workfromgreece.gr/wp-content/uploads/2023/05/WFG_VisaChecklistGreece.pdf",
+          "retrieved_at": "2026-06-08T00:00:00Z",
+          "sha256": "ae649671d2a87fdcc66936842ce0d71a8251581bd67452d519f0a129433c71a2",
+          "local_path": "sources/GR_WFG_CHECKLIST_2026-06-08.pdf"
         }
       ],
       "requirements": [
@@ -420,9 +427,21 @@
           "value": true,
           "evidence": [
             {
-              "source_id": "GR_WORKFROMGREECE_DNV_2026",
-              "locator": "Required documents list (Work From Greece, the portal the Hellenic MFA Digital Nomad Visa page designates for all relevant information)",
-              "excerpt": "Your travel insurance"
+              "source_id": "GR_WFG_CHECKLIST_2026",
+              "locator": "General Supporting Documents, Travel insurance (official Work From Greece Digital Nomad Visa checklist)",
+              "excerpt": "Travel insurance, with a period of validity equal to the visa issued, as a minimum, which covers the costs that may arise in the event of repatriation for medical reasons, for emergency medical care and/or emergency hospital care."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "GR_WFG_CHECKLIST_2026",
+              "locator": "General Supporting Documents, Travel insurance (official Work From Greece Digital Nomad Visa checklist)",
+              "excerpt": "Travel insurance, with a period of validity equal to the visa issued, as a minimum"
             }
           ]
         }
@@ -1022,7 +1041,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -1103,7 +1122,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
@@ -1180,7 +1199,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
@@ -1305,7 +1324,7 @@
         "specs.copay",
         "specs.moratorium_days"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -1501,7 +1520,7 @@
         "specs.copay",
         "specs.moratorium_days"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "ES_NLV_LA_2026",
@@ -1681,7 +1700,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "GR_DNV_MFA_2026",
@@ -1694,8 +1713,19 @@
     {
       "visa_id": "GR_DNV_MFA_2026",
       "product_id": "SAFETYWING_NOMAD_2026",
-      "status": "GREEN",
-      "reasons": [],
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "GR_WFG_CHECKLIST_2026",
+              "locator": "General Supporting Documents, Travel insurance (official Work From Greece Digital Nomad Visa checklist)",
+              "excerpt": "Travel insurance, with a period of validity equal to the visa issued, as a minimum"
+            }
+          ]
+        }
+      ],
       "missing": [],
       "last_verified": "2026-06-08"
     },
@@ -1751,7 +1781,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -1823,7 +1853,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1893,7 +1923,7 @@
       "missing": [
         "specs.payment_cadence"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -1974,7 +2004,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
@@ -2082,7 +2112,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -2350,6 +2380,13 @@
       "retrieved_at": "2026-01-15T00:00:00Z",
       "sha256": "8160cdbe0996621dc0091be0e858b56fb956df38cf51e3b943d905f38d2d98fa",
       "local_path": "sources/GENKI_TRAVELER_COVERAGE_2026-01-15.html"
+    },
+    "GR_WFG_CHECKLIST_2026": {
+      "source_id": "GR_WFG_CHECKLIST_2026",
+      "url": "https://workfromgreece.gr/wp-content/uploads/2023/05/WFG_VisaChecklistGreece.pdf",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "ae649671d2a87fdcc66936842ce0d71a8251581bd67452d519f0a129433c71a2",
+      "local_path": "sources/GR_WFG_CHECKLIST_2026-06-08.pdf"
     },
     "GR_WORKFROMGREECE_DNV_2026": {
       "source_id": "GR_WORKFROMGREECE_DNV_2026",
