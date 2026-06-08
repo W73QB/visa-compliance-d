@@ -159,12 +159,12 @@ VISA_FAQS = {
             "answer": "The Cancilleria requires a health policy with coverage in Colombian territory against all risks (accident, illness, maternity, disability, hospitalization, death, repatriation) for the duration of stay.",
         },
         {
-            "question": "Why do all products show UNKNOWN for this route?",
-            "answer": "The policy must cover Colombian territory specifically, and none of the catalogued products documents Colombia coverage, so the engine records UNKNOWN rather than assuming a worldwide or foreign policy qualifies.",
+            "question": "Which product shows GREEN for this route?",
+            "answer": "Genki Native shows GREEN: its documentation states global coverage that includes Colombia plus comprehensive care (outpatient, inpatient, maternity), satisfying the Colombian-territory all-risk requirement.",
         },
         {
-            "question": "Does a Spanish or worldwide policy automatically qualify?",
-            "answer": "Not on the evidence here. Coverage in Colombian territory has to be documented; until a product's evidence shows that, the result stays UNKNOWN.",
+            "question": "Why do the travel and Spanish health policies not qualify?",
+            "answer": "Travel-medical products (and Spanish-authorized health policies) either do not document coverage in Colombian territory or omit parts of the all-risk list such as maternity, so the engine keeps them UNKNOWN rather than guessing.",
         },
     ],
 }

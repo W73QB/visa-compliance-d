@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-08T13:37:23.347187+00:00",
+  "built_at": "2026-06-08T14:55:02.512276+00:00",
   "snapshot_id": "2026-06-08",
   "visas": [
     {
@@ -787,6 +787,55 @@
       ]
     },
     {
+      "id": "GENKI_NATIVE_2026",
+      "provider": "Genki",
+      "product_name": "Genki Native (Basic)",
+      "effective_date": "2026-06-08",
+      "policy_version": "2026-06",
+      "specs": {
+        "type": "international health insurance",
+        "overall_limit": 1000000,
+        "currency": "EUR",
+        "deductible": null,
+        "copay": null,
+        "payment_cadence": null,
+        "contract_commitment_months": null,
+        "comprehensive": true,
+        "covers_public_health_system_risks": null,
+        "unlimited": null,
+        "moratorium_days": null,
+        "jurisdiction_facts": {
+          "CO": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "GENKI_NATIVE_COVERAGE_2026",
+                "locator": "Global Coverage",
+                "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
+              }
+            ]
+          }
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "GENKI_NATIVE_COVERAGE_2026",
+          "locator": "Covered Benefits (Both Plans)",
+          "excerpt": "Accidents & emergencies. Outpatient and inpatient medical care. Direct payment to hospitals for inpatient care. Emergency and medically necessary transport."
+        },
+        {
+          "source_id": "GENKI_NATIVE_COVERAGE_2026",
+          "locator": "Maternity",
+          "excerpt": "Maternity care (after 12-month waiting period)."
+        },
+        {
+          "source_id": "GENKI_NATIVE_COVERAGE_2026",
+          "locator": "Level of benefits",
+          "excerpt": "Genki Native Basic EUR 1,000,000 maximum coverage per insurance year."
+        }
+      ]
+    },
+    {
       "id": "GENKI_TRAVELER_2026",
       "provider": "Genki",
       "product_name": "Genki Traveler",
@@ -944,7 +993,7 @@
       "missing": [
         "specs.jurisdiction_facts.CO.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -954,7 +1003,7 @@
       "missing": [
         "specs.jurisdiction_facts.CO.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -965,6 +1014,14 @@
         "specs.jurisdiction_facts.CO.authorized",
         "specs.comprehensive"
       ],
+      "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
       "last_verified": ""
     },
     {
@@ -976,7 +1033,7 @@
         "specs.jurisdiction_facts.CO.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -987,7 +1044,7 @@
         "specs.jurisdiction_facts.CO.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -997,7 +1054,7 @@
       "missing": [
         "specs.jurisdiction_facts.CO.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -1008,7 +1065,7 @@
         "specs.jurisdiction_facts.CO.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-08"
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
@@ -1039,6 +1096,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-01-13"
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
@@ -1108,6 +1173,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-01-15"
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
@@ -1208,6 +1281,31 @@
         "specs.moratorium_days"
       ],
       "last_verified": "2026-01-15"
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Unlimited coverage required, product has limit of 1000000",
+          "evidence": [
+            {
+              "source_id": "BLS_ES_DNV_LONDON_2026",
+              "locator": "page 2, item 9",
+              "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.ES.authorized",
+        "specs.deductible.amount",
+        "specs.covers_public_health_system_risks",
+        "specs.copay",
+        "specs.moratorium_days"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -1379,6 +1477,31 @@
         "specs.moratorium_days"
       ],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "ES_NLV_LA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Unlimited coverage required, product has limit of 1000000",
+          "evidence": [
+            {
+              "source_id": "ES_NLV_LA_EXTERIORES_2026",
+              "locator": "Required documents, item 8",
+              "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.ES.authorized",
+        "specs.deductible.amount",
+        "specs.covers_public_health_system_risks",
+        "specs.copay",
+        "specs.moratorium_days"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "ES_NLV_LA_2026",
@@ -1554,6 +1677,14 @@
     },
     {
       "visa_id": "GR_DNV_MFA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "GR_DNV_MFA_2026",
       "product_id": "GENKI_TRAVELER_2026",
       "status": "GREEN",
       "reasons": [],
@@ -1616,6 +1747,14 @@
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IT_SELFEMP_SF_2026",
       "product_id": "GENKI_TRAVELER_2026",
       "status": "GREEN",
       "reasons": [],
@@ -1677,6 +1816,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -1737,6 +1884,16 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-01-13"
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.payment_cadence"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -1813,6 +1970,14 @@
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "GENKI_TRAVELER_2026",
       "status": "GREEN",
       "reasons": [],
@@ -1899,6 +2064,25 @@
       ],
       "missing": [],
       "last_verified": "2026-01-13"
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -1985,6 +2169,12 @@
       "disclosure": "Paid link. We may earn a commission if you purchase through this link."
     },
     {
+      "product_id": "GENKI_NATIVE_2026",
+      "affiliate_url": "https://genki.world/products/native",
+      "label": "View Genki Native",
+      "disclosure": "Paid link. We may earn a commission if you purchase through this link."
+    },
+    {
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "affiliate_url": "https://www.asisa.es/seguros-medicos/extranjeros/residencia",
       "label": "Visit ASISA Health Residents",
@@ -2020,6 +2210,12 @@
       "product_id": "GENKI_TRAVELER_2026",
       "affiliate_url": "https://genki.world/products/traveler",
       "label": "View Genki Traveler",
+      "disclosure": "Paid link. We may earn a commission if you purchase through this link."
+    },
+    "GENKI_NATIVE_2026": {
+      "product_id": "GENKI_NATIVE_2026",
+      "affiliate_url": "https://genki.world/products/native",
+      "label": "View Genki Native",
       "disclosure": "Paid link. We may earn a commission if you purchase through this link."
     },
     "ASISA_HEALTH_RESIDENTS_2026": {
@@ -2140,6 +2336,13 @@
       "local_path": "sources/GENERIC_WEBSITE_2026-01-12.md",
       "synthetic": true,
       "note": "Synthetic summary; not an official snapshot."
+    },
+    "GENKI_NATIVE_COVERAGE_2026": {
+      "source_id": "GENKI_NATIVE_COVERAGE_2026",
+      "url": "https://help.genki.world/en/articles/9470376-what-is-covered-and-not-covered-by-genki-native",
+      "retrieved_at": "2026-06-08T00:00:00Z",
+      "sha256": "a780bd66fc799ce789186d06f35555655523d4ecd85a79f8cc32aea458aed613",
+      "local_path": "sources/GENKI_NATIVE_COVERAGE_2026-06-08.html"
     },
     "GENKI_TRAVELER_COVERAGE_2026": {
       "source_id": "GENKI_TRAVELER_COVERAGE_2026",

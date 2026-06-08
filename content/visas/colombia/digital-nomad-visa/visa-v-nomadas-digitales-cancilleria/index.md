@@ -7,10 +7,10 @@ description: "Official insurance requirements for Colombia Digital Nomad Visa vi
 faq:
   - question: "What insurance does the Colombia Digital Nomad Visa require?"
     answer: "The Cancilleria requires a health policy with coverage in Colombian territory against all risks (accident, illness, maternity, disability, hospitalization, death, repatriation) for the duration of stay."
-  - question: "Why do all products show UNKNOWN for this route?"
-    answer: "The policy must cover Colombian territory specifically, and none of the catalogued products documents Colombia coverage, so the engine records UNKNOWN rather than assuming a worldwide or foreign policy qualifies."
-  - question: "Does a Spanish or worldwide policy automatically qualify?"
-    answer: "Not on the evidence here. Coverage in Colombian territory has to be documented; until a product's evidence shows that, the result stays UNKNOWN."
+  - question: "Which product shows GREEN for this route?"
+    answer: "Genki Native shows GREEN: its documentation states global coverage that includes Colombia plus comprehensive care (outpatient, inpatient, maternity), satisfying the Colombian-territory all-risk requirement."
+  - question: "Why do the travel and Spanish health policies not qualify?"
+    answer: "Travel-medical products (and Spanish-authorized health policies) either do not document coverage in Colombian territory or omit parts of the all-risk list such as maternity, so the engine keeps them UNKNOWN rather than guessing."
 ---
 
 ## Colombia Digital Nomad Visa
@@ -75,11 +75,11 @@ Before applying for this route, prepare the following so the policy can be check
 **What insurance does the Colombia Digital Nomad Visa require?**  
 The Cancilleria requires a health policy with coverage in Colombian territory against all risks (accident, illness, maternity, disability, hospitalization, death, repatriation) for the duration of stay.
 
-**Why do all products show UNKNOWN for this route?**  
-The policy must cover Colombian territory specifically, and none of the catalogued products documents Colombia coverage, so the engine records UNKNOWN rather than assuming a worldwide or foreign policy qualifies.
+**Which product shows GREEN for this route?**  
+Genki Native shows GREEN: its documentation states global coverage that includes Colombia plus comprehensive care (outpatient, inpatient, maternity), satisfying the Colombian-territory all-risk requirement.
 
-**Does a Spanish or worldwide policy automatically qualify?**  
-Not on the evidence here. Coverage in Colombian territory has to be documented; until a product's evidence shows that, the result stays UNKNOWN.
+**Why do the travel and Spanish health policies not qualify?**  
+Travel-medical products (and Spanish-authorized health policies) either do not document coverage in Colombian territory or omit parts of the all-risk list such as maternity, so the engine keeps them UNKNOWN rather than guessing.
 
 ## Check in the engine
 
