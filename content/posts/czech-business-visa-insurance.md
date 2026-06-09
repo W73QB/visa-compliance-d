@@ -1,6 +1,6 @@
 ---
 title: "Czech long-term business visa insurance requirements (evidence-based)"
-date: 2026-06-10
+date: 2026-06-09
 description: "Evidence-based summary of the medical insurance requirement for the Czech long-term visa for the purpose of doing business, based on the Official Information Portal for Foreigners."
 tags: ["czech-republic", "business-visa", "freelance", "insurance", "compliance"]
 faq:
