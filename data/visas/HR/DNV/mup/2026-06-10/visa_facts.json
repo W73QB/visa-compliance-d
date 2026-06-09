@@ -1,0 +1,55 @@
+{
+  "id": "HR_DNV_MUP_2026",
+  "country": "Croatia",
+  "visa_name": "Digital Nomad Temporary Stay",
+  "route": "Ministry of the Interior (MUP)",
+  "authority": "Ministry of the Interior of the Republic of Croatia (MUP)",
+  "last_verified": "2026-06-10",
+  "sources": [
+    {
+      "source_id": "HR_MUP_DIGITALNOMAD_2026",
+      "url": "https://mup.gov.hr/aliens-281621/temporary-stay-of-digital-nomads/286833",
+      "retrieved_at": "2026-06-10T00:00:00Z",
+      "sha256": "329f4232046eac2a5e754007a2f59417f55cfdbbe04434d78f7dd7dc33047ede",
+      "local_path": "sources/HR_MUP_DIGITALNOMAD_2026-06-10.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "HR_MUP_DIGITALNOMAD_2026",
+          "locator": "Required documents, proof of health insurance",
+          "excerpt": "proof of health insurance for the period of time that you plan to be in Croatia (travel or private health insurance must cover the territory of the Republic of Croatia)"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "HR_MUP_DIGITALNOMAD_2026",
+          "locator": "Required documents, proof of health insurance",
+          "excerpt": "proof of health insurance for the period of time that you plan to be in Croatia"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_croatia",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "HR_MUP_DIGITALNOMAD_2026",
+          "locator": "Required documents, proof of health insurance",
+          "excerpt": "travel or private health insurance must cover the territory of the Republic of Croatia"
+        }
+      ]
+    }
+  ]
+}

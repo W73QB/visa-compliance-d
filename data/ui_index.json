@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-09T23:07:13.507202+00:00",
+  "built_at": "2026-06-09T23:13:43.236103+00:00",
   "snapshot_id": "2026-06-09",
   "visas": [
     {
@@ -504,6 +504,61 @@
       ]
     },
     {
+      "id": "HR_DNV_MUP_2026",
+      "country": "Croatia",
+      "visa_name": "Digital Nomad Temporary Stay",
+      "route": "Ministry of the Interior (MUP)",
+      "authority": "Ministry of the Interior of the Republic of Croatia (MUP)",
+      "last_verified": "2026-06-10",
+      "sources": [
+        {
+          "source_id": "HR_MUP_DIGITALNOMAD_2026",
+          "url": "https://mup.gov.hr/aliens-281621/temporary-stay-of-digital-nomads/286833",
+          "retrieved_at": "2026-06-10T00:00:00Z",
+          "sha256": "329f4232046eac2a5e754007a2f59417f55cfdbbe04434d78f7dd7dc33047ede",
+          "local_path": "sources/HR_MUP_DIGITALNOMAD_2026-06-10.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "HR_MUP_DIGITALNOMAD_2026",
+              "locator": "Required documents, proof of health insurance",
+              "excerpt": "proof of health insurance for the period of time that you plan to be in Croatia (travel or private health insurance must cover the territory of the Republic of Croatia)"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "HR_MUP_DIGITALNOMAD_2026",
+              "locator": "Required documents, proof of health insurance",
+              "excerpt": "proof of health insurance for the period of time that you plan to be in Croatia"
+            }
+          ]
+        },
+        {
+          "key": "insurance.authorized_in_croatia",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "HR_MUP_DIGITALNOMAD_2026",
+              "locator": "Required documents, proof of health insurance",
+              "excerpt": "travel or private health insurance must cover the territory of the Republic of Croatia"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "IT_SELFEMP_SF_2026",
       "country": "Italy",
       "visa_name": "Self-Employment Visa",
@@ -889,6 +944,16 @@
                 "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
               }
             ]
+          },
+          "HR": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "GENKI_NATIVE_COVERAGE_2026",
+                "locator": "Global Coverage",
+                "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
+              }
+            ]
           }
         }
       },
@@ -1233,7 +1298,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1244,7 +1309,7 @@
         "specs.deductible.amount",
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1254,7 +1319,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1264,7 +1329,7 @@
       "missing": [
         "specs.deductible.amount"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1283,7 +1348,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1312,7 +1377,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1323,7 +1388,7 @@
         "specs.deductible.amount",
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1344,7 +1409,7 @@
       "missing": [
         "specs.deductible.amount"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
@@ -1921,6 +1986,95 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "HR_MUP_DIGITALNOMAD_2026",
+              "locator": "Required documents, proof of health insurance",
+              "excerpt": "proof of health insurance for the period of time that you plan to be in Croatia"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -2578,6 +2732,13 @@
       "retrieved_at": "2026-06-08T00:00:00Z",
       "sha256": "4264aae1c635faa665fb3afc374c535890890ed84cbaf2517ac1831f5682d1ea",
       "local_path": "sources/GR_WORKFROMGREECE_DNV_2026-06-08.html"
+    },
+    "HR_MUP_DIGITALNOMAD_2026": {
+      "source_id": "HR_MUP_DIGITALNOMAD_2026",
+      "url": "https://mup.gov.hr/aliens-281621/temporary-stay-of-digital-nomads/286833",
+      "retrieved_at": "2026-06-10T00:00:00Z",
+      "sha256": "329f4232046eac2a5e754007a2f59417f55cfdbbe04434d78f7dd7dc33047ede",
+      "local_path": "sources/HR_MUP_DIGITALNOMAD_2026-06-10.html"
     },
     "IT_SELFEMP_SF_INSURANCE_2026": {
       "source_id": "IT_SELFEMP_SF_INSURANCE_2026",

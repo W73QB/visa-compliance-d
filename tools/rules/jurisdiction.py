@@ -68,3 +68,40 @@ class AuthorizedInColombiaRule(Rule):
                 }]
             )
         return None
+
+
+class AuthorizedInCroatiaRule(Rule):
+    """Check if the policy covers the territory of the Republic of Croatia.
+
+    Croatia's digital-nomad temporary stay requires that the insurance cover the
+    territory of the Republic of Croatia. A product is only credited for this when
+    its evidence documents Croatia (HR) coverage; otherwise the status is UNKNOWN
+    rather than an assumption that a foreign/domestic policy is valid in Croatia.
+    """
+
+    name = "AuthorizedInCroatia"
+
+    def check(self, visa, product):
+        req = get_req(visa, "insurance.authorized_in_croatia")
+        if not req or req["value"] is not True:
+            return None
+
+        country = visa.get("id", "").upper()[:2]
+        if country != "HR":
+            return None
+
+        jf = product_spec(product, f"jurisdiction_facts.{country}.authorized")
+        if jf is None:
+            return RuleResult(
+                status="UNKNOWN",
+                missing=[f"specs.jurisdiction_facts.{country}.authorized"]
+            )
+        if jf is False:
+            return RuleResult(
+                status="RED",
+                reasons=[{
+                    "text": "Policy does not document coverage in the territory of Croatia",
+                    "evidence": req["evidence"]
+                }]
+            )
+        return None
