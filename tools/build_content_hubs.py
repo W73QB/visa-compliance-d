@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "CZ_LONGTERM_BUSINESS_IPC_2026": [
+        {
+            "question": "How much insurance coverage does the Czech long-term business visa require?",
+            "answer": "The Official Information Portal for Foreigners states the coverage amount must be at least EUR 400,000 per insured event, with no cost sharing by the insured person.",
+        },
+        {
+            "question": "Why do SafetyWing, World Nomads and Genki Traveler show RED?",
+            "answer": "Their documented limits convert to below EUR 400,000, and a deductible (cost sharing) conflicts with the no-cost-sharing rule, so the engine marks them RED rather than accepting them.",
+        },
+        {
+            "question": "Why are the Spanish health policies UNKNOWN rather than GREEN?",
+            "answer": "Their policy documents do not state an overall coverage limit to compare against the EUR 400,000 threshold, so the engine records UNKNOWN instead of assuming they clear it.",
+        },
+    ],
     "CO_DNV_CANCILLERIA_2026": [
         {
             "question": "What insurance does the Colombia Digital Nomad Visa require?",
@@ -218,6 +232,11 @@ RELATED_POSTS = {
         ("/posts/colombia-dnv-insurance/", "Colombia Digital Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "CZ_LONGTERM_BUSINESS_IPC_2026": [
+        ("/posts/czech-business-visa-insurance/", "Czech long-term business visa insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
     ],
 }
 
