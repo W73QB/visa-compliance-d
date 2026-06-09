@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-06-08T23:47:06.448335+00:00",
-  "snapshot_id": "2026-06-08",
+  "built_at": "2026-06-09T23:07:13.507202+00:00",
+  "snapshot_id": "2026-06-09",
   "visas": [
     {
       "id": "CO_DNV_CANCILLERIA_2026",
@@ -107,6 +107,62 @@
               "source_id": "CR_DECREE_43619_2026",
               "locator": "Article 9 - Minimum Coverage Amount",
               "excerpt": "gastos m\u00e9dicos en casos de enfermedades en Costa Rica por al menos US $50 000,00 - at least US$50,000 for medical expenses related to illness in Costa Rica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "country": "Czech Republic",
+      "visa_name": "Long-term Business Visa",
+      "route": "Doing Business (IPC)",
+      "authority": "Ministry of the Interior of the Czech Republic (IPC)",
+      "last_verified": "2026-06-10",
+      "sources": [
+        {
+          "source_id": "CZ_IPC_INSURANCE_2026",
+          "url": "https://ipc.gov.cz/en/forms-and-documents/documents/medical-insurance/",
+          "retrieved_at": "2026-06-10T00:00:00Z",
+          "sha256": "9ddbe03ceba165c54745267b9c3ca926e6f24a89d4af205ba79df6e6b08e7592",
+          "local_path": "sources/CZ_IPC_INSURANCE_2026-06-10.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance (Official Information Portal for Foreigners, ipc.gov.cz)",
+              "excerpt": "The insurance coverage amount (the agreed limit per insured event) must be at least EUR 400,000, with no cost sharing by the insured person."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 400000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "The insurance coverage amount (the agreed limit per insured event) must be at least EUR 400,000"
+            }
+          ]
+        },
+        {
+          "key": "insurance.no_deductible",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "must be at least EUR 400,000, with no cost sharing by the insured person"
             }
           ]
         }
@@ -1170,6 +1226,127 @@
       "last_verified": "2026-01-15"
     },
     {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.deductible.amount",
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.deductible.amount"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Visa requires zero deductible but product has 50",
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "must be at least EUR 400,000, with no cost sharing by the insured person"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Visa requires zero deductible but product has 250",
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "must be at least EUR 400,000, with no cost sharing by the insured person"
+            }
+          ]
+        },
+        {
+          "text": "Minimum coverage 400000 EUR required, product has 250000 USD",
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "The insurance coverage amount (the agreed limit per insured event) must be at least EUR 400,000"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.deductible.amount",
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Minimum coverage 400000 EUR required, product has 150000 USD",
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "The insurance coverage amount (the agreed limit per insured event) must be at least EUR 400,000"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.deductible.amount"
+      ],
+      "last_verified": ""
+    },
+    {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "GREEN",
@@ -1727,7 +1904,7 @@
         }
       ],
       "missing": [],
-      "last_verified": "2026-06-08"
+      "last_verified": "2026-06-09"
     },
     {
       "visa_id": "GR_DNV_MFA_2026",
@@ -2308,6 +2485,13 @@
       "sha256": "cdd9951eab3b18839fde2282203098c611f59671533d24ec90e298850f0917b0",
       "local_path": "sources/CR_Decreto_43619_2026-01-12.md",
       "note": "Executive Decree No. 43619-H-MGP-TUR - Article 9 establishes insurance must cover ENTIRE authorized stay period"
+    },
+    "CZ_IPC_INSURANCE_2026": {
+      "source_id": "CZ_IPC_INSURANCE_2026",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/medical-insurance/",
+      "retrieved_at": "2026-06-10T00:00:00Z",
+      "sha256": "9ddbe03ceba165c54745267b9c3ca926e6f24a89d4af205ba79df6e6b08e7592",
+      "local_path": "sources/CZ_IPC_INSURANCE_2026-06-10.html"
     },
     "DE_D_VISA_HEALTH_INSURANCE_2026": {
       "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",

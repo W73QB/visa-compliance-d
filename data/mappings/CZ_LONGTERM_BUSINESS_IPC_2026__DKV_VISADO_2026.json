@@ -1,0 +1,10 @@
+{
+  "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+  "product_id": "DKV_VISADO_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.deductible.amount",
+    "specs.overall_limit"
+  ]
+}
