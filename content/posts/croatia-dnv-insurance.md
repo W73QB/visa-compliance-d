@@ -1,6 +1,6 @@
 ---
 title: "Croatia digital nomad stay insurance requirements (evidence-based)"
-date: 2026-06-10
+date: 2026-06-09
 description: "Evidence-based summary of the health insurance requirement for Croatia's temporary stay for digital nomads, based on the Ministry of the Interior (MUP)."
 tags: ["croatia", "dnv", "digital-nomad", "insurance", "compliance"]
 faq:
