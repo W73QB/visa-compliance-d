@@ -1,0 +1,20 @@
+{
+  "visa_id": "HR_DNV_MUP_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "HR_MUP_DIGITALNOMAD_2026",
+          "locator": "Required documents, proof of health insurance",
+          "excerpt": "proof of health insurance for the period of time that you plan to be in Croatia"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.HR.authorized"
+  ]
+}

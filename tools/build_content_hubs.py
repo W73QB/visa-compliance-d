@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "HR_DNV_MUP_2026": [
+        {
+            "question": "What insurance does the Croatia digital nomad stay require?",
+            "answer": "The Ministry of the Interior requires proof of health insurance for the whole period you plan to be in Croatia, and the travel or private health insurance must cover the territory of the Republic of Croatia.",
+        },
+        {
+            "question": "Why does Genki Native show GREEN while others are UNKNOWN?",
+            "answer": "Genki Native documents global coverage that includes Croatia and a full term, so it satisfies both the Croatian-territory and full-period rules. Products that do not document Croatia coverage stay UNKNOWN rather than being assumed valid.",
+        },
+        {
+            "question": "Is travel insurance accepted?",
+            "answer": "Yes, the source accepts travel or private health insurance, as long as it covers the territory of Croatia for the full period; monthly subscriptions that can lapse are marked YELLOW.",
+        },
+    ],
     "CZ_LONGTERM_BUSINESS_IPC_2026": [
         {
             "question": "How much insurance coverage does the Czech long-term business visa require?",
@@ -237,6 +251,11 @@ RELATED_POSTS = {
         ("/posts/czech-business-visa-insurance/", "Czech long-term business visa insurance requirements"),
         ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+    ],
+    "HR_DNV_MUP_2026": [
+        ("/posts/croatia-dnv-insurance/", "Croatia digital nomad stay insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 
