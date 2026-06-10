@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "PT_D7_VISTOS_2026": [
+        {
+            "question": "What insurance does the Portugal D7 visa require?",
+            "answer": "The Ministry of Foreign Affairs requires valid travel insurance covering necessary medical expenses, including urgent medical assistance and possible repatriation, for the residency visa.",
+        },
+        {
+            "question": "Is a coverage amount such as 30,000 EUR stated officially?",
+            "answer": "No. The official residency-visa documentation states the cover scope (medical expenses, urgent assistance, repatriation) but no amount, so the engine does not use the secondary-source 30,000 EUR figure.",
+        },
+        {
+            "question": "Why is a monthly subscription marked YELLOW?",
+            "answer": "The insurance must be valid for the visa. A month-to-month policy that can lapse does not assure cover for the full period, so it is YELLOW; a full-period policy is GREEN.",
+        },
+    ],
     "EE_DNV_VM_2026": [
         {
             "question": "What insurance does the Estonia Digital Nomad Visa require?",
@@ -294,6 +308,11 @@ RELATED_POSTS = {
         ("/posts/estonia-dnv-insurance/", "Estonia Digital Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "PT_D7_VISTOS_2026": [
+        ("/posts/portugal-d7-insurance/", "Portugal D7 visa insurance requirements"),
+        ("/posts/portugal-dnv-insurance/", "Portugal remote-work visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
     ],
 }
 

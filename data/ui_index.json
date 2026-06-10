@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-10T05:01:57.682735+00:00",
+  "built_at": "2026-06-10T11:37:56.554063+00:00",
   "snapshot_id": "2026-06-10",
   "visas": [
     {
@@ -781,6 +781,49 @@
               "source_id": "MT_RESIDENCY_FAQ_2026",
               "locator": "FAQ - Are health insurance policies with monthly payments considered acceptable?",
               "excerpt": "No, they are not acceptable. Eligible policies are those with premiums covering a full year, paid in advance. A receipt for this payment may be requested."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PT_D7_VISTOS_2026",
+      "country": "Portugal",
+      "visa_name": "D7 Visa (Passive Income)",
+      "route": "Residency Visa (Vistos / MFA)",
+      "authority": "Ministry of Foreign Affairs of Portugal (Vistos)",
+      "last_verified": "2026-06-09",
+      "sources": [
+        {
+          "source_id": "PT_D7_VISTOS_2026",
+          "url": "https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/residency",
+          "retrieved_at": "2026-06-09T00:00:00Z",
+          "sha256": "a508f165424c3516323f1d0447d5ebf5c3969e03936c1dda5265fb38d7e42b17",
+          "local_path": "sources/PT_D7_VISTOS_2026-06-09.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "PT_D7_VISTOS_2026",
+              "locator": "Residency, General Documentation (applies to all residency visas, incl. people living from passive income / D7)",
+              "excerpt": "Valid travel insurance, covering necessary medical expenses, including urgent medical assistance and possible repatriation."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "PT_D7_VISTOS_2026",
+              "locator": "Residency, General Documentation (the residency visa requires valid travel insurance for the visa)",
+              "excerpt": "Valid travel insurance, covering necessary medical expenses, including urgent medical assistance and possible repatriation."
             }
           ]
         }
@@ -1695,7 +1738,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1703,7 +1746,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1711,7 +1754,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1719,7 +1762,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1727,7 +1770,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1746,7 +1789,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1754,7 +1797,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -1762,7 +1805,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -2571,6 +2614,81 @@
       "last_verified": "2026-01-15"
     },
     {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "PT_D7_VISTOS_2026",
+              "locator": "Residency, General Documentation (the residency visa requires valid travel insurance for the visa)",
+              "excerpt": "Valid travel insurance, covering necessary medical expenses, including urgent medical assistance and possible repatriation."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "GREEN",
@@ -3040,6 +3158,13 @@
       "sha256": "0f18ac432310a6af5e29ff42cfc7d5ebeb4eba69c02f1bc29a63c69545f4336f",
       "local_path": "sources/MT_NOMAD_RESIDENCY_FAQ_2026-01-12.md",
       "note": "Official FAQ explicitly states monthly payment insurance policies are NOT acceptable - annual payment required"
+    },
+    "PT_D7_VISTOS_2026": {
+      "source_id": "PT_D7_VISTOS_2026",
+      "url": "https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/residency",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "a508f165424c3516323f1d0447d5ebf5c3969e03936c1dda5265fb38d7e42b17",
+      "local_path": "sources/PT_D7_VISTOS_2026-06-09.html"
     },
     "VFS_PT_E11_CHINA_2025": {
       "source_id": "VFS_PT_E11_CHINA_2025",
