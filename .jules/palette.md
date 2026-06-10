@@ -1,0 +1,3 @@
+## 2026-06-10 - Form Label and Mobile Menu Accessibility Improvements
+**Learning:** In responsive forms using flex-col layouts (like VisaFact's), visual proximity does not guarantee accessible label associations. Custom icon-only mobile menus often miss crucial ARIA state attributes (`aria-expanded`, `aria-controls`), which prevents screen readers from understanding the menu's state and purpose.
+**Action:** Always verify that `<label>` elements have a matching `for` attribute referencing their target input's `id`, and ensure `<select>` elements use `aria-describedby` when helper text is present. For custom toggle buttons, dynamically manage `aria-expanded` in the event handler and explicitly link to the controlled element via `aria-controls`.
