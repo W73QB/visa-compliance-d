@@ -1,0 +1,43 @@
+{
+  "id": "PT_D7_VISTOS_2026",
+  "country": "Portugal",
+  "visa_name": "D7 Visa (Passive Income)",
+  "route": "Residency Visa (Vistos / MFA)",
+  "authority": "Ministry of Foreign Affairs of Portugal (Vistos)",
+  "last_verified": "2026-06-09",
+  "sources": [
+    {
+      "source_id": "PT_D7_VISTOS_2026",
+      "url": "https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/residency",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "a508f165424c3516323f1d0447d5ebf5c3969e03936c1dda5265fb38d7e42b17",
+      "local_path": "sources/PT_D7_VISTOS_2026-06-09.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PT_D7_VISTOS_2026",
+          "locator": "Residency, General Documentation (applies to all residency visas, incl. people living from passive income / D7)",
+          "excerpt": "Valid travel insurance, covering necessary medical expenses, including urgent medical assistance and possible repatriation."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PT_D7_VISTOS_2026",
+          "locator": "Residency, General Documentation (the residency visa requires valid travel insurance for the visa)",
+          "excerpt": "Valid travel insurance, covering necessary medical expenses, including urgent medical assistance and possible repatriation."
+        }
+      ]
+    }
+  ]
+}
