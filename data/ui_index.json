@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-10T04:50:05.154569+00:00",
+  "built_at": "2026-06-10T05:01:57.682735+00:00",
   "snapshot_id": "2026-06-10",
   "visas": [
     {
@@ -261,6 +261,49 @@
               "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",
               "locator": "Health insurance requirements for national (category D) visas",
               "excerpt": "Travel insurance is not sufficient for any D visa application."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EE_DNV_VM_2026",
+      "country": "Estonia",
+      "visa_name": "Digital Nomad Visa",
+      "route": "Long-stay (D) visa",
+      "authority": "Estonian Ministry of Foreign Affairs",
+      "last_verified": "2026-06-09",
+      "sources": [
+        {
+          "source_id": "EE_VM_DVISA_2026",
+          "url": "https://vm.ee/en/consular-visa-and-travel-information/visa-information/application-long-stay-d-visa",
+          "retrieved_at": "2026-06-09T00:00:00Z",
+          "sha256": "c102446835bbb3ab51a3d960dd85dd01f8a801bab9afdf52d3a39311a898348d",
+          "local_path": "sources/EE_VM_DVISA_2026-06-09.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "EE_VM_DVISA_2026",
+              "locator": "Application for a long-stay (D) visa (the visa type under which the Digital Nomad Visa is issued), required documents",
+              "excerpt": "travel medical insurance which guarantees payment of any costs related to applicant's medical treatment due to illness or injury during the validity of the visa."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "EE_VM_DVISA_2026",
+              "locator": "Application for a long-stay (D) visa, travel medical insurance",
+              "excerpt": "travel medical insurance must be valid for the whole period of requested visa."
             }
           ]
         }
@@ -1363,7 +1406,7 @@
       "missing": [
         "specs.jurisdiction_facts.CY.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1373,7 +1416,7 @@
       "missing": [
         "specs.jurisdiction_facts.CY.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1384,7 +1427,7 @@
         "specs.jurisdiction_facts.CY.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1392,7 +1435,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1403,7 +1446,7 @@
         "specs.jurisdiction_facts.CY.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1414,7 +1457,7 @@
         "specs.jurisdiction_facts.CY.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1424,7 +1467,7 @@
       "missing": [
         "specs.jurisdiction_facts.CY.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -1435,7 +1478,7 @@
         "specs.jurisdiction_facts.CY.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1645,6 +1688,81 @@
       ],
       "missing": [],
       "last_verified": "2026-01-15"
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "EE_VM_DVISA_2026",
+              "locator": "Application for a long-stay (D) visa, travel medical insurance",
+              "excerpt": "travel medical insurance must be valid for the whole period of requested visa."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -2828,6 +2946,13 @@
       "retrieved_at": "2026-01-16T00:00:00Z",
       "sha256": "823c9d4c993824cdcf9e47b3b6bf9a45848e70dd0b9cd54b304ff8aa19116560",
       "local_path": "sources/DKV_VISADO_CONDICIONES_2026-01-16.pdf"
+    },
+    "EE_VM_DVISA_2026": {
+      "source_id": "EE_VM_DVISA_2026",
+      "url": "https://vm.ee/en/consular-visa-and-travel-information/visa-information/application-long-stay-d-visa",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "c102446835bbb3ab51a3d960dd85dd01f8a801bab9afdf52d3a39311a898348d",
+      "local_path": "sources/EE_VM_DVISA_2026-06-09.html"
     },
     "BLS_ES_DNV_LONDON_2026": {
       "source_id": "BLS_ES_DNV_LONDON_2026",
