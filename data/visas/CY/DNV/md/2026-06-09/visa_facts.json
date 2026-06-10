@@ -1,0 +1,55 @@
+{
+  "id": "CY_DNV_MD_2026",
+  "country": "Cyprus",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Migration Department (CRMD)",
+  "authority": "Deputy Ministry of Migration and International Protection, Migration Department",
+  "last_verified": "2026-06-09",
+  "sources": [
+    {
+      "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+      "url": "https://www.gov.cy/app/uploads/sites/174/2025/12/Accompanying-Documents_VIS-Digital-Nomad_19032025.pdf",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "87ff1b5fdbc54940cca064b3ccc24aac5ab2a9b1be49300cd224042430f7d694",
+      "local_path": "sources/CY_MD_DIGITALNOMAD_DOCS_2026-06-09.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+          "locator": "List of Accompanying Documents, Registration / First Temporary Residence Permit, item 7",
+          "excerpt": "Certificate of Health Insurance for medical care that covers inpatient and outpatient care and transportation of corpse (Plan A)."
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+          "locator": "List of Accompanying Documents, item 7",
+          "excerpt": "Certificate of Health Insurance for medical care that covers inpatient and outpatient care and transportation of corpse"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_cyprus",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+          "locator": "List of Accompanying Documents, item 7 (Plan A)",
+          "excerpt": "Certificate of Health Insurance for medical care that covers inpatient and outpatient care and transportation of corpse (Plan A)."
+        }
+      ]
+    }
+  ]
+}

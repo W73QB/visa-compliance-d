@@ -105,3 +105,41 @@ class AuthorizedInCroatiaRule(Rule):
                 }]
             )
         return None
+
+
+class AuthorizedInCyprusRule(Rule):
+    """Check if the policy is health insurance valid for medical care in Cyprus.
+
+    Cyprus's digital nomad scheme requires a certificate of health insurance for
+    medical care (the "Plan A" category) covering inpatient and outpatient care in
+    Cyprus. A product is only credited for this when its evidence documents Cyprus
+    (CY) coverage; otherwise the status is UNKNOWN rather than an assumption that a
+    domestic or foreign policy is valid in Cyprus.
+    """
+
+    name = "AuthorizedInCyprus"
+
+    def check(self, visa, product):
+        req = get_req(visa, "insurance.authorized_in_cyprus")
+        if not req or req["value"] is not True:
+            return None
+
+        country = visa.get("id", "").upper()[:2]
+        if country != "CY":
+            return None
+
+        jf = product_spec(product, f"jurisdiction_facts.{country}.authorized")
+        if jf is None:
+            return RuleResult(
+                status="UNKNOWN",
+                missing=[f"specs.jurisdiction_facts.{country}.authorized"]
+            )
+        if jf is False:
+            return RuleResult(
+                status="RED",
+                reasons=[{
+                    "text": "Policy does not document health insurance valid in Cyprus",
+                    "evidence": req["evidence"]
+                }]
+            )
+        return None
