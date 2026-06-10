@@ -1,0 +1,43 @@
+{
+  "id": "EE_DNV_VM_2026",
+  "country": "Estonia",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Long-stay (D) visa",
+  "authority": "Estonian Ministry of Foreign Affairs",
+  "last_verified": "2026-06-09",
+  "sources": [
+    {
+      "source_id": "EE_VM_DVISA_2026",
+      "url": "https://vm.ee/en/consular-visa-and-travel-information/visa-information/application-long-stay-d-visa",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "c102446835bbb3ab51a3d960dd85dd01f8a801bab9afdf52d3a39311a898348d",
+      "local_path": "sources/EE_VM_DVISA_2026-06-09.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "EE_VM_DVISA_2026",
+          "locator": "Application for a long-stay (D) visa (the visa type under which the Digital Nomad Visa is issued), required documents",
+          "excerpt": "travel medical insurance which guarantees payment of any costs related to applicant's medical treatment due to illness or injury during the validity of the visa."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "EE_VM_DVISA_2026",
+          "locator": "Application for a long-stay (D) visa, travel medical insurance",
+          "excerpt": "travel medical insurance must be valid for the whole period of requested visa."
+        }
+      ]
+    }
+  ]
+}

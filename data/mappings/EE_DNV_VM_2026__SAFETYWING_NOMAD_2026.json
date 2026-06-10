@@ -1,0 +1,18 @@
+{
+  "visa_id": "EE_DNV_VM_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "EE_VM_DVISA_2026",
+          "locator": "Application for a long-stay (D) visa, travel medical insurance",
+          "excerpt": "travel medical insurance must be valid for the whole period of requested visa."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

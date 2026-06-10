@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "EE_DNV_VM_2026": [
+        {
+            "question": "What insurance does the Estonia Digital Nomad Visa require?",
+            "answer": "The Estonian Digital Nomad Visa is issued as a long-stay (D) visa, which requires travel medical insurance covering medical treatment costs for illness or injury, valid for the whole period of the visa.",
+        },
+        {
+            "question": "Is a coverage amount such as 30,000 EUR stated officially?",
+            "answer": "No. The Ministry of Foreign Affairs long-stay (D) visa page states the cover scope and full-period validity but no amount, so the engine does not use the secondary-source 30,000 EUR figure.",
+        },
+        {
+            "question": "Why is a monthly subscription marked YELLOW?",
+            "answer": "The insurance must be valid for the whole visa period. A month-to-month policy that can lapse does not assure full-period coverage, so it is YELLOW; a full-period policy is GREEN.",
+        },
+    ],
     "CY_DNV_MD_2026": [
         {
             "question": "What insurance does the Cyprus Digital Nomad Visa require?",
@@ -273,6 +287,11 @@ RELATED_POSTS = {
     ],
     "CY_DNV_MD_2026": [
         ("/posts/cyprus-dnv-insurance/", "Cyprus Digital Nomad Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "EE_DNV_VM_2026": [
+        ("/posts/estonia-dnv-insurance/", "Estonia Digital Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
