@@ -1,7 +1,50 @@
 {
-  "built_at": "2026-06-10T11:37:56.554063+00:00",
+  "built_at": "2026-06-10T12:08:43.682768+00:00",
   "snapshot_id": "2026-06-10",
   "visas": [
+    {
+      "id": "AL_LEJE_UNIKE_MB_2026",
+      "country": "Albania",
+      "visa_name": "Unique Permit (Digital Mover)",
+      "route": "Leje Unike (MB / e-Albania)",
+      "authority": "Ministry of Interior of Albania (Leje Unike, e-Albania service 15146)",
+      "last_verified": "2026-06-09",
+      "sources": [
+        {
+          "source_id": "AL_LEJE_UNIKE_MB_2026",
+          "url": "https://e-albania.al/eAlbaniaServices/UseService.aspx?service_code=15146",
+          "retrieved_at": "2026-06-09T00:00:00Z",
+          "sha256": "490c05f5f5fac7233aa649739787ae5c664752c48f2438e3251182a964d19b8b",
+          "local_path": "sources/AL_LEJE_UNIKE_MB_2026-06-09.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "AL_LEJE_UNIKE_MB_2026",
+              "locator": "Official checklist (Leje Unike Digital Mover), documents to collect; legal basis Ligji 79/2021 neni 68, VKM 858/29.12.2021",
+              "excerpt": "Health-insurance policy valid for at least 1 year."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "AL_LEJE_UNIKE_MB_2026",
+              "locator": "Official checklist, insurance requirement (valid for the permit period)",
+              "excerpt": "Health-insurance policy valid for at least 1 year."
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "CO_DNV_CANCILLERIA_2026",
       "country": "Colombia",
@@ -1276,6 +1319,81 @@
     }
   ],
   "mappings": [
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "AL_LEJE_UNIKE_MB_2026",
+              "locator": "Official checklist, insurance requirement (valid for the permit period)",
+              "excerpt": "Health-insurance policy valid for at least 1 year."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
@@ -2619,7 +2737,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2627,7 +2745,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2635,7 +2753,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2643,7 +2761,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2651,7 +2769,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2670,7 +2788,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2678,7 +2796,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -2686,7 +2804,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
@@ -2994,6 +3112,13 @@
     }
   },
   "sources_by_id": {
+    "AL_LEJE_UNIKE_MB_2026": {
+      "source_id": "AL_LEJE_UNIKE_MB_2026",
+      "url": "https://e-albania.al/eAlbaniaServices/UseService.aspx?service_code=15146",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "490c05f5f5fac7233aa649739787ae5c664752c48f2438e3251182a964d19b8b",
+      "local_path": "sources/AL_LEJE_UNIKE_MB_2026-06-09.pdf"
+    },
     "ASISA_EXTRANJEROS_2026": {
       "source_id": "ASISA_EXTRANJEROS_2026",
       "url": "https://www.asisa.es/seguros-medicos/extranjeros",

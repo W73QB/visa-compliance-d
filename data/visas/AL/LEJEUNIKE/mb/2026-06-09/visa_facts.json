@@ -1,0 +1,43 @@
+{
+  "id": "AL_LEJE_UNIKE_MB_2026",
+  "country": "Albania",
+  "visa_name": "Unique Permit (Digital Mover)",
+  "route": "Leje Unike (MB / e-Albania)",
+  "authority": "Ministry of Interior of Albania (Leje Unike, e-Albania service 15146)",
+  "last_verified": "2026-06-09",
+  "sources": [
+    {
+      "source_id": "AL_LEJE_UNIKE_MB_2026",
+      "url": "https://e-albania.al/eAlbaniaServices/UseService.aspx?service_code=15146",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "490c05f5f5fac7233aa649739787ae5c664752c48f2438e3251182a964d19b8b",
+      "local_path": "sources/AL_LEJE_UNIKE_MB_2026-06-09.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "AL_LEJE_UNIKE_MB_2026",
+          "locator": "Official checklist (Leje Unike Digital Mover), documents to collect; legal basis Ligji 79/2021 neni 68, VKM 858/29.12.2021",
+          "excerpt": "Health-insurance policy valid for at least 1 year."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "AL_LEJE_UNIKE_MB_2026",
+          "locator": "Official checklist, insurance requirement (valid for the permit period)",
+          "excerpt": "Health-insurance policy valid for at least 1 year."
+        }
+      ]
+    }
+  ]
+}

@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "AL_LEJE_UNIKE_MB_2026": [
+        {
+            "question": "What insurance does the Albania Unique Permit (Digital Mover) require?",
+            "answer": "The official checklist requires a health-insurance policy valid for at least 1 year for the permit period.",
+        },
+        {
+            "question": "Is a 30,000 EUR coverage amount an official requirement?",
+            "answer": "No. The official Ministry of Interior checklist states only that the policy must be valid for at least 1 year; the 30,000 EUR figure is a third-party route-hardening suggestion, not the baseline requirement, so the engine does not encode it.",
+        },
+        {
+            "question": "Why is a monthly subscription marked YELLOW?",
+            "answer": "The policy must be valid for at least a year. A month-to-month policy that can lapse does not assure full-period coverage, so it is YELLOW; a full-period policy is GREEN.",
+        },
+    ],
     "PT_D7_VISTOS_2026": [
         {
             "question": "What insurance does the Portugal D7 visa require?",
@@ -313,6 +327,11 @@ RELATED_POSTS = {
         ("/posts/portugal-d7-insurance/", "Portugal D7 visa insurance requirements"),
         ("/posts/portugal-dnv-insurance/", "Portugal remote-work visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+    ],
+    "AL_LEJE_UNIKE_MB_2026": [
+        ("/posts/albania-unique-permit-insurance/", "Albania Unique Permit (Digital Mover) insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 
