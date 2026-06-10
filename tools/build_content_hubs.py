@@ -153,6 +153,20 @@ VISA_FAQS = {
             "answer": "No. Digital Nomad visa holders are not enrolled in Japan's national health insurance, so private coverage meeting the JPY 10 million threshold is required.",
         },
     ],
+    "CY_DNV_MD_2026": [
+        {
+            "question": "What insurance does the Cyprus Digital Nomad Visa require?",
+            "answer": "The Migration Department requires a certificate of health insurance for medical care that covers inpatient and outpatient care and transportation of corpse (the Plan A category).",
+        },
+        {
+            "question": "Is a coverage amount such as 30,000 EUR stated officially?",
+            "answer": "No. The official accompanying-documents list states the coverage scope (inpatient, outpatient, repatriation) but no amount, so the engine records no minimum rather than using the secondary-source 30,000 EUR figure.",
+        },
+        {
+            "question": "Why does Genki Native show GREEN while others are UNKNOWN?",
+            "answer": "Genki Native documents comprehensive care and global coverage that includes Cyprus, so it satisfies the rules. Policies that do not document coverage valid in Cyprus stay UNKNOWN rather than being assumed valid.",
+        },
+    ],
     "HR_DNV_MUP_2026": [
         {
             "question": "What insurance does the Croatia digital nomad stay require?",
@@ -254,6 +268,11 @@ RELATED_POSTS = {
     ],
     "HR_DNV_MUP_2026": [
         ("/posts/croatia-dnv-insurance/", "Croatia digital nomad stay insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "CY_DNV_MD_2026": [
+        ("/posts/cyprus-dnv-insurance/", "Cyprus Digital Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],

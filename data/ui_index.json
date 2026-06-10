@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-06-09T23:13:43.236103+00:00",
-  "snapshot_id": "2026-06-09",
+  "built_at": "2026-06-10T04:50:05.154569+00:00",
+  "snapshot_id": "2026-06-10",
   "visas": [
     {
       "id": "CO_DNV_CANCILLERIA_2026",
@@ -107,6 +107,61 @@
               "source_id": "CR_DECREE_43619_2026",
               "locator": "Article 9 - Minimum Coverage Amount",
               "excerpt": "gastos m\u00e9dicos en casos de enfermedades en Costa Rica por al menos US $50 000,00 - at least US$50,000 for medical expenses related to illness in Costa Rica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CY_DNV_MD_2026",
+      "country": "Cyprus",
+      "visa_name": "Digital Nomad Visa",
+      "route": "Migration Department (CRMD)",
+      "authority": "Deputy Ministry of Migration and International Protection, Migration Department",
+      "last_verified": "2026-06-09",
+      "sources": [
+        {
+          "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+          "url": "https://www.gov.cy/app/uploads/sites/174/2025/12/Accompanying-Documents_VIS-Digital-Nomad_19032025.pdf",
+          "retrieved_at": "2026-06-09T00:00:00Z",
+          "sha256": "87ff1b5fdbc54940cca064b3ccc24aac5ab2a9b1be49300cd224042430f7d694",
+          "local_path": "sources/CY_MD_DIGITALNOMAD_DOCS_2026-06-09.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+              "locator": "List of Accompanying Documents, Registration / First Temporary Residence Permit, item 7",
+              "excerpt": "Certificate of Health Insurance for medical care that covers inpatient and outpatient care and transportation of corpse (Plan A)."
+            }
+          ]
+        },
+        {
+          "key": "insurance.comprehensive",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+              "locator": "List of Accompanying Documents, item 7",
+              "excerpt": "Certificate of Health Insurance for medical care that covers inpatient and outpatient care and transportation of corpse"
+            }
+          ]
+        },
+        {
+          "key": "insurance.authorized_in_cyprus",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+              "locator": "List of Accompanying Documents, item 7 (Plan A)",
+              "excerpt": "Certificate of Health Insurance for medical care that covers inpatient and outpatient care and transportation of corpse (Plan A)."
             }
           ]
         }
@@ -954,6 +1009,16 @@
                 "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
               }
             ]
+          },
+          "CY": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "GENKI_NATIVE_COVERAGE_2026",
+                "locator": "Global Coverage",
+                "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
+              }
+            ]
           }
         }
       },
@@ -1289,6 +1354,88 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-01-15"
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -1995,7 +2142,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2005,7 +2152,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2015,7 +2162,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2023,7 +2170,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2033,7 +2180,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2054,7 +2201,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2064,7 +2211,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -2074,7 +2221,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -2639,6 +2786,13 @@
       "sha256": "cdd9951eab3b18839fde2282203098c611f59671533d24ec90e298850f0917b0",
       "local_path": "sources/CR_Decreto_43619_2026-01-12.md",
       "note": "Executive Decree No. 43619-H-MGP-TUR - Article 9 establishes insurance must cover ENTIRE authorized stay period"
+    },
+    "CY_MD_DIGITALNOMAD_DOCS_2026": {
+      "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
+      "url": "https://www.gov.cy/app/uploads/sites/174/2025/12/Accompanying-Documents_VIS-Digital-Nomad_19032025.pdf",
+      "retrieved_at": "2026-06-09T00:00:00Z",
+      "sha256": "87ff1b5fdbc54940cca064b3ccc24aac5ab2a9b1be49300cd224042430f7d694",
+      "local_path": "sources/CY_MD_DIGITALNOMAD_DOCS_2026-06-09.pdf"
     },
     "CZ_IPC_INSURANCE_2026": {
       "source_id": "CZ_IPC_INSURANCE_2026",
