@@ -108,10 +108,9 @@
       <div class="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer">
         <span class="material-symbols-outlined text-primary text-3xl icon-filled">verified_user</span>
         <span class="text-text-primary dark:text-white text-xl font-bold tracking-tight">VisaFact</span>
-      </div>
-      <button id="mobileMenuBtn"
+      </div>      <button id="mobileMenuBtn"
         class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Toggle menu">
+        aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
       <nav class="hidden md:flex items-center gap-8">
@@ -1170,16 +1169,17 @@
         return;
       }
       $("loadingState").classList.add("hidden");
+    }    // Mobile menu toggle
+    const _mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const _mobileMenu = document.getElementById("mobileMenu");
+    if (_mobileMenuBtn && _mobileMenu) {
+      _mobileMenuBtn.addEventListener("click", () => {
+        const isOpen = !_mobileMenu.classList.contains("hidden");
+        _mobileMenu.classList.toggle("hidden");
+        _mobileMenuBtn.querySelector("span").textContent = isOpen ? "menu" : "close";
+        _mobileMenuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
     }
-
-    // Mobile menu toggle
-    $("mobileMenuBtn")?.addEventListener("click", () => {
-      const menu = $("mobileMenu");
-      const btn = $("mobileMenuBtn");
-      const isOpen = !menu.classList.contains("hidden");
-      menu.classList.toggle("hidden");
-      btn.querySelector("span").textContent = isOpen ? "menu" : "close";
-    });
 
     init().catch(err => {
       console.error(err);
