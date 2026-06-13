@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-06-10T12:08:43.682768+00:00",
-  "snapshot_id": "2026-06-10",
+  "built_at": "2026-06-13T00:06:12.902482+00:00",
+  "snapshot_id": "2026-06-13",
   "visas": [
     {
       "id": "AL_LEJE_UNIKE_MB_2026",
@@ -830,6 +830,84 @@
       ]
     },
     {
+      "id": "PL_NATD_NICOSIA_2026",
+      "country": "Poland",
+      "visa_name": "National Visa (Type D)",
+      "route": "D-Type national visa (gov.pl Nicosia)",
+      "authority": "Embassy of the Republic of Poland in Nicosia (gov.pl)",
+      "last_verified": "2026-06-13",
+      "sources": [
+        {
+          "source_id": "PL_NATD_NICOSIA_2026",
+          "url": "https://www.gov.pl/web/cyprus/d-type-national-visa",
+          "retrieved_at": "2026-06-13T00:00:00Z",
+          "sha256": "e997d4757b16df2c6177497452d7be0230065125d77315f5fed7a08cba9c5cba",
+          "local_path": "sources/PL_NATD_NICOSIA_2026-06-13.html"
+        },
+        {
+          "source_id": "PL_NATD_SG_2026",
+          "url": "https://www.gov.pl/web/singapore/announcement-regarding-travel-medical-insurance-for-foreigners-applying-for-a-national-visa",
+          "retrieved_at": "2026-06-13T00:00:00Z",
+          "sha256": "0f0fdf9637bd6cc74fc1e4cffcb3c271493c8f7a4b38e9f793f7bca79d961580",
+          "local_path": "sources/PL_NATD_SG_2026-06-13.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "PL_NATD_NICOSIA_2026",
+              "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+              "excerpt": "Travel medical insurance with minimum coverage of 30 000 EUR, valid for the entire period of the requested national visa, covering all costs which may arise during the stay, related to any urgent medical assistance, emergency hospital treatment or repatriation for medical reasons as well as, in case of death, repatriation of the deceased."
+            },
+            {
+              "source_id": "PL_NATD_SG_2026",
+              "locator": "Announcement regarding travel medical insurance for foreigners applying for a national visa (04.12.2020)",
+              "excerpt": "since 1 December 2020, the conditions that must be met by travel medical insurance for foreigners applying for a national visa have changed. Travel medical insurance must meet the following requirements"
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 30000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "PL_NATD_NICOSIA_2026",
+              "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+              "excerpt": "Travel medical insurance with minimum coverage of 30 000 EUR"
+            },
+            {
+              "source_id": "PL_NATD_SG_2026",
+              "locator": "Announcement regarding travel medical insurance, requirement list",
+              "excerpt": "provides for the insurer's liability for the amount of insurance of at least 30 000 EUR"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "PL_NATD_NICOSIA_2026",
+              "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+              "excerpt": "valid for the entire period of the requested national visa"
+            },
+            {
+              "source_id": "PL_NATD_SG_2026",
+              "locator": "Announcement regarding travel medical insurance, requirement list",
+              "excerpt": "is valid for the entire period of the planned stay of the foreigner in the territory of the Republic of Poland"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "PT_D7_VISTOS_2026",
       "country": "Portugal",
       "visa_name": "D7 Visa (Passive Income)",
@@ -1325,7 +1403,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1333,7 +1411,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1341,7 +1419,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1349,7 +1427,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1357,7 +1435,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1376,7 +1454,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1384,7 +1462,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -1392,7 +1470,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -2732,6 +2810,94 @@
       "last_verified": "2026-01-15"
     },
     {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "PL_NATD_NICOSIA_2026",
+              "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+              "excerpt": "valid for the entire period of the requested national visa"
+            },
+            {
+              "source_id": "PL_NATD_SG_2026",
+              "locator": "Announcement regarding travel medical insurance, requirement list",
+              "excerpt": "is valid for the entire period of the planned stay of the foreigner in the territory of the Republic of Poland"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "PT_D7_VISTOS_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "GREEN",
@@ -3283,6 +3449,20 @@
       "sha256": "0f18ac432310a6af5e29ff42cfc7d5ebeb4eba69c02f1bc29a63c69545f4336f",
       "local_path": "sources/MT_NOMAD_RESIDENCY_FAQ_2026-01-12.md",
       "note": "Official FAQ explicitly states monthly payment insurance policies are NOT acceptable - annual payment required"
+    },
+    "PL_NATD_NICOSIA_2026": {
+      "source_id": "PL_NATD_NICOSIA_2026",
+      "url": "https://www.gov.pl/web/cyprus/d-type-national-visa",
+      "retrieved_at": "2026-06-13T00:00:00Z",
+      "sha256": "e997d4757b16df2c6177497452d7be0230065125d77315f5fed7a08cba9c5cba",
+      "local_path": "sources/PL_NATD_NICOSIA_2026-06-13.html"
+    },
+    "PL_NATD_SG_2026": {
+      "source_id": "PL_NATD_SG_2026",
+      "url": "https://www.gov.pl/web/singapore/announcement-regarding-travel-medical-insurance-for-foreigners-applying-for-a-national-visa",
+      "retrieved_at": "2026-06-13T00:00:00Z",
+      "sha256": "0f0fdf9637bd6cc74fc1e4cffcb3c271493c8f7a4b38e9f793f7bca79d961580",
+      "local_path": "sources/PL_NATD_SG_2026-06-13.html"
     },
     "PT_D7_VISTOS_2026": {
       "source_id": "PT_D7_VISTOS_2026",

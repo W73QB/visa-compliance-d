@@ -251,6 +251,20 @@ VISA_FAQS = {
             "answer": "Travel-medical products (and Spanish-authorized health policies) either do not document coverage in Colombian territory or omit parts of the all-risk list such as maternity, so the engine keeps them UNKNOWN rather than guessing.",
         },
     ],
+    "PL_NATD_NICOSIA_2026": [
+        {
+            "question": "What insurance does the Poland National Visa (Type D) require?",
+            "answer": "The gov.pl consular checklist requires travel medical insurance with minimum coverage of 30,000 EUR, valid for the entire period of the requested national visa, covering urgent medical assistance, emergency hospital treatment and medical repatriation.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW for this route?",
+            "answer": "The policy must be valid for the entire period of the requested visa. A month-to-month subscription that can lapse does not assure full-period validity, so the engine marks it YELLOW; full-period policies with a documented limit of 30,000 EUR or more are GREEN.",
+        },
+        {
+            "question": "Are there insurer conditions the engine does not model?",
+            "answer": "Yes. The announcement also requires the insurer to settle costs directly with the treating provider and to run a 24/7 assistance centre, and Poland's MFA publishes a list of insurers meeting the statutory conditions. The engine does not model these clauses, so check the MFA list before buying.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -332,6 +346,11 @@ RELATED_POSTS = {
         ("/posts/albania-unique-permit-insurance/", "Albania Unique Permit (Digital Mover) insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "PL_NATD_NICOSIA_2026": [
+        ("/posts/poland-national-d-insurance/", "Poland National Visa (Type D) insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
     ],
 }
 

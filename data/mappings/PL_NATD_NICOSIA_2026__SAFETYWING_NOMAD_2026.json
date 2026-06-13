@@ -1,0 +1,23 @@
+{
+  "visa_id": "PL_NATD_NICOSIA_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "PL_NATD_NICOSIA_2026",
+          "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+          "excerpt": "valid for the entire period of the requested national visa"
+        },
+        {
+          "source_id": "PL_NATD_SG_2026",
+          "locator": "Announcement regarding travel medical insurance, requirement list",
+          "excerpt": "is valid for the entire period of the planned stay of the foreigner in the territory of the Republic of Poland"
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
