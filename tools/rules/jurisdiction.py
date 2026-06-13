@@ -107,6 +107,44 @@ class AuthorizedInCroatiaRule(Rule):
         return None
 
 
+class AuthorizedInBrazilRule(Rule):
+    """Check if the policy is health insurance valid in Brazilian territory.
+
+    Brazil's digital nomad visa (VITEM XIV) requires a health insurance policy
+    valid in Brazilian territory ("Seguro de saude valido no territorio
+    brasileiro"). A product is only credited for this when its evidence documents
+    Brazil (BR) coverage; otherwise the status is UNKNOWN rather than an
+    assumption that a foreign policy is valid in Brazil.
+    """
+
+    name = "AuthorizedInBrazil"
+
+    def check(self, visa, product):
+        req = get_req(visa, "insurance.authorized_in_brazil")
+        if not req or req["value"] is not True:
+            return None
+
+        country = visa.get("id", "").upper()[:2]
+        if country != "BR":
+            return None
+
+        jf = product_spec(product, f"jurisdiction_facts.{country}.authorized")
+        if jf is None:
+            return RuleResult(
+                status="UNKNOWN",
+                missing=[f"specs.jurisdiction_facts.{country}.authorized"]
+            )
+        if jf is False:
+            return RuleResult(
+                status="RED",
+                reasons=[{
+                    "text": "Policy does not document health insurance valid in Brazilian territory",
+                    "evidence": req["evidence"]
+                }]
+            )
+        return None
+
+
 class AuthorizedInCyprusRule(Rule):
     """Check if the policy is health insurance valid for medical care in Cyprus.
 

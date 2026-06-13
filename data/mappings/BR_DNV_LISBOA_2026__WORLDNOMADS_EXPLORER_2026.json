@@ -1,0 +1,9 @@
+{
+  "visa_id": "BR_DNV_LISBOA_2026",
+  "product_id": "WORLDNOMADS_EXPLORER_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.BR.authorized"
+  ]
+}
