@@ -1,0 +1,78 @@
+{
+  "id": "PL_NATD_NICOSIA_2026",
+  "country": "Poland",
+  "visa_name": "National Visa (Type D)",
+  "route": "D-Type national visa (gov.pl Nicosia)",
+  "authority": "Embassy of the Republic of Poland in Nicosia (gov.pl)",
+  "last_verified": "2026-06-13",
+  "sources": [
+    {
+      "source_id": "PL_NATD_NICOSIA_2026",
+      "url": "https://www.gov.pl/web/cyprus/d-type-national-visa",
+      "retrieved_at": "2026-06-13T00:00:00Z",
+      "sha256": "e997d4757b16df2c6177497452d7be0230065125d77315f5fed7a08cba9c5cba",
+      "local_path": "sources/PL_NATD_NICOSIA_2026-06-13.html"
+    },
+    {
+      "source_id": "PL_NATD_SG_2026",
+      "url": "https://www.gov.pl/web/singapore/announcement-regarding-travel-medical-insurance-for-foreigners-applying-for-a-national-visa",
+      "retrieved_at": "2026-06-13T00:00:00Z",
+      "sha256": "0f0fdf9637bd6cc74fc1e4cffcb3c271493c8f7a4b38e9f793f7bca79d961580",
+      "local_path": "sources/PL_NATD_SG_2026-06-13.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PL_NATD_NICOSIA_2026",
+          "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+          "excerpt": "Travel medical insurance with minimum coverage of 30 000 EUR, valid for the entire period of the requested national visa, covering all costs which may arise during the stay, related to any urgent medical assistance, emergency hospital treatment or repatriation for medical reasons as well as, in case of death, repatriation of the deceased."
+        },
+        {
+          "source_id": "PL_NATD_SG_2026",
+          "locator": "Announcement regarding travel medical insurance for foreigners applying for a national visa (04.12.2020)",
+          "excerpt": "since 1 December 2020, the conditions that must be met by travel medical insurance for foreigners applying for a national visa have changed. Travel medical insurance must meet the following requirements"
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 30000,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "PL_NATD_NICOSIA_2026",
+          "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+          "excerpt": "Travel medical insurance with minimum coverage of 30 000 EUR"
+        },
+        {
+          "source_id": "PL_NATD_SG_2026",
+          "locator": "Announcement regarding travel medical insurance, requirement list",
+          "excerpt": "provides for the insurer's liability for the amount of insurance of at least 30 000 EUR"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PL_NATD_NICOSIA_2026",
+          "locator": "D-Type national visa, What documents do I submit, travel medical insurance item",
+          "excerpt": "valid for the entire period of the requested national visa"
+        },
+        {
+          "source_id": "PL_NATD_SG_2026",
+          "locator": "Announcement regarding travel medical insurance, requirement list",
+          "excerpt": "is valid for the entire period of the planned stay of the foreigner in the territory of the Republic of Poland"
+        }
+      ]
+    }
+  ]
+}
