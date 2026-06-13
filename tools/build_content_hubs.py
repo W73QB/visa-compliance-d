@@ -265,6 +265,20 @@ VISA_FAQS = {
             "answer": "Yes. The announcement also requires the insurer to settle costs directly with the treating provider and to run a 24/7 assistance centre, and Poland's MFA publishes a list of insurers meeting the statutory conditions. The engine does not model these clauses, so check the MFA list before buying.",
         },
     ],
+    "BR_DNV_LISBOA_2026": [
+        {
+            "question": "What insurance does the Brazil Digital Nomad Visa (VITEM XIV) require?",
+            "answer": "The gov.br consular checklist lists, among the required documents, a health insurance policy valid in Brazilian territory (seguro de saude valido no territorio brasileiro).",
+        },
+        {
+            "question": "Which product shows GREEN for this route?",
+            "answer": "Genki Native shows GREEN: its documentation states global coverage including Brazil, so it satisfies the valid-in-Brazilian-territory requirement.",
+        },
+        {
+            "question": "Why are the travel-medical products UNKNOWN rather than GREEN?",
+            "answer": "Their policy documents do not state that coverage is valid in Brazilian territory, so the engine records UNKNOWN instead of assuming a foreign policy is valid in Brazil.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -351,6 +365,11 @@ RELATED_POSTS = {
         ("/posts/poland-national-d-insurance/", "Poland National Visa (Type D) insurance requirements"),
         ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+    ],
+    "BR_DNV_LISBOA_2026": [
+        ("/posts/brazil-dnv-insurance/", "Brazil Digital Nomad Visa (VITEM XIV) insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 

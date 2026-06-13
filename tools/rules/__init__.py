@@ -6,6 +6,7 @@ from tools.rules.jurisdiction import (
     AuthorizedInColombiaRule,
     AuthorizedInCroatiaRule,
     AuthorizedInCyprusRule,
+    AuthorizedInBrazilRule,
 )
 from tools.rules.deductible import NoDeductibleRule
 from tools.rules.copayment import NoCopaymentRule
@@ -25,6 +26,7 @@ __all__ = [
     "AuthorizedInColombiaRule",
     "AuthorizedInCroatiaRule",
     "AuthorizedInCyprusRule",
+    "AuthorizedInBrazilRule",
     "NoDeductibleRule",
     "NoCopaymentRule",
     "NoMoratoriumRule",
