@@ -97,6 +97,14 @@ No product is singled out on this page yet. The EUR 400,000, no-cost-sharing req
 
 *No affiliate links on this page at this time. We only link to products once their GREEN status rests on documented evidence for this route. See [affiliate disclosure](/affiliate-disclosure/).*
 
+## International payments for Czech visa costs
+
+The Czech long-term business visa requires insurance with a minimum coverage of €400,000 — one of the highest thresholds in Europe. Qualifying policies from EU-authorised insurers typically require payment in EUR.
+
+[Wise (EUR transfers)](https://wise.prf.hn/click/camref:1101l5L24n) provides low-fee EUR transfers for payments to European insurance providers and other Czech visa-related costs.
+
+*Affiliate disclosure: the Wise link above is an affiliate link — commission may be earned at no extra cost to you. This is a financial transfer service, separate from the insurance compliance checker above. See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
