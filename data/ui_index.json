@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-14T23:42:04.576925+00:00",
+  "built_at": "2026-06-14T23:46:55.519895+00:00",
   "snapshot_id": "2026-06-14",
   "visas": [
     {
@@ -1106,6 +1106,49 @@
               "source_id": "TH_MFA_DTV_2026",
               "locator": "Complete requirements list for all DTV categories",
               "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR_RESIDENCE_PMM_2026",
+      "country": "Turkey",
+      "visa_name": "Short-Term Residence Permit",
+      "route": "Residence permit (PMM general information)",
+      "authority": "Presidency of Migration Management of Turkey (PMM, Goc Idaresi)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "TR_RESIDENCE_PMM_2026",
+          "url": "https://en.goc.gov.tr/general-information41",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "bfdc87174f4049b1e6cc3e065c6b18ed9a5b66deeeb6144b15a69b3de07b9305",
+          "local_path": "sources/TR_RESIDENCE_PMM_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "TR_RESIDENCE_PMM_2026",
+              "locator": "Health insurance requirement",
+              "excerpt": "Health insurance requirement Duration of your insurance must cover the requested duration of residence permit. One of the following health insurances shall be considered sufficient:"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "TR_RESIDENCE_PMM_2026",
+              "locator": "Health insurance requirement",
+              "excerpt": "Duration of your insurance must cover the requested duration of residence permit."
             }
           ]
         }
@@ -3231,7 +3274,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3241,7 +3284,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3251,7 +3294,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3259,7 +3302,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3267,7 +3310,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3286,7 +3329,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3296,7 +3339,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -3304,7 +3347,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -3457,6 +3500,81 @@
       ],
       "missing": [],
       "last_verified": "2026-01-15"
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "TR_RESIDENCE_PMM_2026",
+              "locator": "Health insurance requirement",
+              "excerpt": "Duration of your insurance must cover the requested duration of residence permit."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     }
   ],
   "offers": [
@@ -3813,6 +3931,13 @@
       "sha256": "fb2bcd6f0c5140c16e371cbfcbe5c24e2eed52aa6d12fc06dd48c5c3978a90a7",
       "local_path": "sources/TH_DTV_MFA_requirements_2026-01-12.md",
       "note": "Captured from Thai E-Visa official website using browser automation. Insurance is NOT mentioned anywhere in the requirements."
+    },
+    "TR_RESIDENCE_PMM_2026": {
+      "source_id": "TR_RESIDENCE_PMM_2026",
+      "url": "https://en.goc.gov.tr/general-information41",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "bfdc87174f4049b1e6cc3e065c6b18ed9a5b66deeeb6144b15a69b3de07b9305",
+      "local_path": "sources/TR_RESIDENCE_PMM_2026-06-15.html"
     },
     "WORLDNOMADS_COMPARE_2026": {
       "source_id": "WORLDNOMADS_COMPARE_2026",
