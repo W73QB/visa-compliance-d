@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-06-13T00:12:04.851178+00:00",
-  "snapshot_id": "2026-06-13",
+  "built_at": "2026-06-14T23:42:04.576925+00:00",
+  "snapshot_id": "2026-06-14",
   "visas": [
     {
       "id": "AL_LEJE_UNIKE_MB_2026",
@@ -1025,6 +1025,62 @@
       ]
     },
     {
+      "id": "RO_DNV_EVIZA_2026",
+      "country": "Romania",
+      "visa_name": "Digital Nomad Visa",
+      "route": "Long-stay visa for digital nomads (eViza MAE)",
+      "authority": "Ministry of Foreign Affairs of Romania (MAE), eViza portal",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "RO_DNV_EVIZA_2026",
+          "url": "https://eviza.mae.ro/SupportingDocuments",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "857c5687645cd918b003a1404bcda9075f7dd233a7adfaa7939ad6b994e12fb2",
+          "local_path": "sources/RO_DNV_EVIZA_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "RO_DNV_EVIZA_2026",
+              "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+              "excerpt": "TRAVEL MEDICAL INSURANCE Travel medical insurance that covers the entire duration of the requested period of stay. The travel medical insurance shall have a coverage of at least 30000 EUR."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 30000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "RO_DNV_EVIZA_2026",
+              "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+              "excerpt": "The travel medical insurance shall have a coverage of at least 30000 EUR."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "RO_DNV_EVIZA_2026",
+              "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+              "excerpt": "Travel medical insurance that covers the entire duration of the requested period of stay."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "TH_DTV_MFA_2026",
       "country": "Thailand",
       "visa_name": "Digital Nomad Visa (DTV)",
@@ -1533,7 +1589,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1543,7 +1599,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1553,7 +1609,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1561,7 +1617,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1571,7 +1627,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1581,7 +1637,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1591,7 +1647,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -1601,7 +1657,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-13"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -3168,6 +3224,89 @@
       "last_verified": "2026-01-15"
     },
     {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "RO_DNV_EVIZA_2026",
+              "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+              "excerpt": "Travel medical insurance that covers the entire duration of the requested period of stay."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "TH_DTV_MFA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "NOT_REQUIRED",
@@ -3615,6 +3754,13 @@
       "retrieved_at": "2026-01-15T00:00:00Z",
       "sha256": "577f103fea6ec94f405b1cc543283f38a6fcf27438d9b94cb4957f065162c6bc",
       "local_path": "sources/PT_E11_VFS_CHINA_2025-07.pdf"
+    },
+    "RO_DNV_EVIZA_2026": {
+      "source_id": "RO_DNV_EVIZA_2026",
+      "url": "https://eviza.mae.ro/SupportingDocuments",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "857c5687645cd918b003a1404bcda9075f7dd233a7adfaa7939ad6b994e12fb2",
+      "local_path": "sources/RO_DNV_EVIZA_2026-06-15.html"
     },
     "SAFETYWING_WEBSITE_2026": {
       "source_id": "SAFETYWING_WEBSITE_2026",

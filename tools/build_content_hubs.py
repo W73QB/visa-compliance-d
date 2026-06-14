@@ -279,6 +279,20 @@ VISA_FAQS = {
             "answer": "Their policy documents do not state that coverage is valid in Brazilian territory, so the engine records UNKNOWN instead of assuming a foreign policy is valid in Brazil.",
         },
     ],
+    "RO_DNV_EVIZA_2026": [
+        {
+            "question": "What insurance does the Romania Digital Nomad Visa require?",
+            "answer": "The eViza supporting-documents portal requires travel medical insurance that covers the entire duration of the requested period of stay, with a coverage of at least 30,000 EUR.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW for this route?",
+            "answer": "The policy must cover the entire duration of stay. A month-to-month subscription that can lapse does not assure full-period coverage, so the engine marks it YELLOW; full-period policies with a documented limit of 30,000 EUR or more are GREEN.",
+        },
+        {
+            "question": "Is the 30,000 EUR figure the Schengen short-stay rule?",
+            "answer": "No. This 30,000 EUR amount is stated by Romania's own eViza checklist for the long-stay digital nomad visa, not borrowed from the Schengen short-stay rule.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -370,6 +384,11 @@ RELATED_POSTS = {
         ("/posts/brazil-dnv-insurance/", "Brazil Digital Nomad Visa (VITEM XIV) insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "RO_DNV_EVIZA_2026": [
+        ("/posts/romania-dnv-insurance/", "Romania Digital Nomad Visa insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
     ],
 }
 

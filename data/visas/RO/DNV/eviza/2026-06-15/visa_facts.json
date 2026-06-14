@@ -1,0 +1,56 @@
+{
+  "id": "RO_DNV_EVIZA_2026",
+  "country": "Romania",
+  "visa_name": "Digital Nomad Visa",
+  "route": "Long-stay visa for digital nomads (eViza MAE)",
+  "authority": "Ministry of Foreign Affairs of Romania (MAE), eViza portal",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "RO_DNV_EVIZA_2026",
+      "url": "https://eviza.mae.ro/SupportingDocuments",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "857c5687645cd918b003a1404bcda9075f7dd233a7adfaa7939ad6b994e12fb2",
+      "local_path": "sources/RO_DNV_EVIZA_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "RO_DNV_EVIZA_2026",
+          "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+          "excerpt": "TRAVEL MEDICAL INSURANCE Travel medical insurance that covers the entire duration of the requested period of stay. The travel medical insurance shall have a coverage of at least 30000 EUR."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 30000,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "RO_DNV_EVIZA_2026",
+          "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+          "excerpt": "The travel medical insurance shall have a coverage of at least 30000 EUR."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "RO_DNV_EVIZA_2026",
+          "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+          "excerpt": "Travel medical insurance that covers the entire duration of the requested period of stay."
+        }
+      ]
+    }
+  ]
+}
