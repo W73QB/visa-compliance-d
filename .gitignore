@@ -43,6 +43,14 @@ static/snapshots/
 # Hugo local binaries/logs
 hugo.exe
 tools/logs/
+# Secrets / credentials (never commit — repo is public)
+.env
+*.env
+.env.*
+*.secret
+secrets/
+.secrets/
+cloudflare.env
 # Office documents (user working files)
 *.docx
 *.xlsx
