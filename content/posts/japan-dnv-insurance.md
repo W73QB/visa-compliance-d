@@ -98,6 +98,14 @@ In the current snapshot, the products that show GREEN for this route are those w
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
+## International transfers for Japan visa requirements
+
+Japan's Digital Nomad Visa requires insurance with coverage of JPY 10 million or more (~€61,000 / ~$66,000). Applicants often need to transfer JPY internationally to pay qualifying insurers or to manage funds during their stay.
+
+[Wise (JPY transfers)](https://wise.prf.hn/click/camref:1101l5L26a) supports JPY transfers at mid-market exchange rates — no hidden fees in the exchange rate.
+
+*Affiliate disclosure: the Wise link above is an affiliate link — commission may be earned at no extra cost to you. Separate from the compliance checker results above. See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
