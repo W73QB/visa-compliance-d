@@ -58,8 +58,6 @@ The checker compares each modeled requirement against product evidence. Three ru
 
 Two clauses are deliberately NOT modeled, following the UNKNOWN > Wrong principle: the insurer must settle costs directly with the treating provider and run a 24/7 assistance centre, and Poland's MFA publishes an information list of insurers meeting the statutory conditions of the Act of 12 December 2013 on Foreigners. The engine has no per-product evidence for these conduct clauses, so a GREEN result here still requires you to confirm the insurer against the MFA information list before buying. See /methodology/ for the full logic.
 
-This is also not the Schengen short-stay rule: Poland's national-visa regime sets its own 30,000 EUR floor for D visas, separate from the C-visa Schengen requirement.
-
 ## Proof package checklist
 
 - An insurance certificate stating a coverage limit of at least 30,000 EUR.

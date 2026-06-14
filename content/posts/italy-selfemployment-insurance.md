@@ -53,7 +53,7 @@ The checker compares each modeled requirement against product evidence. For the 
 
 ## Short-term versus long-term: why this route is the short-stay one
 
-The Italian self-employment visa (lavoro autonomo) comes in a short-term and a long-term form. This page models the short-term variant, which is a Schengen Type C visa for stays of up to 90 days and is therefore governed by the Schengen travel-medical-insurance rule quoted above. The long-term (Type D) self-employment visa works differently: applicants register with Italy's national health service after they arrive and obtain a residence permit, so the consulate's short-stay 30,000 euro insurance figure does not transfer to it. Because the official short-stay notice is the document that states an explicit, checkable coverage amount, the checker models that route and records the long-term insurance terms as UNKNOWN rather than reusing the short-stay number where it does not apply. This keeps the comparison honest: a figure is only encoded where an official source states it for the route in question.
+The Italian self-employment visa (lavoro autonomo) comes in short-term and long-term forms. This page models the short-term variant, a Schengen Type C visa for stays of up to 90 days, under the Schengen rule quoted above. The long-term (Type D) visa works differently: applicants register with Italy's national health service after arrival, so the consulate's short-stay 30,000 euro figure does not transfer to it. Because the official short-stay notice is the document that states an explicit, checkable coverage amount, the checker models that route and records the long-term terms as UNKNOWN rather than reusing a number where it does not apply.
 
 ## Proof package checklist
 
