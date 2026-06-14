@@ -129,6 +129,14 @@ We may earn a commission at no extra cost to you.
 Compliance results are generated independently.
 See [affiliate disclosure](/affiliate-disclosure/).*
 
+## International transfers for Costa Rica visa requirements
+
+Costa Rica's Digital Nomad Visa requires proof of income or insurance with a minimum of $50,000 in coverage. Applicants often transfer USD internationally to fund their stay or pay for qualifying insurance policies.
+
+[Wise (USD transfers)](https://wise.prf.hn/click/camref:1101l5L26b) supports USD transfers at mid-market rates for payments to Costa Rican providers.
+
+*Affiliate disclosure: the Wise link above is an affiliate link — commission may be earned at no extra cost to you. Separate from the compliance checker results above. See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
