@@ -98,6 +98,14 @@ In the current snapshot, Genki Traveler, Genki Native and World Nomads Explorer 
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
+## International payments for Poland visa insurance
+
+Poland's National D Visa requires insurance where the insurer settles costs directly with medical providers — ruling out many standard travel plans. Qualifying policies from EU-authorised insurers require payment in EUR.
+
+[Wise (EUR transfers)](https://wise.prf.hn/click/camref:1101l5L24n) is a low-fee option for EUR transfers to European insurance providers.
+
+*Affiliate disclosure: the Wise link above is an affiliate link — commission may be earned at no extra cost to you. Independent of the compliance checker results above. See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
