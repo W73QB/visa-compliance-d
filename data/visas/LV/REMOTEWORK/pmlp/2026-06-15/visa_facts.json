@@ -1,0 +1,56 @@
+{
+  "id": "LV_REMOTEWORK_PMLP_2026",
+  "country": "Latvia",
+  "visa_name": "Long-Term Visa for Remote Work",
+  "route": "Remote work long-stay visa (PMLP)",
+  "authority": "Office of Citizenship and Migration Affairs of Latvia (PMLP)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "LV_REMOTEWORK_PMLP_2026",
+      "url": "https://www.pmlp.gov.lv/en/getting-long-term-visa-remote-work",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "2eba0133da39047223b4b90aeacc7b6ad850ceee8d0a87643d91c04ecb513ba3",
+      "local_path": "sources/LV_REMOTEWORK_PMLP_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "LV_REMOTEWORK_PMLP_2026",
+          "locator": "Documents required, health insurance item",
+          "excerpt": "A copy of the document certifying that the foreigner has a health insurance policy (valid in the Republic of Latvia and in the Schengen Member States, the minimum insurance liability limit specified in the policy may not be less than EUR 42 600 during the insurance period)"
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 42600,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "LV_REMOTEWORK_PMLP_2026",
+          "locator": "Documents required, health insurance item",
+          "excerpt": "the minimum insurance liability limit specified in the policy may not be less than EUR 42 600 during the insurance period"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "LV_REMOTEWORK_PMLP_2026",
+          "locator": "Documents required, health insurance item",
+          "excerpt": "a health insurance policy (valid in the Republic of Latvia and in the Schengen Member States ...)"
+        }
+      ]
+    }
+  ]
+}

@@ -107,6 +107,48 @@ class AuthorizedInCroatiaRule(Rule):
         return None
 
 
+class AuthorizedInCountryRule(Rule):
+    """Generic territory rule for any country (keyed off the visa id prefix).
+
+    Newer routes that simply require the policy to be "valid in <this country>"
+    use the generic requirement key ``insurance.authorized_in_country`` instead of
+    a per-country key. The country is taken from the first two letters of the visa
+    id (e.g. ``LV_...`` -> Latvia). A product is only credited when its evidence
+    documents coverage for that country code in ``jurisdiction_facts.<CC>``;
+    otherwise the status is UNKNOWN rather than an assumption that a foreign or
+    worldwide policy is valid there. This avoids one near-identical rule class per
+    country; the older dedicated rules (Spain/Colombia/Croatia/Cyprus/Brazil) keep
+    their own keys and are unaffected.
+    """
+
+    name = "AuthorizedInCountry"
+
+    def check(self, visa, product):
+        req = get_req(visa, "insurance.authorized_in_country")
+        if not req or req["value"] is not True:
+            return None
+
+        country = visa.get("id", "").upper()[:2]
+        if not country.isalpha():
+            return None
+
+        jf = product_spec(product, f"jurisdiction_facts.{country}.authorized")
+        if jf is None:
+            return RuleResult(
+                status="UNKNOWN",
+                missing=[f"specs.jurisdiction_facts.{country}.authorized"]
+            )
+        if jf is False:
+            return RuleResult(
+                status="RED",
+                reasons=[{
+                    "text": f"Policy does not document coverage valid in {visa.get('country', 'the visa jurisdiction')}",
+                    "evidence": req["evidence"]
+                }]
+            )
+        return None
+
+
 class AuthorizedInBrazilRule(Rule):
     """Check if the policy is health insurance valid in Brazilian territory.
 
