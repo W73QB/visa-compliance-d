@@ -1,0 +1,18 @@
+{
+  "visa_id": "RO_DNV_EVIZA_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "RO_DNV_EVIZA_2026",
+          "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
+          "excerpt": "Travel medical insurance that covers the entire duration of the requested period of stay."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
