@@ -293,6 +293,20 @@ VISA_FAQS = {
             "answer": "No. This 30,000 EUR amount is stated by Romania's own eViza checklist for the long-stay digital nomad visa, not borrowed from the Schengen short-stay rule.",
         },
     ],
+    "TR_RESIDENCE_PMM_2026": [
+        {
+            "question": "What insurance does a Turkish residence permit require?",
+            "answer": "The Presidency of Migration Management states that the duration of your health insurance must cover the requested duration of the residence permit, and lists acceptable types including private health insurance.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The official general-information page states no minimum coverage figure for private health insurance, so the engine encodes none and models only that insurance is mandatory and must cover the full permit duration.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW while other products are GREEN?",
+            "answer": "The insurance must cover the requested duration of the permit. A month-to-month subscription that can lapse does not assure full-period coverage, so it is YELLOW; full-period policies are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -389,6 +403,11 @@ RELATED_POSTS = {
         ("/posts/romania-dnv-insurance/", "Romania Digital Nomad Visa insurance requirements"),
         ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+    ],
+    "TR_RESIDENCE_PMM_2026": [
+        ("/posts/turkey-residence-permit-insurance/", "Turkey residence permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 

@@ -1,0 +1,43 @@
+{
+  "id": "TR_RESIDENCE_PMM_2026",
+  "country": "Turkey",
+  "visa_name": "Short-Term Residence Permit",
+  "route": "Residence permit (PMM general information)",
+  "authority": "Presidency of Migration Management of Turkey (PMM, Goc Idaresi)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "TR_RESIDENCE_PMM_2026",
+      "url": "https://en.goc.gov.tr/general-information41",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "bfdc87174f4049b1e6cc3e065c6b18ed9a5b66deeeb6144b15a69b3de07b9305",
+      "local_path": "sources/TR_RESIDENCE_PMM_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "TR_RESIDENCE_PMM_2026",
+          "locator": "Health insurance requirement",
+          "excerpt": "Health insurance requirement Duration of your insurance must cover the requested duration of residence permit. One of the following health insurances shall be considered sufficient:"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "TR_RESIDENCE_PMM_2026",
+          "locator": "Health insurance requirement",
+          "excerpt": "Duration of your insurance must cover the requested duration of residence permit."
+        }
+      ]
+    }
+  ]
+}
