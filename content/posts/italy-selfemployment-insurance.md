@@ -99,6 +99,14 @@ In the current snapshot, the products that show GREEN for this route are those w
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
+## International payments for Italy visa costs
+
+Italy's self-employment visa requires medical coverage of at least €30,000. Qualifying policies from European insurers require payment in EUR.
+
+[Wise (EUR transfers)](https://wise.prf.hn/click/camref:1101l5L24n) provides low-fee EUR transfers for payments to Italian or European insurance providers.
+
+*Affiliate disclosure: the Wise link above is an affiliate link — commission may be earned at no extra cost to you. Separate from the insurance compliance results above. See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
