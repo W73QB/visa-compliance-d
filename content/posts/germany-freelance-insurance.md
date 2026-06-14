@@ -103,6 +103,14 @@ UNKNOWN is a signal to request clearer documentation, not a hint that the policy
 - [How to choose DNV insurance](/guides/how-to-choose-dnv-insurance/)
 - [Compliance status meaning](/guides/compliance-status-meaning/)
 
+## Transferring funds to your blocked account
+
+Germany's freelance visa requires a blocked account (Sperrkonto) containing €11,904 before you apply. Most applicants transfer this amount internationally using a low-fee transfer service.
+
+[Wise (EUR transfers)](https://wise.prf.hn/click/camref:1101l5L24n) offers mid-market exchange rates for transfers to German blocked account providers such as Fintiba and Coracle. Fees are shown upfront before you confirm.
+
+*Affiliate disclosure: the Wise link above is an affiliate link — we may earn a commission if you open an account and complete a qualifying transfer, at no extra cost to you. This is a financial transfer service, independent of the insurance compliance results above. See [affiliate disclosure](/affiliate-disclosure/).*
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
