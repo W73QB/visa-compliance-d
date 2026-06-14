@@ -321,6 +321,20 @@ VISA_FAQS = {
             "answer": "No. The requirement states a single amount covering both hospital treatment and evacuation, so the engine models the coverage amount and the post notes that the policy must also cover repatriation.",
         },
     ],
+    "LV_REMOTEWORK_PMLP_2026": [
+        {
+            "question": "What insurance does the Latvia remote work visa require?",
+            "answer": "The Office of Citizenship and Migration Affairs requires a health insurance policy valid in Latvia and the Schengen Member States, with a minimum insurance liability limit of at least EUR 42,600 during the insurance period.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must be valid in Latvia (and the Schengen area). Genki Native documents global coverage that includes Latvia; the other products do not document Latvia-specific validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Does the 42,600 EUR amount also matter?",
+            "answer": "Yes. The engine encodes both the EUR 42,600 minimum coverage and the territory requirement, so a product must clear both to be GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -426,6 +440,11 @@ RELATED_POSTS = {
     "KR_F1D_MOFA_LA_2026": [
         ("/posts/korea-workation-visa-insurance/", "Korea Workation (F-1-D) visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "LV_REMOTEWORK_PMLP_2026": [
+        ("/posts/latvia-remote-work-insurance/", "Latvia remote work visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

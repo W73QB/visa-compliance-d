@@ -1,0 +1,10 @@
+{
+  "visa_id": "LV_REMOTEWORK_PMLP_2026",
+  "product_id": "DKV_VISADO_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.LV.authorized",
+    "specs.overall_limit"
+  ]
+}
