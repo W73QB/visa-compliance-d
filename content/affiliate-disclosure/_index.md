@@ -52,6 +52,16 @@ You should always:
 - Confirm current visa requirements with official sources
 - Consider your own needs (age, medical history, travel plans, risk tolerance)
 
+## Affiliate partners
+
+**Wise (via Partnerize)**
+
+Wise is an international money transfer service. We include Wise affiliate links in posts where visa routes require international fund transfers (e.g. Germany blocked account, Japan insurance payments).
+
+We earn a commission when readers open a Wise account and complete a qualifying transfer. The commission is paid by Wise and does not affect the cost of your transfer in any way.
+
+Campaigns: EUR, USD, JPY, GBP, AUD
+
 ## 4) Questions
 
 If you have concerns about affiliate links or potential conflicts of interest, you can contact us or open a report using the "Notify me of changes" function.
