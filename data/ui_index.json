@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-14T23:46:55.519895+00:00",
+  "built_at": "2026-06-14T23:51:51.057602+00:00",
   "snapshot_id": "2026-06-14",
   "visas": [
     {
@@ -824,6 +824,50 @@
               "source_id": "JP_DNV_MOFA_2026",
               "locator": "Necessary documents, Digital Nomad, item (6)",
               "excerpt": "compensation for medical treatment for injury or illness must be JPY 10 million or more"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "KR_F1D_MOFA_LA_2026",
+      "country": "South Korea",
+      "visa_name": "Workation (Digital Nomad) Visa (F-1-D)",
+      "route": "F-1-D Pilot Program (MOFA Los Angeles)",
+      "authority": "Ministry of Foreign Affairs of the Republic of Korea (Consulate General, Los Angeles)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "KR_F1D_MOFA_LA_2026",
+          "url": "https://overseas.mofa.go.kr/us-losangeles-en/brd/m_26385/view.do?seq=12",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "337553082f601a99db89a9b0e9493e884a7ae8362f2587dc3945d23171a87e88",
+          "local_path": "sources/KR_F1D_MOFA_LA_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "KR_F1D_MOFA_LA_2026",
+              "locator": "Required Documents, item 8 (Certificate of Medical Insurance Subscription)",
+              "excerpt": "Certificate of Medical Insurance Subscription : A person who has insurance that covers more than 100 million won(approx. USD 76,000) for hospital treatment and evacuation to their home country during their stay in Korea."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 100000000,
+          "currency": "KRW",
+          "evidence": [
+            {
+              "source_id": "KR_F1D_MOFA_LA_2026",
+              "locator": "Required Documents, item 8 (Certificate of Medical Insurance Subscription)",
+              "excerpt": "insurance that covers more than 100 million won(approx. USD 76,000) for hospital treatment and evacuation to their home country during their stay in Korea"
             }
           ]
         }
@@ -2955,6 +2999,78 @@
       "last_verified": "2026-06-08"
     },
     {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -3507,7 +3623,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3515,7 +3631,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3523,7 +3639,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3531,7 +3647,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3539,7 +3655,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3558,7 +3674,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3566,7 +3682,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -3574,7 +3690,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     }
   ],
   "offers": [
@@ -3836,6 +3952,13 @@
       "retrieved_at": "2026-06-08T00:00:00Z",
       "sha256": "4ef9d598abe8c7789dfffe8f2eeae83ab50d6056b404b1e9aa73a9363c0ccac5",
       "local_path": "sources/JP_DNV_MOFA_2026-06-08.html"
+    },
+    "KR_F1D_MOFA_LA_2026": {
+      "source_id": "KR_F1D_MOFA_LA_2026",
+      "url": "https://overseas.mofa.go.kr/us-losangeles-en/brd/m_26385/view.do?seq=12",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "337553082f601a99db89a9b0e9493e884a7ae8362f2587dc3945d23171a87e88",
+      "local_path": "sources/KR_F1D_MOFA_LA_2026-06-15.html"
     },
     "MT_RESIDENCY_FAQ_2026": {
       "source_id": "MT_RESIDENCY_FAQ_2026",

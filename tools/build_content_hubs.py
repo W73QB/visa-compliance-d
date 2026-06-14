@@ -307,6 +307,20 @@ VISA_FAQS = {
             "answer": "The insurance must cover the requested duration of the permit. A month-to-month subscription that can lapse does not assure full-period coverage, so it is YELLOW; full-period policies are GREEN.",
         },
     ],
+    "KR_F1D_MOFA_LA_2026": [
+        {
+            "question": "What insurance does the Korea F-1-D Workation visa require?",
+            "answer": "The Ministry of Foreign Affairs requires insurance that covers more than 100 million won (about USD 76,000) for hospital treatment and evacuation to the home country during the stay in Korea.",
+        },
+        {
+            "question": "How is the 100 million won threshold compared to product limits?",
+            "answer": "The engine converts the 100 million won threshold and each product's documented limit to a common currency before comparing, so a product clears the requirement only when its documented limit converts to at least the won threshold.",
+        },
+        {
+            "question": "Is the evacuation (repatriation) part modeled separately?",
+            "answer": "No. The requirement states a single amount covering both hospital treatment and evacuation, so the engine models the coverage amount and the post notes that the policy must also cover repatriation.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -407,6 +421,11 @@ RELATED_POSTS = {
     "TR_RESIDENCE_PMM_2026": [
         ("/posts/turkey-residence-permit-insurance/", "Turkey residence permit insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "KR_F1D_MOFA_LA_2026": [
+        ("/posts/korea-workation-visa-insurance/", "Korea Workation (F-1-D) visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
