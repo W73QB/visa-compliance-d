@@ -1,0 +1,9 @@
+{
+  "visa_id": "BE_NATIONALD_DOFI_2026",
+  "product_id": "DKV_VISADO_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.BE.authorized"
+  ]
+}
