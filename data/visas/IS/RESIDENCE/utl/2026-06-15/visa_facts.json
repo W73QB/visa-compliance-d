@@ -1,0 +1,56 @@
+{
+  "id": "IS_RESIDENCE_UTL_2026",
+  "country": "Iceland",
+  "visa_name": "Residence Permit (legitimate and special purpose)",
+  "route": "Residence permit requirements (Directorate of Immigration)",
+  "authority": "Directorate of Immigration of Iceland (Utlendingastofnun)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "IS_RESIDENCE_UTL_2026",
+      "url": "https://island.is/en/permits-on-grounds-of-legitimate-and-special-purpose/requirements",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "d502a7ca4714281044192423c4c0669e73d3d9a200f29f6dca1746306461fb28",
+      "local_path": "sources/IS_RESIDENCE_UTL_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "IS_RESIDENCE_UTL_2026",
+          "locator": "Requirements, Health insurance",
+          "excerpt": "An insurance certificate must be submitted, confirming that the applicant has taken out (purchased) a health insurance that is valid in Iceland, for at least six months from the date of the registration of the applicant's legal domicile in Iceland, with a minimum coverage of ISK 2,000,000."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "IS_RESIDENCE_UTL_2026",
+          "locator": "Requirements, Health insurance",
+          "excerpt": "a health insurance that is valid in Iceland"
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 2000000,
+      "currency": "ISK",
+      "evidence": [
+        {
+          "source_id": "IS_RESIDENCE_UTL_2026",
+          "locator": "Requirements, Health insurance",
+          "excerpt": "with a minimum coverage of ISK 2,000,000."
+        }
+      ]
+    }
+  ]
+}
