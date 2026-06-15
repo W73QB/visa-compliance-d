@@ -1,0 +1,44 @@
+{
+  "id": "BZ_LONGSTAY_IMMIG_2026",
+  "country": "Belize",
+  "visa_name": "Long Stay Permit",
+  "route": "Long Stay Permit (Department of Immigration)",
+  "authority": "Belize Ministry of Immigration, Governance and Labour",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "BZ_LONGSTAY_IMMIG_2026",
+      "url": "https://immigration.gov.bz/permits/long-stay-permit/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "497f39c5569db0d730abeac927c83840e895ce1d145815a5184328ede1b025fe",
+      "local_path": "sources/BZ_LONGSTAY_IMMIG_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BZ_LONGSTAY_IMMIG_2026",
+          "locator": "Long Stay Permit, required documents",
+          "excerpt": "Proof of travel insurance with a minimum health coverage of USD $50,000."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 50000,
+      "currency": "USD",
+      "evidence": [
+        {
+          "source_id": "BZ_LONGSTAY_IMMIG_2026",
+          "locator": "Long Stay Permit, required documents",
+          "excerpt": "Proof of travel insurance with a minimum health coverage of USD $50,000."
+        }
+      ]
+    }
+  ]
+}

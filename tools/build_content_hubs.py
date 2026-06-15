@@ -503,6 +503,20 @@ VISA_FAQS = {
             "answer": "The source names a certificate of registration with a healthcare fund as the example proof. Confirm with the Immigration Office which proof is accepted in your category; the engine models the all-risks-in-Belgium requirement and does not assume any tracked product is registered with a Belgian fund.",
         },
     ],
+    "BZ_LONGSTAY_IMMIG_2026": [
+        {
+            "question": "What insurance does the Belize Long Stay Permit require?",
+            "answer": "The Department of Immigration requires proof of travel insurance with a minimum health coverage of USD 50,000.",
+        },
+        {
+            "question": "How is the USD 50,000 threshold compared to product limits?",
+            "answer": "The engine converts the USD 50,000 threshold and each product's documented limit to a common currency before comparing, so a product clears the requirement only when its documented limit converts to at least USD 50,000.",
+        },
+        {
+            "question": "Which products are UNKNOWN and why?",
+            "answer": "Products whose documents state no overall coverage limit (the Spanish health policies) stay UNKNOWN rather than being assumed to clear the USD 50,000 floor.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -673,6 +687,11 @@ RELATED_POSTS = {
     "BE_NATIONALD_DOFI_2026": [
         ("/posts/belgium-national-d-insurance/", "Belgium national entry (visa D) insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "BZ_LONGSTAY_IMMIG_2026": [
+        ("/posts/belize-long-stay-insurance/", "Belize Long Stay Permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
