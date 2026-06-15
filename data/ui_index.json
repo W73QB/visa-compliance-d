@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T13:46:21.117588+00:00",
+  "built_at": "2026-06-15T13:50:49.944091+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -181,6 +181,50 @@
               "source_id": "BR_DNV_LISBOA_2026",
               "locator": "Required documents list, item 4 (seguro de saude)",
               "excerpt": "Seguro de saude valido no territorio brasileiro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BZ_LONGSTAY_IMMIG_2026",
+      "country": "Belize",
+      "visa_name": "Long Stay Permit",
+      "route": "Long Stay Permit (Department of Immigration)",
+      "authority": "Belize Ministry of Immigration, Governance and Labour",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "BZ_LONGSTAY_IMMIG_2026",
+          "url": "https://immigration.gov.bz/permits/long-stay-permit/",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "497f39c5569db0d730abeac927c83840e895ce1d145815a5184328ede1b025fe",
+          "local_path": "sources/BZ_LONGSTAY_IMMIG_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "BZ_LONGSTAY_IMMIG_2026",
+              "locator": "Long Stay Permit, required documents",
+              "excerpt": "Proof of travel insurance with a minimum health coverage of USD $50,000."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 50000,
+          "currency": "USD",
+          "evidence": [
+            {
+              "source_id": "BZ_LONGSTAY_IMMIG_2026",
+              "locator": "Long Stay Permit, required documents",
+              "excerpt": "Proof of travel insurance with a minimum health coverage of USD $50,000."
             }
           ]
         }
@@ -2349,7 +2393,7 @@
       "missing": [
         "specs.jurisdiction_facts.BE.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2359,7 +2403,7 @@
       "missing": [
         "specs.jurisdiction_facts.BE.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2370,7 +2414,7 @@
         "specs.jurisdiction_facts.BE.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2378,7 +2422,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2389,7 +2433,7 @@
         "specs.jurisdiction_facts.BE.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2400,7 +2444,7 @@
         "specs.jurisdiction_facts.BE.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2410,7 +2454,7 @@
       "missing": [
         "specs.jurisdiction_facts.BE.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -2421,7 +2465,7 @@
         "specs.jurisdiction_facts.BE.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -2580,6 +2624,78 @@
         "specs.jurisdiction_facts.BR.authorized"
       ],
       "last_verified": "2026-06-13"
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -5523,6 +5639,13 @@
       "retrieved_at": "2026-06-13T00:00:00Z",
       "sha256": "7adb15bbf5c8ef7504b0b6c78c6968a3a12ef0d58013cba8e2002ef28ef5664a",
       "local_path": "sources/BR_DNV_LISBOA_2026-06-13.html"
+    },
+    "BZ_LONGSTAY_IMMIG_2026": {
+      "source_id": "BZ_LONGSTAY_IMMIG_2026",
+      "url": "https://immigration.gov.bz/permits/long-stay-permit/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "497f39c5569db0d730abeac927c83840e895ce1d145815a5184328ede1b025fe",
+      "local_path": "sources/BZ_LONGSTAY_IMMIG_2026-06-15.html"
     },
     "CO_DNV_CANCILLERIA_2026": {
       "source_id": "CO_DNV_CANCILLERIA_2026",
