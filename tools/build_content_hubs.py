@@ -419,6 +419,20 @@ VISA_FAQS = {
             "answer": "The insurance must be valid throughout your entire stay. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies meeting the EUR 120,000 threshold are GREEN.",
         },
     ],
+    "EC_NOMAD_CANCILLERIA_2026": [
+        {
+            "question": "What insurance does the Ecuador digital nomad visa require?",
+            "answer": "The Ministry of Foreign Affairs requires a national or foreign health insurance policy valid for the same period as the visa; if taken out with a foreign company, the policy or contract must state that it has coverage in Ecuador.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "A foreign policy must state coverage in Ecuador. Genki Native documents global coverage that includes Ecuador; the other products do not document Ecuador validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Does the policy need to last the whole visa?",
+            "answer": "Yes. The policy must be valid for the same period as the visa, so a full-period policy is required; a month-to-month subscription that can lapse does not assure this.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -559,6 +573,11 @@ RELATED_POSTS = {
     "FI_STUDY_MIGRI_2026": [
         ("/posts/finland-study-insurance/", "Finland study residence insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "EC_NOMAD_CANCILLERIA_2026": [
+        ("/posts/ecuador-nomad-insurance/", "Ecuador digital nomad visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
