@@ -377,6 +377,20 @@ VISA_FAQS = {
             "answer": "The cover must run for one full year (or the entirety of the stay). A month-to-month subscription that can lapse does not assure this, so it is YELLOW; full-period policies meeting the EUR 25,000 minimum are GREEN.",
         },
     ],
+    "BH_GOLDEN_NPRA_2026": [
+        {
+            "question": "What insurance does the Bahrain Golden Residency require?",
+            "answer": "The Ministry of Interior requires a clear copy of a valid medical insurance certificate issued in the Kingdom of Bahrain.",
+        },
+        {
+            "question": "Why is every product UNKNOWN for this route?",
+            "answer": "The certificate must be issued in the Kingdom of Bahrain. None of the tracked international products documents being a Bahrain-issued policy, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Does that mean foreign travel insurance is rejected?",
+            "answer": "The requirement is a Bahrain-issued certificate, which is stricter than a policy merely valid in Bahrain. Confirm a locally issued certificate with a Bahraini insurer; the engine does not assume any tracked product meets this.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -503,6 +517,11 @@ RELATED_POSTS = {
         ("/posts/ireland-student-insurance/", "Ireland non-EEA student insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "BH_GOLDEN_NPRA_2026": [
+        ("/posts/bahrain-golden-residency-insurance/", "Bahrain Golden Residency insurance requirements"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+        ("/guides/compliance-status-meaning/", "What GREEN, YELLOW and UNKNOWN mean"),
     ],
 }
 

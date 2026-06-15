@@ -1,0 +1,43 @@
+{
+  "id": "BH_GOLDEN_NPRA_2026",
+  "country": "Bahrain",
+  "visa_name": "Golden Residency Visa",
+  "route": "Golden Residency Visa Issuance Request (NPRA)",
+  "authority": "Ministry of Interior - Nationality, Passports and Residence Affairs (NPRA), Bahrain",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "BH_GOLDEN_NPRA_2026",
+      "url": "https://services.bahrain.bh/wps/portal/en/BSP/GSX-UI-EServiceDetails?esID=397",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "6e714098a34be978a3e8177f70e46e9b71138b6ff796dcba276c4db5d1cdd492",
+      "local_path": "sources/BH_GOLDEN_NPRA_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BH_GOLDEN_NPRA_2026",
+          "locator": "Golden Residency Visa Issuance Request, required documents",
+          "excerpt": "A clear copy of a valid medical insurance certificate issued in the Kingdom of Bahrain"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BH_GOLDEN_NPRA_2026",
+          "locator": "Golden Residency Visa Issuance Request, required documents",
+          "excerpt": "a valid medical insurance certificate issued in the Kingdom of Bahrain"
+        }
+      ]
+    }
+  ]
+}
