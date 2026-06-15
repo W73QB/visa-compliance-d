@@ -1,0 +1,20 @@
+{
+  "visa_id": "PA_REMOTEWORK_SNM_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "PA_REMOTEWORK_SNM_2026",
+          "locator": "Requisitos, item 9 (poliza de seguro medico)",
+          "excerpt": "y estar vigente por el periodo de estadia del solicitante."
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.PA.authorized"
+  ]
+}
