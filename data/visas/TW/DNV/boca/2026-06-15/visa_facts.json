@@ -1,0 +1,43 @@
+{
+  "id": "TW_DNV_BOCA_2026",
+  "country": "Taiwan",
+  "visa_name": "Digital Nomad Visitor Visa",
+  "route": "Digital nomad visitor visa (Bureau of Consular Affairs)",
+  "authority": "Bureau of Consular Affairs, Ministry of Foreign Affairs (R.O.C. Taiwan)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "TW_DNV_BOCA_2026",
+      "url": "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "51392397072072c60ad02e166a6fbe0f8b29f8d9ddebf930c8a4939a55dab9fa",
+      "local_path": "sources/TW_DNV_BOCA_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "TW_DNV_BOCA_2026",
+          "locator": "Digital nomad visitor visa, required documents",
+          "excerpt": "Proof of health and full hospitalization insurance for the entire duration of stay in the R.O.C. (Taiwan)"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "TW_DNV_BOCA_2026",
+          "locator": "Digital nomad visitor visa, required documents",
+          "excerpt": "for the entire duration of stay in the R.O.C. (Taiwan)"
+        }
+      ]
+    }
+  ]
+}

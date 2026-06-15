@@ -531,6 +531,20 @@ VISA_FAQS = {
             "answer": "The official application process states no coverage amount, so the engine encodes none and models that insurance is mandatory and must be valid in Dominica.",
         },
     ],
+    "TW_DNV_BOCA_2026": [
+        {
+            "question": "What insurance does the Taiwan digital nomad visitor visa require?",
+            "answer": "The Bureau of Consular Affairs requires proof of health and full hospitalization insurance for the entire duration of stay in the R.O.C. (Taiwan).",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The official page states no coverage amount, so the engine encodes none and models that insurance is mandatory and must cover the entire duration of stay.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW while other products are GREEN?",
+            "answer": "The insurance must cover the entire duration of stay. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -711,6 +725,11 @@ RELATED_POSTS = {
     "DM_WIN_GOVDM_2026": [
         ("/posts/dominica-work-in-nature-insurance/", "Dominica Work In Nature insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "TW_DNV_BOCA_2026": [
+        ("/posts/taiwan-dnv-insurance/", "Taiwan digital nomad visitor visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

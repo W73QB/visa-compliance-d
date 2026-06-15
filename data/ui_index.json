@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T13:55:16.235111+00:00",
+  "built_at": "2026-06-15T13:59:51.079699+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1907,6 +1907,49 @@
           ]
         }
       ]
+    },
+    {
+      "id": "TW_DNV_BOCA_2026",
+      "country": "Taiwan",
+      "visa_name": "Digital Nomad Visitor Visa",
+      "route": "Digital nomad visitor visa (Bureau of Consular Affairs)",
+      "authority": "Bureau of Consular Affairs, Ministry of Foreign Affairs (R.O.C. Taiwan)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "TW_DNV_BOCA_2026",
+          "url": "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "51392397072072c60ad02e166a6fbe0f8b29f8d9ddebf930c8a4939a55dab9fa",
+          "local_path": "sources/TW_DNV_BOCA_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "TW_DNV_BOCA_2026",
+              "locator": "Digital nomad visitor visa, required documents",
+              "excerpt": "Proof of health and full hospitalization insurance for the entire duration of stay in the R.O.C. (Taiwan)"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "TW_DNV_BOCA_2026",
+              "locator": "Digital nomad visitor visa, required documents",
+              "excerpt": "for the entire duration of stay in the R.O.C. (Taiwan)"
+            }
+          ]
+        }
+      ]
     }
   ],
   "products": [
@@ -3214,7 +3257,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3224,7 +3267,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3234,7 +3277,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3242,7 +3285,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3252,7 +3295,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3262,7 +3305,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3272,7 +3315,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -3282,7 +3325,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -5638,6 +5681,81 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "TW_DNV_BOCA_2026",
+              "locator": "Digital nomad visitor visa, required documents",
+              "excerpt": "for the entire duration of stay in the R.O.C. (Taiwan)"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     }
   ],
   "offers": [
@@ -6113,6 +6231,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "bfdc87174f4049b1e6cc3e065c6b18ed9a5b66deeeb6144b15a69b3de07b9305",
       "local_path": "sources/TR_RESIDENCE_PMM_2026-06-15.html"
+    },
+    "TW_DNV_BOCA_2026": {
+      "source_id": "TW_DNV_BOCA_2026",
+      "url": "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "51392397072072c60ad02e166a6fbe0f8b29f8d9ddebf930c8a4939a55dab9fa",
+      "local_path": "sources/TW_DNV_BOCA_2026-06-15.html"
     },
     "WORLDNOMADS_COMPARE_2026": {
       "source_id": "WORLDNOMADS_COMPARE_2026",
