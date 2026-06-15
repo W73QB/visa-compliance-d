@@ -1,0 +1,18 @@
+{
+  "visa_id": "FI_STUDY_MIGRI_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "FI_STUDY_MIGRI_2026",
+          "locator": "What kind of insurance do I need?",
+          "excerpt": "If you stay in Finland for less than year, your insurance must be valid throughout your entire stay in Finland."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

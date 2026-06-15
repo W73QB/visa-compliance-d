@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T05:09:19.369682+00:00",
+  "built_at": "2026-06-15T05:14:52.600570+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -675,6 +675,62 @@
               "source_id": "ES_NLV_LA_EXTERIORES_2026",
               "locator": "Required documents, item 8 (note)",
               "excerpt": "No travel insurances with medical assistance coverage will be accepted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FI_STUDY_MIGRI_2026",
+      "country": "Finland",
+      "visa_name": "Residence Permit for Studies",
+      "route": "Student residence permit, studies under two years (Migri)",
+      "authority": "Finnish Immigration Service (Migri)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "FI_STUDY_MIGRI_2026",
+          "url": "https://migri.fi/en/insurance",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "c38ff6a79dd8d148339541a4f30b447b2d2102866dc062254b5165eeafcc7925",
+          "local_path": "sources/FI_STUDY_MIGRI_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "FI_STUDY_MIGRI_2026",
+              "locator": "Students must have insurance",
+              "excerpt": "In order to get a residence permit, you must take out private insurance that will cover your medical and drug expenses."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 120000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "FI_STUDY_MIGRI_2026",
+              "locator": "What kind of insurance do I need?, amount by duration",
+              "excerpt": "If your studies take less than two years, your insurance must cover medical expenses up to EUR 120,000."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "FI_STUDY_MIGRI_2026",
+              "locator": "What kind of insurance do I need?",
+              "excerpt": "If you stay in Finland for less than year, your insurance must be valid throughout your entire stay in Finland."
             }
           ]
         }
@@ -3075,6 +3131,89 @@
       "last_verified": "2026-06-08"
     },
     {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "FI_STUDY_MIGRI_2026",
+              "locator": "What kind of insurance do I need?",
+              "excerpt": "If you stay in Finland for less than year, your insurance must be valid throughout your entire stay in Finland."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "GR_DNV_MFA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "GREEN",
@@ -3625,7 +3764,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3633,7 +3772,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3641,7 +3780,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3649,7 +3788,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3657,7 +3796,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3665,7 +3804,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3673,7 +3812,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -3681,7 +3820,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -4678,6 +4817,13 @@
       "retrieved_at": "2026-01-15T00:00:00Z",
       "sha256": "534fc72ab060d94b98959ae5b246d2bdb16fb72aa493ca3938491289770c5062",
       "local_path": "sources/EU_VISA_CODE_ARTICLE_15_2026-01-15.html"
+    },
+    "FI_STUDY_MIGRI_2026": {
+      "source_id": "FI_STUDY_MIGRI_2026",
+      "url": "https://migri.fi/en/insurance",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "c38ff6a79dd8d148339541a4f30b447b2d2102866dc062254b5165eeafcc7925",
+      "local_path": "sources/FI_STUDY_MIGRI_2026-06-15.html"
     },
     "GENERIC_WEBSITE_2026": {
       "source_id": "GENERIC_WEBSITE_2026",

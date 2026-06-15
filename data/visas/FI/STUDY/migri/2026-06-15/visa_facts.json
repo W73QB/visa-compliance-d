@@ -1,0 +1,56 @@
+{
+  "id": "FI_STUDY_MIGRI_2026",
+  "country": "Finland",
+  "visa_name": "Residence Permit for Studies",
+  "route": "Student residence permit, studies under two years (Migri)",
+  "authority": "Finnish Immigration Service (Migri)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "FI_STUDY_MIGRI_2026",
+      "url": "https://migri.fi/en/insurance",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "c38ff6a79dd8d148339541a4f30b447b2d2102866dc062254b5165eeafcc7925",
+      "local_path": "sources/FI_STUDY_MIGRI_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "FI_STUDY_MIGRI_2026",
+          "locator": "Students must have insurance",
+          "excerpt": "In order to get a residence permit, you must take out private insurance that will cover your medical and drug expenses."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 120000,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "FI_STUDY_MIGRI_2026",
+          "locator": "What kind of insurance do I need?, amount by duration",
+          "excerpt": "If your studies take less than two years, your insurance must cover medical expenses up to EUR 120,000."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "FI_STUDY_MIGRI_2026",
+          "locator": "What kind of insurance do I need?",
+          "excerpt": "If you stay in Finland for less than year, your insurance must be valid throughout your entire stay in Finland."
+        }
+      ]
+    }
+  ]
+}
