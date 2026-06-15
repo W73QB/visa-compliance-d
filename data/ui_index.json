@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T05:30:18.406615+00:00",
+  "built_at": "2026-06-15T13:37:06.238290+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1588,6 +1588,62 @@
               "source_id": "RO_DNV_EVIZA_2026",
               "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
               "excerpt": "Travel medical insurance that covers the entire duration of the requested period of stay."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SI_D_GOVSI_2026",
+      "country": "Slovenia",
+      "visa_name": "Long-Stay Visa (Type D)",
+      "route": "Long Stay Visa D checklist (Ministry of Foreign Affairs)",
+      "authority": "Ministry of Foreign Affairs of the Republic of Slovenia",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "SI_D_GOVSI_2026",
+          "url": "https://www.gov.si/assets/predstavnistva/Washington/dokumenti/konzulara/Check-list-long-stay-US-Slovenia.pdf",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "4f712357fc4c45a3be6271a5b64b9db14fde5da609a8485bc472560c44fb52ba",
+          "local_path": "sources/SI_D_GOVSI_2026-06-15.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "SI_D_GOVSI_2026",
+              "locator": "Documents required for all applicants, item 4",
+              "excerpt": "Travel medical insurance for the period of the validity of visa, valid in the entire Schengen area, with minimum coverage of 30.000 EUR, covering: emergency medical expenses, hospital treatment, repatriation for medical reasons, or repatriation of remains."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 30000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "SI_D_GOVSI_2026",
+              "locator": "Documents required for all applicants, item 4",
+              "excerpt": "with minimum coverage of 30.000 EUR"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "SI_D_GOVSI_2026",
+              "locator": "Documents required for all applicants, item 4",
+              "excerpt": "Travel medical insurance for the period of the validity of visa"
             }
           ]
         }
@@ -3922,7 +3978,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3932,7 +3988,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3942,7 +3998,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3950,7 +4006,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3960,7 +4016,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3970,7 +4026,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3980,7 +4036,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -3990,7 +4046,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "LV_REMOTEWORK_PMLP_2026",
@@ -4762,6 +4818,89 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "SI_D_GOVSI_2026",
+              "locator": "Documents required for all applicants, item 4",
+              "excerpt": "Travel medical insurance for the period of the validity of visa"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "TH_DTV_MFA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "NOT_REQUIRED",
@@ -5412,6 +5551,13 @@
       "retrieved_at": "2026-01-16T00:00:00Z",
       "sha256": "bd34f6a771b46e02b33c046e24205c667ef36227cfa982c890d37b56d6c1dc6a",
       "local_path": "sources/SANITAS_MAS_SALUD_SIN_COPAGO_2026-01-16.pdf"
+    },
+    "SI_D_GOVSI_2026": {
+      "source_id": "SI_D_GOVSI_2026",
+      "url": "https://www.gov.si/assets/predstavnistva/Washington/dokumenti/konzulara/Check-list-long-stay-US-Slovenia.pdf",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "4f712357fc4c45a3be6271a5b64b9db14fde5da609a8485bc472560c44fb52ba",
+      "local_path": "sources/SI_D_GOVSI_2026-06-15.pdf"
     },
     "TH_MFA_DTV_2026": {
       "source_id": "TH_MFA_DTV_2026",

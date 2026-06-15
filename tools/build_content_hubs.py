@@ -461,6 +461,20 @@ VISA_FAQS = {
             "answer": "The official document states no coverage amount, so the engine encodes none and models that insurance is mandatory and must cover medical care in Sri Lanka.",
         },
     ],
+    "SI_D_GOVSI_2026": [
+        {
+            "question": "What insurance does the Slovenia Long-Stay (D) visa require?",
+            "answer": "The Ministry of Foreign Affairs checklist requires travel medical insurance for the period of the validity of the visa, valid in the entire Schengen area, with minimum coverage of 30,000 EUR, covering emergency medical expenses, hospital treatment and repatriation.",
+        },
+        {
+            "question": "Is this the Schengen short-stay rule?",
+            "answer": "No. The 30,000 EUR figure is stated on Slovenia's own Long-Stay Visa (D) checklist (legal basis: the Foreigners Act), for the entire validity of the long-stay visa.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW?",
+            "answer": "The insurance must cover the period of validity of the visa. A month-to-month subscription that can lapse does not assure full-period coverage, so it is YELLOW; full-period policies with a documented limit of 30,000 EUR or more are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -617,6 +631,11 @@ RELATED_POSTS = {
         ("/posts/sri-lanka-dnv-insurance/", "Sri Lanka Digital Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "SI_D_GOVSI_2026": [
+        ("/posts/slovenia-long-stay-d-insurance/", "Slovenia Long-Stay (D) visa insurance requirements"),
+        ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
     ],
 }
 
