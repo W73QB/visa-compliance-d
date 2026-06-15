@@ -1,0 +1,20 @@
+{
+  "visa_id": "GE_LONGVISA_GEOCONSUL_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "GE_LONGVISA_GEOCONSUL_2026",
+          "locator": "Travel and health insurance criteria, long-term visa",
+          "excerpt": "the travel/health insurance to be submitted for obtaining a long-term visa is valid for the validity period of the visa."
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.GE.authorized"
+  ]
+}

@@ -615,6 +615,20 @@ VISA_FAQS = {
             "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with GDRFA.",
         },
     ],
+    "GE_LONGVISA_GEOCONSUL_2026": [
+        {
+            "question": "What insurance does a Georgia long-term visa require?",
+            "answer": "The Ministry of Foreign Affairs requires travel/health insurance valid for the period of stay in Georgia, valid all over Georgia, and (for a long-term visa) valid for the validity period of the visa.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The insurance must be valid all over Georgia. Genki Native documents global coverage that includes Georgia; the other products do not document Georgia validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The published criteria state no coverage amount, so the engine encodes none and models that insurance is mandatory, must be valid in Georgia, and must cover the visa validity period.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -825,6 +839,11 @@ RELATED_POSTS = {
     "AE_VIRTUALWORK_GDRFA_2026": [
         ("/posts/uae-virtual-work-insurance/", "UAE Virtual Work residence insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia and the Middle East"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "GE_LONGVISA_GEOCONSUL_2026": [
+        ("/posts/georgia-long-term-visa-insurance/", "Georgia long-term visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
