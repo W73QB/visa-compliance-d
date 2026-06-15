@@ -1,0 +1,55 @@
+{
+  "id": "PA_REMOTEWORK_SNM_2026",
+  "country": "Panama",
+  "visa_name": "Short-Stay Visa as Remote Worker",
+  "route": "Visa de Corta Estancia como Trabajador Remoto (SNM)",
+  "authority": "Servicio Nacional de Migracion de Panama (SNM)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "PA_REMOTEWORK_SNM_2026",
+      "url": "https://www.migracion.gob.pa/wp-content/uploads/18.REQUISITOS-PARA-SOLICITAR-VISA-DE-CORTA-ESTANCIA-COMO-TRABAJADOR-REMOTO.pdf",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "85ef5442d7e2b3e5312010cf4d45e64ae29381a3ef549e2bbf1c387b39588eef",
+      "local_path": "sources/PA_REMOTEWORK_SNM_2026-06-15.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PA_REMOTEWORK_SNM_2026",
+          "locator": "Requisitos, item 9 (poliza de seguro medico)",
+          "excerpt": "Copia de la poliza de seguro medico del solicitante, el cual debera mantener cobertura en el territorio nacional y estar vigente por el periodo de estadia del solicitante."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PA_REMOTEWORK_SNM_2026",
+          "locator": "Requisitos, item 9 (poliza de seguro medico)",
+          "excerpt": "el cual debera mantener cobertura en el territorio nacional"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "PA_REMOTEWORK_SNM_2026",
+          "locator": "Requisitos, item 9 (poliza de seguro medico)",
+          "excerpt": "y estar vigente por el periodo de estadia del solicitante."
+        }
+      ]
+    }
+  ]
+}

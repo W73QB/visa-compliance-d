@@ -335,6 +335,20 @@ VISA_FAQS = {
             "answer": "Yes. The engine encodes both the EUR 42,600 minimum coverage and the territory requirement, so a product must clear both to be GREEN.",
         },
     ],
+    "PA_REMOTEWORK_SNM_2026": [
+        {
+            "question": "What insurance does the Panama remote worker visa require?",
+            "answer": "The Servicio Nacional de Migracion requires a copy of the applicant's medical insurance policy that maintains coverage in the national territory and stays valid for the applicant's period of stay.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must maintain coverage in Panamanian territory. Genki Native documents global coverage that includes Panama; the other products do not document Panama-specific validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The official requirements state no coverage amount, so the engine encodes none and models that insurance is mandatory, must cover the national territory, and must stay valid for the period of stay.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -445,6 +459,11 @@ RELATED_POSTS = {
     "LV_REMOTEWORK_PMLP_2026": [
         ("/posts/latvia-remote-work-insurance/", "Latvia remote work visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "PA_REMOTEWORK_SNM_2026": [
+        ("/posts/panama-remote-worker-insurance/", "Panama remote worker visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
