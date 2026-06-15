@@ -1,0 +1,43 @@
+{
+  "id": "KZ_NEONOMAD_EGOV_2026",
+  "country": "Kazakhstan",
+  "visa_name": "Neo Nomad Visa",
+  "route": "Neo Nomad Visa B12-1 (eGov Kazakhstan)",
+  "authority": "Government of the Republic of Kazakhstan (eGov)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "KZ_NEONOMAD_EGOV_2026",
+      "url": "https://egov.kz/cms/en/articles/for_foreigners/visa_classification",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "41ec6c540aa29480b9542047223febe3561dde8e98235868f8b356beb28d746f",
+      "local_path": "sources/KZ_NEONOMAD_EGOV_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "KZ_NEONOMAD_EGOV_2026",
+          "locator": "Neo Nomad Visa (B12-1) required documents, item 4",
+          "excerpt": "medical insurance covering the requested validity period of the visa."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "KZ_NEONOMAD_EGOV_2026",
+          "locator": "Neo Nomad Visa (B12-1) required documents, item 4",
+          "excerpt": "medical insurance covering the requested validity period of the visa."
+        }
+      ]
+    }
+  ]
+}

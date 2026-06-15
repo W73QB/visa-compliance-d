@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T13:37:06.238290+00:00",
+  "built_at": "2026-06-15T13:41:46.536450+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1078,6 +1078,49 @@
               "source_id": "KR_F1D_MOFA_LA_2026",
               "locator": "Required Documents, item 8 (Certificate of Medical Insurance Subscription)",
               "excerpt": "insurance that covers more than 100 million won(approx. USD 76,000) for hospital treatment and evacuation to their home country during their stay in Korea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "KZ_NEONOMAD_EGOV_2026",
+      "country": "Kazakhstan",
+      "visa_name": "Neo Nomad Visa",
+      "route": "Neo Nomad Visa B12-1 (eGov Kazakhstan)",
+      "authority": "Government of the Republic of Kazakhstan (eGov)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "KZ_NEONOMAD_EGOV_2026",
+          "url": "https://egov.kz/cms/en/articles/for_foreigners/visa_classification",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "41ec6c540aa29480b9542047223febe3561dde8e98235868f8b356beb28d746f",
+          "local_path": "sources/KZ_NEONOMAD_EGOV_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "KZ_NEONOMAD_EGOV_2026",
+              "locator": "Neo Nomad Visa (B12-1) required documents, item 4",
+              "excerpt": "medical insurance covering the requested validity period of the visa."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "KZ_NEONOMAD_EGOV_2026",
+              "locator": "Neo Nomad Visa (B12-1) required documents, item 4",
+              "excerpt": "medical insurance covering the requested validity period of the visa."
             }
           ]
         }
@@ -3971,6 +4014,81 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "KZ_NEONOMAD_EGOV_2026",
+              "locator": "Neo Nomad Visa (B12-1) required documents, item 4",
+              "excerpt": "medical insurance covering the requested validity period of the visa."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -4825,7 +4943,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4835,7 +4953,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4845,7 +4963,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4853,7 +4971,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4861,7 +4979,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4880,7 +4998,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4890,7 +5008,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -4898,7 +5016,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -5422,6 +5540,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "337553082f601a99db89a9b0e9493e884a7ae8362f2587dc3945d23171a87e88",
       "local_path": "sources/KR_F1D_MOFA_LA_2026-06-15.html"
+    },
+    "KZ_NEONOMAD_EGOV_2026": {
+      "source_id": "KZ_NEONOMAD_EGOV_2026",
+      "url": "https://egov.kz/cms/en/articles/for_foreigners/visa_classification",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "41ec6c540aa29480b9542047223febe3561dde8e98235868f8b356beb28d746f",
+      "local_path": "sources/KZ_NEONOMAD_EGOV_2026-06-15.html"
     },
     "LK_DNV_IMMIGRATION_2026": {
       "source_id": "LK_DNV_IMMIGRATION_2026",
