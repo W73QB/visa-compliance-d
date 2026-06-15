@@ -1,0 +1,55 @@
+{
+  "id": "GE_LONGVISA_GEOCONSUL_2026",
+  "country": "Georgia",
+  "visa_name": "Long-Term Visa",
+  "route": "Long-term visa travel/health insurance (MFA Consular Department)",
+  "authority": "Ministry of Foreign Affairs of Georgia (Consular Department)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "GE_LONGVISA_GEOCONSUL_2026",
+      "url": "https://www.geoconsul.gov.ge/en/HtmlPage/html/View?id=211",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "5d904072c5eb6813a59db3e15ab668dca3201f258e1a4e56c7f6b169bb9be850",
+      "local_path": "sources/GE_LONGVISA_GEOCONSUL_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "GE_LONGVISA_GEOCONSUL_2026",
+          "locator": "Travel and health insurance criteria",
+          "excerpt": "Alien shall hold travel/health insurance valid for the period of stay in Georgia, which, if necessary, will cover any expenses related to his/her health status and death. The travel/health insurance shall be valid all over Georgia."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "GE_LONGVISA_GEOCONSUL_2026",
+          "locator": "Travel and health insurance criteria",
+          "excerpt": "The travel/health insurance shall be valid all over Georgia."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "GE_LONGVISA_GEOCONSUL_2026",
+          "locator": "Travel and health insurance criteria, long-term visa",
+          "excerpt": "the travel/health insurance to be submitted for obtaining a long-term visa is valid for the validity period of the visa."
+        }
+      ]
+    }
+  ]
+}
