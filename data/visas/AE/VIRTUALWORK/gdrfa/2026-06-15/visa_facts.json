@@ -1,0 +1,31 @@
+{
+  "id": "AE_VIRTUALWORK_GDRFA_2026",
+  "country": "United Arab Emirates",
+  "visa_name": "Residence for Virtual Work",
+  "route": "Virtual Work residence (GDRFA Dubai)",
+  "authority": "General Directorate of Residency and Foreigners Affairs - Dubai (GDRFA)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "url": "https://gdrfad.gov.ae/en/services/64154a31-ec6d-11ec-140b-0050569629e8",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "aac07a663831359e5a43f947507248b97ef8f48ec3a0d6c0debb64c79a1f9c84",
+      "local_path": "sources/AE_VIRTUALWORK_GDRFA_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "AE_VIRTUALWORK_GDRFA_2026",
+          "locator": "Residence for Virtual Work, required documents, item 5",
+          "excerpt": "Submit a valid health insurance document."
+        }
+      ]
+    }
+  ]
+}

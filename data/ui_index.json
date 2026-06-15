@@ -1,7 +1,38 @@
 {
-  "built_at": "2026-06-15T23:21:09.150930+00:00",
+  "built_at": "2026-06-15T23:28:21.559871+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
+    {
+      "id": "AE_VIRTUALWORK_GDRFA_2026",
+      "country": "United Arab Emirates",
+      "visa_name": "Residence for Virtual Work",
+      "route": "Virtual Work residence (GDRFA Dubai)",
+      "authority": "General Directorate of Residency and Foreigners Affairs - Dubai (GDRFA)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "AE_VIRTUALWORK_GDRFA_2026",
+          "url": "https://gdrfad.gov.ae/en/services/64154a31-ec6d-11ec-140b-0050569629e8",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "aac07a663831359e5a43f947507248b97ef8f48ec3a0d6c0debb64c79a1f9c84",
+          "local_path": "sources/AE_VIRTUALWORK_GDRFA_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "AE_VIRTUALWORK_GDRFA_2026",
+              "locator": "Residence for Virtual Work, required documents, item 5",
+              "excerpt": "Submit a valid health insurance document."
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "AL_LEJE_UNIKE_MB_2026",
       "country": "Albania",
@@ -2602,6 +2633,70 @@
   ],
   "mappings": [
     {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "GREEN",
@@ -2682,7 +2777,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2690,7 +2785,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2698,7 +2793,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2706,7 +2801,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2714,7 +2809,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2733,7 +2828,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2741,7 +2836,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -2749,7 +2844,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -6346,6 +6441,13 @@
     }
   },
   "sources_by_id": {
+    "AE_VIRTUALWORK_GDRFA_2026": {
+      "source_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "url": "https://gdrfad.gov.ae/en/services/64154a31-ec6d-11ec-140b-0050569629e8",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "aac07a663831359e5a43f947507248b97ef8f48ec3a0d6c0debb64c79a1f9c84",
+      "local_path": "sources/AE_VIRTUALWORK_GDRFA_2026-06-15.html"
+    },
     "AL_LEJE_UNIKE_MB_2026": {
       "source_id": "AL_LEJE_UNIKE_MB_2026",
       "url": "https://e-albania.al/eAlbaniaServices/UseService.aspx?service_code=15146",
