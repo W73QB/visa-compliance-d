@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T00:01:21.894989+00:00",
+  "built_at": "2026-06-15T04:55:17.077606+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -967,6 +967,49 @@
               "source_id": "MT_RESIDENCY_FAQ_2026",
               "locator": "FAQ - Are health insurance policies with monthly payments considered acceptable?",
               "excerpt": "No, they are not acceptable. Eligible policies are those with premiums covering a full year, paid in advance. A receipt for this payment may be requested."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NZ_STUDENT_INZ_2026",
+      "country": "New Zealand",
+      "visa_name": "Fee Paying Student Visa",
+      "route": "Fee Paying Student Visa (Immigration New Zealand)",
+      "authority": "Immigration New Zealand (INZ)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "NZ_STUDENT_INZ_2026",
+          "url": "https://www.immigration.govt.nz/visas/fee-paying-student-visa/",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "82b80f70011b69b4a690650a579a0770701a1356c97c2f1642ea3843cc768e42",
+          "local_path": "sources/NZ_STUDENT_INZ_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "NZ_STUDENT_INZ_2026",
+              "locator": "Medical and travel insurance",
+              "excerpt": "You must agree to have insurance for travel and any health care you need, from the start of your course until your visa expires. This will be a condition of your student visa."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "NZ_STUDENT_INZ_2026",
+              "locator": "Medical and travel insurance",
+              "excerpt": "from the start of your course until your visa expires"
             }
           ]
         }
@@ -3369,6 +3412,81 @@
       "last_verified": "2026-01-15"
     },
     {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "NZ_STUDENT_INZ_2026",
+              "locator": "Medical and travel insurance",
+              "excerpt": "from the start of your course until your visa expires"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -3376,7 +3494,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3386,7 +3504,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3396,7 +3514,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3404,7 +3522,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3414,7 +3532,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3435,7 +3553,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3445,7 +3563,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -3455,7 +3573,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PL_NATD_NICOSIA_2026",
@@ -4276,6 +4394,13 @@
       "sha256": "0f18ac432310a6af5e29ff42cfc7d5ebeb4eba69c02f1bc29a63c69545f4336f",
       "local_path": "sources/MT_NOMAD_RESIDENCY_FAQ_2026-01-12.md",
       "note": "Official FAQ explicitly states monthly payment insurance policies are NOT acceptable - annual payment required"
+    },
+    "NZ_STUDENT_INZ_2026": {
+      "source_id": "NZ_STUDENT_INZ_2026",
+      "url": "https://www.immigration.govt.nz/visas/fee-paying-student-visa/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "82b80f70011b69b4a690650a579a0770701a1356c97c2f1642ea3843cc768e42",
+      "local_path": "sources/NZ_STUDENT_INZ_2026-06-15.html"
     },
     "PA_REMOTEWORK_SNM_2026": {
       "source_id": "PA_REMOTEWORK_SNM_2026",

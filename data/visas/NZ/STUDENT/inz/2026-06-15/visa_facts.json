@@ -1,0 +1,43 @@
+{
+  "id": "NZ_STUDENT_INZ_2026",
+  "country": "New Zealand",
+  "visa_name": "Fee Paying Student Visa",
+  "route": "Fee Paying Student Visa (Immigration New Zealand)",
+  "authority": "Immigration New Zealand (INZ)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "NZ_STUDENT_INZ_2026",
+      "url": "https://www.immigration.govt.nz/visas/fee-paying-student-visa/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "82b80f70011b69b4a690650a579a0770701a1356c97c2f1642ea3843cc768e42",
+      "local_path": "sources/NZ_STUDENT_INZ_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "NZ_STUDENT_INZ_2026",
+          "locator": "Medical and travel insurance",
+          "excerpt": "You must agree to have insurance for travel and any health care you need, from the start of your course until your visa expires. This will be a condition of your student visa."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "NZ_STUDENT_INZ_2026",
+          "locator": "Medical and travel insurance",
+          "excerpt": "from the start of your course until your visa expires"
+        }
+      ]
+    }
+  ]
+}
