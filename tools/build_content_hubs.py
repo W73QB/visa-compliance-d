@@ -573,6 +573,20 @@ VISA_FAQS = {
             "answer": "The engine converts the ISK 2,000,000 threshold and each product's documented limit to a common currency before comparing, alongside the valid-in-Iceland requirement.",
         },
     ],
+    "SM_ELECTIVE_ESTERI_2026": [
+        {
+            "question": "What insurance does the San Marino elective residence require?",
+            "answer": "The Department of Foreign Affairs states that foreign applicants must hold a health insurance policy.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The published statement names a health insurance policy but states no coverage amount or territory, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Department of Foreign Affairs.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -767,6 +781,11 @@ RELATED_POSTS = {
     ],
     "IS_RESIDENCE_UTL_2026": [
         ("/posts/iceland-residence-insurance/", "Iceland residence permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "SM_ELECTIVE_ESTERI_2026": [
+        ("/posts/san-marino-elective-residence-insurance/", "San Marino elective residence insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],

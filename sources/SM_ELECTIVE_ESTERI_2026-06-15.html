@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Esteri.sm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta property="og:title" content='Stay permits, residence and citizenship' />
+<meta property="og:url" content="/pub1/EsteriSM/en/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html" />
+<meta property="og:image" content="/pub1/.resources/esteri-web/webresources/img/logo_esteri.jpg" />
+<meta property="og:type" content='website' />
+<meta property="og:description" content='Segreteria Esteri' />
+<meta property="og:locale" content='it_IT' />
+
+<meta name="twitter:title" content='Stay permits, residence and citizenship'>
+<meta name="twitter:description" content='Segreteria Esteri'>
+<meta name="twitter:image" content="/pub1/.resources/esteri-web/webresources/img/logo_esteri.jpg">    
+    <link rel="stylesheet" type="text/css" href="/pub1/EsteriSM/.resources/esteri-web/webresources/css/flexboxgrid.css"/>
+    <link rel="stylesheet" type="text/css" href="/pub1/EsteriSM/.resources/esteri-web/webresources/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/pub1/EsteriSM/.resources/esteri-web/webresources/css/font.css"/>
+    <link rel="stylesheet" type="text/css" href="/pub1/EsteriSM/.resources/esteri-web/webresources/css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/pub1/EsteriSM/.resources/esteri-web/webresources/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/pub1/EsteriSM/.resources/esteri-web/webresources/css/mediabox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script></head>
+<body>
+  <!-- TESTATA -->
+  <div class="container-fluid">
+<div class="container-fluid">
+  <div class="row middle-sm ">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <a href='/pub1/EsteriSM/en/'>
+              <object type="image/svg+xml" id="logo" data="/pub1/.resources/esteri-web/webresources/img/logo_esteri_new-EN.svg">
+                <div>Logo</div>
+              </object>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 tright">
+      <div class="header_cont_int mrg1">
+        <img src="/pub1/.resources/esteri-web/webresources/img/search.png" class="search" id="open">
+        <div class="user_icon">
+        <!--ICONA-->
+          <img src="/pub1/.resources/esteri-web/webresources/img/user.png" />
+          <!--UTENTE-->
+          <div class="user_menu">
+              <span class="med_14 block">Utente non loggato</span>
+          </div>
+        </div>
+        <!--LINGUA-->
+        <div class="lang_cont">
+                  
+                   <a class="reg_14" href="/pub1/EsteriSM/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html">it</a>
+                  <a class="bold_14 blue">en</a>
+                  
+        </div>
+        <!--MENU-->
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="header_cont_int no-mob">
+        <a href="https://www.facebook.com/segreteriaesteri/" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/facebook.png" class="social_header"></a>
+        <a href="https://www.instagram.com/segreteria_affariesteri_smr/" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/instagram.png" class="social_header"></a>
+        <a href="https://twitter.com/AffariEsteriSMR/" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/twitter.png" class="social_header"></a>
+        <a href="https://www.youtube.com/channel/UC7S-nOFaNh93VDPFtmn-00Q" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/youtube.png" class="social_header"></a>
+      </div>
+    </div>
+    <!--RICERCA
+    <div>
+      <form>
+        <input id="ricerca" type="text">
+        <input id="pulsante"type="button" value="invia" onclick='dettaglio("/pub1/EsteriSM/en/dettaglio_ricerca.html")'>
+      </form>
+    </div>
+    FINE-->
+  </div>
+
+   <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/jquery-1.11.0.min.js"></script>
+
+  <script>
+ 
+  $(function() {
+   var x = window.matchMedia("(min-width: 570px)");
+   if (x.matches) { 
+    document.getElementById("logo_smart").style.display = "none";
+    document.getElementById("logo").style.display = "inline";
+    
+   } else {
+    document.getElementById("logo_smart").style.display = "inline";
+    document.getElementById("logo").style.display = "none";
+    
+   }
+  });
+</script>
+</div>
+
+<!-- OVERLAY RICERCA -->
+  <div class="ricerca container-fluid">
+    <div class="row middle-xs">
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+          <input type="text" style="width:100%" class="input" id="ricerca" placeholder="Search in the website">
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 center-xs">
+          <input id="pulsante" type="submit" class="input" value="Search " onclick='dettaglio("/pub1/EsteriSM/en/dettaglio_ricerca.html")'>
+        </div>
+        <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 center-xs">
+          <img src="/pub1/.resources/esteri-web/webresources/img/close.png" style="width:50px;" id="close">
+        </div>
+    </div>
+  </div>
+  <!-- OVERLAY RICERCA -->
+
+<div class="row" style="position:relative;">
+  <div class="col-xs-12">
+    <div class="topnav" id="myTopnav">
+
+        <div class="cont_voce_menu">
+            <span class="sezione">Ministry</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Segreteria/Segretario.html">Minister</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Segreteria/Telecomunicazioni.html">Telecommunications</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Segreteria/Staff.html">Staff</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Relations with the European Union</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/UE/Accordo.html">The process of association with the European Union</a></li>
+                                <li><a href="/pub1/EsteriSM/en/UE/Altri-accordi.html">The agreements in force between San Marino and the European Union</a></li>
+                                <li><a href="/pub1/EsteriSM/en/UE/Storia.html">A history of the relations between San Marino and the European Union</a></li>
+                                <li><a href="/pub1/EsteriSM/en/UE/Tradizione.html">San Marino's European tradition</a></li>
+                                <li><a href="/pub1/EsteriSM/en/UE/Strategia-EUSAIR.html">European Macro-Regional Integration Process</a></li>
+                                <li><a href="/pub1/EsteriSM/en/UE/Struttura-e-attribuzioni.html">Structure and Functions</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">International Relations</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Rapporti-Bilaterali.html">Bilateral Relations</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Rapporti-Multilaterali.html">Multilateral Relations</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Accordi-Internazionali-new.html">International Treaties</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Documentazione.html">Documentation</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Department</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Dipartimento/Direzione.html">Directorates and staff</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Dipartimento/Rete-Diplomatica-e-Consolare-RSM.html">Diplomatic and Consular Network of San Marino</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Dipartimento/Richiesta-Informazioni.html">Information request form</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Dipartimento/Organi-terrorismo.html">Bodies for combating international terrorism</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Dipartimento/Onorificenze.html">Honours</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Dipartimento/Certificati-CSCA.html">Honours</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Press Office</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Ufficio-Stampa/News-e-Comunicati.html">News and press releases</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Ufficio-Stampa/Multimedia.html">Multimedia</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Ufficio-Stampa/Accreditamento.html">Journalists accreditation</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Services for users</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Informazioni-per-chi-viaggia.html">Information for travellers</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Informazioni-per-chi-visita-SMR.html">Information for those who visit San Marino</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Opportunit--di-Studio-e-Lavoro-per-cittadini-SMR.html">Training and professional opportunities for San Marino citizens</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Adozioni-Internazionali.html">Intercountry adoptions</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html" class="active">Stay permits, residence and citizenship</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Dichiarazioni-di-Equivalenza.html">Statements of Equivalence</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Riconoscimento-Titoli-di-Studio.html">Declarations of value for foreign qualifications</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Communities abroad</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Comunit--all-estero.html">Communities abroad</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Elenco-comunit--all-estero.html">Communities of San Marino citizens throughout the world</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Consulta-dei-cittadini-all-estero.html">Council of San Marino Communities Abroad</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Soggiorni-culturali.html">Cultural Stays</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Scambio-Linguistico--culturali--borse-di-studio-e-bandi.html">Opportunities for young people</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Momenti-di-Comunit-.html">Communities' moments</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Military Corps</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Corpi-Militari/Corpi-militari.html">Military Corps</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Corpi-Militari/Interpol.html">Interpol</a></li>
+                                <li><a href="/pub1/EsteriSM/en/Corpi-Militari/dipartimento-di-polizia.html">Police Department</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Progetti Culturali</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Progetti-Culturali/Palazzo-Begni.html">Palazzo Begni</a></li>
+                  </ul>
+        </div>
+        <div class="cont_voce_menu">
+            <span class="sezione">Contacts</span>
+                  <ul class="">
+                                <li><a href="/pub1/EsteriSM/en/Contatti/Contatti.html">Contacts</a></li>
+                  </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  </div>
+  <!-- TESTATA -->
+
+  <!-- HEADER 1 -->
+  <div class="container-fluid">
+
+    <div class="row header">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-pad">
+        <div class="img_header_grande">
+                                <img src='/pub1/.imaging/mte/esteri/large/dam/Esteri_img/immagini-header/permessi_soggiorno.jpg/jcr:content/permessi_soggiorno.jpg'/>
+        </div>
+        <div class="titoli_header">
+          <div>
+              <a href="/pub1/EsteriSM/en/"><span class="reg_14">Home</span></a> |
+            <span class="reg_14">Services for users</span>
+          </div>
+          <span class="didBold_30 lheight40 block">Stay permits, residence and citizenship</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- HEADER 1 -->
+
+  <!-- CONTENUTO TESTO -->
+  <div class="container-fluid blocco"  style="border-top:1px solid #5eb6e4;">
+    <div class="rigolino"></div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 top2">
+      
+        <div id="myHeader">
+          <div class="menu">
+            <a href="#blocco1" class="ancora" id="1" onclick="cambioClasse('1')">Moving to San Marino</a>
+            <a href="#blocco2" class="ancora" id="2" onclick="cambioClasse('2')">Stay permit</a>
+            <a href="#blocco3" class="ancora" id="3" onclick="cambioClasse('3')">Residence</a>
+            <a href="#blocco4" class="ancora" id="4" onclick="cambioClasse('4')">Residence</a>
+            <a href="#blocco5" class="ancora" id="5" onclick="cambioClasse('5')">Citizenship</a>
+            <a href="#blocco10" class="ancora" id="10" onclick="cambioClasse('10')">Citizenship</a>
+            <a href="#blocco6" class="ancora" id="6" onclick="cambioClasse('6')">Documentation for the request of residence</a>
+            <a href="#blocco7" class="ancora" id="7" onclick="cambioClasse('7')">Documentation for the request of stay permits</a>
+            <a href="#blocco8" class="ancora" id="8" onclick="cambioClasse('8')">Documentation for the request of stay permits</a>
+          </div>
+          <div class="open">
+            <img src="/pub1/.resources/esteri-web/webresources/img/arrow_right.png" style="width:40px;">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 top2">
+ <div id="blocco1" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Moving to San Marino</span>
+   <span>
+      <p>Foreigners wishing to move to San Marino must apply for the necessary documents to regularise their stay in the territory.</p>
+
+<p>San Marino does not grant entry visas (for nationals of non-EU countries not belonging to the Schengen area), but provides for two types of documents, to be obtained in case of stay in the territory for a period longer than 30 days: stay permits and residence.</p>
+
+   </span>
+</div> <div id="blocco2" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Stay permit</span>
+   <span>
+      <p>Stay permits are temporary permits, to regularize stays from 3 months to one year. Stay permits have a maximum validity period of 12 months and can be renewed at the request of the holder.</p>
+
+<p>&nbsp;</p>
+
+<p>Stay permits may be granted for tourism, work, family reunification (spouse and children) or cohabitation. Moreover, special stay permits may be granted for the following reasons: education, sport, medical treatment, health assistance, rehabilitation and rest, religion, humanitarian reasons, international volunteering, working holiday schemes.</p>
+
+<p>&nbsp;</p>
+
+<p>For information:&nbsp;<a href="mailto:info@esteri.sm">info@esteri.sm</a></p>
+
+   </span>
+</div> <div id="blocco3" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Residence</span>
+   <span>
+      <p>Residence permits are granted for long-term stays in the territory. The types of residence permits that may be applied for are the following:</p>
+
+<p>&nbsp;</p>
+
+<p><em>- Registered residence permits:</em>&nbsp;for foreign nationals seeking family reunification with a San Marino citizen, establishing a business in San Marino and holding management positions in institutes and companies of San Marino;</p>
+
+<p>&nbsp;</p>
+
+<p><em>- Elective residence permits:</em>&nbsp;for foreign nationals wishing to establish their residence in San Marino, who make and maintain a property or financial investment, according to the rules set by law. Foreign applicants must hold a health insurance policy, cannot work for the overall public sector nor benefit from State contributions. After 10 years, elective residence change into registered residence permits, with all relevant rights;</p>
+
+<p>&nbsp;</p>
+
+<p>- <em>Atypical residence subject to a facilitated tax regime</em>: it is envisaged for foreign citizens who intend to take up their abode in San Marino, who have never resided in the Republic for tax purposes or who have not yet obtained, at the date of entry into force of Law no. 223/2020, the final registered residence in the territory, and who generate income abroad. Applicant foreigners must have a health insurance policy, are not eligible for employment in the Overall Public Sector and do not receive any form of contribution from the State. After 10 years, they are entitled to be granted registered residence and the related rights;</p>
+
+<p>&nbsp;</p>
+
+<p>- <em>Pensioners&rsquo; atypical residence</em>: it is envisaged for foreign citizens who come from EU countries, Switzerland and countries established by a specific Congress of State Regulation, who intend to take up their abode in San Marino, who have never been resident in the Republic or have not yet obtained, at the date of entry into force of Law no. 223/2020, the final registered residence in the territory, and who generate income abroad according to the terms established by law. Applicant foreigners must have a health insurance policy, are not eligible for employment in the Overall Public Sector and do not receive any form of contribution from the State. After 10 years, they are entitled to be granted registered residence and the related rights.</p>
+
+<p>&nbsp;</p>
+
+<p>For information: <a href="mailto:info@esteri.sm">info@esteri.sm</a>&nbsp;</p>
+
+   </span>
+</div> <div id="blocco4" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Residence</span>
+   <span>
+      <p>Residence permits are granted for long-term stays in the territory. The types of residence permits that may be applied for are the following:</p>
+
+<p>&nbsp;</p>
+
+<p><em>- Registered residence permits:</em>&nbsp;for foreign nationals seeking family reunification with a San Marino citizen, establishing a business in San Marino and holding management positions in institutes and companies of San Marino;</p>
+
+<p>&nbsp;</p>
+
+<p><em>- Elective residence permits:</em>&nbsp;for foreign nationals wishing to establish their residence in San Marino, who make and maintain a property or financial investment, according to the rules set by law. Foreign applicants must hold a health insurance policy, cannot work for the overall public sector nor benefit from State contributions. After 10 years, elective residence change into registered residence permits, with all relevant rights;</p>
+
+<p>&nbsp;</p>
+
+<p>- <em>Atypical residence subject to a facilitated tax regime</em>: it is envisaged for foreign citizens who intend to take up their abode in San Marino, who have never resided in the Republic for tax purposes or who have not yet obtained, at the date of entry into force of Law no. 223/2020, the final registered residence in the territory, and who generate income abroad. Applicant foreigners must have a health insurance policy, are not eligible for employment in the Overall Public Sector and do not receive any form of contribution from the State. After 10 years, they are entitled to be granted registered residence and the related rights;</p>
+
+<p>&nbsp;</p>
+
+<p>- <em>Pensioners&rsquo; atypical residence</em>: it is envisaged for foreign citizens who come from EU countries, Switzerland and countries established by a specific Congress of State Regulation, who intend to take up their abode in San Marino, who have never been resident in the Republic or have not yet obtained, at the date of entry into force of Law no. 223/2020, the final registered residence in the territory, and who generate income abroad according to the terms established by law. Applicant foreigners must have a health insurance policy, are not eligible for employment in the Overall Public Sector and do not receive any form of contribution from the State. After 10 years, they are entitled to be granted registered residence and the related rights.</p>
+
+<p>&nbsp;</p>
+
+<p>For information: <a href="mailto:info@esteri.sm">info@esteri.sm</a>&nbsp;</p>
+
+   </span>
+</div> <div id="blocco5" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Citizenship</span>
+   <span>
+      <p><strong>Legislation on citizenship</strong></p>
+
+<p>- <a href="/pub1/EsteriSM/en/dam/jcr:ffc83220-94da-480a-9a6b-d0b0c443e1fa/1079568L30novembre2000n.pdf">Law no. 114 of 30 November 2000 Law on Citizenship</a></p>
+
+<p>- <a href="/pub1/EsteriSM/en/dam/jcr:3c8ff353-decf-40ea-a606-793d44400d03/1079573L17giugno2004n.8.pdf">Law no. 84 of 17 June 2004 amending Law no. 114 of 30 November 2000</a></p>
+
+<p>- <a href="/pub1/EsteriSM/en/dam/jcr:2dcaf5d1-aa03-4057-a412-85817949fa40/1110596leggen.121-2019i.pdf">Law no. 121 of 2 August 2019 integrating Law no. 114 of 30 November 2000</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Acquisition or re-acquisition of citizenship through amnesty</strong></p>
+
+<p>&nbsp;</p>
+
+<p>- <a href="/pub1/EsteriSM/en/dam/jcr:37626772-3bdd-4529-a953-a35e36a9fc74/1126554L131-2021.pdf">Law no. 131 of 15 July 2021 amending and integrating Law no. 114 of 30 November 2000 &ldquo;Law on Citizenship&rdquo; and subsequent amendments and Article 6 of Law no. 121 of 2 August 2019 &ldquo;Integrations to Law no. 114 of 30 November 2000 - Law on Citizenship&rdquo;</a></p>
+
+   </span>
+</div> <div id="blocco6" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Documentation for the request of residence</span>
+   <span>
+      <p>Only in the Italian language section</p>
+
+   </span>
+</div> <div id="blocco7" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Documentation for the request of stay permits</span>
+   <span>
+      <p>Only in the Italian language section</p>
+
+   </span>
+</div> <div id="blocco8" style="margin-bottom:50px;">
+   <span class="bold_18 block lheight30 mrg4">Documentation for the request of stay permits</span>
+   <span>
+      <p>Only in the Italian language section</p>
+
+   </span>
+</div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CONTENUTO TESTO -->
+
+
+  <!-- CONTENUTO GALLERIA -->
+<div class="container-fluid blocco" id="blocco10">
+
+    <div class="row bottom-xs mrg3" style="border-bottom:1px solid #5eb6e4;">
+      <div class="col-xs-12 no-pad">
+        <span class="reg_14 block mrg2">Norms and regulations (Italian language only)</span>
+        <span class="didReg_40 block lheight50 black mrg1">Regulations on the granting of stay permits and residence to non-San Marino citizens</span>
+      </div>
+    </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 28 giugno 2010 n. 118 Legge sull'ingresso e la permanenza degli stranieri in Repubblica <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:12af4e71-2a9a-4f51-8cdf-aab40e36c59a/Legge%2028%20giugno%202010%20n.%20118%20Legge%20sull'ingresso%20e%20la%20permanenza%20degli%20stranieri%20in%20Repubblica.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 18 gennaio 2011 n. 3 Integrazioni e modifiche alle disposizioni della Legge 28 giugno 2010 n. 118 e del Decreto Delegato 26 novembre 2010 n. 186 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:07642837-6fd5-43af-b4f4-aae0d641ba88/Decreto%20Delegato%2018%20gennaio%202011%20n.%203%20Integrazioni%20e%20modifiche%20alle%20disposizioni%20della%20Legge%2028%20giugno%202010%20n.%20118%20e%20del%20Decreto%20Delegato%2026%20novembre%202010%20n.%20186.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Legge 28 dicembre 2011 n. 204 Modifiche ed integrazioni alla Legge 28 giugno 2010 n. 118 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:a4cd3344-823e-49b5-bd40-0f37fea4eb1f/Decreto%20Legge%2028%20dicembre%202011%20n.%20204%20Modifiche%20ed%20integrazioni%20alla%20Legge%2028%20giugno%202010%20n.%20118.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 26 luglio 2012 n. 91 Modifica della Legge 28 giugno 2010 n. 118 e successive integrazioni e modifiche <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:eb87fc07-050f-4bbf-9104-c5264011c542/Legge%2026%20luglio%202012%20n.%2091%20Modifica%20della%20Legge%2028%20giugno%202010%20n.%20118%20e%20successive%20integrazioni%20e%20modifiche.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 30 luglio 2015 n. 118 Modifica della Legge 28 giugno 2010 n. 118 e successive modifiche <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:59d0e7f4-9e53-4fdb-bbd2-854302158d09/Legge%2030%20luglio%202015%20n.%20118%20Modifica%20della%20Legge%2028%20giugno%202010%20n.%20118%20e%20successive%20modifiche.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Errata corrige 5 novembre 2015 alla Legge 30 Luglio 2015 n. 118 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:4110d695-1678-41c6-a6c5-f693eb33fc7d/Errata%20corrige%205%20novembre%202015%20alla%20Legge%2030%20Luglio%202015%20n.%20118.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 11 marzo 2016 n. 30 Integrazioni e modifiche alle disposizioni della Legge 28 giugno 2010 n. 118 e successive modifiche <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:7068af5e-8228-45a3-b03e-db89975aa9c7/Decreto%20Delegato%2011%20marzo%202016%20n.%2030%20Integrazioni%20e%20modifiche%20alle%20disposizioni%20della%20Legge%2028%20giugno%202010%20n.%20118%20e%20successive%20modifiche.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Testo coordinato delle norme sull'ingresso e la permanenza degli stranieri in Repubblica (aggiornato al 9 aprile 2024) <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:38eabe03-3e2f-44f3-a498-a5421388ddcf/2024_04_09%20Testo%20coordinato%20residenze%20(SENZA%20NOTE).pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 7 agosto 2017 n. 94 Variazione al Bilancio dello Stato - art. 19 integrazione alla Legge 118/2010 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:aee2bd7c-0185-41d7-9fc7-d76f06ec22c2/Legge%207%20agosto%202017%20n.%2094%20Variazione%20al%20Bilancio%20dello%20Stato%20-%20art.%2019%20integrazione%20alla%20Legge%20118/2010.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 29 settembre 2017 n. 115 Modifiche e integrazioni allo sviluppo - art. 12 integrazione alla Legge 118/2010 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:56377dfe-4d2d-417f-8fe0-6db34ec18b50/Legge%2029%20settembre%202017%20n.%20115%20Modifiche%20e%20integrazioni%20allo%20sviluppo%20-%20art.%2012%20integrazione%20alla%20Legge%20118/2010.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 21 dicembre 2017 n. 147 Bilanci di previsione dello Stato - artt. 77 e 78 integrazione alla Legge 118/2010 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:1d881c70-c768-4c8d-9b70-e84bc07282ae/Legge%2021%20dicembre%202017%20n.%20147%20Bilanci%20di%20previsione%20dello%20Stato%20-%20artt.%2077%20e%2078%20integrazione%20alla%20Legge%20118/2010.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 17 maggio 2019 n. 78 Modifica della Legge 28 giugno n. 118 e successive modifiche <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:40f2ca7b-43fd-4fc7-85dc-871d82ad636c/Legge%2017%20maggio%202019%20n.%2078%20Modifica%20della%20Legge%2028%20giugno%20n.%20118%20e%20successive%20modifiche.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 22 gennaio 2016 n. 5 Regolamento di attuazione della Legge 28 giugno 2010 n. 118 e successive modifiche ai sensi dell'art. 46 della Legge 20 luglio 2015 n. 118 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:82fa7289-6f31-4d6d-a87c-3e224bcc2d03/Decreto%20Delegato%2022%20gennaio%202016%20n.%205%20Regolamento%20di%20attuazione%20della%20Legge%2028%20giugno%202010%20n.%20118%20e%20successive%20modifiche%20ai%20sensi%20dell'art.%2046%20della%20Legge%2020%20luglio%202015%20n.%20118.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 19 gennaio 2018 n. 5 Flussi migratori per residenze elettive <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:e248a9cc-8080-42ac-9922-48ce43e889ab/Decreto%20Delegato%2019%20gennaio%202018%20n.%205%20Flussi%20migratori%20per%20residenze%20elettive.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 25 gennaio 2019 n. 15 Norme in materia di imprese e settori innovativi, di residenza semplificata, di residenza per motivi economici, di permesso di soggiorno per motivi imprenditoriali, di facilitazione delle attività economiche ed in materia di attività varie d'impresa <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:c9bd13b6-c66e-4f69-a5f7-40d08a947087/1111228L25.01.2019n.15r.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 4 febbraio 2019 n. 25 Norme per le imprese ad alto contenuto tecnologico <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:717686db-149d-4732-ad57-63771cc2ca5c/Decreto%20Delegato%204%20febbraio%202019%20n.%2025%20Norme%20per%20le%20imprese%20ad%20alto%20contenuto%20tecnologico.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Legge 23 dicembre 2020 n.223 Bilanci di previsione dello Stato – artt. 69 e 70 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:57054d76-25f3-4e79-9f16-a45bfc5fc24f/Legge%2023%20dicembre%202020%20n.223%20Bilanci%20di%20previsione%20dello%20Stato%20%E2%80%93%20artt.%2069%20e%2070.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 28 gennaio 2021 n. 10 Regolamentazione dei Flussi Migratori per l'anno 2018 <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:bda0e04a-17be-46c4-b809-9fe25cfb9874/Decreto%20Delegato%2028%20gennaio%202021%20n.%2010%20Regolamentazione%20dei%20Flussi%20Migratori%20per%20l'anno%202018.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+            <div class="row middle-xs mrg1">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <span class="bold_16 block"></span>
+                <span class="didReg_16 block">Decreto Delegato 21 novembre 2024 n.177 - Modifiche alla legge 28 giugno 2010 N.118 e successive modifiche “Legge sull'ingresso e la permanenza degli stranieri in Repubblica" <br> </span>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a target="_blank" href="/pub1/EsteriSM/en/dam/jcr:a1e3ef34-689b-47f3-add9-4107053874c1/17148807DD177-2024.pdf" class="allegato">Download</a>
+                </div>
+            </div>
+</div>  <!-- CONTENUTO GALLERIA -->
+ 
+
+  <!-- FOOTER -->
+<div class="container-fluid footer">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div style="float:left; width:100%; margin-bottom:20px">
+            <object type="image/svg+xml" id="logo" data="/pub1/.resources/esteri-web/webresources/img/logo_esteri_new-EN.svg">
+            <div>SVG logo</div>
+          </object>
+          <!--<img src="/pub1/.resources/esteri-web/webresources/img/logo_footer.jpg" style="float:left;width:100%;">-->
+        </div>
+        <div style="float:left; width:100%; margin-bottom:30px">
+          <span class="reg_11 lheight18 block">Palazzo Begni, Contrada Omerelli</span>
+          <span class="reg_11 lheight18 block">n.31 - 47890 San Marino</span>
+          <a class="reg_11 lheight18 block" href="mailto:segreteria.affariesteri@gov.sm">segreteria.affariesteri@gov.sm</a>
+          <span class="reg_11 lheight18 block">T. +378 (0549) 882 312 </span>
+          <span class="reg_11 lheight18 block">T. +378 (0549) 882 393 </span>
+          <span class="reg_11 lheight18 block">T. +378 (0549) 882 336 </span>
+          <span class="reg_11 lheight18 block">F. +378 (0549) 882 814</span>
+        </div>
+        <div style="float:left; width:100%; margin-bottom:30px">
+          <a href='/pub1/EsteriSM/en/Privacy-Policy.html' class="reg_11 lheight18 block">Privacy Policy</a>
+          <a href='/pub1/EsteriSM/en/Cookie-Policy.html' class="reg_11 lheight18 block">Cookie Policy</a>
+          <!--<a href='/pub1/EsteriSM/en/Cookie-Policy.html' class="reg_11 lheight18 block">Credits</a>-->
+          <a href='https://www.acdsolutions.it/' class="reg_11 lheight18 block">Credits</a>
+        </div>
+        <div style="float:left; width:100%;">
+          <a href="https://www.facebook.com/segreteriaesteri/" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/facebook.png" class="ico_social"></a>
+          <a href="https://twitter.com/AffariEsteriSMR/" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/instagram.png" class="ico_social"></a>
+          <a href="https://www.instagram.com/segreteria_affariesteri_smr/" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/twitter.png" class="ico_social"></a>
+          <a href="https://www.youtube.com/channel/UC7S-nOFaNh93VDPFtmn-00Q" target="_blank"><img src="/pub1/.resources/esteri-web/webresources/img/youtube.png" class="ico_social"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <div class="topnav_footer">
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Ministry</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Segreteria/Segretario.html">Minister</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Segreteria/Telecomunicazioni.html">Telecommunications</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Segreteria/Staff.html">Staff</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Relations with the European Union</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/UE/Accordo.html">The process of association with the European Union</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/UE/Altri-accordi.html">The agreements in force between San Marino and the European Union</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/UE/Storia.html">A history of the relations between San Marino and the European Union</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/UE/Tradizione.html">San Marino's European tradition</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/UE/Strategia-EUSAIR.html">European Macro-Regional Integration Process</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/UE/Struttura-e-attribuzioni.html">Structure and Functions</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">International Relations</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Rapporti-Bilaterali.html">Bilateral Relations</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Rapporti-Multilaterali.html">Multilateral Relations</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Accordi-Internazionali-new.html">International Treaties</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Relazioni-Internazionali/Documentazione.html">Documentation</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Department</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Dipartimento/Direzione.html">Directorates and staff</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Dipartimento/Rete-Diplomatica-e-Consolare-RSM.html">Diplomatic and Consular Network of San Marino</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Dipartimento/Richiesta-Informazioni.html">Information request form</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Dipartimento/Organi-terrorismo.html">Bodies for combating international terrorism</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Dipartimento/Onorificenze.html">Honours</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Dipartimento/Certificati-CSCA.html">Honours</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Press Office</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Ufficio-Stampa/News-e-Comunicati.html">News and press releases</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Ufficio-Stampa/Multimedia.html">Multimedia</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Ufficio-Stampa/Accreditamento.html">Journalists accreditation</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Services for users</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Informazioni-per-chi-viaggia.html">Information for travellers</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Informazioni-per-chi-visita-SMR.html">Information for those who visit San Marino</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Opportunit--di-Studio-e-Lavoro-per-cittadini-SMR.html">Training and professional opportunities for San Marino citizens</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Adozioni-Internazionali.html">Intercountry adoptions</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html">Stay permits, residence and citizenship</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Dichiarazioni-di-Equivalenza.html">Statements of Equivalence</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Servizi-per-utenza/Riconoscimento-Titoli-di-Studio.html">Declarations of value for foreign qualifications</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Communities abroad</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Comunit--all-estero.html">Communities abroad</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Elenco-comunit--all-estero.html">Communities of San Marino citizens throughout the world</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Consulta-dei-cittadini-all-estero.html">Council of San Marino Communities Abroad</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Soggiorni-culturali.html">Cultural Stays</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Scambio-Linguistico--culturali--borse-di-studio-e-bandi.html">Opportunities for young people</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Comunit--all-Estero/Momenti-di-Comunit-.html">Communities' moments</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Military Corps</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Corpi-Militari/Corpi-militari.html">Military Corps</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Corpi-Militari/Interpol.html">Interpol</a></li>
+                                        <li><a href="/pub1/EsteriSM/en/Corpi-Militari/dipartimento-di-polizia.html">Police Department</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Progetti Culturali</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Progetti-Culturali/Palazzo-Begni.html">Palazzo Begni</a></li>
+                                </ul>
+                      </div>
+                      <div class="cont_voce_menu">
+                          <span class="sezione">Contacts</span>
+                                <ul class="">
+                                        <li><a href="/pub1/EsteriSM/en/Contatti/Contatti.html">Contacts</a></li>
+                                </ul>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/jquery-1.11.0.min.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/slick.min.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/mediabox.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/menu-controller.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/moment_locales.min.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/dettaglio.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/sticky_header.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/coloreAncora.js"></script>
+  <script src="/pub1/EsteriSM/.resources/esteri-web/webresources/js/form_accreditamento.js"></script>
+  
+    <script type="text/javascript">
+        
+        $('.slide_agenda').slick({
+          infinite: true,
+          arrows: true,
+          appendArrows: '.pag2'
+        });
+        
+        $('.slide_agenda').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            //console.log("count slides :", slick);
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $('.pagingInfo').html('<span class="pagNum1">' + i + '</span>' + '/' + '<span class="pagNum2">' + slick.slideCount) + '</span>';
+        });
+        
+    </script>
+    <script type="text/javascript">
+       
+        MediaBox('.mediabox');
+        
+        $('.slide_galleria').slick({
+          infinite: true,
+          arrows: true,
+          rows:2,
+          slidesPerRow: 4,
+          appendArrows: '.pag3',
+          responsive: [
+              {
+                breakpoint: 900,
+                settings: {
+                  slidesPerRow: 1
+                }
+              }]
+        });
+        
+        $('.slide_galleria').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            //console.log("count slides :", slick);
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $('.pagingInfo').html('<span class="pagNum1">' + i + '</span>' + '/' + '<span class="pagNum2">' + slick.slideCount) + '</span>';
+        });
+    </script>
+    
+    <script type="text/javascript">
+      $('#open').click(function() {
+        $('.ricerca').show();
+        $('body').css("overflow","hidden")
+      });
+      $('#close').click(function() {
+        $('.ricerca').hide();
+        $('body').css("overflow","auto")
+      });
+
+      form_acc_start("false");
+  </script>
+  
+
+
+  
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T14:27:23.622271+00:00",
+  "built_at": "2026-06-15T14:34:09.562371+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1940,6 +1940,37 @@
               "source_id": "SI_D_GOVSI_2026",
               "locator": "Documents required for all applicants, item 4",
               "excerpt": "Travel medical insurance for the period of the validity of visa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM_ELECTIVE_ESTERI_2026",
+      "country": "San Marino",
+      "visa_name": "Elective Residence Permit",
+      "route": "Stay permits and residence (Department of Foreign Affairs)",
+      "authority": "Department of Foreign Affairs of the Republic of San Marino",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "SM_ELECTIVE_ESTERI_2026",
+          "url": "https://www.esteri.sm/pub1/EsteriSM/en/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "42e3c4986ea387e62d2b554d86fad64d2ff6280069e5e3849ae60709ed389270",
+          "local_path": "sources/SM_ELECTIVE_ESTERI_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "SM_ELECTIVE_ESTERI_2026",
+              "locator": "Elective residence permit conditions",
+              "excerpt": "Foreign applicants must hold a health insurance policy, cannot work for the overall public sector nor benefit from State contributions."
             }
           ]
         }
@@ -4364,7 +4395,7 @@
         "specs.jurisdiction_facts.IS.authorized",
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4375,7 +4406,7 @@
         "specs.jurisdiction_facts.IS.authorized",
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4386,7 +4417,7 @@
         "specs.jurisdiction_facts.IS.authorized",
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4394,7 +4425,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4404,7 +4435,7 @@
       "missing": [
         "specs.jurisdiction_facts.IS.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4414,7 +4445,7 @@
       "missing": [
         "specs.jurisdiction_facts.IS.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4425,7 +4456,7 @@
         "specs.jurisdiction_facts.IS.authorized",
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -4435,7 +4466,7 @@
       "missing": [
         "specs.jurisdiction_facts.IS.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -5742,6 +5773,70 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "TH_DTV_MFA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "NOT_REQUIRED",
@@ -6516,6 +6611,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "4f712357fc4c45a3be6271a5b64b9db14fde5da609a8485bc472560c44fb52ba",
       "local_path": "sources/SI_D_GOVSI_2026-06-15.pdf"
+    },
+    "SM_ELECTIVE_ESTERI_2026": {
+      "source_id": "SM_ELECTIVE_ESTERI_2026",
+      "url": "https://www.esteri.sm/pub1/EsteriSM/en/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "42e3c4986ea387e62d2b554d86fad64d2ff6280069e5e3849ae60709ed389270",
+      "local_path": "sources/SM_ELECTIVE_ESTERI_2026-06-15.html"
     },
     "TH_MFA_DTV_2026": {
       "source_id": "TH_MFA_DTV_2026",
