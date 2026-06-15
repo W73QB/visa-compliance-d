@@ -587,6 +587,20 @@ VISA_FAQS = {
             "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Department of Foreign Affairs.",
         },
     ],
+    "BB_WELCOMESTAMP_OAG_2026": [
+        {
+            "question": "What insurance does the Barbados Welcome Stamp require?",
+            "answer": "The Remote Employment Act requires that the applicant be the holder of valid health insurance for the period for which the Stamp was granted.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The Act states no coverage amount or territory, so the engine models that insurance is mandatory and must cover the full Stamp period (12 months).",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW while other products are GREEN?",
+            "answer": "The cover must run for the period for which the Stamp was granted. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -787,6 +801,11 @@ RELATED_POSTS = {
     "SM_ELECTIVE_ESTERI_2026": [
         ("/posts/san-marino-elective-residence-insurance/", "San Marino elective residence insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "BB_WELCOMESTAMP_OAG_2026": [
+        ("/posts/barbados-welcome-stamp-insurance/", "Barbados Welcome Stamp insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
