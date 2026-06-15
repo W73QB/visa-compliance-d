@@ -433,6 +433,20 @@ VISA_FAQS = {
             "answer": "Yes. The policy must be valid for the same period as the visa, so a full-period policy is required; a month-to-month subscription that can lapse does not assure this.",
         },
     ],
+    "MU_PREMIUM_EDB_2026": [
+        {
+            "question": "What insurance does the Mauritius Premium Visa require?",
+            "answer": "The Economic Development Board states that to qualify for the Premium Visa, the applicant must have proof of long stay plans and travel and health insurance for the initial period of stay.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The published eligibility statement names travel and health insurance but states no coverage amount or territory, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides travel or health insurance shows GREEN. Confirm the specific terms with the Economic Development Board.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -578,6 +592,11 @@ RELATED_POSTS = {
     "EC_NOMAD_CANCILLERIA_2026": [
         ("/posts/ecuador-nomad-insurance/", "Ecuador digital nomad visa insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "MU_PREMIUM_EDB_2026": [
+        ("/posts/mauritius-premium-visa-insurance/", "Mauritius Premium Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia and beyond"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

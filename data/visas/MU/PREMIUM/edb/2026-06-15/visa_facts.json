@@ -1,0 +1,31 @@
+{
+  "id": "MU_PREMIUM_EDB_2026",
+  "country": "Mauritius",
+  "visa_name": "Premium Visa",
+  "route": "Premium Visa (Economic Development Board)",
+  "authority": "Economic Development Board of Mauritius (EDB)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "MU_PREMIUM_EDB_2026",
+      "url": "https://news.edbmauritius.org/2021-january-the-new-premium-visa/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "b5e3e6a4a9731080eba4a8f3e5d4104a6449712bf2ec18763f05b301c885632e",
+      "local_path": "sources/MU_PREMIUM_EDB_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "MU_PREMIUM_EDB_2026",
+          "locator": "Premium Visa eligibility (Economic Development Board)",
+          "excerpt": "In order to qualify for the Premium Visa, the applicant must have proof of his/her long stay plans and travel and health insurance for the initial period of stay."
+        }
+      ]
+    }
+  ]
+}

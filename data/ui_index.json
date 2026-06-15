@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T05:19:34.822449+00:00",
+  "built_at": "2026-06-15T05:25:07.066232+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1208,6 +1208,37 @@
               "source_id": "MT_RESIDENCY_FAQ_2026",
               "locator": "FAQ - Are health insurance policies with monthly payments considered acceptable?",
               "excerpt": "No, they are not acceptable. Eligible policies are those with premiums covering a full year, paid in advance. A receipt for this payment may be requested."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MU_PREMIUM_EDB_2026",
+      "country": "Mauritius",
+      "visa_name": "Premium Visa",
+      "route": "Premium Visa (Economic Development Board)",
+      "authority": "Economic Development Board of Mauritius (EDB)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "MU_PREMIUM_EDB_2026",
+          "url": "https://news.edbmauritius.org/2021-january-the-new-premium-visa/",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "b5e3e6a4a9731080eba4a8f3e5d4104a6449712bf2ec18763f05b301c885632e",
+          "local_path": "sources/MU_PREMIUM_EDB_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "MU_PREMIUM_EDB_2026",
+              "locator": "Premium Visa eligibility (Economic Development Board)",
+              "excerpt": "In order to qualify for the Premium Visa, the applicant must have proof of his/her long stay plans and travel and health insurance for the initial period of stay."
             }
           ]
         }
@@ -2715,7 +2746,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2725,7 +2756,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2735,7 +2766,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2743,7 +2774,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2753,7 +2784,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2774,7 +2805,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2784,7 +2815,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -2794,7 +2825,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -4062,6 +4093,70 @@
       "last_verified": "2026-01-15"
     },
     {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "NZ_STUDENT_INZ_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "GREEN",
@@ -5079,6 +5174,13 @@
       "sha256": "0f18ac432310a6af5e29ff42cfc7d5ebeb4eba69c02f1bc29a63c69545f4336f",
       "local_path": "sources/MT_NOMAD_RESIDENCY_FAQ_2026-01-12.md",
       "note": "Official FAQ explicitly states monthly payment insurance policies are NOT acceptable - annual payment required"
+    },
+    "MU_PREMIUM_EDB_2026": {
+      "source_id": "MU_PREMIUM_EDB_2026",
+      "url": "https://news.edbmauritius.org/2021-january-the-new-premium-visa/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "b5e3e6a4a9731080eba4a8f3e5d4104a6449712bf2ec18763f05b301c885632e",
+      "local_path": "sources/MU_PREMIUM_EDB_2026-06-15.html"
     },
     "NZ_STUDENT_INZ_2026": {
       "source_id": "NZ_STUDENT_INZ_2026",
