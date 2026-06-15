@@ -1,0 +1,9 @@
+{
+  "visa_id": "EC_NOMAD_CANCILLERIA_2026",
+  "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.EC.authorized"
+  ]
+}

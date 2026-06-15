@@ -1,0 +1,55 @@
+{
+  "id": "EC_NOMAD_CANCILLERIA_2026",
+  "country": "Ecuador",
+  "visa_name": "Digital Nomad Visa (Rentista Remote Worker)",
+  "route": "Visa de residencia temporal rentista para trabajo remoto (MREMH)",
+  "authority": "Ministerio de Relaciones Exteriores y Movilidad Humana de Ecuador (MREMH)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "EC_NOMAD_CANCILLERIA_2026",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista-trabajo-remoto-visa-nomada",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "6b6bfcdd6bf791ccd1771cff2d039b590f55fa9d1ec97d7bfd61d4433ba798e2",
+      "local_path": "sources/EC_NOMAD_CANCILLERIA_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "EC_NOMAD_CANCILLERIA_2026",
+          "locator": "Requisitos Especiales, seguro de salud",
+          "excerpt": "Debera presentar un seguro de salud nacional o extranjero vigente por el mismo periodo del visado. En caso de ser contratado con una compania extranjera, la poliza o el contrato debera indicar que tiene cobertura en el Ecuador."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "EC_NOMAD_CANCILLERIA_2026",
+          "locator": "Requisitos Especiales, seguro de salud",
+          "excerpt": "un seguro de salud nacional o extranjero vigente por el mismo periodo del visado"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "EC_NOMAD_CANCILLERIA_2026",
+          "locator": "Requisitos Especiales, seguro de salud",
+          "excerpt": "En caso de ser contratado con una compania extranjera, la poliza o el contrato debera indicar que tiene cobertura en el Ecuador."
+        }
+      ]
+    }
+  ]
+}
