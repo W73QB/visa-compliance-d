@@ -1,0 +1,43 @@
+{
+  "id": "BB_WELCOMESTAMP_OAG_2026",
+  "country": "Barbados",
+  "visa_name": "12 Month Barbados Welcome Stamp",
+  "route": "Remote Employment Act 2020-23, Welcome Stamp",
+  "authority": "Government of Barbados (Remote Employment Act 2020-23)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "BB_WELCOMESTAMP_OAG_2026",
+      "url": "https://oag.gov.bb/attachments/Remote%20Employment%20Act%2C%202020-23.pdf",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "932757229d8e23fa8be94416ceb09e7a1a24207f11ac30589f276396055db1f9",
+      "local_path": "sources/BB_WELCOMESTAMP_OAG_2026-06-15.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BB_WELCOMESTAMP_OAG_2026",
+          "locator": "Section 3, Grant of Barbados Welcome Stamp, condition (c)",
+          "excerpt": "he is the holder of valid health insurance for the period for which the Stamp was granted."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BB_WELCOMESTAMP_OAG_2026",
+          "locator": "Section 3, Grant of Barbados Welcome Stamp, condition (c)",
+          "excerpt": "valid health insurance for the period for which the Stamp was granted"
+        }
+      ]
+    }
+  ]
+}

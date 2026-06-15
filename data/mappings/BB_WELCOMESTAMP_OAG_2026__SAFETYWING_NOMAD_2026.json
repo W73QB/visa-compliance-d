@@ -1,0 +1,18 @@
+{
+  "visa_id": "BB_WELCOMESTAMP_OAG_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "BB_WELCOMESTAMP_OAG_2026",
+          "locator": "Section 3, Grant of Barbados Welcome Stamp, condition (c)",
+          "excerpt": "valid health insurance for the period for which the Stamp was granted"
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
