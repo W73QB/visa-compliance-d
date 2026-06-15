@@ -1,0 +1,55 @@
+{
+  "id": "SE_STUDY_MIGVERKET_2026",
+  "country": "Sweden",
+  "visa_name": "Residence Permit for Studies",
+  "route": "Residence permit for higher-education studies under one year (Migrationsverket)",
+  "authority": "Swedish Migration Agency (Migrationsverket)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "SE_STUDY_MIGVERKET_2026",
+      "url": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "315ad0cb04e0dbcaa7a6fa551b9ac8126de5715ed416409cfa90acd9941988b7",
+      "local_path": "sources/SE_STUDY_MIGVERKET_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SE_STUDY_MIGVERKET_2026",
+          "locator": "Requirements, comprehensive health insurance (studies under one year)",
+          "excerpt": "If you have been admitted to studies that will last less than a year, you need comprehensive health insurance."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SE_STUDY_MIGVERKET_2026",
+          "locator": "Requirements, comprehensive health insurance (studies under one year)",
+          "excerpt": "The insurance must be valid for the entire time you will be in Sweden and cover costs for emergency and other medical care"
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SE_STUDY_MIGVERKET_2026",
+          "locator": "Requirements, comprehensive health insurance (studies under one year)",
+          "excerpt": "you need comprehensive health insurance ... cover costs for emergency and other medical care"
+        }
+      ]
+    }
+  ]
+}

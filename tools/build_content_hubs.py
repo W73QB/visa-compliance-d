@@ -545,6 +545,20 @@ VISA_FAQS = {
             "answer": "The insurance must cover the entire duration of stay. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies are GREEN.",
         },
     ],
+    "SE_STUDY_MIGVERKET_2026": [
+        {
+            "question": "What insurance does a Sweden study residence permit (under one year) require?",
+            "answer": "The Swedish Migration Agency requires comprehensive health insurance for studies under one year, valid for the entire time in Sweden, covering emergency and other medical care.",
+        },
+        {
+            "question": "Why are some products UNKNOWN?",
+            "answer": "The cover must be comprehensive. Products whose documents do not establish comprehensive coverage (the travel-medical products) stay UNKNOWN, while products documenting comprehensive cover are GREEN.",
+        },
+        {
+            "question": "Does it need to last the whole stay?",
+            "answer": "Yes. The insurance must be valid for the entire time you will be in Sweden, so a full-period policy is required.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -730,6 +744,11 @@ RELATED_POSTS = {
     "TW_DNV_BOCA_2026": [
         ("/posts/taiwan-dnv-insurance/", "Taiwan digital nomad visitor visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "SE_STUDY_MIGVERKET_2026": [
+        ("/posts/sweden-study-insurance/", "Sweden study residence insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

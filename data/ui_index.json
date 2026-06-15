@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T13:59:51.079699+00:00",
+  "built_at": "2026-06-15T14:20:29.026286+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1773,6 +1773,61 @@
               "source_id": "RO_DNV_EVIZA_2026",
               "locator": "Supporting Documents, Digital nomad, TRAVEL MEDICAL INSURANCE",
               "excerpt": "Travel medical insurance that covers the entire duration of the requested period of stay."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SE_STUDY_MIGVERKET_2026",
+      "country": "Sweden",
+      "visa_name": "Residence Permit for Studies",
+      "route": "Residence permit for higher-education studies under one year (Migrationsverket)",
+      "authority": "Swedish Migration Agency (Migrationsverket)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "SE_STUDY_MIGVERKET_2026",
+          "url": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "315ad0cb04e0dbcaa7a6fa551b9ac8126de5715ed416409cfa90acd9941988b7",
+          "local_path": "sources/SE_STUDY_MIGVERKET_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "SE_STUDY_MIGVERKET_2026",
+              "locator": "Requirements, comprehensive health insurance (studies under one year)",
+              "excerpt": "If you have been admitted to studies that will last less than a year, you need comprehensive health insurance."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "SE_STUDY_MIGVERKET_2026",
+              "locator": "Requirements, comprehensive health insurance (studies under one year)",
+              "excerpt": "The insurance must be valid for the entire time you will be in Sweden and cover costs for emergency and other medical care"
+            }
+          ]
+        },
+        {
+          "key": "insurance.comprehensive",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "SE_STUDY_MIGVERKET_2026",
+              "locator": "Requirements, comprehensive health insurance (studies under one year)",
+              "excerpt": "you need comprehensive health insurance ... cover costs for emergency and other medical care"
             }
           ]
         }
@@ -5373,6 +5428,89 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "SE_STUDY_MIGVERKET_2026",
+              "locator": "Requirements, comprehensive health insurance (studies under one year)",
+              "excerpt": "The insurance must be valid for the entire time you will be in Sweden and cover costs for emergency and other medical care"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
       "visa_id": "SI_D_GOVSI_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -5688,7 +5826,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5696,7 +5834,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5704,7 +5842,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5712,7 +5850,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5720,7 +5858,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5739,7 +5877,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5747,7 +5885,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -5755,7 +5893,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     }
   ],
   "offers": [
@@ -6209,6 +6347,13 @@
       "retrieved_at": "2026-01-16T00:00:00Z",
       "sha256": "bd34f6a771b46e02b33c046e24205c667ef36227cfa982c890d37b56d6c1dc6a",
       "local_path": "sources/SANITAS_MAS_SALUD_SIN_COPAGO_2026-01-16.pdf"
+    },
+    "SE_STUDY_MIGVERKET_2026": {
+      "source_id": "SE_STUDY_MIGVERKET_2026",
+      "url": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "315ad0cb04e0dbcaa7a6fa551b9ac8126de5715ed416409cfa90acd9941988b7",
+      "local_path": "sources/SE_STUDY_MIGVERKET_2026-06-15.html"
     },
     "SI_D_GOVSI_2026": {
       "source_id": "SI_D_GOVSI_2026",

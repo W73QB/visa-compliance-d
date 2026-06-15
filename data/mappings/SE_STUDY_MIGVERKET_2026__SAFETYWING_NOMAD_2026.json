@@ -1,0 +1,20 @@
+{
+  "visa_id": "SE_STUDY_MIGVERKET_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "SE_STUDY_MIGVERKET_2026",
+          "locator": "Requirements, comprehensive health insurance (studies under one year)",
+          "excerpt": "The insurance must be valid for the entire time you will be in Sweden and cover costs for emergency and other medical care"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.comprehensive"
+  ]
+}
