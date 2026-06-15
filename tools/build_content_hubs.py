@@ -629,6 +629,20 @@ VISA_FAQS = {
             "answer": "The published criteria state no coverage amount, so the engine encodes none and models that insurance is mandatory, must be valid in Georgia, and must cover the visa validity period.",
         },
     ],
+    "AT_RESIDENCE_BMI_2026": [
+        {
+            "question": "What insurance does an Austrian residence permit require?",
+            "answer": "The Federal Ministry of the Interior states third-country nationals must have health insurance that covers all risks in Austria, and that a travel health insurance is not sufficient.",
+        },
+        {
+            "question": "Why do SafetyWing and World Nomads show RED?",
+            "answer": "The source states that a travel health insurance is not sufficient. Travel-medical products are therefore RED, while a comprehensive health policy that documents coverage in Austria (such as Genki Native) is GREEN.",
+        },
+        {
+            "question": "Does this apply to every residence permit?",
+            "answer": "The health-insurance condition is a general granting requirement, but the source notes several permit types are exempt from demonstrating it (such as the Red-White-Red card, EU Blue Card, researchers, students and ICT workers). Confirm your specific permit type.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -844,6 +858,11 @@ RELATED_POSTS = {
     "GE_LONGVISA_GEOCONSUL_2026": [
         ("/posts/georgia-long-term-visa-insurance/", "Georgia long-term visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "AT_RESIDENCE_BMI_2026": [
+        ("/posts/austria-residence-insurance/", "Austria residence permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

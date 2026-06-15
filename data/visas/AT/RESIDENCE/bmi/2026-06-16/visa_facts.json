@@ -1,0 +1,67 @@
+{
+  "id": "AT_RESIDENCE_BMI_2026",
+  "country": "Austria",
+  "visa_name": "Residence Permit (third-country nationals)",
+  "route": "Residence permit granting requirements (Federal Ministry of the Interior)",
+  "authority": "Federal Ministry of the Interior of Austria (BMI)",
+  "last_verified": "2026-06-16",
+  "sources": [
+    {
+      "source_id": "AT_RESIDENCE_BMI_2026",
+      "url": "https://www.bmi.gv.at/312_en/04/start.html",
+      "retrieved_at": "2026-06-16T00:00:00Z",
+      "sha256": "bf81b905be6263443f34825a4f6a748ce062689b8f19a97b54a1924e2c17f9a8",
+      "local_path": "sources/AT_RESIDENCE_BMI_2026-06-16.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "AT_RESIDENCE_BMI_2026",
+          "locator": "General granting requirements, Health insurance",
+          "excerpt": "Third-country nationals must have health insurance that covers all risks in Austria."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "AT_RESIDENCE_BMI_2026",
+          "locator": "General granting requirements, Health insurance",
+          "excerpt": "health insurance that covers all risks in Austria"
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "AT_RESIDENCE_BMI_2026",
+          "locator": "General granting requirements, Health insurance",
+          "excerpt": "health insurance that covers all risks in Austria"
+        }
+      ]
+    },
+    {
+      "key": "insurance.travel_insurance_accepted",
+      "op": "==",
+      "value": false,
+      "evidence": [
+        {
+          "source_id": "AT_RESIDENCE_BMI_2026",
+          "locator": "General granting requirements, Health insurance",
+          "excerpt": "The presentation of a travel health insurance is not sufficient."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "visa_id": "AT_RESIDENCE_BMI_2026",
+  "product_id": "GENKI_TRAVELER_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.type",
+    "specs.jurisdiction_facts.AT.authorized",
+    "specs.comprehensive"
+  ]
+}
