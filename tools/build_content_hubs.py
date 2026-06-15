@@ -559,6 +559,20 @@ VISA_FAQS = {
             "answer": "Yes. The insurance must be valid for the entire time you will be in Sweden, so a full-period policy is required.",
         },
     ],
+    "IS_RESIDENCE_UTL_2026": [
+        {
+            "question": "What insurance does an Iceland residence permit require?",
+            "answer": "The Directorate of Immigration requires a certificate confirming a health insurance valid in Iceland, for at least six months from the registration of legal domicile, with a minimum coverage of ISK 2,000,000.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must be valid in Iceland. Genki Native documents global coverage that includes Iceland; the other products do not document Iceland validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "How is the ISK 2,000,000 minimum handled?",
+            "answer": "The engine converts the ISK 2,000,000 threshold and each product's documented limit to a common currency before comparing, alongside the valid-in-Iceland requirement.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -748,6 +762,11 @@ RELATED_POSTS = {
     ],
     "SE_STUDY_MIGVERKET_2026": [
         ("/posts/sweden-study-insurance/", "Sweden study residence insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "IS_RESIDENCE_UTL_2026": [
+        ("/posts/iceland-residence-insurance/", "Iceland residence permit insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],

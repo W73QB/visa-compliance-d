@@ -116,6 +116,16 @@
             "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
           }
         ]
+      },
+      "IS": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "GENKI_NATIVE_COVERAGE_2026",
+            "locator": "Global Coverage",
+            "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
+          }
+        ]
       }
     }
   },
