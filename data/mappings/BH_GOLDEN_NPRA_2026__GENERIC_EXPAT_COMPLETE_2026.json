@@ -1,0 +1,9 @@
+{
+  "visa_id": "BH_GOLDEN_NPRA_2026",
+  "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.BH.authorized"
+  ]
+}

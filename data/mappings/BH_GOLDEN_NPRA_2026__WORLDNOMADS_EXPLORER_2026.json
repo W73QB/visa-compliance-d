@@ -1,0 +1,9 @@
+{
+  "visa_id": "BH_GOLDEN_NPRA_2026",
+  "product_id": "WORLDNOMADS_EXPLORER_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.BH.authorized"
+  ]
+}
