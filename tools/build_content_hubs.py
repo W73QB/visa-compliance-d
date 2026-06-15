@@ -447,6 +447,20 @@ VISA_FAQS = {
             "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides travel or health insurance shows GREEN. Confirm the specific terms with the Economic Development Board.",
         },
     ],
+    "LK_DNV_IMMIGRATION_2026": [
+        {
+            "question": "What insurance does the Sri Lanka Digital Nomad Visa require?",
+            "answer": "The Department of Immigration and Emigration requires International Health Insurance that covers medical care in Sri Lanka, among the documents all applicants must submit.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must cover medical care in Sri Lanka. Genki Native documents global coverage that includes Sri Lanka; the other products do not document Sri Lanka validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The official document states no coverage amount, so the engine encodes none and models that insurance is mandatory and must cover medical care in Sri Lanka.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -597,6 +611,11 @@ RELATED_POSTS = {
     "MU_PREMIUM_EDB_2026": [
         ("/posts/mauritius-premium-visa-insurance/", "Mauritius Premium Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia and beyond"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "LK_DNV_IMMIGRATION_2026": [
+        ("/posts/sri-lanka-dnv-insurance/", "Sri Lanka Digital Nomad Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
