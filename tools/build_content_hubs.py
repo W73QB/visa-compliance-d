@@ -363,6 +363,20 @@ VISA_FAQS = {
             "answer": "The cover must run from the start of your course until your visa expires. A month-to-month subscription that can lapse does not assure full-period cover, so it is YELLOW; full-period policies are GREEN.",
         },
     ],
+    "IE_STUDENT_ISD_2026": [
+        {
+            "question": "What insurance do non-EEA students in Ireland need?",
+            "answer": "Immigration Service Delivery requires all non-EEA students to have private medical insurance; where travel insurance suffices it must cover the student for one full year (or the entirety of a shorter stay) with a minimum of EUR 25,000 for accident and EUR 25,000 for disease, plus any period of hospitalisation.",
+        },
+        {
+            "question": "Does travel insurance count?",
+            "answer": "Immigration Service Delivery accepts travel insurance for first registration if it meets the one-year and EUR 25,000 thresholds; at second and subsequent registrations travel insurance is not accepted. The engine models first-registration thresholds and the post notes this limitation.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW?",
+            "answer": "The cover must run for one full year (or the entirety of the stay). A month-to-month subscription that can lapse does not assure this, so it is YELLOW; full-period policies meeting the EUR 25,000 minimum are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -483,6 +497,11 @@ RELATED_POSTS = {
     "NZ_STUDENT_INZ_2026": [
         ("/posts/new-zealand-student-visa-insurance/", "New Zealand student visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia and the Pacific"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "IE_STUDENT_ISD_2026": [
+        ("/posts/ireland-student-insurance/", "Ireland non-EEA student insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

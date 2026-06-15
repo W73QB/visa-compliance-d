@@ -1,0 +1,56 @@
+{
+  "id": "IE_STUDENT_ISD_2026",
+  "country": "Ireland",
+  "visa_name": "Non-EEA Student Registration",
+  "route": "Private medical insurance for study (Immigration Service Delivery)",
+  "authority": "Immigration Service Delivery of Ireland (ISD)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "IE_STUDENT_ISD_2026",
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/private-medical-insurance/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "f43d605ed9b198ab5e4c98d8f910436850d13e8db52562471ae36688f864b877",
+      "local_path": "sources/IE_STUDENT_ISD_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "IE_STUDENT_ISD_2026",
+          "locator": "Private Medical Insurance, Non-EEA Students",
+          "excerpt": "All non-EEA students are required to have private medical insurance when coming to and residing in Ireland for the purpose of study."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 25000,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "IE_STUDENT_ISD_2026",
+          "locator": "Private Medical Insurance, where travel insurance may suffice",
+          "excerpt": "The insurance coverage covers the student at a minimum of EUR 25,000 for accident and EUR 25,000 for disease"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "IE_STUDENT_ISD_2026",
+          "locator": "Private Medical Insurance, where travel insurance may suffice",
+          "excerpt": "The insurance covers the student for one full year or where the student is staying in Ireland for less than one year for the entirety of their stay"
+        }
+      ]
+    }
+  ]
+}

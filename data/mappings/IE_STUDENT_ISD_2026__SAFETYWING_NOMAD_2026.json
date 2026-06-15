@@ -1,0 +1,18 @@
+{
+  "visa_id": "IE_STUDENT_ISD_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "IE_STUDENT_ISD_2026",
+          "locator": "Private Medical Insurance, where travel insurance may suffice",
+          "excerpt": "The insurance covers the student for one full year or where the student is staying in Ireland for less than one year for the entirety of their stay"
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
