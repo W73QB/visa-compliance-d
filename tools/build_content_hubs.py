@@ -475,6 +475,20 @@ VISA_FAQS = {
             "answer": "The insurance must cover the period of validity of the visa. A month-to-month subscription that can lapse does not assure full-period coverage, so it is YELLOW; full-period policies with a documented limit of 30,000 EUR or more are GREEN.",
         },
     ],
+    "KZ_NEONOMAD_EGOV_2026": [
+        {
+            "question": "What insurance does the Kazakhstan Neo Nomad Visa require?",
+            "answer": "The eGov visa classification states the Neo Nomad Visa (B12-1) requires medical insurance covering the requested validity period of the visa.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The official page states only that the insurance must cover the requested validity period, with no amount or territory, so the engine models insurance as mandatory and full-period.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW while other products are GREEN?",
+            "answer": "The cover must run for the requested validity period of the visa. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -636,6 +650,11 @@ RELATED_POSTS = {
         ("/posts/slovenia-long-stay-d-insurance/", "Slovenia Long-Stay (D) visa insurance requirements"),
         ("/guides/schengen-30000-insurance/", "Schengen 30,000 EUR insurance rule"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+    ],
+    "KZ_NEONOMAD_EGOV_2026": [
+        ("/posts/kazakhstan-neo-nomad-insurance/", "Kazakhstan Neo Nomad Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 
