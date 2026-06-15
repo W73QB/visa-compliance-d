@@ -349,6 +349,20 @@ VISA_FAQS = {
             "answer": "The official requirements state no coverage amount, so the engine encodes none and models that insurance is mandatory, must cover the national territory, and must stay valid for the period of stay.",
         },
     ],
+    "NZ_STUDENT_INZ_2026": [
+        {
+            "question": "What insurance does the New Zealand Fee Paying Student Visa require?",
+            "answer": "Immigration New Zealand makes it a condition of the student visa that you have insurance for travel and any health care you need, from the start of your course until your visa expires.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "Immigration New Zealand states that your education provider will tell you what your insurance policy must cover, and sets no fixed figure, so the engine encodes none and models that insurance is mandatory and must cover the full visa period.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW while other products are GREEN?",
+            "answer": "The cover must run from the start of your course until your visa expires. A month-to-month subscription that can lapse does not assure full-period cover, so it is YELLOW; full-period policies are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -464,6 +478,11 @@ RELATED_POSTS = {
     "PA_REMOTEWORK_SNM_2026": [
         ("/posts/panama-remote-worker-insurance/", "Panama remote worker visa insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "NZ_STUDENT_INZ_2026": [
+        ("/posts/new-zealand-student-visa-insurance/", "New Zealand student visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia and the Pacific"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
