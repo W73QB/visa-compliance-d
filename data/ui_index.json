@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T05:25:07.066232+00:00",
+  "built_at": "2026-06-15T05:30:18.406615+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1084,6 +1084,49 @@
       ]
     },
     {
+      "id": "LK_DNV_IMMIGRATION_2026",
+      "country": "Sri Lanka",
+      "visa_name": "Digital Nomad Visa",
+      "route": "Digital Nomad Visa Category (Department of Immigration and Emigration)",
+      "authority": "Department of Immigration and Emigration of Sri Lanka",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "LK_DNV_IMMIGRATION_2026",
+          "url": "https://www.immigration.gov.lk/content/files/visa/digital_nomad/Digital%20Nomad%20Visa%20Category.pdf",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "9f66840d5a6f2a254112f96e7f131ce4ee5121695be7b53b0b425748169048c7",
+          "local_path": "sources/LK_DNV_IMMIGRATION_2026-06-15.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "LK_DNV_IMMIGRATION_2026",
+              "locator": "Section 3, required documents, item X",
+              "excerpt": "International Health Insurance that covers medical care in Sri Lanka"
+            }
+          ]
+        },
+        {
+          "key": "insurance.authorized_in_country",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "LK_DNV_IMMIGRATION_2026",
+              "locator": "Section 3, required documents, item X",
+              "excerpt": "International Health Insurance that covers medical care in Sri Lanka"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "LV_REMOTEWORK_PMLP_2026",
       "country": "Latvia",
       "visa_name": "Long-Term Visa for Remote Work",
@@ -1870,6 +1913,16 @@
             ]
           },
           "EC": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "GENKI_NATIVE_COVERAGE_2026",
+                "locator": "Global Coverage",
+                "excerpt": "Global Coverage: All countries are covered, including those with travel warnings."
+              }
+            ]
+          },
+          "LK": {
             "authorized": true,
             "evidence": [
               {
@@ -3862,6 +3915,84 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
       "visa_id": "LV_REMOTEWORK_PMLP_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -4098,7 +4229,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4106,7 +4237,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4114,7 +4245,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4122,7 +4253,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4130,7 +4261,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4138,7 +4269,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4146,7 +4277,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -4154,7 +4285,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -5152,6 +5283,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "337553082f601a99db89a9b0e9493e884a7ae8362f2587dc3945d23171a87e88",
       "local_path": "sources/KR_F1D_MOFA_LA_2026-06-15.html"
+    },
+    "LK_DNV_IMMIGRATION_2026": {
+      "source_id": "LK_DNV_IMMIGRATION_2026",
+      "url": "https://www.immigration.gov.lk/content/files/visa/digital_nomad/Digital%20Nomad%20Visa%20Category.pdf",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "9f66840d5a6f2a254112f96e7f131ce4ee5121695be7b53b0b425748169048c7",
+      "local_path": "sources/LK_DNV_IMMIGRATION_2026-06-15.pdf"
     },
     "LV_REMOTEWORK_PMLP_2026": {
       "source_id": "LV_REMOTEWORK_PMLP_2026",
