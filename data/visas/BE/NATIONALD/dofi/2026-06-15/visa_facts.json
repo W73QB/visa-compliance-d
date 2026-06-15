@@ -1,0 +1,55 @@
+{
+  "id": "BE_NATIONALD_DOFI_2026",
+  "country": "Belgium",
+  "visa_name": "National Entry (Visa D)",
+  "route": "National entries visa D, health insurance (Immigration Office)",
+  "authority": "Immigration Office of Belgium (Office des Etrangers / DVZ)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "BE_NATIONALD_DOFI_2026",
+      "url": "https://dofi.ibz.be/en/themes/faq/long-stay/national-entries-visa-d",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "c88285889ac5816b87cda1d1273538e9d69fa09d33274f4e56a614f84a88c4a8",
+      "local_path": "sources/BE_NATIONALD_DOFI_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BE_NATIONALD_DOFI_2026",
+          "locator": "National entries (visa D), category B40/B41, supporting documents",
+          "excerpt": "proof that he has health insurance covering all risks in Belgium (certificate of registration with a healthcare fund)."
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BE_NATIONALD_DOFI_2026",
+          "locator": "National entries (visa D), category B40/B41, supporting documents",
+          "excerpt": "health insurance covering all risks in Belgium"
+        }
+      ]
+    },
+    {
+      "key": "insurance.comprehensive",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BE_NATIONALD_DOFI_2026",
+          "locator": "National entries (visa D), category B40/B41, supporting documents",
+          "excerpt": "health insurance covering all risks in Belgium"
+        }
+      ]
+    }
+  ]
+}

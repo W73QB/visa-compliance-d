@@ -489,6 +489,20 @@ VISA_FAQS = {
             "answer": "The cover must run for the requested validity period of the visa. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies are GREEN.",
         },
     ],
+    "BE_NATIONALD_DOFI_2026": [
+        {
+            "question": "What insurance does a Belgium national entry (visa D) require?",
+            "answer": "The Immigration Office requires proof of health insurance covering all risks in Belgium; the example proof named is a certificate of registration with a healthcare fund.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must cover all risks in Belgium. Genki Native documents global comprehensive coverage that includes Belgium; the other products do not document Belgium all-risk coverage, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is registration with a Belgian healthcare fund required?",
+            "answer": "The source names a certificate of registration with a healthcare fund as the example proof. Confirm with the Immigration Office which proof is accepted in your category; the engine models the all-risks-in-Belgium requirement and does not assume any tracked product is registered with a Belgian fund.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -654,6 +668,11 @@ RELATED_POSTS = {
     "KZ_NEONOMAD_EGOV_2026": [
         ("/posts/kazakhstan-neo-nomad-insurance/", "Kazakhstan Neo Nomad Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "BE_NATIONALD_DOFI_2026": [
+        ("/posts/belgium-national-d-insurance/", "Belgium national entry (visa D) insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
