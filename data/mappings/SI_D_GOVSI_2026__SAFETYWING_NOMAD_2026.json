@@ -1,0 +1,18 @@
+{
+  "visa_id": "SI_D_GOVSI_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "SI_D_GOVSI_2026",
+          "locator": "Documents required for all applicants, item 4",
+          "excerpt": "Travel medical insurance for the period of the validity of visa"
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "SI_D_GOVSI_2026",
+  "country": "Slovenia",
+  "visa_name": "Long-Stay Visa (Type D)",
+  "route": "Long Stay Visa D checklist (Ministry of Foreign Affairs)",
+  "authority": "Ministry of Foreign Affairs of the Republic of Slovenia",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "SI_D_GOVSI_2026",
+      "url": "https://www.gov.si/assets/predstavnistva/Washington/dokumenti/konzulara/Check-list-long-stay-US-Slovenia.pdf",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "4f712357fc4c45a3be6271a5b64b9db14fde5da609a8485bc472560c44fb52ba",
+      "local_path": "sources/SI_D_GOVSI_2026-06-15.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SI_D_GOVSI_2026",
+          "locator": "Documents required for all applicants, item 4",
+          "excerpt": "Travel medical insurance for the period of the validity of visa, valid in the entire Schengen area, with minimum coverage of 30.000 EUR, covering: emergency medical expenses, hospital treatment, repatriation for medical reasons, or repatriation of remains."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 30000,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "SI_D_GOVSI_2026",
+          "locator": "Documents required for all applicants, item 4",
+          "excerpt": "with minimum coverage of 30.000 EUR"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SI_D_GOVSI_2026",
+          "locator": "Documents required for all applicants, item 4",
+          "excerpt": "Travel medical insurance for the period of the validity of visa"
+        }
+      ]
+    }
+  ]
+}
