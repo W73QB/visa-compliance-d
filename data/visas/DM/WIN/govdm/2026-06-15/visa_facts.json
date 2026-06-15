@@ -1,0 +1,43 @@
+{
+  "id": "DM_WIN_GOVDM_2026",
+  "country": "Dominica",
+  "visa_name": "Work In Nature (WIN) Extended Stay Visa",
+  "route": "Work In Nature application process (Government of Dominica)",
+  "authority": "Government of the Commonwealth of Dominica (Work In Nature)",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "DM_WIN_GOVDM_2026",
+      "url": "https://windominica.gov.dm/details/application-process",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "770819044a7d713797d90d140f77d7dced5f7e4a54cdc3b1f2aa884949089b38",
+      "local_path": "sources/DM_WIN_GOVDM_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "DM_WIN_GOVDM_2026",
+          "locator": "Application Process, required documents",
+          "excerpt": "Health insurance valid in Dominica and covering you and all your family members"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "DM_WIN_GOVDM_2026",
+          "locator": "Application Process, required documents",
+          "excerpt": "Health insurance valid in Dominica and covering you and all your family members"
+        }
+      ]
+    }
+  ]
+}

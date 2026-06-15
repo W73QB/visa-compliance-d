@@ -517,6 +517,20 @@ VISA_FAQS = {
             "answer": "Products whose documents state no overall coverage limit (the Spanish health policies) stay UNKNOWN rather than being assumed to clear the USD 50,000 floor.",
         },
     ],
+    "DM_WIN_GOVDM_2026": [
+        {
+            "question": "What insurance does the Dominica Work In Nature visa require?",
+            "answer": "The Government of Dominica requires health insurance valid in Dominica and covering you and all your family members.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must be valid in Dominica. Genki Native documents global coverage that includes Dominica; the other products do not document Dominica validity, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The official application process states no coverage amount, so the engine encodes none and models that insurance is mandatory and must be valid in Dominica.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -691,6 +705,11 @@ RELATED_POSTS = {
     ],
     "BZ_LONGSTAY_IMMIG_2026": [
         ("/posts/belize-long-stay-insurance/", "Belize Long Stay Permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "DM_WIN_GOVDM_2026": [
+        ("/posts/dominica-work-in-nature-insurance/", "Dominica Work In Nature insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
