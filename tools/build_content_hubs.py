@@ -601,6 +601,20 @@ VISA_FAQS = {
             "answer": "The cover must run for the period for which the Stamp was granted. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies are GREEN.",
         },
     ],
+    "AE_VIRTUALWORK_GDRFA_2026": [
+        {
+            "question": "What insurance does the UAE Virtual Work residence require?",
+            "answer": "The General Directorate of Residency and Foreigners Affairs (GDRFA, Dubai) requires the applicant to submit a valid health insurance document.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The published service page names a valid health insurance document but states no coverage amount or territory, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with GDRFA.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -806,6 +820,11 @@ RELATED_POSTS = {
     "BB_WELCOMESTAMP_OAG_2026": [
         ("/posts/barbados-welcome-stamp-insurance/", "Barbados Welcome Stamp insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "AE_VIRTUALWORK_GDRFA_2026": [
+        ("/posts/uae-virtual-work-insurance/", "UAE Virtual Work residence insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia and the Middle East"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
