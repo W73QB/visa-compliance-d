@@ -405,6 +405,20 @@ VISA_FAQS = {
             "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Ministry, as the published page gives no further detail.",
         },
     ],
+    "FI_STUDY_MIGRI_2026": [
+        {
+            "question": "What insurance does a Finnish study residence permit require?",
+            "answer": "The Finnish Immigration Service requires private insurance covering medical and drug expenses, valid throughout your entire stay. For studies under two years the insurance must cover medical expenses up to EUR 120,000.",
+        },
+        {
+            "question": "Why does the amount depend on study length?",
+            "answer": "Migri requires up to EUR 120,000 for studies under two years and up to EUR 40,000 for studies of at least two years. This route models the under-two-years threshold; the post discloses the longer-studies figure.",
+        },
+        {
+            "question": "Why is SafetyWing YELLOW?",
+            "answer": "The insurance must be valid throughout your entire stay. A month-to-month subscription that can lapse does not assure that, so it is YELLOW; full-period policies meeting the EUR 120,000 threshold are GREEN.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -539,6 +553,11 @@ RELATED_POSTS = {
     ],
     "ME_DNV_GOVME_2026": [
         ("/posts/montenegro-dnv-insurance/", "Montenegro digital nomad insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "FI_STUDY_MIGRI_2026": [
+        ("/posts/finland-study-insurance/", "Finland study residence insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
