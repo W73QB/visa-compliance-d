@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T04:55:17.077606+00:00",
+  "built_at": "2026-06-15T04:59:58.959676+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -737,6 +737,62 @@
               "source_id": "HR_MUP_DIGITALNOMAD_2026",
               "locator": "Required documents, proof of health insurance",
               "excerpt": "travel or private health insurance must cover the territory of the Republic of Croatia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IE_STUDENT_ISD_2026",
+      "country": "Ireland",
+      "visa_name": "Non-EEA Student Registration",
+      "route": "Private medical insurance for study (Immigration Service Delivery)",
+      "authority": "Immigration Service Delivery of Ireland (ISD)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "IE_STUDENT_ISD_2026",
+          "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/private-medical-insurance/",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "f43d605ed9b198ab5e4c98d8f910436850d13e8db52562471ae36688f864b877",
+          "local_path": "sources/IE_STUDENT_ISD_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "IE_STUDENT_ISD_2026",
+              "locator": "Private Medical Insurance, Non-EEA Students",
+              "excerpt": "All non-EEA students are required to have private medical insurance when coming to and residing in Ireland for the purpose of study."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 25000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "IE_STUDENT_ISD_2026",
+              "locator": "Private Medical Insurance, where travel insurance may suffice",
+              "excerpt": "The insurance coverage covers the student at a minimum of EUR 25,000 for accident and EUR 25,000 for disease"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "IE_STUDENT_ISD_2026",
+              "locator": "Private Medical Insurance, where travel insurance may suffice",
+              "excerpt": "The insurance covers the student for one full year or where the student is staying in Ireland for less than one year for the entirety of their stay"
             }
           ]
         }
@@ -3029,6 +3085,89 @@
       "last_verified": "2026-06-10"
     },
     {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "IE_STUDENT_ISD_2026",
+              "locator": "Private Medical Insurance, where travel insurance may suffice",
+              "excerpt": "The insurance covers the student for one full year or where the student is staying in Ireland for less than one year for the entirety of their stay"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "IT_SELFEMP_SF_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -3417,7 +3556,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3425,7 +3564,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3433,7 +3572,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3441,7 +3580,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3449,7 +3588,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3468,7 +3607,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3476,7 +3615,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -3484,7 +3623,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -4358,6 +4497,13 @@
       "retrieved_at": "2026-06-10T00:00:00Z",
       "sha256": "329f4232046eac2a5e754007a2f59417f55cfdbbe04434d78f7dd7dc33047ede",
       "local_path": "sources/HR_MUP_DIGITALNOMAD_2026-06-10.html"
+    },
+    "IE_STUDENT_ISD_2026": {
+      "source_id": "IE_STUDENT_ISD_2026",
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/private-medical-insurance/",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "f43d605ed9b198ab5e4c98d8f910436850d13e8db52562471ae36688f864b877",
+      "local_path": "sources/IE_STUDENT_ISD_2026-06-15.html"
     },
     "IT_SELFEMP_SF_INSURANCE_2026": {
       "source_id": "IT_SELFEMP_SF_INSURANCE_2026",
