@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-15T05:05:06.106816+00:00",
+  "built_at": "2026-06-15T05:09:19.369682+00:00",
   "snapshot_id": "2026-06-15",
   "visas": [
     {
@@ -1029,6 +1029,37 @@
       ]
     },
     {
+      "id": "ME_DNV_GOVME_2026",
+      "country": "Montenegro",
+      "visa_name": "Digital Nomad Temporary Residence",
+      "route": "Temporary residence permit for digital nomads (Government of Montenegro)",
+      "authority": "Government of Montenegro (digitalnomads.gov.me)",
+      "last_verified": "2026-06-15",
+      "sources": [
+        {
+          "source_id": "ME_DNV_GOVME_2026",
+          "url": "https://digitalnomads.gov.me/article/legal-status-for-nomads",
+          "retrieved_at": "2026-06-15T00:00:00Z",
+          "sha256": "2aa5234381d1d06bd91b43a59b5343c1b0f175609642d9223a8178681b6e5f5b",
+          "local_path": "sources/ME_DNV_GOVME_2026-06-15.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "ME_DNV_GOVME_2026",
+              "locator": "How to get the visa, required attachments",
+              "excerpt": "With the request, the foreigner is obliged to attach proof that: has financial means of support; has accommodation provided; has health insurance; has a valid foreign travel document or identity card issued to him by"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "MT_NOMAD_RESIDENCY_2026",
       "country": "Malta",
       "visa_name": "Nomad Residence Permit",
@@ -1949,7 +1980,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -1959,7 +1990,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -1969,7 +2000,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -1979,7 +2010,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -1989,7 +2020,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -1999,7 +2030,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -2009,7 +2040,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -2019,7 +2050,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -3589,6 +3620,70 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -4662,6 +4757,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "2eba0133da39047223b4b90aeacc7b6ad850ceee8d0a87643d91c04ecb513ba3",
       "local_path": "sources/LV_REMOTEWORK_PMLP_2026-06-15.html"
+    },
+    "ME_DNV_GOVME_2026": {
+      "source_id": "ME_DNV_GOVME_2026",
+      "url": "https://digitalnomads.gov.me/article/legal-status-for-nomads",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "2aa5234381d1d06bd91b43a59b5343c1b0f175609642d9223a8178681b6e5f5b",
+      "local_path": "sources/ME_DNV_GOVME_2026-06-15.html"
     },
     "MT_RESIDENCY_FAQ_2026": {
       "source_id": "MT_RESIDENCY_FAQ_2026",

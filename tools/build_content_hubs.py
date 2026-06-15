@@ -391,6 +391,20 @@ VISA_FAQS = {
             "answer": "The requirement is a Bahrain-issued certificate, which is stricter than a policy merely valid in Bahrain. Confirm a locally issued certificate with a Bahraini insurer; the engine does not assume any tracked product meets this.",
         },
     ],
+    "ME_DNV_GOVME_2026": [
+        {
+            "question": "What insurance does the Montenegro digital nomad permit require?",
+            "answer": "The Government of Montenegro requires the applicant to attach proof that they have health insurance, among the documents for the digital nomad temporary residence permit.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The official page states only that the applicant must have health insurance, with no coverage amount or territory specified, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Ministry, as the published page gives no further detail.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -522,6 +536,11 @@ RELATED_POSTS = {
         ("/posts/bahrain-golden-residency-insurance/", "Bahrain Golden Residency insurance requirements"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
         ("/guides/compliance-status-meaning/", "What GREEN, YELLOW and UNKNOWN mean"),
+    ],
+    "ME_DNV_GOVME_2026": [
+        ("/posts/montenegro-dnv-insurance/", "Montenegro digital nomad insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
 
