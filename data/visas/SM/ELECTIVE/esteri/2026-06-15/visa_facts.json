@@ -1,0 +1,31 @@
+{
+  "id": "SM_ELECTIVE_ESTERI_2026",
+  "country": "San Marino",
+  "visa_name": "Elective Residence Permit",
+  "route": "Stay permits and residence (Department of Foreign Affairs)",
+  "authority": "Department of Foreign Affairs of the Republic of San Marino",
+  "last_verified": "2026-06-15",
+  "sources": [
+    {
+      "source_id": "SM_ELECTIVE_ESTERI_2026",
+      "url": "https://www.esteri.sm/pub1/EsteriSM/en/Servizi-per-utenza/Permessi-di-Soggiorno-e-Residenze.html",
+      "retrieved_at": "2026-06-15T00:00:00Z",
+      "sha256": "42e3c4986ea387e62d2b554d86fad64d2ff6280069e5e3849ae60709ed389270",
+      "local_path": "sources/SM_ELECTIVE_ESTERI_2026-06-15.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SM_ELECTIVE_ESTERI_2026",
+          "locator": "Elective residence permit conditions",
+          "excerpt": "Foreign applicants must hold a health insurance policy, cannot work for the overall public sector nor benefit from State contributions."
+        }
+      ]
+    }
+  ]
+}
