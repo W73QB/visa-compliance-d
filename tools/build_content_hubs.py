@@ -685,6 +685,20 @@ VISA_FAQS = {
             "answer": "The page states no amount and no territory, so the engine models only that insurance is mandatory and comprehensive.",
         },
     ],
+    "MV_RESIDENT_IMMIG_2026": [
+        {
+            "question": "What insurance does the Maldives Resident Visa require?",
+            "answer": "Maldives Immigration lists health insurance among the required documents for first-time Resident Visa applicants (a foreign national married to a Maldivian citizen).",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The page lists health insurance with no coverage amount or territory, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with Maldives Immigration.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -920,6 +934,11 @@ RELATED_POSTS = {
     "UY_WORKINGHOLIDAY_GUBUY_2026": [
         ("/posts/uruguay-working-holiday-insurance/", "Uruguay Working Holiday insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "MV_RESIDENT_IMMIG_2026": [
+        ("/posts/maldives-resident-visa-insurance/", "Maldives Resident Visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
