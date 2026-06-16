@@ -643,6 +643,20 @@ VISA_FAQS = {
             "answer": "The health-insurance condition is a general granting requirement, but the source notes several permit types are exempt from demonstrating it (such as the Red-White-Red card, EU Blue Card, researchers, students and ICT workers). Confirm your specific permit type.",
         },
     ],
+    "SK_NATIONALVISA_MZV_2026": [
+        {
+            "question": "What insurance does a Slovak national (long-stay) visa require?",
+            "answer": "The Ministry of Foreign and European Affairs requires proof of health insurance upon entry and throughout the stay in Slovakia; commercial insurance taken out abroad that covers medical expenses in the Slovak Republic is accepted.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The insurance must cover medical expenses in the Slovak Republic. Genki Native documents global coverage that includes Slovakia; the other products do not document Slovakia coverage, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The documents page states no coverage amount, so the engine encodes none and models that insurance is mandatory, must cover Slovakia, and must cover the whole stay.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -862,6 +876,11 @@ RELATED_POSTS = {
     ],
     "AT_RESIDENCE_BMI_2026": [
         ("/posts/austria-residence-insurance/", "Austria residence permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "SK_NATIONALVISA_MZV_2026": [
+        ("/posts/slovakia-national-visa-insurance/", "Slovakia national visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
