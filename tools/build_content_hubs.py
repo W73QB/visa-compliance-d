@@ -657,6 +657,20 @@ VISA_FAQS = {
             "answer": "The documents page states no coverage amount, so the engine encodes none and models that insurance is mandatory, must cover Slovakia, and must cover the whole stay.",
         },
     ],
+    "LU_STUDENT_GUICHET_2026": [
+        {
+            "question": "What insurance does the Luxembourg student authorisation require?",
+            "answer": "Guichet.lu requires a health insurance certificate (Luxembourgish or foreign) covering all risks on Luxembourg territory.",
+        },
+        {
+            "question": "Why is only Genki Native GREEN for this route?",
+            "answer": "The policy must cover all risks on Luxembourg territory. Genki Native documents global comprehensive coverage that includes Luxembourg; the other products do not document Luxembourg all-risk coverage, so the engine records UNKNOWN rather than assuming a foreign policy qualifies.",
+        },
+        {
+            "question": "Is there a minimum coverage amount?",
+            "answer": "The page states no coverage amount, so the engine encodes none and models that insurance is mandatory, must cover Luxembourg, and must be comprehensive.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -881,6 +895,11 @@ RELATED_POSTS = {
     ],
     "SK_NATIONALVISA_MZV_2026": [
         ("/posts/slovakia-national-visa-insurance/", "Slovakia national visa insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "LU_STUDENT_GUICHET_2026": [
+        ("/posts/luxembourg-student-insurance/", "Luxembourg student authorisation insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
