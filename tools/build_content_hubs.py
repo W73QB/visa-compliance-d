@@ -727,6 +727,20 @@ VISA_FAQS = {
             "answer": "The guidelines state no coverage amount, so the engine encodes none and models that insurance is mandatory and must cover the whole stay.",
         },
     ],
+    "CV_STUDENTRES_DGTCV_2026": [
+        {
+            "question": "What insurance does a Cabo Verde student residence require?",
+            "answer": "Cabo Verde's immigration law (Lei n. 66/VIII/2014, art. 53) requires a higher-education student applying for residence to have health insurance (seguro de saude).",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The law lists health insurance with no coverage amount or territory, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Cabo Verde authorities.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -977,6 +991,11 @@ RELATED_POSTS = {
     "BM_PARTNERRESIDENCE_GOVBM_2026": [
         ("/posts/bermuda-partner-residence-insurance/", "Bermuda partner residence insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "CV_STUDENTRES_DGTCV_2026": [
+        ("/posts/cabo-verde-student-residence-insurance/", "Cabo Verde student residence insurance requirements"),
+        ("/guides/compliance-status-meaning/", "What compliance statuses mean"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }

@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-16T12:52:22.131300+00:00",
+  "built_at": "2026-06-16T12:58:40.592992+00:00",
   "snapshot_id": "2026-06-16",
   "visas": [
     {
@@ -550,6 +550,37 @@
               "source_id": "CR_DECREE_43619_2026",
               "locator": "Article 9 - Minimum Coverage Amount",
               "excerpt": "gastos m\u00e9dicos en casos de enfermedades en Costa Rica por al menos US $50 000,00 - at least US$50,000 for medical expenses related to illness in Costa Rica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CV_STUDENTRES_DGTCV_2026",
+      "country": "Cape Verde",
+      "visa_name": "Residence Authorisation for Higher-Education Students",
+      "route": "Residence authorisation for higher-education students (Lei n. 66/VIII/2014, art. 53)",
+      "authority": "Republic of Cabo Verde (Boletim Oficial, Lei n. 66/VIII/2014)",
+      "last_verified": "2026-06-16",
+      "sources": [
+        {
+          "source_id": "CV_STUDENTRES_DGTCV_2026",
+          "url": "https://dgtcv.gov.cv/index.php?Itemid=437&catid=15&id=33%3Alei-n-80-viii-2015-de-07-de-janeiro&m=0&option=com_jdownloads&task=download.send",
+          "retrieved_at": "2026-06-16T00:00:00Z",
+          "sha256": "7f1553a90efefae6f310d5fc9d37f31b2a1cd0b870e8fa6a783bf559919ce7de",
+          "local_path": "sources/CV_STUDENTRES_DGTCV_2026-06-16.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "CV_STUDENTRES_DGTCV_2026",
+              "locator": "Artigo 53, Autorizacao de residencia para estudantes do ensino superior",
+              "excerpt": "E concedida uma autorizacao de residencia ao estudante do ensino superior que: ... d) Disponha de seguro de saude."
             }
           ]
         }
@@ -3603,7 +3634,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3611,7 +3642,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3619,7 +3650,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3627,7 +3658,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3635,7 +3666,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3654,7 +3685,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3662,7 +3693,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3670,7 +3701,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -3986,6 +4017,70 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-01-15"
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -7599,6 +7694,13 @@
       "sha256": "cdd9951eab3b18839fde2282203098c611f59671533d24ec90e298850f0917b0",
       "local_path": "sources/CR_Decreto_43619_2026-01-12.md",
       "note": "Executive Decree No. 43619-H-MGP-TUR - Article 9 establishes insurance must cover ENTIRE authorized stay period"
+    },
+    "CV_STUDENTRES_DGTCV_2026": {
+      "source_id": "CV_STUDENTRES_DGTCV_2026",
+      "url": "https://dgtcv.gov.cv/index.php?Itemid=437&catid=15&id=33%3Alei-n-80-viii-2015-de-07-de-janeiro&m=0&option=com_jdownloads&task=download.send",
+      "retrieved_at": "2026-06-16T00:00:00Z",
+      "sha256": "7f1553a90efefae6f310d5fc9d37f31b2a1cd0b870e8fa6a783bf559919ce7de",
+      "local_path": "sources/CV_STUDENTRES_DGTCV_2026-06-16.pdf"
     },
     "CY_MD_DIGITALNOMAD_DOCS_2026": {
       "source_id": "CY_MD_DIGITALNOMAD_DOCS_2026",
