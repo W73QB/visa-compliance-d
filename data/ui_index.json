@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-16T05:22:33.795409+00:00",
+  "built_at": "2026-06-16T05:27:52.965952+00:00",
   "snapshot_id": "2026-06-16",
   "visas": [
     {
@@ -2394,6 +2394,49 @@
               "source_id": "TW_DNV_BOCA_2026",
               "locator": "Digital nomad visitor visa, required documents",
               "excerpt": "for the entire duration of stay in the R.O.C. (Taiwan)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "country": "Uruguay",
+      "visa_name": "Working Holiday",
+      "route": "Working Holiday for foreign citizens (gub.uy)",
+      "authority": "Ministerio de Relaciones Exteriores - Direccion de Migracion Internacional (gub.uy)",
+      "last_verified": "2026-06-16",
+      "sources": [
+        {
+          "source_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+          "url": "https://www.gub.uy/tramites/vacaciones-trabajo-working-holiday-vacaciones-trabajo-working-holiday-ciudadanos-extranjeros",
+          "retrieved_at": "2026-06-16T00:00:00Z",
+          "sha256": "f54280306d6eac0657aa8c0eabdcde2d4d4f35581999a86d1548309963188e2a",
+          "local_path": "sources/UY_WORKINGHOLIDAY_GUBUY_2026-06-16.html"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+              "locator": "Requisitos, Seguro medico",
+              "excerpt": "Seguro medico. Contar con un seguro de salud integral."
+            }
+          ]
+        },
+        {
+          "key": "insurance.comprehensive",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+              "locator": "Requisitos, Seguro medico",
+              "excerpt": "Contar con un seguro de salud integral."
             }
           ]
         }
@@ -5524,7 +5567,7 @@
       "missing": [
         "specs.jurisdiction_facts.LU.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5534,7 +5577,7 @@
       "missing": [
         "specs.jurisdiction_facts.LU.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5545,7 +5588,7 @@
         "specs.jurisdiction_facts.LU.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5553,7 +5596,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5564,7 +5607,7 @@
         "specs.jurisdiction_facts.LU.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5575,7 +5618,7 @@
         "specs.jurisdiction_facts.LU.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5585,7 +5628,7 @@
       "missing": [
         "specs.jurisdiction_facts.LU.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5596,7 +5639,7 @@
         "specs.jurisdiction_facts.LU.authorized",
         "specs.comprehensive"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "LV_REMOTEWORK_PMLP_2026",
@@ -6987,6 +7030,78 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     }
   ],
   "offers": [
@@ -7532,6 +7647,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "51392397072072c60ad02e166a6fbe0f8b29f8d9ddebf930c8a4939a55dab9fa",
       "local_path": "sources/TW_DNV_BOCA_2026-06-15.html"
+    },
+    "UY_WORKINGHOLIDAY_GUBUY_2026": {
+      "source_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "url": "https://www.gub.uy/tramites/vacaciones-trabajo-working-holiday-vacaciones-trabajo-working-holiday-ciudadanos-extranjeros",
+      "retrieved_at": "2026-06-16T00:00:00Z",
+      "sha256": "f54280306d6eac0657aa8c0eabdcde2d4d4f35581999a86d1548309963188e2a",
+      "local_path": "sources/UY_WORKINGHOLIDAY_GUBUY_2026-06-16.html"
     },
     "WORLDNOMADS_COMPARE_2026": {
       "source_id": "WORLDNOMADS_COMPARE_2026",

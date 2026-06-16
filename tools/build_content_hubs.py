@@ -671,6 +671,20 @@ VISA_FAQS = {
             "answer": "The page states no coverage amount, so the engine encodes none and models that insurance is mandatory, must cover Luxembourg, and must be comprehensive.",
         },
     ],
+    "UY_WORKINGHOLIDAY_GUBUY_2026": [
+        {
+            "question": "What insurance does the Uruguay Working Holiday require?",
+            "answer": "The Government of Uruguay requires the applicant to have comprehensive health insurance (un seguro de salud integral).",
+        },
+        {
+            "question": "Why are the Spanish health insurers GREEN here?",
+            "answer": "The requirement is comprehensive cover with no territory or amount. Products that document comprehensive coverage (Genki Native and the Spanish health insurers) are GREEN; travel-medical products that do not establish comprehensive cover stay UNKNOWN.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The page states no amount and no territory, so the engine models only that insurance is mandatory and comprehensive.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -901,6 +915,11 @@ RELATED_POSTS = {
     "LU_STUDENT_GUICHET_2026": [
         ("/posts/luxembourg-student-insurance/", "Luxembourg student authorisation insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "UY_WORKINGHOLIDAY_GUBUY_2026": [
+        ("/posts/uruguay-working-holiday-insurance/", "Uruguay Working Holiday insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
