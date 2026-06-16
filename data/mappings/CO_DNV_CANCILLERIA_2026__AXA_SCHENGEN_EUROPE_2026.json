@@ -1,0 +1,10 @@
+{
+  "visa_id": "CO_DNV_CANCILLERIA_2026",
+  "product_id": "AXA_SCHENGEN_EUROPE_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.CO.authorized",
+    "specs.comprehensive"
+  ]
+}

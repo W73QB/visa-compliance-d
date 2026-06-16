@@ -1,0 +1,9 @@
+{
+  "visa_id": "BG_LONGSTAYD_MFA_2026",
+  "product_id": "GENKI_TRAVELER_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.eu_licensed_insurer"
+  ]
+}

@@ -17,6 +17,7 @@ from tools.rules import (
     MinimumCoverageRule,
     MonthlyPaymentsAcceptedRule,
     MustCoverFullPeriodRule,
+    EuLicensedInsurerRule,
 )
 
 # Rule order matters - terminal rules first
@@ -38,6 +39,7 @@ RULES = [
     MinimumCoverageRule(),
     MonthlyPaymentsAcceptedRule(),
     MustCoverFullPeriodRule(),
+    EuLicensedInsurerRule(),
 ]
 
 

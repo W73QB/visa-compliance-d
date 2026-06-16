@@ -1,0 +1,68 @@
+{
+  "id": "BG_LONGSTAYD_MFA_2026",
+  "country": "Bulgaria",
+  "visa_name": "Long-stay Visa D",
+  "route": "Long-stay Visa D (whole period of stay) - Ministry of Foreign Affairs",
+  "authority": "Ministry of Foreign Affairs of the Republic of Bulgaria (mfa.bg)",
+  "last_verified": "2026-06-17",
+  "sources": [
+    {
+      "source_id": "BG_LONGSTAY_MFA_2026",
+      "url": "https://www.mfa.bg/upload/99380/2_Visa_D.pdf",
+      "retrieved_at": "2026-06-17T00:00:00Z",
+      "sha256": "d09ba3a7e6a2befa500dfd503ac28aba02ac93f4e377f9bce0c6594d7fb010ea",
+      "local_path": "sources/BG_LONGSTAY_MFA_2026-06-17.pdf"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BG_LONGSTAY_MFA_2026",
+          "locator": "VISA D (long term), Documents required in all cases, item 5",
+          "excerpt": "Insurance policy (and copy) for the whole period of stay, issued by an Insurance Company with a license to carry out insurance activities on the territory of the European Union, with a minimum amount of coverage of 30,000 euros. The policy should cover all repatriation costs as well as emergency medical care and emergency hospital treatment for the period of stay."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 30000,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "BG_LONGSTAY_MFA_2026",
+          "locator": "VISA D (long term), Documents required in all cases, item 5",
+          "excerpt": "with a minimum amount of coverage of 30,000 euros"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BG_LONGSTAY_MFA_2026",
+          "locator": "VISA D (long term), Documents required in all cases, item 5",
+          "excerpt": "Insurance policy (and copy) for the whole period of stay"
+        }
+      ]
+    },
+    {
+      "key": "insurance.eu_licensed_insurer",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "BG_LONGSTAY_MFA_2026",
+          "locator": "VISA D (long term), Documents required in all cases, item 5",
+          "excerpt": "issued by an Insurance Company with a license to carry out insurance activities on the territory of the European Union"
+        }
+      ]
+    }
+  ]
+}

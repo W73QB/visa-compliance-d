@@ -1,0 +1,21 @@
+{
+  "visa_id": "AT_RESIDENCE_BMI_2026",
+  "product_id": "AXA_SCHENGEN_EUROPE_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Travel insurance is not accepted for this visa",
+      "evidence": [
+        {
+          "source_id": "AT_RESIDENCE_BMI_2026",
+          "locator": "General granting requirements, Health insurance",
+          "excerpt": "The presentation of a travel health insurance is not sufficient."
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.AT.authorized",
+    "specs.comprehensive"
+  ]
+}

@@ -19,6 +19,7 @@ from tools.rules.coverage import (
     MinimumCoverageRule,
 )
 from tools.rules.payment import MonthlyPaymentsAcceptedRule, MustCoverFullPeriodRule
+from tools.rules.eu_license import EuLicensedInsurerRule
 
 __all__ = [
     "MandatoryInsuranceRule",
@@ -38,4 +39,5 @@ __all__ = [
     "MinimumCoverageRule",
     "MonthlyPaymentsAcceptedRule",
     "MustCoverFullPeriodRule",
+    "EuLicensedInsurerRule",
 ]

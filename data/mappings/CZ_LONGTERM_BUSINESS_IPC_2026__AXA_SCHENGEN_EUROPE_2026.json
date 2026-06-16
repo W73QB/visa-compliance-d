@@ -1,0 +1,20 @@
+{
+  "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+  "product_id": "AXA_SCHENGEN_EUROPE_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Minimum coverage 400000 EUR required, product has 100000 EUR",
+      "evidence": [
+        {
+          "source_id": "CZ_IPC_INSURANCE_2026",
+          "locator": "Medical Insurance, coverage amount",
+          "excerpt": "The insurance coverage amount (the agreed limit per insured event) must be at least EUR 400,000"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.deductible.amount"
+  ]
+}

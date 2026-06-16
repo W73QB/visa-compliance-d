@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-06-16T12:58:40.592992+00:00",
-  "snapshot_id": "2026-06-16",
+  "built_at": "2026-06-16T23:43:09.315421+00:00",
+  "snapshot_id": "2026-06-13",
   "visas": [
     {
       "id": "AE_VIRTUALWORK_GDRFA_2026",
@@ -267,6 +267,74 @@
               "source_id": "BE_NATIONALD_DOFI_2026",
               "locator": "National entries (visa D), category B40/B41, supporting documents",
               "excerpt": "health insurance covering all risks in Belgium"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BG_LONGSTAYD_MFA_2026",
+      "country": "Bulgaria",
+      "visa_name": "Long-stay Visa D",
+      "route": "Long-stay Visa D (whole period of stay) - Ministry of Foreign Affairs",
+      "authority": "Ministry of Foreign Affairs of the Republic of Bulgaria (mfa.bg)",
+      "last_verified": "2026-06-17",
+      "sources": [
+        {
+          "source_id": "BG_LONGSTAY_MFA_2026",
+          "url": "https://www.mfa.bg/upload/99380/2_Visa_D.pdf",
+          "retrieved_at": "2026-06-17T00:00:00Z",
+          "sha256": "d09ba3a7e6a2befa500dfd503ac28aba02ac93f4e377f9bce0c6594d7fb010ea",
+          "local_path": "sources/BG_LONGSTAY_MFA_2026-06-17.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "BG_LONGSTAY_MFA_2026",
+              "locator": "VISA D (long term), Documents required in all cases, item 5",
+              "excerpt": "Insurance policy (and copy) for the whole period of stay, issued by an Insurance Company with a license to carry out insurance activities on the territory of the European Union, with a minimum amount of coverage of 30,000 euros. The policy should cover all repatriation costs as well as emergency medical care and emergency hospital treatment for the period of stay."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 30000,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "BG_LONGSTAY_MFA_2026",
+              "locator": "VISA D (long term), Documents required in all cases, item 5",
+              "excerpt": "with a minimum amount of coverage of 30,000 euros"
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "BG_LONGSTAY_MFA_2026",
+              "locator": "VISA D (long term), Documents required in all cases, item 5",
+              "excerpt": "Insurance policy (and copy) for the whole period of stay"
+            }
+          ]
+        },
+        {
+          "key": "insurance.eu_licensed_insurer",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "BG_LONGSTAY_MFA_2026",
+              "locator": "VISA D (long term), Documents required in all cases, item 5",
+              "excerpt": "issued by an Insurance Company with a license to carry out insurance activities on the territory of the European Union"
             }
           ]
         }
@@ -2638,6 +2706,66 @@
       ]
     },
     {
+      "id": "AXA_SCHENGEN_EUROPE_2026",
+      "provider": "AXA Assistance (Inter Partner Assistance SA/NV)",
+      "product_name": "AXA Schengen Europe Travel (ESSENTIAL)",
+      "effective_date": "2026-06-17",
+      "policy_version": "2026-06",
+      "specs": {
+        "type": "travel medical insurance",
+        "overall_limit": 100000,
+        "currency": "EUR",
+        "deductible": null,
+        "copay": null,
+        "payment_cadence": null,
+        "contract_commitment_months": null,
+        "comprehensive": null,
+        "covers_public_health_system_risks": null,
+        "unlimited": null,
+        "moratorium_days": null,
+        "eu_licensed_insurer": true,
+        "jurisdiction_facts": {
+          "BG": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "AXA_SCHENGEN_EUROPE_2026",
+                "locator": "Eligible countries / Our Essential insurance covers",
+                "excerpt": "Member States of the Schengen area : Germany, Austria, Belgium, Bulgaria, Croatia, Denmark, Spain, Estonia, Finland, France, Greece, Hungary, Italy, Iceland, Liechtenstein, Latvia, Lithuania, Luxembourg, Malta, Norway, Netherlands, Poland, Portugal, Czech Republic, Romania, Slovakia, Slovenia, Sweden, Switzerland"
+              }
+            ]
+          },
+          "LT": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "AXA_SCHENGEN_EUROPE_2026",
+                "locator": "Eligible countries / Our Essential insurance covers",
+                "excerpt": "Member States of the Schengen area : Germany, Austria, Belgium, Bulgaria, Croatia, Denmark, Spain, Estonia, Finland, France, Greece, Hungary, Italy, Iceland, Liechtenstein, Latvia, Lithuania, Luxembourg, Malta, Norway, Netherlands, Poland, Portugal, Czech Republic, Romania, Slovakia, Slovenia, Sweden, Switzerland"
+              }
+            ]
+          }
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "AXA_SCHENGEN_EUROPE_2026",
+          "locator": "Legal notice / insurer identification (page footer)",
+          "excerpt": "AXA Assistance is represented by INTER PARTNER ASSISTANCE SA/NV, a public limited liability company governed by Belgian law with registered office at Regentlaan 7, 1000 Brussel, Belgium - Insurance company authorized by the National Bank of Belgium under number 0487"
+        },
+        {
+          "source_id": "AXA_SCHENGEN_EUROPE_2026",
+          "locator": "Emergency Medical Expenses - Emergency Assistance",
+          "excerpt": "Emergency Medical Expense Coverage EUR 100,000 Medical, surgical, hospitalization, locally prescribed medication expenses"
+        },
+        {
+          "source_id": "AXA_SCHENGEN_EUROPE_2026",
+          "locator": "Repatriation and 24/7 Medical Assistance",
+          "excerpt": "Medical repatriation and in the event of death"
+        }
+      ]
+    },
+    {
       "id": "DKV_VISADO_2026",
       "provider": "DKV",
       "product_name": "DKV Visado",
@@ -3093,6 +3221,14 @@
     },
     {
       "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -3154,6 +3290,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "AI_STUDENT_GOVAI_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3218,6 +3362,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -3295,6 +3447,28 @@
         "specs.jurisdiction_facts.AT.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "AT_RESIDENCE_BMI_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Travel insurance is not accepted for this visa",
+          "evidence": [
+            {
+              "source_id": "AT_RESIDENCE_BMI_2026",
+              "locator": "General granting requirements, Health insurance",
+              "excerpt": "The presentation of a travel health insurance is not sufficient."
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.AT.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "AT_RESIDENCE_BMI_2026",
@@ -3401,6 +3575,14 @@
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BB_WELCOMESTAMP_OAG_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -3478,6 +3660,17 @@
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.BE.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BE_NATIONALD_DOFI_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -3549,6 +3742,109 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit",
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit",
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit",
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "UNKNOWN",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "BG_LONGSTAY_MFA_2026",
+              "locator": "VISA D (long term), Documents required in all cases, item 5",
+              "excerpt": "Insurance policy (and copy) for the whole period of stay"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit",
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
+    },
+    {
       "visa_id": "BH_GOLDEN_NPRA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -3557,6 +3853,16 @@
         "specs.jurisdiction_facts.BH.authorized"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "BH_GOLDEN_NPRA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.BH.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -3635,6 +3941,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -3715,6 +4029,16 @@
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.BR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BR_DNV_LISBOA_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -3790,6 +4114,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "BZ_LONGSTAY_IMMIG_2026",
@@ -3862,6 +4194,17 @@
         "specs.jurisdiction_facts.CO.authorized"
       ],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -3944,6 +4287,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
@@ -4024,6 +4375,14 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
+      "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
       "last_verified": ""
     },
     {
@@ -4032,7 +4391,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4040,7 +4399,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4048,7 +4407,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4056,7 +4415,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4064,7 +4423,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4072,7 +4431,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4080,7 +4439,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -4091,6 +4450,17 @@
         "specs.jurisdiction_facts.CY.authorized"
       ],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -4173,6 +4543,27 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Minimum coverage 400000 EUR required, product has 100000 EUR",
+          "evidence": [
+            {
+              "source_id": "CZ_IPC_INSURANCE_2026",
+              "locator": "Medical Insurance, coverage amount",
+              "excerpt": "The insurance coverage amount (the agreed limit per insured event) must be at least EUR 400,000"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.deductible.amount"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -4295,6 +4686,25 @@
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Travel insurance is not accepted for this visa",
+          "evidence": [
+            {
+              "source_id": "DE_D_VISA_HEALTH_INSURANCE_2026",
+              "locator": "Health insurance requirements for national (category D) visas",
+              "excerpt": "Travel insurance is not sufficient for any D visa application."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -4385,6 +4795,16 @@
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.DM.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "DM_WIN_GOVDM_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -4460,6 +4880,16 @@
         "specs.jurisdiction_facts.EC.authorized"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "EC_NOMAD_CANCILLERIA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.EC.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -4550,6 +4980,14 @@
     },
     {
       "visa_id": "EE_DNV_VM_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -4622,6 +5060,32 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Unlimited coverage required, product has limit of 100000",
+          "evidence": [
+            {
+              "source_id": "BLS_ES_DNV_LONDON_2026",
+              "locator": "page 2, item 9",
+              "excerpt": "it must be comprehensive, full and unlimited insurance coverage"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.ES.authorized",
+        "specs.deductible.amount",
+        "specs.comprehensive",
+        "specs.covers_public_health_system_risks",
+        "specs.copay",
+        "specs.moratorium_days"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -4818,6 +5282,42 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "ES_NLV_LA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Travel insurance is not accepted for this visa",
+          "evidence": [
+            {
+              "source_id": "ES_NLV_LA_EXTERIORES_2026",
+              "locator": "Required documents, item 8 (note)",
+              "excerpt": "No travel insurances with medical assistance coverage will be accepted."
+            }
+          ]
+        },
+        {
+          "text": "Unlimited coverage required, product has limit of 100000",
+          "evidence": [
+            {
+              "source_id": "ES_NLV_LA_EXTERIORES_2026",
+              "locator": "Required documents, item 8",
+              "excerpt": "with no deductible, no copayment, no waiting period or coverage limit"
+            }
+          ]
+        }
+      ],
+      "missing": [
+        "specs.jurisdiction_facts.ES.authorized",
+        "specs.deductible.amount",
+        "specs.comprehensive",
+        "specs.covers_public_health_system_risks",
+        "specs.copay",
+        "specs.moratorium_days"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "ES_NLV_LA_2026",
@@ -5040,6 +5540,25 @@
     },
     {
       "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "RED",
+      "reasons": [
+        {
+          "text": "Minimum coverage 120000 EUR required, product has 100000 EUR",
+          "evidence": [
+            {
+              "source_id": "FI_STUDY_MIGRI_2026",
+              "locator": "What kind of insurance do I need?, amount by duration",
+              "excerpt": "If your studies take less than two years, your insurance must cover medical expenses up to EUR 120,000."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -5120,6 +5639,16 @@
         "specs.jurisdiction_facts.GE.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "GE_LONGVISA_GEOCONSUL_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.GE.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "GE_LONGVISA_GEOCONSUL_2026",
@@ -5210,6 +5739,14 @@
     },
     {
       "visa_id": "GR_DNV_MFA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "GR_DNV_MFA_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -5284,6 +5821,16 @@
         "specs.jurisdiction_facts.HR.authorized"
       ],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -5376,6 +5923,14 @@
     },
     {
       "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -5460,6 +6015,16 @@
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.IS.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IS_RESIDENCE_UTL_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -5538,6 +6103,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "IT_SELFEMP_SF_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -5610,6 +6183,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -5682,6 +6263,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "KR_F1D_MOFA_LA_2026",
@@ -5752,6 +6341,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "KZ_NEONOMAD_EGOV_2026",
@@ -5832,6 +6429,16 @@
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -5907,6 +6514,17 @@
         "specs.jurisdiction_facts.LU.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "LU_STUDENT_GUICHET_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LU.authorized",
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -5990,6 +6608,16 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "LV_REMOTEWORK_PMLP_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LV.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "LV_REMOTEWORK_PMLP_2026",
@@ -6069,6 +6697,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -6135,6 +6771,16 @@
         "specs.payment_cadence"
       ],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.payment_cadence"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -6221,6 +6867,14 @@
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -6282,6 +6936,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "MV_RESIDENT_IMMIG_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "MV_RESIDENT_IMMIG_2026",
@@ -6346,6 +7008,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -6423,6 +7093,16 @@
         "specs.jurisdiction_facts.PA.authorized"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "PA_REMOTEWORK_SNM_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.PA.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -6515,6 +7195,14 @@
     },
     {
       "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6601,6 +7289,14 @@
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -6676,6 +7372,14 @@
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -6739,6 +7443,14 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -6820,6 +7532,16 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "SE_STUDY_MIGVERKET_2026",
@@ -6908,6 +7630,14 @@
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6988,6 +7718,16 @@
         "specs.jurisdiction_facts.SK.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "SK_NATIONALVISA_MZV_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.SK.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "SK_NATIONALVISA_MZV_2026",
@@ -7078,6 +7818,14 @@
     },
     {
       "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7150,6 +7898,25 @@
       ],
       "missing": [],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -7294,6 +8061,14 @@
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7369,6 +8144,14 @@
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
       "product_id": "DKV_VISADO_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7441,6 +8224,16 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.comprehensive"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
@@ -7638,6 +8431,13 @@
       "sha256": "bf81b905be6263443f34825a4f6a748ce062689b8f19a97b54a1924e2c17f9a8",
       "local_path": "sources/AT_RESIDENCE_BMI_2026-06-16.html"
     },
+    "AXA_SCHENGEN_EUROPE_2026": {
+      "source_id": "AXA_SCHENGEN_EUROPE_2026",
+      "url": "https://www.axa-schengen.com/en/products/axa-schengen-europe-travel",
+      "retrieved_at": "2026-06-17T00:00:00Z",
+      "sha256": "de8ea37ee0a672d1c29e29267913c3bd2a0098b75f4b9b89d695b74f0f77adc7",
+      "local_path": "sources/AXA_SCHENGEN_EUROPE_2026-06-17.html"
+    },
     "BB_WELCOMESTAMP_OAG_2026": {
       "source_id": "BB_WELCOMESTAMP_OAG_2026",
       "url": "https://oag.gov.bb/attachments/Remote%20Employment%20Act%2C%202020-23.pdf",
@@ -7651,6 +8451,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "c88285889ac5816b87cda1d1273538e9d69fa09d33274f4e56a614f84a88c4a8",
       "local_path": "sources/BE_NATIONALD_DOFI_2026-06-15.html"
+    },
+    "BG_LONGSTAY_MFA_2026": {
+      "source_id": "BG_LONGSTAY_MFA_2026",
+      "url": "https://www.mfa.bg/upload/99380/2_Visa_D.pdf",
+      "retrieved_at": "2026-06-17T00:00:00Z",
+      "sha256": "d09ba3a7e6a2befa500dfd503ac28aba02ac93f4e377f9bce0c6594d7fb010ea",
+      "local_path": "sources/BG_LONGSTAY_MFA_2026-06-17.pdf"
     },
     "BH_GOLDEN_NPRA_2026": {
       "source_id": "BH_GOLDEN_NPRA_2026",

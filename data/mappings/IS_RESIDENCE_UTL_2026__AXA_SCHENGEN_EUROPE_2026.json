@@ -1,0 +1,9 @@
+{
+  "visa_id": "IS_RESIDENCE_UTL_2026",
+  "product_id": "AXA_SCHENGEN_EUROPE_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.IS.authorized"
+  ]
+}
