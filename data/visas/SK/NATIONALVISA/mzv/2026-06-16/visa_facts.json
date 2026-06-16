@@ -1,0 +1,55 @@
+{
+  "id": "SK_NATIONALVISA_MZV_2026",
+  "country": "Slovakia",
+  "visa_name": "National (Long-Stay) Visa",
+  "route": "National visa documents (Ministry of Foreign and European Affairs)",
+  "authority": "Ministry of Foreign and European Affairs of the Slovak Republic (MZV)",
+  "last_verified": "2026-06-16",
+  "sources": [
+    {
+      "source_id": "SK_NATIONALVISA_MZV_2026",
+      "url": "https://www.mzv.sk/en/web/en/visa-and-services/national-visa",
+      "retrieved_at": "2026-06-16T00:00:00Z",
+      "sha256": "03571b2f20d5d17803d2f1ea79adcd3fafe31af936e0987a0a60a818ddda07e6",
+      "local_path": "sources/SK_NATIONALVISA_MZV_2026-06-16.html"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SK_NATIONALVISA_MZV_2026",
+          "locator": "Which documents should be submitted, basic documents",
+          "excerpt": "proof that the applicant will have health insurance upon entry and throughout their stay in the Slovak Republic (e.g. commercial health insurance taken out abroad that covers medical expenses in the Slovak Republic, commercial health insurance taken out in Slovakia, proof of public health insurance in Slovakia, or proof that the applicant will be covered by public health insurance, etc.);"
+        }
+      ]
+    },
+    {
+      "key": "insurance.authorized_in_country",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SK_NATIONALVISA_MZV_2026",
+          "locator": "Which documents should be submitted, basic documents",
+          "excerpt": "commercial health insurance taken out abroad that covers medical expenses in the Slovak Republic"
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "SK_NATIONALVISA_MZV_2026",
+          "locator": "Which documents should be submitted, basic documents",
+          "excerpt": "health insurance upon entry and throughout their stay in the Slovak Republic"
+        }
+      ]
+    }
+  ]
+}

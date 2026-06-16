@@ -1,0 +1,20 @@
+{
+  "visa_id": "SK_NATIONALVISA_MZV_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "SK_NATIONALVISA_MZV_2026",
+          "locator": "Which documents should be submitted, basic documents",
+          "excerpt": "health insurance upon entry and throughout their stay in the Slovak Republic"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.jurisdiction_facts.SK.authorized"
+  ]
+}
