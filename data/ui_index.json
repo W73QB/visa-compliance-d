@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-16T12:46:05.755042+00:00",
+  "built_at": "2026-06-16T12:52:22.131300+00:00",
   "snapshot_id": "2026-06-16",
   "visas": [
     {
@@ -310,6 +310,49 @@
               "source_id": "BH_GOLDEN_NPRA_2026",
               "locator": "Golden Residency Visa Issuance Request, required documents",
               "excerpt": "a valid medical insurance certificate issued in the Kingdom of Bahrain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "country": "Bermuda",
+      "visa_name": "Partner Residence",
+      "route": "Partner Residence application (Department of Immigration)",
+      "authority": "Government of Bermuda, Department of Immigration",
+      "last_verified": "2026-06-16",
+      "sources": [
+        {
+          "source_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+          "url": "https://www.gov.bm/sites/default/files/2025-09/Partner-Residence-Application-Guidelines.pdf",
+          "retrieved_at": "2026-06-16T00:00:00Z",
+          "sha256": "3a08b313a28d23701681dd1c2aab744197debb578046e56e3cb49df6d964eab1",
+          "local_path": "sources/BM_PARTNERRESIDENCE_GOVBM_2026-06-16.pdf"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+              "locator": "General Rules and Criteria, Health Insurance",
+              "excerpt": "Applicants must have private health insurance coverage for the duration of their intended stay in Bermuda."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+              "locator": "General Rules and Criteria, Health Insurance",
+              "excerpt": "Applicants must have private health insurance coverage for the duration of their intended stay in Bermuda."
             }
           ]
         }
@@ -3079,7 +3122,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3087,7 +3130,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3095,7 +3138,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3103,7 +3146,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3111,7 +3154,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3119,7 +3162,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3127,7 +3170,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3135,7 +3178,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-16"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -3553,6 +3596,81 @@
         "specs.jurisdiction_facts.BH.authorized"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+              "locator": "General Rules and Criteria, Health Insurance",
+              "excerpt": "Applicants must have private health insurance coverage for the duration of their intended stay in Bermuda."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -7445,6 +7563,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "6e714098a34be978a3e8177f70e46e9b71138b6ff796dcba276c4db5d1cdd492",
       "local_path": "sources/BH_GOLDEN_NPRA_2026-06-15.html"
+    },
+    "BM_PARTNERRESIDENCE_GOVBM_2026": {
+      "source_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "url": "https://www.gov.bm/sites/default/files/2025-09/Partner-Residence-Application-Guidelines.pdf",
+      "retrieved_at": "2026-06-16T00:00:00Z",
+      "sha256": "3a08b313a28d23701681dd1c2aab744197debb578046e56e3cb49df6d964eab1",
+      "local_path": "sources/BM_PARTNERRESIDENCE_GOVBM_2026-06-16.pdf"
     },
     "BR_DNV_LISBOA_2026": {
       "source_id": "BR_DNV_LISBOA_2026",
