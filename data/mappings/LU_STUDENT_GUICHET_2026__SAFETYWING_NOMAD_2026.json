@@ -1,0 +1,10 @@
+{
+  "visa_id": "LU_STUDENT_GUICHET_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.LU.authorized",
+    "specs.comprehensive"
+  ]
+}
