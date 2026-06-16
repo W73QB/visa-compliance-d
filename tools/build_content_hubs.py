@@ -643,6 +643,20 @@ VISA_FAQS = {
             "answer": "The health-insurance condition is a general granting requirement, but the source notes several permit types are exempt from demonstrating it (such as the Red-White-Red card, EU Blue Card, researchers, students and ICT workers). Confirm your specific permit type.",
         },
     ],
+    "BG_LONGSTAYD_MFA_2026": [
+        {
+            "question": "What insurance does a Bulgaria long-stay Visa D require?",
+            "answer": "The Ministry of Foreign Affairs requires an insurance policy for the whole period of stay, issued by an insurance company licensed in the European Union, with a minimum amount of coverage of 30,000 euros, covering repatriation costs, emergency medical care and emergency hospital treatment.",
+        },
+        {
+            "question": "Why is only AXA Schengen Europe Travel GREEN for this route?",
+            "answer": "The policy must be issued by an insurer licensed in the European Union. AXA Schengen Europe Travel documents an insurer authorized by the National Bank of Belgium with 100,000 euros of medical cover, hospitalization and repatriation; the other products do not document an EU insurance licence, so the engine records UNKNOWN rather than assuming a provider qualifies.",
+        },
+        {
+            "question": "Is the 30,000 euro figure the Schengen short-stay rule?",
+            "answer": "No. The 30,000 euro minimum is stated on the Ministry of Foreign Affairs Visa D (long-term) document for the national long-stay visa, alongside the whole-period and EU-licence conditions, so the engine encodes it for this national route.",
+        },
+    ],
     "SK_NATIONALVISA_MZV_2026": [
         {
             "question": "What insurance does a Slovak national (long-stay) visa require?",
@@ -960,6 +974,11 @@ RELATED_POSTS = {
     ],
     "AT_RESIDENCE_BMI_2026": [
         ("/posts/austria-residence-insurance/", "Austria residence permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "BG_LONGSTAYD_MFA_2026": [
+        ("/posts/bulgaria-long-stay-visa-insurance/", "Bulgaria long-stay Visa D insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],

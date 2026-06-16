@@ -1,0 +1,60 @@
+{
+  "id": "AXA_SCHENGEN_EUROPE_2026",
+  "provider": "AXA Assistance (Inter Partner Assistance SA/NV)",
+  "product_name": "AXA Schengen Europe Travel (ESSENTIAL)",
+  "effective_date": "2026-06-17",
+  "policy_version": "2026-06",
+  "specs": {
+    "type": "travel medical insurance",
+    "overall_limit": 100000,
+    "currency": "EUR",
+    "deductible": null,
+    "copay": null,
+    "payment_cadence": null,
+    "contract_commitment_months": null,
+    "comprehensive": null,
+    "covers_public_health_system_risks": null,
+    "unlimited": null,
+    "moratorium_days": null,
+    "eu_licensed_insurer": true,
+    "jurisdiction_facts": {
+      "BG": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "AXA_SCHENGEN_EUROPE_2026",
+            "locator": "Eligible countries / Our Essential insurance covers",
+            "excerpt": "Member States of the Schengen area : Germany, Austria, Belgium, Bulgaria, Croatia, Denmark, Spain, Estonia, Finland, France, Greece, Hungary, Italy, Iceland, Liechtenstein, Latvia, Lithuania, Luxembourg, Malta, Norway, Netherlands, Poland, Portugal, Czech Republic, Romania, Slovakia, Slovenia, Sweden, Switzerland"
+          }
+        ]
+      },
+      "LT": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "AXA_SCHENGEN_EUROPE_2026",
+            "locator": "Eligible countries / Our Essential insurance covers",
+            "excerpt": "Member States of the Schengen area : Germany, Austria, Belgium, Bulgaria, Croatia, Denmark, Spain, Estonia, Finland, France, Greece, Hungary, Italy, Iceland, Liechtenstein, Latvia, Lithuania, Luxembourg, Malta, Norway, Netherlands, Poland, Portugal, Czech Republic, Romania, Slovakia, Slovenia, Sweden, Switzerland"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "source_id": "AXA_SCHENGEN_EUROPE_2026",
+      "locator": "Legal notice / insurer identification (page footer)",
+      "excerpt": "AXA Assistance is represented by INTER PARTNER ASSISTANCE SA/NV, a public limited liability company governed by Belgian law with registered office at Regentlaan 7, 1000 Brussel, Belgium - Insurance company authorized by the National Bank of Belgium under number 0487"
+    },
+    {
+      "source_id": "AXA_SCHENGEN_EUROPE_2026",
+      "locator": "Emergency Medical Expenses - Emergency Assistance",
+      "excerpt": "Emergency Medical Expense Coverage EUR 100,000 Medical, surgical, hospitalization, locally prescribed medication expenses"
+    },
+    {
+      "source_id": "AXA_SCHENGEN_EUROPE_2026",
+      "locator": "Repatriation and 24/7 Medical Assistance",
+      "excerpt": "Medical repatriation and in the event of death"
+    }
+  ]
+}

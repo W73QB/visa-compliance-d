@@ -1,0 +1,20 @@
+{
+  "visa_id": "BG_LONGSTAYD_MFA_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "UNKNOWN",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "BG_LONGSTAY_MFA_2026",
+          "locator": "VISA D (long term), Documents required in all cases, item 5",
+          "excerpt": "Insurance policy (and copy) for the whole period of stay"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "specs.eu_licensed_insurer"
+  ]
+}

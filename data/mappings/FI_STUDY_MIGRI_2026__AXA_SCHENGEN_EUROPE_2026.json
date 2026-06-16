@@ -1,0 +1,18 @@
+{
+  "visa_id": "FI_STUDY_MIGRI_2026",
+  "product_id": "AXA_SCHENGEN_EUROPE_2026",
+  "status": "RED",
+  "reasons": [
+    {
+      "text": "Minimum coverage 120000 EUR required, product has 100000 EUR",
+      "evidence": [
+        {
+          "source_id": "FI_STUDY_MIGRI_2026",
+          "locator": "What kind of insurance do I need?, amount by duration",
+          "excerpt": "If your studies take less than two years, your insurance must cover medical expenses up to EUR 120,000."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
