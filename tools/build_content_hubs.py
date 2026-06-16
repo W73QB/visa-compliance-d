@@ -713,6 +713,20 @@ VISA_FAQS = {
             "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Higher Education Licensing Board.",
         },
     ],
+    "BM_PARTNERRESIDENCE_GOVBM_2026": [
+        {
+            "question": "What insurance does a Bermuda partner residence require?",
+            "answer": "The Department of Immigration requires applicants to have private health insurance coverage for the duration of their intended stay in Bermuda.",
+        },
+        {
+            "question": "Why does SafetyWing show YELLOW?",
+            "answer": "The coverage must last the whole intended stay. SafetyWing is a monthly subscription, so the engine flags YELLOW for the full-period requirement; full-period policies such as Genki Native and the Spanish health insurers are GREEN.",
+        },
+        {
+            "question": "Is there a minimum amount?",
+            "answer": "The guidelines state no coverage amount, so the engine encodes none and models that insurance is mandatory and must cover the whole stay.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -957,6 +971,11 @@ RELATED_POSTS = {
     ],
     "AI_STUDENT_GOVAI_2026": [
         ("/posts/anguilla-student-permit-insurance/", "Anguilla student permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "BM_PARTNERRESIDENCE_GOVBM_2026": [
+        ("/posts/bermuda-partner-residence-insurance/", "Bermuda partner residence insurance requirements"),
         ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
