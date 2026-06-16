@@ -699,6 +699,20 @@ VISA_FAQS = {
             "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with Maldives Immigration.",
         },
     ],
+    "AI_STUDENT_GOVAI_2026": [
+        {
+            "question": "What insurance does an Anguilla student permit require?",
+            "answer": "The Higher Education Licensing Board lists health insurance (for the applicant and any dependents), inclusive of coverage commencement and end dates, among the documents to attach to the student permit application.",
+        },
+        {
+            "question": "Is there a minimum amount or territory requirement?",
+            "answer": "The application process lists health insurance with no coverage amount or territory, so the engine models only that insurance is mandatory.",
+        },
+        {
+            "question": "Which products show GREEN?",
+            "answer": "Because the only modeled requirement is that insurance is mandatory, every tracked product that provides health or travel insurance shows GREEN. Confirm the specific terms with the Higher Education Licensing Board.",
+        },
+    ],
 }
 
 RELATED_POSTS = {
@@ -939,6 +953,11 @@ RELATED_POSTS = {
     "MV_RESIDENT_IMMIG_2026": [
         ("/posts/maldives-resident-visa-insurance/", "Maldives Resident Visa insurance requirements"),
         ("/posts/digital-nomad-insurance-asia/", "Digital nomad insurance in Asia"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "AI_STUDENT_GOVAI_2026": [
+        ("/posts/anguilla-student-permit-insurance/", "Anguilla student permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-americas/", "Digital nomad insurance in the Americas"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],
 }
