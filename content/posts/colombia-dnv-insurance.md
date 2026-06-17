@@ -91,7 +91,11 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 In the current snapshot, the product that shows GREEN for this route is Genki Native: its documentation states global coverage that includes Colombia and comprehensive care (outpatient, inpatient, accidents, emergency transport, and maternity after a waiting period), which satisfies the Colombian-territory all-risk requirement. Travel-medical products and Spanish-authorized health policies stay UNKNOWN because they do not document Colombian-territory coverage or omit part of the all-risk list.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+Colombia's Digital Nomad Visa requires a policy that documents coverage within Colombian territory specifically. Genki Native documents territory-specific coverage, which is the exact requirement this route asks for.
+
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
+
+Affiliate disclosure: the Genki link above is an affiliate link — we may earn a commission at no extra cost to you. Compliance results are independent of this partnership. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
