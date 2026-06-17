@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-17T04:48:32.667632+00:00",
+  "built_at": "2026-06-17T05:13:52.019008+00:00",
   "snapshot_id": "2026-06-13",
   "visas": [
     {
@@ -1731,6 +1731,62 @@
               "source_id": "LK_DNV_IMMIGRATION_2026",
               "locator": "Section 3, required documents, item X",
               "excerpt": "International Health Insurance that covers medical care in Sri Lanka"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LT_LONGSTAYD_URM_2026",
+      "country": "Lithuania",
+      "visa_name": "National (long-term) Visa D",
+      "route": "National long-term (D) visa / temporary residence permit - MFA Consular Information",
+      "authority": "Ministry of Foreign Affairs of the Republic of Lithuania (Consular Information)",
+      "last_verified": "2026-06-17",
+      "sources": [
+        {
+          "source_id": "LT_LONGSTAYD_URM_2026",
+          "url": "https://keliauk.urm.lt/en/entry-to-lithuania/health-insurance",
+          "retrieved_at": "2026-06-17T00:00:00Z",
+          "sha256": "d6b554cda82b744e82acb321b816701f3d7c5a1f84f1f33a45b5a6236592218c",
+          "local_path": "sources/LT_LONGSTAYD_URM_2026-06-17.png"
+        }
+      ],
+      "requirements": [
+        {
+          "key": "insurance.mandatory",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "LT_LONGSTAYD_URM_2026",
+              "locator": "Health Insurance (Resolution No 230 of 1 March 2005)",
+              "excerpt": "This Resolution requires that aliens who arrive in the Republic of Lithuania or who seek to receive a temporary residence permit in the Republic of Lithuania be covered by health insurance contracts (policies)."
+            }
+          ]
+        },
+        {
+          "key": "insurance.min_coverage",
+          "op": ">=",
+          "value": 5792,
+          "currency": "EUR",
+          "evidence": [
+            {
+              "source_id": "LT_LONGSTAYD_URM_2026",
+              "locator": "Health Insurance, minimum amount of health insurance",
+              "excerpt": "The minimum amount of health insurance in respect of a single alien shall be: EUR 5 792: ... in case of issuing, changing the status of or extending an airport transit (A), or long-term (D) visa or a temporary residence permit in the Republic of Lithuania."
+            }
+          ]
+        },
+        {
+          "key": "insurance.must_cover_full_period",
+          "op": "==",
+          "value": true,
+          "evidence": [
+            {
+              "source_id": "LT_LONGSTAYD_URM_2026",
+              "locator": "Health Insurance, validity",
+              "excerpt": "A health insurance contract shall be valid throughout the period of the alien's stay in the Republic of Lithuania."
             }
           ]
         }
@@ -6506,6 +6562,97 @@
       "last_verified": "2026-06-15"
     },
     {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "ASISA_HEALTH_RESIDENTS_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "AXA_SCHENGEN_EUROPE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "GENERIC_EXPAT_COMPLETE_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "GENKI_NATIVE_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "GENKI_TRAVELER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "SAFETYWING_NOMAD_2026",
+      "status": "YELLOW",
+      "reasons": [
+        {
+          "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+          "evidence": [
+            {
+              "source_id": "LT_LONGSTAYD_URM_2026",
+              "locator": "Health Insurance, validity",
+              "excerpt": "A health insurance contract shall be valid throughout the period of the alien's stay in the Republic of Lithuania."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "SANITAS_MAS_SALUD_SIN_COPAGO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "WORLDNOMADS_EXPLORER_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
       "visa_id": "LU_STUDENT_GUICHET_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
       "status": "UNKNOWN",
@@ -8699,6 +8846,13 @@
       "retrieved_at": "2026-06-15T00:00:00Z",
       "sha256": "9f66840d5a6f2a254112f96e7f131ce4ee5121695be7b53b0b425748169048c7",
       "local_path": "sources/LK_DNV_IMMIGRATION_2026-06-15.pdf"
+    },
+    "LT_LONGSTAYD_URM_2026": {
+      "source_id": "LT_LONGSTAYD_URM_2026",
+      "url": "https://keliauk.urm.lt/en/entry-to-lithuania/health-insurance",
+      "retrieved_at": "2026-06-17T00:00:00Z",
+      "sha256": "d6b554cda82b744e82acb321b816701f3d7c5a1f84f1f33a45b5a6236592218c",
+      "local_path": "sources/LT_LONGSTAYD_URM_2026-06-17.png"
     },
     "LU_STUDENT_GUICHET_2026": {
       "source_id": "LU_STUDENT_GUICHET_2026",

@@ -643,6 +643,20 @@ VISA_FAQS = {
             "answer": "The health-insurance condition is a general granting requirement, but the source notes several permit types are exempt from demonstrating it (such as the Red-White-Red card, EU Blue Card, researchers, students and ICT workers). Confirm your specific permit type.",
         },
     ],
+    "LT_LONGSTAYD_URM_2026": [
+        {
+            "question": "What insurance does a Lithuania national (D) visa require?",
+            "answer": "The MFA Consular Information page (Resolution No 230 of 1 March 2005) requires health insurance valid for the whole period of stay, with a minimum amount of EUR 5,792 for a long-term (D) visa or temporary residence permit, covering basic medical assistance costs and return for health reasons.",
+        },
+        {
+            "question": "Is the minimum EUR 30,000?",
+            "answer": "No. EUR 30,000 is the minimum for a short-term (C) visa. For a long-term (D) visa or temporary residence permit the stated minimum is EUR 5,792, so the engine encodes EUR 5,792 for this national route.",
+        },
+        {
+            "question": "Which products are GREEN?",
+            "answer": "Products that document a limit at or above EUR 5,792 and cover the whole period are GREEN (Genki Native, Genki Traveler, AXA Schengen Europe Travel, World Nomads). Monthly subscriptions such as SafetyWing show YELLOW because cover can lapse; products with no documented limit stay UNKNOWN.",
+        },
+    ],
     "BG_LONGSTAYD_MFA_2026": [
         {
             "question": "What insurance does a Bulgaria long-stay Visa D require?",
@@ -974,6 +988,11 @@ RELATED_POSTS = {
     ],
     "AT_RESIDENCE_BMI_2026": [
         ("/posts/austria-residence-insurance/", "Austria residence permit insurance requirements"),
+        ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
+        ("/guides/how-to-read-results/", "How to read compliance results"),
+    ],
+    "LT_LONGSTAYD_URM_2026": [
+        ("/posts/lithuania-national-d-insurance/", "Lithuania national (D) visa insurance requirements"),
         ("/posts/digital-nomad-insurance-europe/", "Digital nomad insurance in Europe"),
         ("/guides/how-to-read-results/", "How to read compliance results"),
     ],

@@ -1,0 +1,56 @@
+{
+  "id": "LT_LONGSTAYD_URM_2026",
+  "country": "Lithuania",
+  "visa_name": "National (long-term) Visa D",
+  "route": "National long-term (D) visa / temporary residence permit - MFA Consular Information",
+  "authority": "Ministry of Foreign Affairs of the Republic of Lithuania (Consular Information)",
+  "last_verified": "2026-06-17",
+  "sources": [
+    {
+      "source_id": "LT_LONGSTAYD_URM_2026",
+      "url": "https://keliauk.urm.lt/en/entry-to-lithuania/health-insurance",
+      "retrieved_at": "2026-06-17T00:00:00Z",
+      "sha256": "d6b554cda82b744e82acb321b816701f3d7c5a1f84f1f33a45b5a6236592218c",
+      "local_path": "sources/LT_LONGSTAYD_URM_2026-06-17.png"
+    }
+  ],
+  "requirements": [
+    {
+      "key": "insurance.mandatory",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "LT_LONGSTAYD_URM_2026",
+          "locator": "Health Insurance (Resolution No 230 of 1 March 2005)",
+          "excerpt": "This Resolution requires that aliens who arrive in the Republic of Lithuania or who seek to receive a temporary residence permit in the Republic of Lithuania be covered by health insurance contracts (policies)."
+        }
+      ]
+    },
+    {
+      "key": "insurance.min_coverage",
+      "op": ">=",
+      "value": 5792,
+      "currency": "EUR",
+      "evidence": [
+        {
+          "source_id": "LT_LONGSTAYD_URM_2026",
+          "locator": "Health Insurance, minimum amount of health insurance",
+          "excerpt": "The minimum amount of health insurance in respect of a single alien shall be: EUR 5 792: ... in case of issuing, changing the status of or extending an airport transit (A), or long-term (D) visa or a temporary residence permit in the Republic of Lithuania."
+        }
+      ]
+    },
+    {
+      "key": "insurance.must_cover_full_period",
+      "op": "==",
+      "value": true,
+      "evidence": [
+        {
+          "source_id": "LT_LONGSTAYD_URM_2026",
+          "locator": "Health Insurance, validity",
+          "excerpt": "A health insurance contract shall be valid throughout the period of the alien's stay in the Republic of Lithuania."
+        }
+      ]
+    }
+  ]
+}
