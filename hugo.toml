@@ -62,10 +62,18 @@ canonifyURLs = true
     pageRef = "methodology"
     weight = 6
   [[menu.main]]
+    name = "About"
+    pageRef = "about"
+    weight = 7
+  [[menu.main]]
+    name = "Contact"
+    pageRef = "contact"
+    weight = 8
+  [[menu.main]]
     name = "Disclaimer"
     pageRef = "disclaimer"
-    weight = 7
+    weight = 9
   [[menu.main]]
     name = "Affiliate"
     pageRef = "affiliate-disclosure"
-    weight = 8
+    weight = 10
