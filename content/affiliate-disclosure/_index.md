@@ -62,6 +62,10 @@ We earn a commission when readers open a Wise account and complete a qualifying 
 
 Campaigns: EUR, USD, JPY, GBP, AUD
 
+**Genki (genki.world)**
+
+Genki provides international health insurance with territory-specific coverage documentation. We include Genki affiliate links on routes where Genki's policy documentation meets the destination's specific territory requirement. We earn a commission when readers purchase a Genki policy through our link, at no extra cost to them.
+
 ## 4) Questions
 
 If you have concerns about affiliate links or potential conflicts of interest, you can contact us or open a report using the "Notify me of changes" function.
