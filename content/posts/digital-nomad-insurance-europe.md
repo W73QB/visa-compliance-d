@@ -1,7 +1,8 @@
 ---
-title: "Digital nomad insurance requirements (Europe - verified subset)"
+title: "Digital nomad visa insurance in Europe (evidence-based)"
 date: 2026-01-16
-description: "Evidence-based summary of verified insurance requirements for Europe routes in this dataset."
+lastmod: 2026-06-16
+description: "Evidence-based health insurance requirements for digital nomad and long-stay visas across European countries, with links to every route we track."
 tags: ["digital-nomad", "insurance", "europe", "compliance"]
 faq:
   - question: "Do all European digital nomad visas require insurance?"
@@ -16,7 +17,7 @@ faq:
 
 ## Short answer
 
-Europe does not have a single insurance standard for digital nomad routes. This hub summarizes the verified subset in this dataset: Spain DNV, Portugal E11, Germany Freelance (national D), and Malta Nomad Residence Permit. Each route has distinct authority language and evidence dates (Sources: `BLS_ES_DNV_LONDON_2026`, `VFS_PT_E11_CHINA_2025`, `DE_D_VISA_HEALTH_INSURANCE_2026`, `MT_RESIDENCY_FAQ_2026`).
+Europe does not have a single insurance standard for digital nomad and long-stay visas — requirements differ by country and authority, from "any-state travel insurance with repatriation" to "unlimited cover from an insurer authorized in the country". This hub links every European route we track (see the directory below) and works through four of them in detail as examples: Spain DNV, Portugal E11, Germany Freelance (national D), and Malta Nomad Residence Permit (Sources: `BLS_ES_DNV_LONDON_2026`, `VFS_PT_E11_CHINA_2025`, `DE_D_VISA_HEALTH_INSURANCE_2026`, `MT_RESIDENCY_FAQ_2026`). For any route, the compliance checker shows the live, evidence-based status.
 
 ## Key findings at a glance
 
@@ -24,7 +25,7 @@ Europe does not have a single insurance standard for digital nomad routes. This 
 |---|---|
 | Routes covered | Spain DNV, Portugal E11, Germany Freelance, Malta Nomad |
 | Evidence verified | 2026-01-12 to 2026-01-15 |
-| Snapshot | releases/2026-01-15 |
+| Snapshot | 2026-06-13 |
 | Spain DNV highlights | Unlimited coverage, no deductibles, insurer authorized in Spain |
 | Germany Freelance highlights | Health insurance commensurate with statutory coverage; travel insurance not sufficient |
 | Malta highlights | Insurance mandatory; monthly payment policies not accepted |
@@ -90,11 +91,11 @@ We evaluate each route independently using the evidence linked above. Product fa
 
 Use [the compliance checker](/ui/) for route-specific results. Example link:
 
-- [/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15](/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15)
+- [/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=2026-06-13](/ui/?visa=ES_DNV_BLS_LONDON_2026&product=SAFETYWING_NOMAD_2026&snapshot=2026-06-13)
 
 ## Mapping results summary
 
-As of snapshot `releases/2026-01-15`, example product outcomes across the verified Europe routes are:
+As of snapshot `2026-06-13`, example product outcomes across the verified Europe routes are:
 
 | Route | SafetyWing | World Nomads | Genki |
 |---|---|---|---|
@@ -102,6 +103,40 @@ As of snapshot `releases/2026-01-15`, example product outcomes across the verifi
 | Portugal DNV | GREEN | GREEN | GREEN |
 | Germany Freelance | RED | RED | UNKNOWN |
 | Malta Nomad | RED | UNKNOWN | UNKNOWN |
+
+## European routes in this dataset
+
+Every European route we track, with its insurance guide. Open any one for the verbatim authority requirement and the live product status, or use the [compliance checker](/ui/) directly.
+
+- **Albania** — [Unique Permit (Digital Mover) insurance](/posts/albania-unique-permit-insurance/)
+- **Austria** — [Residence Permit insurance](/posts/austria-residence-insurance/)
+- **Belgium** — [National (D) entry insurance](/posts/belgium-national-d-insurance/)
+- **Bulgaria** — [Long-stay Visa D insurance](/posts/bulgaria-long-stay-visa-insurance/)
+- **Croatia** — [Digital Nomad insurance](/posts/croatia-dnv-insurance/)
+- **Cyprus** — [Digital Nomad insurance](/posts/cyprus-dnv-insurance/)
+- **Czech Republic** — [Long-term business visa insurance](/posts/czech-business-visa-insurance/)
+- **Estonia** — [Digital Nomad Visa insurance](/posts/estonia-dnv-insurance/)
+- **Finland** — [Study residence insurance](/posts/finland-study-insurance/)
+- **Georgia** — [Long-term visa insurance](/posts/georgia-long-term-visa-insurance/)
+- **Germany** — [Freelance visa insurance](/posts/germany-freelance-insurance/)
+- **Greece** — [Digital Nomad Visa insurance](/posts/greece-dnv-insurance/)
+- **Iceland** — [Residence permit insurance](/posts/iceland-residence-insurance/)
+- **Ireland** — [Non-EEA student insurance](/posts/ireland-student-insurance/)
+- **Italy** — [Self-employment visa insurance](/posts/italy-selfemployment-insurance/)
+- **Latvia** — [Remote-work visa insurance](/posts/latvia-remote-work-insurance/)
+- **Lithuania** — [National (D) visa insurance](/posts/lithuania-national-d-insurance/)
+- **Luxembourg** — [Student authorisation insurance](/posts/luxembourg-student-insurance/)
+- **Malta** — [Nomad Residence Permit insurance](/posts/malta-nomad-insurance/)
+- **Montenegro** — [Digital Nomad insurance](/posts/montenegro-dnv-insurance/)
+- **Poland** — [National (D) visa insurance](/posts/poland-national-d-insurance/)
+- **Portugal** — [D7 visa insurance](/posts/portugal-d7-insurance/) · [Remote-work (E11) insurance](/posts/portugal-dnv-insurance/)
+- **Romania** — [Digital Nomad Visa insurance](/posts/romania-dnv-insurance/)
+- **San Marino** — [Elective residence insurance](/posts/san-marino-elective-residence-insurance/)
+- **Slovakia** — [National visa insurance](/posts/slovakia-national-visa-insurance/)
+- **Slovenia** — [Long-stay (D) insurance](/posts/slovenia-long-stay-d-insurance/)
+- **Spain** — [Digital Nomad Visa insurance](/posts/spain-dnv-insurance/) · [Non-Lucrative Visa insurance](/posts/spain-nlv-insurance/)
+- **Sweden** — [Study residence insurance](/posts/sweden-study-insurance/)
+- **Turkey** — [Short-term residence permit insurance](/posts/turkey-residence-permit-insurance/)
 
 ## Related reading
 
@@ -134,7 +169,7 @@ with qualifying providers are confirmed.
 - **Germany Freelance:** requires statutory-level health insurance (not travel insurance)
 - **Malta Nomad:** requires annual prepayment (monthly policies not accepted)
 
-{{< checker_cta snapshot="releases/2026-01-15" label="Check your specific route and product" >}}
+{{< checker_cta snapshot="2026-06-13" label="Check your specific route and product" >}}
 
 *Affiliate disclosure: SafetyWing links are affiliate links for Portugal route only.
 We may earn a commission at no extra cost to you.
@@ -147,7 +182,7 @@ Not legal advice. Compliance results are evidence-based snapshots.
 
 If an affiliate link is present, it appears only after results and does not change the compliance outcome.
 
-Last updated: 2026-02-05
+Last updated: 2026-06-16
 
 ## Evidence log
 
