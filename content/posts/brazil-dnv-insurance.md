@@ -87,7 +87,11 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is a health policy valid in Brazilian territory, so what matters is documented Brazil coverage, not a price or a brand. In the current snapshot, Genki Native shows GREEN: it is an international health policy whose documentation states global coverage that includes Brazil. The travel-medical products show UNKNOWN because their documents do not state validity in Brazilian territory.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+Brazil's Digital Nomad Visa (VITEM XIV) requires a policy documenting validity in Brazilian territory specifically. Genki Native documents territory-specific coverage matching this requirement.
+
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
+
+Affiliate disclosure: the Genki link above is an affiliate link — we may earn a commission at no extra cost to you. Compliance results are independent of this partnership. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
