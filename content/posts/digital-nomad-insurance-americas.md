@@ -1,7 +1,8 @@
 ---
-title: "Digital nomad insurance requirements (Americas - verified subset)"
+title: "Digital nomad visa insurance in the Americas (evidence-based)"
 date: 2026-01-16
-description: "Evidence-based summary of verified insurance requirements for Americas routes in this dataset."
+lastmod: 2026-06-16
+description: "Evidence-based health insurance requirements for digital nomad and long-stay visas across the Americas and Caribbean, with links to every route we track."
 tags: ["digital-nomad", "insurance", "americas", "compliance"]
 faq:
   - question: "What is the minimum coverage in the Americas routes listed?"
@@ -16,7 +17,7 @@ faq:
 
 ## Short answer
 
-The verified Americas subset in this dataset is Costa Rica Digital Nomad Visa. Executive Decree 43619 requires health insurance with at least US $50,000 in medical coverage and coverage for the full authorized legal stay period (Source: `CR_DECREE_43619_2026`, locator: Article 9; verified 2026-01-12).
+Insurance requirements across the Americas and Caribbean vary widely — from no insurance requirement, to a fixed minimum amount, to coverage that must be valid in the destination's territory. This hub links every Americas route we track (see the directory below) and works through Costa Rica in detail as an example: Executive Decree 43619 requires health insurance with at least US $50,000 in medical coverage and coverage for the full authorized legal stay period (Source: `CR_DECREE_43619_2026`, locator: Article 9; verified 2026-01-12). For any route, the compliance checker shows the live, evidence-based status.
 
 ## Key findings at a glance
 
@@ -24,7 +25,7 @@ The verified Americas subset in this dataset is Costa Rica Digital Nomad Visa. E
 |---|---|
 | Route covered | Costa Rica Digital Nomad Visa |
 | Evidence verified | 2026-01-12 |
-| Snapshot | releases/2026-01-15 |
+| Snapshot | 2026-06-13 |
 | Minimum coverage | US $50,000 (medical expenses) |
 | Coverage duration | Full authorized legal stay |
 
@@ -87,11 +88,11 @@ In practice, the two most common gaps are missing coverage amounts and unclear d
 
 Use [the compliance checker](/ui/) for route-specific results. Example link:
 
-- [/ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snapshot=releases/2026-01-15](/ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snapshot=releases/2026-01-15)
+- [/ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snapshot=2026-06-13](/ui/?visa=CR_DN_DECREE_43619_2026&product=GENKI_TRAVELER_2026&snapshot=2026-06-13)
 
 ## Mapping results summary
 
-As of snapshot `releases/2026-01-15`, example product outcomes for Costa Rica are:
+As of snapshot `2026-06-13`, example product outcomes for Costa Rica are:
 
 | Route | SafetyWing | World Nomads | Genki |
 |---|---|---|---|
@@ -100,6 +101,22 @@ As of snapshot `releases/2026-01-15`, example product outcomes for Costa Rica ar
 YELLOW indicates partial evidence in the current snapshot. It often means the policy meets some requirements but lacks explicit documentation for the minimum amount or full-stay duration.
 
 If you see YELLOW or UNKNOWN, open the route page and compare the authority wording to your policy certificate. The checker is intentionally conservative when amounts or dates are not explicit.
+
+## Americas routes in this dataset
+
+Every Americas and Caribbean route we track, with its insurance guide. Open any one for the verbatim authority requirement and the live product status, or use the [compliance checker](/ui/) directly.
+
+- **Anguilla** — [Student permit insurance](/posts/anguilla-student-permit-insurance/)
+- **Barbados** — [Welcome Stamp insurance](/posts/barbados-welcome-stamp-insurance/)
+- **Belize** — [Long Stay permit insurance](/posts/belize-long-stay-insurance/)
+- **Bermuda** — [Partner residence insurance](/posts/bermuda-partner-residence-insurance/)
+- **Brazil** — [Digital Nomad Visa (VITEM XIV) insurance](/posts/brazil-dnv-insurance/)
+- **Colombia** — [Digital Nomad Visa insurance](/posts/colombia-dnv-insurance/)
+- **Costa Rica** — [Digital Nomad Visa insurance](/posts/costa-rica-dn-insurance/)
+- **Dominica** — [Work In Nature insurance](/posts/dominica-work-in-nature-insurance/)
+- **Ecuador** — [Digital nomad (rentista) insurance](/posts/ecuador-nomad-insurance/)
+- **Panama** — [Remote Worker Visa insurance](/posts/panama-remote-worker-insurance/)
+- **Uruguay** — [Working Holiday insurance](/posts/uruguay-working-holiday-insurance/)
 
 ## Related reading
 
@@ -115,7 +132,7 @@ Not legal advice. Compliance results are evidence-based snapshots.
 
 If an affiliate link is present, it appears only after results and does not change the compliance outcome.
 
-Last updated: 2026-02-05
+Last updated: 2026-06-16
 
 ## Evidence log
 
