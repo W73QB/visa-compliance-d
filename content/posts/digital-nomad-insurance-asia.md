@@ -1,7 +1,8 @@
 ---
-title: "Digital nomad insurance requirements (Asia - verified subset)"
+title: "Digital nomad visa insurance in Asia & Pacific (evidence-based)"
 date: 2026-01-16
-description: "Evidence-based summary of verified insurance requirements for Asia routes in this dataset."
+lastmod: 2026-06-16
+description: "Evidence-based health insurance requirements for digital nomad and long-stay visas across Asia, the Middle East and the Pacific, with links to every route we track."
 tags: ["digital-nomad", "insurance", "asia", "compliance"]
 faq:
   - question: "What does NOT_REQUIRED mean in Asia routes?"
@@ -16,7 +17,7 @@ faq:
 
 ## Short answer
 
-The verified Asia subset in this dataset is Thailand DTV (Thai E-Visa). The official DTV Workcation requirements list does not include insurance among required documents, so the checker marks insurance as NOT_REQUIRED for this route (Source: `TH_MFA_DTV_2026`, locator: Complete requirements list for all DTV categories; verified 2026-01-12).
+Insurance requirements across Asia, the Middle East and the Pacific range from none at all to a documented amount or territory-specific cover. This hub links every route we track in the region (see the directory below) and works through Thailand in detail as an example: the official DTV Workcation requirements list does not include insurance among required documents, so the checker marks insurance as NOT_REQUIRED for that route (Source: `TH_MFA_DTV_2026`, locator: Complete requirements list for all DTV categories; verified 2026-01-12). For any route, the compliance checker shows the live, evidence-based status.
 
 ## Key findings at a glance
 
@@ -24,7 +25,7 @@ The verified Asia subset in this dataset is Thailand DTV (Thai E-Visa). The offi
 |---|---|
 | Route covered | Thailand DTV (Thai E-Visa) |
 | Evidence verified | 2026-01-12 |
-| Snapshot | releases/2026-01-15 |
+| Snapshot | 2026-06-13 |
 | Insurance status | NOT_REQUIRED |
 | Required documents (non-insurance) | Passport, photo, proof of location, financial proof, employment/portfolio |
 
@@ -91,17 +92,32 @@ Evidence boundaries matter here: the only claim we make is that insurance is not
 
 Use [the compliance checker](/ui/) for route-specific results. Example link:
 
-- [/ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15](/ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=releases/2026-01-15)
+- [/ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=2026-06-13](/ui/?visa=TH_DTV_MFA_2026&product=SAFETYWING_NOMAD_2026&snapshot=2026-06-13)
 
 ## Mapping results summary
 
-As of snapshot `releases/2026-01-15`, the checker returns NOT_REQUIRED for all products on Thailand DTV because the authority list omits insurance:
+As of snapshot `2026-06-13`, the checker returns NOT_REQUIRED for all products on Thailand DTV because the authority list omits insurance:
 
 | Route | SafetyWing | World Nomads | Genki |
 |---|---|---|---|
 | Thailand DTV | NOT_REQUIRED | NOT_REQUIRED | NOT_REQUIRED |
 
 NOT_REQUIRED does not indicate a policy is good or bad; it only means there is no insurance requirement to evaluate for this route in the verified evidence.
+
+## Asia & Pacific routes in this dataset
+
+Every route we track across Asia, the Middle East, Central Asia and the Pacific, with its insurance guide. Open any one for the verbatim authority requirement and the live product status, or use the [compliance checker](/ui/) directly.
+
+- **Bahrain** — [Golden Residency insurance](/posts/bahrain-golden-residency-insurance/)
+- **Japan** — [Digital Nomad Visa insurance](/posts/japan-dnv-insurance/)
+- **Kazakhstan** — [Neo Nomad Visa insurance](/posts/kazakhstan-neo-nomad-insurance/)
+- **Maldives** — [Resident Visa insurance](/posts/maldives-resident-visa-insurance/)
+- **New Zealand** — [Fee-paying student visa insurance](/posts/new-zealand-student-visa-insurance/)
+- **South Korea** — [Workation (F-1-D) visa insurance](/posts/korea-workation-visa-insurance/)
+- **Sri Lanka** — [Digital Nomad Visa insurance](/posts/sri-lanka-dnv-insurance/)
+- **Taiwan** — [Digital Nomad Visa insurance](/posts/taiwan-dnv-insurance/)
+- **Thailand** — [DTV (Thai E-Visa) insurance](/posts/thailand-dtv-insurance/)
+- **UAE** — [Virtual Work residence insurance](/posts/uae-virtual-work-insurance/)
 
 ## Related reading
 
@@ -117,7 +133,7 @@ Not legal advice. Compliance results are evidence-based snapshots.
 
 If an affiliate link is present, it appears only after results and does not change the compliance outcome.
 
-Last updated: 2026-02-05
+Last updated: 2026-06-16
 
 ## Evidence log
 
