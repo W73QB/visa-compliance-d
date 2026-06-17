@@ -1,0 +1,57 @@
+{
+  "id": "FEATHER_SPAIN_2026",
+  "provider": "Feather",
+  "product_name": "Feather Expat Health Insurance (Spain)",
+  "effective_date": "2026-06-18",
+  "policy_version": "2026-06",
+  "specs": {
+    "type": "health insurance",
+    "overall_limit": null,
+    "currency": "EUR",
+    "deductible": {
+      "amount": 0,
+      "currency": "EUR"
+    },
+    "copay": false,
+    "payment_cadence": null,
+    "contract_commitment_months": null,
+    "comprehensive": true,
+    "covers_public_health_system_risks": true,
+    "unlimited": true,
+    "moratorium_days": 0,
+    "jurisdiction_facts": {
+      "ES": {
+        "authorized": true,
+        "evidence": [
+          {
+            "source_id": "FEATHER_SPAIN_NLV_2026",
+            "locator": "Spain non-lucrative visa health insurance requirements",
+            "excerpt": "Insurance company registered in Spain (DGSFP) (Code L1497)"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "source_id": "FEATHER_SPAIN_NLV_2026",
+      "locator": "Spain non-lucrative visa health insurance requirements",
+      "excerpt": "Unlimited medical coverage comparable to the public health system in Spain"
+    },
+    {
+      "source_id": "FEATHER_SPAIN_NLV_2026",
+      "locator": "Spain non-lucrative visa health insurance requirements",
+      "excerpt": "No copayments or deductibles"
+    },
+    {
+      "source_id": "FEATHER_SPAIN_NLV_2026",
+      "locator": "Spain non-lucrative visa health insurance requirements",
+      "excerpt": "No waiting periods"
+    },
+    {
+      "source_id": "FEATHER_SPAIN_NLV_2026",
+      "locator": "Spain non-lucrative visa health insurance requirements",
+      "excerpt": "Medical repatriation and repatriation of mortal remains"
+    }
+  ]
+}

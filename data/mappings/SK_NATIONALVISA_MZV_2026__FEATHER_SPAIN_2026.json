@@ -1,0 +1,9 @@
+{
+  "visa_id": "SK_NATIONALVISA_MZV_2026",
+  "product_id": "FEATHER_SPAIN_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.jurisdiction_facts.SK.authorized"
+  ]
+}

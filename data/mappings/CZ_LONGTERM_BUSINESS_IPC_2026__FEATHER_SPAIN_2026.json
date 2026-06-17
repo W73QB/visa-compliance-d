@@ -1,0 +1,9 @@
+{
+  "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+  "product_id": "FEATHER_SPAIN_2026",
+  "status": "UNKNOWN",
+  "reasons": [],
+  "missing": [
+    "specs.overall_limit"
+  ]
+}

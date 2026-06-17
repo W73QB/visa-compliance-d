@@ -103,7 +103,7 @@ We compare the authority requirements above against product evidence in the rule
 
 Use [the compliance checker](/ui/) to check the current snapshot for this route, or use the CTA below:
 
-{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" product="ASISA_HEALTH_RESIDENTS_2026" snapshot="releases/2026-01-16" >}}
+{{< checker_cta visa="ES_DNV_BLS_LONDON_2026" product="ASISA_HEALTH_RESIDENTS_2026" snapshot="2026-06-13" >}}
 
 ## Related reading
 
@@ -113,14 +113,24 @@ Use [the compliance checker](/ui/) to check the current snapshot for this route,
 - [How to read compliance results](/guides/how-to-read-results/)
 - [Compliance status meaning](/guides/compliance-status-meaning/)
 
+## Where to find compliant insurance for the Spain Digital Nomad Visa
+
+Spain's DNV requires a health policy from an insurer authorized in Spain, with unlimited cover, no deductible, no co-payment and no waiting period, covering the risks of the public health system; travel insurance is not accepted. In the current snapshot the products that show GREEN are:
+
+- [ASISA Health Residents](https://www.asisa.es/seguros-medicos/extranjeros/residencia) — official (non-affiliate) link. We do not earn a commission.
+- [Feather Expat Health Insurance](https://feather-insurance.com/en-es/health-insurance/expat/non-lucrative-visa) — a health policy from an insurer registered in Spain (DGSFP), documenting unlimited cover, no co-payments or deductibles, and no waiting periods.
+
+> Use the compliance checker to confirm the current GREEN products for this route before you buy.
+
 ## Disclaimer + Affiliate disclosure
 
 Not legal advice. Compliance results are evidence-based snapshots.
 
-If an affiliate link is present, it appears only after results and does not change the compliance outcome.
+If an affiliate link is present, it appears only after results and does not change the compliance outcome. The ASISA and Feather links above are currently official links (non-affiliate).
 
-Last updated: 2026-02-05
+Last updated: 2026-06-18
 
 ## Evidence log
 
 - Source: BLS_ES_DNV_LONDON_2026
+- Source: FEATHER_SPAIN_NLV_2026
