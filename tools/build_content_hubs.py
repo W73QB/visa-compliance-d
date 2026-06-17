@@ -1407,7 +1407,7 @@ def render_detail(visa: dict, sources: dict, snapshot_id: str) -> None:
 
     frontmatter = [
         "---",
-        f'title: "{visa["country"]} {visa["visa_name"]} - {visa["route"]}"',
+        f'title: "{visa["country"]} {visa["visa_name"]}"',
         f'visa_id: "{visa_id}"',
         f'last_verified: "{visa.get("last_verified", "")}"',
         f'source_ids: {json.dumps(source_ids)}',
