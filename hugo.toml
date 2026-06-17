@@ -47,34 +47,38 @@ canonifyURLs = true
     pageRef = "visas"
     weight = 2
   [[menu.main]]
+    name = "Compare"
+    pageRef = "visa-insurance-requirements"
+    weight = 3
+  [[menu.main]]
     name = "Blog"
     pageRef = "posts"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Guides"
     pageRef = "guides"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "Traps"
     pageRef = "traps"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "Methodology"
     pageRef = "methodology"
-    weight = 6
+    weight = 7
   [[menu.main]]
     name = "About"
     pageRef = "about"
-    weight = 7
+    weight = 8
   [[menu.main]]
     name = "Contact"
     pageRef = "contact"
-    weight = 8
+    weight = 9
   [[menu.main]]
     name = "Disclaimer"
     pageRef = "disclaimer"
-    weight = 9
+    weight = 10
   [[menu.main]]
     name = "Affiliate"
     pageRef = "affiliate-disclosure"
-    weight = 10
+    weight = 11
