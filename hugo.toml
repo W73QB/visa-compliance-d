@@ -19,6 +19,7 @@ canonifyURLs = true
   [params.analytics]
     src = ""
     id = ""
+    bing_uet_tag = ""
     [params.analytics.bing]
       SiteVerificationTag = "f105995883e543d0a55612178fb6c391"
   [params.gtm]
