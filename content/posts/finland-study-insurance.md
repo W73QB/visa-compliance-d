@@ -88,7 +88,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 For studies under two years, the requirement combines a full-stay term with a EUR 120,000 medical limit. In the current snapshot, Genki Traveler, Genki Native and World Nomads show GREEN: each documents a limit at or above the threshold and a full-period term. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the stay ends. Check that your excess is no more than EUR 300.
 
-- [Genki Traveler](https://genki.world/) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

@@ -87,7 +87,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is a full-period travel medical policy of at least 30,000 EUR, valid Schengen-wide. In the current snapshot, Genki Traveler, Genki Native and World Nomads show GREEN: each documents a limit at or above 30,000 EUR and a term that can span the visa validity. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the visa expires.
 
-- [Genki Traveler](https://genki.world/) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

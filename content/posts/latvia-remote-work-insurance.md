@@ -85,7 +85,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement combines an amount (at least 42,600 EUR) with a territory (valid in Latvia and Schengen). In the current snapshot, Genki Native shows GREEN: it documents global coverage including Latvia plus a limit above the threshold. The travel-medical and Spanish products show UNKNOWN because their documents do not state Latvia-specific validity.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

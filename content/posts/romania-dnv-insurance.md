@@ -88,7 +88,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is a full-period travel medical policy of at least 30,000 EUR, so what matters is a documented limit and a term that spans the whole stay. In the current snapshot, Genki Traveler, Genki Native and World Nomads Explorer show GREEN: each documents a coverage limit at or above 30,000 EUR and a policy term that can span the full stay. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the stay ends.
 
-- [Genki Traveler](https://genki.world/) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

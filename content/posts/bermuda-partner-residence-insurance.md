@@ -84,7 +84,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The requirement is private health insurance for the whole intended stay, with no amount specified. In the current snapshot, full-period policies show GREEN, including Genki Native and the Spanish health insurers; SafetyWing shows YELLOW because it is a monthly subscription that does not establish full-period coverage by itself.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

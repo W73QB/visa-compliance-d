@@ -86,7 +86,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is a health-insurance policy valid for at least a year, so a full-period policy is what to look for. In the current snapshot, Genki Native shows GREEN: it is an international health policy with a full term that covers Albania, rather than a cancellable monthly subscription. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the year ends.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

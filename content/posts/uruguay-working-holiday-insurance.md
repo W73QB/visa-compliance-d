@@ -84,7 +84,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The requirement is comprehensive health insurance, with no amount or territory specified. In the current snapshot, comprehensive health policies show GREEN, including Genki Native and the Spanish health insurers. The travel-medical products show UNKNOWN because their documents do not establish comprehensive cover.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

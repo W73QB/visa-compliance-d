@@ -89,7 +89,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The requirement is a comprehensive health policy covering all risks in Austria, and travel insurance is explicitly not sufficient. In the current snapshot, Genki Native shows GREEN: it documents global comprehensive coverage that includes Austria. SafetyWing and World Nomads show RED because they are travel-medical products, which the Ministry states are not sufficient. Confirm your permit type, since some are exempt.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

@@ -83,7 +83,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is international health insurance that covers medical care in Sri Lanka, so what matters is documented Sri Lanka coverage. In the current snapshot, Genki Native shows GREEN: it documents global coverage that includes Sri Lanka. The travel-medical and Spanish products show UNKNOWN because their documents do not state validity in Sri Lanka.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
