@@ -1,0 +1,18 @@
+{
+  "visa_id": "LT_LONGSTAYD_URM_2026",
+  "product_id": "SAFETYWING_NOMAD_2026",
+  "status": "YELLOW",
+  "reasons": [
+    {
+      "text": "Visa requires coverage for full legal stay, monthly subscriptions can be cancelled",
+      "evidence": [
+        {
+          "source_id": "LT_LONGSTAYD_URM_2026",
+          "locator": "Health Insurance, validity",
+          "excerpt": "A health insurance contract shall be valid throughout the period of the alien's stay in the Republic of Lithuania."
+        }
+      ]
+    }
+  ],
+  "missing": []
+}
