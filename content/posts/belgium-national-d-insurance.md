@@ -87,7 +87,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is health insurance covering all risks in Belgium. In the current snapshot, Genki Native shows GREEN: it documents global comprehensive coverage that includes Belgium. The travel-medical and Spanish products show UNKNOWN because their documents do not state all-risk coverage in Belgium. Confirm with the Immigration Office whether a certificate of registration with a healthcare fund is required for your category.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

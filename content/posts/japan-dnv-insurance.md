@@ -94,7 +94,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 In the current snapshot, the products that show GREEN for this route are those whose documented limit clears JPY 10 million once converted to a common currency: Genki Traveler, SafetyWing Nomad Insurance, and World Nomads Explorer. The Spanish health policies in the checker (ASISA, DKV, Sanitas) show UNKNOWN here because their documents do not state an overall coverage limit to compare against the threshold.
 
-- [Genki Traveler](https://genki.world/products/traveler) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

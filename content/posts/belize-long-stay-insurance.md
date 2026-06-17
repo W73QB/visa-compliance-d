@@ -82,7 +82,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is a documented health coverage limit of at least USD 50,000. In the current snapshot, Genki Traveler, Genki Native, SafetyWing and World Nomads show GREEN: each documents a limit that converts to at least USD 50,000. The Spanish health products show UNKNOWN because their documents state no overall limit to compare.
 
-- [Genki Traveler](https://genki.world/) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

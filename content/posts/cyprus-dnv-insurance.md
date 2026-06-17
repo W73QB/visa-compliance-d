@@ -92,7 +92,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 In the current snapshot, the product that shows GREEN for this route is Genki Native: it documents comprehensive care (inpatient and outpatient) and global coverage that includes Cyprus, satisfying the modeled rules. The travel-medical and Spanish health policies stay UNKNOWN because they do not document coverage valid for care in Cyprus.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

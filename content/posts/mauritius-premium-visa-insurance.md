@@ -82,7 +82,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The EDB statement asks for travel and health insurance for the initial period of stay, with no amount or territory specified, so most travel and health policies will meet the stated requirement. In the current snapshot, the tracked products show GREEN, including Genki Traveler and Genki Native. Because the published detail is minimal, confirm the exact terms with the Economic Development Board before applying.
 
-- [Genki Traveler](https://genki.world/) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

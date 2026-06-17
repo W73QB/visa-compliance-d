@@ -90,7 +90,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official requirement is travel medical insurance valid for the whole visa period, so a full-period policy that covers the stay is what to look for. In the current snapshot, Genki Native shows GREEN: it is an international health policy with global coverage that includes Estonia and a full term rather than a cancellable monthly subscription. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the visa period ends.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

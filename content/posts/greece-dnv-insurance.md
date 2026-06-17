@@ -90,7 +90,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 The official checklist accepts travel insurance but requires a validity period equal to the visa, so a full-period policy that covers Greece is what to look for. In the current snapshot, Genki Native shows GREEN: it is an international health policy with global coverage that includes Greece and a full term rather than a cancellable monthly subscription, so it satisfies both modeled rules. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the visa period ends.
 
-- [Genki Native](https://genki.world/products/native) — paid link. We may earn a commission if you purchase through this link.
+- [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
