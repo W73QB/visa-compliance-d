@@ -123,6 +123,7 @@ and World Nomads — does not meet this requirement and shows RED in the checker
 Compliant products for this route (dedicated expat health insurance providers)
 will be added when our affiliate partnerships are confirmed.
 Feather Insurance and similar Germany-authorized providers are being evaluated.
+Genki Native is under evaluation for this route — check the compliance engine for the current status.
 
 *Compliance results are never influenced by commercial relationships.
 See [affiliate disclosure](/affiliate-disclosure/).*
