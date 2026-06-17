@@ -84,6 +84,8 @@ The service page asks for a valid health insurance document, with no amount or t
 
 - [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
 
+Affiliate disclosure: the Genki link above is an affiliate link; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
+
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 
 ## Disclaimer + Affiliate disclosure
