@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-17T05:13:52.019008+00:00",
+  "built_at": "2026-06-17T18:21:54.660129+00:00",
   "snapshot_id": "2026-06-13",
   "visas": [
     {
@@ -2891,6 +2891,63 @@
       ]
     },
     {
+      "id": "FEATHER_SPAIN_2026",
+      "provider": "Feather",
+      "product_name": "Feather Expat Health Insurance (Spain)",
+      "effective_date": "2026-06-18",
+      "policy_version": "2026-06",
+      "specs": {
+        "type": "health insurance",
+        "overall_limit": null,
+        "currency": "EUR",
+        "deductible": {
+          "amount": 0,
+          "currency": "EUR"
+        },
+        "copay": false,
+        "payment_cadence": null,
+        "contract_commitment_months": null,
+        "comprehensive": true,
+        "covers_public_health_system_risks": true,
+        "unlimited": true,
+        "moratorium_days": 0,
+        "jurisdiction_facts": {
+          "ES": {
+            "authorized": true,
+            "evidence": [
+              {
+                "source_id": "FEATHER_SPAIN_NLV_2026",
+                "locator": "Spain non-lucrative visa health insurance requirements",
+                "excerpt": "Insurance company registered in Spain (DGSFP) (Code L1497)"
+              }
+            ]
+          }
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "FEATHER_SPAIN_NLV_2026",
+          "locator": "Spain non-lucrative visa health insurance requirements",
+          "excerpt": "Unlimited medical coverage comparable to the public health system in Spain"
+        },
+        {
+          "source_id": "FEATHER_SPAIN_NLV_2026",
+          "locator": "Spain non-lucrative visa health insurance requirements",
+          "excerpt": "No copayments or deductibles"
+        },
+        {
+          "source_id": "FEATHER_SPAIN_NLV_2026",
+          "locator": "Spain non-lucrative visa health insurance requirements",
+          "excerpt": "No waiting periods"
+        },
+        {
+          "source_id": "FEATHER_SPAIN_NLV_2026",
+          "locator": "Spain non-lucrative visa health insurance requirements",
+          "excerpt": "Medical repatriation and repatriation of mortal remains"
+        }
+      ]
+    },
+    {
       "id": "GENERIC_EXPAT_COMPLETE_2026",
       "provider": "GenericInsurer",
       "product_name": "Expat Complete Health",
@@ -3293,6 +3350,14 @@
     },
     {
       "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -3365,6 +3430,14 @@
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "AI_STUDENT_GOVAI_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -3434,6 +3507,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "AL_LEJE_UNIKE_MB_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -3535,6 +3616,16 @@
         "specs.jurisdiction_facts.AT.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "AT_RESIDENCE_BMI_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.AT.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "AT_RESIDENCE_BMI_2026",
@@ -3647,6 +3738,14 @@
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BB_WELCOMESTAMP_OAG_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -3737,6 +3836,16 @@
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.BE.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BE_NATIONALD_DOFI_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -3826,6 +3935,17 @@
         "specs.eu_licensed_insurer"
       ],
       "last_verified": "2026-06-17"
+    },
+    {
+      "visa_id": "BG_LONGSTAYD_MFA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit",
+        "specs.eu_licensed_insurer"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "BG_LONGSTAYD_MFA_2026",
@@ -3932,6 +4052,16 @@
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.BH.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BH_GOLDEN_NPRA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -4013,6 +4143,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -4105,6 +4243,16 @@
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.BR.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "BR_DNV_LISBOA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -4188,6 +4336,16 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "BZ_LONGSTAY_IMMIG_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "BZ_LONGSTAY_IMMIG_2026",
@@ -4271,6 +4429,16 @@
         "specs.jurisdiction_facts.CO.authorized"
       ],
       "last_verified": "2026-06-08"
+    },
+    {
+      "visa_id": "CO_DNV_CANCILLERIA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CO.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -4361,6 +4529,16 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "CR_DN_DECREE_43619_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
@@ -4451,6 +4629,14 @@
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "CV_STUDENTRES_DGTCV_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -4527,6 +4713,16 @@
         "specs.jurisdiction_facts.CY.authorized"
       ],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "CY_DNV_MD_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.CY.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -4631,6 +4827,16 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -4769,6 +4975,14 @@
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -4871,6 +5085,16 @@
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.DM.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "DM_WIN_GOVDM_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -4956,6 +5180,16 @@
         "specs.jurisdiction_facts.EC.authorized"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "EC_NOMAD_CANCILLERIA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.EC.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -5049,6 +5283,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "EE_DNV_VM_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -5165,6 +5407,14 @@
         "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "ES_DNV_BLS_LONDON_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -5400,6 +5650,14 @@
     },
     {
       "visa_id": "ES_NLV_LA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "ES_NLV_LA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -5625,6 +5883,16 @@
     },
     {
       "visa_id": "FI_STUDY_MIGRI_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "FI_STUDY_MIGRI_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -5715,6 +5983,16 @@
         "specs.jurisdiction_facts.GE.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "GE_LONGVISA_GEOCONSUL_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.GE.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "GE_LONGVISA_GEOCONSUL_2026",
@@ -5811,6 +6089,14 @@
     },
     {
       "visa_id": "GR_DNV_MFA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "GR_DNV_MFA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -5897,6 +6183,16 @@
         "specs.jurisdiction_facts.HR.authorized"
       ],
       "last_verified": "2026-06-10"
+    },
+    {
+      "visa_id": "HR_DNV_MUP_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.HR.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -5997,6 +6293,16 @@
     },
     {
       "visa_id": "IE_STUDENT_ISD_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IE_STUDENT_ISD_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6092,6 +6398,17 @@
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.IS.authorized",
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IS_RESIDENCE_UTL_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6180,6 +6497,16 @@
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "IT_SELFEMP_SF_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6260,6 +6587,16 @@
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "JP_DNV_MOFA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6340,6 +6677,16 @@
     },
     {
       "visa_id": "KR_F1D_MOFA_LA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "KR_F1D_MOFA_LA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6413,6 +6760,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "KZ_NEONOMAD_EGOV_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "KZ_NEONOMAD_EGOV_2026",
@@ -6505,6 +6860,16 @@
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LK.authorized"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LK_DNV_IMMIGRATION_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6569,7 +6934,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6577,11 +6942,21 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
       "product_id": "DKV_VISADO_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": "2026-06-17"
+    },
+    {
+      "visa_id": "LT_LONGSTAYD_URM_2026",
+      "product_id": "FEATHER_SPAIN_2026",
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
@@ -6597,7 +6972,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6605,7 +6980,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6613,7 +6988,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6632,7 +7007,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6642,7 +7017,7 @@
       "missing": [
         "specs.overall_limit"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6650,7 +7025,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -6682,6 +7057,16 @@
         "specs.jurisdiction_facts.LU.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "LU_STUDENT_GUICHET_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LU.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -6779,6 +7164,17 @@
     },
     {
       "visa_id": "LV_REMOTEWORK_PMLP_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.LV.authorized",
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "LV_REMOTEWORK_PMLP_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -6860,6 +7256,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "ME_DNV_GOVME_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -6936,6 +7340,16 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "MT_NOMAD_RESIDENCY_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.payment_cadence"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -7030,6 +7444,14 @@
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MU_PREMIUM_EDB_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7102,6 +7524,14 @@
     },
     {
       "visa_id": "MV_RESIDENT_IMMIG_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "MV_RESIDENT_IMMIG_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7171,6 +7601,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "NZ_STUDENT_INZ_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -7260,6 +7698,16 @@
         "specs.jurisdiction_facts.PA.authorized"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "PA_REMOTEWORK_SNM_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.PA.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -7360,6 +7808,16 @@
     },
     {
       "visa_id": "PL_NATD_NICOSIA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PL_NATD_NICOSIA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -7452,6 +7910,14 @@
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_D7_VISTOS_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7535,6 +8001,14 @@
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "PT_DNV_VFS_CHINA_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -7608,6 +8082,16 @@
         "specs.overall_limit"
       ],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "RO_DNV_EVIZA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -7697,6 +8181,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "SE_STUDY_MIGVERKET_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "SE_STUDY_MIGVERKET_2026",
@@ -7795,6 +8287,16 @@
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.overall_limit"
+      ],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SI_D_GOVSI_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "UNKNOWN",
       "reasons": [],
@@ -7885,6 +8387,16 @@
         "specs.jurisdiction_facts.SK.authorized"
       ],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "SK_NATIONALVISA_MZV_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "UNKNOWN",
+      "reasons": [],
+      "missing": [
+        "specs.jurisdiction_facts.SK.authorized"
+      ],
+      "last_verified": ""
     },
     {
       "visa_id": "SK_NATIONALVISA_MZV_2026",
@@ -7981,6 +8493,14 @@
     },
     {
       "visa_id": "SM_ELECTIVE_ESTERI_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "SM_ELECTIVE_ESTERI_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -8083,6 +8603,25 @@
       ],
       "missing": [],
       "last_verified": "2026-01-17"
+    },
+    {
+      "visa_id": "TH_DTV_MFA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "NOT_REQUIRED",
+      "reasons": [
+        {
+          "text": "Visa does not require insurance",
+          "evidence": [
+            {
+              "source_id": "TH_MFA_DTV_2026",
+              "locator": "Complete requirements list for all DTV categories",
+              "excerpt": "Required Documents for Workcation category: 1. Personal information page in passport 2. Photo taken within past 6 months 3. Document confirming current location 4. Financial proof (500,000 THB) 5. Employment contract or professional portfolio. Insurance is NOT mentioned anywhere in the official requirements."
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -8224,6 +8763,14 @@
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
+    },
+    {
+      "visa_id": "TR_RESIDENCE_PMM_2026",
       "product_id": "GENERIC_EXPAT_COMPLETE_2026",
       "status": "GREEN",
       "reasons": [],
@@ -8304,6 +8851,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-15"
+    },
+    {
+      "visa_id": "TW_DNV_BOCA_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -8389,6 +8944,14 @@
       "reasons": [],
       "missing": [],
       "last_verified": "2026-06-16"
+    },
+    {
+      "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
+      "product_id": "FEATHER_SPAIN_2026",
+      "status": "GREEN",
+      "reasons": [],
+      "missing": [],
+      "last_verified": ""
     },
     {
       "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
@@ -8739,6 +9302,13 @@
       "retrieved_at": "2026-01-15T00:00:00Z",
       "sha256": "534fc72ab060d94b98959ae5b246d2bdb16fb72aa493ca3938491289770c5062",
       "local_path": "sources/EU_VISA_CODE_ARTICLE_15_2026-01-15.html"
+    },
+    "FEATHER_SPAIN_NLV_2026": {
+      "source_id": "FEATHER_SPAIN_NLV_2026",
+      "url": "https://feather-insurance.com/en-es/health-insurance/expat/non-lucrative-visa",
+      "retrieved_at": "2026-06-18T00:00:00Z",
+      "sha256": "005bbef02ff7e4d2e7d86a096f13c15b9d3bb53ad382902093ec954e9fa759c0",
+      "local_path": "sources/FEATHER_SPAIN_NLV_2026-06-18.html"
     },
     "FI_STUDY_MIGRI_2026": {
       "source_id": "FI_STUDY_MIGRI_2026",

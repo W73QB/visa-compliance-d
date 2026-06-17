@@ -96,9 +96,10 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 ## Where to find compliant insurance for the Spain Non-Lucrative Visa
 
-In the current snapshot, the product that shows GREEN for this route is ASISA Health Residents, because its documented terms (authorized in Spain, no deductible, no copayment, no waiting period, unlimited cover) satisfy every modeled requirement. Other Spanish health policies in the checker (DKV Visado, Sanitas Mas Salud) show RED because their documented waiting periods conflict with the no-waiting-period rule, and worldwide travel products show RED because travel insurance is not accepted for this route.
+In the current snapshot, the products that show GREEN for this route are ASISA Health Residents and Feather Expat Health Insurance, because their documented terms (authorized in Spain, no deductible, no copayment, no waiting period, unlimited cover) satisfy every modeled requirement. Other Spanish health policies in the checker (DKV Visado, Sanitas Mas Salud) show RED because their documented waiting periods conflict with the no-waiting-period rule, and worldwide travel products show RED because travel insurance is not accepted for this route.
 
 - [ASISA Health Residents](https://www.asisa.es/seguros-medicos/extranjeros/residencia) — official (non-affiliate) link. We do not earn a commission.
+- [Feather Expat Health Insurance](https://feather-insurance.com/en-es/health-insurance/expat/non-lucrative-visa) — a health policy from an insurer registered in Spain (DGSFP), documenting unlimited cover, no co-payments or deductibles, and no waiting periods.
 
 > Use the compliance checker to see the current GREEN products for this route before you buy.
 
@@ -113,3 +114,4 @@ Last updated: 2026-06-08
 ## Evidence log
 
 - Source: ES_NLV_LA_EXTERIORES_2026
+- Source: FEATHER_SPAIN_NLV_2026
