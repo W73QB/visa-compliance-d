@@ -24,7 +24,7 @@ For the Portugal E11 Temporary Stay Visa (VFS China route), the checklist requir
 |---|---|
 | Route | Portugal E11 (VFS Global China) |
 | Evidence verified | 2026-01-15 |
-| Snapshot | releases/2026-01-15 |
+| Snapshot | 2026-06-13 |
 | GREEN / RED / UNKNOWN | 7 / 0 / 0 |
 
 ## What the authority requires
@@ -79,7 +79,7 @@ The checker currently encodes the mandatory insurance rule for this route. If a 
 
 Use [the compliance checker](/ui/) with the current snapshot for this route:
 
-{{< checker_cta visa="PT_DNV_VFS_CHINA_2026" snapshot="releases/2026-01-15" >}}
+{{< checker_cta visa="PT_DNV_VFS_CHINA_2026" snapshot="2026-06-13" >}}
 
 ## Related reading
 
@@ -90,28 +90,16 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 ## Where to buy compliant insurance for Portugal Remote Work Visa
 
-Based on compliance check results for this route, the following products
-show GREEN for Portugal DNV / Remote Work Visa:
+Based on the compliance results for this route, the products that show GREEN for the Portugal Remote Work (E11) visa are Genki and SafetyWing:
 
-[SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) —
-travel medical insurance covering unexpected illness, injury, delays, lost luggage,
-and trip interruptions in 175+ countries. Buy before you leave or while already abroad.
-Flexible plans: cancel anytime, auto-extends every 4 weeks.
+- [Genki](https://genki.world/with/visafact) — international health and travel-medical cover, valid for the full policy term. Paid link; we may earn a commission if you purchase through it.
+- [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) — travel-medical cover in 175+ countries with flexible 4-week plans. Paid link.
 
-[SafetyWing Nomad Insurance Complete](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) —
-full health insurance with extra travel protections in 175+ countries.
-Includes routine checkups, mental health support, wellness therapies, and cancer treatment.
-Can be used as your primary health insurance wherever you live, work, or travel.
+> Always verify in the compliance checker for your specific consulate route. Requirements can vary between VFS and other Portugal routes.
 
-> Always verify in the compliance checker for your specific consulate route.
-> Requirements can vary between VFS and other Portugal routes.
+Affiliate disclosure: the links above are affiliate links; we may earn a commission at no extra cost to you, and it does not change the evidence-based result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
-{{< checker_cta visa="PT_DNV_2026" snapshot="releases/2026-01-15" label="Check your insurance for Portugal Remote Work Visa" >}}
-
-*Affiliate disclosure: Links above are affiliate links.
-We may earn a commission at no extra cost to you.
-Compliance results are generated independently.
-See [affiliate disclosure](/affiliate-disclosure/).*
+{{< checker_cta visa="PT_DNV_VFS_CHINA_2026" product="GENKI_NATIVE_2026" snapshot="2026-06-13" >}}
 
 ## Disclaimer + Affiliate disclosure
 
