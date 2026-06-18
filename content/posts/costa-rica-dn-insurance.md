@@ -24,7 +24,7 @@ Costa Rica's Executive Decree 43619 requires health insurance for digital nomads
 |---|---|
 | Route | Costa Rica Digital Nomad Visa (Executive Decree 43619) |
 | Evidence verified | 2026-01-12 |
-| Snapshot | releases/2026-01-15 |
+| Snapshot | 2026-06-13 |
 | GREEN / YELLOW / UNKNOWN | 2 / 1 / 4 |
 
 ## What the authority requires
@@ -86,11 +86,11 @@ If a policy summary describes coverage in general terms but does not list the US
 
 Use [the compliance checker](/ui/) with the current snapshot for this route:
 
-{{< checker_cta visa="CR_DN_DECREE_43619_2026" snapshot="releases/2026-01-15" >}}
+{{< checker_cta visa="CR_DN_DECREE_43619_2026" snapshot="2026-06-13" >}}
 
 ## Mapping results summary
 
-As of snapshot `releases/2026-01-15`, the checker evaluated 7 products:
+As of snapshot `2026-06-13`, the checker evaluated 7 products:
 
 | Status | Count | What it means |
 |---|---|---|
@@ -111,23 +111,15 @@ UNKNOWN results are common when product documents do not explicitly state the US
 
 ## Where to buy compliant insurance for Costa Rica Digital Nomad Visa
 
-The Costa Rica Digital Nomad Visa requires at least US $50,000 in medical coverage
-for the full authorized stay period (Executive Decree 43619, Article 9).
+The Costa Rica Digital Nomad Visa requires at least US $50,000 in medical coverage for the full authorized stay period (Executive Decree 43619, Article 9). In the current snapshot, the products that show GREEN are Genki Native and Genki Traveler, because their documented limits and full-term cover meet the decree.
 
-[SafetyWing Nomad Insurance Essential](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=costa-rica-post) —
-travel medical insurance for 175+ countries covering unexpected illness and injury.
-Flexible monthly subscription, cancel anytime, auto-extends every 4 weeks.
+- [Genki](https://genki.world/with/visafact) — international health and travel-medical cover well above the US $50,000 minimum, valid for the full policy term. Paid link; we may earn a commission if you purchase through it.
 
-> Verify coverage amount and duration in the compliance checker before purchasing.
-> The checker confirms whether SafetyWing's documented coverage meets the $50,000
-> minimum and full-stay duration requirement for this route.
+A 4-week subscription such as [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=costa-rica-post) shows YELLOW for this route: the amount can be enough, but an auto-renewing monthly plan can lapse before the full authorized stay ends, so confirm it covers the entire period.
 
-{{< checker_cta visa="CR_DN_DECREE_43619_2026" snapshot="releases/2026-01-15" label="Check SafetyWing for Costa Rica DN Visa" >}}
+Affiliate disclosure: the Genki and SafetyWing links above are affiliate links; we may earn a commission at no extra cost to you, and it does not change the evidence-based result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
-*Affiliate disclosure: The link above is an affiliate link.
-We may earn a commission at no extra cost to you.
-Compliance results are generated independently.
-See [affiliate disclosure](/affiliate-disclosure/).*
+{{< checker_cta visa="CR_DN_DECREE_43619_2026" product="GENKI_NATIVE_2026" snapshot="2026-06-13" >}}
 
 ## International transfers for Costa Rica visa requirements
 
