@@ -99,7 +99,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 In the current snapshot, the products that show GREEN for this route are ASISA Health Residents and Feather Expat Health Insurance, because their documented terms (authorized in Spain, no deductible, no copayment, no waiting period, unlimited cover) satisfy every modeled requirement. Other Spanish health policies in the checker (DKV Visado, Sanitas Mas Salud) show RED because their documented waiting periods conflict with the no-waiting-period rule, and worldwide travel products show RED because travel insurance is not accepted for this route.
 
 - [ASISA Health Residents](https://www.asisa.es/seguros-medicos/extranjeros/residencia) — official (non-affiliate) link. We do not earn a commission.
-- [Feather Expat Health Insurance](https://feather-insurance.com/en-es/health-insurance/expat/non-lucrative-visa) — a health policy from an insurer registered in Spain (DGSFP), documenting unlimited cover, no co-payments or deductibles, and no waiting periods.
+- [Feather Expat Health Insurance](https://feather-insurance.com/en-es/health-insurance/expat/non-lucrative-visa?utm_source=visafact) — a health policy from an insurer registered in Spain (DGSFP), documenting unlimited cover, no co-payments or deductibles, and no waiting periods. Paid link; we may earn a commission if you purchase through it.
 
 > Use the compliance checker to see the current GREEN products for this route before you buy.
 
@@ -107,7 +107,7 @@ In the current snapshot, the products that show GREEN for this route are ASISA H
 
 Not legal advice. Compliance results are evidence-based snapshots.
 
-If an affiliate link is present, it appears only after results and does not change the compliance outcome. The ASISA link above is an official (non-affiliate) link.
+If an affiliate link is present, it appears only after results and does not change the compliance outcome. The Feather link above is a paid affiliate link; the ASISA link is an official (non-affiliate) link. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 Last updated: 2026-06-08
 
