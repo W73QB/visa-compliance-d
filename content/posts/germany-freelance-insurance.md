@@ -103,6 +103,14 @@ UNKNOWN is a signal to request clearer documentation, not a hint that the policy
 - [How to choose DNV insurance](/guides/how-to-choose-dnv-insurance/)
 - [Compliance status meaning](/guides/compliance-status-meaning/)
 
+## Where to buy compliant insurance for the Germany Freelance Visa
+
+The Germany Freelance Visa requires health insurance commensurate with the German statutory minimum; travel insurance is not accepted, so travel-medical products such as SafetyWing and World Nomads show RED (Source: `DE_D_VISA_HEALTH_INSURANCE_2026`). The GREEN products are dedicated expat health policies rather than travel insurance:
+
+- [Feather Expat Health Insurance (Germany)](https://feather-insurance.com/en-de/health-insurance/expat?utm_source=visafact) — a dedicated expat health policy (not travel insurance), based in Germany with English-language support and documents for the visa or residence permit. Shows GREEN for this route in the checker. Paid link; we may earn a commission if you purchase through it.
+
+Affiliate disclosure: the Feather link above is a paid affiliate link; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
+
 ## Transferring funds to your blocked account
 
 Germany's freelance visa requires a blocked account (Sperrkonto) containing €11,904 before you apply. Most applicants transfer this amount internationally using a low-fee transfer service.
@@ -115,15 +123,12 @@ Germany's freelance visa requires a blocked account (Sperrkonto) containing €1
 
 Not legal advice. Compliance results are evidence-based snapshots.
 
-**Why there is no affiliate link on this page:**
+**About the affiliate link on this page:**
 The Germany Freelance Visa requires health insurance commensurate with
 German statutory minimum coverage. Travel insurance — including SafetyWing
 and World Nomads — does not meet this requirement and shows RED in the checker.
-
-Compliant products for this route (dedicated expat health insurance providers)
-will be added when our affiliate partnerships are confirmed.
-Feather Insurance and similar Germany-authorized providers are being evaluated.
-Genki Native is under evaluation for this route — check the compliance engine for the current status.
+The compliant link above is a dedicated expat health policy and is shown only
+after the evidence-based result.
 
 *Compliance results are never influenced by commercial relationships.
 See [affiliate disclosure](/affiliate-disclosure/).*

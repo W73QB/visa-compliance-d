@@ -91,8 +91,9 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 The official requirement is valid travel insurance covering medical expenses and repatriation, valid for the visa, so a full-period policy is what to look for. In the current snapshot, Genki Native shows GREEN: it is an international health policy with global coverage that includes Portugal and a full term rather than a cancellable monthly subscription. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the visa period ends.
 
 - [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
+- [Feather Expat Health Insurance (Portugal)](https://feather-insurance.com/en-pt/health-insurance/expat?utm_source=visafact) — a full-term expat health policy covering medical expenses and repatriation, accepted as proof for the visa and AIMA; shows GREEN for this route in the checker. Paid link; we may earn a commission if you purchase through it.
 
-Affiliate disclosure: the Genki link above is an affiliate link; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
+Affiliate disclosure: the Genki and Feather links above are affiliate links; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

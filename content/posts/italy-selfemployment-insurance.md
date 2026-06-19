@@ -93,9 +93,12 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 ## Where to find compliant insurance for the Italy short-term self-employment visa
 
-In the current snapshot, the products that show GREEN for this route are those with a documented medical-expenses limit at or above 30,000 euro: Genki Traveler, SafetyWing Nomad Insurance, and World Nomads Explorer. The Spanish health policies in the checker (ASISA, DKV, Sanitas) show UNKNOWN here because their documents do not state an overall coverage limit to compare against the threshold.
+In the current snapshot, the GREEN products are travel-medical policies with a documented limit at or above 30,000 euro (Genki Traveler, SafetyWing Nomad Insurance, World Nomads Explorer, AXA Schengen Europe), together with unlimited-cover health policies (Feather Expat Health Insurance and ASISA), because unlimited medical cover satisfies the 30,000 euro minimum. DKV and Sanitas still show UNKNOWN here because their documents state neither an overall limit nor unlimited cover to compare against the threshold.
 
 - [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
+- [Feather Expat Health Insurance (Italy)](https://feather-insurance.com/en-it/health-insurance/expat?utm_source=visafact) — a full-term expat health policy with unlimited medical cover above the 30,000 euro minimum, valid across the Schengen Area; shows GREEN for this route in the checker. Paid link; we may earn a commission if you purchase through it.
+
+Affiliate disclosure: the Genki and Feather links above are affiliate links; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

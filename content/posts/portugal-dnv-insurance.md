@@ -93,6 +93,7 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 Based on the compliance results for this route, the products that show GREEN for the Portugal Remote Work (E11) visa are Genki and SafetyWing:
 
 - [Genki](https://genki.world/with/visafact) — international health and travel-medical cover, valid for the full policy term. Paid link; we may earn a commission if you purchase through it.
+- [Feather Expat Health Insurance (Portugal)](https://feather-insurance.com/en-pt/health-insurance/expat?utm_source=visafact) — a full-term expat health policy covering medical expenses and repatriation. Paid link; we may earn a commission if you purchase through it.
 - [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=portugal-post) — travel-medical cover in 175+ countries with flexible 4-week plans. Paid link.
 
 > Always verify in the compliance checker for your specific consulate route. Requirements can vary between VFS and other Portugal routes.

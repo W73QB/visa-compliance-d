@@ -110,12 +110,17 @@ class MinimumCoverageRule(Rule):
         req = get_req(visa, "insurance.min_coverage")
         if not req:
             return None
-        
+
+        # Unlimited cover trivially satisfies any finite minimum threshold, so
+        # an explicit unlimited=true is sufficient even with no numeric limit.
+        if product_spec(product, "unlimited") is True:
+            return None
+
         limit = product_spec(product, "overall_limit")
         if limit is None:
             return RuleResult(
                 status="UNKNOWN",
-                missing=["specs.overall_limit"]
+                missing=["specs.overall_limit or specs.unlimited"]
             )
 
         # Compare like-for-like. When the requirement states a currency and the
