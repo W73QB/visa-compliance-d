@@ -86,8 +86,9 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 The requirement is comprehensive health insurance valid for the whole stay. In the current snapshot, comprehensive health policies show GREEN, including Genki Native and the Spanish health insurers. The travel-medical products show UNKNOWN because their documents do not establish comprehensive cover for this route.
 
 - [Genki Native](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
+- [Feather Expat Health Insurance (Sweden)](https://feather-insurance.com/en-se/health-insurance/expat?utm_source=visafact) — a comprehensive, full-term expat health policy; shows GREEN for this route in the checker. Paid link; we may earn a commission if you purchase through it.
 
-Affiliate disclosure: the Genki link above is an affiliate link; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
+Affiliate disclosure: the Genki and Feather links above are affiliate links; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

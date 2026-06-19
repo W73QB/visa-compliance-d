@@ -5,6 +5,6 @@
   "reasons": [],
   "missing": [
     "specs.deductible.amount",
-    "specs.overall_limit"
+    "specs.overall_limit or specs.unlimited"
   ]
 }

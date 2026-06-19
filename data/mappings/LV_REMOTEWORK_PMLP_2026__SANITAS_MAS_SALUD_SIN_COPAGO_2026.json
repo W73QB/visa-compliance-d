@@ -5,6 +5,6 @@
   "reasons": [],
   "missing": [
     "specs.jurisdiction_facts.LV.authorized",
-    "specs.overall_limit"
+    "specs.overall_limit or specs.unlimited"
   ]
 }

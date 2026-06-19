@@ -4,7 +4,6 @@
   "status": "UNKNOWN",
   "reasons": [],
   "missing": [
-    "specs.jurisdiction_facts.LV.authorized",
-    "specs.overall_limit"
+    "specs.jurisdiction_facts.LV.authorized"
   ]
 }

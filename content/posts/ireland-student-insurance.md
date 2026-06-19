@@ -86,11 +86,12 @@ Use [the compliance checker](/ui/) with the current snapshot for this route:
 
 ## Where to find compliant insurance for non-EEA study in Ireland
 
-The first-registration requirement combines a one-year term with a 25,000 EUR minimum for accident and disease. In the current snapshot, Genki Traveler, Genki Native and World Nomads show GREEN: each documents a limit at or above the threshold and a full-period term. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the year ends. Remember that later registrations require a fuller private medical policy.
+The first-registration requirement combines a one-year term with a 25,000 EUR minimum for accident and disease. In the current snapshot, Genki Traveler, Genki Native, World Nomads and AXA Schengen Europe show GREEN by documenting a limit at or above the threshold and a full-period term; the unlimited-cover health policies Feather Expat Health Insurance and ASISA also show GREEN, because unlimited cover satisfies the 25,000 EUR minimum. SafetyWing Nomad Insurance shows YELLOW because it bills monthly and can lapse before the year ends. Remember that later registrations require a fuller private medical policy.
 
 - [Genki Traveler](https://genki.world/with/visafact) — paid link. We may earn a commission if you purchase through this link.
+- [Feather Expat Health Insurance (Ireland)](https://feather-insurance.com/en-ie/health-insurance/expat?utm_source=visafact) — a full-term expat health policy with unlimited medical cover above the 25,000 EUR minimum; shows GREEN for this route in the checker. Paid link; we may earn a commission if you purchase through it.
 
-Affiliate disclosure: the Genki link above is an affiliate link; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
+Affiliate disclosure: the Genki and Feather links above are affiliate links; we may earn a commission at no extra cost to you, and it does not change the evidence-based compliance result. See [affiliate disclosure](https://visafact.org/affiliate-disclosure/).
 
 > Use the compliance checker to confirm the current GREEN products for this route before you buy.
 

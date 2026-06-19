@@ -4,7 +4,7 @@
   "status": "UNKNOWN",
   "reasons": [],
   "missing": [
-    "specs.overall_limit",
+    "specs.overall_limit or specs.unlimited",
     "specs.eu_licensed_insurer"
   ]
 }

@@ -1,9 +1,7 @@
 {
   "visa_id": "JP_DNV_MOFA_2026",
   "product_id": "FEATHER_SPAIN_2026",
-  "status": "UNKNOWN",
+  "status": "GREEN",
   "reasons": [],
-  "missing": [
-    "specs.overall_limit"
-  ]
+  "missing": []
 }

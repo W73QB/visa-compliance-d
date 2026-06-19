@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-06-17T18:21:54.660129+00:00",
+  "built_at": "2026-06-19T05:33:56.217323+00:00",
   "snapshot_id": "2026-06-13",
   "visas": [
     {
@@ -2893,7 +2893,7 @@
     {
       "id": "FEATHER_SPAIN_2026",
       "provider": "Feather",
-      "product_name": "Feather Expat Health Insurance (Spain)",
+      "product_name": "Feather Expat Health Insurance",
       "effective_date": "2026-06-18",
       "policy_version": "2026-06",
       "specs": {
@@ -3354,7 +3354,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "AE_VIRTUALWORK_GDRFA_2026",
@@ -3434,7 +3434,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "AI_STUDENT_GOVAI_2026",
@@ -3514,7 +3514,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "AL_LEJE_UNIKE_MB_2026",
@@ -3625,7 +3625,7 @@
       "missing": [
         "specs.jurisdiction_facts.AT.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "AT_RESIDENCE_BMI_2026",
@@ -3742,7 +3742,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BB_WELCOMESTAMP_OAG_2026",
@@ -3842,7 +3842,7 @@
       "missing": [
         "specs.jurisdiction_facts.BE.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BE_NATIONALD_DOFI_2026",
@@ -3912,7 +3912,6 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit",
         "specs.eu_licensed_insurer"
       ],
       "last_verified": "2026-06-17"
@@ -3931,7 +3930,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit",
+        "specs.overall_limit or specs.unlimited",
         "specs.eu_licensed_insurer"
       ],
       "last_verified": "2026-06-17"
@@ -3942,10 +3941,9 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit",
         "specs.eu_licensed_insurer"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BG_LONGSTAYD_MFA_2026",
@@ -3953,7 +3951,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit",
+        "specs.overall_limit or specs.unlimited",
         "specs.eu_licensed_insurer"
       ],
       "last_verified": "2026-06-17"
@@ -4005,7 +4003,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit",
+        "specs.overall_limit or specs.unlimited",
         "specs.eu_licensed_insurer"
       ],
       "last_verified": "2026-06-17"
@@ -4058,7 +4056,7 @@
       "missing": [
         "specs.jurisdiction_facts.BH.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BH_GOLDEN_NPRA_2026",
@@ -4150,7 +4148,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BM_PARTNERRESIDENCE_GOVBM_2026",
@@ -4249,7 +4247,7 @@
       "missing": [
         "specs.jurisdiction_facts.BR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BR_DNV_LISBOA_2026",
@@ -4312,11 +4310,9 @@
     {
       "visa_id": "BZ_LONGSTAY_IMMIG_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-15"
     },
     {
@@ -4333,19 +4329,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
     {
       "visa_id": "BZ_LONGSTAY_IMMIG_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "BZ_LONGSTAY_IMMIG_2026",
@@ -4353,7 +4347,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -4387,7 +4381,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -4438,7 +4432,7 @@
       "missing": [
         "specs.jurisdiction_facts.CO.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "CO_DNV_CANCILLERIA_2026",
@@ -4505,11 +4499,9 @@
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-01-17"
     },
     {
@@ -4526,19 +4518,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-01-17"
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "CR_DN_DECREE_43619_2026",
@@ -4546,7 +4536,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-01-13"
     },
@@ -4591,7 +4581,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-01-16"
     },
@@ -4633,7 +4623,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "CV_STUDENTRES_DGTCV_2026",
@@ -4722,7 +4712,7 @@
       "missing": [
         "specs.jurisdiction_facts.CY.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "CY_DNV_MD_2026",
@@ -4789,11 +4779,9 @@
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-10"
     },
     {
@@ -4824,19 +4812,17 @@
       "reasons": [],
       "missing": [
         "specs.deductible.amount",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-10"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "CZ_LONGTERM_BUSINESS_IPC_2026",
@@ -4844,7 +4830,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-10"
     },
@@ -4913,7 +4899,7 @@
       "reasons": [],
       "missing": [
         "specs.deductible.amount",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-10"
     },
@@ -4979,7 +4965,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "DE_FREELANCE_EMBASSY_LONDON_2026",
@@ -5091,7 +5077,7 @@
       "missing": [
         "specs.jurisdiction_facts.DM.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "DM_WIN_GOVDM_2026",
@@ -5189,7 +5175,7 @@
       "missing": [
         "specs.jurisdiction_facts.EC.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "EC_NOMAD_CANCILLERIA_2026",
@@ -5290,7 +5276,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "EE_DNV_VM_2026",
@@ -5414,7 +5400,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "ES_DNV_BLS_LONDON_2026",
@@ -5654,7 +5640,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "ES_NLV_LA_2026",
@@ -5845,11 +5831,9 @@
     {
       "visa_id": "FI_STUDY_MIGRI_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-15"
     },
     {
@@ -5877,19 +5861,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
     {
       "visa_id": "FI_STUDY_MIGRI_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "FI_STUDY_MIGRI_2026",
@@ -5897,7 +5879,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -5942,7 +5924,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -5992,7 +5974,7 @@
       "missing": [
         "specs.jurisdiction_facts.GE.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "GE_LONGVISA_GEOCONSUL_2026",
@@ -6093,7 +6075,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "GR_DNV_MFA_2026",
@@ -6192,7 +6174,7 @@
       "missing": [
         "specs.jurisdiction_facts.HR.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "HR_DNV_MUP_2026",
@@ -6266,11 +6248,9 @@
     {
       "visa_id": "IE_STUDENT_ISD_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-15"
     },
     {
@@ -6287,19 +6267,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
     {
       "visa_id": "IE_STUDENT_ISD_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "IE_STUDENT_ISD_2026",
@@ -6307,7 +6285,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6352,7 +6330,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6370,8 +6348,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.jurisdiction_facts.IS.authorized",
-        "specs.overall_limit"
+        "specs.jurisdiction_facts.IS.authorized"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6392,7 +6369,7 @@
       "reasons": [],
       "missing": [
         "specs.jurisdiction_facts.IS.authorized",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6402,10 +6379,9 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.jurisdiction_facts.IS.authorized",
-        "specs.overall_limit"
+        "specs.jurisdiction_facts.IS.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "IS_RESIDENCE_UTL_2026",
@@ -6414,7 +6390,7 @@
       "reasons": [],
       "missing": [
         "specs.jurisdiction_facts.IS.authorized",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6453,7 +6429,7 @@
       "reasons": [],
       "missing": [
         "specs.jurisdiction_facts.IS.authorized",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6470,11 +6446,9 @@
     {
       "visa_id": "IT_SELFEMP_SF_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-08"
     },
     {
@@ -6491,19 +6465,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-08"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "IT_SELFEMP_SF_2026",
@@ -6511,7 +6483,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-08"
     },
@@ -6545,7 +6517,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-08"
     },
@@ -6560,11 +6532,9 @@
     {
       "visa_id": "JP_DNV_MOFA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-08"
     },
     {
@@ -6581,19 +6551,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-08"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "JP_DNV_MOFA_2026",
@@ -6601,7 +6569,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-08"
     },
@@ -6635,7 +6603,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-08"
     },
@@ -6650,11 +6618,9 @@
     {
       "visa_id": "KR_F1D_MOFA_LA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-15"
     },
     {
@@ -6671,19 +6637,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
     {
       "visa_id": "KR_F1D_MOFA_LA_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "KR_F1D_MOFA_LA_2026",
@@ -6691,7 +6655,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6725,7 +6689,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -6767,7 +6731,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "KZ_NEONOMAD_EGOV_2026",
@@ -6866,7 +6830,7 @@
       "missing": [
         "specs.jurisdiction_facts.LK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "LK_DNV_IMMIGRATION_2026",
@@ -6929,11 +6893,9 @@
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-17"
     },
     {
@@ -6950,19 +6912,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-17"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "LT_LONGSTAYD_URM_2026",
@@ -6970,7 +6930,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-17"
     },
@@ -7015,7 +6975,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-17"
     },
@@ -7066,7 +7026,7 @@
       "missing": [
         "specs.jurisdiction_facts.LU.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "LU_STUDENT_GUICHET_2026",
@@ -7136,8 +7096,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.jurisdiction_facts.LV.authorized",
-        "specs.overall_limit"
+        "specs.jurisdiction_facts.LV.authorized"
       ],
       "last_verified": "2026-06-15"
     },
@@ -7158,7 +7117,7 @@
       "reasons": [],
       "missing": [
         "specs.jurisdiction_facts.LV.authorized",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -7168,10 +7127,9 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.jurisdiction_facts.LV.authorized",
-        "specs.overall_limit"
+        "specs.jurisdiction_facts.LV.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "LV_REMOTEWORK_PMLP_2026",
@@ -7180,7 +7138,7 @@
       "reasons": [],
       "missing": [
         "specs.jurisdiction_facts.LV.authorized",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -7219,7 +7177,7 @@
       "reasons": [],
       "missing": [
         "specs.jurisdiction_facts.LV.authorized",
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -7263,7 +7221,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "ME_DNV_GOVME_2026",
@@ -7349,7 +7307,7 @@
       "missing": [
         "specs.payment_cadence"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "MT_NOMAD_RESIDENCY_2026",
@@ -7448,7 +7406,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "MU_PREMIUM_EDB_2026",
@@ -7528,7 +7486,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "MV_RESIDENT_IMMIG_2026",
@@ -7608,7 +7566,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "NZ_STUDENT_INZ_2026",
@@ -7707,7 +7665,7 @@
       "missing": [
         "specs.jurisdiction_facts.PA.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "PA_REMOTEWORK_SNM_2026",
@@ -7781,11 +7739,9 @@
     {
       "visa_id": "PL_NATD_NICOSIA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-13"
     },
     {
@@ -7802,19 +7758,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-13"
     },
     {
       "visa_id": "PL_NATD_NICOSIA_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "PL_NATD_NICOSIA_2026",
@@ -7822,7 +7776,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-13"
     },
@@ -7872,7 +7826,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-13"
     },
@@ -7914,7 +7868,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "PT_D7_VISTOS_2026",
@@ -8005,7 +7959,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "PT_DNV_VFS_CHINA_2026",
@@ -8058,11 +8012,9 @@
     {
       "visa_id": "RO_DNV_EVIZA_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-15"
     },
     {
@@ -8079,19 +8031,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "RO_DNV_EVIZA_2026",
@@ -8099,7 +8049,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -8144,7 +8094,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -8188,7 +8138,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "SE_STUDY_MIGVERKET_2026",
@@ -8260,11 +8210,9 @@
     {
       "visa_id": "SI_D_GOVSI_2026",
       "product_id": "ASISA_HEALTH_RESIDENTS_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
+      "missing": [],
       "last_verified": "2026-06-15"
     },
     {
@@ -8281,19 +8229,17 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
       "product_id": "FEATHER_SPAIN_2026",
-      "status": "UNKNOWN",
+      "status": "GREEN",
       "reasons": [],
-      "missing": [
-        "specs.overall_limit"
-      ],
-      "last_verified": ""
+      "missing": [],
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "SI_D_GOVSI_2026",
@@ -8301,7 +8247,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -8346,7 +8292,7 @@
       "status": "UNKNOWN",
       "reasons": [],
       "missing": [
-        "specs.overall_limit"
+        "specs.overall_limit or specs.unlimited"
       ],
       "last_verified": "2026-06-15"
     },
@@ -8396,7 +8342,7 @@
       "missing": [
         "specs.jurisdiction_facts.SK.authorized"
       ],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "SK_NATIONALVISA_MZV_2026",
@@ -8497,7 +8443,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "SM_ELECTIVE_ESTERI_2026",
@@ -8621,7 +8567,7 @@
         }
       ],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "TH_DTV_MFA_2026",
@@ -8767,7 +8713,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "TR_RESIDENCE_PMM_2026",
@@ -8858,7 +8804,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "TW_DNV_BOCA_2026",
@@ -8951,7 +8897,7 @@
       "status": "GREEN",
       "reasons": [],
       "missing": [],
-      "last_verified": ""
+      "last_verified": "2026-06-18"
     },
     {
       "visa_id": "UY_WORKINGHOLIDAY_GUBUY_2026",
