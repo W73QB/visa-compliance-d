@@ -52,7 +52,7 @@ In the current snapshot, the products that show GREEN for the Spain DNV are heal
 
 ## Check in the engine
 
-Confirm whether a specific policy meets the Spain rule for the current snapshot:
+Confirm in [the compliance checker](/ui/) whether a specific policy meets the Spain rule for the current snapshot:
 
 {{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-06-13" >}}
 
@@ -65,6 +65,7 @@ For the Spain DNV and NLV, the products that meet every term in the current snap
 
 ## Related reading
 
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 - [Spain DNV insurance requirements](/posts/spain-dnv-insurance/)
 - [Spain NLV insurance requirements](/posts/spain-nlv-insurance/)
 - [Spain Digital Nomad Visa: application process](/posts/spain-dnv-application-process/)

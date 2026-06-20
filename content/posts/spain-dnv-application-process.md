@@ -71,7 +71,7 @@ VisaFact compares each authority requirement against insurance product evidence 
 
 ## Check in the engine
 
-Confirm whether a specific policy meets the Spain DNV rule for the current snapshot:
+Confirm in [the compliance checker](/ui/) whether a specific policy meets the Spain DNV rule for the current snapshot:
 
 {{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-06-13" >}}
 
@@ -83,6 +83,7 @@ For the Spain DNV, the products that show GREEN are health policies from an insu
 
 ## Related reading
 
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 - [Spain DNV insurance requirements](/posts/spain-dnv-insurance/)
 - [Spain Non-Lucrative Visa: application process](/posts/spain-nlv-application-process/)
 - ["No co-payment, no deductible": what Spain's insurance rule means](/posts/spain-visa-insurance-no-copay-deductible/)

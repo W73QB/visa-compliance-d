@@ -61,7 +61,7 @@ VisaFact compares each authority requirement against insurance product evidence 
 
 ## Check in the engine
 
-Confirm whether a specific policy meets the Spain NLV rule for the current snapshot:
+Confirm in [the compliance checker](/ui/) whether a specific policy meets the Spain NLV rule for the current snapshot:
 
 {{< checker_cta visa="ES_NLV_LA_2026" snapshot="2026-06-08" >}}
 
@@ -73,6 +73,7 @@ For the Spain NLV, the products that show GREEN are health policies from an insu
 
 ## Related reading
 
+- [Spain NLV requirements (route page)](/visas/spain/non-lucrative-visa/consulate-los-angeles/)
 - [Spain NLV insurance requirements](/posts/spain-nlv-insurance/)
 - [Spain Digital Nomad Visa: application process](/posts/spain-dnv-application-process/)
 - ["No co-payment, no deductible": what Spain's insurance rule means](/posts/spain-visa-insurance-no-copay-deductible/)

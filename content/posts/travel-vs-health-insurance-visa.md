@@ -56,7 +56,7 @@ VisaFact compares each route's authority requirements against insurance product 
 
 ## Check in the engine
 
-Compare a specific policy against a route, for example the Spain Digital Nomad Visa:
+Compare in [the compliance checker](/ui/) a specific policy against a route, for example the Spain Digital Nomad Visa:
 
 {{< checker_cta visa="ES_DNV_BLS_LONDON_2026" snapshot="2026-06-13" >}}
 
@@ -71,6 +71,7 @@ Always confirm the result for your exact route in the checker before you buy.
 
 ## Related reading
 
+- [Spain DNV requirements (route page)](/visas/spain/digital-nomad-visa/consulate-via-bls-london/)
 - [Visa insurance requirements by country](/visa-insurance-requirements/)
 - [Spain Digital Nomad Visa: application process](/posts/spain-dnv-application-process/)
 - ["No co-payment, no deductible": what Spain's insurance rule means](/posts/spain-visa-insurance-no-copay-deductible/)
