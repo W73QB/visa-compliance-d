@@ -111,7 +111,7 @@
       </div>
       <button id="mobileMenuBtn"
         class="md:hidden p-2 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Toggle menu">
+        aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
       <nav class="hidden md:flex items-center gap-8">
@@ -183,13 +183,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
         <div class="flex flex-col gap-3 group">
-          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying
+          <label for="visaSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I am applying
             for</label>
           <div class="relative">
             <span
               class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">gavel</span>
             <select id="visaSelect"
-              class="vf-field w-full pl-12 pr-10 appearance-none cursor-pointer">
+              class="vf-field w-full pl-12 pr-10 appearance-none cursor-pointer" aria-describedby="visaHint">
               <option value="">Select visa route (authority)</option>
             </select>
             <span
@@ -200,13 +200,13 @@
         </div>
 
         <div class="flex flex-col gap-3 group">
-          <label class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to
+          <label for="productSelect" class="text-xs font-bold text-text-secondary dark:text-gray-400 uppercase tracking-wider">I want to
             use</label>
           <div class="relative">
             <span
               class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">health_and_safety</span>
             <select id="productSelect"
-              class="vf-field w-full pl-12 pr-10 appearance-none cursor-pointer">
+              class="vf-field w-full pl-12 pr-10 appearance-none cursor-pointer" aria-describedby="productHint">
               <option value="">Select an insurance product</option>
             </select>
             <span
@@ -1178,6 +1178,7 @@
       const btn = $("mobileMenuBtn");
       const isOpen = !menu.classList.contains("hidden");
       menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(!isOpen));
       btn.querySelector("span").textContent = isOpen ? "menu" : "close";
     });
 

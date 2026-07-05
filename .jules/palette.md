@@ -1,0 +1,3 @@
+## 2026-07-05 - Accessibility improvements for VisaFact Checker UI
+**Learning:** Found form selects that did not have explicit `for` attributes linking their labels, or `aria-describedby` linking the hint text. Because labels and inputs were separated, this could break screen reader flow. Additionally, the mobile menu button was missing `aria-expanded` state tracking and `aria-controls`.
+**Action:** Always ensure labels reference `id`s using `for`, inputs link to hint texts via `aria-describedby`, and interactive toggles correctly map JavaScript visibility state to `aria-expanded` and specify `aria-controls`.
