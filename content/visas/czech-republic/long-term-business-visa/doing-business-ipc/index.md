@@ -2,6 +2,7 @@
 title: "Czech Republic Long-term Business Visa - Doing Business (IPC)"
 visa_id: "CZ_LONGTERM_BUSINESS_IPC_2026"
 last_verified: "2026-06-10"
+date: "2026-06-10"
 source_ids: ["CZ_IPC_INSURANCE_2026"]
 description: "Official insurance requirements for Czech Republic Long-term Business Visa via Doing Business (IPC)"
 faq:

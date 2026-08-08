@@ -1,5 +1,6 @@
 ---
 title: "Austria Residence Permit (third-country nationals)"
+date: "2026-06-16"
 visa_group: "austria-residence-permit-third-country-nationals"
 description: "Insurance requirements for Austria Residence Permit (third-country nationals) - evidence-based compliance checker"
 ---

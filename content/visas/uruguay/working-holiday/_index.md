@@ -1,5 +1,6 @@
 ---
 title: "Uruguay Working Holiday"
+date: "2026-06-16"
 visa_group: "uruguay-working-holiday"
 description: "Insurance requirements for Uruguay Working Holiday - evidence-based compliance checker"
 ---

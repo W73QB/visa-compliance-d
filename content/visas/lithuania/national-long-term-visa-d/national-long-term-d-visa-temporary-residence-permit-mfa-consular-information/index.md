@@ -2,6 +2,7 @@
 title: "Lithuania National (long-term) Visa D - National long-term (D) visa / temporary residence permit - MFA Consular Information"
 visa_id: "LT_LONGSTAYD_URM_2026"
 last_verified: "2026-06-17"
+date: "2026-06-17"
 source_ids: ["LT_LONGSTAYD_URM_2026"]
 description: "Official insurance requirements for Lithuania National (long-term) Visa D via National long-term (D) visa / temporary residence permit - MFA Consular Information"
 faq:

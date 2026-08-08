@@ -1,5 +1,6 @@
 ---
 title: "Czech Republic Long-term Business Visa"
+date: "2026-06-10"
 visa_group: "czech-republic-long-term-business-visa"
 description: "Insurance requirements for Czech Republic Long-term Business Visa - evidence-based compliance checker"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Colombia Digital Nomad Visa"
+date: "2026-06-08"
 visa_group: "colombia-digital-nomad-visa"
 description: "Insurance requirements for Colombia Digital Nomad Visa - evidence-based compliance checker"
 ---

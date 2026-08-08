@@ -1,5 +1,6 @@
 ---
 title: "Portugal D7 Visa (Passive Income)"
+date: "2026-06-09"
 visa_group: "portugal-d7-visa-passive-income"
 description: "Insurance requirements for Portugal D7 Visa (Passive Income) - evidence-based compliance checker"
 ---

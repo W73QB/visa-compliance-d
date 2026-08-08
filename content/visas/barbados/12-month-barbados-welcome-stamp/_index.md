@@ -1,5 +1,6 @@
 ---
 title: "Barbados 12 Month Barbados Welcome Stamp"
+date: "2026-06-15"
 visa_group: "barbados-12-month-barbados-welcome-stamp"
 description: "Insurance requirements for Barbados 12 Month Barbados Welcome Stamp - evidence-based compliance checker"
 ---

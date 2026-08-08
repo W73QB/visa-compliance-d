@@ -2,6 +2,7 @@
 title: "New Zealand Fee Paying Student Visa - Fee Paying Student Visa (Immigration New Zealand)"
 visa_id: "NZ_STUDENT_INZ_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["NZ_STUDENT_INZ_2026"]
 description: "Official insurance requirements for New Zealand Fee Paying Student Visa via Fee Paying Student Visa (Immigration New Zealand)"
 faq:

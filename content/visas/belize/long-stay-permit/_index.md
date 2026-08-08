@@ -1,5 +1,6 @@
 ---
 title: "Belize Long Stay Permit"
+date: "2026-06-15"
 visa_group: "belize-long-stay-permit"
 description: "Insurance requirements for Belize Long Stay Permit - evidence-based compliance checker"
 ---

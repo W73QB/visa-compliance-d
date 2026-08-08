@@ -1,5 +1,6 @@
 ---
 title: "Montenegro Digital Nomad Temporary Residence"
+date: "2026-06-15"
 visa_group: "montenegro-digital-nomad-temporary-residence"
 description: "Insurance requirements for Montenegro Digital Nomad Temporary Residence - evidence-based compliance checker"
 ---

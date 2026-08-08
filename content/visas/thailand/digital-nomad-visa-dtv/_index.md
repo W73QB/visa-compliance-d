@@ -1,5 +1,6 @@
 ---
 title: "Thailand Digital Nomad Visa (DTV)"
+date: "2026-01-12"
 visa_group: "thailand-digital-nomad-visa-dtv"
 description: "Insurance requirements for Thailand Digital Nomad Visa (DTV) - evidence-based compliance checker"
 ---

@@ -2,6 +2,7 @@
 title: "Japan Digital Nomad Visa - Designated Activities (MOFA)"
 visa_id: "JP_DNV_MOFA_2026"
 last_verified: "2026-06-08"
+date: "2026-06-08"
 source_ids: ["JP_DNV_MOFA_2026"]
 description: "Official insurance requirements for Japan Digital Nomad Visa via Designated Activities (MOFA)"
 faq:

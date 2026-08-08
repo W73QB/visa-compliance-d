@@ -2,6 +2,7 @@
 title: "Germany Freelance Visa (National D) - Embassy London"
 visa_id: "DE_FREELANCE_EMBASSY_LONDON_2026"
 last_verified: "2026-01-15"
+date: "2026-01-15"
 source_ids: ["DE_D_VISA_HEALTH_INSURANCE_2026"]
 description: "Official insurance requirements for Germany Freelance Visa (National D) via Embassy London."
 faq:

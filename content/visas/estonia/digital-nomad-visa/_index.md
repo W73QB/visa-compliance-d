@@ -1,5 +1,6 @@
 ---
 title: "Estonia Digital Nomad Visa"
+date: "2026-06-09"
 visa_group: "estonia-digital-nomad-visa"
 description: "Insurance requirements for Estonia Digital Nomad Visa - evidence-based compliance checker"
 ---

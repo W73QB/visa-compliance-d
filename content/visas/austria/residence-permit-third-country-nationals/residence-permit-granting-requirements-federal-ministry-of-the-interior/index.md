@@ -2,6 +2,7 @@
 title: "Austria Residence Permit (third-country nationals) - Residence permit granting requirements (Federal Ministry of the Interior)"
 visa_id: "AT_RESIDENCE_BMI_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["AT_RESIDENCE_BMI_2026"]
 description: "Official insurance requirements for Austria Residence Permit (third-country nationals) via Residence permit granting requirements (Federal Ministry of the Interior)"
 faq:

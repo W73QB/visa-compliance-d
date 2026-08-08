@@ -2,6 +2,7 @@
 title: "Estonia Digital Nomad Visa - Long-stay (D) visa"
 visa_id: "EE_DNV_VM_2026"
 last_verified: "2026-06-09"
+date: "2026-06-09"
 source_ids: ["EE_VM_DVISA_2026"]
 description: "Official insurance requirements for Estonia Digital Nomad Visa via Long-stay (D) visa"
 faq:

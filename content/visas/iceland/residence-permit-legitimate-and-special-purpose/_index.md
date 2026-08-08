@@ -1,5 +1,6 @@
 ---
 title: "Iceland Residence Permit (legitimate and special purpose)"
+date: "2026-06-15"
 visa_group: "iceland-residence-permit-legitimate-and-special-purpose"
 description: "Insurance requirements for Iceland Residence Permit (legitimate and special purpose) - evidence-based compliance checker"
 ---

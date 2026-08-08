@@ -1,5 +1,6 @@
 ---
 title: "Georgia Long-Term Visa"
+date: "2026-06-15"
 visa_group: "georgia-long-term-visa"
 description: "Insurance requirements for Georgia Long-Term Visa - evidence-based compliance checker"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Visa Requirements"
+date: "2026-06-17"
 description: "Evidence-based visa insurance requirements by country and visa type"
 ---
 

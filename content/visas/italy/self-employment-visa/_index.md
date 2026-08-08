@@ -1,5 +1,6 @@
 ---
 title: "Italy Self-Employment Visa"
+date: "2026-06-08"
 visa_group: "italy-self-employment-visa"
 description: "Insurance requirements for Italy Self-Employment Visa - evidence-based compliance checker"
 ---

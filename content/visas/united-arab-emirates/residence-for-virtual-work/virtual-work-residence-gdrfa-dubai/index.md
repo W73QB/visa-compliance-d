@@ -2,6 +2,7 @@
 title: "United Arab Emirates Residence for Virtual Work - Virtual Work residence (GDRFA Dubai)"
 visa_id: "AE_VIRTUALWORK_GDRFA_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["AE_VIRTUALWORK_GDRFA_2026"]
 description: "Official insurance requirements for United Arab Emirates Residence for Virtual Work via Virtual Work residence (GDRFA Dubai)"
 faq:

@@ -2,6 +2,7 @@
 title: "Anguilla Student Permit - Student Permit application (Higher Education Licensing Board)"
 visa_id: "AI_STUDENT_GOVAI_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["AI_STUDENT_GOVAI_2026"]
 description: "Official insurance requirements for Anguilla Student Permit via Student Permit application (Higher Education Licensing Board)"
 faq:

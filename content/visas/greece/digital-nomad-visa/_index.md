@@ -1,5 +1,6 @@
 ---
 title: "Greece Digital Nomad Visa"
+date: "2026-06-08"
 visa_group: "greece-digital-nomad-visa"
 description: "Insurance requirements for Greece Digital Nomad Visa - evidence-based compliance checker"
 ---

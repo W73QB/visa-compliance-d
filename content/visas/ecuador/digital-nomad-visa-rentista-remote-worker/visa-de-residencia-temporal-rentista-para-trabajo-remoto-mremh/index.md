@@ -2,6 +2,7 @@
 title: "Ecuador Digital Nomad Visa (Rentista Remote Worker) - Visa de residencia temporal rentista para trabajo remoto (MREMH)"
 visa_id: "EC_NOMAD_CANCILLERIA_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["EC_NOMAD_CANCILLERIA_2026"]
 description: "Official insurance requirements for Ecuador Digital Nomad Visa (Rentista Remote Worker) via Visa de residencia temporal rentista para trabajo remoto (MREMH)"
 faq:

@@ -90,7 +90,8 @@
     "content/guides/*.md",
     "content/traps/*.md",
     "content/visas/**/index.md",
-    "content/posts/**/index.md"
+    "content/posts/**/index.md",
+    "content/visas/**/_index.md"
   ],
   "exclude_globs": [
     "content/posts/_index.md",

@@ -2,6 +2,7 @@
 title: "Latvia Long-Term Visa for Remote Work - Remote work long-stay visa (PMLP)"
 visa_id: "LV_REMOTEWORK_PMLP_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["LV_REMOTEWORK_PMLP_2026"]
 description: "Official insurance requirements for Latvia Long-Term Visa for Remote Work via Remote work long-stay visa (PMLP)"
 faq:

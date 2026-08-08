@@ -2,6 +2,7 @@
 title: "Italy Self-Employment Visa - Short-term (Schengen, San Francisco)"
 visa_id: "IT_SELFEMP_SF_2026"
 last_verified: "2026-06-08"
+date: "2026-06-08"
 source_ids: ["IT_SELFEMP_SF_INSURANCE_2026"]
 description: "Official insurance requirements for Italy Self-Employment Visa via Short-term (Schengen, San Francisco)"
 faq:

@@ -2,6 +2,7 @@
 title: "Iceland Residence Permit (legitimate and special purpose) - Residence permit requirements (Directorate of Immigration)"
 visa_id: "IS_RESIDENCE_UTL_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["IS_RESIDENCE_UTL_2026"]
 description: "Official insurance requirements for Iceland Residence Permit (legitimate and special purpose) via Residence permit requirements (Directorate of Immigration)"
 faq:

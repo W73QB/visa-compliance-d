@@ -1,5 +1,6 @@
 ---
 title: "Bahrain Golden Residency Visa"
+date: "2026-06-15"
 visa_group: "bahrain-golden-residency-visa"
 description: "Insurance requirements for Bahrain Golden Residency Visa - evidence-based compliance checker"
 ---

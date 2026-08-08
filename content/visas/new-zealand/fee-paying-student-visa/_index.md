@@ -1,5 +1,6 @@
 ---
 title: "New Zealand Fee Paying Student Visa"
+date: "2026-06-15"
 visa_group: "new-zealand-fee-paying-student-visa"
 description: "Insurance requirements for New Zealand Fee Paying Student Visa - evidence-based compliance checker"
 ---

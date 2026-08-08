@@ -1,5 +1,6 @@
 ---
 title: "Romania Digital Nomad Visa"
+date: "2026-06-15"
 visa_group: "romania-digital-nomad-visa"
 description: "Insurance requirements for Romania Digital Nomad Visa - evidence-based compliance checker"
 ---

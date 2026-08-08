@@ -1,5 +1,6 @@
 ---
 title: "Costa Rica Digital Nomad Visa"
+date: "2026-01-12"
 visa_group: "costa-rica-digital-nomad-visa"
 description: "Insurance requirements for Costa Rica Digital Nomad Visa - evidence-based compliance checker"
 ---

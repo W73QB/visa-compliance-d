@@ -1,5 +1,6 @@
 ---
 title: "Malta Nomad Residence Permit"
+date: "2026-01-12"
 visa_group: "malta-nomad-residence-permit"
 description: "Insurance requirements for Malta Nomad Residence Permit - evidence-based compliance checker"
 ---

@@ -2,6 +2,7 @@
 title: "Uruguay Working Holiday - Working Holiday for foreign citizens (gub.uy)"
 visa_id: "UY_WORKINGHOLIDAY_GUBUY_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["UY_WORKINGHOLIDAY_GUBUY_2026"]
 description: "Official insurance requirements for Uruguay Working Holiday via Working Holiday for foreign citizens (gub.uy)"
 faq:

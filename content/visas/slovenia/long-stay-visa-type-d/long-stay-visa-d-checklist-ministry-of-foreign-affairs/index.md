@@ -2,6 +2,7 @@
 title: "Slovenia Long-Stay Visa (Type D) - Long Stay Visa D checklist (Ministry of Foreign Affairs)"
 visa_id: "SI_D_GOVSI_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["SI_D_GOVSI_2026"]
 description: "Official insurance requirements for Slovenia Long-Stay Visa (Type D) via Long Stay Visa D checklist (Ministry of Foreign Affairs)"
 faq:

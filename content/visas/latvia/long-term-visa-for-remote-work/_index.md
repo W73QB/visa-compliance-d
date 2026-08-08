@@ -1,5 +1,6 @@
 ---
 title: "Latvia Long-Term Visa for Remote Work"
+date: "2026-06-15"
 visa_group: "latvia-long-term-visa-for-remote-work"
 description: "Insurance requirements for Latvia Long-Term Visa for Remote Work - evidence-based compliance checker"
 ---

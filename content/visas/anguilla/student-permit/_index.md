@@ -1,5 +1,6 @@
 ---
 title: "Anguilla Student Permit"
+date: "2026-06-16"
 visa_group: "anguilla-student-permit"
 description: "Insurance requirements for Anguilla Student Permit - evidence-based compliance checker"
 ---

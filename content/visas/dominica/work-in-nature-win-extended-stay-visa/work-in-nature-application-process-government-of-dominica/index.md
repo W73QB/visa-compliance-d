@@ -2,6 +2,7 @@
 title: "Dominica Work In Nature (WIN) Extended Stay Visa - Work In Nature application process (Government of Dominica)"
 visa_id: "DM_WIN_GOVDM_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["DM_WIN_GOVDM_2026"]
 description: "Official insurance requirements for Dominica Work In Nature (WIN) Extended Stay Visa via Work In Nature application process (Government of Dominica)"
 faq:

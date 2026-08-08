@@ -1,5 +1,6 @@
 ---
 title: "Ecuador Digital Nomad Visa (Rentista Remote Worker)"
+date: "2026-06-15"
 visa_group: "ecuador-digital-nomad-visa-rentista-remote-worker"
 description: "Insurance requirements for Ecuador Digital Nomad Visa (Rentista Remote Worker) - evidence-based compliance checker"
 ---

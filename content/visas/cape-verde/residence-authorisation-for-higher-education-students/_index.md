@@ -1,5 +1,6 @@
 ---
 title: "Cape Verde Residence Authorisation for Higher-Education Students"
+date: "2026-06-16"
 visa_group: "cape-verde-residence-authorisation-for-higher-education-students"
 description: "Insurance requirements for Cape Verde Residence Authorisation for Higher-Education Students - evidence-based compliance checker"
 ---

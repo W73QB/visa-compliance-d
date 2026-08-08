@@ -2,6 +2,7 @@
 title: "Poland National Visa (Type D) - D-Type national visa (gov.pl Nicosia)"
 visa_id: "PL_NATD_NICOSIA_2026"
 last_verified: "2026-06-13"
+date: "2026-06-13"
 source_ids: ["PL_NATD_NICOSIA_2026", "PL_NATD_SG_2026"]
 description: "Official insurance requirements for Poland National Visa (Type D) via D-Type national visa (gov.pl Nicosia)"
 faq:

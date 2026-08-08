@@ -1,5 +1,6 @@
 ---
 title: "Mauritius Premium Visa"
+date: "2026-06-15"
 visa_group: "mauritius-premium-visa"
 description: "Insurance requirements for Mauritius Premium Visa - evidence-based compliance checker"
 ---

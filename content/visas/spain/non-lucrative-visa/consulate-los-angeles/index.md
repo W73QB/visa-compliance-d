@@ -2,6 +2,7 @@
 title: "Spain Non-Lucrative Visa - Consulate (Los Angeles)"
 visa_id: "ES_NLV_LA_2026"
 last_verified: "2026-06-08"
+date: "2026-06-08"
 source_ids: ["ES_NLV_LA_EXTERIORES_2026"]
 description: "Official insurance requirements for Spain Non-Lucrative Visa via Consulate (Los Angeles)"
 faq:

@@ -2,6 +2,7 @@
 title: "South Korea Workation (Digital Nomad) Visa (F-1-D) - F-1-D Pilot Program (MOFA Los Angeles)"
 visa_id: "KR_F1D_MOFA_LA_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["KR_F1D_MOFA_LA_2026"]
 description: "Official insurance requirements for South Korea Workation (Digital Nomad) Visa (F-1-D) via F-1-D Pilot Program (MOFA Los Angeles)"
 faq:

@@ -2,6 +2,7 @@
 title: "Kazakhstan Neo Nomad Visa - Neo Nomad Visa B12-1 (eGov Kazakhstan)"
 visa_id: "KZ_NEONOMAD_EGOV_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["KZ_NEONOMAD_EGOV_2026"]
 description: "Official insurance requirements for Kazakhstan Neo Nomad Visa via Neo Nomad Visa B12-1 (eGov Kazakhstan)"
 faq:

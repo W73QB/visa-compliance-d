@@ -1,5 +1,6 @@
 ---
 title: "Turkey Short-Term Residence Permit"
+date: "2026-06-15"
 visa_group: "turkey-short-term-residence-permit"
 description: "Insurance requirements for Turkey Short-Term Residence Permit - evidence-based compliance checker"
 ---

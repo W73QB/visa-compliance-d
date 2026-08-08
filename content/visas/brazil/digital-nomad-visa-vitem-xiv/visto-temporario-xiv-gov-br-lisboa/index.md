@@ -2,6 +2,7 @@
 title: "Brazil Digital Nomad Visa (VITEM XIV) - Visto Temporario XIV (gov.br Lisboa)"
 visa_id: "BR_DNV_LISBOA_2026"
 last_verified: "2026-06-13"
+date: "2026-06-13"
 source_ids: ["BR_DNV_LISBOA_2026"]
 description: "Official insurance requirements for Brazil Digital Nomad Visa (VITEM XIV) via Visto Temporario XIV (gov.br Lisboa)"
 faq:

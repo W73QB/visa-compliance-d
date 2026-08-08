@@ -1,5 +1,6 @@
 ---
 title: "Japan Digital Nomad Visa"
+date: "2026-06-08"
 visa_group: "japan-digital-nomad-visa"
 description: "Insurance requirements for Japan Digital Nomad Visa - evidence-based compliance checker"
 ---

@@ -2,6 +2,7 @@
 title: "Luxembourg Pupil/Student Authorisation to Stay (third-country) - Third-country pupil authorisation to stay over 3 months (Guichet)"
 visa_id: "LU_STUDENT_GUICHET_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["LU_STUDENT_GUICHET_2026"]
 description: "Official insurance requirements for Luxembourg Pupil/Student Authorisation to Stay (third-country) via Third-country pupil authorisation to stay over 3 months (Guichet)"
 faq:

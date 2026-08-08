@@ -2,6 +2,7 @@
 title: "Albania Unique Permit (Digital Mover) - Leje Unike (MB / e-Albania)"
 visa_id: "AL_LEJE_UNIKE_MB_2026"
 last_verified: "2026-06-09"
+date: "2026-06-09"
 source_ids: ["AL_LEJE_UNIKE_MB_2026"]
 description: "Official insurance requirements for Albania Unique Permit (Digital Mover) via Leje Unike (MB / e-Albania)"
 faq:

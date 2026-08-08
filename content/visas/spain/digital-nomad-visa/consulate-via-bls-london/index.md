@@ -2,6 +2,7 @@
 title: "Spain Digital Nomad Visa - Consulate via BLS London"
 visa_id: "ES_DNV_BLS_LONDON_2026"
 last_verified: "2026-01-12"
+date: "2026-01-12"
 source_ids: ["BLS_ES_DNV_LONDON_2026"]
 description: "Official insurance requirements for Spain Digital Nomad Visa via Consulate via BLS London."
 faq:

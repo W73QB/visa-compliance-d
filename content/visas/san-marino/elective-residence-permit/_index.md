@@ -1,5 +1,6 @@
 ---
 title: "San Marino Elective Residence Permit"
+date: "2026-06-15"
 visa_group: "san-marino-elective-residence-permit"
 description: "Insurance requirements for San Marino Elective Residence Permit - evidence-based compliance checker"
 ---

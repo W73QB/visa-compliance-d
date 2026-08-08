@@ -2,6 +2,7 @@
 title: "Georgia Long-Term Visa - Long-term visa travel/health insurance (MFA Consular Department)"
 visa_id: "GE_LONGVISA_GEOCONSUL_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["GE_LONGVISA_GEOCONSUL_2026"]
 description: "Official insurance requirements for Georgia Long-Term Visa via Long-term visa travel/health insurance (MFA Consular Department)"
 faq:

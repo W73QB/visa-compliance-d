@@ -1,5 +1,6 @@
 ---
 title: "United Arab Emirates Residence for Virtual Work"
+date: "2026-06-15"
 visa_group: "united-arab-emirates-residence-for-virtual-work"
 description: "Insurance requirements for United Arab Emirates Residence for Virtual Work - evidence-based compliance checker"
 ---

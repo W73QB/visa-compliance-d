@@ -1,5 +1,6 @@
 ---
 title: "Croatia Digital Nomad Temporary Stay"
+date: "2026-06-10"
 visa_group: "croatia-digital-nomad-temporary-stay"
 description: "Insurance requirements for Croatia Digital Nomad Temporary Stay - evidence-based compliance checker"
 ---

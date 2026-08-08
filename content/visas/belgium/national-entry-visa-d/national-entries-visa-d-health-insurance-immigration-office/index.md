@@ -2,6 +2,7 @@
 title: "Belgium National Entry (Visa D) - National entries visa D, health insurance (Immigration Office)"
 visa_id: "BE_NATIONALD_DOFI_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["BE_NATIONALD_DOFI_2026"]
 description: "Official insurance requirements for Belgium National Entry (Visa D) via National entries visa D, health insurance (Immigration Office)"
 faq:

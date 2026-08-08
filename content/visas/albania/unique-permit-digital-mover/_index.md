@@ -1,5 +1,6 @@
 ---
 title: "Albania Unique Permit (Digital Mover)"
+date: "2026-06-09"
 visa_group: "albania-unique-permit-digital-mover"
 description: "Insurance requirements for Albania Unique Permit (Digital Mover) - evidence-based compliance checker"
 ---

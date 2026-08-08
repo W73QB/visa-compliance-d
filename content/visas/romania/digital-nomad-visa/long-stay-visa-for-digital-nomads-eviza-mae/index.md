@@ -2,6 +2,7 @@
 title: "Romania Digital Nomad Visa - Long-stay visa for digital nomads (eViza MAE)"
 visa_id: "RO_DNV_EVIZA_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["RO_DNV_EVIZA_2026"]
 description: "Official insurance requirements for Romania Digital Nomad Visa via Long-stay visa for digital nomads (eViza MAE)"
 faq:

@@ -2,6 +2,7 @@
 title: "Croatia Digital Nomad Temporary Stay - Ministry of the Interior (MUP)"
 visa_id: "HR_DNV_MUP_2026"
 last_verified: "2026-06-10"
+date: "2026-06-10"
 source_ids: ["HR_MUP_DIGITALNOMAD_2026"]
 description: "Official insurance requirements for Croatia Digital Nomad Temporary Stay via Ministry of the Interior (MUP)"
 faq:

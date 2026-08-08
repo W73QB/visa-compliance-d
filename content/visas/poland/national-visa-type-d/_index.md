@@ -1,5 +1,6 @@
 ---
 title: "Poland National Visa (Type D)"
+date: "2026-06-13"
 visa_group: "poland-national-visa-type-d"
 description: "Insurance requirements for Poland National Visa (Type D) - evidence-based compliance checker"
 ---

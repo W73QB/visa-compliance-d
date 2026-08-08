@@ -1,5 +1,6 @@
 ---
 title: "Belgium National Entry (Visa D)"
+date: "2026-06-15"
 visa_group: "belgium-national-entry-visa-d"
 description: "Insurance requirements for Belgium National Entry (Visa D) - evidence-based compliance checker"
 ---

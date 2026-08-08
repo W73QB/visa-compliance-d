@@ -1,5 +1,6 @@
 ---
 title: "Sweden Residence Permit for Studies"
+date: "2026-06-15"
 visa_group: "sweden-residence-permit-for-studies"
 description: "Insurance requirements for Sweden Residence Permit for Studies - evidence-based compliance checker"
 ---

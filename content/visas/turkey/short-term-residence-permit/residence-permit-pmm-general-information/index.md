@@ -2,6 +2,7 @@
 title: "Turkey Short-Term Residence Permit - Residence permit (PMM general information)"
 visa_id: "TR_RESIDENCE_PMM_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["TR_RESIDENCE_PMM_2026"]
 description: "Official insurance requirements for Turkey Short-Term Residence Permit via Residence permit (PMM general information)"
 faq:

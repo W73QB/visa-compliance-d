@@ -1,5 +1,6 @@
 ---
 title: "South Korea Workation (Digital Nomad) Visa (F-1-D)"
+date: "2026-06-15"
 visa_group: "south-korea-workation-digital-nomad-visa-f-1-d"
 description: "Insurance requirements for South Korea Workation (Digital Nomad) Visa (F-1-D) - evidence-based compliance checker"
 ---

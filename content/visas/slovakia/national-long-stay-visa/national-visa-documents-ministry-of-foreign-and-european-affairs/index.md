@@ -2,6 +2,7 @@
 title: "Slovakia National (Long-Stay) Visa - National visa documents (Ministry of Foreign and European Affairs)"
 visa_id: "SK_NATIONALVISA_MZV_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["SK_NATIONALVISA_MZV_2026"]
 description: "Official insurance requirements for Slovakia National (Long-Stay) Visa via National visa documents (Ministry of Foreign and European Affairs)"
 faq:

@@ -2,6 +2,7 @@
 title: "Portugal Temporary Stay Visa for Remote Work (E11) - VFS Global China"
 visa_id: "PT_DNV_VFS_CHINA_2026"
 last_verified: "2026-01-15"
+date: "2026-01-15"
 source_ids: ["VFS_PT_E11_CHINA_2025"]
 description: "Official insurance requirements for Portugal Temporary Stay Visa for Remote Work (E11) via VFS Global China."
 faq:

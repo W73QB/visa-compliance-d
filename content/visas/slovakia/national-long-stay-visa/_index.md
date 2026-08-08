@@ -1,5 +1,6 @@
 ---
 title: "Slovakia National (Long-Stay) Visa"
+date: "2026-06-16"
 visa_group: "slovakia-national-long-stay-visa"
 description: "Insurance requirements for Slovakia National (Long-Stay) Visa - evidence-based compliance checker"
 ---

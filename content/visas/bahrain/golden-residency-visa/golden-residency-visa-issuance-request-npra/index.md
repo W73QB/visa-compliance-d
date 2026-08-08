@@ -2,6 +2,7 @@
 title: "Bahrain Golden Residency Visa - Golden Residency Visa Issuance Request (NPRA)"
 visa_id: "BH_GOLDEN_NPRA_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["BH_GOLDEN_NPRA_2026"]
 description: "Official insurance requirements for Bahrain Golden Residency Visa via Golden Residency Visa Issuance Request (NPRA)"
 faq:

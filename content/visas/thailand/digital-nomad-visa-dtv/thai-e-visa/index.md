@@ -2,6 +2,7 @@
 title: "Thailand Digital Nomad Visa (DTV) - Thai E-Visa"
 visa_id: "TH_DTV_MFA_2026"
 last_verified: "2026-01-12"
+date: "2026-01-12"
 source_ids: ["TH_MFA_DTV_2026"]
 description: "Official insurance requirements for Thailand Digital Nomad Visa (DTV) via Thai E-Visa."
 faq:

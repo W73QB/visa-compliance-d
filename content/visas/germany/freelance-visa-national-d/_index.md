@@ -1,5 +1,6 @@
 ---
 title: "Germany Freelance Visa (National D)"
+date: "2026-01-15"
 visa_group: "germany-freelance-visa-national-d"
 description: "Insurance requirements for Germany Freelance Visa (National D) - evidence-based compliance checker"
 ---

@@ -2,6 +2,7 @@
 title: "Finland Residence Permit for Studies - Student residence permit, studies under two years (Migri)"
 visa_id: "FI_STUDY_MIGRI_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["FI_STUDY_MIGRI_2026"]
 description: "Official insurance requirements for Finland Residence Permit for Studies via Student residence permit, studies under two years (Migri)"
 faq:

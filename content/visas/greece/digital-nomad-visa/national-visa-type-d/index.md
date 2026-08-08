@@ -2,6 +2,7 @@
 title: "Greece Digital Nomad Visa - National Visa (Type D)"
 visa_id: "GR_DNV_MFA_2026"
 last_verified: "2026-06-08"
+date: "2026-06-08"
 source_ids: ["GR_WORKFROMGREECE_DNV_2026", "GR_WFG_CHECKLIST_2026"]
 description: "Official insurance requirements for Greece Digital Nomad Visa via National Visa (Type D)"
 faq:

@@ -2,6 +2,7 @@
 title: "Cyprus Digital Nomad Visa - Migration Department (CRMD)"
 visa_id: "CY_DNV_MD_2026"
 last_verified: "2026-06-09"
+date: "2026-06-09"
 source_ids: ["CY_MD_DIGITALNOMAD_DOCS_2026"]
 description: "Official insurance requirements for Cyprus Digital Nomad Visa via Migration Department (CRMD)"
 faq:

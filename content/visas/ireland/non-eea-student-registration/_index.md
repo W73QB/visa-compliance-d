@@ -1,5 +1,6 @@
 ---
 title: "Ireland Non-EEA Student Registration"
+date: "2026-06-15"
 visa_group: "ireland-non-eea-student-registration"
 description: "Insurance requirements for Ireland Non-EEA Student Registration - evidence-based compliance checker"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Sri Lanka Digital Nomad Visa"
+date: "2026-06-15"
 visa_group: "sri-lanka-digital-nomad-visa"
 description: "Insurance requirements for Sri Lanka Digital Nomad Visa - evidence-based compliance checker"
 ---

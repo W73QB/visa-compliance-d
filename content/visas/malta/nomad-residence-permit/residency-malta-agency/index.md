@@ -2,6 +2,7 @@
 title: "Malta Nomad Residence Permit - Residency Malta Agency"
 visa_id: "MT_NOMAD_RESIDENCY_2026"
 last_verified: "2026-01-12"
+date: "2026-01-12"
 source_ids: ["MT_RESIDENCY_FAQ_2026"]
 description: "Official insurance requirements for Malta Nomad Residence Permit via Residency Malta Agency."
 faq:

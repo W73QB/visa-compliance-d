@@ -1,5 +1,6 @@
 ---
 title: "Slovenia Long-Stay Visa (Type D)"
+date: "2026-06-15"
 visa_group: "slovenia-long-stay-visa-type-d"
 description: "Insurance requirements for Slovenia Long-Stay Visa (Type D) - evidence-based compliance checker"
 ---

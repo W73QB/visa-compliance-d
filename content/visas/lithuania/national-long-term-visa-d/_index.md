@@ -1,5 +1,6 @@
 ---
 title: "Lithuania National (long-term) Visa D"
+date: "2026-06-17"
 visa_group: "lithuania-national-long-term-visa-d"
 description: "Insurance requirements for Lithuania National (long-term) Visa D - evidence-based compliance checker"
 ---

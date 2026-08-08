@@ -2,6 +2,7 @@
 title: "Barbados 12 Month Barbados Welcome Stamp - Remote Employment Act 2020-23, Welcome Stamp"
 visa_id: "BB_WELCOMESTAMP_OAG_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["BB_WELCOMESTAMP_OAG_2026"]
 description: "Official insurance requirements for Barbados 12 Month Barbados Welcome Stamp via Remote Employment Act 2020-23, Welcome Stamp"
 faq:

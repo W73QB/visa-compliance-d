@@ -2,6 +2,7 @@
 title: "Taiwan Digital Nomad Visitor Visa - Digital nomad visitor visa (Bureau of Consular Affairs)"
 visa_id: "TW_DNV_BOCA_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["TW_DNV_BOCA_2026"]
 description: "Official insurance requirements for Taiwan Digital Nomad Visitor Visa via Digital nomad visitor visa (Bureau of Consular Affairs)"
 faq:

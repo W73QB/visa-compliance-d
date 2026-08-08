@@ -1,5 +1,6 @@
 ---
 title: "Dominica Work In Nature (WIN) Extended Stay Visa"
+date: "2026-06-15"
 visa_group: "dominica-work-in-nature-win-extended-stay-visa"
 description: "Insurance requirements for Dominica Work In Nature (WIN) Extended Stay Visa - evidence-based compliance checker"
 ---

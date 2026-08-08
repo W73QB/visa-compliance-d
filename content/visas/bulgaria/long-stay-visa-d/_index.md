@@ -1,5 +1,6 @@
 ---
 title: "Bulgaria Long-stay Visa D"
+date: "2026-06-17"
 visa_group: "bulgaria-long-stay-visa-d"
 description: "Insurance requirements for Bulgaria Long-stay Visa D - evidence-based compliance checker"
 ---

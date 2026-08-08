@@ -1,5 +1,6 @@
 ---
 title: "Finland Residence Permit for Studies"
+date: "2026-06-15"
 visa_group: "finland-residence-permit-for-studies"
 description: "Insurance requirements for Finland Residence Permit for Studies - evidence-based compliance checker"
 ---

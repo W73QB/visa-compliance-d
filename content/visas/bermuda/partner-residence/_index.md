@@ -1,5 +1,6 @@
 ---
 title: "Bermuda Partner Residence"
+date: "2026-06-16"
 visa_group: "bermuda-partner-residence"
 description: "Insurance requirements for Bermuda Partner Residence - evidence-based compliance checker"
 ---

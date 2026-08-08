@@ -1,5 +1,6 @@
 ---
 title: "Cyprus Digital Nomad Visa"
+date: "2026-06-09"
 visa_group: "cyprus-digital-nomad-visa"
 description: "Insurance requirements for Cyprus Digital Nomad Visa - evidence-based compliance checker"
 ---

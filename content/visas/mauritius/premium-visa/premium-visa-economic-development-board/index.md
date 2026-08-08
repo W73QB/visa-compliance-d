@@ -2,6 +2,7 @@
 title: "Mauritius Premium Visa - Premium Visa (Economic Development Board)"
 visa_id: "MU_PREMIUM_EDB_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["MU_PREMIUM_EDB_2026"]
 description: "Official insurance requirements for Mauritius Premium Visa via Premium Visa (Economic Development Board)"
 faq:

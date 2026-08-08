@@ -2,6 +2,7 @@
 title: "Belize Long Stay Permit - Long Stay Permit (Department of Immigration)"
 visa_id: "BZ_LONGSTAY_IMMIG_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["BZ_LONGSTAY_IMMIG_2026"]
 description: "Official insurance requirements for Belize Long Stay Permit via Long Stay Permit (Department of Immigration)"
 faq:

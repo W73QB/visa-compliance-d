@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Digital Nomad Visitor Visa"
+date: "2026-06-15"
 visa_group: "taiwan-digital-nomad-visitor-visa"
 description: "Insurance requirements for Taiwan Digital Nomad Visitor Visa - evidence-based compliance checker"
 ---

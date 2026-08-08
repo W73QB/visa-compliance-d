@@ -1,5 +1,6 @@
 ---
 title: "Luxembourg Pupil/Student Authorisation to Stay (third-country)"
+date: "2026-06-16"
 visa_group: "luxembourg-pupil-student-authorisation-to-stay-third-country"
 description: "Insurance requirements for Luxembourg Pupil/Student Authorisation to Stay (third-country) - evidence-based compliance checker"
 ---

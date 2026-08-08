@@ -1,5 +1,6 @@
 ---
 title: "Maldives Resident Visa (spouse of a Maldivian)"
+date: "2026-06-16"
 visa_group: "maldives-resident-visa-spouse-of-a-maldivian"
 description: "Insurance requirements for Maldives Resident Visa (spouse of a Maldivian) - evidence-based compliance checker"
 ---

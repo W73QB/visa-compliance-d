@@ -1,5 +1,6 @@
 ---
 title: "Panama Short-Stay Visa as Remote Worker"
+date: "2026-06-15"
 visa_group: "panama-short-stay-visa-as-remote-worker"
 description: "Insurance requirements for Panama Short-Stay Visa as Remote Worker - evidence-based compliance checker"
 ---

@@ -2,6 +2,7 @@
 title: "Cape Verde Residence Authorisation for Higher-Education Students - Residence authorisation for higher-education students (Lei n. 66/VIII/2014, art. 53)"
 visa_id: "CV_STUDENTRES_DGTCV_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["CV_STUDENTRES_DGTCV_2026"]
 description: "Official insurance requirements for Cape Verde Residence Authorisation for Higher-Education Students via Residence authorisation for higher-education students (Lei n. 66/VIII/2014, art. 53)"
 faq:

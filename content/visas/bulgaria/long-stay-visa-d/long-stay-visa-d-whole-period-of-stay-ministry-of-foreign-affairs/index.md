@@ -2,6 +2,7 @@
 title: "Bulgaria Long-stay Visa D - Long-stay Visa D (whole period of stay) - Ministry of Foreign Affairs"
 visa_id: "BG_LONGSTAYD_MFA_2026"
 last_verified: "2026-06-17"
+date: "2026-06-17"
 source_ids: ["BG_LONGSTAY_MFA_2026"]
 description: "Official insurance requirements for Bulgaria Long-stay Visa D via Long-stay Visa D (whole period of stay) - Ministry of Foreign Affairs"
 faq:

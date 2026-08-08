@@ -2,6 +2,7 @@
 title: "Maldives Resident Visa (spouse of a Maldivian) - Resident Visa, first-time applicants (Maldives Immigration)"
 visa_id: "MV_RESIDENT_IMMIG_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["MV_RESIDENT_IMMIG_2026"]
 description: "Official insurance requirements for Maldives Resident Visa (spouse of a Maldivian) via Resident Visa, first-time applicants (Maldives Immigration)"
 faq:

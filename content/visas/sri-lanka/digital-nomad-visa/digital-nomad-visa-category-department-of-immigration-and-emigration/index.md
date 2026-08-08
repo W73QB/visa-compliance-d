@@ -2,6 +2,7 @@
 title: "Sri Lanka Digital Nomad Visa - Digital Nomad Visa Category (Department of Immigration and Emigration)"
 visa_id: "LK_DNV_IMMIGRATION_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["LK_DNV_IMMIGRATION_2026"]
 description: "Official insurance requirements for Sri Lanka Digital Nomad Visa via Digital Nomad Visa Category (Department of Immigration and Emigration)"
 faq:

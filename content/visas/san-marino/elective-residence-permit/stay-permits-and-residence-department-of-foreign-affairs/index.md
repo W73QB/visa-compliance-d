@@ -2,6 +2,7 @@
 title: "San Marino Elective Residence Permit - Stay permits and residence (Department of Foreign Affairs)"
 visa_id: "SM_ELECTIVE_ESTERI_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["SM_ELECTIVE_ESTERI_2026"]
 description: "Official insurance requirements for San Marino Elective Residence Permit via Stay permits and residence (Department of Foreign Affairs)"
 faq:

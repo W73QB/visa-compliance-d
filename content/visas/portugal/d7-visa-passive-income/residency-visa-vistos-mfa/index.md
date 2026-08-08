@@ -2,6 +2,7 @@
 title: "Portugal D7 Visa (Passive Income) - Residency Visa (Vistos / MFA)"
 visa_id: "PT_D7_VISTOS_2026"
 last_verified: "2026-06-09"
+date: "2026-06-09"
 source_ids: ["PT_D7_VISTOS_2026"]
 description: "Official insurance requirements for Portugal D7 Visa (Passive Income) via Residency Visa (Vistos / MFA)"
 faq:

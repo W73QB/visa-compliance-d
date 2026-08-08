@@ -1,5 +1,6 @@
 ---
 title: "Spain Non-Lucrative Visa"
+date: "2026-06-08"
 visa_group: "spain-non-lucrative-visa"
 description: "Insurance requirements for Spain Non-Lucrative Visa - evidence-based compliance checker"
 ---

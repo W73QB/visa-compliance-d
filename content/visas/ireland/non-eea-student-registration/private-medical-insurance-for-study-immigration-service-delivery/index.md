@@ -2,6 +2,7 @@
 title: "Ireland Non-EEA Student Registration - Private medical insurance for study (Immigration Service Delivery)"
 visa_id: "IE_STUDENT_ISD_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["IE_STUDENT_ISD_2026"]
 description: "Official insurance requirements for Ireland Non-EEA Student Registration via Private medical insurance for study (Immigration Service Delivery)"
 faq:

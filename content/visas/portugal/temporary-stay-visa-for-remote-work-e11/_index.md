@@ -1,5 +1,6 @@
 ---
 title: "Portugal Temporary Stay Visa for Remote Work (E11)"
+date: "2026-01-15"
 visa_group: "portugal-temporary-stay-visa-for-remote-work-e11"
 description: "Insurance requirements for Portugal Temporary Stay Visa for Remote Work (E11) - evidence-based compliance checker"
 ---

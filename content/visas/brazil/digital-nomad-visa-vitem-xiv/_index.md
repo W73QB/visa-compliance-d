@@ -1,5 +1,6 @@
 ---
 title: "Brazil Digital Nomad Visa (VITEM XIV)"
+date: "2026-06-13"
 visa_group: "brazil-digital-nomad-visa-vitem-xiv"
 description: "Insurance requirements for Brazil Digital Nomad Visa (VITEM XIV) - evidence-based compliance checker"
 ---

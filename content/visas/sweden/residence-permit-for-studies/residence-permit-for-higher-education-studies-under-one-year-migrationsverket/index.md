@@ -2,6 +2,7 @@
 title: "Sweden Residence Permit for Studies - Residence permit for higher-education studies under one year (Migrationsverket)"
 visa_id: "SE_STUDY_MIGVERKET_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["SE_STUDY_MIGVERKET_2026"]
 description: "Official insurance requirements for Sweden Residence Permit for Studies via Residence permit for higher-education studies under one year (Migrationsverket)"
 faq:

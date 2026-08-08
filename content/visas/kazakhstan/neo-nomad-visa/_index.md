@@ -1,5 +1,6 @@
 ---
 title: "Kazakhstan Neo Nomad Visa"
+date: "2026-06-15"
 visa_group: "kazakhstan-neo-nomad-visa"
 description: "Insurance requirements for Kazakhstan Neo Nomad Visa - evidence-based compliance checker"
 ---

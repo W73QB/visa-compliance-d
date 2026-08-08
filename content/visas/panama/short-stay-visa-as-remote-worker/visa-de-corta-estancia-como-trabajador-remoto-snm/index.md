@@ -2,6 +2,7 @@
 title: "Panama Short-Stay Visa as Remote Worker - Visa de Corta Estancia como Trabajador Remoto (SNM)"
 visa_id: "PA_REMOTEWORK_SNM_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["PA_REMOTEWORK_SNM_2026"]
 description: "Official insurance requirements for Panama Short-Stay Visa as Remote Worker via Visa de Corta Estancia como Trabajador Remoto (SNM)"
 faq:

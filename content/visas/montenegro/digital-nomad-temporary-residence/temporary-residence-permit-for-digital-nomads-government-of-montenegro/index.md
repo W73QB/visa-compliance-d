@@ -2,6 +2,7 @@
 title: "Montenegro Digital Nomad Temporary Residence - Temporary residence permit for digital nomads (Government of Montenegro)"
 visa_id: "ME_DNV_GOVME_2026"
 last_verified: "2026-06-15"
+date: "2026-06-15"
 source_ids: ["ME_DNV_GOVME_2026"]
 description: "Official insurance requirements for Montenegro Digital Nomad Temporary Residence via Temporary residence permit for digital nomads (Government of Montenegro)"
 faq:

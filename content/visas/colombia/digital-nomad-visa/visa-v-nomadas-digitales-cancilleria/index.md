@@ -2,6 +2,7 @@
 title: "Colombia Digital Nomad Visa - Visa V Nomadas Digitales (Cancilleria)"
 visa_id: "CO_DNV_CANCILLERIA_2026"
 last_verified: "2026-06-08"
+date: "2026-06-08"
 source_ids: ["CO_DNV_CANCILLERIA_2026"]
 description: "Official insurance requirements for Colombia Digital Nomad Visa via Visa V Nomadas Digitales (Cancilleria)"
 faq:

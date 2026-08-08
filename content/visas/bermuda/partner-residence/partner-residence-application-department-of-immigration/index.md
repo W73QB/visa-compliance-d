@@ -2,6 +2,7 @@
 title: "Bermuda Partner Residence - Partner Residence application (Department of Immigration)"
 visa_id: "BM_PARTNERRESIDENCE_GOVBM_2026"
 last_verified: "2026-06-16"
+date: "2026-06-16"
 source_ids: ["BM_PARTNERRESIDENCE_GOVBM_2026"]
 description: "Official insurance requirements for Bermuda Partner Residence via Partner Residence application (Department of Immigration)"
 faq:

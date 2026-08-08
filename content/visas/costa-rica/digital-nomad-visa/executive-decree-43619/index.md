@@ -2,6 +2,7 @@
 title: "Costa Rica Digital Nomad Visa - Executive Decree 43619"
 visa_id: "CR_DN_DECREE_43619_2026"
 last_verified: "2026-01-12"
+date: "2026-01-12"
 source_ids: ["CR_DECREE_43619_2026"]
 description: "Official insurance requirements for Costa Rica Digital Nomad Visa via Executive Decree 43619."
 faq:

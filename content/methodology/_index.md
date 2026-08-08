@@ -1,5 +1,6 @@
 ---
 title: "Methodology"
+date: "2026-06-05"
 description: "How the VisaFact compliance checker works — evidence-based approach, data model, and status definitions."
 ---
 
