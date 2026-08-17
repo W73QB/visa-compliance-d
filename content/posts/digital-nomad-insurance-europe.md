@@ -25,6 +25,10 @@ Spain's Digital Nomad Visa (BLS London route) is the strictest health insurance 
 
 For the full requirement breakdown, proof-package checklist, rejection traps, and the current GREEN products for this route, see the dedicated **[Spain DNV insurance requirements guide](/posts/spain-dnv-insurance/)**.
 
+## Schengen visa insurance vs. digital nomad visa insurance
+
+Not every European trip needs the strict rules above. A short-stay (up to 90-day) **Schengen visa** only needs to clear the EU-wide floor — EUR 30,000 minimum, repatriation and emergency care covered, valid for the full stay (Source: `EU_VISA_CODE_ARTICLE_15_2026`, Article 15). A **digital nomad or long-stay national visa**, like the Spain DNV route above, sits on top of that floor with its own country-specific rules and is usually stricter. See the [Schengen visa insurance requirements guide](/guides/schengen-30000-insurance/) for the short-stay baseline.
+
 ## Key findings at a glance
 
 | Item | Value |
