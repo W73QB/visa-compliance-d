@@ -1,8 +1,8 @@
 ---
-title: "Digital nomad visa insurance in Europe (evidence-based)"
+title: "Digital nomad visa health insurance in Europe (evidence-based)"
 date: 2026-01-16
-lastmod: 2026-06-16
-description: "Evidence-based health insurance requirements for digital nomad and long-stay visas across European countries, with links to every route we track."
+lastmod: 2026-08-17
+description: "Digital nomad visa health insurance requirements by country, evidence-based: Spain DNV, Portugal E11, Germany Freelance, Malta Nomad, and every European route we track."
 tags: ["digital-nomad", "insurance", "europe", "compliance"]
 faq:
   - question: "Do all European digital nomad visas require insurance?"
@@ -18,6 +18,16 @@ faq:
 ## Short answer
 
 Europe does not have a single insurance standard for digital nomad and long-stay visas — requirements differ by country and authority, from "any-state travel insurance with repatriation" to "unlimited cover from an insurer authorized in the country". This hub links every European route we track (see the directory below) and works through four of them in detail as examples: Spain DNV, Portugal E11, Germany Freelance (national D), and Malta Nomad Residence Permit (Sources: `BLS_ES_DNV_LONDON_2026`, `VFS_PT_E11_CHINA_2025`, `DE_D_VISA_HEALTH_INSURANCE_2026`, `MT_RESIDENCY_FAQ_2026`). For any route, the compliance checker shows the live, evidence-based status.
+
+## Spain digital nomad visa health insurance (most asked)
+
+Spain's Digital Nomad Visa (BLS London route) is the strictest health insurance requirement in this dataset: the policy must come from an insurer authorized to operate in Spain, with unlimited coverage and no deductibles, no co-payments, and no waiting period, and it must cover risks insured by Spain's public health system. Ordinary travel insurance does not meet this bar (Source: `BLS_ES_DNV_LONDON_2026`, page 2, item 9; verified 2026-01-12).
+
+For the full requirement breakdown, proof-package checklist, rejection traps, and the current GREEN products for this route, see the dedicated **[Spain DNV insurance requirements guide](/posts/spain-dnv-insurance/)**.
+
+## Schengen visa insurance vs. digital nomad visa insurance
+
+Not every European trip needs the strict rules above. A short-stay (up to 90-day) **Schengen visa** only needs to clear the EU-wide floor — EUR 30,000 minimum, repatriation and emergency care covered, valid for the full stay (Source: `EU_VISA_CODE_ARTICLE_15_2026`, Article 15). A **digital nomad or long-stay national visa**, like the Spain DNV route above, sits on top of that floor with its own country-specific rules and is usually stricter. See the [Schengen visa insurance requirements guide](/guides/schengen-30000-insurance/) for the short-stay baseline.
 
 ## Key findings at a glance
 

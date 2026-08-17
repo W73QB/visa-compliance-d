@@ -1,7 +1,8 @@
 ---
-title: "Schengen €30,000 Travel Medical Insurance Requirements"
+title: "Schengen Visa Insurance Requirements: EUR 30,000 Minimum (Evidence-Based)"
 date: 2026-01-15
-description: "Evidence-based guide to Schengen travel medical insurance requirements under the EU Visa Code."
+lastmod: 2026-08-17
+description: "Schengen visa insurance requirements, evidence-based: EU Visa Code Article 15 sets a EUR 30,000 minimum for travel insurance for a Schengen visa, covering repatriation and the full stay, sourced and dated."
 tags: ["schengen", "insurance", "guide"]
 faq:
   - question: "Is €30,000 always required for Schengen visas?"
@@ -16,7 +17,7 @@ faq:
 
 ## Short answer
 
-EU Visa Code Article 15 requires travel medical insurance with minimum coverage of EUR 30,000, valid for the entire Schengen area and for the full stay or transit period, including repatriation and emergency care (Source: `EU_VISA_CODE_ARTICLE_15_2026`, Article 15; verified 2026-01-15). Some routes add stricter requirements, so always check the local checklist.
+The Schengen visa insurance requirement comes from EU Visa Code Article 15: travel medical insurance with minimum coverage of EUR 30,000, valid for the entire Schengen area and for the full stay or transit period, including repatriation and emergency care (Source: `EU_VISA_CODE_ARTICLE_15_2026`, Article 15; verified 2026-01-15). This is the baseline for short-stay (up to 90-day) Schengen visas — a different, generally lighter bar than long-stay national D or digital-nomad visas, which often add stricter national rules on top. Some routes add stricter requirements, so always check the local checklist.
 
 ## Key findings at a glance
 
@@ -64,6 +65,17 @@ We compare these requirements against ProductFacts and route-specific checklists
 - Evidence that repatriation and emergency care are included.
 - Coverage dates matching the entire stay or transit period.
 
+## Insurance that meets the Schengen EUR 30,000 minimum
+
+These products document a coverage limit above the EUR 30,000 minimum required by EU Visa Code Article 15:
+
+- [Genki Traveler](https://genki.world/with/visafact) — EUR 1,000,000 maximum coverage limit (Source: `GENKI_TRAVELER_COVERAGE_2026`), well above the EUR 30,000 minimum. Paid link; we may earn a commission if you purchase through it.
+- [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=schengen-guide-post) — USD 250,000 maximum coverage limit (Source: `SAFETYWING_WEBSITE_2026`), well above the EUR 30,000 minimum; it is a monthly-renewing plan, so confirm the policy dates cover the full Schengen stay before you submit it.
+
+These figures are each provider's own published coverage limit, not an automated route match — this guide covers the EU-wide baseline, and your specific visa route may add stricter rules on top (see the routes above). Confirm the EUR 30,000 minimum and repatriation clause are stated on the policy certificate itself before submitting it.
+
+Affiliate disclosure: the links above are paid/affiliate links; we may earn a commission at no extra cost to you, and this does not change the evidence-based requirement above. See [affiliate disclosure](/affiliate-disclosure/).
+
 ## Common rejection traps
 
 - Submitting a policy that omits repatriation or emergency treatment coverage.
@@ -104,7 +116,7 @@ Not legal advice. Compliance results are evidence-based snapshots.
 
 If a link is shown after results, it does not influence the evidence-based outcome.
 
-Last updated: 2026-02-05
+Last updated: 2026-08-17
 
 ## Evidence log
 
