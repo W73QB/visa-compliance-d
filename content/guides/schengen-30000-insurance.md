@@ -65,6 +65,17 @@ We compare these requirements against ProductFacts and route-specific checklists
 - Evidence that repatriation and emergency care are included.
 - Coverage dates matching the entire stay or transit period.
 
+## Insurance that meets the Schengen EUR 30,000 minimum
+
+These products document a coverage limit above the EUR 30,000 minimum required by EU Visa Code Article 15:
+
+- [Genki Traveler](https://genki.world/with/visafact) — EUR 1,000,000 maximum coverage limit (Source: `GENKI_TRAVELER_COVERAGE_2026`), well above the EUR 30,000 minimum. Paid link; we may earn a commission if you purchase through it.
+- [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26539911&utm_source=26539911&utm_medium=Ambassador&utm_campaign=schengen-guide-post) — USD 250,000 maximum coverage limit (Source: `SAFETYWING_WEBSITE_2026`), well above the EUR 30,000 minimum; it is a monthly-renewing plan, so confirm the policy dates cover the full Schengen stay before you submit it.
+
+These figures are each provider's own published coverage limit, not an automated route match — this guide covers the EU-wide baseline, and your specific visa route may add stricter rules on top (see the routes above). Confirm the EUR 30,000 minimum and repatriation clause are stated on the policy certificate itself before submitting it.
+
+Affiliate disclosure: the links above are paid/affiliate links; we may earn a commission at no extra cost to you, and this does not change the evidence-based requirement above. See [affiliate disclosure](/affiliate-disclosure/).
+
 ## Common rejection traps
 
 - Submitting a policy that omits repatriation or emergency treatment coverage.
