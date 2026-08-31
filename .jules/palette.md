@@ -1,0 +1,3 @@
+## 2025-06-30 - Form Context and Mobile Navigation Accessibility
+**Learning:** When using flex/grid layouts that visually separate labels, explicit `for` attributes on labels and `aria-describedby` matching the hint elements are required to maintain context for screen reader users. Additionally, mobile toggle menus styled with `md:hidden` often miss programmatic states like `aria-expanded` and `aria-controls`, which breaks their accessibility context.
+**Action:** Always link visual hints to their respective input fields with `aria-describedby`, ensure labels use explicit `for` bindings, and pair `md:hidden` menu visual toggles with corresponding dynamic ARIA states in JS.
