@@ -1,0 +1,3 @@
+## 2024-06-08 - Accessible Toggle Buttons
+**Learning:** Icon-only toggle buttons in the UI, such as mobile menu buttons, require dynamic ARIA attributes (like `aria-expanded` and `aria-controls`) mapped to their visual state to ensure screen readers correctly interpret their state and functionality. The visual toggling of CSS classes must be synced programmatically with ARIA property values.
+**Action:** When implementing or modifying dynamic interactions, ensure that visual class changes are mapped to their corresponding ARIA attributes (e.g., `aria-expanded`) programmatically in the JavaScript logic.
