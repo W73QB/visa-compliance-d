@@ -1,0 +1,3 @@
+## 2024-06-13 - Form Controls and Mobile Menu Accessibility
+**Learning:** In layout containers using flex-col, labels and inputs often become visually disconnected. In `ui/index.html`, inputs like `visaSelect` and `productSelect` lacked explicit `for` and `aria-describedby` associations, which breaks screen reader support. Additionally, icon-only toggle buttons like `mobileMenuBtn` need dynamic `aria-expanded` and explicit `aria-controls` to be fully accessible.
+**Action:** Always explicitly link layout-separated form labels to their inputs using `for` and ID references, use `aria-describedby` for hint text, and ensure interactive icon buttons announce their toggled state programmatically via `aria-expanded`.
